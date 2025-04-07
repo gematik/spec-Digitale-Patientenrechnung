@@ -73,7 +73,7 @@
         "path": "ChargeItem.extension",
         "sliceName": "Zusatz",
         "short": "Zusatz",
-        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Zusatz vorhanden sein.\n  Der Code F 'Leistungs zur Früherkennung' ist für GOZ-Rechnungen nicht relevant.",
+        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Zusatz vorhanden sein.\n  Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert.\n  Der Code F 'Leistungs zur Früherkennung' ist für GOZ-Rechnungen nicht relevant.",
         "min": 0,
         "max": "1",
         "type": [
@@ -437,7 +437,7 @@
         "id": "ChargeItem.code",
         "path": "ChargeItem.code",
         "short": "Gebührenziffer",
-        "comment": "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenziffer vorhanden sein.\nMit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifische medizinische oder zahnmedizinische Leistung in den entsprechenden Gebührenordnungen beschreibt. Sie dient als Grundlage für die Abrechnung zwischen Leistungserbringern (Ärzten/Zahnärzten) und Kostenträgern (z. B. Krankenkassen oder Patienten). In spezifischen Gebührenordnungen werden ggf. abweichende Begriffe hierfür verwendet.",
+        "comment": "Ist der Rechnungspositionstyp auf eine Gebührenordnung festgelegt, SOLL die Gebührenziffer vorhanden sein.\n  Die konkrete Bezeichnung der Gebührenziffer kann je nach Gebührenordnung abweichend sein.",
         "mustSupport": true
       },
       {
