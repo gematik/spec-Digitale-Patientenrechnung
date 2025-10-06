@@ -1,0 +1,866 @@
+[
+  {
+    "outputFile": "AuditEvent-BeispielNutzungsprotokoll.json",
+    "fshName": "BeispielNutzungsprotokoll",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R10-nutzungsprotokoll.fsh",
+    "startLine": 1,
+    "endLine": 16
+  },
+  {
+    "outputFile": "Bundle-BeispielNutzungsprotokollResultBundle.json",
+    "fshName": "BeispielNutzungsprotokollResultBundle",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R10-nutzungsprotokoll.fsh",
+    "startLine": 18,
+    "endLine": 24
+  },
+  {
+    "outputFile": "Bundle-BulkRetrieveExampleInput.json",
+    "fshName": "BulkRetrieveExampleInput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R3-bulk-retrieve.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Bundle-BulkRetrieveExampleOutput.json",
+    "fshName": "BulkRetrieveExampleOutput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R3-bulk-retrieve.fsh",
+    "startLine": 12,
+    "endLine": 21
+  },
+  {
+    "outputFile": "Bundle-BulkSubmitExample.json",
+    "fshName": "BulkSubmitExample",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "Bundle-BulkSubmitExampleOutput.json",
+    "fshName": "BulkSubmitExampleOutput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 133,
+    "endLine": 142
+  },
+  {
+    "outputFile": "Bundle-ExampleR5Bundle.json",
+    "fshName": "ExampleR5Bundle",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R5-retrieve.fsh",
+    "startLine": 41,
+    "endLine": 47
+  },
+  {
+    "outputFile": "Bundle-PatientenBundle.json",
+    "fshName": "PatientenBundle",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R0-patient-search.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "CapabilityStatement-CapabilityStatementFD.json",
+    "fshName": "CapabilityStatementFD",
+    "fshType": "Instance",
+    "fshFile": "CapabilityStatementFD.fsh",
+    "startLine": 1,
+    "endLine": 128
+  },
+  {
+    "outputFile": "CodeSystem-dipag-abrechnungs-diagnose-use-CS.json",
+    "fshName": "DiPagAbrechnungsDiagnoseUseCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-invoice-useDiagnose.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "CodeSystem-dipag-attachment-format-cs.json",
+    "fshName": "DiPagAttachmentFormatCS",
+    "fshType": "CodeSystem",
+    "fshFile": "Profiles\\dipag-dokumentenmetadaten.fsh",
+    "startLine": 147,
+    "endLine": 155
+  },
+  {
+    "outputFile": "CodeSystem-dipag-chargeitem-type-CS.json",
+    "fshName": "DiPagRechnungspositionTypeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-chargeitem-type-cs.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "CodeSystem-dipag-dokument-artderarchivierung-cs.json",
+    "fshName": "DiPagDokumentArtDerArchivierungCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-rechnung-markierung.fsh",
+    "startLine": 15,
+    "endLine": 21
+  },
+  {
+    "outputFile": "CodeSystem-dipag-operationen-cs.json",
+    "fshName": "DiPagOperationenCS",
+    "fshType": "CodeSystem",
+    "fshFile": "Profiles\\dipag-nutzungsprotokoll.fsh",
+    "startLine": 47,
+    "endLine": 55
+  },
+  {
+    "outputFile": "CodeSystem-dipag-participant-role-CS.json",
+    "fshName": "DiPagParticipantRoleCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-rechnung-participantRole-cs.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "CodeSystem-dipag-prop-rest-interactions-cs.json",
+    "fshName": "DiPagPropRestInterationsCS",
+    "fshType": "CodeSystem",
+    "fshFile": "Profiles\\dipag-nutzungsprotokoll.fsh",
+    "startLine": 57,
+    "endLine": 64
+  },
+  {
+    "outputFile": "CodeSystem-dipag-rechnung-abrechnungsart-cs.json",
+    "fshName": "DiPagRechnungAbrechnungsartCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-rechnung-abrechnungsarten.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "CodeSystem-dipag-rechnung-identifier-type-cs.json",
+    "fshName": "DiPagRechnungIdentifierTypeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-rechnung-identifierType-cs.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "CodeSystem-dipag-rechnung-markierung-cs.json",
+    "fshName": "DiPagRechnungMarkierungCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-rechnung-markierung.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "CodeSystem-dipag-rechnung-submit-modus-cs.json",
+    "fshName": "DiPagRechnungSubmitModusCS",
+    "fshType": "CodeSystem",
+    "fshFile": "OperationDefinitions\\dipag-operation-submit.fsh",
+    "startLine": 89,
+    "endLine": 95
+  },
+  {
+    "outputFile": "CodeSystem-dipag-rechnung-type-cs.json",
+    "fshName": "DiPagRechnungTypeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-rechnung-type-cs.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "CodeSystem-dipag-rechnungsart-cs.json",
+    "fshName": "DiPagRechnungsartCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-rechnungsarten.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "CodeSystem-dipag-rechnungsposition-faktor-gruende-CS.json",
+    "fshName": "DiPagRechnungspositionFaktorGruendeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-chargeitem-faktorIdAuspraegung-cs.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "CodeSystem-dipag-rechnungsposition-zusatz-CS.json",
+    "fshName": "DiPagRechnungspositionZusatzCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-chargeitem-zusatz-cs.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "CodeSystem-dipag-rechnungsstatus-cs.json",
+    "fshName": "DiPagARechnungsstatusCS",
+    "fshType": "CodeSystem",
+    "fshFile": "Profiles\\dipag-dokumentenmetadaten.fsh",
+    "startLine": 157,
+    "endLine": 164
+  },
+  {
+    "outputFile": "CodeSystem-dipag-total-price-component-type-cs.json",
+    "fshName": "DiPagTotalPriceComponentTypeCS",
+    "fshType": "CodeSystem",
+    "fshFile": "CodeSystems\\dipag-rechnung-summe-zusammensetzung.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3-FD.json",
+    "fshName": "BeispielDocumentReferenceRechnung3-FD",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R1-submit.fsh",
+    "startLine": 10,
+    "endLine": 42
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3-LE.json",
+    "fshName": "BeispielDocumentReferenceRechnung3-LE",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 21,
+    "endLine": 49
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3.1-FD.json",
+    "fshName": "BeispielDocumentReferenceRechnung3.1-FD",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 153,
+    "endLine": 185
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnung3.1-LE.json",
+    "fshName": "BeispielDocumentReferenceRechnung3.1-LE",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 72,
+    "endLine": 103
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnungRetrieve.json",
+    "fshName": "BeispielDocumentReferenceRechnungRetrieve",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R3R6-retrieve.fsh",
+    "startLine": 13,
+    "endLine": 29
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceRechnungRetrieve2.json",
+    "fshName": "BeispielDocumentReferenceRechnungRetrieve2",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R3-bulk-retrieve.fsh",
+    "startLine": 29,
+    "endLine": 45
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json",
+    "fshName": "BeispielDocumentReferenceSonstigesDokument3-FD",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R1-submit.fsh",
+    "startLine": 44,
+    "endLine": 63
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-LE.json",
+    "fshName": "BeispielDocumentReferenceSonstigesDokument3-LE",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 51,
+    "endLine": 61
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-FD.json",
+    "fshName": "BeispielDocumentReferenceSonstigesDokument3.1-FD",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 187,
+    "endLine": 206
+  },
+  {
+    "outputFile": "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.json",
+    "fshName": "BeispielDocumentReferenceSonstigesDokument3.1-LE",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 105,
+    "endLine": 115
+  },
+  {
+    "outputFile": "DocumentReference-ExampleR5DocumentReference.json",
+    "fshName": "ExampleR5DocumentReference",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R5-retrieve.fsh",
+    "startLine": 2,
+    "endLine": 39
+  },
+  {
+    "outputFile": "OperationDefinition-DiPagOperationChangeStatus.json",
+    "fshName": "DiPagOperationChangeStatus",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\dipag-change-status.fsh",
+    "startLine": 3,
+    "endLine": 34
+  },
+  {
+    "outputFile": "OperationDefinition-DiPagOperationErase.json",
+    "fshName": "DiPagOperationErase",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\dipag-operation-erase.fsh",
+    "startLine": 3,
+    "endLine": 20
+  },
+  {
+    "outputFile": "OperationDefinition-DiPagOperationProcessFlag.json",
+    "fshName": "DiPagOperationProcessFlag",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\dipag-process-flag.fsh",
+    "startLine": 3,
+    "endLine": 62
+  },
+  {
+    "outputFile": "OperationDefinition-DiPagOperationRetrieve.json",
+    "fshName": "DiPagOperationRetrieve",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\dipag-operation-retrieve.fsh",
+    "startLine": 3,
+    "endLine": 48
+  },
+  {
+    "outputFile": "OperationDefinition-DiPagOperationSubmit.json",
+    "fshName": "DiPagOperationSubmit",
+    "fshType": "Instance",
+    "fshFile": "OperationDefinitions\\dipag-operation-submit.fsh",
+    "startLine": 3,
+    "endLine": 85
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterChangeStatusInput.json",
+    "fshName": "BeispielParameterChangeStatusInput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R7-change-status.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterChangeStatusOutput.json",
+    "fshName": "BeispielParameterChangeStatusOutput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R7-change-status.fsh",
+    "startLine": 7,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterProcessFlagInput.json",
+    "fshName": "BeispielParameterProcessFlagInput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R8-process-flag.fsh",
+    "startLine": 1,
+    "endLine": 13
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterProcessFlagOutput.json",
+    "fshName": "BeispielParameterProcessFlagOutput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R8-process-flag.fsh",
+    "startLine": 16,
+    "endLine": 38
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterRetrieveInput.json",
+    "fshName": "BeispielParameterRetrieveInput",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R3R6-retrieve.fsh",
+    "startLine": 1,
+    "endLine": 11
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterRetrieveInput2.json",
+    "fshName": "BeispielParameterRetrieveInput2",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R3-bulk-retrieve.fsh",
+    "startLine": 23,
+    "endLine": 27
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterSubmitInput3-LE.json",
+    "fshName": "BeispielParameterSubmitInput3-LE",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 12,
+    "endLine": 19
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterSubmitInput3.1-LE.json",
+    "fshName": "BeispielParameterSubmitInput3.1-LE",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 63,
+    "endLine": 70
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterSubmitOutput3-FD.json",
+    "fshName": "BeispielParameterSubmitOutput3-FD",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R1-submit.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "Parameters-BeispielParameterSubmitOutput3.1-FD.json",
+    "fshName": "BeispielParameterSubmitOutput3.1-FD",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 144,
+    "endLine": 151
+  },
+  {
+    "outputFile": "Patient-BeispielPatient3-FD.json",
+    "fshName": "BeispielPatient3-FD",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R2-bulk-submit.fsh",
+    "startLine": 117,
+    "endLine": 127
+  },
+  {
+    "outputFile": "Patient-PatientVater.json",
+    "fshName": "PatientVater",
+    "fshType": "Instance",
+    "fshFile": "Examples\\dipag-R0-patient-search.fsh",
+    "startLine": 9,
+    "endLine": 21
+  },
+  {
+    "outputFile": "SearchParameter-dipag-makierung.json",
+    "fshName": "dipag-makierung",
+    "fshType": "Instance",
+    "fshFile": "SearchParameter\\dipag-searchParam-ergpkvmakierung.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-DiPagAbrechnungsDiagnoseProzedur.json",
+    "fshName": "DiPagAbrechnungsDiagnoseProzedur",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-invoice-abrechnungsDiagnoseProzedur.fsh",
+    "startLine": 1,
+    "endLine": 15
+  },
+  {
+    "outputFile": "StructureDefinition-DiPagAbrechnungsDiagnoseProzedurFreitext.json",
+    "fshName": "DiPagAbrechnungsDiagnoseProzedurFreitext",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-invoice-abrechnungsDiagnoseProzedur.fsh",
+    "startLine": 17,
+    "endLine": 24
+  },
+  {
+    "outputFile": "StructureDefinition-DiPagRechnungspositionBehandlungsdatum.json",
+    "fshName": "DiPagRechnungspositionBehandlungsdatum",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-chargeitem-behandlungsdatum.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "StructureDefinition-DiPagRechnungspositionZusatz.json",
+    "fshName": "DiPagRechnungspositionZusatz",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-chargeitem-zusatz.fsh",
+    "startLine": 1,
+    "endLine": 7
+  },
+  {
+    "outputFile": "StructureDefinition-DiPagTeilsumme.json",
+    "fshName": "DiPagTeilsumme",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-invoice-teilsummen.fsh",
+    "startLine": 1,
+    "endLine": 22
+  },
+  {
+    "outputFile": "StructureDefinition-DiPagTokenStornierteRechnung.json",
+    "fshName": "DiPagTokenStornierteRechnung",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-invoice-korrekturRechnungToken.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-DiPagZusatzinformationZurAbrechnungsart.json",
+    "fshName": "DiPagZusatzinformationZurAbrechnungsart",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-invoice-zusatzinformationAbrechnungsart.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-InvoicePeriod.json",
+    "fshName": "InvoicePeriod",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-invoice-period.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-abzug-kassenanteil.json",
+    "fshName": "DiPagAbzugKassenanteil",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-invoice-abzugKassenanteil.fsh",
+    "startLine": 1,
+    "endLine": 14
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-behandlungsart.json",
+    "fshName": "DiPagBehandlungsart",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-invoice-behandlungsart.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-docref-fachrichtung.json",
+    "fshName": "DiPagDocRefFachrichtung",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\dipag-dokumentenmetadaten.fsh",
+    "startLine": 177,
+    "endLine": 185
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-docref-leistungsart.json",
+    "fshName": "DiPagDocRefLeistungsart",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\dipag-dokumentenmetadaten.fsh",
+    "startLine": 187,
+    "endLine": 194
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-docref-signature.json",
+    "fshName": "DiPagDocRefSignature",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\dipag-dokumentenmetadaten.fsh",
+    "startLine": 168,
+    "endLine": 175
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-documentreference-gesamtbetrag.json",
+    "fshName": "DiPagDocumentReferenceGesamtbetrag",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-documentreference-Gesamtbetrag.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-documentreference-markierung.json",
+    "fshName": "DiPagDocumentReferenceMarkierung",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-documentreference-markierung.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-documentreference-rechnungsdatum.json",
+    "fshName": "DiPagDocumentReferenceRechnungsdatum",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-documentreference-rechnungsdatum.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-documentreference-zahlungszieldatum.json",
+    "fshName": "DiPagDocumentReferenceZahlungszieldatum",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-documentreference-zahlungszieldatum.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-dokumentenmetadaten.json",
+    "fshName": "DiPagDokumentenmetadaten",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\dipag-dokumentenmetadaten.fsh",
+    "startLine": 4,
+    "endLine": 127
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-fachrichtung.json",
+    "fshName": "DiPagFachrichtung",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\dipag-invoice-fachrichtung.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-institution.json",
+    "fshName": "DiPagInstitution",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\dipag-institution.fsh",
+    "startLine": 1,
+    "endLine": 145
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-nutzungsprotokoll.json",
+    "fshName": "DiPagNutzungsprotokoll",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\dipag-nutzungsprotokoll.fsh",
+    "startLine": 1,
+    "endLine": 45
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-patient.json",
+    "fshName": "DiPagPatient",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\dipag-patient.fsh",
+    "startLine": 1,
+    "endLine": 116
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-person.json",
+    "fshName": "DiPagPerson",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\dipag-person.fsh",
+    "startLine": 1,
+    "endLine": 133
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-rechnung.json",
+    "fshName": "DiPagRechnung",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\dipag-rechnung.fsh",
+    "startLine": 1,
+    "endLine": 317
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-rechnungsdiagnose.json",
+    "fshName": "DiPagRechnungsdiagnose",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\dipag-rechnungsdiagnose.fsh",
+    "startLine": 1,
+    "endLine": 41
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-rechnungsdokument.json",
+    "fshName": "DiPagRechnungsdokument",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\dipag-rechnungsdokument.fsh",
+    "startLine": 1,
+    "endLine": 12
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-rechnungsposition-go-angaben.json",
+    "fshName": "DiPagRechnungspositionGOAngaben",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-chargeitem-GOAngaben.fsh",
+    "startLine": 1,
+    "endLine": 28
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-rechnungsposition-type.json",
+    "fshName": "DiPagRechnungspositionType",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-chargeitem-type.fsh",
+    "startLine": 1,
+    "endLine": 9
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-rechnungsposition.json",
+    "fshName": "DiPagRechnungsposition",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\dipag-rechnungsposition.fsh",
+    "startLine": 1,
+    "endLine": 190
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-rechnungsprozedur.json",
+    "fshName": "DiPagRechnungsprozedur",
+    "fshType": "Profile",
+    "fshFile": "Profiles\\dipag-rechnungsprozedur.fsh",
+    "startLine": 1,
+    "endLine": 42
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-task-requestedPerformer.json",
+    "fshName": "DiPagTaskRequestedPerformer",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-task-requestedPerformer.fsh",
+    "startLine": 1,
+    "endLine": 10
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-wegegeld-reiseentschaedigung.json",
+    "fshName": "DiPagWegegeldReiseentschaedigung",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-chargeitem-wegegeldReiseentschaedigung.fsh",
+    "startLine": 1,
+    "endLine": 43
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-zahlungsziel.json",
+    "fshName": "DiPagZahlungsziel",
+    "fshType": "Extension",
+    "fshFile": "Profiles\\dipag-rechnung.fsh",
+    "startLine": 319,
+    "endLine": 323
+  },
+  {
+    "outputFile": "StructureDefinition-dipag-zahnregion.json",
+    "fshName": "DiPagZahnRegion",
+    "fshType": "Extension",
+    "fshFile": "Extensions\\dipag-chargeitem-zahnRegion.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-DiPagVerkehrsmittel.json",
+    "fshName": "DiPagVerkehrsmittel",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-chargeitem-verkehrsmittel.fsh",
+    "startLine": 1,
+    "endLine": 8
+  },
+  {
+    "outputFile": "ValueSet-dipag-abrechnungs-diagnose-use-VS.json",
+    "fshName": "DiPagAbrechnungsDiagnoseUseVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-rechnung-abrechnungsDiagnoseUse-vs.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "ValueSet-dipag-audit-event-agent-type-vs.json",
+    "fshName": "DiPagAuditEventAgentTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "Profiles\\dipag-nutzungsprotokoll.fsh",
+    "startLine": 82,
+    "endLine": 87
+  },
+  {
+    "outputFile": "ValueSet-dipag-audit-event-sub-type-vs.json",
+    "fshName": "DiPagAuditEventSubTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "Profiles\\dipag-nutzungsprotokoll.fsh",
+    "startLine": 66,
+    "endLine": 72
+  },
+  {
+    "outputFile": "ValueSet-dipag-audit-event-type-vs.json",
+    "fshName": "DiPagAuditEventTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "Profiles\\dipag-nutzungsprotokoll.fsh",
+    "startLine": 74,
+    "endLine": 79
+  },
+  {
+    "outputFile": "ValueSet-dipag-chargeitem-type-VS.json",
+    "fshName": "DiPagRechnungspositionTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-chargeitem-type-vs.fsh",
+    "startLine": 1,
+    "endLine": 5
+  },
+  {
+    "outputFile": "ValueSet-dipag-dokument-artderarchivierung-vs.json",
+    "fshName": "DiPagDokumentArtDerArchivierungVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-rechnung-markierung-vs.fsh",
+    "startLine": 8,
+    "endLine": 13
+  },
+  {
+    "outputFile": "ValueSet-dipag-participant-role-VS.json",
+    "fshName": "DiPagParticipantRoleVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-rechnung-participantRole-vs.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-dipag-rechnung-abrechnungsart-vs.json",
+    "fshName": "DiPagRechnungAbrechnungsartVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-rechnung-abrechnungsart-vs.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-dipag-rechnung-behandlungsart-vs.json",
+    "fshName": "DiPagRechnungBehandlungsartVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-rechnung-behandlungsart-vs.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-dipag-rechnung-markierung-vs.json",
+    "fshName": "DiPagRechnungMarkierungVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-rechnung-markierung-vs.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-dipag-rechnung-submit-modus-vs.json",
+    "fshName": "DiPagRechnungSubmitModusVS",
+    "fshType": "ValueSet",
+    "fshFile": "OperationDefinitions\\dipag-operation-submit.fsh",
+    "startLine": 97,
+    "endLine": 102
+  },
+  {
+    "outputFile": "ValueSet-dipag-rechnungsart-vs.json",
+    "fshName": "DiPagRechnungsartVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-rechnungsart.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-dipag-rechnungsposition-faktor-gruende-auspraegungen-VS.json",
+    "fshName": "DiPagRechnungspositionFaktorGruendeVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-chargeitem-faktorIdAuspraegung-vs.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-dipag-rechnungsposition-zusatz-VS.json",
+    "fshName": "DiPagRechnungspositionZusatzVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-chargeitem-zusatz-vs.fsh",
+    "startLine": 1,
+    "endLine": 4
+  },
+  {
+    "outputFile": "ValueSet-dipag-rechnungsstatus-vs.json",
+    "fshName": "DiPagRechnungsstatusVS",
+    "fshType": "ValueSet",
+    "fshFile": "Profiles\\dipag-dokumentenmetadaten.fsh",
+    "startLine": 139,
+    "endLine": 143
+  },
+  {
+    "outputFile": "ValueSet-dipag-restricted-mime-types-vs.json",
+    "fshName": "DiPagRestrictedMimeTypesVS",
+    "fshType": "ValueSet",
+    "fshFile": "Profiles\\dipag-dokumentenmetadaten.fsh",
+    "startLine": 131,
+    "endLine": 137
+  },
+  {
+    "outputFile": "ValueSet-dipag-sonstigesdokument-type-vs.json",
+    "fshName": "DiPagSonstigesDokumentTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "ValueSets\\dipag-sonstigesDokument-type-vs.fsh",
+    "startLine": 1,
+    "endLine": 6
+  },
+  {
+    "outputFile": "ValueSet-dipag-total-price-component-deduction-type-vs.json",
+    "fshName": "DiPagTotalPriceComponentDeductionTypeVS",
+    "fshType": "ValueSet",
+    "fshFile": "CodeSystems\\dipag-rechnung-summe-zusammensetzung.fsh",
+    "startLine": 12,
+    "endLine": 16
+  }
+]
