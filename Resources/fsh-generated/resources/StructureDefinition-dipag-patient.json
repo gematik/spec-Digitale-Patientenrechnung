@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-patient",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
-  "version": "1.1.0-rc2",
+  "version": "1.1.2",
   "name": "DiPagPatient",
   "status": "active",
   "experimental": false,
-  "date": "2025-04-07",
+  "date": "2025-10-06",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -22,191 +22,29 @@
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+  "baseDefinition": "https://gematik.de/fhir/ti/StructureDefinition/ti-patient",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Patient.identifier",
-        "path": "Patient.identifier",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "mustSupport": true
-      },
-      {
         "id": "Patient.identifier:KVNR",
         "path": "Patient.identifier",
         "sliceName": "KVNR",
-        "short": "KVNR (Krankenversichertennummer)",
-        "comment": "Die KVNR MUSS vorkommen, wenn eine Person die Rolle des 'Rechnungsempfänger' inne hat.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kvid-10"
-            ]
-          }
-        ],
-        "patternIdentifier": {
-          "type": {
-            "coding": [
-              {
-                "code": "KVZ10",
-                "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
-              }
-            ]
-          }
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.identifier:KVNR.type",
-        "path": "Patient.identifier.type",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.identifier:KVNR.system",
-        "path": "Patient.identifier.system",
-        "short": "System des KVZ10 Code",
-        "comment": "Das System des KVZ10 Code MUSS vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.identifier:KVNR.value",
-        "path": "Patient.identifier.value",
-        "short": "KVNR (Krankenversichertennummer)",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.identifier:KVNR.assigner",
-        "path": "Patient.identifier.assigner",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.identifier:KVNR.assigner.identifier",
-        "path": "Patient.identifier.assigner.identifier",
-        "short": "IK-Nummer der Krankenkasse",
-        "comment": "Bei GKV-Versicherten Personen SOLL die IK-Nummer der Krankenkasse angegeben werden.",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.identifier:KVNR.assigner.identifier.type",
-        "path": "Patient.identifier.assigner.identifier.type",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.identifier:KVNR.assigner.identifier.system",
-        "path": "Patient.identifier.assigner.identifier.system",
-        "short": "System der IK-Nummer",
-        "comment": "Das System der IK-Nummer MUSS vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.identifier:KVNR.assigner.identifier.value",
-        "path": "Patient.identifier.assigner.identifier.value",
-        "short": "IK-Nummer der Krankenkasse",
-        "mustSupport": true
+        "comment": "Die KVNR MUSS vorkommen, wenn eine Person die Rolle des 'Rechnungsempfänger' inne hat."
       },
       {
         "id": "Patient.name",
-        "path": "Patient.name",
-        "short": "Name",
-        "comment": "Der Name SOLL vorhanden sein.",
-        "type": [
-          {
-            "code": "HumanName",
-            "profile": [
-              "http://fhir.de/StructureDefinition/humanname-de-basis"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.name.use",
-        "path": "Patient.name.use",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.name.text",
-        "path": "Patient.name.text",
-        "short": "Voller Name inkl. Anrede",
-        "comment": "Die Anrede SOLLEN vorhanden sein.",
-        "mustSupport": true
+        "path": "Patient.name"
       },
       {
         "id": "Patient.name.family",
         "path": "Patient.name.family",
-        "short": "Nachname",
-        "comment": "Der Nachname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.\n    Der Nachname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein.\n    Die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.name.family.extension:namenszusatz",
-        "path": "Patient.name.family.extension",
-        "sliceName": "namenszusatz",
-        "comment": "Die Extension zur strukurierten Erfassung des Namenszusatz KANN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.name.family.extension:nachname",
-        "path": "Patient.name.family.extension",
-        "sliceName": "nachname",
-        "comment": "Die Extension zur strukurierten Erfassung des Nachnamen KANN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.name.family.extension:vorsatzwort",
-        "path": "Patient.name.family.extension",
-        "sliceName": "vorsatzwort",
-        "comment": "Die Extension zur strukurierten Erfassung des Vorsatzwort KANN vorhanden sein.",
-        "mustSupport": true
+        "comment": "Der Nachname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.\n  Der Nachname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein.\n  Die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein."
       },
       {
         "id": "Patient.name.given",
         "path": "Patient.name.given",
-        "comment": "Der Vorname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.\n    Der Vorname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.name.prefix",
-        "path": "Patient.name.prefix",
-        "short": "Titel",
-        "comment": "Der Titel SOLL vorhanden sein, die Extension zur Qualifizierung KANN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.name.prefix.extension:prefix-qualifier",
-        "path": "Patient.name.prefix.extension",
-        "sliceName": "prefix-qualifier",
-        "comment": "Die Extension zur Qualifizierung des Titeks KANN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.birthDate",
-        "path": "Patient.birthDate",
-        "short": "Geburtsdatum",
-        "comment": "Das Geburtsdatum SOLL vorhanden sein.",
-        "mustSupport": true
+        "comment": "Der Vorname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.\n  Der Vorname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein."
       },
       {
         "id": "Patient.address",

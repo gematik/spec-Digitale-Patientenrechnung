@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnung",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung",
-  "version": "1.1.0-rc2",
+  "version": "1.1.2",
   "name": "DiPagRechnung",
   "title": "Digitale Patientenrechnung Rechnung",
   "status": "active",
   "experimental": false,
-  "date": "2025-04-07",
+  "date": "2025-10-06",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -30,16 +30,6 @@
       {
         "id": "Invoice.extension",
         "path": "Invoice.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "min": 2
       },
       {
@@ -899,20 +889,6 @@
           }
         ],
         "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent.extension",
-        "path": "Invoice.totalPriceComponent.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
       },
       {
         "id": "Invoice.totalPriceComponent.extension:Teilsumme",

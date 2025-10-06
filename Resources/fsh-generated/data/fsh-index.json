@@ -613,7 +613,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles\\dipag-patient.fsh",
     "startLine": 1,
-    "endLine": 116
+    "endLine": 66
   },
   {
     "outputFile": "StructureDefinition-dipag-person.json",

@@ -1,65 +1,15 @@
 Profile: DiPagPatient
-Parent: Patient
+Parent: TIPatient
 Id: dipag-patient
 * insert Meta
-* identifier MS
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
-* identifier contains
-    KVNR ..1 MS
-* identifier[KVNR] only $identifier-kvnr
-  * ^patternIdentifier.type = $identifier-kvnr-type#KVZ10
-  * type 1.. MS
-  * system MS
-    * ^short = "System des KVZ10 Code"
-    * ^comment = "Das System des KVZ10 Code MUSS vorhanden sein."
-  * value MS
-    * ^short = "KVNR (Krankenversichertennummer)"
-  * ^short = "KVNR (Krankenversichertennummer)"
-  * ^comment = "Die KVNR MUSS vorkommen, wenn eine Person die Rolle des 'Rechnungsempfänger' inne hat."
-  * assigner MS
-    * identifier MS
-    * identifier only $identifier-iknr
-      * type 1.. MS
-      * system 1.. MS
-        * ^short = "System der IK-Nummer"
-        * ^comment = "Das System der IK-Nummer MUSS vorhanden sein."
-      * value 1.. MS
-        * ^short = "IK-Nummer der Krankenkasse"
-      * ^short = "IK-Nummer der Krankenkasse"
-      * ^comment = "Bei GKV-Versicherten Personen SOLL die IK-Nummer der Krankenkasse angegeben werden."
-* birthDate MS
-  * ^short = "Geburtsdatum"
-  * ^comment = "Das Geburtsdatum SOLL vorhanden sein."
-* name only $humanname-de
-* name MS
-  * ^short = "Name"
-  * ^comment = "Der Name SOLL vorhanden sein."
-  * use MS
-  * text MS
-    * ^short = "Voller Name inkl. Anrede"
-    * ^comment = "Die Anrede SOLLEN vorhanden sein."
-  * family MS
-    * ^short = "Nachname"
-    * ^comment = "Der Nachname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.
-    Der Nachname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein.
-    Die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein."
-    * extension[namenszusatz] MS
-      * ^comment = "Die Extension zur strukurierten Erfassung des Namenszusatz KANN vorhanden sein."
-    * extension[nachname] MS
-      * ^comment = "Die Extension zur strukurierten Erfassung des Nachnamen KANN vorhanden sein."
-    * extension[vorsatzwort] MS
-      * ^comment = "Die Extension zur strukurierten Erfassung des Vorsatzwort KANN vorhanden sein."
-  * given MS
-    * ^short = "Vorname"
-    * ^comment = "Der Vorname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.
-    Der Vorname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein."
-  * prefix MS
-    * ^short = "Titel"
-    * ^comment = "Der Titel SOLL vorhanden sein, die Extension zur Qualifizierung KANN vorhanden sein."
-  * prefix.extension[prefix-qualifier] MS
-    * ^comment = "Die Extension zur Qualifizierung des Titeks KANN vorhanden sein."
+* identifier[KVNR] ^comment = "Die KVNR MUSS vorkommen, wenn eine Person die Rolle des 'Rechnungsempfänger' inne hat."  
+* name.family    
+  * ^comment = "Der Nachname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.
+  Der Nachname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein.
+  Die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein."    
+* name.given
+  * ^comment = "Der Vorname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.
+  Der Vorname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein."  
 * address MS
 * address ^slicing.discriminator.type = #pattern
 * address ^slicing.discriminator.path = "$this"

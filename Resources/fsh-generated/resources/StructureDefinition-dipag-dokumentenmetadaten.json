@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-dokumentenmetadaten",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten",
-  "version": "1.1.0-rc2",
+  "version": "1.1.2",
   "name": "DiPagDokumentenmetadaten",
   "title": "Digitale Patientenrechnung Dokumentenmetadaten",
   "status": "active",
   "experimental": false,
-  "date": "2025-04-07",
+  "date": "2025-10-06",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -112,16 +112,6 @@
       {
         "id": "DocumentReference.extension",
         "path": "DocumentReference.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "mustSupport": true
       },
       {

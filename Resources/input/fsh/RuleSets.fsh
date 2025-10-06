@@ -10,18 +10,18 @@ RuleSet: Expectation (expectation)
 
 RuleSet: Meta
 * ^status = #active
-* ^version = "1.1.0-rc2"
+* ^version = "1.1.2"
 * ^experimental = false
-* ^date = "2025-04-07"
+* ^date = "2025-10-06"
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://gematik.de/"
 
 RuleSet: MetaInstance
-* version = "1.1.0-rc2"
+* version = "1.1.2"
 * status = #active
 * experimental = false
 * publisher = "gematik GmbH"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://gematik.de/"
-* date = "2025-04-07"
+* date = "2025-10-06"

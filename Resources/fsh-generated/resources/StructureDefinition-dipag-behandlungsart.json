@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-behandlungsart",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart",
-  "version": "1.1.0-rc2",
+  "version": "1.1.2",
   "name": "DiPagBehandlungsart",
   "title": "Digitale Patientenrechnung Extension Behandlungsart",
   "status": "active",
   "experimental": false,
-  "date": "2025-04-07",
+  "date": "2025-10-06",
   "publisher": "gematik GmbH",
   "contact": [
     {
