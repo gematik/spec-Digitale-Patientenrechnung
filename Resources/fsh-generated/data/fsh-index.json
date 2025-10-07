@@ -621,7 +621,7 @@
     "fshType": "Profile",
     "fshFile": "Profiles\\dipag-person.fsh",
     "startLine": 1,
-    "endLine": 133
+    "endLine": 106
   },
   {
     "outputFile": "StructureDefinition-dipag-rechnung.json",

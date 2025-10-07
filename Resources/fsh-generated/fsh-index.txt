@@ -76,7 +76,7 @@ StructureDefinition-dipag-fachrichtung.json                              DiPagFa
 StructureDefinition-dipag-institution.json                               DiPagInstitution                                  Profile     Profiles\dipag-institution.fsh                                1 - 109
 StructureDefinition-dipag-nutzungsprotokoll.json                         DiPagNutzungsprotokoll                            Profile     Profiles\dipag-nutzungsprotokoll.fsh                          1 - 45
 StructureDefinition-dipag-patient.json                                   DiPagPatient                                      Profile     Profiles\dipag-patient.fsh                                    1 - 66
-StructureDefinition-dipag-person.json                                    DiPagPerson                                       Profile     Profiles\dipag-person.fsh                                     1 - 133
+StructureDefinition-dipag-person.json                                    DiPagPerson                                       Profile     Profiles\dipag-person.fsh                                     1 - 106
 StructureDefinition-dipag-rechnung.json                                  DiPagRechnung                                     Profile     Profiles\dipag-rechnung.fsh                                   1 - 317
 StructureDefinition-dipag-rechnungsdiagnose.json                         DiPagRechnungsdiagnose                            Profile     Profiles\dipag-rechnungsdiagnose.fsh                          1 - 41
 StructureDefinition-dipag-rechnungsdokument.json                         DiPagRechnungsdokument                            Profile     Profiles\dipag-rechnungsdokument.fsh                          1 - 12

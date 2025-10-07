@@ -24,7 +24,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Practitioner",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+  "baseDefinition": "https://gematik.de/fhir/ti/StructureDefinition/ti-practitioner",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -39,53 +39,19 @@
             }
           ],
           "rules": "open"
-        },
-        "mustSupport": true
+        }
       },
       {
-        "id": "Practitioner.identifier:Telematik-ID",
+        "id": "Practitioner.identifier:TelematikID",
         "path": "Practitioner.identifier",
-        "sliceName": "Telematik-ID",
-        "short": "Telematik-ID (VZD-Eintrag)",
-        "comment": "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
-            ]
-          }
-        ],
-        "patternIdentifier": {
-          "type": {
-            "coding": [
-              {
-                "code": "PRN",
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-              }
-            ]
-          }
-        },
-        "mustSupport": true
+        "sliceName": "TelematikID",
+        "comment": "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein."
       },
       {
-        "id": "Practitioner.identifier:Telematik-ID.type",
-        "path": "Practitioner.identifier.type",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.identifier:Telematik-ID.system",
-        "path": "Practitioner.identifier.system",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.identifier:Telematik-ID.value",
-        "path": "Practitioner.identifier.value",
-        "short": "Telematik-ID (VZD-Eintrag)",
-        "mustSupport": true
+        "id": "Practitioner.identifier:LANR",
+        "path": "Practitioner.identifier",
+        "sliceName": "LANR",
+        "comment": "Die LANR ist optional, sie KANN vorhanden sein."
       },
       {
         "id": "Practitioner.identifier:USt-ID-Nr",
@@ -122,77 +88,22 @@
       {
         "id": "Practitioner.name",
         "path": "Practitioner.name",
-        "short": "Name",
-        "comment": "Der Name SOLL vorhanden sein.",
+        "comment": "Mindestens ein name-Element ist erforderlich. Wenn kein Name bekannt ist, MUSS ein leeres name-Element mit der data-absent-reason unknown verwendet werden."
+      },
+      {
+        "id": "Practitioner.name.extension:absent",
+        "path": "Practitioner.name.extension",
+        "sliceName": "absent",
+        "min": 0,
+        "max": "1",
         "type": [
           {
-            "code": "HumanName",
+            "code": "Extension",
             "profile": [
-              "http://fhir.de/StructureDefinition/humanname-de-basis"
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
             ]
           }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name.use",
-        "path": "Practitioner.name.use",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name.text",
-        "path": "Practitioner.name.text",
-        "short": "Voller Name inkl. Anrede",
-        "comment": "Die Anrede SOLLEN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name.family",
-        "path": "Practitioner.name.family",
-        "short": "Nachname",
-        "comment": "Der Nachname SOLL vorhanden sein, die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name.family.extension:namenszusatz",
-        "path": "Practitioner.name.family.extension",
-        "sliceName": "namenszusatz",
-        "comment": "Die Extension zur strukurierten Erfassung des Namenszusatz KANN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name.family.extension:nachname",
-        "path": "Practitioner.name.family.extension",
-        "sliceName": "nachname",
-        "comment": "Die Extension zur strukurierten Erfassung des Nachnamen KANN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name.family.extension:vorsatzwort",
-        "path": "Practitioner.name.family.extension",
-        "sliceName": "vorsatzwort",
-        "comment": "Die Extension zur strukurierten Erfassung des Vorsatzwort KANN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name.given",
-        "path": "Practitioner.name.given",
-        "comment": "Der Vorname SOLL vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name.prefix",
-        "path": "Practitioner.name.prefix",
-        "short": "Titel",
-        "comment": "Der Titel SOLL vorhanden sein, die Extension zur Qualifizierung KANN vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.name.prefix.extension:prefix-qualifier",
-        "path": "Practitioner.name.prefix.extension",
-        "sliceName": "prefix-qualifier",
-        "comment": "Die Extension zur Qualifizierung des Titeks KANN vorhanden sein.",
-        "mustSupport": true
+        ]
       },
       {
         "id": "Practitioner.telecom",
@@ -413,6 +324,21 @@
         "short": "Länderkennzeichen",
         "comment": "Das Länderkennzeichen KANN vorhanden sein.",
         "mustSupport": true
+      },
+      {
+        "id": "Practitioner.gender",
+        "path": "Practitioner.gender",
+        "comment": "Diese Angabe ist nicht relevant und SOLL NICHT gesetzt werden."
+      },
+      {
+        "id": "Practitioner.birthDate",
+        "path": "Practitioner.birthDate",
+        "comment": "Diese Angabe ist nicht relevant und SOLL NICHT gesetzt werden"
+      },
+      {
+        "id": "Practitioner.photo",
+        "path": "Practitioner.photo",
+        "comment": "Diese Angabe ist nicht relevant und SOLL NICHT gesetzt werden"
       },
       {
         "id": "Practitioner.qualification.code.coding",
