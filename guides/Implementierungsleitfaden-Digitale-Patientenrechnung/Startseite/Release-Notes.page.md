@@ -9,16 +9,14 @@ Im Rahmen der "Digitale Patientenrechnung"-Veröffentlichungen wird das [Semanti
 Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](https://simplifier.net/DigitalePatientenrechnung/~packages) versioniert veröffentlicht. Die Versionsnummer des Packages entspricht der Versionsnummer des dazugehörigen Implementierungsleitfadens.
 
 ----
-### Version 1.1.0-rc2
+### Version 1.0.2
 
-* Anpassung aus Kommentierung
+* Nutzung der TI Commons Basisprofile
+* Umbenennungen "erg" -> "dipag"
+* Update de.basisprofil.r4
+* TODO Anpassungen: Bulk
+* TODO Anpassungen: MUSS/SOLL
 
-### Version 1.1.0-rc1
+### Version 1.0.1
 
-* Vorabveröffentlichung für die Kommentierung
-* Anpassung der Rechnungsinhalte
-
-
-### Version 1.0.0-CC
-
-* Initiale Version Kommentierungsversion
+* Kommentierte und freigegebene Version
