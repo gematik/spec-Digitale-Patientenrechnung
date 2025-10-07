@@ -39,12 +39,12 @@
       {
         "id": "Patient.name.family",
         "path": "Patient.name.family",
-        "comment": "Der Nachname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.\r\n  Der Nachname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein.\r\n  Die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein."
+        "comment": "Der Nachname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.\n  Der Nachname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein.\n  Die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein."
       },
       {
         "id": "Patient.name.given",
         "path": "Patient.name.given",
-        "comment": "Der Vorname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.\r\n  Der Vorname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein."
+        "comment": "Der Vorname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein.\n  Der Vorname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein."
       },
       {
         "id": "Patient.address",

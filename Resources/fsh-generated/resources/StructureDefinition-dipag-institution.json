@@ -69,7 +69,7 @@
         "path": "Organization.identifier",
         "sliceName": "USt-ID-Nr",
         "short": "Umsatzsteuer-Identifikationsnummer",
-        "comment": "Die Umsatzsteuer-Identifikationsnummer KANN vorhanden sein.\r\n  Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat.",
+        "comment": "Die Umsatzsteuer-Identifikationsnummer KANN vorhanden sein.\n  Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat.",
         "min": 0,
         "max": "1",
         "patternIdentifier": {
@@ -141,20 +141,6 @@
         "comment": "Der Institutionsname SOLL vorhanden sein."
       },
       {
-        "id": "Organization.name.extension",
-        "path": "Organization.name.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "Organization.name.extension:dataAbsentReason",
         "path": "Organization.name.extension",
         "sliceName": "dataAbsentReason",
@@ -188,7 +174,7 @@
         "path": "Organization.telecom",
         "sliceName": "Telefon",
         "short": "Telefon",
-        "comment": "Die Angabe einer Telefonnummer KANN vorhanden sein.\r\n  Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat.",
+        "comment": "Die Angabe einer Telefonnummer KANN vorhanden sein.\n  Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat.",
         "min": 0,
         "max": "*",
         "patternContactPoint": {
