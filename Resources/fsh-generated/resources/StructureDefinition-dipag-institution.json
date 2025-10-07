@@ -23,7 +23,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Organization",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+  "baseDefinition": "https://gematik.de/fhir/ti/StructureDefinition/ti-organization",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -38,203 +38,38 @@
             }
           ],
           "rules": "open"
-        },
-        "mustSupport": true
+        }
       },
       {
-        "id": "Organization.identifier:Telematik-ID",
+        "id": "Organization.identifier:TelematikID",
         "path": "Organization.identifier",
-        "sliceName": "Telematik-ID",
-        "short": "Telematik-ID (VZD-Eintrag)",
-        "comment": "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-telematik-id"
-            ]
-          }
-        ],
-        "patternIdentifier": {
-          "type": {
-            "coding": [
-              {
-                "code": "PRN",
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-              }
-            ]
-          }
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:Telematik-ID.type",
-        "path": "Organization.identifier.type",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:Telematik-ID.system",
-        "path": "Organization.identifier.system",
-        "short": "System der Telematik-ID",
-        "comment": "Das System der Telematik-ID MUSS vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:Telematik-ID.value",
-        "path": "Organization.identifier.value",
-        "short": "Telematik-ID (VZD-Eintrag)",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:IKNR",
-        "path": "Organization.identifier",
-        "sliceName": "IKNR",
-        "short": "IK-Nummer",
-        "comment": "Für alle Institutionen KANN die IK-Nummer vorhanden sein.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-iknr"
-            ]
-          }
-        ],
-        "patternIdentifier": {
-          "type": {
-            "coding": [
-              {
-                "code": "XX",
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-              }
-            ]
-          }
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:IKNR.type",
-        "path": "Organization.identifier.type",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:IKNR.system",
-        "path": "Organization.identifier.system",
-        "short": "System der IK-Nummer",
-        "comment": "Das System der IK-Nummer MUSS vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:IKNR.value",
-        "path": "Organization.identifier.value",
-        "short": "IK-Nummer",
-        "mustSupport": true
+        "sliceName": "TelematikID",
+        "comment": "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein."
       },
       {
         "id": "Organization.identifier:BSNR",
         "path": "Organization.identifier",
         "sliceName": "BSNR",
-        "short": "Betriebsstättennummer",
-        "comment": "Die Betriebsstättennummer für vertragsärztliche Praxen KANN vorhanden sein.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-bsnr"
-            ]
-          }
-        ],
-        "patternIdentifier": {
-          "type": {
-            "coding": [
-              {
-                "code": "BSNR",
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-              }
-            ]
-          }
-        },
-        "mustSupport": true
+        "comment": "Die Betriebsstättennummer für vertragsärztliche Praxen KANN vorhanden sein."
       },
       {
-        "id": "Organization.identifier:BSNR.type",
-        "path": "Organization.identifier.type",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:BSNR.system",
-        "path": "Organization.identifier.system",
-        "short": "System der BSNR",
-        "comment": "Das System der BSNR MUSS vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:BSNR.value",
-        "path": "Organization.identifier.value",
-        "short": "Betriebsstättennummer",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:KZVAbrechnungsnummer",
+        "id": "Organization.identifier:KZVA",
         "path": "Organization.identifier",
-        "sliceName": "KZVAbrechnungsnummer",
-        "short": "Abrechnungsnummer für zahnärztliche Praxen",
-        "comment": "Die Abrechnungsnummer für zahnärztliche Praxen SOLL vorhanden sein.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Identifier",
-            "profile": [
-              "http://fhir.de/StructureDefinition/identifier-kzva"
-            ]
-          }
-        ],
-        "patternIdentifier": {
-          "type": {
-            "coding": [
-              {
-                "code": "KZVA",
-                "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
-              }
-            ]
-          }
-        },
-        "mustSupport": true
+        "sliceName": "KZVA",
+        "comment": "Die Abrechnungsnummer für zahnärztliche Praxen SOLL vorhanden sein."
       },
       {
-        "id": "Organization.identifier:KZVAbrechnungsnummer.type",
-        "path": "Organization.identifier.type",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:KZVAbrechnungsnummer.system",
-        "path": "Organization.identifier.system",
-        "short": "System der Abrechnungsnummer für zahnärztliche Praxen",
-        "comment": "Das System der Abrechnungsnummer für zahnärztliche Praxen MUSS vorhanden sein, wenn eine Abrechnungsnummer angegeben ist.",
-        "mustSupport": true
-      },
-      {
-        "id": "Organization.identifier:KZVAbrechnungsnummer.value",
-        "path": "Organization.identifier.value",
-        "short": "Abrechnungsnummer für zahnärztliche Praxen",
-        "mustSupport": true
+        "id": "Organization.identifier:IKNR",
+        "path": "Organization.identifier",
+        "sliceName": "IKNR",
+        "comment": "Für alle Institutionen KANN die IK-Nummer vorhanden sein."
       },
       {
         "id": "Organization.identifier:USt-ID-Nr",
         "path": "Organization.identifier",
         "sliceName": "USt-ID-Nr",
         "short": "Umsatzsteuer-Identifikationsnummer",
-        "comment": "Die Umsatzsteuer-Identifikationsnummer KANN vorhanden sein.\n  Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat.",
+        "comment": "Die Umsatzsteuer-Identifikationsnummer KANN vorhanden sein.\r\n  Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat.",
         "min": 0,
         "max": "1",
         "patternIdentifier": {
@@ -262,18 +97,16 @@
         "mustSupport": true
       },
       {
-        "id": "Organization.type",
+        "id": "Organization.type:providerType",
         "path": "Organization.type",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "mustSupport": true
+        "sliceName": "providerType",
+        "comment": "Der TI Provider Type ist nicht relevant für die DiPag und SOLL NICHT genutzt werden."
+      },
+      {
+        "id": "Organization.type:profession",
+        "path": "Organization.type",
+        "sliceName": "profession",
+        "comment": "Die TI Profession Type ist nicht relevant für die DiPag und SOLL NICHT genutzt werden."
       },
       {
         "id": "Organization.type:Fachrichtung",
@@ -305,8 +138,36 @@
         "id": "Organization.name",
         "path": "Organization.name",
         "short": "Institutionsname",
-        "comment": "Der Institutionsname SOLL vorhanden sein.",
-        "mustSupport": true
+        "comment": "Der Institutionsname SOLL vorhanden sein."
+      },
+      {
+        "id": "Organization.name.extension",
+        "path": "Organization.name.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Organization.name.extension:dataAbsentReason",
+        "path": "Organization.name.extension",
+        "sliceName": "dataAbsentReason",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
+            ]
+          }
+        ]
       },
       {
         "id": "Organization.telecom",
@@ -327,7 +188,7 @@
         "path": "Organization.telecom",
         "sliceName": "Telefon",
         "short": "Telefon",
-        "comment": "Die Angabe einer Telefonnummer KANN vorhanden sein.\n  Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat.",
+        "comment": "Die Angabe einer Telefonnummer KANN vorhanden sein.\r\n  Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat.",
         "min": 0,
         "max": "*",
         "patternContactPoint": {
@@ -358,8 +219,7 @@
             }
           ],
           "rules": "open"
-        },
-        "mustSupport": true
+        }
       },
       {
         "id": "Organization.address:Strassenanschrift",

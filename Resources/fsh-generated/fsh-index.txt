@@ -73,7 +73,7 @@ StructureDefinition-dipag-documentreference-rechnungsdatum.json          DiPagDo
 StructureDefinition-dipag-documentreference-zahlungszieldatum.json       DiPagDocumentReferenceZahlungszieldatum           Extension   Extensions\dipag-documentreference-zahlungszieldatum.fsh      1 - 6
 StructureDefinition-dipag-dokumentenmetadaten.json                       DiPagDokumentenmetadaten                          Profile     Profiles\dipag-dokumentenmetadaten.fsh                        4 - 127
 StructureDefinition-dipag-fachrichtung.json                              DiPagFachrichtung                                 Extension   Profiles\dipag-invoice-fachrichtung.fsh                       1 - 8
-StructureDefinition-dipag-institution.json                               DiPagInstitution                                  Profile     Profiles\dipag-institution.fsh                                1 - 145
+StructureDefinition-dipag-institution.json                               DiPagInstitution                                  Profile     Profiles\dipag-institution.fsh                                1 - 109
 StructureDefinition-dipag-nutzungsprotokoll.json                         DiPagNutzungsprotokoll                            Profile     Profiles\dipag-nutzungsprotokoll.fsh                          1 - 45
 StructureDefinition-dipag-patient.json                                   DiPagPatient                                      Profile     Profiles\dipag-patient.fsh                                    1 - 66
 StructureDefinition-dipag-person.json                                    DiPagPerson                                       Profile     Profiles\dipag-person.fsh                                     1 - 133
