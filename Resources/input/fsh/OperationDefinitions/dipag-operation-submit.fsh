@@ -3,7 +3,7 @@
 Instance: DiPagOperationSubmit
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "Digitale Patientenrechnung Operation DiPag-Submit"
+Title: "Digitale Patientenrechnung Operation Invoice-Submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
 * status = #active
@@ -12,7 +12,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * date = "2024-06-20"
 * kind = #operation
 * name = "Digitale PatientenrechnungSubmit"
-* code = #dipag-submit
+* code = #invoice-submit
 * resource = #Patient
 * system = false
 * type = false
