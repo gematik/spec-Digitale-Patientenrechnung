@@ -31,7 +31,7 @@ Anhand des übermittelten Dokumententokens MUSS der FD die entsprechende Documen
 
 Die DocumentReference-Ressource KANN direkt an den Client zurückgegeben werden ohne, dass diese in eine Parameter-Ressource eingebettet wird.
 
-Das Abrufen eines Rechnungsdokumentes durch ein RE-PS hat keine Auswirkungen auf den Rechnungsstatus (`DocumentReference.meta.tag:ergpkv-status`) des Dokumentes.
+Das Abrufen eines Rechnungsdokumentes durch ein RE-PS hat keine Auswirkungen auf den Rechnungsstatus (`DocumentReference.meta.tag:dipag-rechnungsstatus`) des Dokumentes.
 
 ### Beispiele
 

@@ -53,7 +53,7 @@ Parameters-BeispielParameterSubmitOutput3-FD.json                        Beispie
 Parameters-BeispielParameterSubmitOutput3.1-FD.json                      BeispielParameterSubmitOutput3.1-FD               Instance    Examples\dipag-R2-bulk-submit.fsh                             144 - 151
 Patient-BeispielPatient3-FD.json                                         BeispielPatient3-FD                               Instance    Examples\dipag-R2-bulk-submit.fsh                             117 - 127
 Patient-PatientVater.json                                                PatientVater                                      Instance    Examples\dipag-R0-patient-search.fsh                          9 - 21
-SearchParameter-dipag-makierung.json                                     dipag-makierung                                   Instance    SearchParameter\dipag-searchParam-ergpkvmakierung.fsh         1 - 14
+SearchParameter-dipag-makierung.json                                     dipag-makierung                                   Instance    SearchParameter\dipag-searchParam-dipag-makierung.fsh         1 - 14
 StructureDefinition-DiPagAbrechnungsDiagnoseProzedur.json                DiPagAbrechnungsDiagnoseProzedur                  Extension   Extensions\dipag-invoice-abrechnungsDiagnoseProzedur.fsh      1 - 15
 StructureDefinition-DiPagAbrechnungsDiagnoseProzedurFreitext.json        DiPagAbrechnungsDiagnoseProzedurFreitext          Extension   Extensions\dipag-invoice-abrechnungsDiagnoseProzedur.fsh      17 - 24
 StructureDefinition-DiPagRechnungspositionBehandlungsdatum.json          DiPagRechnungspositionBehandlungsdatum            Extension   Extensions\dipag-chargeitem-behandlungsdatum.fsh              1 - 5

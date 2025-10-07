@@ -435,7 +435,7 @@
     "outputFile": "SearchParameter-dipag-makierung.json",
     "fshName": "dipag-makierung",
     "fshType": "Instance",
-    "fshFile": "SearchParameter\\dipag-searchParam-ergpkvmakierung.fsh",
+    "fshFile": "SearchParameter\\dipag-searchParam-dipag-makierung.fsh",
     "startLine": 1,
     "endLine": 14
   },
