@@ -9,7 +9,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 
 |||
 |-|-|
-|HTTP-Methode|POST oder GET|
+|HTTP-Methode|POST|
 |Endpunkt|/DocumentReference/$retrieve|
 
 Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/dipag/OperationDefinition/Retrieve` beschrieben.
