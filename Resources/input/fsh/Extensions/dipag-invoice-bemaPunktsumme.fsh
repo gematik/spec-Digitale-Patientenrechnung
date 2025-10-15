@@ -1,6 +1,6 @@
-Extension: ERGBemaPunktsumme
-Id: ERGBemaPunktsumme
-Title: "ERG BEMA Punktsumme"
+Extension: DiPagBemaPunktsumme
+Id: DiPagBemaPunktsumme
+Title: "DiPag BEMA Punktsumme"
 Context: Invoice
 * extension contains
   Punktsumme ..1 and
