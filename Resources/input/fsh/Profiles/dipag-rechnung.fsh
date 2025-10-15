@@ -238,7 +238,21 @@ Id: dipag-rechnung
   * type MS
   * type = #base
   * code 1.. MS
-  * code = DiPagTotalPriceComponentTypeCS#Fremdlaborleistungen
+  * code = ERGTotalPriceComponentTypeCS#Fremdlaborleistungen
+  * factor 0..0
+  * amount ..1 MS
+    * ^short = "Wert in EUR"
+    * currency 1.. MS
+    * currency = #EUR
+    * value 1.. MS
+* totalPriceComponent[MinderungNachGOZ]
+  * ^short = "Minderungen nach §7 GOZ"
+  * ^comment = "Im Falle einer GOZ Rechnung SOLLEN die Minderungen nach §7 GOZ vorhanden sein.
+  Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
+  * type MS
+  * type = #deduction
+  * code 1.. MS
+  * code = ERGTotalPriceComponentTypeCS#Minderung7GOZ
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"
