@@ -175,10 +175,13 @@ Id: dipag-rechnung
   * ^short = "Weitere behandelnde Leistungserbringer"
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.
 <<<<<<< HEAD:Resources/input/fsh/Profiles/dipag-rechnung.fsh
+<<<<<<< HEAD:Resources/input/fsh/Profiles/dipag-rechnung.fsh
   Im Falle einer GOZ Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
   * role = DiPagParticipantRoleCS#leistungserbringer
   * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
 =======
+=======
+>>>>>>> dfbaf63531661f627a4bd4805a0718e787050e81:Resources/input/fsh/Profiles/erg-rechnung.fsh
   Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
   * role = ERGParticipantRoleCS#leistungserbringer
   * actor only Reference(ERGPerson or ERGInstitution or Practitioner or Organization)
