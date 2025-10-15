@@ -21,10 +21,6 @@
       "display": "Eigenlaborleistung/Material"
     },
     {
-      "code": "EigenlaborleistungMaterial",
-      "display": "Eigenlaborleistung/Material"
-    },
-    {
       "code": "Fremdlaborleistung",
       "display": "Fremdlaborleistung"
     },
@@ -50,5 +46,5 @@
       ]
     }
   ],
-  "count": 7
+  "count": 6
 }
