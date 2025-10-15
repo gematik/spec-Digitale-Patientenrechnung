@@ -11,7 +11,7 @@ Id: dipag-rechnung
   DiPagFachrichtung named Fachrichtung 1..1 MS and
   $extension-replaces named Korrekturrechnung ..1 MS and
   DiPagTokenStornierteRechnung named Korrekturtoken ..1 MS and
-  ERGBemaPunktsumme named BemaPunktsumme ..1 MS and
+  DiPagBemaPunktsumme named BemaPunktsumme ..1 MS and
   $extension-basedOn named Antragsreferenz ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * ^short = "Diagnose"
@@ -174,18 +174,9 @@ Id: dipag-rechnung
 * participant[Leistungserbringer]
   * ^short = "Weitere behandelnde Leistungserbringer"
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.
-<<<<<<< HEAD:Resources/input/fsh/Profiles/dipag-rechnung.fsh
-<<<<<<< HEAD:Resources/input/fsh/Profiles/dipag-rechnung.fsh
-  Im Falle einer GOZ Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
+  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
   * role = DiPagParticipantRoleCS#leistungserbringer
   * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
-=======
-=======
->>>>>>> dfbaf63531661f627a4bd4805a0718e787050e81:Resources/input/fsh/Profiles/erg-rechnung.fsh
-  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
-  * role = ERGParticipantRoleCS#leistungserbringer
-  * actor only Reference(ERGPerson or ERGInstitution or Practitioner or Organization)
->>>>>>> dfbaf63 (Revert "Removed all BEMA related mentions, extensions and codes"):Resources/input/fsh/Profiles/erg-rechnung.fsh
 * participant[Forderungsinhaber]
   * ^short = "Abweichender Forderungsinhaber"
   * ^comment = "Der abweichender Forderungsinhaber SOLL vorhanden sein."
