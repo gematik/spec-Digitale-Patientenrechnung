@@ -19,7 +19,7 @@
         },
         "subtype": [
           {
-            "code": "dipag-submit"
+            "code": "invoice-submit"
           }
         ],
         "action": "C",

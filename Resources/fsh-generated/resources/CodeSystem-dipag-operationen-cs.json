@@ -9,7 +9,7 @@
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs",
   "concept": [
     {
-      "code": "dipag-submit",
+      "code": "invoice-submit",
       "display": "Digitale Patientenrechnung_Submit"
     },
     {
