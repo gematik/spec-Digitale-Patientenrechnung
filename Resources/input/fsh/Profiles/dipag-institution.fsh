@@ -52,7 +52,7 @@ Id: dipag-institution
   * value MS
     * ^short = "Abrechnungsnummer für zahnärztliche Praxen"
   * ^short = "Abrechnungsnummer für zahnärztliche Praxen"
-  * ^comment = "Die Abrechnungsnummer für zahnärztliche Praxen SOLL vorhanden sein."
+  * ^comment = "Die Abrechnungsnummer für zahnärztliche Praxen KANN vorhanden sein."
 * identifier[USt-ID-Nr]
   * ^patternIdentifier.type.text = "UmsatzsteuerId"
   * type 1.. MS

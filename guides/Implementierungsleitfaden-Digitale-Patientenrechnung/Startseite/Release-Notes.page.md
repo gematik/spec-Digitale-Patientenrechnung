@@ -14,6 +14,7 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 * Update der Deutschen Basisprofile auf v1.5.4, sowie der KDL auf v2025.0.1
 * Umbenennung einiger Conformance-Artefakt mit einem "ERG"-Prefix zu "DiPag" 
 * Umbenennung der Operation "dipag-submit" zu "invoice-submit"
+* Änderung der Anforderung an die "KZVAbrechnungsnummer" im "DiPagInstitution"-Profil von "SOLL" auf "KANN"
 
 ### Version 1.0.1
 
