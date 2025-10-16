@@ -8,18 +8,18 @@
 
 <a href="https://simplifier.net/DigitalePatientenrechnung/~introduction" class="btn btn-primary">Zum Projekt auf Simplifier</a>
 
-<a href="https://github.com/gematik/spec-Digitale-Patientenrechnung/pull/42" class="btn btn-primary">Zum PR mit BEMA Leistungen</a>
+<a href="https://github.com/gematik/spec-Digitale-Patientenrechnung/pull/42" class="btn btn-primary">Zum PR mit BEMA-Leistungen</a>
 
 
 ### Zusammenfassung
-Im Folgenden sind die Anpassungen beschrieben, die an **Profilen**, **Extensions**, **CodeSystemen** und dem **IG** durchgeführt wurden, um die BEMA Leistungen im Projekt hinzuzufügen. Die Ergänzungen sind im Rahmen eines Pull-Request auf Github vorbereitet, sind aber noch nicht Teil des veröffentlichten Package und somit nur als Draft einsehbar.
+Im Folgenden sind die Anpassungen an **Profilen**, **Extensions**, **CodeSystemen** und dem **IG** beschrieben, mit denen die BEMA-Leistungen in das Projekt aufgenommen wurden. Die Ergänzungen wurden im Rahmen eines Pull-Requests auf GitHub vorbereitet, sind jedoch noch nicht Teil des veröffentlichten Packages und derzeit nur als Draft sichtbar.
 
 ### Profile
 
 #### {{link:DiPagRechnung}}
 
 - Die Extension BemaPunktsumme wurde hinzugefügt (siehe unten)
-- Die folgenden Beschreibungen wurden erweitert um Anforderungen, wie mit dem Element im BEMA Kontext zu verfahren ist
+- Die folgenden Beschreibungen wurden um Vorgaben ergänzt, wie im BEMA-Kontext mit dem Element umzugehen ist
     - `extension[AbrechnungsDiagnoseProzedur]`
         - [..]Im Falle einer GOZ oder BEMA Rechnung werden keine Diagnosen oder Prozedur gefordert.
     - `extension[AbrechnungsDiagnoseProzedurFreitext]`
@@ -35,8 +35,8 @@ Im Folgenden sind die Anpassungen beschrieben, die an **Profilen**, **Extensions
 
 #### {{link:DiPagRechnungsposition}}
 
-- Die komplexe Extension {{link:DiPagRechnungspositionGOAngaben}} beinhaltet eine Möglichkeit, die BEMA Punktzahl anzugeben. Diese wurde im Profil mit MUST-SUPPORT gekennzeichnet.
-- Die folgenden Beschreibungen wurden erweitert um Anforderungen, wie mit dem Element im BEMA Kontext zu verfahren ist
+- Die komplexe Extension {{link:DiPagRechnungspositionGOAngaben}} bietet die Möglichkeit, die BEMA-Punktzahl anzugeben. Diese wurde im Profil mit MUST-SUPPORT gekennzeichnet.
+- Die folgenden Beschreibungen wurden um Vorgaben ergänzt, wie im BEMA-Kontext mit dem Element umzugehen ist
     - `extension[Zusatz]`
         - [..]Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert.[..]
     - `extension[WegegeldReiseentschädigung]`
@@ -65,7 +65,7 @@ Im Folgenden sind die Anpassungen beschrieben, die an **Profilen**, **Extensions
 
 #### DiPagBemaPunktsumme
 
-Eine neue Extension wurde hinzugefügt, mir der es möglich ist, an der Rechnung die BEMA Punktsumme strukturiert zu erfassen.
+Eine neue Extension wurde hinzugefügt, mit der es möglich ist, an der Rechnung die BEMA-Punktsumme strukturiert zu erfassen.
 
 <iframe src="https://simplifier.net/embed/snippet?user=jonasschn2&key=8" style="width:100%; height:300px; border:none; display:block;"></iframe>
 
@@ -81,12 +81,12 @@ Das CodeSystem wurde um den Code `BEMA` erweitert, sodass es möglich ist, eine 
 
 #### {{link:DiPagTotalPriceComponentTypeCS}}
 
-Das CodeSystem wurde um den Code `KostenBema13AtoD` erweitert, welcher untergeordnet unter dem Code `Abzug` verortet ist.
-Damit ist es möglich, Abzüge im `totalPriceComponent` einer Rechnung nach diesem Abzugstyp zu erfassen.
+Das CodeSystem wurde um den Code `KostenBema13AtoD` erweitert, der dem Code `Abzug` untergeordnet ist.
+Damit lassen sich Abzüge im `totalPriceComponent` einer Rechnung nach diesem Abzugstyp erfassen.
 
 ### Implementation Guide
 
-Im [IG](https://simplifier.net/guide/digitalepatientenrechnung-implementierungsleitfaden) wurde für die o.g. Extension eine Seite hinzugefügt. Alle weiteren Anpassungen im IG erfolgen automatisch in den Tabellen, welche die Beschreibungen aus den Profilen laden. Es sind die im Abschnitt **Profile** genannten Anpassungen. 
+Im [IG](https://simplifier.net/guide/digitalepatientenrechnung-implementierungsleitfaden) wurde für die oben genannte Extension eine Seite hinzugefügt. Alle weiteren Anpassungen im IG erfolgen automatisch in den Tabellen, welche die Beschreibungen aus den Profilen laden. Es sind die im Abschnitt **Profile** genannten Anpassungen.
 
 ### Status
 
