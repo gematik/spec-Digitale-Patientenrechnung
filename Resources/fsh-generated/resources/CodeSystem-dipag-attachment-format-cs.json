@@ -6,7 +6,7 @@
   "id": "dipag-attachment-format-cs",
   "title": "Digitale Patientenrechnung Attachment Format CS",
   "description": "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments",
-  "version": "1.1.0-rc2",
+  "version": "1.0.2",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs",
   "concept": [
     {
@@ -27,7 +27,7 @@
     }
   ],
   "experimental": false,
-  "date": "2025-04-07",
+  "date": "2025-10-06",
   "publisher": "gematik GmbH",
   "contact": [
     {
