@@ -48,7 +48,7 @@ CodeSystem: DiPagOperationenCS
 Id: dipag-operationen-cs
 Title: "Digitale Patientenrechnung Operationen"
 * insert Meta
-* #dipag-submit "Digitale Patientenrechnung_Submit"
+* #invoice-submit "Digitale Patientenrechnung_Submit"
 * #retrieve "Digitale Patientenrechnung_Retrieve"
 * #change-status "Digitale Patientenrechnung_ChangeStatus"
 * #process-flag "Digitale Patientenrechnung_ProcessFlag"

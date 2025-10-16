@@ -43,7 +43,7 @@ Usage: #definition
       * type = #date
     * operation[+]
       * insert Expectation (#SHALL)
-      * name = "dipag-submit"
+      * name = "invoice-submit"
       * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
   * resource[+]
     * type = #DocumentReference

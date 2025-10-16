@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
   "url": "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
-  "version": "1.1.0-rc2",
+  "version": "1.1.2",
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -16,10 +16,10 @@
       ]
     }
   ],
-  "date": "2025-04-07",
+  "date": "2025-10-06",
   "name": "CapabilityStatementFD",
   "title": "CapabilityStatement Fachdienst E-Rechnnung",
-  "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",
+  "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \r\n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.\r\n",
   "jurisdiction": [
     {
       "coding": [
@@ -115,7 +115,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "name": "dipag-submit",
+              "name": "invoice-submit",
               "definition": "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
             }
           ]
