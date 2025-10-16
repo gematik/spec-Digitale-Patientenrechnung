@@ -1,5 +1,5 @@
 Profile: DiPagInstitution
-Parent: Organization
+Parent: TIOrganization
 Title: "Digitale Patientenrechnung Institution"
 Id: dipag-institution
 * insert Meta
@@ -7,52 +7,12 @@ Id: dipag-institution
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
-* identifier contains
-    Telematik-ID ..1 MS and
-    IKNR ..1 MS and
-    BSNR ..1 MS and
-    KZVAbrechnungsnummer ..1 MS and
+* identifier contains    
     USt-ID-Nr ..1 MS
-* identifier[Telematik-ID] only $identifier-telematikId
-  * ^patternIdentifier.type = $v2-0203#PRN
-  * type 1.. MS
-  * system MS
-    * ^short = "System der Telematik-ID"
-    * ^comment = "Das System der Telematik-ID MUSS vorhanden sein."
-  * value MS
-    * ^short = "Telematik-ID (VZD-Eintrag)"
-  * ^short = "Telematik-ID (VZD-Eintrag)"
-  * ^comment = "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein."
-* identifier[IKNR] only $identifier-iknr
-  * ^patternIdentifier.type = $v2-0203#XX
-  * type 1.. MS
-  * system MS
-    * ^short = "System der IK-Nummer"
-    * ^comment = "Das System der IK-Nummer MUSS vorhanden sein."
-  * value MS
-    * ^short = "IK-Nummer"
-  * ^short = "IK-Nummer"
-  * ^comment = "Für alle Institutionen KANN die IK-Nummer vorhanden sein."
-* identifier[BSNR] only $identifier-bsnr
-  * ^patternIdentifier.type = $v2-0203#BSNR
-  * type 1.. MS
-  * system MS
-    * ^short = "System der BSNR"
-    * ^comment = "Das System der BSNR MUSS vorhanden sein."
-  * value MS
-    * ^short = "Betriebsstättennummer"
-  * ^short = "Betriebsstättennummer"
-  * ^comment = "Die Betriebsstättennummer für vertragsärztliche Praxen KANN vorhanden sein."
-* identifier[KZVAbrechnungsnummer] only $identifier-kzvabrechnungsnr
-  * ^patternIdentifier.type = $identifier-kvnr-type#KZVA
-  * type 1.. MS
-  * system MS
-    * ^short = "System der Abrechnungsnummer für zahnärztliche Praxen"
-    * ^comment = "Das System der Abrechnungsnummer für zahnärztliche Praxen MUSS vorhanden sein, wenn eine Abrechnungsnummer angegeben ist."
-  * value MS
-    * ^short = "Abrechnungsnummer für zahnärztliche Praxen"
-  * ^short = "Abrechnungsnummer für zahnärztliche Praxen"
-  * ^comment = "Die Abrechnungsnummer für zahnärztliche Praxen SOLL vorhanden sein."
+* identifier[TelematikID] ^comment = "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein."  
+* identifier[IKNR] ^comment = "Für alle Institutionen KANN die IK-Nummer vorhanden sein."
+* identifier[BSNR] ^comment = "Die Betriebsstättennummer für vertragsärztliche Praxen KANN vorhanden sein."  
+* identifier[KZVA] ^comment = "Die Abrechnungsnummer für zahnärztliche Praxen SOLL vorhanden sein."  
 * identifier[USt-ID-Nr]
   * ^patternIdentifier.type.text = "UmsatzsteuerId"
   * type 1.. MS
@@ -72,7 +32,11 @@ Id: dipag-institution
   * ^comment = "Die Fachrichtung SOLL vorhanden sein. Das Element ist wiederholbar."
   * coding.system 1.. MS
   * coding.code 1.. MS
+* type[providerType] ^comment = "Der TI Provider Type ist nicht relevant für die DiPag und SOLL NICHT genutzt werden."
+* type[profession] ^comment = "Die TI Profession Type ist nicht relevant für die DiPag und SOLL NICHT genutzt werden."
 * name MS
+  * extension contains 
+      http://hl7.org/fhir/StructureDefinition/data-absent-reason named dataAbsentReason 0..1
   * ^short = "Institutionsname"
   * ^comment = "Der Institutionsname SOLL vorhanden sein."
 * telecom MS

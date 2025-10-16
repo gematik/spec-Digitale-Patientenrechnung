@@ -1,6 +1,6 @@
 Profile: DiPagPerson
 Id: dipag-person
-Parent: Practitioner
+Parent: TIPractitioner
 Title: "Digitale Patientenrechnung Person"
 Description: "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet."
 * insert Meta
@@ -8,17 +8,10 @@ Description: "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistu
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
-* identifier contains
-    Telematik-ID ..1 MS and
+* identifier contains    
     USt-ID-Nr ..1 MS
-* identifier[Telematik-ID] only $identifier-telematikId
-  * ^patternIdentifier.type = $v2-0203#PRN
-  * type 1.. MS
-  * system MS
-  * value MS
-    * ^short = "Telematik-ID (VZD-Eintrag)"
-  * ^short = "Telematik-ID (VZD-Eintrag)"
-  * ^comment = "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein."
+* identifier[TelematikID] ^comment = "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein."  
+* identifier[LANR] ^comment = "Die LANR ist optional, sie KANN vorhanden sein."  
 * identifier[USt-ID-Nr]
   * ^patternIdentifier.type.text = "UmsatzsteuerId"
   * type 1.. MS
@@ -27,31 +20,8 @@ Description: "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistu
   * ^short = "Umsatzsteuer-Identifikationsnummer"
   * ^comment = "Die Umsatzsteuer-Identifikationsnummer KANN vorhanden sein.
   Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat."
-* name only $humanname-de
-* name MS
-  * ^short = "Name"
-  * ^comment = "Der Name SOLL vorhanden sein."
-  * use MS
-  * text MS
-    * ^short = "Voller Name inkl. Anrede"
-    * ^comment = "Die Anrede SOLLEN vorhanden sein."
-  * family MS
-    * ^short = "Nachname"
-    * ^comment = "Der Nachname SOLL vorhanden sein, die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein."
-    * extension[namenszusatz] MS
-      * ^comment = "Die Extension zur strukurierten Erfassung des Namenszusatz KANN vorhanden sein."
-    * extension[nachname] MS
-      * ^comment = "Die Extension zur strukurierten Erfassung des Nachnamen KANN vorhanden sein."
-    * extension[vorsatzwort] MS
-      * ^comment = "Die Extension zur strukurierten Erfassung des Vorsatzwort KANN vorhanden sein."
-  * given MS
-    * ^short = "Vorname"
-    * ^comment = "Der Vorname SOLL vorhanden sein."
-  * prefix MS
-    * ^short = "Titel"
-    * ^comment = "Der Titel SOLL vorhanden sein, die Extension zur Qualifizierung KANN vorhanden sein."
-  * prefix.extension[prefix-qualifier] MS
-    * ^comment = "Die Extension zur Qualifizierung des Titeks KANN vorhanden sein."
+* name.extension contains DataAbsentReason named absent 0..1
+* name ^comment = "Mindestens ein name-Element ist erforderlich. Wenn kein Name bekannt ist, MUSS ein leeres name-Element mit der data-absent-reason unknown verwendet werden."
 * telecom MS
 * telecom ^slicing.discriminator.type = #pattern
 * telecom ^slicing.discriminator.path = "$this"
@@ -131,3 +101,6 @@ Description: "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistu
   * ^comment = "Die Fachrichtung SOLL vorhanden sein. Das Element ist wiederholbar."
   * system 1.. MS
   * code 1.. MS
+* gender ^comment = "Diese Angabe ist nicht relevant und SOLL NICHT gesetzt werden."
+* birthDate ^comment = "Diese Angabe ist nicht relevant und SOLL NICHT gesetzt werden"
+* photo ^comment = "Diese Angabe ist nicht relevant und SOLL NICHT gesetzt werden"
