@@ -36,23 +36,15 @@ See [ReleaseNotes.md](./ReleaseNotes.md) for all information regarding the (newe
   
 ### Prerequisites
 1. Clone this project to your local machine.
-2. Run the install script once.
-3. Work on teh FHIR Profiles build and validate them with the given script.
+2. Install the dependencies listed below.
+3. Work on the FHIR Profiles, run SUSHI, build and validate them.
  
 ### Installation
-To install the necessary tools run
+The following tools are recommended when working with the current project:
 
-```bash
-sudo ./install_fhir_tools.sh
-```
-
-This will install
-
-- Java SDK 17 JRE
 - Sushi from <https://github.com/FHIR/sushi>
-- dotnet-sdk-3.1
-- firely.terminal
-- yq yaml-parser
+- dotnet-sdk-8.0 from <https://dotnet.microsoft.com/en-us/download/dotnet/8.0>
+- firely.terminal from <https://fire.ly/products/firely-terminal/>
 
 We highly recommend you use the VSCode [codfsh Extension](https://marketplace.visualstudio.com/items?itemName=gematikde.codfsh) to validate the ressources locally. 
 This extension wraps SUSHI (FHIR Shorthand) and the HAPI Validator, providing comprehensive warning and error messages. It allows you to "run" your .fsh shorthand files to both generate FHIR .json files and validate them simultaneously.
