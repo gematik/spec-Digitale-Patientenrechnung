@@ -5,7 +5,7 @@
   "name": "Suchparameter DocumentReference dipag-makierung",
   "status": "active",
   "publisher": "gematik GmbH",
-  "description": "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach einer manuelle Markierung ermöglicht.",
+  "description": "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach einer manuellen Markierung ermöglicht.",
   "code": "dipag-makierung",
   "base": [
     "DocumentReference"
