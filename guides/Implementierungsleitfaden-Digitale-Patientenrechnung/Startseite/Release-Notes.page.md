@@ -11,11 +11,9 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 ----
 ### Version 1.0.2
 
-* Nutzung der TI Commons Basisprofile
-* Umbenennungen "erg" -> "dipag"
-* Update de.basisprofil.r4
-* TODO Anpassungen: Bulk
-* TODO Anpassungen: MUSS/SOLL
+* Update der Deutschen Basisprofile auf v1.5.4, sowie der KDL auf v2025.0.1
+* Umbenennung einiger Conformance-Artefakt mit einem "ERG"-Prefix zu "DiPag" 
+* Umbenennung der Operation "dipag-submit" zu "invoice-submit"
 
 ### Version 1.0.1
 
