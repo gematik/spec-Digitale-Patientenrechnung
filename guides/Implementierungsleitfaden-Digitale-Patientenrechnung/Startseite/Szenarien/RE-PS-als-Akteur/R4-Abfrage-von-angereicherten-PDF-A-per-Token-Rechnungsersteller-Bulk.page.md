@@ -53,7 +53,7 @@ HTTP POST [fachdienst-endpunkt]/
     </tab>
 </tabs>
 
-Antwort des Fachdienstes im nach der Verarbeitung des ``batch``-Bundles:
+Antwort des Fachdienstes nach der Verarbeitung des ``batch``-Bundles:
 
 ```
 HTTP 200 OK
