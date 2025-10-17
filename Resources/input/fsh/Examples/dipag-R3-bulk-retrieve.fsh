@@ -1,7 +1,7 @@
 Instance: BulkRetrieveExampleInput
 InstanceOf: Bundle
 Usage: #example
-* type = #transaction
+* type = #batch
 * entry[+]
   * insert BundleRequest(POST, "$retrieve")
   * resource = BeispielParameterRetrieveInput
@@ -12,7 +12,7 @@ Usage: #example
 Instance: BulkRetrieveExampleOutput
 InstanceOf: Bundle
 Usage: #example
-* type = #transaction-response
+* type = #batch-response
 * entry[+]
   * fullUrl = "[FD-endpunkt]/DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
   * resource = BeispielDocumentReferenceRechnungRetrieve

@@ -1,7 +1,7 @@
 Instance: BulkSubmitExample
 InstanceOf: Bundle
 Usage: #example
-* type = #transaction
+* type = #batch
 * entry[+]
   * insert BundleRequest(POST, "$submit")
   * resource = BeispielParameterSubmitInput3-LE
@@ -133,7 +133,7 @@ Usage: #example
 Instance: BulkSubmitExampleOutput
 InstanceOf: Bundle
 Usage: #example
-* type = #transaction-response
+* type = #batch-response
 * entry[+]
   * fullUrl = "[FD-endpunkt]/Parameters/BeispielParameterSubmitOutput3-FD"
   * resource = BeispielParameterSubmitOutput3-FD
