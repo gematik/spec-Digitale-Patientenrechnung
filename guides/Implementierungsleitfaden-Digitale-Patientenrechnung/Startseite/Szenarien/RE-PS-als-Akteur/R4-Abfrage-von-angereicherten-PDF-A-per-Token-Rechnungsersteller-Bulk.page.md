@@ -74,3 +74,5 @@ mit Body:
         {{link:Resources/fsh-generated/resources/Bundle-BulkRetrieveExampleOutput.json}}
     </tab>
 </tabs>
+
+----
