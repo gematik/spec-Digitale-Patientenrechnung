@@ -1,7 +1,7 @@
 {
   "resourceType": "Bundle",
   "id": "BulkRetrieveExampleOutput",
-  "type": "transaction-response",
+  "type": "batch-response",
   "entry": [
     {
       "fullUrl": "[FD-endpunkt]/DocumentReference/BeispielDocumentReferenceRechnungRetrieve",

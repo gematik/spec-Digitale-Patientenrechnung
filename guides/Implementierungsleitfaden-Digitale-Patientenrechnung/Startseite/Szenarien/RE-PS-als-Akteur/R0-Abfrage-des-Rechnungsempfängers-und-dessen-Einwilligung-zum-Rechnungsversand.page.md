@@ -83,3 +83,5 @@ Folgende Implementierungshinweise sind zu beachten:
 <fql output="table" headers="false">
 from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient' for differential.element where comment.exists() select path, comment
 </fql>
+
+----

@@ -1,7 +1,7 @@
 {
   "resourceType": "Bundle",
   "id": "BulkSubmitExample",
-  "type": "transaction",
+  "type": "batch",
   "entry": [
     {
       "request": {
