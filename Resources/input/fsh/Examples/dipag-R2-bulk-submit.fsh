@@ -3,10 +3,10 @@ InstanceOf: Bundle
 Usage: #example
 * type = #batch
 * entry[+]
-  * insert BundleRequest(POST, "$submit")
+  * insert BundleRequest(POST, "/Patient/BeispielPatient3-FD/$invoice-submit")
   * resource = BeispielParameterSubmitInput3-LE
 * entry[+]
-  * insert BundleRequest(POST, "$submit")
+  * insert BundleRequest(POST, "/Patient/BeispielPatient3-FD/$invoice-submit")
   * resource = BeispielParameterSubmitInput3.1-LE
 
 Instance: BeispielParameterSubmitInput3-LE

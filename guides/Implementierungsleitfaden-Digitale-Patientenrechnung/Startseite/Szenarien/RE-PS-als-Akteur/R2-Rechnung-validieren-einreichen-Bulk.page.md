@@ -12,7 +12,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |HTTP-Methode|POST|
 |Endpunkt|/ (Root-Endpunkt)|
 
-Für die Ausführung der Operation gelten die gleichen Vorgaben wie aus {{pagelink:AF_10136}}. Die Operation `$submit` kann für innerhalb eines Batch-Bundles mehrfach, auch für unterschiedliche Dokumente aufgerufen werden. Es gelten die entsprechenden Vorgaben aus der [FHIR-Kernspezifikation](https://www.hl7.org/fhir/r4/http.html#transaction).
+Für die Ausführung der Operation gelten die gleichen Vorgaben wie aus {{pagelink:AF_10136}}. Die Operation `$invoice-submit` kann für innerhalb eines Batch-Bundles mehrfach, auch für unterschiedliche Dokumente aufgerufen werden. Es gelten die entsprechenden Vorgaben aus der [FHIR-Kernspezifikation](https://www.hl7.org/fhir/r4/http.html#transaction).
 
 ### Asynchrone Verarbeitung
 

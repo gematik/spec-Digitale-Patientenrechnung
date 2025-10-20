@@ -83,7 +83,7 @@ from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDef
 </tabs>
 
 ```
-HTTP POST [fachdienst-endpunkt]/Patient/[id-des-ermittelten-Rechnungsempfängers]/$submit
+HTTP POST [fachdienst-endpunkt]/Patient/[id-des-ermittelten-Rechnungsempfängers]/$invoice-submit
 ```
 
 <tabs>
