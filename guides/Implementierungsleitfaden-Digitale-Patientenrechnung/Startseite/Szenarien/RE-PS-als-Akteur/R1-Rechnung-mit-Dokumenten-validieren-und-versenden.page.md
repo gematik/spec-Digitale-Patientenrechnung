@@ -20,6 +20,7 @@ Die Input- und Output-Parameter werden durch die OperationDefinition `https://ge
 |API-Zustand|HTTP-Status-Code|
 |-|-|
 |Erfolgsfall|`200 - OK`|
+|Eine DocumentReferenz mit dem selben Identifier extistiert bereits|`200 - OK` In diesem Fall wird der ursprüngliche Response mit Rechnungs-Token erneut zurück gegeben|
 |Weitere Parameter in HTTP-Anfrage enthalten|`400 - Bad Request`|
 |Syntax für Parameter ist nicht korrekt oder Kardinalitäten werden nicht eingehalten|`400 - Bad Request`|
 |Gravierende Fehler treten während der Validierung auf - Mode = 'normal'|`400 - Bad Request`|
