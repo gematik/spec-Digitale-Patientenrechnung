@@ -31,6 +31,33 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |Plausibilisierung zwischen Geburtsdatum und KVNR schlägt fehl|`404 - Not Found`|
 |Andere HTTP-Methode wird verwendet|`405 - Method Not Allowed`|
 
+### Optional als Batch
+
+Um mehrere Abfragen zeitgleich durchzuführen, kann auf die batch Funktionalität in der [FHIR Core Spec](https://hl7.org/fhir/R4/http.html#transaction) zurückgegriffen werden.
+
+Beispiel:
+```
+{
+  "resourceType": "Bundle",
+  "id": "bundle-request",
+  "type": "batch",
+  "entry": [
+    {
+      "request": {
+        "method": "GET",
+        "url": "/Patient?identifier=A000000000&birthdate=1970-01-01"
+      }
+    },
+    {
+      "request": {
+        "method": "GET",
+        "url": "/Patient?identifier=A000000010&birthdate=1970-01-02"
+      }
+    }
+  ]
+}
+```
+
 ### Beispiele
 
 ```
@@ -83,3 +110,5 @@ Folgende Implementierungshinweise sind zu beachten:
 <fql output="table" headers="false">
 from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient' for differential.element where comment.exists() select path, comment
 </fql>
+
+----

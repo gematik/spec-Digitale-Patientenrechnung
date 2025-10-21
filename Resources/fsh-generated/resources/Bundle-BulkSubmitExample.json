@@ -1,12 +1,12 @@
 {
   "resourceType": "Bundle",
   "id": "BulkSubmitExample",
-  "type": "transaction",
+  "type": "batch",
   "entry": [
     {
       "request": {
         "method": "POST",
-        "url": "$submit"
+        "url": "/Patient/BeispielPatient3-FD/$invoice-submit"
       },
       "resource": {
         "resourceType": "Parameters",
@@ -115,7 +115,7 @@
     {
       "request": {
         "method": "POST",
-        "url": "$submit"
+        "url": "/Patient/BeispielPatient3-FD/$invoice-submit"
       },
       "resource": {
         "resourceType": "Parameters",

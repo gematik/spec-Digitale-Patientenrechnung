@@ -15,6 +15,7 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 * Umbenennung einiger Conformance-Artefakt mit einem "ERG"-Prefix zu "DiPag" 
 * Umbenennung der Operation "dipag-submit" zu "invoice-submit"
 * Änderung der Anforderung an die "KZVAbrechnungsnummer" im "DiPagInstitution"-Profil von "SOLL" auf "KANN"
+* Überarbeitung der 'R2-Rechnung-validieren-einreichen-Bulk' Beschreibungen
 
 ### Version 1.0.1
 
