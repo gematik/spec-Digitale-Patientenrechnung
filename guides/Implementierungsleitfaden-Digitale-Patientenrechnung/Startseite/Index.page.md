@@ -33,7 +33,6 @@ gematik GmbH
 
 ### Ansprechpartner
 * Frank Weber
-* Klaus Jäde
 * Peter Menze
 
 ### Weitere Links
