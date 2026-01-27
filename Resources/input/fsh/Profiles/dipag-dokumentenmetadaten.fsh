@@ -197,7 +197,7 @@ Description: "Extension zur Angabe einer Leistungsart"
 
 Invariant: SignaturVerpflichtendRechnung
 Description: "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt."
-Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()"
+Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'angereichertesPDF').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()"
 Severity: #error
 
 Invariant: RechnungOderAnhang
