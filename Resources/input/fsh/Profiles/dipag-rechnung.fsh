@@ -190,27 +190,6 @@ Id: dipag-rechnung
   * ^short = "Rechnungsbetrag (Brutto)"
   * ^comment = "Der Rechnungsbetrag in Brutto MUSS vorhanden sein."
 * totalPriceComponent MS
-* totalPriceComponent.extension contains
-  DiPagTeilsumme named Teilsumme ..* MS
-* totalPriceComponent.extension[Teilsumme]
-  * ^short = "Teilsummen in EUR für die Rechnungspositionstyp"
-  * ^comment = "Für alle vorkommenden Rechnungspositionstypen SOLL eine Teilsumme vorhanden sein."
-  * extension[Type] MS
-    * ^short = "Rechnungspositionstyp"
-    * valueCoding 1.. MS
-  * extension[Summe] MS
-    * ^short = "Bruttosumme"
-    * valueMoney 1.. MS
-      * currency 1.. MS
-      * value 1.. MS
-  * extension[UStProzent] MS
-    * ^short = "Enthaltene Umsatzsteuer in Prozent"
-    * valueDecimal MS
-  * extension[UStBetrag] MS
-    * ^short = "Enthaltene Umsatzsteuer als Betrag"
-    * valueMoney 1.. MS
-      * currency 1.. MS
-      * value 1.. MS
 * totalPriceComponent ^slicing.discriminator.type = #pattern
 * totalPriceComponent ^slicing.discriminator.path = "code"
 * totalPriceComponent ^slicing.rules = #open
@@ -220,6 +199,27 @@ Id: dipag-rechnung
   Fremdlaborleistungen ..1 MS and
   Abzug ..* MS
 * totalPriceComponent[SummeRechnungspositionen]
+  * extension contains
+  DiPagTeilsumme named Teilsumme ..* MS
+  * extension[Teilsumme]
+    * ^short = "Teilsummen in EUR für die Rechnungspositionstyp"
+    * ^comment = "Für alle vorkommenden Rechnungspositionstypen SOLL eine Teilsumme vorhanden sein."
+    * extension[Type] MS
+      * ^short = "Rechnungspositionstyp"
+      * valueCoding 1.. MS
+    * extension[Summe] MS
+      * ^short = "Bruttosumme"
+      * valueMoney 1.. MS
+        * currency 1.. MS
+        * value 1.. MS
+    * extension[UStProzent] MS
+      * ^short = "Enthaltene Umsatzsteuer in Prozent"
+      * valueDecimal MS
+    * extension[UStBetrag] MS
+      * ^short = "Enthaltene Umsatzsteuer als Betrag"
+      * valueMoney 1.. MS
+        * currency 1.. MS
+        * value 1.. MS
   * ^short = "Summe aller Rechnungspositionen"
   * ^comment = "Die Summe aller Rechnungspositionen SOLL vorhanden sein."
   * type MS
