@@ -144,11 +144,15 @@ Usage: #example
 Instance: BeispielParameterSubmitOutput3.1-FD
 InstanceOf: Parameters
 * parameter[+]
-  * name = "rechnung"
-  * resource = BeispielDocumentReferenceRechnung3.1-FD
-* parameter[+]
-  * name = "anhang"
-  * resource = BeispielDocumentReferenceSonstigesDokument3.1-FD
+  * name = "token"
+  * part[+]
+    * name = "id"
+    * valueId = "dc835efd80d831b95b1db9d2cca371eeb9063393155e3a573c8a9c7a803f6abe"
+  * part[+]
+    * name = "docRef"
+    * valueIdentifier
+      * system = "https://example.org/fhir/sid/invoice-id"
+      * value = "12345"
 
 Instance: BeispielDocumentReferenceRechnung3.1-FD
 InstanceOf: DocumentReference
