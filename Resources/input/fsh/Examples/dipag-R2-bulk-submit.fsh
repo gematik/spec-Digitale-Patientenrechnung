@@ -153,6 +153,24 @@ InstanceOf: Parameters
     * valueIdentifier
       * system = "https://example.org/fhir/sid/invoice-id"
       * value = "12345"
+* parameter[+]
+  * name = "warnungen"
+  * resource = BeispielOperationOutcomeRechnung3.1-FD
+
+Instance: BeispielOperationOutcomeRechnung3.1-FD
+InstanceOf: OperationOutcome
+* issue[+]
+  * severity = #warning
+  * code = #invalid
+  * details
+    * text = "Menschenlesbare Beschreibung der Warnung hier..."
+  * diagnostics = "Originaler technischer Validierungsfehler hier..."
+* issue[+]
+  * severity = #warning
+  * code = #invalid
+  * details
+    * text = "Weiterer Fehler..."
+  * diagnostics = "Originaler technischer Validierungsfehler hier..."
 
 Instance: BeispielDocumentReferenceRechnung3.1-FD
 InstanceOf: DocumentReference
