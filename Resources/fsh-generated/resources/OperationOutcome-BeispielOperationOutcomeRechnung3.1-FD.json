@@ -1,0 +1,22 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "BeispielOperationOutcomeRechnung3.1-FD",
+  "issue": [
+    {
+      "severity": "warning",
+      "code": "invalid",
+      "details": {
+        "text": "Menschenlesbare Beschreibung der Warnung hier..."
+      },
+      "diagnostics": "Originaler technischer Validierungsfehler hier..."
+    },
+    {
+      "severity": "warning",
+      "code": "invalid",
+      "details": {
+        "text": "Weiterer Fehler..."
+      },
+      "diagnostics": "Originaler technischer Validierungsfehler hier..."
+    }
+  ]
+}

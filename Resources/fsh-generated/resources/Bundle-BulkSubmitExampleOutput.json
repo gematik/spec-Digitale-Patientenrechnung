@@ -126,108 +126,42 @@
         "id": "BeispielParameterSubmitOutput3.1-FD",
         "parameter": [
           {
-            "name": "rechnung",
-            "resource": {
-              "resourceType": "DocumentReference",
-              "id": "BeispielDocumentReferenceRechnung3.1-FD",
-              "identifier": [
-                {
-                  "system": "https://gematik.de/fhir/sid/dipag-token",
-                  "value": "123-456-987"
-                }
-              ],
-              "status": "current",
-              "type": {
-                "coding": [
-                  {
-                    "code": "AM010106",
-                    "system": "http://dvmd.de/fhir/CodeSystem/kdl",
-                    "display": "Rechnung ambulante/stationäre Behandlung"
-                  }
-                ]
+            "name": "token",
+            "part": [
+              {
+                "name": "id",
+                "valueId": "dc835efd80d831b95b1db9d2cca371eeb9063393155e3a573c8a9c7a803f6abe"
               },
-              "description": "Rechnung Reiseimpfung vom 10.01.2024",
-              "subject": {
-                "identifier": {
-                  "system": "http://fhir.de/sid/gkv/kvid-10",
-                  "value": "A000000000"
+              {
+                "name": "docRef",
+                "valueIdentifier": {
+                  "system": "https://example.org/fhir/sid/invoice-id",
+                  "value": "12345"
                 }
-              },
-              "content": [
-                {
-                  "attachment": {
-                    "contentType": "application/pdf",
-                    "url": "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
-                  }
-                },
-                {
-                  "format": {
-                    "code": "xrechnung"
-                  },
-                  "attachment": {
-                    "contentType": "application/xml",
-                    "url": "[FD-endpunkt]/Binary/xrechnung"
-                  }
-                },
-                {
-                  "format": {
-                    "code": "gematik-dipag"
-                  },
-                  "attachment": {
-                    "contentType": "application/fhir+xml",
-                    "url": "[FD-endpunkt]/Binary/invoice"
-                  }
-                }
-              ],
-              "relatesTo": [
-                {
-                  "code": "transforms",
-                  "target": {
-                    "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
-                  }
-                }
-              ]
-            }
+              }
+            ]
           },
           {
-            "name": "anhang",
+            "name": "warnungen",
             "resource": {
-              "resourceType": "DocumentReference",
-              "id": "BeispielDocumentReferenceSonstigesDokument3.1-FD",
-              "identifier": [
+              "resourceType": "OperationOutcome",
+              "id": "BeispielOperationOutcomeRechnung3.1-FD",
+              "issue": [
                 {
-                  "system": "https://gematik.de/fhir/sid/dipag-token",
-                  "value": "987-654-321"
-                }
-              ],
-              "status": "current",
-              "type": {
-                "coding": [
-                  {
-                    "code": "PT130102",
-                    "system": "http://dvmd.de/fhir/CodeSystem/kdl",
-                    "display": "Molekularpathologiebefund"
-                  }
-                ]
-              },
-              "description": "Molekularpathologiebefund vom 31.12.21",
-              "subject": {
-                "reference": "Patient/BeispielPatient3-FD"
-              },
-              "content": [
+                  "severity": "warning",
+                  "code": "invalid",
+                  "details": {
+                    "text": "Menschenlesbare Beschreibung der Warnung hier..."
+                  },
+                  "diagnostics": "Originaler technischer Validierungsfehler hier..."
+                },
                 {
-                  "attachment": {
-                    "contentType": "application/pdf",
-                    "url": "[FD-endpunkt]/Binary/patho-mit-token-barcode"
-                  }
-                }
-              ],
-              "relatesTo": [
-                {
-                  "code": "transforms",
-                  "target": {
-                    "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"
-                  }
+                  "severity": "warning",
+                  "code": "invalid",
+                  "details": {
+                    "text": "Weiterer Fehler..."
+                  },
+                  "diagnostics": "Originaler technischer Validierungsfehler hier..."
                 }
               ]
             }

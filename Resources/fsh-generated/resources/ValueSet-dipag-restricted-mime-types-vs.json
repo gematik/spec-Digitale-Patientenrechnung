@@ -22,7 +22,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://terminology.hl7.org/CodeSystem/mimetypes",
+        "system": "urn:ietf:bcp:13",
         "concept": [
           {
             "code": "application/fhir+json"
