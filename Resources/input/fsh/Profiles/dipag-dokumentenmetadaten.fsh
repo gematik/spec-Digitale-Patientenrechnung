@@ -133,8 +133,8 @@ Id: dipag-restricted-mime-types-vs
 Title: "Digitale Patientenrechnung Restricted Mime Types"
 * insert Meta
 
-* include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+json
-* include http://terminology.hl7.org/CodeSystem/mimetypes#application/fhir+xml
+* include urn:ietf:bcp:13#application/fhir+json
+* include urn:ietf:bcp:13#application/fhir+xml
 
 ValueSet: DiPagRechnungsstatusVS
 Id: dipag-rechnungsstatus-vs
