@@ -30,16 +30,6 @@
       {
         "id": "Invoice.extension",
         "path": "Invoice.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "min": 2
       },
       {
@@ -911,20 +901,6 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension",
-        "path": "Invoice.totalPriceComponent.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme",
         "path": "Invoice.totalPriceComponent.extension",
         "sliceName": "Teilsumme",
@@ -1195,20 +1171,6 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.totalPriceComponent:Abzug.extension",
-        "path": "Invoice.totalPriceComponent.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
-      },
-      {
         "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil",
         "path": "Invoice.totalPriceComponent.extension",
         "sliceName": "Kassenanteil",
@@ -1320,16 +1282,6 @@
       {
         "id": "Invoice.paymentTerms.extension",
         "path": "Invoice.paymentTerms.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        },
         "min": 1
       },
       {
