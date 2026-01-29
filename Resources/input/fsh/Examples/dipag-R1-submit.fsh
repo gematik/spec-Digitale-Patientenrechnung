@@ -26,11 +26,6 @@ InstanceOf: DocumentReference
     //data wird in Binary separiert
     * url = "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
 * content[+]
-  * format = #xrechnung
-  * attachment
-    * contentType = #application/xml
-    * url = "[FD-endpunkt]/Binary/xrechnung"
-* content[+]
   * format = #dipag
   * attachment
     * contentType = #application/fhir+xml
