@@ -32,6 +32,17 @@
           }
         ]
       }
+    ],
+    "exclude": [
+      {
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "concept": [
+          {
+            "code": "AM010106",
+            "display": "Rechnung ambulante/stationäre Behandlung"
+          }
+        ]
+      }
     ]
   }
 }
