@@ -46,15 +46,6 @@
                 },
                 {
                   "format": {
-                    "code": "xrechnung"
-                  },
-                  "attachment": {
-                    "contentType": "application/xml",
-                    "url": "[FD-endpunkt]/Binary/xrechnung"
-                  }
-                },
-                {
-                  "format": {
                     "code": "dipag"
                   },
                   "attachment": {

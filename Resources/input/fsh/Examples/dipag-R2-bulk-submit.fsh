@@ -32,11 +32,6 @@ InstanceOf: DocumentReference
     * contentType = #application/pdf
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 * content[+]
-  * format = #xrechnung
-  * attachment
-    * contentType = #application/xml
-    * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
-* content[+]
   * format = #gematik-dipag
   * attachment
     * contentType = #application/fhir+xml
@@ -85,11 +80,6 @@ InstanceOf: DocumentReference
   * attachment
     * contentType = #application/pdf
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
-* content[+]
-  * format = #xrechnung
-  * attachment
-    * contentType = #application/xml
-    * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
 * content[+]
   * format = #gematik-dipag
   * attachment
@@ -190,11 +180,6 @@ InstanceOf: DocumentReference
     * contentType = #application/pdf
     //data wird in Binary separiert
     * url = "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
-* content[+]
-  * format = #xrechnung
-  * attachment
-    * contentType = #application/xml
-    * url = "[FD-endpunkt]/Binary/xrechnung"
 * content[+]
   * format = #gematik-dipag
   * attachment

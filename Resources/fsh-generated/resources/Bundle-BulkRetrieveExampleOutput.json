@@ -34,11 +34,11 @@
         "content": [
           {
             "format": {
-              "code": "xrechnung"
+              "code": "dipag"
             },
             "attachment": {
-              "contentType": "application/xml",
-              "url": "[FD-endpunkt]/Binary/xrechnung"
+              "contentType": "application/fhir+xml",
+              "url": "[FD-endpunkt]/Binary/invoice"
             }
           }
         ]
@@ -75,11 +75,11 @@
         "content": [
           {
             "format": {
-              "code": "xrechnung"
+              "code": "dipag"
             },
             "attachment": {
-              "contentType": "application/xml",
-              "url": "[FD-endpunkt]/Binary/xrechnung"
+              "contentType": "application/fhir+xml",
+              "url": "[FD-endpunkt]/Binary/invoice"
             }
           }
         ]

@@ -27,15 +27,6 @@
     },
     {
       "format": {
-        "code": "xrechnung"
-      },
-      "attachment": {
-        "contentType": "application/xml",
-        "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
-      }
-    },
-    {
-      "format": {
         "code": "gematik-dipag"
       },
       "attachment": {
