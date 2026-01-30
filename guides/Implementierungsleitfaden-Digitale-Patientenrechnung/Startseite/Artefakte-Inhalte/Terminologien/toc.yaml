@@ -8,8 +8,6 @@
   filename: CodeSystem-DiPagRechnungspositionTypeCS.page.md
 - name: 'CodeSystem: DiPagParticipantRoleCS'
   filename: CodeSystem-DiPagParticipantRoleCS.page.md
-- name: 'CodeSystem: DiPagPropRestInterationsCS'
-  filename: CodeSystem-DiPagPropRestInterationsCS.page.md
 - name: 'CodeSystem: DiPagRechnungAbrechnungsartCS'
   filename: CodeSystem-DiPagRechnungAbrechnungsartCS.page.md
 - name: 'CodeSystem: DiPagRechnungIdentifierTypeCS'
