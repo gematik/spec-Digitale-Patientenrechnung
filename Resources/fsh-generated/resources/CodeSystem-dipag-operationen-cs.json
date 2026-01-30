@@ -5,7 +5,7 @@
   "name": "DiPagOperationenCS",
   "id": "dipag-operationen-cs",
   "title": "Digitale Patientenrechnung Operationen",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs",
   "concept": [
     {

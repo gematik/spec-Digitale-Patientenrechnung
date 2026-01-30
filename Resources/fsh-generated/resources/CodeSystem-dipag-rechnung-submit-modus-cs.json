@@ -6,7 +6,7 @@
   "id": "dipag-rechnung-submit-modus-cs",
   "title": "Digitale Patientenrechnung Rechnung Submit Modus CS",
   "description": "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs",
   "concept": [
     {

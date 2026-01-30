@@ -4,7 +4,7 @@
   "name": "DiPagAuditEventSubTypeVS",
   "id": "dipag-audit-event-sub-type-vs",
   "title": "Digitale Patientenrechnung Audit Event Sub-Type",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-sub-type-vs",
   "experimental": false,
   "date": "2025-10-06",

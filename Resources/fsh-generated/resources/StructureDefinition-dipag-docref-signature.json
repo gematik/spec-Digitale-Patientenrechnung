@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-docref-signature",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "DiPagDocRefSignature",
   "title": "Digitale Patientenrechnung DocRef Signature",
   "status": "active",
