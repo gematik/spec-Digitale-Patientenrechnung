@@ -5,7 +5,7 @@
   "name": "DiPagTotalPriceComponentTypeCS",
   "id": "dipag-total-price-component-type-cs",
   "title": "Digitale Patientenrechnung Art der Rechnungssumme",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs",
   "concept": [
     {

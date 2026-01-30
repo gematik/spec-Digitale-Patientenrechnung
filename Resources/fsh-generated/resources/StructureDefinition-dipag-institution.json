@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-institution",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "DiPagInstitution",
   "title": "Digitale Patientenrechnung Institution",
   "status": "active",

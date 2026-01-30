@@ -5,7 +5,7 @@
   "name": "DiPagRechnungspositionTypeCS",
   "id": "dipag-chargeitem-type-CS",
   "title": "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS",
   "concept": [
     {

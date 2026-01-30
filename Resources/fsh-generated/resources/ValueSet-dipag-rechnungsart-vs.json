@@ -5,7 +5,7 @@
   "id": "dipag-rechnungsart-vs",
   "title": "Digitale Patientenrechnung Rechnungsart VS",
   "description": "ValueSet zur Klassifizierung von Rechnungsarten",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsart-vs",
   "experimental": false,
   "date": "2025-10-06",

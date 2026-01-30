@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "DiPagAbrechnungsDiagnoseProzedurFreitext",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "DiPagAbrechnungsDiagnoseProzedurFreitext",
   "title": "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext",
   "status": "active",

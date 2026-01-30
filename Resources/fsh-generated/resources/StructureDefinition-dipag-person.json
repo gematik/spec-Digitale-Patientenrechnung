@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-person",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "DiPagPerson",
   "title": "Digitale Patientenrechnung Person",
   "status": "active",

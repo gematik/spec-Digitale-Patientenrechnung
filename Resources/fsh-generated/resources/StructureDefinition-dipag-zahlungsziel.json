@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-zahlungsziel",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "DiPagZahlungsziel",
   "title": "Digitale Patientenrechnung Zahlungsziel",
   "status": "active",

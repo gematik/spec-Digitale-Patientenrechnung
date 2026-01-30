@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-nutzungsprotokoll",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "DiPagNutzungsprotokoll",
   "title": "Digitale Patientenrechnung Nutzungsprotokoll",
   "status": "active",
