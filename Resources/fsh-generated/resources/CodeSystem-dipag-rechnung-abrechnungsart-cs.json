@@ -10,6 +10,10 @@
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs",
   "concept": [
     {
+      "code": "BEMA",
+      "display": "Einheitliche Bewertungsmaßstab für zahnärztliche Leistungen"
+    },
+    {
       "code": "GOÄ",
       "display": "Gebührenordnung für Ärzte"
     },
@@ -31,5 +35,5 @@
       ]
     }
   ],
-  "count": 2
+  "count": 3
 }

@@ -31,6 +31,10 @@
         {
           "code": "VorleistungKst",
           "display": "Vorleistungen anderer Kostenträger"
+        },
+        {
+          "code": "KostenBema13AtoD",
+          "display": "Kosten gem. den BEMA-Pos. 13a - d"
         }
       ]
     }
@@ -48,5 +52,5 @@
       ]
     }
   ],
-  "count": 6
+  "count": 7
 }

@@ -18,13 +18,15 @@ Id: dipag-rechnungsposition
 * extension[Zusatz]
   * ^short = "Zusatz"
   * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Zusatz vorhanden sein.
+  Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert.
   Der Code F 'Leistungs zur Früherkennung' ist für GOZ-Rechnungen nicht relevant."
   * valueCoding MS
     * code 1.. MS
     * system 1.. MS
 * extension[WegegeldReiseentschädigung] MS
   * ^short = "Wegegeld oder Reiseentschädigung"
-  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL Wegegeld oder Reiseentschädigung vorhanden sein."
+  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL Wegegeld oder Reiseentschädigung vorhanden sein.
+  Im Falle einer BEMA Rechnungsposition ist das Element nicht gefordert."
   * extension[Wegegeld] MS
     * ^short = "Wegegeld bis 25km"
     * ^comment = "Das Wegegeld bis 25km SOLL vorhanden sein."
@@ -66,10 +68,16 @@ Id: dipag-rechnungsposition
 * extension[GebührenordnungAngaben]
   * extension[Einfachsatz] MS
     * ^short = "Gebühr Einfachsatz in EUR"
-    * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Gebühr Einfachsatz in EUR vorhanden sein."
+    * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Gebühr Einfachsatz in EUR vorhanden sein.
+    Im Falle einer BEMA Rechnungsposition ist er nicht gefordert."
     * valueMoney MS
       * currency 1.. MS
       * value 1.. MS
+  * extension[Punktzahl] MS
+    * ^short = "Punktzahl BEMA"
+    * ^comment = "Im Fall einer BEMA Rechnungsposition SOLL die Punktzahl BEMA vorhanden sein.
+    Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition ist die Punktzahl BEMA nicht gefordert."
+    * valueDecimal MS
   * extension[Faktor] MS
     * extension[Value]
       * ^short = "Faktor"
@@ -79,12 +87,12 @@ Id: dipag-rechnungsposition
       * ^short = "Faktor Grund"
       * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition SOLL der Faktor Grund vorhanden sein.
       Im Falle einer GOÄ Rechnungsposition KANN der Faktor Grund vorhanden sein.
-      Im Falle einer GOZ Rechnungsposition ist der Faktor Grund nicht gefordert."
+      Im Falle einer GOZ oder BEMA Rechnungsposition ist der Faktor Grund nicht gefordert."
       * valueCoding MS
   * extension[MinderungP6GOÄ] MS
     * ^short = "Minderungen nach §6a GOÄ in Prozent"
     * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Minderungen nach §6a GOÄ in Prozent vorhanden sein.
-    Im Falle einer GOZ Rechnungsposition ist das Element nicht gefordert."
+    Im Falle einer GOZ oder BEMA Rechnungsposition ist das Element nicht gefordert."
     * valueQuantity MS
       * unit 1.. MS
       * code 1.. MS
@@ -124,7 +132,8 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
 * occurrence[x] MS
 * occurrence[x] only Period
   * ^short = "Leistungszeitraum"
-  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Leistungszeitraum vorhanden sein."
+  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Leistungszeitraum vorhanden sein.
+  Im Falle einer BEMA Rechnungsposition, ist das Element nicht gefordert"
 * occurrencePeriod MS
   * ^short = "Behandlungszeitraum"
   * start MS
@@ -135,11 +144,12 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
     * ^short = "Referenz Behandelnder Leistungserbringer"
     * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition, SOLL die Referenz auf einen behandelnden Leistungserbringer vorhanden sein.
     Im Fall einer GOÄ Rechnungsposition, KANN ein behandelnder Leistungserbringer vorhanden sein.
-    Bei GOZ Leistungen ist ein behandelnder Leistungserbringer nicht gefordert."
+    Bei GOZ oder BEMA Leistungen ist ein behandelnder Leistungserbringer nicht gefordert."
 * reason MS
 * reason.text MS
   * ^short = "Begründung in Abhängigkeit zur Gebührenziffer"
   * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL die Begründung in Abhängigkeit zur Gebührenziffer vorhanden sein.
+  Bei einer BEMA Rechnungsposition ist die Begründung in Abhängigkeit zur Gebührenziffer nicht gefordert.
   Beispiele sind:
   - obligatorisch bei analoger Rechnungsposition
   - Angabe zu den behandelten Organen
@@ -148,7 +158,7 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
 * bodysite.extension contains DiPagZahnRegion named ZahnRegion ..1 MS
 * bodysite.extension[ZahnRegion]
   * ^short = "Zahn/Region"
-  * ^comment = "Im Falle einer GOZ Rechnungsposition, SOLL das Element Zahn/Region vorhanden sein.
+  * ^comment = "Im Falle einer GOZ oder BEMA Rechnungsposition, SOLL das Element Zahn/Region vorhanden sein.
   Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition ist das Element nicht gefordert.
   Im GOZ-Rechnungsformular zugelassen ist 
   - zwei Ziffern durch Komma und Leerzeichen getrennt
@@ -168,11 +178,11 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
   * coding[PZN] only $coding-pzn
     * ^short = "Pharmazentralnummer"
     * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Pharmazentralnummer (PZN) vorhanden sein.
-    Im Falle einer GOZ Rechnungsposition wird die PZN nicht gefordert."
+    Im Falle einer GOZ oder BEMA Rechnungsposition wird die PZN nicht gefordert."
 * quantity MS
   * ^short = "Anzahl oder verbrauchte Menge"
   * ^comment = "Ist die Rechnungsposition vom Typ 'Auslagen/Sachkosten' und es eine GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL hier die Anzahl des unter product[x] angegebenen Medikament, Wirkstoff oder Material vorhanden sein.
-  Ist die Rechnungsposition vom Typ 'GOÄ' oder 'GOZ' SOLL hier die Anzahl vorhanden sein."
+  Ist die Rechnungsposition vom Typ 'GOÄ', 'GOZ' oder 'BEMA' SOLL hier die Anzahl vorhanden sein."
   * value 1.. MS
     * ^short = "Menge"
   * unit 1.. MS

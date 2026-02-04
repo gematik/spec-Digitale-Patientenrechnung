@@ -8,9 +8,11 @@ Title: "Digitale Patientenrechnung Art der Rechnungssumme"
 * #Abzug "Übergeordnete Abzug-Kategorie"
 * #Abzug #FestzuschussKasse "Festzuschuss Kasse"
 * #Abzug #VorleistungKst "Vorleistungen anderer Kostenträger"
+* #Abzug #KostenBema13AtoD "Kosten gem. den BEMA-Pos. 13a - d"
 
 ValueSet: DiPagTotalPriceComponentDeductionTypeVS
 Id: dipag-total-price-component-deduction-type-vs
 Title: "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen"
 * DiPagTotalPriceComponentTypeCS#FestzuschussKasse "Festzuschuss Kasse"
 * DiPagTotalPriceComponentTypeCS#VorleistungKst "Vorleistungen anderer Kostenträger"
+* DiPagTotalPriceComponentTypeCS#KostenBema13AtoD "Kosten gem. den BEMA-Pos. 13a - d"
