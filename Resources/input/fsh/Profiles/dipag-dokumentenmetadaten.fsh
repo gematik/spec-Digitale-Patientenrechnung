@@ -182,6 +182,7 @@ Extension: DiPagDocRefFachrichtung
 Id: dipag-docref-fachrichtung
 Title: "Digitale Patientenrechnung DocRef Fachrichtung"
 Description: "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows"
+Context: DocumentReference
 * insert Meta
 
 * value[x] 1.. MS
