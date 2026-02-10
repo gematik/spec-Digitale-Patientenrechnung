@@ -23,7 +23,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"
       }
     ]
   }

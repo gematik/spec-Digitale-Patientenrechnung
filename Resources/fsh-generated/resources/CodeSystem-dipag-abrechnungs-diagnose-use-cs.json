@@ -3,10 +3,10 @@
   "status": "active",
   "content": "complete",
   "name": "DiPagAbrechnungsDiagnoseUseCS",
-  "id": "dipag-abrechnungs-diagnose-use-CS",
+  "id": "dipag-abrechnungs-diagnose-use-cs",
   "title": "Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem",
   "version": "1.0.3",
-  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-CS",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-cs",
   "concept": [
     {
       "code": "main-diagnosis",

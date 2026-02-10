@@ -3,10 +3,10 @@
   "status": "active",
   "content": "complete",
   "name": "DiPagRechnungspositionFaktorGruendeCS",
-  "id": "dipag-rechnungsposition-faktor-gruende-CS",
+  "id": "dipag-rechnungsposition-faktor-gruende-cs",
   "title": "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem",
   "version": "1.0.3",
-  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-CS",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs",
   "concept": [
     {
       "code": "HV",

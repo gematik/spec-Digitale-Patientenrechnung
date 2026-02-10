@@ -71,7 +71,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-abrechnungs-diagnose-use-VS"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-abrechnungs-diagnose-use-vs"
         }
       },
       {

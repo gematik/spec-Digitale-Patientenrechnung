@@ -8,7 +8,7 @@
   "compose": {
     "include": [
       {
-        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-CS"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"
       }
     ]
   }
