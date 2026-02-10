@@ -24,8 +24,8 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "Invoice.totalPriceComponent"
+      "expression": "Invoice.totalPriceComponent",
+      "type": "element"
     }
   ],
   "type": "Extension",

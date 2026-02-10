@@ -24,8 +24,8 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "Element"
+      "expression": "DocumentReference",
+      "type": "element"
     }
   ],
   "type": "Extension",
