@@ -55,7 +55,7 @@ Id: dipag-rechnungsposition
         * code 1.. MS
         * system 1.. MS
         * value 1.. MS
-    * extension[Übernachtung] MS
+    * extension[Uebernachtung] MS
       * ^short = "Kosten der Übernachtung"
       * valueMoney MS
         * currency 1.. MS
