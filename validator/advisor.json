@@ -20,6 +20,8 @@
     "Terminology_TX_NoValid_3_CC@DocumentReference.type"
     "Terminology_TX_NoValid_13@AuditEvent.subtype[0]",
     "Terminology_TX_NoValid_14@DocumentReference.content[0].format",
+    "Terminology_TX_Code_ValueSet_Ext@StructureDefinition.differential.element[17].pattern.ofType(Identifier).type",
+    "Terminology_TX_Code_ValueSet_Ext@StructureDefinition.differential.element[5].pattern.ofType(Identifier).type"
     //Filter expected erorrs for not matching a slice in examples
     "Details_for__matching_against_Profile_@AuditEvent.entity[0]"
   ]
