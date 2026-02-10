@@ -17,12 +17,15 @@
     "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[9].pattern.ofType(Identifier).type",
     "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[13].pattern.ofType(Identifier).type",
     "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[19].pattern.ofType(Identifier).type",
-    "Terminology_TX_NoValid_3_CC@DocumentReference.type"
+    "Terminology_TX_NoValid_3_CC@DocumentReference.type",
+    "Terminology_TX_NoValid_3_CC@Parameters.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-LE*/",
     "Terminology_TX_NoValid_13@AuditEvent.subtype[0]",
     "Terminology_TX_NoValid_14@DocumentReference.content[0].format",
     "Terminology_TX_Code_ValueSet_Ext@StructureDefinition.differential.element[17].pattern.ofType(Identifier).type",
     "Terminology_TX_Code_ValueSet_Ext@StructureDefinition.differential.element[5].pattern.ofType(Identifier).type"
     //Filter expected erorrs for not matching a slice in examples
-    "Details_for__matching_against_Profile_@AuditEvent.entity[0]"
+    "Details_for__matching_against_Profile_@AuditEvent.entity[0]",
+    // masks the warning for artifacts (e.g. CodeSystems) which have a draft status in the FHIR-Core-Standard.
+    "MSG_EXPERIMENTAL@ValueSet.compose.include[0].concept[0]"
   ]
 }
