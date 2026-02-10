@@ -3,9 +3,11 @@ InstanceOf: Bundle
 Usage: #example
 * type = #batch
 * entry[+]
+  * fullUrl = "https://example.org/fhir/Parameters/BeispielParameterInvoiceSubmitPatient3"
   * insert BundleRequest(POST, "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit")
   * resource = BeispielParameterSubmitInput3-LE
 * entry[+]
+  * fullUrl = "https://example.org/fhir/Parameters/BeispielParameterInvoiceSubmitPatient31"
   * insert BundleRequest(POST, "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit")
   * resource = BeispielParameterSubmitInput3.1-LE
 
