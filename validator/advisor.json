@@ -9,6 +9,7 @@
     "SD_PATH_SLICING_DEPRECATED",
     //Filters CodeSystem errors in core specification
     "TERMINOLOGY_TX_SYSTEM_NO_CODE@DocumentReference.content[1].format",
+    "TERMINOLOGY_TX_SYSTEM_NO_CODE@AuditEvent.type",
     //Filters expected information messages for the violation of preferred bindings.
     "Terminology_TX_NoValid_3_CC@DocumentReference.type"
   ]
