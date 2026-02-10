@@ -80,7 +80,7 @@ Id: dipag-audit-event-type-vs
 Title: "Digitale Patientenrechnung Audit Event Type"
 * insert Meta
 * http://dicom.nema.org/resources/ontology/DCM#110100 "Application Activity"
-* https://hl7.org/fhir/R4/codesystem-audit-event-type.html#rest "RESTful Operation"
+* $auditEventType#rest "RESTful Operation"
 
 
 ValueSet: DiPagAuditEventAgentTypeVS
