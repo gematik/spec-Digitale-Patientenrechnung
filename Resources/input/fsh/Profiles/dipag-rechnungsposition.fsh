@@ -6,7 +6,7 @@ Id: dipag-rechnungsposition
 * extension contains
   DiPagRechnungspositionType named Rechnungspositionstyp 1..1 MS and
   DiPagRechnungspositionZusatz named Zusatz ..1 MS and
-  DiPagWegegeldReiseentschaedigung named WegegeldReiseentschädigung ..1 MS and
+  DiPagWegegeldReiseentschaedigung named WegegeldReiseentschaedigung ..1 MS and
   DiPagRechnungspositionGOAngaben named GebührenordnungAngaben ..1 MS and
   DiPagRechnungspositionBehandlungsdatum named Behandlungsdatum ..1 MS
 * extension[Rechnungspositionstyp]
@@ -22,7 +22,7 @@ Id: dipag-rechnungsposition
   * valueCoding MS
     * code 1.. MS
     * system 1.. MS
-* extension[WegegeldReiseentschädigung] MS
+* extension[WegegeldReiseentschaedigung] MS
   * ^short = "Wegegeld oder Reiseentschädigung"
   * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL Wegegeld oder Reiseentschädigung vorhanden sein."
   * extension[Wegegeld] MS
