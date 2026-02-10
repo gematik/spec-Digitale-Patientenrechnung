@@ -10,8 +10,6 @@
     //Filters CodeSystem errors in core specification
     "TERMINOLOGY_TX_SYSTEM_NO_CODE@DocumentReference.content[1].format",
     //Filters expected information messages for the violation of preferred bindings.
-    "Terminology_TX_NoValid_3_CC@DocumentReference.type",
-    // Filters information messages about which profile was selected for validation to reduce noise
-    "VALIDATION_VAL_PROFILE_SIGNPOST"
+    "Terminology_TX_NoValid_3_CC@DocumentReference.type"
   ]
 }
