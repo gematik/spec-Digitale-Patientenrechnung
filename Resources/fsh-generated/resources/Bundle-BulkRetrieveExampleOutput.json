@@ -4,7 +4,7 @@
   "type": "batch-response",
   "entry": [
     {
-      "fullUrl": "[FD-endpunkt]/DocumentReference/BeispielDocumentReferenceRechnungRetrieve",
+      "fullUrl": "https://example.org/fhir/DocumentReference/BeispielDocumentReferenceRechnungRetrieve",
       "resource": {
         "resourceType": "DocumentReference",
         "id": "BeispielDocumentReferenceRechnungRetrieve",
@@ -43,10 +43,13 @@
             }
           }
         ]
+      },
+      "response": {
+        "status": "200"
       }
     },
     {
-      "fullUrl": "[FD-endpunkt]/DocumentReference/BeispielDocumentReferenceRechnungRetrieve2",
+      "fullUrl": "https://example.org/fhir/DocumentReference/BeispielDocumentReferenceRechnungRetrieve2",
       "resource": {
         "resourceType": "DocumentReference",
         "id": "BeispielDocumentReferenceRechnungRetrieve2",
@@ -85,6 +88,9 @@
             }
           }
         ]
+      },
+      "response": {
+        "status": "200"
       }
     }
   ]
