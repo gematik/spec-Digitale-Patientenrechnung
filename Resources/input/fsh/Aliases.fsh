@@ -28,3 +28,4 @@ Alias: $coding-pzn = http://fhir.de/StructureDefinition/CodingPZN
 Alias: $sct = http://snomed.info/sct
 Alias: $capabilitystatement-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
 Alias: $extension-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
+Alias: $attachmentFormatDiPag = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs

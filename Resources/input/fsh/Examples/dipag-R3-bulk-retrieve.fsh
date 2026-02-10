@@ -39,7 +39,7 @@ InstanceOf: DocumentReference
     * system = "http://fhir.de/sid/gkv/kvid-10"
     * value = "A000000000"
 * content[+]
-  * format = #dipag
+  * format = $attachmentFormatDiPag#dipag
   * attachment
     * contentType = #application/fhir+xml
     * url = "[FD-endpunkt]/Binary/invoice"
