@@ -25,8 +25,7 @@ Context: DocumentReference, Parameters.parameter.valueMeta
 
 * extension[artDerArchivierung] obeys artDerArchivierung
 * extension[artDerArchivierung].value[x] only Coding
-* extension[details].value[x] 1..1
-* extension[markierung].value[x] from DiPagDokumentArtDerArchivierungVS (required)
+* extension[artDerArchivierung].value[x] from DiPagDokumentArtDerArchivierungVS (required)
 
 
 Invariant: artDerArchivierung
