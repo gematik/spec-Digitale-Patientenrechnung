@@ -7,5 +7,11 @@
     //  consolidated with the "value" discriminator. To avoid unintended side effects in R4, we will keep
     //  the current slicing.
     "SD_PATH_SLICING_DEPRECATED",
+    //Filters CodeSystem errors in core specification
+    "TERMINOLOGY_TX_SYSTEM_NO_CODE@DocumentReference.content[1].format",
+    //Filters expected information messages for the violation of preferred bindings.
+    "Terminology_TX_NoValid_3_CC@DocumentReference.type",
+    // Filters information messages about which profile was selected for validation to reduce noise
+    "VALIDATION_VAL_PROFILE_SIGNPOST"
   ]
 }
