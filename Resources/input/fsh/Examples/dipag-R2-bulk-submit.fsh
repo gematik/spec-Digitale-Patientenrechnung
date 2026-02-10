@@ -3,10 +3,10 @@ InstanceOf: Bundle
 Usage: #example
 * type = #batch
 * entry[+]
-  * insert BundleRequest(POST, "/Patient/BeispielPatient3-FD/$invoice-submit")
+  * insert BundleRequest(POST, "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit")
   * resource = BeispielParameterSubmitInput3-LE
 * entry[+]
-  * insert BundleRequest(POST, "/Patient/BeispielPatient3-FD/$invoice-submit")
+  * insert BundleRequest(POST, "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit")
   * resource = BeispielParameterSubmitInput3.1-LE
 
 Instance: BeispielParameterSubmitInput3-LE
@@ -125,10 +125,10 @@ InstanceOf: Bundle
 Usage: #example
 * type = #batch-response
 * entry[+]
-  * fullUrl = "[FD-endpunkt]/Parameters/BeispielParameterSubmitOutput3-FD"
+  * fullUrl = "https://example.org/fhir/Parameters/BeispielParameterSubmitOutput3-FD"
   * resource = BeispielParameterSubmitOutput3-FD
 * entry[+]
-  * fullUrl = "[FD-endpunkt]/Parameters/BeispielParameterSubmitOutput3.1-FD"
+  * fullUrl = "https://example.org/fhir/Parameters/BeispielParameterSubmitOutput3.1-FD"
   * resource = BeispielParameterSubmitOutput3.1-FD
 
 Instance: BeispielParameterSubmitOutput3.1-FD
