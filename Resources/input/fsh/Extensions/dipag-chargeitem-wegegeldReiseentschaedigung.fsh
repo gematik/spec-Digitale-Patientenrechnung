@@ -1,10 +1,10 @@
-Extension: DiPagWegegeldReiseentschaedigung
+dipag-wegegeld-reiseentschaedigungExtension: DiPagWegegeldReiseentschaedigung
 Id: dipag-wegegeld-reiseentschaedigung
 Title: "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension"
 Context: ChargeItem
 * extension contains
   Wegegeld ..1 and
-  Reiseentschädigung ..1
+  Reiseentschaedigung ..1
 * extension[Wegegeld]
   * extension contains
     Entfernung ..1 and
@@ -17,11 +17,11 @@ Context: ChargeItem
       * system = "http://unitsofmeasure.org"
   * extension[Nacht]
     * value[x] only boolean
-* extension[Reiseentschädigung]
+* extension[Reiseentschaedigung]
   * extension contains
     Abwesenheit ..1 and
     Entfernung ..1 and
-    Übernachtung ..1 and
+    Uebernachtung ..1 and
     Verkehrsmittel ..1
   * extension[Abwesenheit]
     * value[x] only Quantity
@@ -35,7 +35,7 @@ Context: ChargeItem
       * unit = "km"
       * code = #km
       * system = "http://unitsofmeasure.org"
-  * extension[Übernachtung]
+  * extension[Uebernachtung]
     * value[x] only Money
     * valueMoney.currency = #EUR
   * extension[Verkehrsmittel]
