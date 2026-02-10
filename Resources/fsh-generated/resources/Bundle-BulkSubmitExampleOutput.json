@@ -4,7 +4,7 @@
   "type": "batch-response",
   "entry": [
     {
-      "fullUrl": "[FD-endpunkt]/Parameters/BeispielParameterSubmitOutput3-FD",
+      "fullUrl": "https://example.org/fhir/Parameters/BeispielParameterSubmitOutput3-FD",
       "resource": {
         "resourceType": "Parameters",
         "id": "BeispielParameterSubmitOutput3-FD",
@@ -111,7 +111,7 @@
       }
     },
     {
-      "fullUrl": "[FD-endpunkt]/Parameters/BeispielParameterSubmitOutput3.1-FD",
+      "fullUrl": "https://example.org/fhir/Parameters/BeispielParameterSubmitOutput3.1-FD",
       "resource": {
         "resourceType": "Parameters",
         "id": "BeispielParameterSubmitOutput3.1-FD",
