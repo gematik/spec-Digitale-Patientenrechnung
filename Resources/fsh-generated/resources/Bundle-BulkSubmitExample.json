@@ -4,6 +4,7 @@
   "type": "batch",
   "entry": [
     {
+      "fullUrl": "https://example.org/fhir/Parameters/BeispielParameterInvoiceSubmitPatient3",
       "request": {
         "method": "POST",
         "url": "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit"
@@ -104,6 +105,7 @@
       }
     },
     {
+      "fullUrl": "https://example.org/fhir/Parameters/BeispielParameterInvoiceSubmitPatient31",
       "request": {
         "method": "POST",
         "url": "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit"
