@@ -48,6 +48,8 @@ CodeSystem: DiPagOperationenCS
 Id: dipag-operationen-cs
 Title: "Digitale Patientenrechnung Operationen"
 * insert Meta
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
 * #invoice-submit "Digitale Patientenrechnung_Submit"
 * #retrieve "Digitale Patientenrechnung_Retrieve"
 * #change-status "Digitale Patientenrechnung_ChangeStatus"
@@ -58,6 +60,8 @@ CodeSystem: DiPagPropRestInterationsCS
 Id: dipag-prop-rest-interactions-cs
 Title: "Digitale Patientenrechnung proprietäre RESTful Interaktionen"
 * insert Meta
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
 * #create "Erstellen"
 * #read "Lesen"
 * #update "Aktualisieren"
