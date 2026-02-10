@@ -32,7 +32,8 @@
             "type": {
               "coding": [
                 {
-                  "code": "humanuser"
+                  "code": "humanuser",
+                  "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
                 }
               ]
             },
