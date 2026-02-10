@@ -19,6 +19,8 @@ Instance: BeispielNutzungsprotokollResultBundle
 InstanceOf: Bundle
 * type = #searchset
 * total = 1
+* link[+].relation = "self"
+* link[=].url = "https://example.com/fhir/AuditEvent?agent:text=11223344"
 * entry[+].fullUrl = "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokoll"
 * entry[=].resource = BeispielNutzungsprotokoll
 * entry[=].search.mode = #match
