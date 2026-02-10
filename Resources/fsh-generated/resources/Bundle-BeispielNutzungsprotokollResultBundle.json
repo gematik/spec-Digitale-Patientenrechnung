@@ -5,7 +5,7 @@
   "total": 1,
   "entry": [
     {
-      "fullUrl": "[fachdienst-endpunkt]/AuditEvent/BeispielNutzungsprotokoll",
+      "fullUrl": "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokoll",
       "resource": {
         "resourceType": "AuditEvent",
         "id": "BeispielNutzungsprotokoll",
