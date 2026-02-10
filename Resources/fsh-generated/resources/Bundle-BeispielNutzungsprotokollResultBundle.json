@@ -15,11 +15,13 @@
           ]
         },
         "type": {
-          "code": "rest"
+          "code": "rest",
+          "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
         },
         "subtype": [
           {
-            "code": "invoice-submit"
+            "code": "invoice-submit",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
           }
         ],
         "action": "C",
