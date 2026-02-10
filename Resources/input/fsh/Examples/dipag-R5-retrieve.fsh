@@ -33,10 +33,6 @@ Title: "Example DiPag Document Reference"
 * content[strukturierterRechnungsinhalt].attachment.contentType = #application/json
 * content[strukturierterRechnungsinhalt].attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 * content[strukturierterRechnungsinhalt].attachment.url = "http://example.com/fhir/binary/789"
-* content[anhang].format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsanhang
-* content[anhang].attachment.contentType = #application/pdf
-* content[anhang].attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
-* content[anhang].attachment.url = "http://example.com/fhir/binary/101112"
 
 Instance: ExampleR5Bundle
 InstanceOf: Bundle
