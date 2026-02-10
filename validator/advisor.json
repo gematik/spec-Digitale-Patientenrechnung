@@ -14,6 +14,11 @@
     "Terminology_TX_NoValid_3_CC@DocumentReference.type"
     //Filters expected information messages for the violation of preferred bindings.
     "Terminology_TX_NoValid_14@DocumentReference.content[0].format",
-    "Terminology_TX_NoValid_2_CC@Patient.identifier[0].type"
+    "Terminology_TX_NoValid_2_CC@Patient.identifier[0].type",
+    "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[1].pattern.ofType(Identifier).type",
+    "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[5].pattern.ofType(Identifier).type",
+    "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[9].pattern.ofType(Identifier).type",
+    "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[13].pattern.ofType(Identifier).type",
+    "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[19].pattern.ofType(Identifier).type"
   ]
 }
