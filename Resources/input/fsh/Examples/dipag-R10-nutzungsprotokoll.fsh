@@ -19,6 +19,6 @@ Instance: BeispielNutzungsprotokollResultBundle
 InstanceOf: Bundle
 * type = #searchset
 * total = 1
-* entry[+].fullUrl = "[fachdienst-endpunkt]/AuditEvent/BeispielNutzungsprotokoll"
+* entry[+].fullUrl = "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokoll"
 * entry[=].resource = BeispielNutzungsprotokoll
 * entry[=].search.mode = #match
