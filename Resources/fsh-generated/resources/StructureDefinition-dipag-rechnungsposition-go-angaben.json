@@ -162,24 +162,24 @@
         "fixedUri": "FaktorGrund"
       },
       {
-        "id": "Extension.extension:MinderungP6GOÄ",
+        "id": "Extension.extension:MinderungP6GOAE",
         "path": "Extension.extension",
-        "sliceName": "MinderungP6GOÄ",
+        "sliceName": "MinderungP6GOAE",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:MinderungP6GOÄ.extension",
+        "id": "Extension.extension:MinderungP6GOAE.extension",
         "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:MinderungP6GOÄ.url",
+        "id": "Extension.extension:MinderungP6GOAE.url",
         "path": "Extension.extension.url",
-        "fixedUri": "MinderungP6GOÄ"
+        "fixedUri": "MinderungP6GOAE"
       },
       {
-        "id": "Extension.extension:MinderungP6GOÄ.value[x]",
+        "id": "Extension.extension:MinderungP6GOAE.value[x]",
         "path": "Extension.extension.value[x]",
         "type": [
           {
@@ -188,17 +188,17 @@
         ]
       },
       {
-        "id": "Extension.extension:MinderungP6GOÄ.value[x].unit",
+        "id": "Extension.extension:MinderungP6GOAE.value[x].unit",
         "path": "Extension.extension.value[x].unit",
         "patternString": "%"
       },
       {
-        "id": "Extension.extension:MinderungP6GOÄ.value[x].system",
+        "id": "Extension.extension:MinderungP6GOAE.value[x].system",
         "path": "Extension.extension.value[x].system",
         "patternUri": "http://unitsofmeasure.org"
       },
       {
-        "id": "Extension.extension:MinderungP6GOÄ.value[x].code",
+        "id": "Extension.extension:MinderungP6GOAE.value[x].code",
         "path": "Extension.extension.value[x].code",
         "patternCode": "%"
       },
