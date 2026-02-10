@@ -81,7 +81,7 @@ Id: dipag-rechnungsposition
       Im Falle einer GOÄ Rechnungsposition KANN der Faktor Grund vorhanden sein.
       Im Falle einer GOZ Rechnungsposition ist der Faktor Grund nicht gefordert."
       * valueCoding MS
-  * extension[MinderungP6GOÄ] MS
+  * extension[MinderungP6GOAE] MS
     * ^short = "Minderungen nach §6a GOÄ in Prozent"
     * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Minderungen nach §6a GOÄ in Prozent vorhanden sein.
     Im Falle einer GOZ Rechnungsposition ist das Element nicht gefordert."
