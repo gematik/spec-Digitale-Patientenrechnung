@@ -1,6 +1,6 @@
 ---
 topic: DiPagAbrechnungsDiagnoseUseCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-CS
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-cs
 ---
 
 ## {{link}}
