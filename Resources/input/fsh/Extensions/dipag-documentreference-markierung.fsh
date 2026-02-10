@@ -1,7 +1,7 @@
 Extension: DiPagDocumentReferenceMarkierung
 Id: dipag-documentreference-markierung
 Title: "Digitale Patientenrechnung DocumentReference Markierung"
-Context: DocumentReference, Parameters.parameter.value
+Context: DocumentReference, Parameters.parameter.valueMeta
 * insert Meta
 * extension contains markierung 1..1
 * extension contains zeitpunkt 0..1
