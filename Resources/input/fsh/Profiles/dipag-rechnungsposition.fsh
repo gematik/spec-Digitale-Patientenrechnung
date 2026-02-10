@@ -38,7 +38,7 @@ Id: dipag-rechnungsposition
     * extension[Nacht] MS
       * ^short = "Nacht"
       * valueBoolean MS
-  * extension[Reiseentschädigung] MS
+  * extension[Reiseentschaedigung] MS
     * ^short = "Reiseentschädigung ab 25 km"
     * ^comment = "Die Reiseentschädigung ab 25 km SOLL vorhanden sein."
     * extension[Abwesenheit] MS
