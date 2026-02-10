@@ -7,7 +7,7 @@ Id: dipag-rechnungsposition
   DiPagRechnungspositionType named Rechnungspositionstyp 1..1 MS and
   DiPagRechnungspositionZusatz named Zusatz ..1 MS and
   DiPagWegegeldReiseentschaedigung named WegegeldReiseentschaedigung ..1 MS and
-  DiPagRechnungspositionGOAngaben named GebührenordnungAngaben ..1 MS and
+  DiPagRechnungspositionGOAngaben named GebuehrenordnungAngaben ..1 MS and
   DiPagRechnungspositionBehandlungsdatum named Behandlungsdatum ..1 MS
 * extension[Rechnungspositionstyp]
   * ^short = "Rechnungspositionstyp"
@@ -63,7 +63,7 @@ Id: dipag-rechnungsposition
     * extension[Verkehrsmittel] MS
       * ^short = "Verkehrsmittel"
       * valueCoding 1.. MS
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Einfachsatz] MS
     * ^short = "Gebühr Einfachsatz in EUR"
     * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Gebühr Einfachsatz in EUR vorhanden sein."
