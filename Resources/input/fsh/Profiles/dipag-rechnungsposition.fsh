@@ -103,9 +103,9 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains
-      GOÄ 0..1 MS and
+      GOAE 0..1 MS and
       GOZ 0..1 MS
-  * coding[GOÄ]
+  * coding[GOAE]
     * ^short = "GOÄ Ziffer"
     * ^patternCoding.system = "http://fhir.de/CodeSystem/bäk/goä"
     * code MS
