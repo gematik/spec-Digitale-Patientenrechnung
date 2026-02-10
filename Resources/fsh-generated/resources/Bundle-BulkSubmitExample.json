@@ -6,7 +6,7 @@
     {
       "request": {
         "method": "POST",
-        "url": "/Patient/BeispielPatient3-FD/$invoice-submit"
+        "url": "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit"
       },
       "resource": {
         "resourceType": "Parameters",
@@ -106,7 +106,7 @@
     {
       "request": {
         "method": "POST",
-        "url": "/Patient/BeispielPatient3-FD/$invoice-submit"
+        "url": "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit"
       },
       "resource": {
         "resourceType": "Parameters",
