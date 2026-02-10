@@ -149,6 +149,8 @@ Id: dipag-attachment-format-cs
 Title: "Digitale Patientenrechnung Attachment Format CS"
 Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
 * insert Meta
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
 * #dipag "Digitale Patientenrechnungs Dokument"
 * #angereichertesPDF "Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"
 * #rechnungsinhalt "Strukturierter Rechnungsinhalt"
@@ -159,6 +161,8 @@ Id: dipag-rechnungsstatus-cs
 Title: "Digitale Patientenrechnung Rechnungsstatus CS"
 Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"
 * insert Meta
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
 * #offen "Offen"
 * #erledigt "Erledigt"
 * #papierkorb "Papierkorb"
