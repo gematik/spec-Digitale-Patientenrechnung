@@ -193,6 +193,7 @@ Extension: DiPagDocRefLeistungsart
 Id: dipag-docref-leistungsart
 Title: "Digitale Patientenrechnung DocRef Leistungsart"
 Description: "Extension zur Angabe einer Leistungsart"
+Context: DocumentReference
 * insert Meta
 
 * value[x] 1.. MS
