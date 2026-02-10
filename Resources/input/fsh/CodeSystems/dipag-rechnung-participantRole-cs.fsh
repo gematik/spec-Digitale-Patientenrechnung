@@ -1,5 +1,5 @@
 CodeSystem: DiPagParticipantRoleCS
-Id: dipag-participant-role-CS
+Id: dipag-participant-role-cs
 Title: "Digitale Patientenrechnung Teilnehmer Rolle"
 * insert Meta
 * ^caseSensitive = true

@@ -1,5 +1,5 @@
 CodeSystem: DiPagRechnungspositionFaktorGruendeCS
-Id: dipag-rechnungsposition-faktor-gruende-CS
+Id: dipag-rechnungsposition-faktor-gruende-cs
 Title: "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem"
 * insert Meta
 * ^caseSensitive = true
