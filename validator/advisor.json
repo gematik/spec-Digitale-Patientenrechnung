@@ -26,6 +26,7 @@
     //Filter expected erorrs for not matching a slice in examples
     "Details_for__matching_against_Profile_@AuditEvent.entity[0]",
     // masks the warning for artifacts (e.g. CodeSystems) which have a draft status in the FHIR-Core-Standard.
-    "MSG_EXPERIMENTAL@ValueSet.compose.include[0].concept[0]"
+    "MSG_EXPERIMENTAL@ValueSet.compose.include[0].concept[0]",
+    "MSG_EXPERIMENTAL@ValueSet.compose.include[0].concept[1]"
   ]
 }

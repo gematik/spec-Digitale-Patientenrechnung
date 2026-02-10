@@ -87,5 +87,5 @@ ValueSet: DiPagAuditEventAgentTypeVS
 Id: dipag-audit-event-agent-type-vs
 Title: "Digitale Patientenrechnung Audit Event Agent Type"
 * insert Meta
-* http://terminology.hl7.org/CodeSystem/extra-security-role-type#humanuser "human user"
-* http://terminology.hl7.org/CodeSystem/extra-security-role-type#dataprocessor "data processor"
+* $extraSecurityRoleType#humanuser "human user"
+* $extraSecurityRoleType#dataprocessor "data processor"
