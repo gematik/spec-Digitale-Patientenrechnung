@@ -11,7 +11,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * experimental = false
 * date = "2024-06-20"
 * kind = #operation
-* name = "Digitale PatientenrechnungSubmit"
+* name = "DiPagSubmit"
 * code = #invoice-submit
 * resource = #Patient
 * system = false
