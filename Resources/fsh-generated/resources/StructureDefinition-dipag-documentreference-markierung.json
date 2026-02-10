@@ -26,6 +26,10 @@
     {
       "expression": "DocumentReference",
       "type": "element"
+    },
+    {
+      "expression": "Parameters.parameter.value[x]:valueMeta",
+      "type": "element"
     }
   ],
   "type": "Extension",
