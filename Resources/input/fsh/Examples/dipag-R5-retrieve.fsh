@@ -13,7 +13,7 @@ Title: "Example DiPag Document Reference"
 * extension[docRef-signature].url = "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
 * extension[docRef-signature].valueSignature
   * type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1
-  * signature[0].when = "2026-02-11T10:00:00+01:00"
+  * when = "2026-02-11T10:00:00+01:00"
   * who
     * system = "https://gematik.de/fhir/sid/telematik-id"
     * value = "987654321"
