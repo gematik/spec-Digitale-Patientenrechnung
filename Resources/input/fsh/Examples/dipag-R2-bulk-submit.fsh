@@ -34,7 +34,7 @@ InstanceOf: DocumentReference
     * contentType = #application/pdf
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 * content[+]
-  * format = #gematik-dipag
+  * format = $attachmentFormatDiPag#dipag
   * attachment
     * contentType = #application/fhir+xml
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
@@ -83,7 +83,7 @@ InstanceOf: DocumentReference
     * contentType = #application/pdf
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 * content[+]
-  * format = #gematik-dipag
+  * format = $attachmentFormatDiPag#dipag
   * attachment
     * contentType = #application/fhir+xml
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
@@ -183,7 +183,7 @@ InstanceOf: DocumentReference
     //data wird in Binary separiert
     * url = "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
 * content[+]
-  * format = #gematik-dipag
+  * format = $attachmentFormatDiPag#dipag
   * attachment
     * contentType = #application/fhir+xml
     * url = "[FD-endpunkt]/Binary/invoice"
