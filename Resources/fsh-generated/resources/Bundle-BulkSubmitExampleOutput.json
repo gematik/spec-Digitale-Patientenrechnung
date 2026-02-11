@@ -46,7 +46,8 @@
                 },
                 {
                   "format": {
-                    "code": "dipag"
+                    "code": "dipag",
+                    "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
                   },
                   "attachment": {
                     "contentType": "application/fhir+xml",
@@ -108,6 +109,9 @@
             }
           }
         ]
+      },
+      "response": {
+        "status": "200"
       }
     },
     {
@@ -158,6 +162,9 @@
             }
           }
         ]
+      },
+      "response": {
+        "status": "200"
       }
     }
   ]
