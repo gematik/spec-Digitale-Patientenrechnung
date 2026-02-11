@@ -36,6 +36,7 @@
     "Terminology_TX_NoValid_14@Bundle.entry[1].resource/*DocumentReference/BeispielDocumentReferenceRechnungRetrieve2*/.content[0].format",
     "Terminology_TX_NoValid_14@Bundle.entry[0].resource/*Parameters/BeispielParameterSubmitInput3-LE*/.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-LE*/.content[1].format",
     "Terminology_TX_NoValid_14@Bundle.entry[1].resource/*Parameters/BeispielParameterSubmitInput3.1-LE*/.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3.1-LE*/.content[1].format",
+    "Terminology_TX_NoValid_14@Bundle.entry[0].resource/*Parameters/BeispielParameterSubmitOutput3-FD*/.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-FD*/.content[1].format"
     "Terminology_TX_Code_ValueSet_Ext@StructureDefinition.differential.element[17].pattern.ofType(Identifier).type",
     "Terminology_TX_Code_ValueSet_Ext@StructureDefinition.differential.element[5].pattern.ofType(Identifier).type",
     //Filter expected erorrs for not matching a slice in examples
