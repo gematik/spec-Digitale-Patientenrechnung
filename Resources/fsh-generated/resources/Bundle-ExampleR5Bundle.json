@@ -84,7 +84,7 @@
               "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             },
             "attachment": {
-              "contentType": "application/json",
+              "contentType": "application/fhir+json",
               "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00",
               "url": "http://example.com/fhir/binary/789"
             }
