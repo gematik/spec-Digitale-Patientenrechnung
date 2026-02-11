@@ -10,6 +10,15 @@ Title: "Example DiPag Document Reference"
 * extension[gesamtbetrag].valueMoney
   * value = 16.20
   * currency = #EUR
+* extension[docRef-signature].url = "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
+* extension[docRef-signature].valueSignature
+  * type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1
+  * signature[0].when = "2026-02-11T10:00:00+01:00"
+  * who
+    * system = "https://gematik.de/fhir/sid/telematik-id"
+    * value = "987654321"
+  * data = "ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbXRwWkNJNkltVjRZVzUwSW4wLi4u"
+* author.identifier.value = "987654321"
 * meta.tag[0] = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#offen
 * meta.tag[0].display = "Offen"
 * status = http://hl7.org/fhir/document-reference-status#current
@@ -38,6 +47,9 @@ Instance: ExampleR5Bundle
 InstanceOf: Bundle
 * type = #searchset
 * total = 1
+* link[+].relation = "self"
+* link[=].url = "https://example.com/fhir/DocumentReference?type=AM010106"
 * entry[+]
+  * fullUrl = "https://example.com/fhir/DocumentReference/ExampleR5DocumentReference"
   * resource = ExampleR5DocumentReference
   * search.mode = #match
