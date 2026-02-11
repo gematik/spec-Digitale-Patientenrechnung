@@ -52,7 +52,6 @@ Id: dipag-dokumentenmetadaten
   * ^slicing.rules = #open
 * type.coding contains DokumentenKlassifizierung 0..1 MS and Rechnungstyp 0..1 MS
 * type.coding[DokumentenKlassifizierung] from DiPagSonstigesDokumentTypeVS (required)
-  * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
   * system 1.. MS
   * code 1.. MS
   * display 1.. MS
