@@ -129,9 +129,11 @@ Usage: #example
 * entry[+]
   * fullUrl = "https://example.org/fhir/Parameters/BeispielParameterSubmitOutput3-FD"
   * resource = BeispielParameterSubmitOutput3-FD
+  * response.status = "200"
 * entry[+]
   * fullUrl = "https://example.org/fhir/Parameters/BeispielParameterSubmitOutput3.1-FD"
   * resource = BeispielParameterSubmitOutput3.1-FD
+  * response.status = "200"
 
 Instance: BeispielParameterSubmitOutput3.1-FD
 InstanceOf: Parameters
