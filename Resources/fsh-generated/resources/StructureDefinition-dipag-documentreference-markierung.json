@@ -28,7 +28,7 @@
       "type": "element"
     },
     {
-      "expression": "Parameters.parameter.value[x]:valueMeta",
+      "expression": "Parameters.parameter.value[x]",
       "type": "element"
     }
   ],
