@@ -15,8 +15,9 @@ Title: "Example DiPag Document Reference"
   * type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1
   * when = "2026-02-11T10:00:00+01:00"
   * who
-    * system = "https://gematik.de/fhir/sid/telematik-id"
-    * value = "987654321"
+    * identifier
+      * system = "https://gematik.de/fhir/sid/telematik-id"
+      * value = "987654321"
   * data = "ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbXRwWkNJNkltVjRZVzUwSW4wLi4u"
 * author.identifier.value = "987654321"
 * meta.tag[0] = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#offen
