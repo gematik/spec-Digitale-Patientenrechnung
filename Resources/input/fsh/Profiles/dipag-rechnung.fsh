@@ -193,16 +193,18 @@ Id: dipag-rechnung
 * totalPriceComponent ^slicing.discriminator.type = #pattern
 * totalPriceComponent ^slicing.discriminator.path = "code"
 * totalPriceComponent ^slicing.rules = #open
-* totalPriceComponent contains 
+* totalPriceComponent contains
+  SummeRechnungspositionen ..1 MS and
   MinderungNachGOZ ..1 MS and
-  Fremdlaborleistungen ..1 MS
-* totalPriceComponent[Fremdlaborleistungen]
-  * ^short = "Summe aller Fremdlaborleistungen"
-  * ^comment = "Die Summe aller Fremdlaborleistungen SOLL vorhanden sein."
+  Fremdlaborleistungen ..1 MS and
+  Abzug MS
+* totalPriceComponent[SummeRechnungspositionen]
+  * ^short = "Summe aller Rechnungspositionen"
+  * ^comment = "Die Summe aller Rechnungspositionen SOLL vorhanden sein."
   * type MS
   * type = #base
   * code 1.. MS
-  * code = DiPagTotalPriceComponentTypeCS#Fremdlaborleistungen
+  * code = DiPagTotalPriceComponentTypeCS#SummeRechnungspositionen
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"
@@ -217,6 +219,34 @@ Id: dipag-rechnung
   * type = #deduction
   * code 1.. MS
   * code = DiPagTotalPriceComponentTypeCS#Minderung7GOZ
+  * factor 0..0
+  * amount ..1 MS
+    * ^short = "Wert in EUR"
+    * currency 1.. MS
+    * currency = #EUR
+    * value 1.. MS
+* totalPriceComponent[Fremdlaborleistungen]
+  * ^short = "Summe aller Fremdlaborleistungen"
+  * ^comment = "Die Summe aller Fremdlaborleistungen SOLL vorhanden sein."
+  * type MS
+  * type = #base
+  * code 1.. MS
+  * code = DiPagTotalPriceComponentTypeCS#Fremdlaborleistungen
+  * factor 0..0
+  * amount ..1 MS
+    * ^short = "Wert in EUR"
+    * currency 1.. MS
+    * currency = #EUR
+    * value 1.. MS
+* totalPriceComponent[Abzug]
+  * ^short = "Abzug"
+  * ^comment = "Der Abzug SOLL vorhanden sein."
+  * type MS
+  * type = #deduction
+  * code 1.. MS
+  * code from DiPagTotalPriceComponentDeductionTypeVS (required)
+    * ^short = "Kategorisierung des Abzugs"
+    * ^comment = "Die Kategorisierung des Abzugs SOLL vorhanden sein."
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"
