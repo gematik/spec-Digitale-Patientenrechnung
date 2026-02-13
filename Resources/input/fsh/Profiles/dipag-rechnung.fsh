@@ -115,6 +115,16 @@ Id: dipag-rechnung
 * totalGross 1.. MS
   * ^short = "Rechnungsbetrag (Brutto)"
   * ^comment = "Der Rechnungsbetrag in Brutto MUSS vorhanden sein."
+* lineItem MS
+  * ^short = "Rechnungspositionen"
+* lineItem.sequence 1.. MS
+  * ^short = "Reihenfolge der Rechnungsposition"
+  * ^comment = "Die Reihenfolge der Rechnungsposition MUSS mit einer Sequenz-Nummer angegeben werden. Die Sequenz muss mit 1 als erste Ziffer beginnen."
+* lineItem.chargeItem[x] only Reference
+* lineItem.chargeItemReference MS
+* lineItem.chargeItemReference only Reference(DiPagRechnungsposition or ChargeItem)
+  * ^short = "Referenz auf die Instanz der Rechnungsposition"
+  * ^comment = "Die Referenz auf die Instanz der Rechnungsposition MUSS vorhanden sein."
 
 Extension: DiPagZahlungsziel
 Id: dipag-zahlungsziel
