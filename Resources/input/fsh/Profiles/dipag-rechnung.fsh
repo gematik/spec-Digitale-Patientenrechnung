@@ -3,6 +3,80 @@ Title: "Digitale Patientenrechnung Rechnung"
 Parent: Invoice
 Id: dipag-rechnung
 * insert Meta
+* extension contains 
+  http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
+  DiPagAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
+  DiPagAbrechnungsDiagnoseProzedurFreitext named AbrechnungsDiagnoseProzedurFreitext ..1 MS and
+  DiPagBehandlungsart named Behandlungsart 1..1 MS and
+  DiPagFachrichtung named Fachrichtung 1..1 MS and
+  $extension-replaces named Korrekturrechnung ..1 MS and
+  DiPagTokenStornierteRechnung named Korrekturtoken ..1 MS and
+  $extension-basedOn named Antragsreferenz ..1 MS
+* extension[AbrechnungsDiagnoseProzedur]
+  * ^short = "Diagnose"
+  * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN Diagnosen und Prozeduren vorhanden sein.
+  Im Falle einer GOZ Rechnung werden keine Diagnosen oder Prozedur gefordert."
+  * extension[Use].valueCoding MS
+    * ^short = "Kennzeichen Hauptdiagnose"
+    * ^comment = "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein."
+    * code = DiPagAbrechnungsDiagnoseUseCS#main-diagnosis
+  * extension[Referenz].valueReference MS
+    * ^short = "Zuordnung von Diagnosen oder Prozeduren zur Rechnung"
+    * ^comment = "Diagnosen und Prozeduren SOLLEN zur Rechnung zugeordnet sein."
+* extension[Behandlungszeitraum]
+  * ^short = "Behandlungszeitraum"
+  * ^comment = "Entweder ein Behandlungszeitraum, oder ein -datum SOLL vorhanden sein."
+  * valuePeriod MS
+    * start MS
+      * ^short = "Startdatum"
+    * end MS
+      * ^short = "Enddatum"
+  * valueDate MS
+    * ^short = "Behandlungsdatum"
+* extension[AbrechnungsDiagnoseProzedurFreitext]
+  * ^short = "Einleitung (Diagnose und Prozedure als Freitextangabe)"
+  * ^comment = "Im Falle einer GOÄ oder GOZ Rechnung, SOLLEN Diagnose und Prozedure als Freitextangabe vorhanden sein.
+  Im Falle einer GOÄ-neu Rechnung werden keine Diagnosen und Prozeduren als Freitext gefordert."
+  * valueString 1.. MS
+* extension[Behandlungsart]
+  * ^short = "Behandlungsart"
+  * ^comment = "Die Behandlungsart MUSS vorhanden sein."
+  * valueCoding 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
+* extension[Fachrichtung]
+  * ^short = "Fachrichtung"
+  * ^comment = "Die Fachrichtung MUSS vorhanden sein.
+  Es wird empfohlen für zahnärztliche Rechnungen immer den Wert MZKH (Zahnmedizin) zu nutzen."
+  * valueCoding 1..1 MS
+    * system 1.. MS
+    * code 1.. MS
+* extension[Korrekturrechnung]
+  * ^short = "Info Korrekturrechnung"
+  * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, SOLL die ersetzte Rechnung hier referenziert werden."
+  * valueCanonical 1..1 MS
+  * valueCanonical only Canonical(DiPagRechnung or Invoice)
+* extension[Korrekturtoken]
+  * ^short = "Info Korrekturtoken"
+  * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, SOLL das Token der ersetzten Rechnung hier angegeben werden."
+  * valueIdentifier MS
+    * system 1.. MS
+    * value 1.. MS
+* extension[Antragsreferenz]
+  * valueReference MS
+  * valueReference.reference 0..0
+  * valueReference.display 0..0
+  * valueReference.type 0..0
+  * valueReference.identifier 1..1 MS
+    * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#antragsreferenz
+    * ^short = "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag"
+    * ^comment = "Die Antragsreferenz SOLL vorhanden sein."
+    * type 1.. MS
+    * type = DiPagRechnungIdentifierTypeCS#antragsreferenz
+    * system 1.. MS
+      * ^short = "NamingSystem der Antragsreferenz"
+    * value 1.. MS
+      * ^short = "Antragsreferenz"
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
