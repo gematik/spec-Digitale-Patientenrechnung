@@ -195,8 +195,7 @@ Id: dipag-rechnung
 * totalPriceComponent ^slicing.rules = #open
 * totalPriceComponent contains 
   MinderungNachGOZ ..1 MS and
-  Fremdlaborleistungen ..1 MS and
-  Abzug ..* MS
+  Fremdlaborleistungen ..1 MS
 * totalPriceComponent[Fremdlaborleistungen]
   * ^short = "Summe aller Fremdlaborleistungen"
   * ^comment = "Die Summe aller Fremdlaborleistungen SOLL vorhanden sein."
@@ -224,31 +223,6 @@ Id: dipag-rechnung
     * currency 1.. MS
     * currency = #EUR
     * value 1.. MS
-* totalPriceComponent[Abzug]
-  * ^short = "Abzug"
-  * ^comment = "Der Abzug SOLL vorhanden sein."
-  * type MS
-  * type = #deduction
-  * code 1.. MS
-  * code from DiPagTotalPriceComponentDeductionTypeVS (required)
-    * ^short = "Kategorisierung des Abzugs"
-    * ^comment = "Die Kategorisierung des Abzugs SOLL vorhanden sein."
-  * factor 0..0
-  * amount ..1 MS
-    * ^short = "Wert in EUR"
-    * currency 1.. MS
-    * currency = #EUR
-    * value 1.. MS
-  * extension contains DiPagAbzugKassenanteil named Kassenanteil ..1 MS
-  * extension[Kassenanteil]
-    * ^short = "Kassenanteil in Prozent"
-    * ^comment = "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.
-    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
-    * valueQuantity 1.. MS
-      * unit MS
-      * value MS
-      * system MS
-      * code MS
 * lineItem MS
   * ^short = "Rechnungspositionen"
 * lineItem.sequence 1.. MS
