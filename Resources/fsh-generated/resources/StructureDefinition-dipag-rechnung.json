@@ -1,0 +1,417 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "dipag-rechnung",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung",
+  "version": "1.0.3",
+  "name": "DiPagRechnung",
+  "title": "Digitale Patientenrechnung Rechnung",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-10-06",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Invoice",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Invoice",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Invoice.identifier",
+        "path": "Invoice.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:Rechnungsnummer",
+        "path": "Invoice.identifier",
+        "sliceName": "Rechnungsnummer",
+        "short": "Rechnungs-Nr. (der LEI)",
+        "comment": "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein.",
+        "min": 1,
+        "max": "1",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "invoice",
+                "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:Rechnungsnummer.type",
+        "path": "Invoice.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "invoice",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:Rechnungsnummer.system",
+        "path": "Invoice.identifier.system",
+        "short": "NamingSystem der Rechnungs-Nr. (der LEI)",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:Rechnungsnummer.value",
+        "path": "Invoice.identifier.value",
+        "short": "Rechnungs-Nr. (der LEI)",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.identifier:Antragsnummer",
+        "path": "Invoice.identifier",
+        "sliceName": "Antragsnummer",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.status",
+        "path": "Invoice.status",
+        "short": "Status der Rechnung",
+        "comment": "Der Status MUSS vorhanden sein.",
+        "patternCode": "issued",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.type",
+        "path": "Invoice.type",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.type.coding",
+        "path": "Invoice.type.coding",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.type.coding:AusrichtungDerRechnung",
+        "path": "Invoice.type.coding",
+        "sliceName": "AusrichtungDerRechnung",
+        "short": "Abrechnungsart der Rechnung",
+        "comment": "Die Grundsätzliche Ausrichtung der Rechnung (Abrechnungsart) SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-abrechnungsart-vs"
+        }
+      },
+      {
+        "id": "Invoice.type.coding:AusrichtungDerRechnung.extension:Zusatzinformation",
+        "path": "Invoice.type.coding.extension",
+        "sliceName": "Zusatzinformation",
+        "short": "Zusatzinformation zur Abrechnungsart",
+        "comment": "Die Zusatzinformation zur Abrechnungsart SOLL vorhanden sein, wenn es sich um eine Abrechnung nach §13 Abs. 2 SGB V handelt.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagZusatzinformationZurAbrechnungsart"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.type.coding:AusrichtungDerRechnung.extension:Zusatzinformation.value[x]",
+        "path": "Invoice.type.coding.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.type.coding:AusrichtungDerRechnung.system",
+        "path": "Invoice.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.type.coding:AusrichtungDerRechnung.code",
+        "path": "Invoice.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.type.coding:Rechnungsart",
+        "path": "Invoice.type.coding",
+        "sliceName": "Rechnungsart",
+        "short": "Rechnungsart",
+        "comment": "Die Rechnungsart SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "patternCoding": {
+          "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs"
+        },
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsart-vs"
+        }
+      },
+      {
+        "id": "Invoice.type.coding:Rechnungsart.system",
+        "path": "Invoice.type.coding.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.type.coding:Rechnungsart.code",
+        "path": "Invoice.type.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.subject",
+        "path": "Invoice.subject",
+        "short": "Behandelte Person",
+        "comment": "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.subject.reference",
+        "path": "Invoice.subject.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.recipient",
+        "path": "Invoice.recipient",
+        "short": "Rechnungsempfänger",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
+              "http://hl7.org/fhir/StructureDefinition/Patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.recipient.reference",
+        "path": "Invoice.recipient.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.recipient.identifier",
+        "path": "Invoice.recipient.identifier",
+        "comment": "Das System des Leistungserbringers referenziert hier üblicherweise \n    auf die lokale Instanz des Patienten um die Rechnung einer Patientenakte zuzuordnen. \n    Der Fachdienst substitutiert den Link mit der Referenz auf das Postfach des Patienten \n    bei der Extraktion der Invoice aus dem Bundle. Die Angabe der Versichertennummer dient \n    der Plausibilisierung. Die KV-Nummer in der Instanz des Bundles muss daher mit der \n    KV-Nummer übereinstimmen, die im Fachdienst für das Postfach des Rechnungsempfängers hinterlegt ist.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-kvid-10"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.recipient.display",
+        "path": "Invoice.recipient.display",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.date",
+        "path": "Invoice.date",
+        "short": "Rechnungsdatum",
+        "comment": "Das Rechnungsdatum MUSS vorhanden sein.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.participant",
+        "path": "Invoice.participant",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "role"
+            }
+          ],
+          "rules": "open"
+        },
+        "short": "weitere behandelnde Leistungserbringer oder abweichender Forderungsinhaber",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.participant.role",
+        "path": "Invoice.participant.role",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-participant-role-VS"
+        }
+      },
+      {
+        "id": "Invoice.participant:Leistungserbringer",
+        "path": "Invoice.participant",
+        "sliceName": "Leistungserbringer",
+        "short": "Weitere behandelnde Leistungserbringer",
+        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.\n  Im Falle einer GOZ Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein.",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.participant:Leistungserbringer.role",
+        "path": "Invoice.participant.role",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "leistungserbringer",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Invoice.participant:Leistungserbringer.actor",
+        "path": "Invoice.participant.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Invoice.participant:Forderungsinhaber",
+        "path": "Invoice.participant",
+        "sliceName": "Forderungsinhaber",
+        "short": "Abweichender Forderungsinhaber",
+        "comment": "Der abweichender Forderungsinhaber SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.participant:Forderungsinhaber.role",
+        "path": "Invoice.participant.role",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "forderungsinhaber",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Invoice.participant:Forderungsinhaber.actor",
+        "path": "Invoice.participant.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Invoice.issuer",
+        "path": "Invoice.issuer",
+        "short": "Rechnungsersteller",
+        "comment": "Der Rechnungsersteller MUSS vorhanden sein.",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.issuer.reference",
+        "path": "Invoice.issuer.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.note",
+        "path": "Invoice.note",
+        "short": "Hinweise an den Kostenträger",
+        "comment": "Der Hinweise an den Kostenträger KANN vorhanden sein.",
+        "mustSupport": true
+      }
+    ]
+  }
+}
