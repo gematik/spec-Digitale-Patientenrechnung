@@ -125,6 +125,27 @@ Id: dipag-rechnung
 * lineItem.chargeItemReference only Reference(DiPagRechnungsposition or ChargeItem)
   * ^short = "Referenz auf die Instanz der Rechnungsposition"
   * ^comment = "Die Referenz auf die Instanz der Rechnungsposition MUSS vorhanden sein."
+* lineItem.priceComponent	MS
+* lineItem.priceComponent ^slicing.discriminator.type = #pattern
+* lineItem.priceComponent ^slicing.discriminator.path = "$this"
+* lineItem.priceComponent ^slicing.rules = #open
+* lineItem.priceComponent contains
+  BruttoBetrag ..1 MS and
+  Steuern ..1 MS
+* lineItem.priceComponent[BruttoBetrag]
+  * ^short = "Betrag pro Rechnungsposition"
+  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Betrag pro Rechnungsposition vorhanden sein."
+  * type MS
+  * type = #base
+  * factor 0..0
+  * amount 1.. MS
+* lineItem.priceComponent[Steuern]
+  * ^short = "Steuern enthalten im Brutto Betrag"
+  * ^comment = "Die enthaltenen Steuern SOLLEN vorhanden sein."
+  * type MS
+  * type = #tax
+  * factor 0..0
+  * amount 1.. MS
 
 Extension: DiPagZahlungsziel
 Id: dipag-zahlungsziel
