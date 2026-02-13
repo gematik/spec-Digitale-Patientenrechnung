@@ -197,7 +197,7 @@ Id: dipag-rechnung
   SummeRechnungspositionen ..1 MS and
   MinderungNachGOZ ..1 MS and
   Fremdlaborleistungen ..1 MS and
-  Abzug MS
+  Abzug ..* MS
 * totalPriceComponent[SummeRechnungspositionen]
   * ^short = "Summe aller Rechnungspositionen"
   * ^comment = "Die Summe aller Rechnungspositionen SOLL vorhanden sein."
