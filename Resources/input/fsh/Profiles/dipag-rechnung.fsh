@@ -100,6 +100,21 @@ Id: dipag-rechnung
 * note MS
   * ^short = "Hinweise an den Kostenträger"
   * ^comment = "Der Hinweise an den Kostenträger KANN vorhanden sein."
+* paymentTerms MS
+  * ^short = "Zahlungsdaten Überweisung und weitere Zahlungsmethoden"
+  * ^comment = "Die Zahlungsdaten zur Überweisung SOLLEN vorhanden sein.
+  Weitere Zahlungsmethoden wie bspw. Paypal, Klarna, Kreditkarte KÖNNEN auch hier angegeben werden.
+  Ebenfalls sollte hier der Zahlbetrag in EUR inkl. potenzieller Abzüge durch Anzahlungen, Vorauszahlungen oder Abschlagzahlungen."
+* paymentTerms.extension contains DiPagZahlungsziel named Zahlungsziel 1..1 MS
+* paymentTerms.extension[Zahlungsziel]
+  * ^short = "Zahlungsziel als Datum oder Fristangabe"
+  * ^comment = "Das Zahlungsziel SOLL vorhanden sein."
+* totalNet 1.. MS
+  * ^short = "Rechnungsbetrag (Netto)"
+  * ^comment = "Der Rechnungsbetrag in Netto MUSS vorhanden sein."
+* totalGross 1.. MS
+  * ^short = "Rechnungsbetrag (Brutto)"
+  * ^comment = "Der Rechnungsbetrag in Brutto MUSS vorhanden sein."
 
 Extension: DiPagZahlungsziel
 Id: dipag-zahlungsziel
