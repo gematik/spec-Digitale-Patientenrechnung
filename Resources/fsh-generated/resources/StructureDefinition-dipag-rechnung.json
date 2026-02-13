@@ -886,6 +886,65 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen",
+        "path": "Invoice.totalPriceComponent",
+        "sliceName": "SummeRechnungspositionen",
+        "short": "Summe aller Rechnungspositionen",
+        "comment": "Die Summe aller Rechnungspositionen SOLL vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.type",
+        "path": "Invoice.totalPriceComponent.type",
+        "patternCode": "base",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.code",
+        "path": "Invoice.totalPriceComponent.code",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "SummeRechnungspositionen",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.factor",
+        "path": "Invoice.totalPriceComponent.factor",
+        "max": "0"
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.amount",
+        "path": "Invoice.totalPriceComponent.amount",
+        "short": "Wert in EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.amount.value",
+        "path": "Invoice.totalPriceComponent.amount.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.amount.currency",
+        "path": "Invoice.totalPriceComponent.amount.currency",
+        "min": 1,
+        "patternCode": "EUR",
+        "mustSupport": true
+      },
+      {
         "id": "Invoice.totalPriceComponent:MinderungNachGOZ",
         "path": "Invoice.totalPriceComponent",
         "sliceName": "MinderungNachGOZ",
@@ -998,6 +1057,63 @@
       },
       {
         "id": "Invoice.totalPriceComponent:Fremdlaborleistungen.amount.currency",
+        "path": "Invoice.totalPriceComponent.amount.currency",
+        "min": 1,
+        "patternCode": "EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug",
+        "path": "Invoice.totalPriceComponent",
+        "sliceName": "Abzug",
+        "short": "Abzug",
+        "comment": "Der Abzug SOLL vorhanden sein.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.type",
+        "path": "Invoice.totalPriceComponent.type",
+        "patternCode": "deduction",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.code",
+        "path": "Invoice.totalPriceComponent.code",
+        "short": "Kategorisierung des Abzugs",
+        "comment": "Die Kategorisierung des Abzugs SOLL vorhanden sein.",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-total-price-component-deduction-type-vs"
+        }
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.factor",
+        "path": "Invoice.totalPriceComponent.factor",
+        "max": "0"
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.amount",
+        "path": "Invoice.totalPriceComponent.amount",
+        "short": "Wert in EUR",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.amount.value",
+        "path": "Invoice.totalPriceComponent.amount.value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.amount.currency",
         "path": "Invoice.totalPriceComponent.amount.currency",
         "min": 1,
         "patternCode": "EUR",
