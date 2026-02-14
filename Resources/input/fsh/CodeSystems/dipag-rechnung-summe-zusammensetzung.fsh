@@ -2,6 +2,8 @@ CodeSystem: DiPagTotalPriceComponentTypeCS
 Id: dipag-total-price-component-type-cs
 Title: "Digitale Patientenrechnung Art der Rechnungssumme"
 * insert Meta
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
 * #SummeRechnungspositionen "Summe aller Rechnungspositionen"
 * #Minderung7GOZ "Minderungen nach §7 GOZ"
 * #Fremdlaborleistungen "Fremdlaborleistungen"

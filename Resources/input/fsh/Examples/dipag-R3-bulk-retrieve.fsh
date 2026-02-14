@@ -14,11 +14,13 @@ InstanceOf: Bundle
 Usage: #example
 * type = #batch-response
 * entry[+]
-  * fullUrl = "[FD-endpunkt]/DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
+  * fullUrl = "https://example.org/fhir/DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
   * resource = BeispielDocumentReferenceRechnungRetrieve
+  * response.status = "200"
 * entry[+]
-  * fullUrl = "[FD-endpunkt]/DocumentReference/BeispielDocumentReferenceRechnungRetrieve2"
+  * fullUrl = "https://example.org/fhir/DocumentReference/BeispielDocumentReferenceRechnungRetrieve2"
   * resource = BeispielDocumentReferenceRechnungRetrieve2
+  * response.status = "200"
 
 Instance: BeispielParameterRetrieveInput2
 InstanceOf: Parameters
@@ -39,7 +41,7 @@ InstanceOf: DocumentReference
     * system = "http://fhir.de/sid/gkv/kvid-10"
     * value = "A000000000"
 * content[+]
-  * format = #dipag
+  * format = $attachmentFormatDiPag#dipag
   * attachment
     * contentType = #application/fhir+xml
     * url = "[FD-endpunkt]/Binary/invoice"

@@ -3,10 +3,10 @@
   "status": "active",
   "content": "complete",
   "name": "DiPagRechnungspositionTypeCS",
-  "id": "dipag-chargeitem-type-CS",
+  "id": "dipag-chargeitem-type-cs",
   "title": "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem",
   "version": "1.0.3",
-  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
   "concept": [
     {
       "code": "GOÄ",
@@ -46,5 +46,7 @@
       ]
     }
   ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
   "count": 6
 }

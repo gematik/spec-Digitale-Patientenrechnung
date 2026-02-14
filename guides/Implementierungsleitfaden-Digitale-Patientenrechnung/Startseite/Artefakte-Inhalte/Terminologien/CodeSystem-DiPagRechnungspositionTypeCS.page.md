@@ -1,6 +1,6 @@
 ---
 topic: DiPagRechnungspositionTypeCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs
 ---
 
 ## {{link}}

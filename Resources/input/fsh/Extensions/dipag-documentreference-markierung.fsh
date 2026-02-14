@@ -1,6 +1,7 @@
 Extension: DiPagDocumentReferenceMarkierung
 Id: dipag-documentreference-markierung
 Title: "Digitale Patientenrechnung DocumentReference Markierung"
+Context: DocumentReference, Parameters.parameter.value[x]
 * insert Meta
 * extension contains markierung 1..1
 * extension contains zeitpunkt 0..1
@@ -24,8 +25,7 @@ Title: "Digitale Patientenrechnung DocumentReference Markierung"
 
 * extension[artDerArchivierung] obeys artDerArchivierung
 * extension[artDerArchivierung].value[x] only Coding
-* extension[details].value[x] 1..1
-* extension[markierung].value[x] from DiPagDokumentArtDerArchivierungVS (required)
+* extension[artDerArchivierung].value[x] from DiPagDokumentArtDerArchivierungVS (required)
 
 
 Invariant: artDerArchivierung

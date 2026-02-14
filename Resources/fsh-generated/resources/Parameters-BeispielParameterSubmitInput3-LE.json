@@ -33,7 +33,8 @@
           },
           {
             "format": {
-              "code": "gematik-dipag"
+              "code": "dipag",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             },
             "attachment": {
               "contentType": "application/fhir+xml",

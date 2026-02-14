@@ -104,9 +104,9 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung",
         "path": "ChargeItem.extension",
-        "sliceName": "WegegeldReiseentschädigung",
+        "sliceName": "WegegeldReiseentschaedigung",
         "short": "Wegegeld oder Reiseentschädigung",
         "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL Wegegeld oder Reiseentschädigung vorhanden sein.",
         "min": 0,
@@ -122,7 +122,7 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Wegegeld",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Wegegeld",
         "path": "ChargeItem.extension.extension",
         "sliceName": "Wegegeld",
         "short": "Wegegeld bis 25km",
@@ -130,174 +130,174 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Wegegeld.extension:Entfernung",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Wegegeld.extension:Entfernung",
         "path": "ChargeItem.extension.extension.extension",
         "sliceName": "Entfernung",
         "short": "Entfernung in km",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Wegegeld.extension:Entfernung.value[x]",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Wegegeld.extension:Entfernung.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Wegegeld.extension:Entfernung.value[x].value",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Wegegeld.extension:Entfernung.value[x].value",
         "path": "ChargeItem.extension.extension.extension.value[x].value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Wegegeld.extension:Entfernung.value[x].unit",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Wegegeld.extension:Entfernung.value[x].unit",
         "path": "ChargeItem.extension.extension.extension.value[x].unit",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Wegegeld.extension:Entfernung.value[x].system",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Wegegeld.extension:Entfernung.value[x].system",
         "path": "ChargeItem.extension.extension.extension.value[x].system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Wegegeld.extension:Entfernung.value[x].code",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Wegegeld.extension:Entfernung.value[x].code",
         "path": "ChargeItem.extension.extension.extension.value[x].code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Wegegeld.extension:Nacht",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Wegegeld.extension:Nacht",
         "path": "ChargeItem.extension.extension.extension",
         "sliceName": "Nacht",
         "short": "Nacht",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Wegegeld.extension:Nacht.value[x]",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Wegegeld.extension:Nacht.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung",
         "path": "ChargeItem.extension.extension",
-        "sliceName": "Reiseentschädigung",
+        "sliceName": "Reiseentschaedigung",
         "short": "Reiseentschädigung ab 25 km",
         "comment": "Die Reiseentschädigung ab 25 km SOLL vorhanden sein.",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Abwesenheit",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Abwesenheit",
         "path": "ChargeItem.extension.extension.extension",
         "sliceName": "Abwesenheit",
         "short": "Abwesenheit in Stunden",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Abwesenheit.value[x]",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Abwesenheit.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Abwesenheit.value[x].value",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Abwesenheit.value[x].value",
         "path": "ChargeItem.extension.extension.extension.value[x].value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Abwesenheit.value[x].unit",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Abwesenheit.value[x].unit",
         "path": "ChargeItem.extension.extension.extension.value[x].unit",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Abwesenheit.value[x].system",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Abwesenheit.value[x].system",
         "path": "ChargeItem.extension.extension.extension.value[x].system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Abwesenheit.value[x].code",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Abwesenheit.value[x].code",
         "path": "ChargeItem.extension.extension.extension.value[x].code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Entfernung",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Entfernung",
         "path": "ChargeItem.extension.extension.extension",
         "sliceName": "Entfernung",
         "short": "Entfernung in km",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Entfernung.value[x]",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Entfernung.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Entfernung.value[x].value",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Entfernung.value[x].value",
         "path": "ChargeItem.extension.extension.extension.value[x].value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Entfernung.value[x].unit",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Entfernung.value[x].unit",
         "path": "ChargeItem.extension.extension.extension.value[x].unit",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Entfernung.value[x].system",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Entfernung.value[x].system",
         "path": "ChargeItem.extension.extension.extension.value[x].system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Entfernung.value[x].code",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Entfernung.value[x].code",
         "path": "ChargeItem.extension.extension.extension.value[x].code",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Übernachtung",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Uebernachtung",
         "path": "ChargeItem.extension.extension.extension",
-        "sliceName": "Übernachtung",
+        "sliceName": "Uebernachtung",
         "short": "Kosten der Übernachtung",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Übernachtung.value[x]",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Uebernachtung.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Übernachtung.value[x].value",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Uebernachtung.value[x].value",
         "path": "ChargeItem.extension.extension.extension.value[x].value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Übernachtung.value[x].currency",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Uebernachtung.value[x].currency",
         "path": "ChargeItem.extension.extension.extension.value[x].currency",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Verkehrsmittel",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Verkehrsmittel",
         "path": "ChargeItem.extension.extension.extension",
         "sliceName": "Verkehrsmittel",
         "short": "Verkehrsmittel",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:WegegeldReiseentschädigung.extension:Reiseentschädigung.extension:Verkehrsmittel.value[x]",
+        "id": "ChargeItem.extension:WegegeldReiseentschaedigung.extension:Reiseentschaedigung.extension:Verkehrsmittel.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben",
         "path": "ChargeItem.extension",
-        "sliceName": "GebührenordnungAngaben",
+        "sliceName": "GebuehrenordnungAngaben",
         "min": 0,
         "max": "1",
         "type": [
@@ -311,7 +311,7 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Einfachsatz",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:Einfachsatz",
         "path": "ChargeItem.extension.extension",
         "sliceName": "Einfachsatz",
         "short": "Gebühr Einfachsatz in EUR",
@@ -319,42 +319,42 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Einfachsatz.value[x]",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:Einfachsatz.value[x]",
         "path": "ChargeItem.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Einfachsatz.value[x].value",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:Einfachsatz.value[x].value",
         "path": "ChargeItem.extension.extension.value[x].value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Einfachsatz.value[x].currency",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:Einfachsatz.value[x].currency",
         "path": "ChargeItem.extension.extension.value[x].currency",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:Faktor",
         "path": "ChargeItem.extension.extension",
         "sliceName": "Faktor",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:Value",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:Faktor.extension:Value",
         "path": "ChargeItem.extension.extension.extension",
         "sliceName": "Value",
         "short": "Faktor",
         "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL der Faktor vorhanden sein."
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:Value.value[x]",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:Faktor.extension:Value.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:FaktorGrund",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:Faktor.extension:FaktorGrund",
         "path": "ChargeItem.extension.extension.extension",
         "sliceName": "FaktorGrund",
         "short": "Faktor Grund",
@@ -362,43 +362,43 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:Faktor.extension:FaktorGrund.value[x]",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:Faktor.extension:FaktorGrund.value[x]",
         "path": "ChargeItem.extension.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:MinderungP6GOAE",
         "path": "ChargeItem.extension.extension",
-        "sliceName": "MinderungP6GOÄ",
+        "sliceName": "MinderungP6GOAE",
         "short": "Minderungen nach §6a GOÄ in Prozent",
         "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Minderungen nach §6a GOÄ in Prozent vorhanden sein.\n    Im Falle einer GOZ Rechnungsposition ist das Element nicht gefordert.",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x]",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:MinderungP6GOAE.value[x]",
         "path": "ChargeItem.extension.extension.value[x]",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x].value",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:MinderungP6GOAE.value[x].value",
         "path": "ChargeItem.extension.extension.value[x].value",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x].unit",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:MinderungP6GOAE.value[x].unit",
         "path": "ChargeItem.extension.extension.value[x].unit",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x].system",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:MinderungP6GOAE.value[x].system",
         "path": "ChargeItem.extension.extension.value[x].system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.extension:GebührenordnungAngaben.extension:MinderungP6GOÄ.value[x].code",
+        "id": "ChargeItem.extension:GebuehrenordnungAngaben.extension:MinderungP6GOAE.value[x].code",
         "path": "ChargeItem.extension.extension.value[x].code",
         "min": 1,
         "mustSupport": true
@@ -455,9 +455,9 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.code.coding:GOÄ",
+        "id": "ChargeItem.code.coding:GOAE",
         "path": "ChargeItem.code.coding",
-        "sliceName": "GOÄ",
+        "sliceName": "GOAE",
         "short": "GOÄ Ziffer",
         "min": 0,
         "max": "1",
@@ -467,17 +467,17 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.code.coding:GOÄ.system",
+        "id": "ChargeItem.code.coding:GOAE.system",
         "path": "ChargeItem.code.coding.system",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.code.coding:GOÄ.code",
+        "id": "ChargeItem.code.coding:GOAE.code",
         "path": "ChargeItem.code.coding.code",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.code.coding:GOÄ.display",
+        "id": "ChargeItem.code.coding:GOAE.display",
         "path": "ChargeItem.code.coding.display",
         "short": "Legendentext der Gebührenordnung / Leistungsbeschreibung",
         "mustSupport": true

@@ -4,9 +4,10 @@
   "type": "batch",
   "entry": [
     {
+      "fullUrl": "urn:uuid:f67a9208-35f3-44c3-b6f3-24ac56a8e0c8",
       "request": {
         "method": "POST",
-        "url": "/Patient/BeispielPatient3-FD/$invoice-submit"
+        "url": "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit"
       },
       "resource": {
         "resourceType": "Parameters",
@@ -43,7 +44,8 @@
                 },
                 {
                   "format": {
-                    "code": "gematik-dipag"
+                    "code": "dipag",
+                    "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
                   },
                   "attachment": {
                     "contentType": "application/fhir+xml",
@@ -104,9 +106,10 @@
       }
     },
     {
+      "fullUrl": "urn:uuid:34b15f2c-c304-40ca-9e27-0da3cebb91be",
       "request": {
         "method": "POST",
-        "url": "/Patient/BeispielPatient3-FD/$invoice-submit"
+        "url": "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit"
       },
       "resource": {
         "resourceType": "Parameters",
@@ -143,7 +146,8 @@
                 },
                 {
                   "format": {
-                    "code": "gematik-dipag"
+                    "code": "dipag",
+                    "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
                   },
                   "attachment": {
                     "contentType": "application/fhir+xml",

@@ -25,8 +25,8 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "Invoice"
+      "expression": "Invoice",
+      "type": "element"
     }
   ],
   "type": "Extension",
@@ -71,7 +71,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-abrechnungs-diagnose-use-VS"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-abrechnungs-diagnose-use-vs"
         }
       },
       {

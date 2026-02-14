@@ -11,7 +11,7 @@ Description: "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnung
 * date = "2024-06-20"
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/Retrieve"
 * kind = #operation
-* name = "Digitale PatientenrechnungRetrieve"
+* name = "DiPagRetrieve"
 * code = #retrieve
 * resource = #DocumentReference
 * system = false

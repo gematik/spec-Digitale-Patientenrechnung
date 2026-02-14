@@ -1,6 +1,7 @@
 Extension: DiPagTaskRequestedPerformer
 Id: dipag-task-requestedPerformer
 Title: "Digitale Patientenrechnung Task RequestedPerformer"
+Context: Task
 * insert Meta
 * ^url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer"
 * value[x] only Reference(Patient)

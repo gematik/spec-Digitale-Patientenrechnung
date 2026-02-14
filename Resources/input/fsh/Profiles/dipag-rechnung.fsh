@@ -193,52 +193,18 @@ Id: dipag-rechnung
 * totalPriceComponent ^slicing.discriminator.type = #pattern
 * totalPriceComponent ^slicing.discriminator.path = "code"
 * totalPriceComponent ^slicing.rules = #open
-* totalPriceComponent contains 
+* totalPriceComponent contains
   SummeRechnungspositionen ..1 MS and
   MinderungNachGOZ ..1 MS and
   Fremdlaborleistungen ..1 MS and
   Abzug ..* MS
 * totalPriceComponent[SummeRechnungspositionen]
-  * extension contains
-  DiPagTeilsumme named Teilsumme ..* MS
-  * extension[Teilsumme]
-    * ^short = "Teilsummen in EUR für die Rechnungspositionstyp"
-    * ^comment = "Für alle vorkommenden Rechnungspositionstypen SOLL eine Teilsumme vorhanden sein."
-    * extension[Type] MS
-      * ^short = "Rechnungspositionstyp"
-      * valueCoding 1.. MS
-    * extension[Summe] MS
-      * ^short = "Bruttosumme"
-      * valueMoney 1.. MS
-        * currency 1.. MS
-        * value 1.. MS
-    * extension[UStProzent] MS
-      * ^short = "Enthaltene Umsatzsteuer in Prozent"
-      * valueDecimal MS
-    * extension[UStBetrag] MS
-      * ^short = "Enthaltene Umsatzsteuer als Betrag"
-      * valueMoney 1.. MS
-        * currency 1.. MS
-        * value 1.. MS
   * ^short = "Summe aller Rechnungspositionen"
   * ^comment = "Die Summe aller Rechnungspositionen SOLL vorhanden sein."
   * type MS
   * type = #base
   * code 1.. MS
   * code = DiPagTotalPriceComponentTypeCS#SummeRechnungspositionen
-  * factor 0..0
-  * amount ..1 MS
-    * ^short = "Wert in EUR"
-    * currency 1.. MS
-    * currency = #EUR
-    * value 1.. MS
-* totalPriceComponent[Fremdlaborleistungen]
-  * ^short = "Summe aller Fremdlaborleistungen"
-  * ^comment = "Die Summe aller Fremdlaborleistungen SOLL vorhanden sein."
-  * type MS
-  * type = #base
-  * code 1.. MS
-  * code = DiPagTotalPriceComponentTypeCS#Fremdlaborleistungen
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"
@@ -259,9 +225,27 @@ Id: dipag-rechnung
     * currency 1.. MS
     * currency = #EUR
     * value 1.. MS
+* totalPriceComponent[Fremdlaborleistungen]
+  * ^short = "Summe aller Fremdlaborleistungen"
+  * ^comment = "Die Summe aller Fremdlaborleistungen SOLL vorhanden sein."
+  * type MS
+  * type = #base
+  * code 1.. MS
+  * code = DiPagTotalPriceComponentTypeCS#Fremdlaborleistungen
+  * factor 0..0
+  * amount ..1 MS
+    * ^short = "Wert in EUR"
+    * currency 1.. MS
+    * currency = #EUR
+    * value 1.. MS
 * totalPriceComponent[Abzug]
   * ^short = "Abzug"
   * ^comment = "Der Abzug SOLL vorhanden sein."
+  * extension contains DiPagAbzugKassenanteil named Kassenanteil ..1 MS
+  * extension[Kassenanteil]
+    * ^short = "Kassenanteil in Prozent"
+    * ^comment = "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.
+    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
   * type MS
   * type = #deduction
   * code 1.. MS
@@ -274,16 +258,6 @@ Id: dipag-rechnung
     * currency 1.. MS
     * currency = #EUR
     * value 1.. MS
-  * extension contains DiPagAbzugKassenanteil named Kassenanteil ..1 MS
-  * extension[Kassenanteil]
-    * ^short = "Kassenanteil in Prozent"
-    * ^comment = "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.
-    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
-    * valueQuantity 1.. MS
-      * unit MS
-      * value MS
-      * system MS
-      * code MS
 * lineItem MS
   * ^short = "Rechnungspositionen"
 * lineItem.sequence 1.. MS

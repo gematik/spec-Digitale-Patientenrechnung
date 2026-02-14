@@ -3,9 +3,15 @@
   "id": "BeispielNutzungsprotokollResultBundle",
   "type": "searchset",
   "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://example.com/fhir/AuditEvent?agent:text=11223344"
+    }
+  ],
   "entry": [
     {
-      "fullUrl": "[fachdienst-endpunkt]/AuditEvent/BeispielNutzungsprotokoll",
+      "fullUrl": "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokoll",
       "resource": {
         "resourceType": "AuditEvent",
         "id": "BeispielNutzungsprotokoll",
@@ -15,11 +21,13 @@
           ]
         },
         "type": {
-          "code": "rest"
+          "code": "rest",
+          "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
         },
         "subtype": [
           {
-            "code": "invoice-submit"
+            "code": "invoice-submit",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
           }
         ],
         "action": "C",
@@ -30,7 +38,8 @@
             "type": {
               "coding": [
                 {
-                  "code": "humanuser"
+                  "code": "humanuser",
+                  "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
                 }
               ]
             },
