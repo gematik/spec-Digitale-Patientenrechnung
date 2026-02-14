@@ -241,6 +241,11 @@ Id: dipag-rechnung
 * totalPriceComponent[Abzug]
   * ^short = "Abzug"
   * ^comment = "Der Abzug SOLL vorhanden sein."
+  * extension contains DiPagAbzugKassenanteil named Kassenanteil ..1 MS
+  * extension[Kassenanteil]
+    * ^short = "Kassenanteil in Prozent"
+    * ^comment = "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.
+    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
   * type MS
   * type = #deduction
   * code 1.. MS
