@@ -4,10 +4,11 @@ Title: "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent"
 Context: Invoice.totalPriceComponent
 * insert Meta
 * value[x] only Quantity
-* valueQuantity
-  * unit 1..
+* valueQuantity 1..
+  * unit 1.. MS
   * unit = "%"
-  * code 1..
+  * code 1.. MS
   * code = #%
-  * system 1..
+  * system 1.. MS
   * system = "http://unitsofmeasure.org"
+  * value 1.. MS
