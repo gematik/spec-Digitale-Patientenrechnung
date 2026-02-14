@@ -247,10 +247,6 @@ Id: dipag-rechnung
     * ^comment = "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.
     Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
     * valueQuantity MS
-      * unit MS
-      * value MS
-      * system MS
-      * code MS
   * type MS
   * type = #deduction
   * code 1.. MS
