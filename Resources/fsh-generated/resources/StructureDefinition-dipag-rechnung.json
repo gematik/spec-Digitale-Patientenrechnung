@@ -1078,6 +1078,24 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil",
+        "path": "Invoice.totalPriceComponent.extension",
+        "sliceName": "Kassenanteil",
+        "short": "Kassenanteil in Prozent",
+        "comment": "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.\n    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-abzug-kassenanteil"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Invoice.totalPriceComponent:Abzug.type",
         "path": "Invoice.totalPriceComponent.type",
         "patternCode": "deduction",
