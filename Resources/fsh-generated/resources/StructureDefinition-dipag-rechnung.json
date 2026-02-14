@@ -1081,8 +1081,6 @@
         "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil",
         "path": "Invoice.totalPriceComponent.extension",
         "sliceName": "Kassenanteil",
-        "short": "Kassenanteil in Prozent",
-        "comment": "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.\n    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert.",
         "min": 0,
         "max": "1",
         "type": [
