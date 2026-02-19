@@ -9,6 +9,12 @@ Im Rahmen der "Digitale Patientenrechnung"-Veröffentlichungen wird das [Semanti
 Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](https://simplifier.net/DigitalePatientenrechnung/~packages) versioniert veröffentlicht. Die Versionsnummer des Packages entspricht der Versionsnummer des dazugehörigen Implementierungsleitfadens.
 
 ----
+### Version 1.0.4
+
+#### CapabilityStatement
+
+* Das CapabilityStatement wurde um die Ressource `Binary` erweitert und fordert eine `read`-Interaktion für diese Ressource
+
 ### Version 1.0.3
 
 #### Profile und Extensions
