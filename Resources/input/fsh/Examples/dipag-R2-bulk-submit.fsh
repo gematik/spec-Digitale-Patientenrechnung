@@ -17,6 +17,9 @@ InstanceOf: Parameters
 * parameter[+]
   * name = "anhang"
   * resource = BeispielDocumentReferenceSonstigesDokument3-LE
+* parameter[+]
+  * name = "angereichertesPDF"
+  * valueBoolean = true
 
 Instance: BeispielDocumentReferenceRechnung3-LE
 InstanceOf: DocumentReference

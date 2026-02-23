@@ -104,8 +104,8 @@ HTTP POST [fachdienst-endpunkt]/Patient/[id-des-ermittelten-Rechnungsempfängers
 
 Antwort des Fachdienstes im Erfolgsfall:
 
-Rückgabe von Rechnung und Anhang jeweils mit aufgebrachtem Token und separiertem Inhalt.
-Bei Verwendung des Parameters "returnTokenPDF" werden die Binaries mit den PDF/A-Dokumenten (incl. Token-Barcode) als Parameter direkt mit ausgegeben.
+Rückgabe des Token von Rechnung und Anhang. 
+Bei Verwendung des Parameters "angereichertesPDF" wird die Binary Ressource mit den PDF/A-Dokumenten (inkl. Token-Barcode) als Parameter direkt mit ausgegeben.
 
 ```
 HTTP 200 OK
