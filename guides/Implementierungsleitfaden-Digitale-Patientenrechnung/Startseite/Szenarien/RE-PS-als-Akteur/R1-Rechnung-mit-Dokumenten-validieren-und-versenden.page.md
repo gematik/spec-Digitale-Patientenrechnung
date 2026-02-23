@@ -143,6 +143,8 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 
 * `DocumentReference.author.identifier` MUSS durch den FD auf die im Access-Token enthaltene Telematik-ID gesetzt werden. Durch den Client übermittelte Angaben in DocumentReference.author sind zu überschreiben.
 
+* `DocumentReference.extension:rechnungsdatum` und `DocumentReference.extension:gesamtbetrag` MÜSSEN durch den FD beim Empfang der Operation auf Basis der übermittelten Dokumenteninhalte extrahiert und gesetzt werden. Durch den Client übermittelte Angaben in diesen Extensions sind zu überschreiben.
+
 * Hinweis: In der FHIR-Repräsentation erfolgt **keine** Differenzierung zwischen dem Datenobjekt für die Rechnungsdokumente und dem Rechnungsworkflow. Der Workflowstatus wird somit innerhalb der DocumentReference abgebildet. `DocumentReference.meta.tag:dipag-rechnungsstatus` MUSS durch den FD auf "Offen" gesetzt werden beim Empfang der Rechnung.
 
 ### Hinweise zur Abbildung des Workflow-Objektes (fachliches Datenmodell)
