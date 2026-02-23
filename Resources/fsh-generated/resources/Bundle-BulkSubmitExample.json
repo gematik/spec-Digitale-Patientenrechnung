@@ -99,6 +99,10 @@
                 }
               ]
             }
+          },
+          {
+            "name": "angereichertesPDF",
+            "valueBoolean": true
           }
         ]
       }

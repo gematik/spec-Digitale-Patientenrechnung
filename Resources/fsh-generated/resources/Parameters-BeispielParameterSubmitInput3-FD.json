@@ -1,12 +1,18 @@
 {
   "resourceType": "Parameters",
-  "id": "BeispielParameterSubmitInput3-LE",
+  "id": "BeispielParameterSubmitInput3-FD",
   "parameter": [
     {
       "name": "rechnung",
       "resource": {
         "resourceType": "DocumentReference",
-        "id": "BeispielDocumentReferenceRechnung3-LE",
+        "id": "BeispielDocumentReferenceRechnung3-FD",
+        "identifier": [
+          {
+            "system": "https://example.org/fhir/sid/rechnungsids",
+            "value": "123-456-789"
+          }
+        ],
         "status": "current",
         "type": {
           "coding": [
@@ -28,34 +34,24 @@
           {
             "attachment": {
               "contentType": "application/pdf",
-              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+              "url": "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
             }
           },
           {
             "format": {
-              "code": "gematik-dipag"
+              "code": "dipag"
             },
             "attachment": {
               "contentType": "application/fhir+xml",
-              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
+              "url": "[FD-endpunkt]/Binary/invoice"
             }
           }
         ],
-        "extension": [
+        "relatesTo": [
           {
-            "url": "http://example.org/StructureDefinition/signatur",
-            "valueSignature": {
-              "type": [
-                {
-                  "code": "1.2.840.10065.1.12.1.1",
-                  "system": "urn:iso-astm:E1762-95:2013",
-                  "display": "Author's Signature"
-                }
-              ],
-              "when": "2015-02-07T13:28:17.239+02:00",
-              "who": {
-                "display": "Arzt"
-              }
+            "code": "transforms",
+            "target": {
+              "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
             }
           }
         ]
@@ -65,7 +61,13 @@
       "name": "anhang",
       "resource": {
         "resourceType": "DocumentReference",
-        "id": "BeispielDocumentReferenceSonstigesDokument3-LE",
+        "id": "BeispielDocumentReferenceSonstigesDokument3-FD",
+        "identifier": [
+          {
+            "system": "https://example.org/fhir/sid/anhangids",
+            "value": "987-654-321"
+          }
+        ],
         "status": "current",
         "type": {
           "coding": [
@@ -84,7 +86,15 @@
           {
             "attachment": {
               "contentType": "application/pdf",
-              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+              "url": "[FD-endpunkt]/Binary/patho-mit-token-barcode"
+            }
+          }
+        ],
+        "relatesTo": [
+          {
+            "code": "transforms",
+            "target": {
+              "reference": "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"
             }
           }
         ]
