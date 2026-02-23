@@ -1,0 +1,40 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "dipag-rechnungsbundle",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle",
+  "name": "DiPagRechnungsBundle",
+  "title": "Digitale Patientenrechnung - Rechnungsinhalte Bundle",
+  "status": "draft",
+  "description": "Dieses Profil stellt das collection-Bundle dar, mit welchem die strukturierten Rechnungsinhalte zusammengefasst und als base64-kodiertes Binary in der DocumentReference referenziert werden.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "patternCode": "collection",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.timestamp",
+        "path": "Bundle.timestamp",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry.resource",
+        "path": "Bundle.entry.resource",
+        "mustSupport": true
+      }
+    ]
+  }
+}
