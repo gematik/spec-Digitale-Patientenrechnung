@@ -104,7 +104,7 @@ Id: dipag-dokumentenmetadaten
     * contentType 1.. MS
       * ^comment = "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden."
     * data 1.. MS
-      * ^comment = "Base64-kodierte Repräsentation der Rechnungsinhalte. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden."
+      * ^comment = "Base64-kodierte Repräsentation der Rechnungsinhalte. Alle Ressourcen sollen in einem collection Bundle zusammengefasst sein, welches durch das Profil [`DiPagRechnungsbundle`](https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle) definiert ist. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden."
     * url MS
 * content[anhang]
   * format MS
