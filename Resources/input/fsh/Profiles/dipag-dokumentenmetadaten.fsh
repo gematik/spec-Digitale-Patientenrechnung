@@ -73,12 +73,12 @@ Id: dipag-dokumentenmetadaten
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "format"
   * ^slicing.rules = #open
-* content contains rechnungspdf 0..1 MS and angereicherteRechnung 0..1 MS and strukturierterRechnungsinhalt 0..1 MS and anhang 0..1 MS
+* content contains originaleRechnung 0..1 MS and angereicherteRechnung 0..1 MS and strukturierterRechnungsinhalt 0..1 MS and anhang 0..1 MS
 * content.attachment.url
   * ^comment = "Der FD muss die Base64-kodierten Daten aus attachment.data extrahieren und in eine Binary-Ressource auslagern."
-* content[rechnungspdf]
+* content[originaleRechnung]
   * format MS
-  * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#dipag
+  * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#originaleRechnung
   * attachment 1..1 MS
     * contentType 1.. MS
     * contentType = #application/pdf
@@ -149,7 +149,7 @@ Id: dipag-attachment-format-cs
 Title: "Digitale Patientenrechnung Attachment Format CS"
 Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
 * insert Meta
-* #dipag "Digitale Patientenrechnungs Dokument"
+* #originaleRechnung "Das originale PDF der Rechnung"
 * #angereichertesPDF "Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"
 * #rechnungsinhalt "Strukturierter Rechnungsinhalt"
 * #rechnungsanhang "Rechnungsanhang"

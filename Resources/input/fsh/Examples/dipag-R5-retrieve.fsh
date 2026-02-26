@@ -22,10 +22,10 @@ Title: "Example DiPag Document Reference"
 * author.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * author.identifier.value = "987654321"
 * author.display = "Dr. Hausarzt"
-* content[rechnungspdf].format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#dipag
-* content[rechnungspdf].attachment.contentType = #application/pdf
-* content[rechnungspdf].attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
-* content[rechnungspdf].attachment.url = "http://example.com/fhir/binary/123"
+* content[originaleRechnung].format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#originaleRechnung
+* content[originaleRechnung].attachment.contentType = #application/pdf
+* content[originaleRechnung].attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
+* content[originaleRechnung].attachment.url = "http://example.com/fhir/binary/123"
 * content[angereicherteRechnung].format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#angereichertesPDF
 * content[angereicherteRechnung].attachment.contentType = #application/pdf
 * content[angereicherteRechnung].attachment.url = "http://example.com/fhir/binary/456"

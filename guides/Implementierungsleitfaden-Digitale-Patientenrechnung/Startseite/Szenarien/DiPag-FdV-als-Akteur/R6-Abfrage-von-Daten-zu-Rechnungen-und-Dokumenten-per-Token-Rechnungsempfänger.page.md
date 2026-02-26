@@ -61,16 +61,16 @@ mit Body:
 
 <tabs>
     <tab title="Parameter-Input">      
-        {{render:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnungRetrieve.json}}
+        {{render:Resources/fsh-generated/resources/Parameters-BeispielParameterRetrieveOutput.json}}
     </tab>
     <tab title="XML">      
-        {{xml:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnungRetrieve.json}}
+        {{xml:Resources/fsh-generated/resources/Parameters-BeispielParameterRetrieveOutput.json}}
     </tab>
     <tab title="JSON">
-        {{json:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnungRetrieve.json}}
+        {{json:Resources/fsh-generated/resources/Parameters-BeispielParameterRetrieveOutput.json}}
     </tab>
     <tab title="Link">
-        {{link:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnungRetrieve.json}}
+        {{link:Resources/fsh-generated/resources/Parameters-BeispielParameterRetrieveOutput.json}}
     </tab>
 </tabs>
 
