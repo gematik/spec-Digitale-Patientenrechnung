@@ -23,8 +23,15 @@ Description: "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnung
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Dokumenttoken zur Identifikation des Dokuments, welches abgerufen werden soll"
+  * documentation = "Dokumenttoken zur Identifikation des Dokuments, welches abgerufen werden soll. Im Default wird nur die DocumentReference Ressource zurückgegeben. Durch die Angabe weiterer Parameter können zusätzlich das angereicherte PDF (bzw. der Anhang), die strukturierten Rechnungsinhalte und/oder die originale Rechnung mit Signatur zurückgegeben werden."
   * type = #string
+* parameter[+]
+  * name = #pdf
+  * use = #in
+  * min = 0
+  * max = "1"
+  * documentation = "Angabe, ob das angereicherte Rechnungsdokument oder der Anhang als PDF im Output enthalten sein soll. Default: false"
+  * type = #boolean
 * parameter[+]
   * name = #strukturierterRechnungsinhalt
   * use = #in
