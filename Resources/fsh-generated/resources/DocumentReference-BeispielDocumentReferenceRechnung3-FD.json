@@ -3,7 +3,7 @@
   "id": "BeispielDocumentReferenceRechnung3-FD",
   "identifier": [
     {
-      "system": "https://gematik.de/fhir/sid/dipag-token",
+      "system": "https://example.org/fhir/sid/rechnungsids",
       "value": "123-456-789"
     }
   ],
