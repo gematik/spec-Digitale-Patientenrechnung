@@ -7,6 +7,10 @@
       "valueString": "123-456-789"
     },
     {
+      "name": "pdf",
+      "valueBoolean": true
+    },
+    {
       "name": "strukturierterRechnungsinhalt",
       "valueBoolean": false
     },

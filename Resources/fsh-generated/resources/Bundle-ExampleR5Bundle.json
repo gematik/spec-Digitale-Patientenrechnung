@@ -59,7 +59,7 @@
         "content": [
           {
             "format": {
-              "code": "dipag",
+              "code": "originaleRechnung",
               "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             },
             "attachment": {
