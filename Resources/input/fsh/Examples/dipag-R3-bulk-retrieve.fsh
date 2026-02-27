@@ -27,19 +27,21 @@ InstanceOf: Parameters
   * valueString = "123-456-123"
 
 Instance: BeispielDocumentReferenceRechnungRetrieve2
-InstanceOf: DocumentReference
+InstanceOf: DiPagDokumentenmetadatenIntern
+Description: "Der Einfachheit halber wurden hier nur die relevanten Felder dargestellt. Die Extensions sind als befüllt anzunehmen."
 * identifier
   * system = "https://gematik.de/fhir/sid/dipag-token"
   * value = "123-456-123"
 * status = #current
 * type = $kdl#AM010106 "Rechnung ambulante/stationäre Behandlung"
 * description = "Rechnung Reiseimpfung vom 11.01.2024"
-* subject
-  * identifier
-    * system = "http://fhir.de/sid/gkv/kvid-10"
-    * value = "A000000000"
-* content[+]
-  * format = #dipag
-  * attachment
-    * contentType = #application/fhir+xml
-    * url = "[FD-endpunkt]/Binary/invoice"
+* subject.display = "Erika Mustermann"
+* content[originaleRechnung].attachment
+  * contentType = #application/fhir+json
+  * url = "[FD-endpunkt]/Binary/id-der-originalen-rechnung2"
+* content[strukturierterRechnungsinhalt].attachment
+  * contentType = #application/fhir+json
+  * url = "[FD-endpunkt]/Binary/id-des-strukturierten-rechnungsinhalts2"
+* content[angereicherteRechnung].attachment
+  * contentType = #application/pdf
+  * url = "[FD-endpunkt]/Binary/id-des-angereicherten-pdfs2"

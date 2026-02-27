@@ -54,6 +54,7 @@ Description: "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnung
   * max = "1"
   * documentation = "DocumentReference-Ressource zum angefragten Dokumenttoken."
   * type = #DocumentReference
+  * targetProfile = Canonical(DiPagDokumentenmetadatenIntern)
 * parameter[+]
   * name = #dokument.pdf
   * use = #out

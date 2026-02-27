@@ -1,6 +1,6 @@
 
 Instance: ExampleR5DocumentReference
-InstanceOf: DiPagDokumentenmetadaten
+InstanceOf: DiPagDokumentenmetadatenIntern
 Title: "Example DiPag Document Reference"
 * extension[rechnungsdatum].url = "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum"
 * extension[rechnungsdatum].valueDateTime = "2023-09-28T13:00:00.123+02:00"
@@ -22,21 +22,12 @@ Title: "Example DiPag Document Reference"
 * author.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * author.identifier.value = "987654321"
 * author.display = "Dr. Hausarzt"
-* content[originaleRechnung].format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#originaleRechnung
-* content[originaleRechnung].attachment.contentType = #application/pdf
-* content[originaleRechnung].attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
-* content[originaleRechnung].attachment.url = "http://example.com/fhir/binary/123"
-* content[angereicherteRechnung].format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#angereichertesPDF
-* content[angereicherteRechnung].attachment.contentType = #application/pdf
-* content[angereicherteRechnung].attachment.url = "http://example.com/fhir/binary/456"
-* content[strukturierterRechnungsinhalt].format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsinhalt
-* content[strukturierterRechnungsinhalt].attachment.contentType = #application/json
-* content[strukturierterRechnungsinhalt].attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
-* content[strukturierterRechnungsinhalt].attachment.url = "http://example.com/fhir/binary/789"
-* content[anhang].format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsanhang
-* content[anhang].attachment.contentType = #application/pdf
-* content[anhang].attachment.data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
-* content[anhang].attachment.url = "http://example.com/fhir/binary/101112"
+* content[originaleRechnung].attachment.contentType = #application/fhir+json
+* content[originaleRechnung].attachment.url = "[FD-endpunkt]/Binary/id-der-originalen-Rechnung"
+* content[angereicherteRechnung].attachment.contentType = #application/fhir+json
+* content[angereicherteRechnung].attachment.url = "[FD-endpunkt]/Binary/id-des-angereicherten-PDFs"
+* content[strukturierterRechnungsinhalt].attachment.contentType = #application/fhir+json
+* content[strukturierterRechnungsinhalt].attachment.url = "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
 
 Instance: ExampleR5Bundle
 InstanceOf: Bundle

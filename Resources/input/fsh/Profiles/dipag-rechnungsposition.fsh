@@ -166,6 +166,7 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
   * coding ^slicing.rules = #open
   * coding contains PZN ..1 MS
   * coding[PZN] only $coding-pzn
+    * ^patternCoding.system = "http://fhir.de/CodeSystem/ifa/pzn"
     * ^short = "Pharmazentralnummer"
     * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Pharmazentralnummer (PZN) vorhanden sein.
     Im Falle einer GOZ Rechnungsposition wird die PZN nicht gefordert."

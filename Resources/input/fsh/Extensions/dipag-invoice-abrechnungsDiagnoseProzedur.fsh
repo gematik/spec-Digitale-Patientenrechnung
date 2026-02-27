@@ -7,7 +7,7 @@ Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozedur
 * ^context.expression = "Invoice"
 * . ^short = "Abrechnungsrelevanz von Diagnosen und Prozeduren"
 * extension contains
-    Use 1..1 and
+    Use 0..1 and
     Referenz 1..*
 * extension[Use].value[x] only Coding
 * extension[Use].valueCoding 0..1

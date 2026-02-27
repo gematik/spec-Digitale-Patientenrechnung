@@ -23,7 +23,24 @@ InstanceOf: Parameters
   * resource = BeispielBinarySubmitOutput3-FD
   
 Instance: BeispielDocumentReferenceRechnungRetrieve
-InstanceOf: DocumentReference
+InstanceOf: DiPagDokumentenmetadatenIntern
+* extension[rechnungsdatum].valueDateTime = "2024-01-10"
+* extension[zahlungszieldatum].valueDateTime = "2024-02-10"
+* extension[gesamtbetrag].valueMoney
+  * value = 120.00
+  * currency = #EUR
+* extension[fachrichtung].valueCoding
+  * system = "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen"
+  * code = #ALLG
+  * display = "Allgemeinmedizin"
+* extension[behandlungsart].valueCoding
+  * system = "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+  * code = #AMB
+* meta
+  * tag[+] = DiPagARechnungsstatusCS#offen "Offen"
+  * extension[markierung]
+    * extension[markierung].valueCoding = DiPagRechnungMarkierungCS#eingereicht-frontend "Eingereicht (per Frontend)"
+    * extension[zeitpunkt].valueDateTime = "2024-01-15T10:00:00Z"
 * identifier
   * system = "http://example.org/fhir/sid/rechnungsids"
   * value = "123-456-789"
@@ -35,15 +52,15 @@ InstanceOf: DocumentReference
 * content[+]
   * format = DiPagAttachmentFormatCS#originaleRechnung
   * attachment
-    * contentType = #application/pdf
+    * contentType = #application/fhir+json
     * url = "[FD-endpunkt]/Binary/id-der-originalen-rechnung"
 * content[+]
   * format = DiPagAttachmentFormatCS#angereichertesPDF
   * attachment
-    * contentType = #application/pdf
+    * contentType = #application/fhir+json
     * url = "[FD-endpunkt]/Binary/id-der-angereicherten-rechnung"
 * content[+] 
   * format = DiPagAttachmentFormatCS#rechnungsinhalt
   * attachment
-    * contentType = #application/pdf
-    * url = "[FD-endpunkt]/Binary/id-des-strukturierten-rechnungsinhalts"
+    * contentType = #application/fhir+json
+    * url = "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"

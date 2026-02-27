@@ -25,6 +25,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * max = "1"
   * documentation = "Vollständige Digitale Patientenrechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur."
   * type = #DocumentReference
+  * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
 * parameter[+]
   * name = #anhang
   * use = #in
@@ -32,6 +33,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * max = "*"
   * documentation = "Weitere Anhänge zur Digitalen Patientenrechnung als PDF."
   * type = #DocumentReference
+  * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
 * parameter[+]
   * name = #modus
   * use = #in

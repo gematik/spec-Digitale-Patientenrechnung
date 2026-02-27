@@ -54,20 +54,14 @@ Id: dipag-institution
   * ^short = "Abrechnungsnummer für zahnärztliche Praxen"
   * ^comment = "Die Abrechnungsnummer für zahnärztliche Praxen KANN vorhanden sein."
 * identifier[USt-ID-Nr]
-  * ^patternIdentifier.type.text = "UmsatzsteuerId"
+  * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#ustid
   * type 1.. MS
   * system ^comment = "Es gibt kein FHIR-NamingSystem für die USt.-ID von offizieller Seite. Aus dem Grund ist System nicht mit MS gekennzeichnet und SOLL nicht befüllt sein."
   * value 1.. MS
   * ^short = "Umsatzsteuer-Identifikationsnummer"
   * ^comment = "Die Umsatzsteuer-Identifikationsnummer KANN vorhanden sein.
   Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat."
-* type MS
-* type ^slicing.discriminator.type = #pattern
-* type ^slicing.discriminator.path = "$this"
-* type ^slicing.rules = #open
-* type contains
-    Fachrichtung ..* MS
-* type[Fachrichtung] from $ihe-practiceSettingCode (required)
+* type from $ihe-practiceSettingCode (required)
   * ^short = "Fachrichtung"
   * ^comment = "Die Fachrichtung SOLL vorhanden sein. Das Element ist wiederholbar."
   * coding.system 1.. MS
@@ -76,17 +70,16 @@ Id: dipag-institution
   * ^short = "Institutionsname"
   * ^comment = "Der Institutionsname SOLL vorhanden sein."
 * telecom MS
-* telecom ^slicing.discriminator.type = #pattern
-* telecom ^slicing.discriminator.path = "$this"
+* telecom ^slicing.discriminator.type = #value
+* telecom ^slicing.discriminator.path = "system"
 * telecom ^slicing.rules = #open
 * telecom contains Telefon ..* MS
 * telecom[Telefon]
   * ^short = "Telefon"
   * ^comment = "Die Angabe einer Telefonnummer KANN vorhanden sein.
   Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat."
-  * ^patternContactPoint.system = #phone
   * system MS
-  * system = #phone
+  * system = #phone (exactly)
   * value MS
     * ^short = "Telefonnummer"
 * address MS

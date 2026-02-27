@@ -18,7 +18,7 @@ Id: dipag-rechnung
   Im Falle einer GOZ Rechnung werden keine Diagnosen oder Prozedur gefordert."
   * extension[Use].valueCoding MS
     * ^short = "Kennzeichen Hauptdiagnose"
-    * ^comment = "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein."
+    * ^comment = "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein, wenn es sich um eine HD handelt."
     * code = DiPagAbrechnungsDiagnoseUseCS#main-diagnosis
   * extension[Referenz].valueReference MS
     * ^short = "Zuordnung von Diagnosen oder Prozeduren zur Rechnung"
@@ -82,8 +82,7 @@ Id: dipag-rechnung
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
-  Rechnungsnummer 1..1 MS and
-  Antragsnummer ..1 MS
+  Rechnungsnummer 1..1 MS
 * identifier[Rechnungsnummer]
   * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#invoice
   * ^short = "Rechnungs-Nr. (der LEI)"
@@ -296,7 +295,7 @@ Id: dipag-rechnung
   * ^comment = "Die Referenz auf die Instanz der Rechnungsposition MUSS vorhanden sein."
 * lineItem.priceComponent	MS
 * lineItem.priceComponent ^slicing.discriminator.type = #pattern
-* lineItem.priceComponent ^slicing.discriminator.path = "$this"
+* lineItem.priceComponent ^slicing.discriminator.path = "type"
 * lineItem.priceComponent ^slicing.rules = #open
 * lineItem.priceComponent contains
   BruttoBetrag ..1 MS and
