@@ -130,7 +130,7 @@
         "id": "Invoice.extension:AbrechnungsDiagnoseProzedur.extension:Use.value[x]",
         "path": "Invoice.extension.extension.value[x]",
         "short": "Kennzeichen Hauptdiagnose",
-        "comment": "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein.",
+        "comment": "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein, wenn es sich um eine HD handelt.",
         "mustSupport": true
       },
       {
@@ -456,14 +456,6 @@
         "path": "Invoice.identifier.value",
         "short": "Rechnungs-Nr. (der LEI)",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.identifier:Antragsnummer",
-        "path": "Invoice.identifier",
-        "sliceName": "Antragsnummer",
-        "min": 0,
-        "max": "1",
         "mustSupport": true
       },
       {
@@ -810,7 +802,7 @@
           "discriminator": [
             {
               "type": "pattern",
-              "path": "$this"
+              "path": "type"
             }
           ],
           "rules": "open"

@@ -66,7 +66,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-dokument-artderarchivierung-vs"
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-markierung-vs"
         }
       },
       {
@@ -188,11 +188,16 @@
       {
         "id": "Extension.extension:artDerArchivierung.value[x]",
         "path": "Extension.extension.value[x]",
+        "min": 1,
         "type": [
           {
             "code": "Coding"
           }
-        ]
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-dokument-artderarchivierung-vs"
+        }
       },
       {
         "id": "Extension.url",

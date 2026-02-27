@@ -1,10 +1,10 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "dipag-dokumentenmetadaten",
-  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten",
+  "id": "dipag-dokumentenmetadaten-intern",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern",
   "version": "1.0.3",
-  "name": "DiPagDokumentenmetadaten",
-  "title": "Digitale Patientenrechnung Dokumentenmetadaten",
+  "name": "DiPagDokumentenmetadatenIntern",
+  "title": "Digitale Patientenrechnung Dokumentenmetadaten Intern",
   "status": "active",
   "experimental": false,
   "date": "2025-10-06",
@@ -36,14 +36,7 @@
             "severity": "error",
             "human": "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt.",
             "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'angereichertesPDF').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()",
-            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten"
-          },
-          {
-            "key": "RechnungOderAnhang",
-            "severity": "error",
-            "human": "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten.",
-            "expression": "content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'dipag').exists() and  content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())",
-            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten"
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
           }
         ]
       },
@@ -134,7 +127,7 @@
         "id": "DocumentReference.extension:rechnungsdatum",
         "path": "DocumentReference.extension",
         "sliceName": "rechnungsdatum",
-        "comment": "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments Digitale Patientenrechnung",
+        "comment": "Das Rechnungsdatum wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung",
         "min": 0,
         "max": "1",
         "type": [
@@ -151,7 +144,7 @@
         "id": "DocumentReference.extension:zahlungszieldatum",
         "path": "DocumentReference.extension",
         "sliceName": "zahlungszieldatum",
-        "comment": "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments Digitale Patientenrechnung",
+        "comment": "Das Zahlungszieldatum wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung",
         "min": 0,
         "max": "1",
         "type": [
@@ -168,7 +161,7 @@
         "id": "DocumentReference.extension:gesamtbetrag",
         "path": "DocumentReference.extension",
         "sliceName": "gesamtbetrag",
-        "comment": "Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments Digitale Patientenrechnung",
+        "comment": "Der Gesamtbetrag wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung",
         "min": 0,
         "max": "1",
         "type": [
@@ -185,6 +178,7 @@
         "id": "DocumentReference.extension:fachrichtung",
         "path": "DocumentReference.extension",
         "sliceName": "fachrichtung",
+        "comment": "Die Fachrichtung wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung",
         "min": 0,
         "max": "1",
         "type": [
@@ -201,6 +195,7 @@
         "id": "DocumentReference.extension:leistungsart",
         "path": "DocumentReference.extension",
         "sliceName": "leistungsart",
+        "comment": "Die Leistungsart wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung",
         "min": 0,
         "max": "1",
         "type": [
@@ -217,6 +212,7 @@
         "id": "DocumentReference.extension:behandlungsart",
         "path": "DocumentReference.extension",
         "sliceName": "behandlungsart",
+        "comment": "Die Behandlungsart wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung",
         "min": 0,
         "max": "1",
         "type": [
@@ -324,7 +320,7 @@
       {
         "id": "DocumentReference.subject",
         "path": "DocumentReference.subject",
-        "comment": "Vollständiger Name der behandelten Person. Siehe Abschnitt '4.8.1.1 Rechnung' des Feature-Dokuments Digitale Patientenrechnung.",
+        "comment": "Vollständiger Name der behandelten Person. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung.",
         "min": 1,
         "mustSupport": true
       },
@@ -382,11 +378,6 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content.attachment.url",
-        "path": "DocumentReference.content.attachment.url",
-        "comment": "Der FD muss die Base64-kodierten Daten aus attachment.data extrahieren und in eine Binary-Ressource auslagern."
-      },
-      {
         "id": "DocumentReference.content:originaleRechnung",
         "path": "DocumentReference.content",
         "sliceName": "originaleRechnung",
@@ -404,19 +395,22 @@
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt.",
         "min": 1,
-        "patternCode": "application/pdf",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-vs"
+        }
       },
       {
         "id": "DocumentReference.content:originaleRechnung.attachment.data",
         "path": "DocumentReference.content.attachment.data",
-        "comment": "Base64-kodiertes PDF. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden.",
-        "min": 1,
-        "mustSupport": true
+        "comment": "Die angereicherte Rechnung wird durch den FD direkt als Binary-Ressource unter attachment.url referenziert.",
+        "max": "0"
       },
       {
         "id": "DocumentReference.content:originaleRechnung.attachment.url",
         "path": "DocumentReference.content.attachment.url",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -447,8 +441,11 @@
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt.",
         "min": 1,
-        "patternCode": "application/pdf",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-vs"
+        }
       },
       {
         "id": "DocumentReference.content:angereicherteRechnung.attachment.data",
@@ -459,6 +456,7 @@
       {
         "id": "DocumentReference.content:angereicherteRechnung.attachment.url",
         "path": "DocumentReference.content.attachment.url",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -498,13 +496,13 @@
       {
         "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.data",
         "path": "DocumentReference.content.attachment.data",
-        "comment": "Base64-kodierte Repräsentation der Rechnungsinhalte. Alle Ressourcen sollen in einem collection Bundle zusammengefasst sein, welches durch das Profil [`DiPagRechnungsbundle`](https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle) definiert ist. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden.",
-        "min": 1,
-        "mustSupport": true
+        "comment": "Die angereicherte Rechnung wird durch den FD direkt als Binary-Ressource unter attachment.url referenziert.",
+        "max": "0"
       },
       {
         "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.url",
         "path": "DocumentReference.content.attachment.url",
+        "min": 1,
         "mustSupport": true
       },
       {
@@ -535,19 +533,22 @@
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnungsanhänge seitens der Leistungserbringer:in unterstützt.",
         "min": 1,
-        "patternCode": "application/pdf",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-vs"
+        }
       },
       {
         "id": "DocumentReference.content:anhang.attachment.data",
         "path": "DocumentReference.content.attachment.data",
-        "comment": "Base64-kodiertes PDF. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden.",
-        "min": 1,
-        "mustSupport": true
+        "comment": "Die angereicherte Rechnung wird durch den FD direkt als Binary-Ressource unter attachment.url referenziert.",
+        "max": "0"
       },
       {
         "id": "DocumentReference.content:anhang.attachment.url",
         "path": "DocumentReference.content.attachment.url",
+        "min": 1,
         "mustSupport": true
       },
       {
