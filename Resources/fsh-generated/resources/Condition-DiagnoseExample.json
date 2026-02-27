@@ -1,0 +1,23 @@
+{
+  "resourceType": "Condition",
+  "id": "DiagnoseExample",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "version": "2024",
+        "code": "K02.9",
+        "display": "Zahnkaries, nicht näher bezeichnet"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PatientExample"
+  },
+  "onsetDateTime": "2024-01-15"
+}

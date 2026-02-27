@@ -1,0 +1,242 @@
+{
+  "resourceType": "Invoice",
+  "id": "MusterrechnungInvoice",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "invoice",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+          }
+        ]
+      },
+      "system": "https://praxis-dr-arzt.de/fhir/sid/rechnungsnummer",
+      "value": "1425"
+    }
+  ],
+  "status": "issued",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart",
+      "valueCoding": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung",
+      "valueCoding": {
+        "system": "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+        "code": "INNA",
+        "display": "Innere Medizin"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]",
+      "valuePeriod": {
+        "start": "2018-10-04",
+        "end": "2018-10-19"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext",
+      "valueString": "Grippaler Infekt; Hepatopathie"
+    }
+  ],
+  "participant": [
+    {
+      "role": {
+        "coding": [
+          {
+            "code": "leistungserbringer",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Practitioner/MusterrechnungArzt"
+      }
+    },
+    {
+      "role": {
+        "coding": [
+          {
+            "code": "forderungsinhaber",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Organization/MusterrechnungPraxis"
+      }
+    }
+  ],
+  "recipient": {
+    "identifier": {
+      "type": {
+        "coding": [
+          {
+            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+            "code": "KVZ10"
+          }
+        ]
+      },
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "B123456789"
+    },
+    "reference": "Patient/MusterrechnungPatient",
+    "display": "Herr B. Patient"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs",
+        "code": "GOÄ",
+        "display": "Gebührenordnung für Ärzte"
+      }
+    ]
+  },
+  "lineItem": [
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 10.72,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 1,
+      "chargeItemReference": {
+        "reference": "ChargeItem/MusterrechnungPos1"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 10.72,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 2,
+      "chargeItemReference": {
+        "reference": "ChargeItem/MusterrechnungPos2"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 5.36,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 3,
+      "chargeItemReference": {
+        "reference": "ChargeItem/MusterrechnungPos3"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 10.72,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 4,
+      "chargeItemReference": {
+        "reference": "ChargeItem/MusterrechnungPos4"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 10.72,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 5,
+      "chargeItemReference": {
+        "reference": "ChargeItem/MusterrechnungPos5"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 4.02,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 6,
+      "chargeItemReference": {
+        "reference": "ChargeItem/MusterrechnungPos6"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 2.68,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 7,
+      "chargeItemReference": {
+        "reference": "ChargeItem/MusterrechnungPos7"
+      }
+    }
+  ],
+  "date": "2018-10-24",
+  "subject": {
+    "reference": "Patient/MusterrechnungPatient"
+  },
+  "issuer": {
+    "reference": "Organization/MusterrechnungPraxis"
+  },
+  "note": [
+    {
+      "text": "Berechnet nach der Gebührenordnung für Ärzte / GOÄ (Stand 01.01.2002). Bitte überweisen Sie den Betrag unter Angabe der Rechnungsnummer und des Rechnungsdatums bis zum 14.11.2018 auf das unten angegebene Konto."
+    }
+  ],
+  "paymentTerms": "Zahlbar bis zum 14.11.2018",
+  "_paymentTerms": {
+    "extension": [
+      {
+        "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+        "valueDate": "2018-11-14"
+      }
+    ]
+  },
+  "totalNet": {
+    "value": 54.95,
+    "currency": "EUR"
+  },
+  "totalGross": {
+    "value": 54.95,
+    "currency": "EUR"
+  }
+}

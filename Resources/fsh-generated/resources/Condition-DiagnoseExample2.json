@@ -1,0 +1,23 @@
+{
+  "resourceType": "Condition",
+  "id": "DiagnoseExample2",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/icd-10-gm",
+        "version": "2024",
+        "code": "K05.3",
+        "display": "Chronische Parodontitis"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PatientExample"
+  },
+  "onsetDateTime": "2024-01-15"
+}

@@ -1,0 +1,48 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "ExampleR5DocumentReferenceSonstigesDokument",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
+    ]
+  },
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "code": "PT130102",
+        "display": "Molekularpathologiebefund"
+      }
+    ]
+  },
+  "content": [
+    {
+      "format": {
+        "code": "rechnungsanhang",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
+      },
+      "attachment": {
+        "contentType": "application/fhir+json",
+        "url": "[FD-endpunkt]/Binary/id-des-anhangs"
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "https://example.org/fhir/sid/anhangids",
+      "value": "987-654-321"
+    }
+  ],
+  "description": "Molekularpathologiebefund vom 31.12.21",
+  "subject": {
+    "display": "Max Mustermann"
+  },
+  "context": {
+    "related": [
+      {
+        "reference": "Patient/BeispielPatient3-FD"
+      }
+    ]
+  }
+}

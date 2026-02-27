@@ -90,5 +90,15 @@
   "description": "Laborbefund vom 28.9.2023",
   "subject": {
     "display": "Max Mustermann"
+  },
+  "context": {
+    "related": [
+      {
+        "reference": "Patient/BeispielPatient3-FD"
+      },
+      {
+        "reference": "DocumentReference/ExampleR5DocumentReferenceSonstigesDokument"
+      }
+    ]
   }
 }
