@@ -45,25 +45,25 @@ Weitere Details zur Signatur, siehe [gemSpec_DiPag_FD - Abschnitt 6.5 Signatur](
 
 ### Rechnungsrepräsentation
 
-Die DocumentReference-Ressourcen welche über die Parameter `rechnung` und `anhang` übermittelt werden MÜSSEN dem Profil `https://gematik.de/fhir/StructureDefinition/dipag-dokumentenmetadaten` entsprechen.
+Die DocumentReference-Ressourcen welche über die Parameter `rechnung` und `anhang` übermittelt werden MÜSSEN dem Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang` entsprechen.
 
 <fql output="table" headers="true">
 from
 	StructureDefinition
 where
-	url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten'
+	url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 </fql>
 
 <br>
 
-{{tree:https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten, buttons}}
+{{tree:https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang, buttons}}
 
 Folgende Implementierungshinweise sind zu beachten:
 
 <fql output="table" headers="false">
-from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten' for differential.element where comment.exists() select id, comment
+from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang' for differential.element where comment.exists() select id, comment
 </fql>
 
 ### Beispiele
@@ -153,20 +153,20 @@ Im fachlichen Datenmodell des Feature-Dokuments Digitale Patientenrechnung ist d
 
 ### Beispiele
 
-Beispiel: Rechnungsdokument nach Verarbeitung auf Server
+Beispiel: Rechnungsdokument nach Verarbeitung auf Server 
 
 <tabs>
     <tab title="Parameters">    
-        {{render:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnung3-FD.json}}
+        {{render:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReference.json}}
     </tab>
     <tab title="XML">      
-        {{xml:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnung3-FD.json}}
+        {{xml:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReference.json}}
     </tab>
     <tab title="JSON">
-        {{json:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnung3-FD.json}}
+        {{json:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReference.json}}
     </tab>
     <tab title="Link">
-        {{link:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnung3-FD.json}}
+        {{link:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReference.json}}
     </tab>
 </tabs>
 
@@ -174,16 +174,16 @@ Beispiel: sonstiges Dokument nach Verarbeitung auf Server
 
 <tabs>
     <tab title="Parameters">    
-        {{render:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json}}
+        {{render:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.json}}
     </tab>
     <tab title="XML">      
-        {{xml:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json}}
+        {{xml:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.josn}}
     </tab>
     <tab title="JSON">
-        {{json:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json}}
+        {{json:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.json}}
     </tab>
     <tab title="Link">
-        {{link:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json}}
+        {{link:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.json}}
     </tab>
 </tabs>
 

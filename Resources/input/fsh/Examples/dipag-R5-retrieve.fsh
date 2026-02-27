@@ -28,6 +28,24 @@ Title: "Example DiPag Document Reference"
 * content[angereicherteRechnung].attachment.url = "[FD-endpunkt]/Binary/id-des-angereicherten-PDFs"
 * content[strukturierterRechnungsinhalt].attachment.contentType = #application/fhir+json
 * content[strukturierterRechnungsinhalt].attachment.url = "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
+* context.related[patient] = Reference(BeispielPatient3-FD)
+* context.related[anhaenge] = Reference(ExampleR5DocumentReferenceSonstigesDokument)
+
+Instance: ExampleR5DocumentReferenceSonstigesDokument
+InstanceOf: DiPagDokumentenmetadatenIntern
+* identifier
+  * system = "https://example.org/fhir/sid/anhangids"
+  * value = "987-654-321"
+* type.coding[DokumentenKlassifizierung] $kdl#PT130102 "Molekularpathologiebefund"
+* description = "Molekularpathologiebefund vom 31.12.21"
+* subject.display = "Max Mustermann"
+* content[anhang].attachment
+  * contentType = #application/fhir+json
+  * url = "[FD-endpunkt]/Binary/id-des-anhangs"
+* context.related[patient] = Reference(BeispielPatient3-FD)
+
+
+
 
 Instance: ExampleR5Bundle
 InstanceOf: Bundle

@@ -47,7 +47,6 @@ Usage: #example
 Instance: BeispielDocumentReferenceRechnung3-FD
 InstanceOf: DiPagDokumentenmetadatenEingang
 Usage: #example
-//FD fügt Token hinzu
 * identifier
   * system = "https://example.org/fhir/sid/rechnungsids"
   * value = "123-456-789"
@@ -64,7 +63,6 @@ Usage: #example
 Instance: BeispielDocumentReferenceSonstigesDokument3-FD
 InstanceOf: DiPagDokumentenmetadatenEingang
 Usage: #example
-//FD fügt Token hinzu
 * identifier
   * system = "https://example.org/fhir/sid/anhangids"
   * value = "987-654-321"

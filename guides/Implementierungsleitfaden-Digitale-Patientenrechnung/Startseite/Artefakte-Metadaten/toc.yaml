@@ -2,8 +2,10 @@
   filename: Index.page.md
 - name: CapabilityStatementFD
   filename: CapabilityStatements
-- name: DiPagDokumentenmetadaten (DocumentReference)
-  filename: Datenobjekt_dokumentenmetadaten
+- name: DiPagDokumentenmetadaten Intern (DocumentReference)
+  filename: Datenobjekt_dokumentenmetadaten-intern
+- name: DiPagDokumentenmetadaten Eingang (DocumentReference)
+  filename: Datenobjekt_dokumentenmetadaten-eingang
 - name: DiPagNutzungsprotokoll (AuditEvent)
   filename: Datenobjekt_nutzungsprotokoll
 - name: DiPagRechnungsdokument (Binary)

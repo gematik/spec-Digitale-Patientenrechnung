@@ -1,6 +1,6 @@
 ---
 topic: DiPagDokumentenmetadaten-MS
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang
 ---
 
 ### Anmerkungen zu Must-Support-Feldern

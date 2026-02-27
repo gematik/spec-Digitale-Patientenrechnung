@@ -456,12 +456,6 @@ Usage: #example
   * fullUrl = "Organization/MusterrechnungPraxis"
   * resource = MusterrechnungPraxis
 * entry[+]
-  * fullUrl = "Condition/MusterrechnungDiagnose1"
-  * resource = MusterrechnungDiagnose1
-* entry[+]
-  * fullUrl = "Condition/MusterrechnungDiagnose2"
-  * resource = MusterrechnungDiagnose2
-* entry[+]
   * fullUrl = "ChargeItem/MusterrechnungPos1"
   * resource = MusterrechnungPos1
 * entry[+]
