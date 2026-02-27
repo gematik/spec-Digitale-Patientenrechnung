@@ -4,7 +4,9 @@
 Instance: PatientExample
 InstanceOf: DiPagPatient
 Title: "Beispiel Patient"
-Description: "Ein Beispielpatient für die Rechnung"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Ein Beispielpatient für die Rechnung"
 Usage: #example
 * identifier[KVNR]
   * type = $identifier-kvnr-type#KVZ10
@@ -51,7 +53,9 @@ Usage: #example
 Instance: PractitionerMain
 InstanceOf: DiPagPerson
 Title: "Hauptbehandler - Dr. Schulz"
-Description: "Hauptbehandelnder Zahnarzt"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Hauptbehandelnder Zahnarzt"
 Usage: #example
 * identifier[Telematik-ID]
   * type = $v2-0203#PRN
@@ -89,7 +93,9 @@ Usage: #example
 Instance: PractitionerSecondary
 InstanceOf: DiPagPerson
 Title: "Assistierender Arzt - Dr. Mueller"
-Description: "Assistierender Zahnarzt"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Assistierender Zahnarzt"
 Usage: #example
 * identifier[Telematik-ID]
   * type = $v2-0203#PRN
@@ -130,7 +136,9 @@ Usage: #example
 Instance: OrganizationIssuer
 InstanceOf: DiPagInstitution
 Title: "Zahnarztpraxis Dr. Schulz"
-Description: "Die Praxis, die die Rechnung ausstellt"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Die Praxis, die die Rechnung ausstellt"
 Usage: #example
 * name = "Zahnarztpraxis Dr. Schulz"
 * identifier[Telematik-ID]
@@ -171,7 +179,9 @@ Usage: #example
 Instance: OrganizationSecondary
 InstanceOf: DiPagInstitution
 Title: "Zahnlabor Müller"
-Description: "Labor für Zahnersatz und Prothesen"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Labor für Zahnersatz und Prothesen"
 Usage: #example
 * name = "Zahnlabor Müller GmbH"
 * identifier[Telematik-ID]
@@ -210,7 +220,9 @@ Usage: #example
 Instance: ChargeItemGoea1
 InstanceOf: DiPagRechnungsposition
 Title: "GOÄ Position 1: Ärztliche Konsultation"
-Description: "Eingehende Konsultation mit Befund nach GOÄ"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Eingehende Konsultation mit Befund nach GOÄ"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
@@ -264,7 +276,9 @@ Usage: #example
 Instance: ChargeItemGoz
 InstanceOf: DiPagRechnungsposition
 Title: "GOZ Position: Professionelle Zahnreinigung"
-Description: "Zahnsteinentfernung und Politur nach GOZ"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Zahnsteinentfernung und Politur nach GOZ"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOZ
@@ -302,7 +316,9 @@ Usage: #example
 Instance: ChargeItemLab
 InstanceOf: DiPagRechnungsposition
 Title: "Laborleistung: Zahnersatz"
-Description: "Anfertigung einer Teilprothese durch Fremdlabor"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Anfertigung einer Teilprothese durch Fremdlabor"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#Fremdlaborleistung
@@ -327,7 +343,9 @@ Usage: #example
 Instance: ChargeItemMaterial
 InstanceOf: DiPagRechnungsposition
 Title: "Sachkosten: Dentalmaterial"
-Description: "Verbrauchsmaterial für Behandlung"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Verbrauchsmaterial für Behandlung"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#SachkostenAuslagen
@@ -358,7 +376,9 @@ Usage: #example
 Instance: ChargeItemReiseentschaedigung
 InstanceOf: DiPagRechnungsposition
 Title: "Wegegeld/Reiseentschädigung: Hausbesuch"
-Description: "Reiseentschädigung für Hausbesuch über 25 km"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Reiseentschädigung für Hausbesuch über 25 km"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#WegegeldReiseentschaedigung
@@ -403,7 +423,9 @@ Usage: #example
 Instance: DiagnoseExample
 InstanceOf: DiPagRechnungsdiagnose
 Title: "Diagnose - Karies"
-Description: "Zahnkaries als Hauptdiagnose für die Rechnung"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Zahnkaries als Hauptdiagnose für die Rechnung"
 Usage: #example
 * code
   * coding[ICD-10-GM]
@@ -417,7 +439,9 @@ Usage: #example
 Instance: DiagnoseExample2
 InstanceOf: DiPagRechnungsdiagnose
 Title: "Diagnose - Parodontitis"
-Description: "Parodontitis als Nebendiagnose"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Parodontitis als Nebendiagnose"
 Usage: #example
 * code
   * coding[ICD-10-GM]
@@ -431,7 +455,9 @@ Usage: #example
 Instance: ProzedurExample
 InstanceOf: DiPagRechnungsprozedur
 Title: "Prozedur - Zahnimplantat"
-Description: "Zahnimplantat-Einsetzung als Prozedur"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Zahnimplantat-Einsetzung als Prozedur"
 Usage: #example
 * status = #completed
 * code
@@ -449,7 +475,9 @@ Usage: #example
 Instance: InvoiceExample
 InstanceOf: DiPagRechnung
 Title: "Beispielrechnung - Zahnärztliche Behandlung"
-Description: "Komplettes Beispiel einer Digitalen Patientenrechnung mit GOÄ und GOZ"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Komplettes Beispiel einer Digitalen Patientenrechnung mit GOÄ und GOZ"
 Usage: #example
 * identifier[Rechnungsnummer]
   * type = DiPagRechnungIdentifierTypeCS#invoice
@@ -615,7 +643,9 @@ Usage: #example
 Instance: BundleExample
 InstanceOf: DiPagRechnungsBundle
 Title: "Beispiel Bundle - Vollständige Rechnung"
-Description: "Bundle mit allen Ressourcen der digitalen Patientenrechnung"
+Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.
+
+Bundle mit allen Ressourcen der digitalen Patientenrechnung"
 Usage: #example
 * type = #collection
 * timestamp = "2024-03-15T14:30:00+01:00"
