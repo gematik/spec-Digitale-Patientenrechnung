@@ -1,0 +1,90 @@
+{
+  "resourceType": "Practitioner",
+  "id": "PractitionerMain",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "PRN",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://gematik.de/fhir/sid/telematik-id",
+      "value": "1-HBA-Testkarte-883110000123465"
+    }
+  ],
+  "name": [
+    {
+      "prefix": [
+        "Dr."
+      ],
+      "_prefix": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "AC"
+            }
+          ]
+        }
+      ],
+      "use": "official",
+      "text": "Dr. Hans Schulz",
+      "family": "Schulz",
+      "given": [
+        "Hans"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+49 30 123456"
+    }
+  ],
+  "address": [
+    {
+      "type": "both",
+      "line": [
+        "Praxisstraße 10"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Praxisstraße"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "10"
+            }
+          ]
+        }
+      ],
+      "city": "Berlin",
+      "postalCode": "10115",
+      "country": "DE"
+    }
+  ],
+  "qualification": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+            "code": "MZKH",
+            "display": "Zahnmedizin"
+          }
+        ]
+      }
+    }
+  ]
+}

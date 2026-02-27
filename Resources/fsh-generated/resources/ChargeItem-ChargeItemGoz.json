@@ -1,0 +1,89 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "ChargeItemGoz",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+    ]
+  },
+  "status": "billable",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+      "valueCoding": {
+        "code": "GOZ",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
+      "valueCoding": {
+        "code": "V",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-CS",
+        "display": "auf Verlangen erbrachte Leistung"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+      "extension": [
+        {
+          "url": "Einfachsatz",
+          "valueMoney": {
+            "currency": "EUR",
+            "value": 60
+          }
+        },
+        {
+          "url": "Punktzahl",
+          "valueDecimal": 28
+        },
+        {
+          "url": "Faktor",
+          "extension": [
+            {
+              "url": "Value",
+              "valueDecimal": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+      "valueDate": "2024-02-25"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/gzä",
+        "code": "1040",
+        "display": "Professionelle Zahnreinigung"
+      }
+    ]
+  },
+  "bodysite": [
+    {
+      "extension": [
+        {
+          "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion",
+          "valueString": "11-48"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/PatientExample"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/PractitionerMain"
+      }
+    }
+  ],
+  "occurrencePeriod": {
+    "start": "2024-02-25",
+    "end": "2024-02-25"
+  }
+}

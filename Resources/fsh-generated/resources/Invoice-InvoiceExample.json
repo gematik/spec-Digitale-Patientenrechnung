@@ -1,0 +1,355 @@
+{
+  "resourceType": "Invoice",
+  "id": "InvoiceExample",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "invoice",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+          }
+        ]
+      },
+      "system": "https://zahnarzt-schulz.de/fhir/sid/rechnungsnummer",
+      "value": "RG-2024-001234"
+    }
+  ],
+  "status": "issued",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart",
+      "valueCoding": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "AMB",
+        "display": "ambulatory"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung",
+      "valueCoding": {
+        "system": "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+        "code": "MZKH",
+        "display": "Zahnmedizin"
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]",
+      "valuePeriod": {
+        "start": "2024-01-15",
+        "end": "2024-03-10"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur",
+      "extension": [
+        {
+          "url": "Referenz",
+          "valueReference": {
+            "reference": "Condition/DiagnoseExample"
+          }
+        },
+        {
+          "url": "Use",
+          "valueCoding": {
+            "code": "main-diagnosis",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-CS",
+            "display": "Hauptdiagnose"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur",
+      "extension": [
+        {
+          "url": "Referenz",
+          "valueReference": {
+            "reference": "Condition/DiagnoseExample2"
+          }
+        },
+        {
+          "url": "Referenz",
+          "valueReference": {
+            "reference": "Procedure/ProzedurExample"
+          }
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext",
+      "valueString": "Behandlung von Karies und Parodontitis mit Implantation"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/event-basedOn",
+      "valueReference": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "antragsreferenz",
+                "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+              }
+            ]
+          },
+          "system": "https://example.org/fhir/sid/kostenplan",
+          "value": "HKP-2024-001-123456"
+        }
+      }
+    }
+  ],
+  "participant": [
+    {
+      "role": {
+        "coding": [
+          {
+            "code": "leistungserbringer",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Practitioner/PractitionerSecondary"
+      }
+    },
+    {
+      "role": {
+        "coding": [
+          {
+            "code": "forderungsinhaber",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Organization/OrganizationIssuer"
+      }
+    }
+  ],
+  "recipient": {
+    "identifier": {
+      "type": {
+        "coding": [
+          {
+            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+            "code": "KVZ10"
+          }
+        ]
+      },
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "K123456789"
+    },
+    "reference": "Patient/PatientExample",
+    "display": "Max Mustermann"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs",
+        "code": "GOÄ",
+        "display": "Gebührenordnung für Ärzte"
+      },
+      {
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs",
+        "code": "ABSCHLUSS",
+        "display": "Abschlussrechnung"
+      }
+    ]
+  },
+  "totalPriceComponent": [
+    {
+      "type": "base",
+      "code": {
+        "coding": [
+          {
+            "code": "SummeRechnungspositionen",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs",
+            "display": "Summe aller Rechnungspositionen"
+          }
+        ]
+      },
+      "amount": {
+        "currency": "EUR",
+        "value": 1415.7
+      }
+    },
+    {
+      "type": "base",
+      "code": {
+        "coding": [
+          {
+            "code": "Fremdlaborleistungen",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs",
+            "display": "Fremdlaborleistungen"
+          }
+        ]
+      },
+      "amount": {
+        "currency": "EUR",
+        "value": 800
+      }
+    },
+    {
+      "type": "deduction",
+      "amount": {
+        "currency": "EUR",
+        "value": -250
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "FestzuschussKasse",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs",
+            "display": "Festzuschuss Kasse"
+          }
+        ]
+      }
+    }
+  ],
+  "lineItem": [
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 29.35,
+            "currency": "EUR"
+          }
+        },
+        {
+          "type": "tax",
+          "amount": {
+            "value": 4.69,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 1,
+      "chargeItemReference": {
+        "reference": "ChargeItem/ChargeItemGoea1"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 142.8,
+            "currency": "EUR"
+          }
+        },
+        {
+          "type": "tax",
+          "amount": {
+            "value": 22.8,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 3,
+      "chargeItemReference": {
+        "reference": "ChargeItem/ChargeItemGoz"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 952,
+            "currency": "EUR"
+          }
+        },
+        {
+          "type": "tax",
+          "amount": {
+            "value": 152,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 4,
+      "chargeItemReference": {
+        "reference": "ChargeItem/ChargeItemLab"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 53.55,
+            "currency": "EUR"
+          }
+        },
+        {
+          "type": "tax",
+          "amount": {
+            "value": 8.55,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 5,
+      "chargeItemReference": {
+        "reference": "ChargeItem/ChargeItemMaterial"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "value": 238,
+            "currency": "EUR"
+          }
+        },
+        {
+          "type": "tax",
+          "amount": {
+            "value": 45.22,
+            "currency": "EUR"
+          }
+        }
+      ],
+      "sequence": 6,
+      "chargeItemReference": {
+        "reference": "ChargeItem/ChargeItemReiseentschaedigung"
+      }
+    }
+  ],
+  "date": "2024-03-15",
+  "subject": {
+    "reference": "Patient/PatientExample"
+  },
+  "issuer": {
+    "reference": "Organization/OrganizationIssuer"
+  },
+  "note": [
+    {
+      "text": "Gemäß §1 Abs. 2 GOÄ werden diese Leistungen nach dieser Gebührenordnung für Ärzte berechnet. Bitte überweisen Sie den Betrag innerhalb von 14 Tagen."
+    }
+  ],
+  "paymentTerms": "Überweisung auf Konto: IBAN DE89370400440532013000, BIC COBADEFFXXX. Zahlbar bis zum 30.04.2024 ohne Abzug.",
+  "_paymentTerms": {
+    "extension": [
+      {
+        "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+        "valueDate": "2024-04-30"
+      }
+    ]
+  },
+  "totalNet": {
+    "value": 1415.7,
+    "currency": "EUR"
+  },
+  "totalGross": {
+    "value": 1648.96,
+    "currency": "EUR"
+  }
+}

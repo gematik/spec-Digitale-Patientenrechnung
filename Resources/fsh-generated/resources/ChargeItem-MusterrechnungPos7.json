@@ -1,0 +1,66 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "MusterrechnungPos7",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+    ]
+  },
+  "status": "billable",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+      "valueCoding": {
+        "code": "GOÄ",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+      "extension": [
+        {
+          "url": "Faktor",
+          "extension": [
+            {
+              "url": "Value",
+              "valueDecimal": 1.15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+      "valueDate": "2018-10-19"
+    }
+  ],
+  "quantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 1,
+    "unit": "Anzahl",
+    "code": "{count}"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/goä",
+        "code": "3597.H1"
+      }
+    ],
+    "text": "Laktatdehydrogenase (LDH)"
+  },
+  "subject": {
+    "reference": "Patient/MusterrechnungPatient"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/MusterrechnungArzt"
+      }
+    }
+  ],
+  "occurrencePeriod": {
+    "start": "2018-10-19",
+    "end": "2018-10-19"
+  }
+}
