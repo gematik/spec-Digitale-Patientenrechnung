@@ -36,7 +36,7 @@ InstanceOf: DiPagDokumentenmetadatenIntern
 * identifier
   * system = "https://example.org/fhir/sid/anhangids"
   * value = "987-654-321"
-* type.coding[DokumentenKlassifizierung] $kdl#PT130102 "Molekularpathologiebefund"
+* type.coding[DokumentenKlassifizierung] = $kdl#PT130102 "Molekularpathologiebefund"
 * description = "Molekularpathologiebefund vom 31.12.21"
 * subject.display = "Max Mustermann"
 * content[anhang].attachment
