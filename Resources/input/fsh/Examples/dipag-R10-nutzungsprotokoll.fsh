@@ -1,11 +1,11 @@
 Instance: BeispielNutzungsprotokoll
 InstanceOf: DiPagNutzungsprotokoll
-* type = #rest
-* subtype = #invoice-submit
+* type = $auditEventType#rest
+* subtype = $operationDiPag#invoice-submit
 * action = #C
 * recorded = "2024-05-29T11:25:54.123456+00:02"
 * outcome = #0
-* agent.type = #humanuser
+* agent.type = $extraSecurityRoleType#humanuser
 * agent.who.identifier
   * type = http://terminology.hl7.org/CodeSystem/v2-0203#PRN
   * system = "https://gematik.de/fhir/sid/telematik-id"
@@ -19,6 +19,8 @@ Instance: BeispielNutzungsprotokollResultBundle
 InstanceOf: Bundle
 * type = #searchset
 * total = 1
-* entry[+].fullUrl = "[fachdienst-endpunkt]/AuditEvent/BeispielNutzungsprotokoll"
+* link[+].relation = "self"
+* link[=].url = "https://example.com/fhir/AuditEvent?agent:text=11223344"
+* entry[+].fullUrl = "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokoll"
 * entry[=].resource = BeispielNutzungsprotokoll
 * entry[=].search.mode = #match

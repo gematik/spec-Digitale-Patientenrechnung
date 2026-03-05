@@ -7,7 +7,7 @@ Context: ChargeItem
   Punktzahl ..1 and
   Faktor ..1 and
   FaktorGrund ..1 and
-  MinderungP6GOÄ ..1
+  MinderungP6GOAE ..1
 * extension[Einfachsatz]
   * value[x] only Money
   * valueMoney.currency = #EUR
@@ -20,7 +20,7 @@ Context: ChargeItem
   * extension[FaktorGrund]
     * value[x] only Coding
     * valueCoding from DiPagRechnungspositionFaktorGruendeVS (required)  
-* extension[MinderungP6GOÄ]
+* extension[MinderungP6GOAE]
   * value[x] only Quantity
   * valueQuantity
     * unit = "%"

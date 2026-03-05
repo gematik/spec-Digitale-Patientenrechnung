@@ -4,7 +4,7 @@ Usage: #example
 Title: "Suchparameter DocumentReference dipag-makierung"
 Description: "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach einer manuellen Markierung ermöglicht."
 * url = Canonical(dipag-makierung)
-* name = "Suchparameter DocumentReference dipag-makierung"
+* name = "DiPagMakierung"
 * status = #active
 * publisher = "gematik GmbH"
 * description = "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach einer manuellen Markierung ermöglicht."

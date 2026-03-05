@@ -6,8 +6,8 @@ Id: dipag-rechnungsposition
 * extension contains
   DiPagRechnungspositionType named Rechnungspositionstyp 1..1 MS and
   DiPagRechnungspositionZusatz named Zusatz ..1 MS and
-  DiPagWegegeldReiseentschaedigung named WegegeldReiseentschädigung ..1 MS and
-  DiPagRechnungspositionGOAngaben named GebührenordnungAngaben ..1 MS and
+  DiPagWegegeldReiseentschaedigung named WegegeldReiseentschaedigung ..1 MS and
+  DiPagRechnungspositionGOAngaben named GebuehrenordnungAngaben ..1 MS and
   DiPagRechnungspositionBehandlungsdatum named Behandlungsdatum ..1 MS
 * extension[Rechnungspositionstyp]
   * ^short = "Rechnungspositionstyp"
@@ -22,7 +22,7 @@ Id: dipag-rechnungsposition
   * valueCoding MS
     * code 1.. MS
     * system 1.. MS
-* extension[WegegeldReiseentschädigung] MS
+* extension[WegegeldReiseentschaedigung] MS
   * ^short = "Wegegeld oder Reiseentschädigung"
   * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition SOLL Wegegeld oder Reiseentschädigung vorhanden sein."
   * extension[Wegegeld] MS
@@ -38,7 +38,7 @@ Id: dipag-rechnungsposition
     * extension[Nacht] MS
       * ^short = "Nacht"
       * valueBoolean MS
-  * extension[Reiseentschädigung] MS
+  * extension[Reiseentschaedigung] MS
     * ^short = "Reiseentschädigung ab 25 km"
     * ^comment = "Die Reiseentschädigung ab 25 km SOLL vorhanden sein."
     * extension[Abwesenheit] MS
@@ -55,7 +55,7 @@ Id: dipag-rechnungsposition
         * code 1.. MS
         * system 1.. MS
         * value 1.. MS
-    * extension[Übernachtung] MS
+    * extension[Uebernachtung] MS
       * ^short = "Kosten der Übernachtung"
       * valueMoney MS
         * currency 1.. MS
@@ -63,7 +63,7 @@ Id: dipag-rechnungsposition
     * extension[Verkehrsmittel] MS
       * ^short = "Verkehrsmittel"
       * valueCoding 1.. MS
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Einfachsatz] MS
     * ^short = "Gebühr Einfachsatz in EUR"
     * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Gebühr Einfachsatz in EUR vorhanden sein."
@@ -81,7 +81,7 @@ Id: dipag-rechnungsposition
       Im Falle einer GOÄ Rechnungsposition KANN der Faktor Grund vorhanden sein.
       Im Falle einer GOZ Rechnungsposition ist der Faktor Grund nicht gefordert."
       * valueCoding MS
-  * extension[MinderungP6GOÄ] MS
+  * extension[MinderungP6GOAE] MS
     * ^short = "Minderungen nach §6a GOÄ in Prozent"
     * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition SOLL die Minderungen nach §6a GOÄ in Prozent vorhanden sein.
     Im Falle einer GOZ Rechnungsposition ist das Element nicht gefordert."
@@ -103,9 +103,9 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
     * ^slicing.discriminator.path = "$this"
     * ^slicing.rules = #open
   * coding contains
-      GOÄ 0..1 MS and
+      GOAE 0..1 MS and
       GOZ 0..1 MS
-  * coding[GOÄ]
+  * coding[GOAE]
     * ^short = "GOÄ Ziffer"
     * ^patternCoding.system = "http://fhir.de/CodeSystem/bäk/goä"
     * code MS

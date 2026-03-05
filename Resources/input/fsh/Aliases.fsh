@@ -28,3 +28,7 @@ Alias: $coding-pzn = http://fhir.de/StructureDefinition/CodingPZN
 Alias: $sct = http://snomed.info/sct
 Alias: $capabilitystatement-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
 Alias: $extension-basedOn = http://hl7.org/fhir/StructureDefinition/event-basedOn
+Alias: $attachmentFormatDiPag = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs
+Alias: $operationDiPag = https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs
+Alias: $auditEventType = http://terminology.hl7.org/CodeSystem/audit-event-type
+Alias: $extraSecurityRoleType = http://terminology.hl7.org/CodeSystem/extra-security-role-type

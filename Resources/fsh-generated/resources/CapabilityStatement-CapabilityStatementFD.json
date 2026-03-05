@@ -203,7 +203,7 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "name": "subject",
+              "name": "type",
               "definition": "http://hl7.org/fhir/SearchParameter/clinical-type",
               "type": "token"
             },

@@ -104,31 +104,31 @@
         "max": "0"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung",
+        "id": "Extension.extension:Reiseentschaedigung",
         "path": "Extension.extension",
-        "sliceName": "Reiseentschädigung",
+        "sliceName": "Reiseentschaedigung",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Abwesenheit",
         "path": "Extension.extension.extension",
         "sliceName": "Abwesenheit",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.extension",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Abwesenheit.extension",
         "path": "Extension.extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.url",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Abwesenheit.url",
         "path": "Extension.extension.extension.url",
         "fixedUri": "Abwesenheit"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.value[x]",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Abwesenheit.value[x]",
         "path": "Extension.extension.extension.value[x]",
         "type": [
           {
@@ -137,39 +137,39 @@
         ]
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.value[x].unit",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Abwesenheit.value[x].unit",
         "path": "Extension.extension.extension.value[x].unit",
         "patternString": "h"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.value[x].system",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Abwesenheit.value[x].system",
         "path": "Extension.extension.extension.value[x].system",
         "patternUri": "http://unitsofmeasure.org"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Abwesenheit.value[x].code",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Abwesenheit.value[x].code",
         "path": "Extension.extension.extension.value[x].code",
         "patternCode": "h"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Entfernung",
         "path": "Extension.extension.extension",
         "sliceName": "Entfernung",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.extension",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Entfernung.extension",
         "path": "Extension.extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.url",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Entfernung.url",
         "path": "Extension.extension.extension.url",
         "fixedUri": "Entfernung"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.value[x]",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Entfernung.value[x]",
         "path": "Extension.extension.extension.value[x]",
         "type": [
           {
@@ -178,39 +178,39 @@
         ]
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.value[x].unit",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Entfernung.value[x].unit",
         "path": "Extension.extension.extension.value[x].unit",
         "patternString": "km"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.value[x].system",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Entfernung.value[x].system",
         "path": "Extension.extension.extension.value[x].system",
         "patternUri": "http://unitsofmeasure.org"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Entfernung.value[x].code",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Entfernung.value[x].code",
         "path": "Extension.extension.extension.value[x].code",
         "patternCode": "km"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Uebernachtung",
         "path": "Extension.extension.extension",
-        "sliceName": "Übernachtung",
+        "sliceName": "Uebernachtung",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung.extension",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Uebernachtung.extension",
         "path": "Extension.extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung.url",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Uebernachtung.url",
         "path": "Extension.extension.extension.url",
-        "fixedUri": "Übernachtung"
+        "fixedUri": "Uebernachtung"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung.value[x]",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Uebernachtung.value[x]",
         "path": "Extension.extension.extension.value[x]",
         "type": [
           {
@@ -219,29 +219,29 @@
         ]
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Übernachtung.value[x].currency",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Uebernachtung.value[x].currency",
         "path": "Extension.extension.extension.value[x].currency",
         "patternCode": "EUR"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Verkehrsmittel",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Verkehrsmittel",
         "path": "Extension.extension.extension",
         "sliceName": "Verkehrsmittel",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Verkehrsmittel.extension",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Verkehrsmittel.extension",
         "path": "Extension.extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Verkehrsmittel.url",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Verkehrsmittel.url",
         "path": "Extension.extension.extension.url",
         "fixedUri": "Verkehrsmittel"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.extension:Verkehrsmittel.value[x]",
+        "id": "Extension.extension:Reiseentschaedigung.extension:Verkehrsmittel.value[x]",
         "path": "Extension.extension.extension.value[x]",
         "type": [
           {
@@ -254,12 +254,12 @@
         }
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.url",
+        "id": "Extension.extension:Reiseentschaedigung.url",
         "path": "Extension.extension.url",
-        "fixedUri": "Reiseentschädigung"
+        "fixedUri": "Reiseentschaedigung"
       },
       {
-        "id": "Extension.extension:Reiseentschädigung.value[x]",
+        "id": "Extension.extension:Reiseentschaedigung.value[x]",
         "path": "Extension.extension.value[x]",
         "max": "0"
       },

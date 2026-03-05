@@ -57,7 +57,6 @@ Id: dipag-dokumentenmetadaten-intern
   * ^slicing.rules = #open
 * type.coding contains DokumentenKlassifizierung 0..1 MS and Rechnungstyp 0..1 MS
 * type.coding[DokumentenKlassifizierung] from DiPagSonstigesDokumentTypeVS (required)
-  * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
   * system 1.. MS
   * code 1.. MS
   * display 1.. MS
@@ -162,6 +161,8 @@ Id: dipag-rechnungsstatus-cs
 Title: "Digitale Patientenrechnung Rechnungsstatus CS"
 Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"
 * insert Meta
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
 * #offen "Offen"
 * #erledigt "Erledigt"
 * #papierkorb "Papierkorb"
@@ -172,6 +173,7 @@ Extension: DiPagDocRefSignature
 Id: dipag-docref-signature
 Title: "Digitale Patientenrechnung DocRef Signature"
 Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten"
+Context: DocumentReference
 * insert Meta
 
 * value[x] 1.. MS
@@ -181,6 +183,7 @@ Extension: DiPagDocRefFachrichtung
 Id: dipag-docref-fachrichtung
 Title: "Digitale Patientenrechnung DocRef Fachrichtung"
 Description: "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows"
+Context: DocumentReference
 * insert Meta
 
 * value[x] 1.. MS
@@ -191,6 +194,7 @@ Extension: DiPagDocRefLeistungsart
 Id: dipag-docref-leistungsart
 Title: "Digitale Patientenrechnung DocRef Leistungsart"
 Description: "Extension zur Angabe einer Leistungsart"
+Context: DocumentReference
 * insert Meta
 
 * value[x] 1.. MS

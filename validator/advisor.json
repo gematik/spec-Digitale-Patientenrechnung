@@ -1,0 +1,63 @@
+{
+  "suppress" : [
+    //All filters containing: `#dom-6` - ISiK resources do not contain a narrative.
+    // Ignore this best practice warning for now.
+    "http://hl7.org/fhir/StructureDefinition/DomainResource#dom-6",
+    //In FHIR R5 "pattern" discriminator has been deprecated and is being
+    //  consolidated with the "value" discriminator. To avoid unintended side effects in R4, we will keep
+    //  the current slicing.
+    "SD_PATH_SLICING_DEPRECATED",
+    //Filters CodeSystem errors in core specification
+    "TERMINOLOGY_TX_SYSTEM_NO_CODE@DocumentReference.content[1].format",
+    "TERMINOLOGY_TX_SYSTEM_NO_CODE@AuditEvent.type",
+    //Filters expected information messages for the violation of preferred bindings.
+    "Terminology_TX_NoValid_2_CC@Patient.identifier[0].type",
+    "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[1].pattern.ofType(Identifier).type",
+    "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[5].pattern.ofType(Identifier).type",
+    "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[9].pattern.ofType(Identifier).type",
+    "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[13].pattern.ofType(Identifier).type",
+    "Terminology_TX_NoValid_2_CC@StructureDefinition.differential.element[19].pattern.ofType(Identifier).type",
+    "Terminology_TX_NoValid_2_CC@Bundle.entry[0].resource/*Patient/PatientVater*/.identifier[0].type",
+    "Terminology_TX_NoValid_3_CC@DocumentReference.type",
+    "Terminology_TX_NoValid_3_CC@Bundle.entry[1].resource/*DocumentReference/BeispielDocumentReferenceRechnungRetrieve2*/.type",
+    "Terminology_TX_NoValid_3_CC@Bundle.entry[0].resource/*DocumentReference/BeispielDocumentReferenceRechnungRetrieve*/.type",
+    "Terminology_TX_NoValid_3_CC@Bundle.entry[1].resource/*Parameters/BeispielParameterSubmitInput3.1-LE*/.parameter[1].resource/*DocumentReference/BeispielDocumentReferenceSonstigesDokument3.1-LE*/.type",
+    "Terminology_TX_NoValid_3_CC@Parameters.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-LE*/",
+    "Terminology_TX_NoValid_3_CC@Bundle.entry[1].resource/*Parameters/BeispielParameterSubmitInput3.1-LE*/.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3.1-LE*/.type",
+    "Terminology_TX_NoValid_3_CC@Bundle.entry[0].resource/*Parameters/BeispielParameterSubmitInput3-LE*/.parameter[1].resource/*DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE*/.type",
+    "Terminology_TX_NoValid_3_CC@Bundle.entry[0].resource/*Parameters/BeispielParameterSubmitInput3-LE*/.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-LE*/.type",
+    "Terminology_TX_NoValid_3_CC@Bundle.entry[0].resource/*Parameters/BeispielParameterSubmitOutput3-FD*/.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-FD*/.type",
+    "Terminology_TX_NoValid_3_CC@Bundle.entry[0].resource/*Parameters/BeispielParameterSubmitOutput3-FD*/.parameter[1].resource/*DocumentReference/BeispielDocumentReferenceSonstigesDokument3-FD*/.type",
+    "Terminology_TX_NoValid_3_CC@Bundle.entry[0].resource/*DocumentReference/ExampleR5DocumentReference*/.type",
+    "Terminology_TX_NoValid_3_CC@Parameters.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-LE*/.type",
+    "Terminology_TX_NoValid_3_CC@Parameters.parameter[1].resource/*DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE*/.type",
+    "Terminology_TX_NoValid_3_CC@Parameters.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3.1-LE*/.type",
+    "Terminology_TX_NoValid_3_CC@Parameters.parameter[1].resource/*DocumentReference/BeispielDocumentReferenceSonstigesDokument3.1-LE*/.type",
+    "Terminology_TX_NoValid_3_CC@Parameters.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-FD*/.type",
+    "Terminology_TX_NoValid_3_CC@Parameters.parameter[1].resource/*DocumentReference/BeispielDocumentReferenceSonstigesDokument3-FD*/.type",
+    "Terminology_TX_NoValid_13@AuditEvent.subtype[0]",
+    "Terminology_TX_NoValid_13@Bundle.entry[0].resource/*AuditEvent/BeispielNutzungsprotokoll*/.subtype[0]",
+    "Terminology_TX_NoValid_14@DocumentReference.content[0].format",
+    "Terminology_TX_NoValid_14@DocumentReference.content[1].format",
+    "Terminology_TX_NoValid_14@DocumentReference.content[2].format",
+    "Terminology_TX_NoValid_14@Bundle.entry[0].resource/*DocumentReference/BeispielDocumentReferenceRechnungRetrieve*/.content[0].format",
+    "Terminology_TX_NoValid_14@Bundle.entry[1].resource/*DocumentReference/BeispielDocumentReferenceRechnungRetrieve2*/.content[0].format",
+    "Terminology_TX_NoValid_14@Bundle.entry[0].resource/*Parameters/BeispielParameterSubmitInput3-LE*/.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-LE*/.content[1].format",
+    "Terminology_TX_NoValid_14@Bundle.entry[1].resource/*Parameters/BeispielParameterSubmitInput3.1-LE*/.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3.1-LE*/.content[1].format",
+    "Terminology_TX_NoValid_14@Bundle.entry[0].resource/*Parameters/BeispielParameterSubmitOutput3-FD*/.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-FD*/.content[1].format",
+    "Terminology_TX_NoValid_14@Bundle.entry[0].resource/*DocumentReference/ExampleR5DocumentReference*/.content[1].format",
+    "Terminology_TX_NoValid_14@Bundle.entry[0].resource/*DocumentReference/ExampleR5DocumentReference*/.content[0].format",
+    "Terminology_TX_NoValid_14@Bundle.entry[0].resource/*DocumentReference/ExampleR5DocumentReference*/.content[2].format",
+    "Terminology_TX_NoValid_14@Parameters.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-LE*/.content[1].format",
+    "Terminology_TX_NoValid_14@Parameters.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3.1-LE*/.content[1].format",
+    "Terminology_TX_NoValid_14@Parameters.parameter[0].resource/*DocumentReference/BeispielDocumentReferenceRechnung3-FD*/.content[1].format",
+    "Terminology_TX_Code_ValueSet_Ext@StructureDefinition.differential.element[17].pattern.ofType(Identifier).type",
+    "Terminology_TX_Code_ValueSet_Ext@StructureDefinition.differential.element[5].pattern.ofType(Identifier).type",
+    //Filter expected erorrs for not matching a slice in examples
+    "Details_for__matching_against_Profile_@AuditEvent.entity[0]",
+    "Details_for__matching_against_Profile_@Bundle.entry[0].resource/*AuditEvent/BeispielNutzungsprotokoll*/.entity[0]",
+    // masks the warning for artifacts (e.g. CodeSystems) which have a draft status in the FHIR-Core-Standard.
+    "MSG_EXPERIMENTAL@ValueSet.compose.include[0].concept[0]",
+    "MSG_EXPERIMENTAL@ValueSet.compose.include[0].concept[1]"
+  ]
+}

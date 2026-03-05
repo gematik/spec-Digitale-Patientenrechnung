@@ -35,5 +35,11 @@
       ]
     }
   ],
+<<<<<<< HEAD
   "count": 3
+=======
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
+  "count": 2
+>>>>>>> origin/master
 }

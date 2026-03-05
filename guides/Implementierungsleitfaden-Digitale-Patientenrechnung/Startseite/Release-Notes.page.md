@@ -11,7 +11,18 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 ----
 ### Version 1.0.4
 
+
+
+#### Beispiele
+
+* Korrektur div. Beispiele
+
+----
+### Version 1.0.4
+
 #### Profile und Extensions
+
+* Technische Fehlerhebung (z.B. fehlender Extension-Context) in div. Profilen und Extensions. Keine inhaltichen Änderungen.
 
 ##### Neue Profile
 
@@ -66,6 +77,8 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
   * Extension[Use]: Kardinalität geändert von `1..1` zu `0..1` (Use ist jetzt optional)
 
 #### CodeSystems und ValueSets
+
+* Harmonisierung von "-cs"-Postfix in CodeSystem Canonicals
 
 ##### Angepasste CodeSystems
 

@@ -3,10 +3,10 @@
   "status": "active",
   "content": "complete",
   "name": "DiPagParticipantRoleCS",
-  "id": "dipag-participant-role-CS",
+  "id": "dipag-participant-role-cs",
   "title": "Digitale Patientenrechnung Teilnehmer Rolle",
   "version": "1.0.3",
-  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs",
   "concept": [
     {
       "code": "leistungserbringer",
@@ -30,5 +30,7 @@
       ]
     }
   ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
   "count": 2
 }

@@ -24,8 +24,12 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "Element"
+      "expression": "DocumentReference",
+      "type": "element"
+    },
+    {
+      "expression": "Parameters.parameter.value[x]",
+      "type": "element"
     }
   ],
   "type": "Extension",

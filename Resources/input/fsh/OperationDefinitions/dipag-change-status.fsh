@@ -11,7 +11,7 @@ Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * experimental = false
 * date = "2024-06-20"
 * kind = #operation
-* name = "Digitale Patientenrechnung ChangeStatus"
+* name = "DiPagChangeStatus"
 * code = #change-status
 * resource = #DocumentReference
 * system = false

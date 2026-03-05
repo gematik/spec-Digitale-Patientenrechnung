@@ -2,7 +2,7 @@
   "resourceType": "SearchParameter",
   "id": "dipag-makierung",
   "url": "https://gematik.de/fhir/dipag/SearchParameter/dipag-makierung",
-  "name": "Suchparameter DocumentReference dipag-makierung",
+  "name": "DiPagMakierung",
   "status": "active",
   "publisher": "gematik GmbH",
   "description": "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach einer manuellen Markierung ermöglicht.",
