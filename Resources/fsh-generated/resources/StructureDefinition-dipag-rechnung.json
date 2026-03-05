@@ -258,7 +258,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/replaces"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagInvoiceReplaces"
             ]
           }
         ],
@@ -267,6 +267,7 @@
       {
         "id": "Invoice.extension:Korrekturrechnung.value[x]",
         "path": "Invoice.extension.value[x]",
+        "min": 1,
         "type": [
           {
             "code": "canonical",
@@ -323,7 +324,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/StructureDefinition/event-basedOn"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagInvoiceBasedOn"
             ]
           }
         ],
@@ -332,21 +333,6 @@
       {
         "id": "Invoice.extension:Antragsreferenz.value[x]",
         "path": "Invoice.extension.value[x]",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:Antragsreferenz.value[x].reference",
-        "path": "Invoice.extension.value[x].reference",
-        "max": "0"
-      },
-      {
-        "id": "Invoice.extension:Antragsreferenz.value[x].type",
-        "path": "Invoice.extension.value[x].type",
-        "max": "0"
-      },
-      {
-        "id": "Invoice.extension:Antragsreferenz.value[x].identifier",
-        "path": "Invoice.extension.value[x].identifier",
         "short": "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag",
         "comment": "Die Antragsreferenz SOLL vorhanden sein.",
         "min": 1,
@@ -363,8 +349,8 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.extension:Antragsreferenz.value[x].identifier.type",
-        "path": "Invoice.extension.value[x].identifier.type",
+        "id": "Invoice.extension:Antragsreferenz.value[x].type",
+        "path": "Invoice.extension.value[x].type",
         "min": 1,
         "patternCodeableConcept": {
           "coding": [
@@ -377,23 +363,18 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.extension:Antragsreferenz.value[x].identifier.system",
-        "path": "Invoice.extension.value[x].identifier.system",
+        "id": "Invoice.extension:Antragsreferenz.value[x].system",
+        "path": "Invoice.extension.value[x].system",
         "short": "NamingSystem der Antragsreferenz",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Invoice.extension:Antragsreferenz.value[x].identifier.value",
-        "path": "Invoice.extension.value[x].identifier.value",
+        "id": "Invoice.extension:Antragsreferenz.value[x].value",
+        "path": "Invoice.extension.value[x].value",
         "short": "Antragsreferenz",
         "min": 1,
         "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:Antragsreferenz.value[x].display",
-        "path": "Invoice.extension.value[x].display",
-        "max": "0"
       },
       {
         "id": "Invoice.identifier",

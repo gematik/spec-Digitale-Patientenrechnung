@@ -86,20 +86,18 @@
       "valueString": "Behandlung von Karies und Parodontitis mit Implantation"
     },
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/event-basedOn",
-      "valueReference": {
-        "identifier": {
-          "type": {
-            "coding": [
-              {
-                "code": "antragsreferenz",
-                "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
-              }
-            ]
-          },
-          "system": "https://example.org/fhir/sid/kostenplan",
-          "value": "HKP-2024-001-123456"
-        }
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagInvoiceBasedOn",
+      "valueIdentifier": {
+        "type": {
+          "coding": [
+            {
+              "code": "antragsreferenz",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+            }
+          ]
+        },
+        "system": "https://example.org/fhir/sid/kostenplan",
+        "value": "HKP-2024-001-123456"
       }
     }
   ],
