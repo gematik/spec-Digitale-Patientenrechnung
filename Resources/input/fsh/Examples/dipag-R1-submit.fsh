@@ -26,7 +26,7 @@ InstanceOf: DocumentReference
     //data wird in Binary separiert
     * url = "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
 * content[+]
-  * format = #dipag
+  * format = $attachmentFormatDiPag#dipag
   * attachment
     * contentType = #application/fhir+xml
     * url = "[FD-endpunkt]/Binary/invoice"

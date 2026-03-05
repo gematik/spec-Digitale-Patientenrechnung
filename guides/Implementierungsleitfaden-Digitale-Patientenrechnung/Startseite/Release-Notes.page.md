@@ -9,6 +9,21 @@ Im Rahmen der "Digitale Patientenrechnung"-Veröffentlichungen wird das [Semanti
 Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](https://simplifier.net/DigitalePatientenrechnung/~packages) versioniert veröffentlicht. Die Versionsnummer des Packages entspricht der Versionsnummer des dazugehörigen Implementierungsleitfadens.
 
 ----
+### Version 1.0.4
+
+#### Profile und Extensions
+
+* Technische Fehlerhebung (z.B. fehlender Extension-Context) in div. Profilen und Extensions. Keine inhaltichen Änderungen.
+
+#### CodeSystems
+
+* Harmonisierung von "-cs"-Postfix in CodeSystem Canonicals
+
+#### Beispiele
+
+* Korrektur div. Beispiele
+
+----
 ### Version 1.0.3
 
 #### Profile und Extensions

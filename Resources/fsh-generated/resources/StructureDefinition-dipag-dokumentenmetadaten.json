@@ -282,9 +282,6 @@
         "sliceName": "DokumentenKlassifizierung",
         "min": 0,
         "max": "1",
-        "patternCoding": {
-          "system": "http://dvmd.de/fhir/CodeSystem/kdl"
-        },
         "mustSupport": true,
         "binding": {
           "strength": "required",

@@ -11,7 +11,7 @@ Description: "Permanente Löschung eines Dokumentes"
 * experimental = false
 * date = "2024-06-20"
 * kind = #operation
-* name = "Digitale PatientenrechnungErase"
+* name = "DiPagErase"
 * code = #erase
 * resource = #DocumentReference
 * system = false

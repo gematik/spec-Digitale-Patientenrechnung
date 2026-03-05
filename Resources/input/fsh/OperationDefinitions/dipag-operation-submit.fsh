@@ -11,7 +11,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * experimental = false
 * date = "2024-06-20"
 * kind = #operation
-* name = "Digitale PatientenrechnungSubmit"
+* name = "DiPagSubmit"
 * code = #invoice-submit
 * resource = #Patient
 * system = false
@@ -91,6 +91,8 @@ Id: dipag-rechnung-submit-modus-cs
 Title: "Digitale Patientenrechnung Rechnung Submit Modus CS"
 Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
 * insert Meta
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
 * #test "Test" "Digitale Patientenrechnung wird als Test eingereicht. Der Fachdienst validiert nur die Digitale Patientenrechnung und speichert diese nicht."
 * #normal "Normal" "Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
 

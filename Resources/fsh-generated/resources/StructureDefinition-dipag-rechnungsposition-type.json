@@ -25,8 +25,8 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "ChargeItem"
+      "expression": "ChargeItem",
+      "type": "element"
     }
   ],
   "type": "Extension",

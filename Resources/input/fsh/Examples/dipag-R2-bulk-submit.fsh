@@ -3,10 +3,12 @@ InstanceOf: Bundle
 Usage: #example
 * type = #batch
 * entry[+]
-  * insert BundleRequest(POST, "/Patient/BeispielPatient3-FD/$invoice-submit")
+  * fullUrl = "urn:uuid:f67a9208-35f3-44c3-b6f3-24ac56a8e0c8"
+  * insert BundleRequest(POST, "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit")
   * resource = BeispielParameterSubmitInput3-LE
 * entry[+]
-  * insert BundleRequest(POST, "/Patient/BeispielPatient3-FD/$invoice-submit")
+  * fullUrl = "urn:uuid:34b15f2c-c304-40ca-9e27-0da3cebb91be"
+  * insert BundleRequest(POST, "https://example.org/fhir/Patient/BeispielPatient3-FD/$invoice-submit")
   * resource = BeispielParameterSubmitInput3.1-LE
 
 Instance: BeispielParameterSubmitInput3-LE
@@ -32,7 +34,7 @@ InstanceOf: DocumentReference
     * contentType = #application/pdf
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 * content[+]
-  * format = #gematik-dipag
+  * format = $attachmentFormatDiPag#dipag
   * attachment
     * contentType = #application/fhir+xml
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
@@ -81,7 +83,7 @@ InstanceOf: DocumentReference
     * contentType = #application/pdf
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00"
 * content[+]
-  * format = #gematik-dipag
+  * format = $attachmentFormatDiPag#dipag
   * attachment
     * contentType = #application/fhir+xml
     * data = "DIESISTNUREINBEISPIELDIESISTKEINVALIDESXML00"
@@ -125,11 +127,13 @@ InstanceOf: Bundle
 Usage: #example
 * type = #batch-response
 * entry[+]
-  * fullUrl = "[FD-endpunkt]/Parameters/BeispielParameterSubmitOutput3-FD"
+  * fullUrl = "https://example.org/fhir/Parameters/BeispielParameterSubmitOutput3-FD"
   * resource = BeispielParameterSubmitOutput3-FD
+  * response.status = "200"
 * entry[+]
-  * fullUrl = "[FD-endpunkt]/Parameters/BeispielParameterSubmitOutput3.1-FD"
+  * fullUrl = "https://example.org/fhir/Parameters/BeispielParameterSubmitOutput3.1-FD"
   * resource = BeispielParameterSubmitOutput3.1-FD
+  * response.status = "200"
 
 Instance: BeispielParameterSubmitOutput3.1-FD
 InstanceOf: Parameters
@@ -181,7 +185,7 @@ InstanceOf: DocumentReference
     //data wird in Binary separiert
     * url = "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
 * content[+]
-  * format = #gematik-dipag
+  * format = $attachmentFormatDiPag#dipag
   * attachment
     * contentType = #application/fhir+xml
     * url = "[FD-endpunkt]/Binary/invoice"

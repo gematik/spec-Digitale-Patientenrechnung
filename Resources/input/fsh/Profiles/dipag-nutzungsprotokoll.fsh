@@ -48,6 +48,8 @@ CodeSystem: DiPagOperationenCS
 Id: dipag-operationen-cs
 Title: "Digitale Patientenrechnung Operationen"
 * insert Meta
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
 * #invoice-submit "Digitale Patientenrechnung_Submit"
 * #retrieve "Digitale Patientenrechnung_Retrieve"
 * #change-status "Digitale Patientenrechnung_ChangeStatus"
@@ -58,6 +60,8 @@ CodeSystem: DiPagPropRestInterationsCS
 Id: dipag-prop-rest-interactions-cs
 Title: "Digitale Patientenrechnung proprietäre RESTful Interaktionen"
 * insert Meta
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
 * #create "Erstellen"
 * #read "Lesen"
 * #update "Aktualisieren"
@@ -76,12 +80,12 @@ Id: dipag-audit-event-type-vs
 Title: "Digitale Patientenrechnung Audit Event Type"
 * insert Meta
 * http://dicom.nema.org/resources/ontology/DCM#110100 "Application Activity"
-* https://hl7.org/fhir/R4/codesystem-audit-event-type.html#rest "RESTful Operation"
+* $auditEventType#rest "RESTful Operation"
 
 
 ValueSet: DiPagAuditEventAgentTypeVS
 Id: dipag-audit-event-agent-type-vs
 Title: "Digitale Patientenrechnung Audit Event Agent Type"
 * insert Meta
-* http://terminology.hl7.org/CodeSystem/extra-security-role-type#humanuser "human user"
-* http://terminology.hl7.org/CodeSystem/extra-security-role-type#dataprocessor "data processor"
+* $extraSecurityRoleType#humanuser "human user"
+* $extraSecurityRoleType#dataprocessor "data processor"

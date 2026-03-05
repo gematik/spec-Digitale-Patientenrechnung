@@ -3,8 +3,15 @@
   "id": "PatientenBundle",
   "type": "searchset",
   "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://example.com/fhir/Patient?name=Mustermann"
+    }
+  ],
   "entry": [
     {
+      "fullUrl": "https://example.com/fhir/Patient/PatientVater",
       "resource": {
         "resourceType": "Patient",
         "id": "PatientVater",

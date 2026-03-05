@@ -4,7 +4,7 @@
   "type": "batch-response",
   "entry": [
     {
-      "fullUrl": "[FD-endpunkt]/Parameters/BeispielParameterSubmitOutput3-FD",
+      "fullUrl": "https://example.org/fhir/Parameters/BeispielParameterSubmitOutput3-FD",
       "resource": {
         "resourceType": "Parameters",
         "id": "BeispielParameterSubmitOutput3-FD",
@@ -46,7 +46,8 @@
                 },
                 {
                   "format": {
-                    "code": "dipag"
+                    "code": "dipag",
+                    "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
                   },
                   "attachment": {
                     "contentType": "application/fhir+xml",
@@ -108,10 +109,13 @@
             }
           }
         ]
+      },
+      "response": {
+        "status": "200"
       }
     },
     {
-      "fullUrl": "[FD-endpunkt]/Parameters/BeispielParameterSubmitOutput3.1-FD",
+      "fullUrl": "https://example.org/fhir/Parameters/BeispielParameterSubmitOutput3.1-FD",
       "resource": {
         "resourceType": "Parameters",
         "id": "BeispielParameterSubmitOutput3.1-FD",
@@ -158,6 +162,9 @@
             }
           }
         ]
+      },
+      "response": {
+        "status": "200"
       }
     }
   ]

@@ -24,8 +24,8 @@
   "abstract": false,
   "context": [
     {
-      "type": "element",
-      "expression": "Invoice"
+      "expression": "Invoice",
+      "type": "element"
     }
   ],
   "type": "Extension",

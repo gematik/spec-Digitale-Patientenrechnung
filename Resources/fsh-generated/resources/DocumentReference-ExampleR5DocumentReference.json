@@ -38,6 +38,25 @@
         "value": 16.2,
         "currency": "EUR"
       }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature",
+      "valueSignature": {
+        "type": [
+          {
+            "code": "1.2.840.10065.1.12.1.1",
+            "system": "urn:iso-astm:E1762-95:2013"
+          }
+        ],
+        "when": "2026-02-11T10:00:00+01:00",
+        "who": {
+          "identifier": {
+            "system": "https://gematik.de/fhir/sid/telematik-id",
+            "value": "987654321"
+          }
+        },
+        "data": "ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbXRwWkNJNkltVjRZVzUwSW4wLi4u"
+      }
     }
   ],
   "author": [
@@ -77,20 +96,9 @@
         "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
       },
       "attachment": {
-        "contentType": "application/json",
+        "contentType": "application/fhir+json",
         "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00",
         "url": "http://example.com/fhir/binary/789"
-      }
-    },
-    {
-      "format": {
-        "code": "rechnungsanhang",
-        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
-      },
-      "attachment": {
-        "contentType": "application/pdf",
-        "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00",
-        "url": "http://example.com/fhir/binary/101112"
       }
     }
   ],

@@ -1,11 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "status": "draft",
+  "status": "active",
   "content": "complete",
   "name": "DiPagRechnungspositionFaktorGruendeCS",
-  "id": "dipag-rechnungsposition-faktor-gruende-CS",
+  "id": "dipag-rechnungsposition-faktor-gruende-cs",
   "title": "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem",
-  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-CS",
+  "version": "1.0.3",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs",
   "concept": [
     {
       "code": "HV",
@@ -30,5 +31,20 @@
       "definition": "In Begründung AB angeben."
     }
   ],
+  "experimental": false,
+  "date": "2025-10-06",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
   "count": 5
 }

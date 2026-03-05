@@ -4,7 +4,7 @@
   "type": "batch-response",
   "entry": [
     {
-      "fullUrl": "[FD-endpunkt]/DocumentReference/BeispielDocumentReferenceRechnungRetrieve",
+      "fullUrl": "https://example.org/fhir/DocumentReference/BeispielDocumentReferenceRechnungRetrieve",
       "resource": {
         "resourceType": "DocumentReference",
         "id": "BeispielDocumentReferenceRechnungRetrieve",
@@ -34,7 +34,8 @@
         "content": [
           {
             "format": {
-              "code": "dipag"
+              "code": "dipag",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             },
             "attachment": {
               "contentType": "application/fhir+xml",
@@ -42,10 +43,13 @@
             }
           }
         ]
+      },
+      "response": {
+        "status": "200"
       }
     },
     {
-      "fullUrl": "[FD-endpunkt]/DocumentReference/BeispielDocumentReferenceRechnungRetrieve2",
+      "fullUrl": "https://example.org/fhir/DocumentReference/BeispielDocumentReferenceRechnungRetrieve2",
       "resource": {
         "resourceType": "DocumentReference",
         "id": "BeispielDocumentReferenceRechnungRetrieve2",
@@ -75,7 +79,8 @@
         "content": [
           {
             "format": {
-              "code": "dipag"
+              "code": "dipag",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             },
             "attachment": {
               "contentType": "application/fhir+xml",
@@ -83,6 +88,9 @@
             }
           }
         ]
+      },
+      "response": {
+        "status": "200"
       }
     }
   ]

@@ -48,5 +48,7 @@
       ]
     }
   ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
   "count": 6
 }

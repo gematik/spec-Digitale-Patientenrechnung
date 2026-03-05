@@ -2,7 +2,10 @@ Instance: PatientenBundle
 InstanceOf: Bundle
 * type = #searchset
 * total = 1
+* link[+].relation = "self"
+* link[=].url = "https://example.com/fhir/Patient?name=Mustermann"
 * entry[+]
+  * fullUrl = "https://example.com/fhir/Patient/PatientVater"
   * resource = PatientVater
   * search.mode = #match
 

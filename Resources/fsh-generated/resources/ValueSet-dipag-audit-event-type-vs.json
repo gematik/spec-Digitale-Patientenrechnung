@@ -31,7 +31,7 @@
         ]
       },
       {
-        "system": "https://hl7.org/fhir/R4/codesystem-audit-event-type.html",
+        "system": "http://terminology.hl7.org/CodeSystem/audit-event-type",
         "concept": [
           {
             "code": "rest",

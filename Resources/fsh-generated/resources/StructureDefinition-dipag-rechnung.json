@@ -692,7 +692,7 @@
           "coding": [
             {
               "code": "leistungserbringer",
-              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"
             }
           ]
         }
@@ -730,7 +730,7 @@
           "coding": [
             {
               "code": "forderungsinhaber",
-              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"
             }
           ]
         }
@@ -898,99 +898,6 @@
             "code": "BackboneElement"
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme",
-        "path": "Invoice.totalPriceComponent.extension",
-        "sliceName": "Teilsumme",
-        "short": "Teilsummen in EUR für die Rechnungspositionstyp",
-        "comment": "Für alle vorkommenden Rechnungspositionstypen SOLL eine Teilsumme vorhanden sein.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:Type",
-        "path": "Invoice.totalPriceComponent.extension.extension",
-        "sliceName": "Type",
-        "short": "Rechnungspositionstyp",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:Type.value[x]",
-        "path": "Invoice.totalPriceComponent.extension.extension.value[x]",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:Summe",
-        "path": "Invoice.totalPriceComponent.extension.extension",
-        "sliceName": "Summe",
-        "short": "Bruttosumme",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:Summe.value[x]",
-        "path": "Invoice.totalPriceComponent.extension.extension.value[x]",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:Summe.value[x].value",
-        "path": "Invoice.totalPriceComponent.extension.extension.value[x].value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:Summe.value[x].currency",
-        "path": "Invoice.totalPriceComponent.extension.extension.value[x].currency",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:UStProzent",
-        "path": "Invoice.totalPriceComponent.extension.extension",
-        "sliceName": "UStProzent",
-        "short": "Enthaltene Umsatzsteuer in Prozent",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:UStProzent.value[x]",
-        "path": "Invoice.totalPriceComponent.extension.extension.value[x]",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:UStBetrag",
-        "path": "Invoice.totalPriceComponent.extension.extension",
-        "sliceName": "UStBetrag",
-        "short": "Enthaltene Umsatzsteuer als Betrag",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:UStBetrag.value[x]",
-        "path": "Invoice.totalPriceComponent.extension.extension.value[x]",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:UStBetrag.value[x].value",
-        "path": "Invoice.totalPriceComponent.extension.extension.value[x].value",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:Teilsumme.extension:UStBetrag.value[x].currency",
-        "path": "Invoice.totalPriceComponent.extension.extension.value[x].currency",
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -1186,32 +1093,6 @@
             ]
           }
         ],
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x]",
-        "path": "Invoice.totalPriceComponent.extension.value[x]",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x].value",
-        "path": "Invoice.totalPriceComponent.extension.value[x].value",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x].unit",
-        "path": "Invoice.totalPriceComponent.extension.value[x].unit",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x].system",
-        "path": "Invoice.totalPriceComponent.extension.value[x].system",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x].code",
-        "path": "Invoice.totalPriceComponent.extension.value[x].code",
         "mustSupport": true
       },
       {
