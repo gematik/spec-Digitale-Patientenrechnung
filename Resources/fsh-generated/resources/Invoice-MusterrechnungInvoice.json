@@ -34,7 +34,7 @@
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung",
       "valueCoding": {
         "system": "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
-        "code": "INNA",
+        "code": "INNE",
         "display": "Innere Medizin"
       }
     },
