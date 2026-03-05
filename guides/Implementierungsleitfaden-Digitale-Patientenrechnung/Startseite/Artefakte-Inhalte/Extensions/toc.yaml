@@ -20,7 +20,7 @@
   filename: Invoice-Zahlungsziel.page.md
 - name: Invoice-Antragsreferenz
   filename: Invoice-BasedOn.page.md
--name: Invoice-Korrekturrechnung
+- name: Invoice-Korrekturrechnung
   filename: Invoice-Replaces.page.md
 - name: ChargeItem-Rechnungspositionstyp
   filename: ChargeItem-Rechnungspositionstyp.page.md
