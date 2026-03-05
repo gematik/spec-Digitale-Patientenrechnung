@@ -4,7 +4,7 @@
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagInvoiceReplaces",
   "version": "1.0.3",
   "name": "DiPagInvoiceReplaces",
-  "title": "Fügt die Extension replaces hinzu, die es in R4 bereits für Invoice gab (https://hl7.org/fhir/R4/extension-request-replaces.html) leider im aktuellen Extension Pack aber nicht mehr den Context Invoice hat.",
+  "title": "Digitale Patientenrechnung Replaces Extension",
   "status": "active",
   "experimental": false,
   "date": "2025-10-06",
@@ -19,6 +19,7 @@
       ]
     }
   ],
+  "description": "Fügt die Extension replaces hinzu, die es in R4 bereits für Invoice gab (https://hl7.org/fhir/R4/extension-request-replaces.html) leider im aktuellen Extension Pack aber nicht mehr den Context Invoice hat.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,
