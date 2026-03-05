@@ -228,7 +228,7 @@ Usage: #example
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
 * extension[Zusatz]
   * valueCoding = DiPagRechnungspositionZusatzCS#V "auf Verlangen erbrachte Leistung"
-* extension[WegegeldReiseentschädigung]
+* extension[WegegeldReiseentschaedigung]
   * extension[Wegegeld]
     * extension[Entfernung]
       * valueQuantity
@@ -238,7 +238,7 @@ Usage: #example
         * system = "http://unitsofmeasure.org"
     * extension[Nacht]
       * valueBoolean = false
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Einfachsatz]
     * valueMoney
       * value = 10.72
@@ -254,7 +254,7 @@ Usage: #example
   * valueDate = "2024-01-15"
 * status = #billable
 * code
-  * coding[GOÄ]
+  * coding[GOAE]
     * system = "http://fhir.de/CodeSystem/bäk/goä"
     * code = #1
     * display = "Beratung"
@@ -284,7 +284,7 @@ Usage: #example
   * valueCoding = DiPagRechnungspositionTypeCS#GOZ
 * extension[Zusatz]
   * valueCoding = DiPagRechnungspositionZusatzCS#V "auf Verlangen erbrachte Leistung"
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Einfachsatz]
     * valueMoney
       * value = 60.00
@@ -382,8 +382,8 @@ Reiseentschädigung für Hausbesuch über 25 km"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#WegegeldReiseentschaedigung
-* extension[WegegeldReiseentschädigung]
-  * extension[Reiseentschädigung]
+* extension[WegegeldReiseentschaedigung]
+  * extension[Reiseentschaedigung]
     * extension[Abwesenheit]
       * valueQuantity
         * value = 3
@@ -396,7 +396,7 @@ Usage: #example
         * unit = "km"
         * code = #km
         * system = "http://unitsofmeasure.org"
-    * extension[Übernachtung]
+    * extension[Uebernachtung]
       * valueMoney
         * value = 80.00
         * currency = #EUR

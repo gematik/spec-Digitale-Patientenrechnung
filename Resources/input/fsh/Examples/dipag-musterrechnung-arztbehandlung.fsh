@@ -101,7 +101,7 @@ Description: "Beratung, auch telefonisch"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Faktor]
     * extension[Value]
       * valueDecimal = 2.3
@@ -133,7 +133,7 @@ Description: "Symptombezogene Untersuchung"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Faktor]
     * extension[Value]
       * valueDecimal = 2.3
@@ -165,7 +165,7 @@ Description: "Arbeitsunfähigkeitsbescheinigung"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Faktor]
     * extension[Value]
       * valueDecimal = 2.3
@@ -197,7 +197,7 @@ Description: "Beratung, auch telefonisch"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Faktor]
     * extension[Value]
       * valueDecimal = 2.3
@@ -229,7 +229,7 @@ Description: "Symptombezogene Untersuchung"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Faktor]
     * extension[Value]
       * valueDecimal = 2.3
@@ -261,7 +261,7 @@ Description: "Blutsenkung"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Faktor]
     * extension[Value]
       * valueDecimal = 1.15
@@ -293,7 +293,7 @@ Description: "Laktatdehydrogenase (LDH)"
 Usage: #example
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
-* extension[GebührenordnungAngaben]
+* extension[GebuehrenordnungAngaben]
   * extension[Faktor]
     * extension[Value]
       * valueDecimal = 1.15
