@@ -443,7 +443,7 @@ Description: "Bundle mit allen Ressourcen der Musterrechnung Arztbehandlung"
 Usage: #example
 * type = #collection
 * timestamp = "2018-10-24T12:00:00+01:00"
-* entry[0]
+* entry[0] //TODO auf uuids umstellen
   * fullUrl = "Invoice/MusterrechnungInvoice"
   * resource = MusterrechnungInvoice
 * entry[+]

@@ -649,7 +649,7 @@ Bundle mit allen Ressourcen der digitalen Patientenrechnung"
 Usage: #example
 * type = #collection
 * timestamp = "2024-03-15T14:30:00+01:00"
-* entry[0]
+* entry[0] //TODO auf uuids umstellen
   * fullUrl = "Invoice/InvoiceExample"
   * resource = InvoiceExample
 * entry[+]
