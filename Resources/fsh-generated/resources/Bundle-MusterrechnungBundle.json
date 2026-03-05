@@ -10,7 +10,7 @@
   "timestamp": "2018-10-24T12:00:00+01:00",
   "entry": [
     {
-      "fullUrl": "Invoice/MusterrechnungInvoice",
+      "fullUrl": "https://[FD-endpunkt]/Invoice/MusterrechnungInvoice",
       "resource": {
         "resourceType": "Invoice",
         "id": "MusterrechnungInvoice",
@@ -255,7 +255,7 @@
       }
     },
     {
-      "fullUrl": "Patient/MusterrechnungPatient",
+      "fullUrl": "https://[FD-endpunkt]/Patient/MusterrechnungPatient",
       "resource": {
         "resourceType": "Patient",
         "id": "MusterrechnungPatient",
@@ -319,7 +319,7 @@
       }
     },
     {
-      "fullUrl": "Practitioner/MusterrechnungArzt",
+      "fullUrl": "https://[FD-endpunkt]/Practitioner/MusterrechnungArzt",
       "resource": {
         "resourceType": "Practitioner",
         "id": "MusterrechnungArzt",
@@ -392,7 +392,7 @@
       }
     },
     {
-      "fullUrl": "Organization/MusterrechnungPraxis",
+      "fullUrl": "https://[FD-endpunkt]/Organization/MusterrechnungPraxis",
       "resource": {
         "resourceType": "Organization",
         "id": "MusterrechnungPraxis",
@@ -430,7 +430,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/MusterrechnungPos1",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos1",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "MusterrechnungPos1",
@@ -499,7 +499,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/MusterrechnungPos2",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos2",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "MusterrechnungPos2",
@@ -568,7 +568,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/MusterrechnungPos3",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos3",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "MusterrechnungPos3",
@@ -637,7 +637,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/MusterrechnungPos4",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos4",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "MusterrechnungPos4",
@@ -706,7 +706,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/MusterrechnungPos5",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos5",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "MusterrechnungPos5",
@@ -775,7 +775,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/MusterrechnungPos6",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos6",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "MusterrechnungPos6",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/MusterrechnungPos7",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos7",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "MusterrechnungPos7",

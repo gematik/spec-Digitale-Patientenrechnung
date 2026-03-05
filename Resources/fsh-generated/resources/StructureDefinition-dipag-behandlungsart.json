@@ -26,6 +26,10 @@
     {
       "expression": "Invoice",
       "type": "element"
+    },
+    {
+      "expression": "DocumentReference",
+      "type": "element"
     }
   ],
   "type": "Extension",

@@ -10,7 +10,7 @@
   "timestamp": "2024-03-15T14:30:00+01:00",
   "entry": [
     {
-      "fullUrl": "Invoice/InvoiceExample",
+      "fullUrl": "https://[FD-endpunkt]/Invoice/InvoiceExample",
       "resource": {
         "resourceType": "Invoice",
         "id": "InvoiceExample",
@@ -368,7 +368,7 @@
       }
     },
     {
-      "fullUrl": "Patient/PatientExample",
+      "fullUrl": "https://[FD-endpunkt]/Patient/PatientExample",
       "resource": {
         "resourceType": "Patient",
         "id": "PatientExample",
@@ -465,7 +465,7 @@
       }
     },
     {
-      "fullUrl": "Practitioner/PractitionerMain",
+      "fullUrl": "https://[FD-endpunkt]/Practitioner/PractitionerMain",
       "resource": {
         "resourceType": "Practitioner",
         "id": "PractitionerMain",
@@ -558,7 +558,7 @@
       }
     },
     {
-      "fullUrl": "Practitioner/PractitionerSecondary",
+      "fullUrl": "https://[FD-endpunkt]/Practitioner/PractitionerSecondary",
       "resource": {
         "resourceType": "Practitioner",
         "id": "PractitionerSecondary",
@@ -651,7 +651,7 @@
       }
     },
     {
-      "fullUrl": "Organization/OrganizationIssuer",
+      "fullUrl": "https://[FD-endpunkt]/Organization/OrganizationIssuer",
       "resource": {
         "resourceType": "Organization",
         "id": "OrganizationIssuer",
@@ -755,7 +755,7 @@
       }
     },
     {
-      "fullUrl": "Organization/OrganizationSecondary",
+      "fullUrl": "https://[FD-endpunkt]/Organization/OrganizationSecondary",
       "resource": {
         "resourceType": "Organization",
         "id": "OrganizationSecondary",
@@ -836,7 +836,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/ChargeItemGoea1",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/ChargeItemGoea1",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "ChargeItemGoea1",
@@ -960,7 +960,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/ChargeItemGoz",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/ChargeItemGoz",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "ChargeItemGoz",
@@ -1052,7 +1052,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/ChargeItemLab",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/ChargeItemLab",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "ChargeItemLab",
@@ -1101,7 +1101,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/ChargeItemMaterial",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/ChargeItemMaterial",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "ChargeItemMaterial",
@@ -1160,7 +1160,7 @@
       }
     },
     {
-      "fullUrl": "ChargeItem/ChargeItemReiseentschaedigung",
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/ChargeItemReiseentschaedigung",
       "resource": {
         "resourceType": "ChargeItem",
         "id": "ChargeItemReiseentschaedigung",
@@ -1246,7 +1246,7 @@
       }
     },
     {
-      "fullUrl": "Condition/DiagnoseExample",
+      "fullUrl": "https://[FD-endpunkt]/Condition/DiagnoseExample",
       "resource": {
         "resourceType": "Condition",
         "id": "DiagnoseExample",
@@ -1272,7 +1272,7 @@
       }
     },
     {
-      "fullUrl": "Condition/DiagnoseExample2",
+      "fullUrl": "https://[FD-endpunkt]/Condition/DiagnoseExample2",
       "resource": {
         "resourceType": "Condition",
         "id": "DiagnoseExample2",
@@ -1298,7 +1298,7 @@
       }
     },
     {
-      "fullUrl": "Procedure/ProzedurExample",
+      "fullUrl": "https://[FD-endpunkt]/Procedure/ProzedurExample",
       "resource": {
         "resourceType": "Procedure",
         "id": "ProzedurExample",

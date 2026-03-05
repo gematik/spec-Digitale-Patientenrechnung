@@ -166,7 +166,7 @@
               "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             },
             "attachment": {
-              "contentType": "application/pdf",
+              "contentType": "application/fhir+json",
               "url": "[FD-endpunkt]/Binary/id-des-angereicherten-pdfs2"
             }
           }
