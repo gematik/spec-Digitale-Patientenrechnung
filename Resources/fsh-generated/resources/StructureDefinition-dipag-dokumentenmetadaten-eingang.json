@@ -42,45 +42,10 @@
             "key": "RechnungOderAnhang",
             "severity": "error",
             "human": "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten.",
-            "expression": "content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'dipag').exists() and  content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())",
+            "expression": "content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())",
             "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
           }
         ]
-      },
-      {
-        "id": "DocumentReference.meta.tag",
-        "path": "DocumentReference.meta.tag",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.extension",
-        "path": "DocumentReference.extension",
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.extension:docRef-signature",
-        "path": "DocumentReference.extension",
-        "sliceName": "docRef-signature",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
-            ]
-          }
-        ],
-        "mustSupport": true
       },
       {
         "id": "DocumentReference.identifier",
