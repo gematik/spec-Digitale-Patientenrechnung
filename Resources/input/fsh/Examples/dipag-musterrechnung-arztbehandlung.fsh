@@ -366,7 +366,7 @@ Usage: #example
 * extension[Fachrichtung]
   * valueCoding
     * system = "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen"
-    * code = #INNA
+    * code = #INNE
     * display = "Innere Medizin"
 * extension[AbrechnungsDiagnoseProzedurFreitext]
   * valueString = "Grippaler Infekt; Hepatopathie"
