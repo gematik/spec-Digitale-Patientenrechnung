@@ -110,12 +110,7 @@
             },
             "attachment": {
               "contentType": "application/fhir+json",
-<<<<<<< HEAD
               "url": "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
-=======
-              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00",
-              "url": "http://example.com/fhir/binary/789"
->>>>>>> origin/master
             }
           }
         ],

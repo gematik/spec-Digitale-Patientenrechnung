@@ -12,7 +12,7 @@
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
       "valueCoding": {
         "code": "GOÄ",
-        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
       }
     },
     {

@@ -122,7 +122,7 @@
               "coding": [
                 {
                   "code": "leistungserbringer",
-                  "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
+                  "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"
                 }
               ]
             },
@@ -135,7 +135,7 @@
               "coding": [
                 {
                   "code": "forderungsinhaber",
-                  "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-CS"
+                  "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"
                 }
               ]
             },
@@ -851,14 +851,14 @@
             "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
             "valueCoding": {
               "code": "GOÄ",
-              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
             }
           },
           {
             "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
             "valueCoding": {
               "code": "V",
-              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-CS",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs",
               "display": "auf Verlangen erbrachte Leistung"
             }
           },
@@ -910,7 +910,7 @@
                     "url": "FaktorGrund",
                     "valueCoding": {
                       "code": "AB",
-                      "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-CS",
+                      "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs",
                       "display": "Allgemeine Bestimmung"
                     }
                   }
@@ -975,14 +975,14 @@
             "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
             "valueCoding": {
               "code": "GOZ",
-              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
             }
           },
           {
             "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
             "valueCoding": {
               "code": "V",
-              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-CS",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs",
               "display": "auf Verlangen erbrachte Leistung"
             }
           },
@@ -1067,7 +1067,7 @@
             "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
             "valueCoding": {
               "code": "Fremdlaborleistung",
-              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
             }
           },
           {
@@ -1116,7 +1116,7 @@
             "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
             "valueCoding": {
               "code": "SachkostenAuslagen",
-              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
             }
           },
           {
@@ -1175,14 +1175,14 @@
             "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
             "valueCoding": {
               "code": "WegegeldReiseentschaedigung",
-              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS"
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
             }
           },
           {
             "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-wegegeld-reiseentschaedigung",
             "extension": [
               {
-                "url": "Reiseentschädigung",
+                "url": "Reiseentschaedigung",
                 "extension": [
                   {
                     "url": "Abwesenheit",
@@ -1203,7 +1203,7 @@
                     }
                   },
                   {
-                    "url": "Übernachtung",
+                    "url": "Uebernachtung",
                     "valueMoney": {
                       "currency": "EUR",
                       "value": 80

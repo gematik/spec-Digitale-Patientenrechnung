@@ -46,40 +46,6 @@
   },
   "description": "Rechnung Reiseimpfung vom 10.01.2024",
   "subject": {
-<<<<<<< HEAD
     "display": "Max Musterkind"
   }
-=======
-    "identifier": {
-      "system": "http://fhir.de/sid/gkv/kvid-10",
-      "value": "A000000000"
-    }
-  },
-  "content": [
-    {
-      "attachment": {
-        "contentType": "application/pdf",
-        "url": "[FD-endpunkt]/Binary/pdf-mit-token-barcode"
-      }
-    },
-    {
-      "format": {
-        "code": "dipag",
-        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
-      },
-      "attachment": {
-        "contentType": "application/fhir+xml",
-        "url": "[FD-endpunkt]/Binary/invoice"
-      }
-    }
-  ],
-  "relatesTo": [
-    {
-      "code": "transforms",
-      "target": {
-        "reference": "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
-      }
-    }
-  ]
->>>>>>> origin/master
 }
