@@ -9,9 +9,9 @@ Id: dipag-rechnung
   DiPagAbrechnungsDiagnoseProzedurFreitext named AbrechnungsDiagnoseProzedurFreitext ..1 MS and
   DiPagBehandlungsart named Behandlungsart 1..1 MS and
   DiPagFachrichtung named Fachrichtung 1..1 MS and
-  $extension-replaces named Korrekturrechnung ..1 MS and
+  DiPagInvoiceReplaces named Korrekturrechnung ..1 MS and
   DiPagTokenStornierteRechnung named Korrekturtoken ..1 MS and
-  $extension-basedOn named Antragsreferenz ..1 MS
+  DiPagInvoiceBasedOn named Antragsreferenz ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * ^short = "Diagnose"
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN Diagnosen und Prozeduren vorhanden sein.
@@ -63,11 +63,7 @@ Id: dipag-rechnung
     * system 1.. MS
     * value 1.. MS
 * extension[Antragsreferenz]
-  * valueReference MS
-  * valueReference.reference 0..0
-  * valueReference.display 0..0
-  * valueReference.type 0..0
-  * valueReference.identifier 1..1 MS
+  * valueIdentifier 1..1 MS
     * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#antragsreferenz
     * ^short = "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag"
     * ^comment = "Die Antragsreferenz SOLL vorhanden sein."

@@ -542,11 +542,10 @@ Usage: #example
 * extension[AbrechnungsDiagnoseProzedurFreitext]
   * valueString = "Behandlung von Karies und Parodontitis mit Implantation"
 * extension[Antragsreferenz]
-  * valueReference
-    * identifier
-      * type = DiPagRechnungIdentifierTypeCS#antragsreferenz
-      * system = "https://example.org/fhir/sid/kostenplan"
-      * value = "HKP-2024-001-123456"
+  * valueIdentifier
+    * type = DiPagRechnungIdentifierTypeCS#antragsreferenz
+    * system = "https://example.org/fhir/sid/kostenplan"
+    * value = "HKP-2024-001-123456"
 * totalNet
   * value = 1415.70
   * currency = #EUR
