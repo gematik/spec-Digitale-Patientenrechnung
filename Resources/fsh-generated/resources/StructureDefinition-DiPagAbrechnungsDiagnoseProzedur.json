@@ -42,13 +42,13 @@
       {
         "id": "Extension.extension",
         "path": "Extension.extension",
-        "min": 2
+        "min": 1
       },
       {
         "id": "Extension.extension:Use",
         "path": "Extension.extension",
         "sliceName": "Use",
-        "min": 1,
+        "min": 0,
         "max": "1"
       },
       {

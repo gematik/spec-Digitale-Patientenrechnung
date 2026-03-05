@@ -126,3 +126,10 @@ Usage: #definition
       * name = "date"
       * definition = "hhttp://hl7.org/fhir/SearchParameter/AuditEvent-date"
       * type = #date
+  * resource[+]
+    * type = #Binary
+    * insert Expectation (#SHALL)
+    * interaction[+]
+      * insert Expectation (#SHALL)
+      * code = #read
+    * supportedProfile = Canonical(DiPagRechnungsdokument)

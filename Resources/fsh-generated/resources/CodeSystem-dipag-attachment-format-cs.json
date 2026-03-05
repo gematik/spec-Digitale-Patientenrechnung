@@ -10,8 +10,8 @@
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs",
   "concept": [
     {
-      "code": "dipag",
-      "display": "Digitale Patientenrechnungs Dokument"
+      "code": "originaleRechnung",
+      "display": "Das originale PDF der Rechnung"
     },
     {
       "code": "angereichertesPDF",
@@ -39,7 +39,5 @@
       ]
     }
   ],
-  "caseSensitive": true,
-  "hierarchyMeaning": "is-a",
   "count": 4
 }

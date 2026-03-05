@@ -1,0 +1,24 @@
+{
+  "resourceType": "Procedure",
+  "id": "ProzedurExample",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur"
+    ]
+  },
+  "status": "completed",
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bfarm/ops",
+        "version": "2024",
+        "code": "5-232.00",
+        "display": "Implantation alloplastisches Material, Zahn"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/PatientExample"
+  },
+  "performedDateTime": "2024-02-20"
+}

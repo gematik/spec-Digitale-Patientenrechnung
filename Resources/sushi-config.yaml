@@ -4,4 +4,3 @@ FSHOnly: true
 applyExtensionMetadataToRoot: false
 dependencies:
   de.basisprofil.r4: 1.5.4
-  hl7.fhir.extensions.r5: 4.0.1

@@ -14,6 +14,8 @@
   filename: Datenobjekt_rechnungsdiagnose
 - name: DiPagRechnungsprozedur (Procedure)
   filename: Datenobjekt_rechnungsprozedur
+- name: DiPagRechnungsbundle (Bundle)
+  filename: Datenobjekt_rechnungsbundle
 - name: Terminologien
   filename: Terminologien
 - name: Extensions

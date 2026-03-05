@@ -20,7 +20,7 @@ Description: "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistu
   * ^short = "Telematik-ID (VZD-Eintrag)"
   * ^comment = "Die Telematik-ID (VZD-Eintrag) SOLL vorhanden sein."
 * identifier[USt-ID-Nr]
-  * ^patternIdentifier.type.text = "UmsatzsteuerId"
+  * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#ustid
   * type 1.. MS
   * system ^comment = "Es gibt kein FHIR-NamingSystem für die USt.-ID von offizieller Seite. Aus dem Grund ist System nicht mit MS gekennzeichnet und SOLL nicht befüllt sein."
   * value 1.. MS
@@ -53,17 +53,16 @@ Description: "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistu
   * prefix.extension[prefix-qualifier] MS
     * ^comment = "Die Extension zur Qualifizierung des Titeks KANN vorhanden sein."
 * telecom MS
-* telecom ^slicing.discriminator.type = #pattern
-* telecom ^slicing.discriminator.path = "$this"
+* telecom ^slicing.discriminator.type = #value
+* telecom ^slicing.discriminator.path = "system"
 * telecom ^slicing.rules = #open
 * telecom contains Telefon ..* MS
 * telecom[Telefon]
   * ^short = "Telefon"
   * ^comment = "Die Angabe einer Telefonnummer KANN vorhanden sein.
   Sie KANN vorkommen, wenn eine Person die Rolle eines 'Abweichender Forderungsinhaber' inne hat."
-  * ^patternContactPoint.system = #phone
   * system MS
-  * system = #phone
+  * system = #phone (exactly)
   * value MS
     * ^short = "Telefonnummer"
 * address MS
@@ -120,14 +119,8 @@ Description: "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistu
   * country MS
     * ^short = "Länderkennzeichen"
     * ^comment = "Das Länderkennzeichen KANN vorhanden sein."
-* qualification.code.coding
-  * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "$this"
-  * ^slicing.rules = #open
-* qualification.code.coding contains
-    Fachrichtung ..* MS
-* qualification.code.coding[Fachrichtung] from $ihe-practiceSettingCode (required)
+* qualification.code from $ihe-practiceSettingCode (required)
   * ^short = "Fachrichtung"
   * ^comment = "Die Fachrichtung SOLL vorhanden sein. Das Element ist wiederholbar."
-  * system 1.. MS
-  * code 1.. MS
+  * coding.system 1.. MS
+  * coding.code 1.. MS

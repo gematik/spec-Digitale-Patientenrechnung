@@ -11,19 +11,144 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 ----
 ### Version 1.0.4
 
-#### Profile und Extensions
 
-* Technische Fehlerhebung (z.B. fehlender Extension-Context) in div. Profilen und Extensions. Keine inhaltichen Änderungen.
-
-#### CodeSystems
-
-* Harmonisierung von "-cs"-Postfix in CodeSystem Canonicals
 
 #### Beispiele
 
 * Korrektur div. Beispiele
 
 ----
+### Version 1.0.4
+
+#### Profile und Extensions
+
+* Technische Fehlerhebung (z.B. fehlender Extension-Context) in div. Profilen und Extensions. Keine inhaltichen Änderungen.
+
+##### Neue Profile
+
+* **DiPagDokumentenmetadatenEingang**: Neues Profil für DocumentReference beim Einreichen von Rechnungen durch Leistungserbringer
+  * Definiert Attachment-Formate: `originaleRechnung`, `strukturierterRechnungsinhalt`, `anhang`
+  * Unterstützt base64-kodierte Daten in `attachment.data` (FD lagert in Binary aus)
+  * Extension: `DiPagDocRefSignature` für digitale Signaturen
+  * Invariante `RechnungOderAnhang`: Dokument ist entweder Anhang ODER Rechnung inkl. strukturierten Inhalten
+  * Invariante `SignaturVerpflichtendRechnung`: Signatur verpflichtend für Rechnungsdokumente
+
+* **DiPagDokumentenmetadatenIntern**: Neues Profil für DocumentReference im Fachdienst (interne Verwaltung)
+  * Zusätzliche Extensions: `rechnungsdatum`, `zahlungszieldatum`, `gesamtbetrag`, `fachrichtung`, `leistungsart`, `behandlungsart`
+  * Meta-Extension: `DiPagDocumentReferenceMarkierung` für Markierungen (gelesen/ungelesen)
+  * Meta-Tag: `dipag-rechnungsstatus` aus ValueSet `DiPagRechnungsstatusVS` (offen/erledigt/papierkorb)
+  * Author-Referenz mit Telematik-ID des einreichenden Akteurs
+  * Attachment-Formate: `originaleRechnung`, `angereicherteRechnung`, `strukturierterRechnungsinhalt`, `anhang`
+  * Attachments referenzieren Binary-Ressourcen via `url` statt inline `data`
+  * Context.related verknüpft Patient und Anhänge
+
+* **DiPagRechnungsBundle**: Neues Profil für collection-Bundle zur Zusammenfassung strukturierter Rechnungsinhalte
+  * Bundle-Typ: `collection`
+  * Wird base64-kodiert in DocumentReference referenziert
+
+##### Überarbeitete Profile
+
+* **DiPagPerson**:
+  * Identifier `USt-ID-Nr`: Pattern geändert von `type.text = "UmsatzsteuerId"` zu `type = DiPagRechnungIdentifierTypeCS#ustid`
+  * Telecom-Slicing: Discriminator geändert von `type = #pattern, path = "$this"` zu `type = #value, path = "system"`
+  * Telecom[Telefon].system: Änderung von `= #phone` zu `= #phone (exactly)`
+
+* **DiPagInstitution**:
+  * Identifier `USt-ID-Nr`: Pattern geändert von `type.text = "UmsatzsteuerId"` zu `type = DiPagRechnungIdentifierTypeCS#ustid`
+  * Type-Element: Entfernung des Slicings für Fachrichtung - direkte ValueSet-Bindung an `$ihe-practiceSettingCode`
+  * Telecom-Slicing: Discriminator geändert von `type = #pattern, path = "$this"` zu `type = #value, path = "system"`
+  * Telecom[Telefon].system: Änderung von `= #phone` zu `= #phone (exactly)`
+
+* **DiPagRechnung**:
+  * Extension `DiPagAbrechnungsDiagnoseProzedur.Use`: Kommentar präzisiert - "SOLL vorhanden sein, wenn es sich um eine HD handelt"
+  * Identifier-Slicing: Entfernung des Slices `Antragsnummer` (war 0..1)
+  * LineItem.priceComponent-Slicing: Discriminator-Path geändert von `"$this"` zu `"type"`
+
+* **DiPagRechnungsposition**:
+  * ProductOrService.coding[PZN]: Neuer `^patternCoding.system = "http://fhir.de/CodeSystem/ifa/pzn"`
+
+##### Extension-Korrekturen
+
+* **DiPagDocumentReferenceMarkierung**:
+  * Bug-Fix: Korrektur von `extension[details]` zu `extension[artDerArchivierung]` in ValueX-Definition
+  * Bug-Fix: Korrektur von `extension[markierung]` zu `extension[artDerArchivierung]` in ValueSet-Bindung
+
+* **DiPagInvoiceAbrechnungsDiagnoseProzedur**:
+  * Extension[Use]: Kardinalität geändert von `1..1` zu `0..1` (Use ist jetzt optional)
+
+#### CodeSystems und ValueSets
+
+* Harmonisierung von "-cs"-Postfix in CodeSystem Canonicals
+
+##### Angepasste CodeSystems
+
+* **DiPagAttachmentFormatCS** (`dipag-attachment-format-cs`):
+  * `#originaleRechnung` - "Das originale PDF der Rechnung"
+  * `#angereichertesPDF` - "Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"
+  * `#rechnungsinhalt` - "Strukturierter Rechnungsinhalt"
+  * `#rechnungsanhang` - "Rechnungsanhang"
+
+##### Erweiterte CodeSystems
+
+* **DiPagRechnungIdentifierTypeCS**: Neuer Code `#ustid` für Umsatzsteuer-ID Nummer (USt-ID-Nr)
+  * Ausführlicher Hinweis: Kein System-Teil beim Identifier erforderlich, da kein offizielles FHIR-NamingSystem für USt-ID existiert
+  * Hinweis auf mögliche zukünftige Anpassungen
+
+#### OperationDefinitions
+
+* **DiPagOperationSubmit** (`dipag-operation-submit`):
+  * Parameter `rechnung`: Hinzufügen von `targetProfile = Canonical(DiPagDokumentenmetadatenEingang)`
+  * Parameter `anhang`: Hinzufügen von `targetProfile = Canonical(DiPagDokumentenmetadatenEingang)`
+
+* **DiPagOperationRetrieve** (`dipag-operation-retrieve`):
+  * Typo-Korrektur: "Dokumentoken" → "Dokumenttoken"
+  * **Neuer Input-Parameter `pdf`** (boolean, min=0, max=1):
+    * Angabe, ob angereicherte Rechnung/Anhang als PDF im Output enthalten sein soll
+    * Default: `false`
+  * Parameter `strukturierterRechnungsinhalt`: Dokumentation präzisiert - Binary-Ressource im Output statt content-Element
+  * Parameter `originaleRechnung`: Dokumentation präzisiert - Binary-Ressource im Output statt content-Element
+  * **Neue Output-Parameter**:
+    * `dokument`: Hinzufügen von `targetProfile = Canonical(DiPagDokumentenmetadatenIntern)`
+    * `dokument.pdf` (Binary, min=1, max=1): Angereichertes PDF mit Barcode ODER Anhang
+    * `dokument.strukturierteRechnungsinhalte` (Binary, min=0, max=1): Strukturierte Rechnungsinhalte (abhängig von Input-Parameter)
+    * `dokument.originaleRechnung` (Binary, min=0, max=1): Originale Rechnung inkl. Signatur (abhängig von Input-Parameter)
+
+#### CapabilityStatement
+
+* **CapabilityStatementFD**:
+  * Neue Ressource `Binary` hinzugefügt
+  * Unterstützte Interaktion: `read` (SHALL)
+  * Supported Profile: `Canonical(DiPagRechnungsdokument)`
+
+#### Technische Infrastruktur
+
+* **RuleSets.fsh**:
+  * Neues RuleSet `base64`: Enthält base64-kodierten Dummy-PDF für Verwendung in Beispielen
+
+#### Beispiele
+
+* **Neue Beispiele**:
+  * **BeispielBinarySubmitOutput3-FD**: Binary-Ressource mit base64-kodiertem PDF-Dokument
+  * **dipag-full-invoice-example.fsh**: Umfassendes vollständiges Rechnungsbeispiel (693 neue Zeilen)
+  * **dipag-musterrechnung-arztbehandlung.fsh**: Musterrechnung für Arztbehandlung (478 neue Zeilen)
+
+* **Überarbeitete Beispiele**:
+  * **dipag-R1-submit** (90 geänderte Zeilen): Aktualisierung auf neue Profile und Attachment-Formate
+  * **dipag-R2-bulk-submit** (142 geänderte Zeilen): Umfangreiche Überarbeitung der Bulk-Submit-Struktur
+  * **dipag-R3-bulk-retrieve** (22 geänderte Zeilen): Anpassung an neue Retrieve-Operation
+  * **dipag-R3R6-retrieve** (53 geänderte Zeilen): Erweiterung um neue Output-Parameter
+  * **dipag-R5-retrieve** (41 geänderte Zeilen): Aktualisierung der Retrieve-Response
+
+* **Allgemeine Änderungen an Beispielen**:
+  * Wechsel zu spezifischen Attachment-Format-Codes: `originaleRechnung`, `angereichertesPDF`, `rechnungsinhalt` (mit vollständigen System-URLs)
+  * Änderung des Identifier-Systems von `https://gematik.de/fhir/sid/dipag-token` zu `http://example.org/fhir/sid/rechnungsids`
+  * ContentType-Anpassungen von `application/fhir+xml` zu `application/fhir+json` für FHIR-Inhalte
+  * Vereinfachte Subject-Darstellung: Display-Namen statt strukturierter KVID-10 Identifier
+  * URL-Platzhalter detaillierter gestaltet (z.B. `[FD-endpunkt]/Binary/id-der-originalen-rechnung`)
+  * Profile-Wechsel von generischen DocumentReference zu `dipag-dokumentenmetadaten-eingang` bzw. `dipag-dokumentenmetadaten-intern`
+  * Integration der neuen Extensions (Rechnungsdatum, Zahlungszieldatum, Gesamtbetrag, etc.) in Retrieve-Beispiele
+  * Nutzung des `base64` RuleSets für konsistente Dummy-PDFs
+
 ### Version 1.0.3
 
 #### Profile und Extensions

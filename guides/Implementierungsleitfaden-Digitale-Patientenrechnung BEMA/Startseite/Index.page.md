@@ -39,7 +39,7 @@ Im Folgenden sind die Anpassungen an **Profilen**, **Extensions**, **CodeSysteme
 - Die folgenden Beschreibungen wurden um Vorgaben ergänzt, wie im BEMA-Kontext mit dem Element umzugehen ist
     - `extension[Zusatz]`
         - [..]Bei einer BEMA Rechnungsposition ist der Zusatz nicht gefordert.[..]
-    - `extension[WegegeldReiseentschädigung]`
+    - `extension[WegegeldReiseentschaedigung]`
         - [..]Im Falle einer BEMA Rechnungsposition ist das Element nicht gefordert.
     - `extension[Einfachsatz]`
         - [..]Im Falle einer BEMA Rechnungsposition ist er nicht gefordert.

@@ -1,0 +1,83 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "ChargeItemReiseentschaedigung",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+    ]
+  },
+  "status": "billable",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+      "valueCoding": {
+        "code": "WegegeldReiseentschaedigung",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-wegegeld-reiseentschaedigung",
+      "extension": [
+        {
+          "url": "Reiseentschaedigung",
+          "extension": [
+            {
+              "url": "Abwesenheit",
+              "valueQuantity": {
+                "unit": "h",
+                "system": "http://unitsofmeasure.org",
+                "code": "h",
+                "value": 3
+              }
+            },
+            {
+              "url": "Entfernung",
+              "valueQuantity": {
+                "unit": "km",
+                "system": "http://unitsofmeasure.org",
+                "code": "km",
+                "value": 50
+              }
+            },
+            {
+              "url": "Uebernachtung",
+              "valueMoney": {
+                "currency": "EUR",
+                "value": 80
+              }
+            },
+            {
+              "url": "Verkehrsmittel",
+              "valueCoding": {
+                "system": "http://snomed.info/sct",
+                "code": "46160005",
+                "display": "Motor vehicle"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+      "valueDate": "2024-03-05"
+    }
+  ],
+  "code": {
+    "text": "Reiseentschädigung für Hausbesuch"
+  },
+  "subject": {
+    "reference": "Patient/PatientExample"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/PractitionerMain"
+      }
+    }
+  ],
+  "occurrencePeriod": {
+    "start": "2024-03-05",
+    "end": "2024-03-05"
+  }
+}

@@ -697,6 +697,9 @@
             ]
           }
         ],
+        "patternCoding": {
+          "system": "http://fhir.de/CodeSystem/ifa/pzn"
+        },
         "mustSupport": true
       },
       {

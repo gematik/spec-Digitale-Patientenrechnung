@@ -97,7 +97,12 @@
         "max": "1",
         "patternIdentifier": {
           "type": {
-            "text": "UmsatzsteuerId"
+            "coding": [
+              {
+                "code": "ustid",
+                "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+              }
+            ]
           }
         },
         "mustSupport": true
@@ -200,8 +205,8 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
-              "path": "$this"
+              "type": "value",
+              "path": "system"
             }
           ],
           "rules": "open"
@@ -216,15 +221,13 @@
         "comment": "Die Angabe einer Telefonnummer KANN vorhanden sein.\n  Sie KANN vorkommen, wenn eine Person die Rolle eines 'Abweichender Forderungsinhaber' inne hat.",
         "min": 0,
         "max": "*",
-        "patternContactPoint": {
-          "system": "phone"
-        },
         "mustSupport": true
       },
       {
         "id": "Practitioner.telecom:Telefon.system",
         "path": "Practitioner.telecom.system",
-        "patternCode": "phone",
+        "min": 1,
+        "fixedCode": "phone",
         "mustSupport": true
       },
       {
@@ -415,40 +418,23 @@
         "mustSupport": true
       },
       {
-        "id": "Practitioner.qualification.code.coding",
-        "path": "Practitioner.qualification.code.coding",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "rules": "open"
-        }
-      },
-      {
-        "id": "Practitioner.qualification.code.coding:Fachrichtung",
-        "path": "Practitioner.qualification.code.coding",
-        "sliceName": "Fachrichtung",
+        "id": "Practitioner.qualification.code",
+        "path": "Practitioner.qualification.code",
         "short": "Fachrichtung",
         "comment": "Die Fachrichtung SOLL vorhanden sein. Das Element ist wiederholbar.",
-        "min": 0,
-        "max": "*",
-        "mustSupport": true,
         "binding": {
           "strength": "required",
           "valueSet": "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode"
         }
       },
       {
-        "id": "Practitioner.qualification.code.coding:Fachrichtung.system",
+        "id": "Practitioner.qualification.code.coding.system",
         "path": "Practitioner.qualification.code.coding.system",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "Practitioner.qualification.code.coding:Fachrichtung.code",
+        "id": "Practitioner.qualification.code.coding.code",
         "path": "Practitioner.qualification.code.coding.code",
         "min": 1,
         "mustSupport": true

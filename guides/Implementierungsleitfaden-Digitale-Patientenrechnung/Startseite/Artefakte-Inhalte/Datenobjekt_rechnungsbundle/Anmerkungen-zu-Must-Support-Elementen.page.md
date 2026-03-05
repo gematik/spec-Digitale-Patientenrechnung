@@ -1,6 +1,6 @@
 ---
-topic: DiPagDokumentenmetadaten-MS
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten
+topic: DiPagRechnung-MS
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle
 ---
 
 ### Anmerkungen zu Must-Support-Feldern

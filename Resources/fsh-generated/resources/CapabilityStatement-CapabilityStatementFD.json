@@ -328,6 +328,29 @@
               "type": "date"
             }
           ]
+        },
+        {
+          "type": "Binary",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read"
+            }
+          ],
+          "supportedProfile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument"
+          ]
         }
       ]
     }

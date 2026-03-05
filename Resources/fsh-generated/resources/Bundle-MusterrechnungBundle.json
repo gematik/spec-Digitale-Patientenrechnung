@@ -1,0 +1,916 @@
+{
+  "resourceType": "Bundle",
+  "id": "MusterrechnungBundle",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle"
+    ]
+  },
+  "type": "collection",
+  "timestamp": "2018-10-24T12:00:00+01:00",
+  "entry": [
+    {
+      "fullUrl": "https://[FD-endpunkt]/Invoice/MusterrechnungInvoice",
+      "resource": {
+        "resourceType": "Invoice",
+        "id": "MusterrechnungInvoice",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "invoice",
+                  "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+                }
+              ]
+            },
+            "system": "https://praxis-dr-arzt.de/fhir/sid/rechnungsnummer",
+            "value": "1425"
+          }
+        ],
+        "status": "issued",
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart",
+            "valueCoding": {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "AMB",
+              "display": "ambulatory"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung",
+            "valueCoding": {
+              "system": "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+              "code": "INNE",
+              "display": "Innere Medizin"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]",
+            "valuePeriod": {
+              "start": "2018-10-04",
+              "end": "2018-10-19"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext",
+            "valueString": "Grippaler Infekt; Hepatopathie"
+          }
+        ],
+        "participant": [
+          {
+            "role": {
+              "coding": [
+                {
+                  "code": "leistungserbringer",
+                  "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"
+                }
+              ]
+            },
+            "actor": {
+              "reference": "Practitioner/MusterrechnungArzt"
+            }
+          },
+          {
+            "role": {
+              "coding": [
+                {
+                  "code": "forderungsinhaber",
+                  "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"
+                }
+              ]
+            },
+            "actor": {
+              "reference": "Organization/MusterrechnungPraxis"
+            }
+          }
+        ],
+        "recipient": {
+          "identifier": {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+                  "code": "KVZ10"
+                }
+              ]
+            },
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "B123456789"
+          },
+          "reference": "Patient/MusterrechnungPatient",
+          "display": "Herr B. Patient"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs",
+              "code": "GOÄ",
+              "display": "Gebührenordnung für Ärzte"
+            }
+          ]
+        },
+        "lineItem": [
+          {
+            "priceComponent": [
+              {
+                "type": "base",
+                "amount": {
+                  "value": 10.72,
+                  "currency": "EUR"
+                }
+              }
+            ],
+            "sequence": 1,
+            "chargeItemReference": {
+              "reference": "ChargeItem/MusterrechnungPos1"
+            }
+          },
+          {
+            "priceComponent": [
+              {
+                "type": "base",
+                "amount": {
+                  "value": 10.72,
+                  "currency": "EUR"
+                }
+              }
+            ],
+            "sequence": 2,
+            "chargeItemReference": {
+              "reference": "ChargeItem/MusterrechnungPos2"
+            }
+          },
+          {
+            "priceComponent": [
+              {
+                "type": "base",
+                "amount": {
+                  "value": 5.36,
+                  "currency": "EUR"
+                }
+              }
+            ],
+            "sequence": 3,
+            "chargeItemReference": {
+              "reference": "ChargeItem/MusterrechnungPos3"
+            }
+          },
+          {
+            "priceComponent": [
+              {
+                "type": "base",
+                "amount": {
+                  "value": 10.72,
+                  "currency": "EUR"
+                }
+              }
+            ],
+            "sequence": 4,
+            "chargeItemReference": {
+              "reference": "ChargeItem/MusterrechnungPos4"
+            }
+          },
+          {
+            "priceComponent": [
+              {
+                "type": "base",
+                "amount": {
+                  "value": 10.72,
+                  "currency": "EUR"
+                }
+              }
+            ],
+            "sequence": 5,
+            "chargeItemReference": {
+              "reference": "ChargeItem/MusterrechnungPos5"
+            }
+          },
+          {
+            "priceComponent": [
+              {
+                "type": "base",
+                "amount": {
+                  "value": 4.02,
+                  "currency": "EUR"
+                }
+              }
+            ],
+            "sequence": 6,
+            "chargeItemReference": {
+              "reference": "ChargeItem/MusterrechnungPos6"
+            }
+          },
+          {
+            "priceComponent": [
+              {
+                "type": "base",
+                "amount": {
+                  "value": 2.68,
+                  "currency": "EUR"
+                }
+              }
+            ],
+            "sequence": 7,
+            "chargeItemReference": {
+              "reference": "ChargeItem/MusterrechnungPos7"
+            }
+          }
+        ],
+        "date": "2018-10-24",
+        "subject": {
+          "reference": "Patient/MusterrechnungPatient"
+        },
+        "issuer": {
+          "reference": "Organization/MusterrechnungPraxis"
+        },
+        "note": [
+          {
+            "text": "Berechnet nach der Gebührenordnung für Ärzte / GOÄ (Stand 01.01.2002). Bitte überweisen Sie den Betrag unter Angabe der Rechnungsnummer und des Rechnungsdatums bis zum 14.11.2018 auf das unten angegebene Konto."
+          }
+        ],
+        "paymentTerms": "Zahlbar bis zum 14.11.2018",
+        "_paymentTerms": {
+          "extension": [
+            {
+              "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+              "valueDate": "2018-11-14"
+            }
+          ]
+        },
+        "totalNet": {
+          "value": 54.95,
+          "currency": "EUR"
+        },
+        "totalGross": {
+          "value": 54.95,
+          "currency": "EUR"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://[FD-endpunkt]/Patient/MusterrechnungPatient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "MusterrechnungPatient",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "KVZ10",
+                  "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+                }
+              ]
+            },
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "B123456789"
+          }
+        ],
+        "address": [
+          {
+            "type": "both",
+            "line": [
+              "Patientenweg 30"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Patientenweg"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                    "valueString": "30"
+                  }
+                ]
+              }
+            ],
+            "use": "home",
+            "city": "Musterstadt",
+            "postalCode": "12345",
+            "country": "DE"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "text": "B. Patient",
+            "family": "Patient",
+            "given": [
+              "B."
+            ]
+          }
+        ],
+        "birthDate": "1969-10-10",
+        "gender": "male"
+      }
+    },
+    {
+      "fullUrl": "https://[FD-endpunkt]/Practitioner/MusterrechnungArzt",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "MusterrechnungArzt",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"
+          ]
+        },
+        "name": [
+          {
+            "prefix": [
+              "Dr."
+            ],
+            "_prefix": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+                    "valueCode": "AC"
+                  }
+                ]
+              }
+            ],
+            "use": "official",
+            "text": "Dr. A. Arzt",
+            "family": "Arzt",
+            "given": [
+              "A."
+            ]
+          }
+        ],
+        "address": [
+          {
+            "type": "both",
+            "line": [
+              "Docstrasse 25"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Docstrasse"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                    "valueString": "25"
+                  }
+                ]
+              }
+            ],
+            "city": "Musterstadt",
+            "postalCode": "12345",
+            "country": "DE"
+          }
+        ],
+        "qualification": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "INNE",
+                  "system": "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+                  "display": "Innere Medizin"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://[FD-endpunkt]/Organization/MusterrechnungPraxis",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "MusterrechnungPraxis",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"
+          ]
+        },
+        "address": [
+          {
+            "type": "both",
+            "line": [
+              "Docstrasse 25"
+            ],
+            "_line": [
+              {
+                "extension": [
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+                    "valueString": "Docstrasse"
+                  },
+                  {
+                    "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+                    "valueString": "25"
+                  }
+                ]
+              }
+            ],
+            "city": "Musterstadt",
+            "postalCode": "12345",
+            "country": "DE"
+          }
+        ],
+        "name": "Praxis Dr. A. Arzt"
+      }
+    },
+    {
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos1",
+      "resource": {
+        "resourceType": "ChargeItem",
+        "id": "MusterrechnungPos1",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+          ]
+        },
+        "status": "billable",
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+            "valueCoding": {
+              "code": "GOÄ",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+            "extension": [
+              {
+                "url": "Faktor",
+                "extension": [
+                  {
+                    "url": "Value",
+                    "valueDecimal": 2.3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+            "valueDate": "2018-10-04"
+          }
+        ],
+        "quantity": {
+          "system": "http://unitsofmeasure.org",
+          "value": 1,
+          "unit": "Anzahl",
+          "code": "{count}"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bäk/goä",
+              "code": "1"
+            }
+          ],
+          "text": "Beratung, auch telefonisch"
+        },
+        "subject": {
+          "reference": "Patient/MusterrechnungPatient"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/MusterrechnungArzt"
+            }
+          }
+        ],
+        "occurrencePeriod": {
+          "start": "2018-10-04",
+          "end": "2018-10-04"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos2",
+      "resource": {
+        "resourceType": "ChargeItem",
+        "id": "MusterrechnungPos2",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+          ]
+        },
+        "status": "billable",
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+            "valueCoding": {
+              "code": "GOÄ",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+            "extension": [
+              {
+                "url": "Faktor",
+                "extension": [
+                  {
+                    "url": "Value",
+                    "valueDecimal": 2.3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+            "valueDate": "2018-10-04"
+          }
+        ],
+        "quantity": {
+          "system": "http://unitsofmeasure.org",
+          "value": 1,
+          "unit": "Anzahl",
+          "code": "{count}"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bäk/goä",
+              "code": "5"
+            }
+          ],
+          "text": "Symptombezogene Untersuchung"
+        },
+        "subject": {
+          "reference": "Patient/MusterrechnungPatient"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/MusterrechnungArzt"
+            }
+          }
+        ],
+        "occurrencePeriod": {
+          "start": "2018-10-04",
+          "end": "2018-10-04"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos3",
+      "resource": {
+        "resourceType": "ChargeItem",
+        "id": "MusterrechnungPos3",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+          ]
+        },
+        "status": "billable",
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+            "valueCoding": {
+              "code": "GOÄ",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+            "extension": [
+              {
+                "url": "Faktor",
+                "extension": [
+                  {
+                    "url": "Value",
+                    "valueDecimal": 2.3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+            "valueDate": "2018-10-04"
+          }
+        ],
+        "quantity": {
+          "system": "http://unitsofmeasure.org",
+          "value": 1,
+          "unit": "Anzahl",
+          "code": "{count}"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bäk/goä",
+              "code": "70"
+            }
+          ],
+          "text": "Arbeitsunfähigkeitsbescheinigung"
+        },
+        "subject": {
+          "reference": "Patient/MusterrechnungPatient"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/MusterrechnungArzt"
+            }
+          }
+        ],
+        "occurrencePeriod": {
+          "start": "2018-10-04",
+          "end": "2018-10-04"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos4",
+      "resource": {
+        "resourceType": "ChargeItem",
+        "id": "MusterrechnungPos4",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+          ]
+        },
+        "status": "billable",
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+            "valueCoding": {
+              "code": "GOÄ",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+            "extension": [
+              {
+                "url": "Faktor",
+                "extension": [
+                  {
+                    "url": "Value",
+                    "valueDecimal": 2.3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+            "valueDate": "2018-10-19"
+          }
+        ],
+        "quantity": {
+          "system": "http://unitsofmeasure.org",
+          "value": 1,
+          "unit": "Anzahl",
+          "code": "{count}"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bäk/goä",
+              "code": "1"
+            }
+          ],
+          "text": "Beratung, auch telefonisch"
+        },
+        "subject": {
+          "reference": "Patient/MusterrechnungPatient"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/MusterrechnungArzt"
+            }
+          }
+        ],
+        "occurrencePeriod": {
+          "start": "2018-10-19",
+          "end": "2018-10-19"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos5",
+      "resource": {
+        "resourceType": "ChargeItem",
+        "id": "MusterrechnungPos5",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+          ]
+        },
+        "status": "billable",
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+            "valueCoding": {
+              "code": "GOÄ",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+            "extension": [
+              {
+                "url": "Faktor",
+                "extension": [
+                  {
+                    "url": "Value",
+                    "valueDecimal": 2.3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+            "valueDate": "2018-10-19"
+          }
+        ],
+        "quantity": {
+          "system": "http://unitsofmeasure.org",
+          "value": 1,
+          "unit": "Anzahl",
+          "code": "{count}"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bäk/goä",
+              "code": "5"
+            }
+          ],
+          "text": "Symptombezogene Untersuchung"
+        },
+        "subject": {
+          "reference": "Patient/MusterrechnungPatient"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/MusterrechnungArzt"
+            }
+          }
+        ],
+        "occurrencePeriod": {
+          "start": "2018-10-19",
+          "end": "2018-10-19"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos6",
+      "resource": {
+        "resourceType": "ChargeItem",
+        "id": "MusterrechnungPos6",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+          ]
+        },
+        "status": "billable",
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+            "valueCoding": {
+              "code": "GOÄ",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+            "extension": [
+              {
+                "url": "Faktor",
+                "extension": [
+                  {
+                    "url": "Value",
+                    "valueDecimal": 1.15
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+            "valueDate": "2018-10-19"
+          }
+        ],
+        "quantity": {
+          "system": "http://unitsofmeasure.org",
+          "value": 1,
+          "unit": "Anzahl",
+          "code": "{count}"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bäk/goä",
+              "code": "3501"
+            }
+          ],
+          "text": "Blutsenkung"
+        },
+        "subject": {
+          "reference": "Patient/MusterrechnungPatient"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/MusterrechnungArzt"
+            }
+          }
+        ],
+        "occurrencePeriod": {
+          "start": "2018-10-19",
+          "end": "2018-10-19"
+        }
+      }
+    },
+    {
+      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos7",
+      "resource": {
+        "resourceType": "ChargeItem",
+        "id": "MusterrechnungPos7",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+          ]
+        },
+        "status": "billable",
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+            "valueCoding": {
+              "code": "GOÄ",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+            }
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+            "extension": [
+              {
+                "url": "Faktor",
+                "extension": [
+                  {
+                    "url": "Value",
+                    "valueDecimal": 1.15
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+            "valueDate": "2018-10-19"
+          }
+        ],
+        "quantity": {
+          "system": "http://unitsofmeasure.org",
+          "value": 1,
+          "unit": "Anzahl",
+          "code": "{count}"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://fhir.de/CodeSystem/bäk/goä",
+              "code": "3597.H1"
+            }
+          ],
+          "text": "Laktatdehydrogenase (LDH)"
+        },
+        "subject": {
+          "reference": "Patient/MusterrechnungPatient"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "Practitioner/MusterrechnungArzt"
+            }
+          }
+        ],
+        "occurrencePeriod": {
+          "start": "2018-10-19",
+          "end": "2018-10-19"
+        }
+      }
+    }
+  ]
+}

@@ -45,25 +45,25 @@ Weitere Details zur Signatur, siehe [gemSpec_DiPag_FD - Abschnitt 6.5 Signatur](
 
 ### Rechnungsrepräsentation
 
-Die DocumentReference-Ressourcen welche über die Parameter `rechnung` und `anhang` übermittelt werden MÜSSEN dem Profil `https://gematik.de/fhir/StructureDefinition/dipag-dokumentenmetadaten` entsprechen.
+Die DocumentReference-Ressourcen welche über die Parameter `rechnung` und `anhang` übermittelt werden MÜSSEN dem Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang` entsprechen.
 
 <fql output="table" headers="true">
 from
 	StructureDefinition
 where
-	url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten'
+	url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 </fql>
 
 <br>
 
-{{tree:https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten, buttons}}
+{{tree:https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang, buttons}}
 
 Folgende Implementierungshinweise sind zu beachten:
 
 <fql output="table" headers="false">
-from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten' for differential.element where comment.exists() select id, comment
+from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang' for differential.element where comment.exists() select id, comment
 </fql>
 
 ### Beispiele
@@ -104,8 +104,8 @@ HTTP POST [fachdienst-endpunkt]/Patient/[id-des-ermittelten-Rechnungsempfängers
 
 Antwort des Fachdienstes im Erfolgsfall:
 
-Rückgabe von Rechnung und Anhang jeweils mit aufgebrachtem Token und separiertem Inhalt.
-Bei Verwendung des Parameters "returnTokenPDF" werden die Binaries mit den PDF/A-Dokumenten (incl. Token-Barcode) als Parameter direkt mit ausgegeben.
+Rückgabe des Token von Rechnung und Anhang. 
+Bei Verwendung des Parameters "angereichertesPDF" wird die Binary Ressource mit den PDF/A-Dokumenten (inkl. Token-Barcode) als Parameter direkt mit ausgegeben.
 
 ```
 HTTP 200 OK
@@ -143,6 +143,8 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 
 * `DocumentReference.author.identifier` MUSS durch den FD auf die im Access-Token enthaltene Telematik-ID gesetzt werden. Durch den Client übermittelte Angaben in DocumentReference.author sind zu überschreiben.
 
+* `DocumentReference.extension:rechnungsdatum` und `DocumentReference.extension:gesamtbetrag` MÜSSEN durch den FD beim Empfang der Operation auf Basis der übermittelten Dokumenteninhalte extrahiert und gesetzt werden. Durch den Client übermittelte Angaben in diesen Extensions sind zu überschreiben.
+
 * Hinweis: In der FHIR-Repräsentation erfolgt **keine** Differenzierung zwischen dem Datenobjekt für die Rechnungsdokumente und dem Rechnungsworkflow. Der Workflowstatus wird somit innerhalb der DocumentReference abgebildet. `DocumentReference.meta.tag:dipag-rechnungsstatus` MUSS durch den FD auf "Offen" gesetzt werden beim Empfang der Rechnung.
 
 ### Hinweise zur Abbildung des Workflow-Objektes (fachliches Datenmodell)
@@ -151,20 +153,20 @@ Im fachlichen Datenmodell des Feature-Dokuments Digitale Patientenrechnung ist d
 
 ### Beispiele
 
-Beispiel: Rechnungsdokument nach Verarbeitung auf Server
+Beispiel: Rechnungsdokument nach Verarbeitung auf Server 
 
 <tabs>
     <tab title="Parameters">    
-        {{render:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnung3-FD.json}}
+        {{render:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReference.json}}
     </tab>
     <tab title="XML">      
-        {{xml:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnung3-FD.json}}
+        {{xml:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReference.json}}
     </tab>
     <tab title="JSON">
-        {{json:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnung3-FD.json}}
+        {{json:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReference.json}}
     </tab>
     <tab title="Link">
-        {{link:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceRechnung3-FD.json}}
+        {{link:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReference.json}}
     </tab>
 </tabs>
 
@@ -172,16 +174,16 @@ Beispiel: sonstiges Dokument nach Verarbeitung auf Server
 
 <tabs>
     <tab title="Parameters">    
-        {{render:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json}}
+        {{render:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.json}}
     </tab>
     <tab title="XML">      
-        {{xml:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json}}
+        {{xml:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.josn}}
     </tab>
     <tab title="JSON">
-        {{json:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json}}
+        {{json:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.json}}
     </tab>
     <tab title="Link">
-        {{link:Resources/fsh-generated/resources/DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.json}}
+        {{link:Resources/fsh-generated/resources/DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.json}}
     </tab>
 </tabs>
 

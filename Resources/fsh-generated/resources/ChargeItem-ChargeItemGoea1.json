@@ -1,0 +1,121 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "ChargeItemGoea1",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+    ]
+  },
+  "status": "billable",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+      "valueCoding": {
+        "code": "GOÄ",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
+      "valueCoding": {
+        "code": "V",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs",
+        "display": "auf Verlangen erbrachte Leistung"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-wegegeld-reiseentschaedigung",
+      "extension": [
+        {
+          "url": "Wegegeld",
+          "extension": [
+            {
+              "url": "Entfernung",
+              "valueQuantity": {
+                "unit": "km",
+                "system": "http://unitsofmeasure.org",
+                "code": "km",
+                "value": 15
+              }
+            },
+            {
+              "url": "Nacht",
+              "valueBoolean": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+      "extension": [
+        {
+          "url": "Einfachsatz",
+          "valueMoney": {
+            "currency": "EUR",
+            "value": 10.72
+          }
+        },
+        {
+          "url": "Punktzahl",
+          "valueDecimal": 100
+        },
+        {
+          "url": "Faktor",
+          "extension": [
+            {
+              "url": "Value",
+              "valueDecimal": 2.3
+            },
+            {
+              "url": "FaktorGrund",
+              "valueCoding": {
+                "code": "AB",
+                "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs",
+                "display": "Allgemeine Bestimmung"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+      "valueDate": "2024-01-15"
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/goä",
+        "code": "1",
+        "display": "Beratung"
+      }
+    ]
+  },
+  "quantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 1,
+    "unit": "Anzahl",
+    "code": "{count}"
+  },
+  "subject": {
+    "reference": "Patient/PatientExample"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/PractitionerMain"
+      }
+    }
+  ],
+  "occurrencePeriod": {
+    "start": "2024-01-15",
+    "end": "2024-01-15"
+  },
+  "reason": [
+    {
+      "text": "Beispiel für Begründung bei Beratung mit Faktorerhöhung: Erheblicher zusätzlicher Zeitaufwand aufgrund komplexer Fragestellung und ausführlicher Erläuterung der Behandlungsmöglichkeiten."
+    }
+  ]
+}

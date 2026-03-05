@@ -1,0 +1,94 @@
+{
+  "resourceType": "Patient",
+  "id": "PatientExample",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "KVZ10",
+            "system": "http://fhir.de/CodeSystem/identifier-type-de-basis"
+          }
+        ]
+      },
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "assigner": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                "code": "XX"
+              }
+            ]
+          },
+          "system": "http://fhir.de/sid/arge-ik/iknr",
+          "value": "109500969"
+        }
+      },
+      "value": "K123456789"
+    }
+  ],
+  "address": [
+    {
+      "type": "both",
+      "line": [
+        "Musterstraße 42"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+              "valueString": "Musterstraße"
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+              "valueString": "42"
+            }
+          ]
+        }
+      ],
+      "use": "home",
+      "city": "Berlin",
+      "postalCode": "10115",
+      "country": "DE"
+    },
+    {
+      "type": "postal",
+      "line": [
+        "Postfach 123456"
+      ],
+      "_line": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox",
+              "valueString": "123456"
+            }
+          ]
+        }
+      ],
+      "city": "Berlin",
+      "postalCode": "10115",
+      "country": "DE"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "text": "Max Mustermann",
+      "family": "Mustermann",
+      "given": [
+        "Max"
+      ]
+    }
+  ],
+  "birthDate": "1980-05-15",
+  "gender": "male"
+}

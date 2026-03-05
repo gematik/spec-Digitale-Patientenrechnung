@@ -24,7 +24,7 @@
             }
           ],
           "profile": [
-            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
           ]
         },
         "status": "current",
@@ -85,13 +85,12 @@
         "content": [
           {
             "format": {
-              "code": "dipag",
+              "code": "originaleRechnung",
               "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             },
             "attachment": {
-              "contentType": "application/pdf",
-              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00",
-              "url": "http://example.com/fhir/binary/123"
+              "contentType": "application/fhir+json",
+              "url": "[FD-endpunkt]/Binary/id-der-originalen-Rechnung"
             }
           },
           {
@@ -100,8 +99,8 @@
               "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             },
             "attachment": {
-              "contentType": "application/pdf",
-              "url": "http://example.com/fhir/binary/456"
+              "contentType": "application/fhir+json",
+              "url": "[FD-endpunkt]/Binary/id-des-angereicherten-PDFs"
             }
           },
           {
@@ -111,8 +110,7 @@
             },
             "attachment": {
               "contentType": "application/fhir+json",
-              "data": "DIESISTNUREINBEISPIELDIESISTKEINVALIDESPDF00",
-              "url": "http://example.com/fhir/binary/789"
+              "url": "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
             }
           }
         ],
@@ -125,6 +123,16 @@
         "description": "Laborbefund vom 28.9.2023",
         "subject": {
           "display": "Max Mustermann"
+        },
+        "context": {
+          "related": [
+            {
+              "reference": "Patient/BeispielPatient3-FD"
+            },
+            {
+              "reference": "DocumentReference/ExampleR5DocumentReferenceSonstigesDokument"
+            }
+          ]
         }
       },
       "search": {

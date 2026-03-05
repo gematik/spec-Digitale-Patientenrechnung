@@ -9,16 +9,16 @@ Id: dipag-rechnung
   DiPagAbrechnungsDiagnoseProzedurFreitext named AbrechnungsDiagnoseProzedurFreitext ..1 MS and
   DiPagBehandlungsart named Behandlungsart 1..1 MS and
   DiPagFachrichtung named Fachrichtung 1..1 MS and
-  $extension-replaces named Korrekturrechnung ..1 MS and
+  DiPagInvoiceReplaces named Korrekturrechnung ..1 MS and
   DiPagTokenStornierteRechnung named Korrekturtoken ..1 MS and
-  $extension-basedOn named Antragsreferenz ..1 MS
+  DiPagInvoiceBasedOn named Antragsreferenz ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * ^short = "Diagnose"
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN Diagnosen und Prozeduren vorhanden sein.
   Im Falle einer GOZ Rechnung werden keine Diagnosen oder Prozedur gefordert."
   * extension[Use].valueCoding MS
     * ^short = "Kennzeichen Hauptdiagnose"
-    * ^comment = "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein."
+    * ^comment = "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein, wenn es sich um eine HD handelt."
     * code = DiPagAbrechnungsDiagnoseUseCS#main-diagnosis
   * extension[Referenz].valueReference MS
     * ^short = "Zuordnung von Diagnosen oder Prozeduren zur Rechnung"
@@ -63,11 +63,7 @@ Id: dipag-rechnung
     * system 1.. MS
     * value 1.. MS
 * extension[Antragsreferenz]
-  * valueReference MS
-  * valueReference.reference 0..0
-  * valueReference.display 0..0
-  * valueReference.type 0..0
-  * valueReference.identifier 1..1 MS
+  * valueIdentifier 1..1 MS
     * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#antragsreferenz
     * ^short = "Referenz auf Heil- und Kostenplan, Kostenvoranschlag oder Kostenübernahmeantrag"
     * ^comment = "Die Antragsreferenz SOLL vorhanden sein."
@@ -82,8 +78,7 @@ Id: dipag-rechnung
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
 * identifier contains
-  Rechnungsnummer 1..1 MS and
-  Antragsnummer ..1 MS
+  Rechnungsnummer 1..1 MS
 * identifier[Rechnungsnummer]
   * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#invoice
   * ^short = "Rechnungs-Nr. (der LEI)"
@@ -270,7 +265,7 @@ Id: dipag-rechnung
   * ^comment = "Die Referenz auf die Instanz der Rechnungsposition MUSS vorhanden sein."
 * lineItem.priceComponent	MS
 * lineItem.priceComponent ^slicing.discriminator.type = #pattern
-* lineItem.priceComponent ^slicing.discriminator.path = "$this"
+* lineItem.priceComponent ^slicing.discriminator.path = "type"
 * lineItem.priceComponent ^slicing.rules = #open
 * lineItem.priceComponent contains
   BruttoBetrag ..1 MS and
