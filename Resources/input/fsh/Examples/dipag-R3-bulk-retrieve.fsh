@@ -45,5 +45,5 @@ Description: "Der Einfachheit halber wurden hier nur die relevanten Felder darge
   * contentType = #application/fhir+json
   * url = "[FD-endpunkt]/Binary/id-des-strukturierten-rechnungsinhalts2"
 * content[angereicherteRechnung].attachment
-  * contentType = #application/pdf
+  * contentType = #application/fhir+json
   * url = "[FD-endpunkt]/Binary/id-des-angereicherten-pdfs2"

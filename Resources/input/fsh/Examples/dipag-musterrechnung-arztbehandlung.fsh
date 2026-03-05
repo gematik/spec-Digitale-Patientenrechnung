@@ -443,36 +443,36 @@ Description: "Bundle mit allen Ressourcen der Musterrechnung Arztbehandlung"
 Usage: #example
 * type = #collection
 * timestamp = "2018-10-24T12:00:00+01:00"
-* entry[0] //TODO auf uuids umstellen
-  * fullUrl = "Invoice/MusterrechnungInvoice"
+* entry[0]
+  * fullUrl = "https://[FD-endpunkt]/Invoice/MusterrechnungInvoice"
   * resource = MusterrechnungInvoice
 * entry[+]
-  * fullUrl = "Patient/MusterrechnungPatient"
+  * fullUrl = "https://[FD-endpunkt]/Patient/MusterrechnungPatient"
   * resource = MusterrechnungPatient
 * entry[+]
-  * fullUrl = "Practitioner/MusterrechnungArzt"
+  * fullUrl = "https://[FD-endpunkt]/Practitioner/MusterrechnungArzt"
   * resource = MusterrechnungArzt
 * entry[+]
-  * fullUrl = "Organization/MusterrechnungPraxis"
+  * fullUrl = "https://[FD-endpunkt]/Organization/MusterrechnungPraxis"
   * resource = MusterrechnungPraxis
 * entry[+]
-  * fullUrl = "ChargeItem/MusterrechnungPos1"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos1"
   * resource = MusterrechnungPos1
 * entry[+]
-  * fullUrl = "ChargeItem/MusterrechnungPos2"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos2"
   * resource = MusterrechnungPos2
 * entry[+]
-  * fullUrl = "ChargeItem/MusterrechnungPos3"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos3"
   * resource = MusterrechnungPos3
 * entry[+]
-  * fullUrl = "ChargeItem/MusterrechnungPos4"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos4"
   * resource = MusterrechnungPos4
 * entry[+]
-  * fullUrl = "ChargeItem/MusterrechnungPos5"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos5"
   * resource = MusterrechnungPos5
 * entry[+]
-  * fullUrl = "ChargeItem/MusterrechnungPos6"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos6"
   * resource = MusterrechnungPos6
 * entry[+]
-  * fullUrl = "ChargeItem/MusterrechnungPos7"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos7"
   * resource = MusterrechnungPos7

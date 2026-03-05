@@ -649,45 +649,45 @@ Bundle mit allen Ressourcen der digitalen Patientenrechnung"
 Usage: #example
 * type = #collection
 * timestamp = "2024-03-15T14:30:00+01:00"
-* entry[0] //TODO auf uuids umstellen
-  * fullUrl = "Invoice/InvoiceExample"
+* entry[0]
+  * fullUrl = "https://[FD-endpunkt]/Invoice/InvoiceExample"
   * resource = InvoiceExample
 * entry[+]
-  * fullUrl = "Patient/PatientExample"
+  * fullUrl = "https://[FD-endpunkt]/Patient/PatientExample"
   * resource = PatientExample
 * entry[+]
-  * fullUrl = "Practitioner/PractitionerMain"
+  * fullUrl = "https://[FD-endpunkt]/Practitioner/PractitionerMain"
   * resource = PractitionerMain
 * entry[+]
-  * fullUrl = "Practitioner/PractitionerSecondary"
+  * fullUrl = "https://[FD-endpunkt]/Practitioner/PractitionerSecondary"
   * resource = PractitionerSecondary
 * entry[+]
-  * fullUrl = "Organization/OrganizationIssuer"
+  * fullUrl = "https://[FD-endpunkt]/Organization/OrganizationIssuer"
   * resource = OrganizationIssuer
 * entry[+]
-  * fullUrl = "Organization/OrganizationSecondary"
+  * fullUrl = "https://[FD-endpunkt]/Organization/OrganizationSecondary"
   * resource = OrganizationSecondary
 * entry[+]
-  * fullUrl = "ChargeItem/ChargeItemGoea1"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/ChargeItemGoea1"
   * resource = ChargeItemGoea1
 * entry[+]
-  * fullUrl = "ChargeItem/ChargeItemGoz"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/ChargeItemGoz"
   * resource = ChargeItemGoz
 * entry[+]
-  * fullUrl = "ChargeItem/ChargeItemLab"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/ChargeItemLab"
   * resource = ChargeItemLab
 * entry[+]
-  * fullUrl = "ChargeItem/ChargeItemMaterial"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/ChargeItemMaterial"
   * resource = ChargeItemMaterial
 * entry[+]
-  * fullUrl = "ChargeItem/ChargeItemReiseentschaedigung"
+  * fullUrl = "https://[FD-endpunkt]/ChargeItem/ChargeItemReiseentschaedigung"
   * resource = ChargeItemReiseentschaedigung
 * entry[+]
-  * fullUrl = "Condition/DiagnoseExample"
+  * fullUrl = "https://[FD-endpunkt]/Condition/DiagnoseExample"
   * resource = DiagnoseExample
 * entry[+]
-  * fullUrl = "Condition/DiagnoseExample2"
+  * fullUrl = "https://[FD-endpunkt]/Condition/DiagnoseExample2"
   * resource = DiagnoseExample2
 * entry[+]
-  * fullUrl = "Procedure/ProzedurExample"
+  * fullUrl = "https://[FD-endpunkt]/Procedure/ProzedurExample"
   * resource = ProzedurExample
