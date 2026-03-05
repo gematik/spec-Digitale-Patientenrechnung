@@ -7,15 +7,6 @@
     ]
   },
   "status": "current",
-  "type": {
-    "coding": [
-      {
-        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
-        "code": "PT130102",
-        "display": "Molekularpathologiebefund"
-      }
-    ]
-  },
   "content": [
     {
       "format": {
@@ -34,6 +25,15 @@
       "value": "987-654-321"
     }
   ],
+  "type": {
+    "coding": [
+      {
+        "code": "PT130102",
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "display": "Molekularpathologiebefund"
+      }
+    ]
+  },
   "description": "Molekularpathologiebefund vom 31.12.21",
   "subject": {
     "display": "Max Mustermann"

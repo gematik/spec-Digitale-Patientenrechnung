@@ -12,14 +12,14 @@
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
       "valueCoding": {
         "code": "GOZ",
-        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
       }
     },
     {
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
       "valueCoding": {
         "code": "V",
-        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-CS",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs",
         "display": "auf Verlangen erbrachte Leistung"
       }
     },

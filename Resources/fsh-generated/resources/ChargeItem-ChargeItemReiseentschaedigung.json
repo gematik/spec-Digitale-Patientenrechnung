@@ -12,14 +12,14 @@
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
       "valueCoding": {
         "code": "WegegeldReiseentschaedigung",
-        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-CS"
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
       }
     },
     {
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-wegegeld-reiseentschaedigung",
       "extension": [
         {
-          "url": "Reiseentschädigung",
+          "url": "Reiseentschaedigung",
           "extension": [
             {
               "url": "Abwesenheit",
@@ -40,7 +40,7 @@
               }
             },
             {
-              "url": "Übernachtung",
+              "url": "Uebernachtung",
               "valueMoney": {
                 "currency": "EUR",
                 "value": 80
