@@ -8,6 +8,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Ein Beispielpatient für die Rechnung"
 Usage: #example
+* id = "8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
 * identifier[KVNR]
   * type = $identifier-kvnr-type#KVZ10
   * system = $kvid
@@ -57,6 +58,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Hauptbehandelnder Zahnarzt"
 Usage: #example
+* id = "c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a"
 * identifier[Telematik-ID]
   * type = $v2-0203#PRN
   * system = $tmid
@@ -97,6 +99,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Assistierender Zahnarzt"
 Usage: #example
+* id = "d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b"
 * identifier[Telematik-ID]
   * type = $v2-0203#PRN
   * system = $tmid
@@ -140,6 +143,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Die Praxis, die die Rechnung ausstellt"
 Usage: #example
+* id = "e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"
 * name = "Zahnarztpraxis Dr. Schulz"
 * identifier[Telematik-ID]
   * type = $v2-0203#PRN
@@ -183,6 +187,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Labor für Zahnersatz und Prothesen"
 Usage: #example
+* id = "f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d"
 * name = "Zahnlabor Müller GmbH"
 * identifier[Telematik-ID]
   * type = $v2-0203#PRN
@@ -224,6 +229,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Eingehende Konsultation mit Befund nach GOÄ"
 Usage: #example
+* id = "a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
 * extension[Zusatz]
@@ -280,6 +286,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Zahnsteinentfernung und Politur nach GOZ"
 Usage: #example
+* id = "b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOZ
 * extension[Zusatz]
@@ -320,6 +327,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Anfertigung einer Teilprothese durch Fremdlabor"
 Usage: #example
+* id = "c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#Fremdlaborleistung
 * extension[Behandlungsdatum]
@@ -347,6 +355,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Verbrauchsmaterial für Behandlung"
 Usage: #example
+* id = "d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#SachkostenAuslagen
 * extension[Behandlungsdatum]
@@ -380,6 +389,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Reiseentschädigung für Hausbesuch über 25 km"
 Usage: #example
+* id = "e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#WegegeldReiseentschaedigung
 * extension[WegegeldReiseentschaedigung]
@@ -427,6 +437,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Zahnkaries als Hauptdiagnose für die Rechnung"
 Usage: #example
+* id = "f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d"
 * code
   * coding[ICD-10-GM]
     * system = $icd10-cs
@@ -443,6 +454,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Parodontitis als Nebendiagnose"
 Usage: #example
+* id = "a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e"
 * code
   * coding[ICD-10-GM]
     * system = $icd10-cs
@@ -459,6 +471,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Zahnimplantat-Einsetzung als Prozedur"
 Usage: #example
+* id = "b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f"
 * status = #completed
 * code
   * coding[OPS]
@@ -479,6 +492,7 @@ Description: "**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen 
 
 Komplettes Beispiel einer Digitalen Patientenrechnung mit GOÄ und GOZ"
 Usage: #example
+* id = "c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a"
 * identifier[Rechnungsnummer]
   * type = DiPagRechnungIdentifierTypeCS#invoice
   * system = "https://zahnarzt-schulz.de/fhir/sid/rechnungsnummer"
@@ -649,44 +663,44 @@ Usage: #example
 * type = #collection
 * timestamp = "2024-03-15T14:30:00+01:00"
 * entry[0]
-  * fullUrl = "https://[FD-endpunkt]/Invoice/InvoiceExample"
+  * fullUrl = "urn:uuid:c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a"
   * resource = InvoiceExample
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Patient/PatientExample"
+  * fullUrl = "urn:uuid:8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
   * resource = PatientExample
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Practitioner/PractitionerMain"
+  * fullUrl = "urn:uuid:c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a"
   * resource = PractitionerMain
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Practitioner/PractitionerSecondary"
+  * fullUrl = "urn:uuid:d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b"
   * resource = PractitionerSecondary
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Organization/OrganizationIssuer"
+  * fullUrl = "urn:uuid:e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"
   * resource = OrganizationIssuer
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Organization/OrganizationSecondary"
+  * fullUrl = "urn:uuid:f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d"
   * resource = OrganizationSecondary
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/ChargeItemGoea1"
+  * fullUrl = "urn:uuid:a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e"
   * resource = ChargeItemGoea1
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/ChargeItemGoz"
+  * fullUrl = "urn:uuid:b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f"
   * resource = ChargeItemGoz
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/ChargeItemLab"
+  * fullUrl = "urn:uuid:c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a"
   * resource = ChargeItemLab
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/ChargeItemMaterial"
+  * fullUrl = "urn:uuid:d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b"
   * resource = ChargeItemMaterial
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/ChargeItemReiseentschaedigung"
+  * fullUrl = "urn:uuid:e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c"
   * resource = ChargeItemReiseentschaedigung
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Condition/DiagnoseExample"
+  * fullUrl = "urn:uuid:f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d"
   * resource = DiagnoseExample
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Condition/DiagnoseExample2"
+  * fullUrl = "urn:uuid:a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e"
   * resource = DiagnoseExample2
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Procedure/ProzedurExample"
+  * fullUrl = "urn:uuid:b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f"
   * resource = ProzedurExample

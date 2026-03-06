@@ -11,6 +11,7 @@ InstanceOf: DiPagPatient
 Title: "Musterrechnung - Patient B. Patient"
 Description: "Patient aus der Musterrechnung Arztbehandlung"
 Usage: #example
+* id = "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
 * identifier[KVNR]
   * type = $identifier-kvnr-type#KVZ10
   * system = $kvid
@@ -44,6 +45,7 @@ InstanceOf: DiPagPerson
 Title: "Musterrechnung - Dr. A. Arzt"
 Description: "Behandelnder Arzt aus der Musterrechnung"
 Usage: #example
+* id = "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
 * name[0]
   * use = #official
   * text = "Dr. A. Arzt"
@@ -75,6 +77,7 @@ InstanceOf: DiPagInstitution
 Title: "Musterrechnung - Praxis Dr. A. Arzt"
 Description: "Arztpraxis aus der Musterrechnung"
 Usage: #example
+* id = "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
 * name = "Praxis Dr. A. Arzt"
 * address[Strassenanschrift]
   * type = #both
@@ -99,6 +102,7 @@ InstanceOf: DiPagRechnungsposition
 Title: "Musterrechnung Position 1 - GOÄ Nr. 1 (04.10.18)"
 Description: "Beratung, auch telefonisch"
 Usage: #example
+* id = "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
 * extension[GebuehrenordnungAngaben]
@@ -131,6 +135,7 @@ InstanceOf: DiPagRechnungsposition
 Title: "Musterrechnung Position 2 - GOÄ Nr. 5 (04.10.18)"
 Description: "Symptombezogene Untersuchung"
 Usage: #example
+* id = "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
 * extension[GebuehrenordnungAngaben]
@@ -163,6 +168,7 @@ InstanceOf: DiPagRechnungsposition
 Title: "Musterrechnung Position 3 - GOÄ Nr. 70 (04.10.18)"
 Description: "Arbeitsunfähigkeitsbescheinigung"
 Usage: #example
+* id = "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
 * extension[GebuehrenordnungAngaben]
@@ -195,6 +201,7 @@ InstanceOf: DiPagRechnungsposition
 Title: "Musterrechnung Position 4 - GOÄ Nr. 1 (19.10.18)"
 Description: "Beratung, auch telefonisch"
 Usage: #example
+* id = "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
 * extension[GebuehrenordnungAngaben]
@@ -227,6 +234,7 @@ InstanceOf: DiPagRechnungsposition
 Title: "Musterrechnung Position 5 - GOÄ Nr. 5 (19.10.18)"
 Description: "Symptombezogene Untersuchung"
 Usage: #example
+* id = "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
 * extension[GebuehrenordnungAngaben]
@@ -259,6 +267,7 @@ InstanceOf: DiPagRechnungsposition
 Title: "Musterrechnung Position 6 - GOÄ Nr. 3501 (19.10.18)"
 Description: "Blutsenkung"
 Usage: #example
+* id = "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
 * extension[GebuehrenordnungAngaben]
@@ -291,6 +300,7 @@ InstanceOf: DiPagRechnungsposition
 Title: "Musterrechnung Position 7 - GOÄ Nr. 3597.H1 (19.10.18)"
 Description: "Laktatdehydrogenase (LDH)"
 Usage: #example
+* id = "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a"
 * extension[Rechnungspositionstyp]
   * valueCoding = DiPagRechnungspositionTypeCS#GOÄ
 * extension[GebuehrenordnungAngaben]
@@ -325,6 +335,7 @@ InstanceOf: DiPagRechnung
 Title: "Musterrechnung Arztbehandlung"
 Description: "Rechnung Nr. 1425 vom 24.10.2018"
 Usage: #example
+* id = "a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d"
 * identifier[Rechnungsnummer]
   * type = DiPagRechnungIdentifierTypeCS#invoice
   * system = "https://praxis-dr-arzt.de/fhir/sid/rechnungsnummer"
@@ -444,35 +455,35 @@ Usage: #example
 * type = #collection
 * timestamp = "2018-10-24T12:00:00+01:00"
 * entry[0]
-  * fullUrl = "https://[FD-endpunkt]/Invoice/MusterrechnungInvoice"
+  * fullUrl = "urn:uuid:a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d"
   * resource = MusterrechnungInvoice
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Patient/MusterrechnungPatient"
+  * fullUrl = "urn:uuid:1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
   * resource = MusterrechnungPatient
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Practitioner/MusterrechnungArzt"
+  * fullUrl = "urn:uuid:2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
   * resource = MusterrechnungArzt
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/Organization/MusterrechnungPraxis"
+  * fullUrl = "urn:uuid:3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
   * resource = MusterrechnungPraxis
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos1"
+  * fullUrl = "urn:uuid:4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
   * resource = MusterrechnungPos1
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos2"
+  * fullUrl = "urn:uuid:5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b"
   * resource = MusterrechnungPos2
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos3"
+  * fullUrl = "urn:uuid:6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c"
   * resource = MusterrechnungPos3
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos4"
+  * fullUrl = "urn:uuid:7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d"
   * resource = MusterrechnungPos4
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos5"
+  * fullUrl = "urn:uuid:8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e"
   * resource = MusterrechnungPos5
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos6"
+  * fullUrl = "urn:uuid:9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f"
   * resource = MusterrechnungPos6
 * entry[+]
-  * fullUrl = "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos7"
+  * fullUrl = "urn:uuid:0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a"
   * resource = MusterrechnungPos7
