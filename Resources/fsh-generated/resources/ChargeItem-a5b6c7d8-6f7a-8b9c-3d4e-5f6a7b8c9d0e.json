@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "ChargeItemGoea1",
+  "id": "a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -100,12 +100,12 @@
     "code": "{count}"
   },
   "subject": {
-    "reference": "Patient/PatientExample"
+    "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
   },
   "performer": [
     {
       "actor": {
-        "reference": "Practitioner/PractitionerMain"
+        "reference": "Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a"
       }
     }
   ],

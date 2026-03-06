@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "MusterrechnungPos6",
+  "id": "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -44,18 +44,18 @@
     "coding": [
       {
         "system": "http://fhir.de/CodeSystem/bäk/goä",
-        "code": "3501"
+        "code": "3597.H1"
       }
     ],
-    "text": "Blutsenkung"
+    "text": "Laktatdehydrogenase (LDH)"
   },
   "subject": {
-    "reference": "Patient/MusterrechnungPatient"
+    "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
   },
   "performer": [
     {
       "actor": {
-        "reference": "Practitioner/MusterrechnungArzt"
+        "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
       }
     }
   ],

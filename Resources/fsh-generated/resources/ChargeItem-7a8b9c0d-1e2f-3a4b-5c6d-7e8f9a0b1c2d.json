@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "MusterrechnungPos7",
+  "id": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -23,7 +23,7 @@
           "extension": [
             {
               "url": "Value",
-              "valueDecimal": 1.15
+              "valueDecimal": 2.3
             }
           ]
         }
@@ -44,18 +44,18 @@
     "coding": [
       {
         "system": "http://fhir.de/CodeSystem/bäk/goä",
-        "code": "3597.H1"
+        "code": "1"
       }
     ],
-    "text": "Laktatdehydrogenase (LDH)"
+    "text": "Beratung, auch telefonisch"
   },
   "subject": {
-    "reference": "Patient/MusterrechnungPatient"
+    "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
   },
   "performer": [
     {
       "actor": {
-        "reference": "Practitioner/MusterrechnungArzt"
+        "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
       }
     }
   ],

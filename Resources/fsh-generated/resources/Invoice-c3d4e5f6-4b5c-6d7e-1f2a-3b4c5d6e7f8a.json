@@ -1,6 +1,6 @@
 {
   "resourceType": "Invoice",
-  "id": "InvoiceExample",
+  "id": "c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"
@@ -51,7 +51,7 @@
         {
           "url": "Referenz",
           "valueReference": {
-            "reference": "Condition/DiagnoseExample"
+            "reference": "Condition/f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d"
           }
         },
         {
@@ -70,13 +70,13 @@
         {
           "url": "Referenz",
           "valueReference": {
-            "reference": "Condition/DiagnoseExample2"
+            "reference": "Condition/a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e"
           }
         },
         {
           "url": "Referenz",
           "valueReference": {
-            "reference": "Procedure/ProzedurExample"
+            "reference": "Procedure/b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f"
           }
         }
       ]
@@ -112,7 +112,7 @@
         ]
       },
       "actor": {
-        "reference": "Practitioner/PractitionerSecondary"
+        "reference": "Practitioner/d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b"
       }
     },
     {
@@ -125,7 +125,7 @@
         ]
       },
       "actor": {
-        "reference": "Organization/OrganizationIssuer"
+        "reference": "Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"
       }
     }
   ],
@@ -142,7 +142,7 @@
       "system": "http://fhir.de/sid/gkv/kvid-10",
       "value": "K123456789"
     },
-    "reference": "Patient/PatientExample",
+    "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c",
     "display": "Max Mustermann"
   },
   "type": {
@@ -229,7 +229,7 @@
       ],
       "sequence": 1,
       "chargeItemReference": {
-        "reference": "ChargeItem/ChargeItemGoea1"
+        "reference": "ChargeItem/a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e"
       }
     },
     {
@@ -251,7 +251,7 @@
       ],
       "sequence": 3,
       "chargeItemReference": {
-        "reference": "ChargeItem/ChargeItemGoz"
+        "reference": "ChargeItem/b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f"
       }
     },
     {
@@ -273,7 +273,7 @@
       ],
       "sequence": 4,
       "chargeItemReference": {
-        "reference": "ChargeItem/ChargeItemLab"
+        "reference": "ChargeItem/c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a"
       }
     },
     {
@@ -295,7 +295,7 @@
       ],
       "sequence": 5,
       "chargeItemReference": {
-        "reference": "ChargeItem/ChargeItemMaterial"
+        "reference": "ChargeItem/d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b"
       }
     },
     {
@@ -317,16 +317,16 @@
       ],
       "sequence": 6,
       "chargeItemReference": {
-        "reference": "ChargeItem/ChargeItemReiseentschaedigung"
+        "reference": "ChargeItem/e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c"
       }
     }
   ],
   "date": "2024-03-15",
   "subject": {
-    "reference": "Patient/PatientExample"
+    "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
   },
   "issuer": {
-    "reference": "Organization/OrganizationIssuer"
+    "reference": "Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"
   },
   "note": [
     {

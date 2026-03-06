@@ -10,10 +10,10 @@
   "timestamp": "2018-10-24T12:00:00+01:00",
   "entry": [
     {
-      "fullUrl": "https://[FD-endpunkt]/Invoice/MusterrechnungInvoice",
+      "fullUrl": "urn:uuid:a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d",
       "resource": {
         "resourceType": "Invoice",
-        "id": "MusterrechnungInvoice",
+        "id": "a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"
@@ -74,7 +74,7 @@
               ]
             },
             "actor": {
-              "reference": "Practitioner/MusterrechnungArzt"
+              "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
             }
           },
           {
@@ -87,7 +87,7 @@
               ]
             },
             "actor": {
-              "reference": "Organization/MusterrechnungPraxis"
+              "reference": "Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
             }
           }
         ],
@@ -104,7 +104,7 @@
             "system": "http://fhir.de/sid/gkv/kvid-10",
             "value": "B123456789"
           },
-          "reference": "Patient/MusterrechnungPatient",
+          "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
           "display": "Herr B. Patient"
         },
         "type": {
@@ -129,7 +129,7 @@
             ],
             "sequence": 1,
             "chargeItemReference": {
-              "reference": "ChargeItem/MusterrechnungPos1"
+              "reference": "ChargeItem/4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
             }
           },
           {
@@ -144,7 +144,7 @@
             ],
             "sequence": 2,
             "chargeItemReference": {
-              "reference": "ChargeItem/MusterrechnungPos2"
+              "reference": "ChargeItem/5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b"
             }
           },
           {
@@ -159,7 +159,7 @@
             ],
             "sequence": 3,
             "chargeItemReference": {
-              "reference": "ChargeItem/MusterrechnungPos3"
+              "reference": "ChargeItem/6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c"
             }
           },
           {
@@ -174,7 +174,7 @@
             ],
             "sequence": 4,
             "chargeItemReference": {
-              "reference": "ChargeItem/MusterrechnungPos4"
+              "reference": "ChargeItem/7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d"
             }
           },
           {
@@ -189,7 +189,7 @@
             ],
             "sequence": 5,
             "chargeItemReference": {
-              "reference": "ChargeItem/MusterrechnungPos5"
+              "reference": "ChargeItem/8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e"
             }
           },
           {
@@ -204,7 +204,7 @@
             ],
             "sequence": 6,
             "chargeItemReference": {
-              "reference": "ChargeItem/MusterrechnungPos6"
+              "reference": "ChargeItem/9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f"
             }
           },
           {
@@ -219,16 +219,16 @@
             ],
             "sequence": 7,
             "chargeItemReference": {
-              "reference": "ChargeItem/MusterrechnungPos7"
+              "reference": "ChargeItem/0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a"
             }
           }
         ],
         "date": "2018-10-24",
         "subject": {
-          "reference": "Patient/MusterrechnungPatient"
+          "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
         },
         "issuer": {
-          "reference": "Organization/MusterrechnungPraxis"
+          "reference": "Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
         },
         "note": [
           {
@@ -255,10 +255,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Patient/MusterrechnungPatient",
+      "fullUrl": "urn:uuid:1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
       "resource": {
         "resourceType": "Patient",
-        "id": "MusterrechnungPatient",
+        "id": "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient"
@@ -319,10 +319,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Practitioner/MusterrechnungArzt",
+      "fullUrl": "urn:uuid:2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
       "resource": {
         "resourceType": "Practitioner",
-        "id": "MusterrechnungArzt",
+        "id": "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"
@@ -392,10 +392,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Organization/MusterrechnungPraxis",
+      "fullUrl": "urn:uuid:3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
       "resource": {
         "resourceType": "Organization",
-        "id": "MusterrechnungPraxis",
+        "id": "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"
@@ -430,10 +430,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos1",
+      "fullUrl": "urn:uuid:4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "MusterrechnungPos1",
+        "id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -483,12 +483,12 @@
           "text": "Beratung, auch telefonisch"
         },
         "subject": {
-          "reference": "Patient/MusterrechnungPatient"
+          "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Practitioner/MusterrechnungArzt"
+              "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
             }
           }
         ],
@@ -499,10 +499,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos2",
+      "fullUrl": "urn:uuid:5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "MusterrechnungPos2",
+        "id": "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -552,12 +552,12 @@
           "text": "Symptombezogene Untersuchung"
         },
         "subject": {
-          "reference": "Patient/MusterrechnungPatient"
+          "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Practitioner/MusterrechnungArzt"
+              "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
             }
           }
         ],
@@ -568,10 +568,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos3",
+      "fullUrl": "urn:uuid:6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "MusterrechnungPos3",
+        "id": "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -621,12 +621,12 @@
           "text": "Arbeitsunfähigkeitsbescheinigung"
         },
         "subject": {
-          "reference": "Patient/MusterrechnungPatient"
+          "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Practitioner/MusterrechnungArzt"
+              "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
             }
           }
         ],
@@ -637,10 +637,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos4",
+      "fullUrl": "urn:uuid:7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "MusterrechnungPos4",
+        "id": "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -690,12 +690,12 @@
           "text": "Beratung, auch telefonisch"
         },
         "subject": {
-          "reference": "Patient/MusterrechnungPatient"
+          "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Practitioner/MusterrechnungArzt"
+              "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
             }
           }
         ],
@@ -706,10 +706,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos5",
+      "fullUrl": "urn:uuid:8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "MusterrechnungPos5",
+        "id": "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -759,12 +759,12 @@
           "text": "Symptombezogene Untersuchung"
         },
         "subject": {
-          "reference": "Patient/MusterrechnungPatient"
+          "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Practitioner/MusterrechnungArzt"
+              "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
             }
           }
         ],
@@ -775,10 +775,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos6",
+      "fullUrl": "urn:uuid:9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "MusterrechnungPos6",
+        "id": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -828,12 +828,12 @@
           "text": "Blutsenkung"
         },
         "subject": {
-          "reference": "Patient/MusterrechnungPatient"
+          "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Practitioner/MusterrechnungArzt"
+              "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
             }
           }
         ],
@@ -844,10 +844,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/MusterrechnungPos7",
+      "fullUrl": "urn:uuid:0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "MusterrechnungPos7",
+        "id": "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -897,12 +897,12 @@
           "text": "Laktatdehydrogenase (LDH)"
         },
         "subject": {
-          "reference": "Patient/MusterrechnungPatient"
+          "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Practitioner/MusterrechnungArzt"
+              "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
             }
           }
         ],

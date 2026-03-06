@@ -10,10 +10,10 @@
   "timestamp": "2024-03-15T14:30:00+01:00",
   "entry": [
     {
-      "fullUrl": "https://[FD-endpunkt]/Invoice/InvoiceExample",
+      "fullUrl": "urn:uuid:c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a",
       "resource": {
         "resourceType": "Invoice",
-        "id": "InvoiceExample",
+        "id": "c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"
@@ -64,7 +64,7 @@
               {
                 "url": "Referenz",
                 "valueReference": {
-                  "reference": "Condition/DiagnoseExample"
+                  "reference": "Condition/f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d"
                 }
               },
               {
@@ -83,13 +83,13 @@
               {
                 "url": "Referenz",
                 "valueReference": {
-                  "reference": "Condition/DiagnoseExample2"
+                  "reference": "Condition/a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e"
                 }
               },
               {
                 "url": "Referenz",
                 "valueReference": {
-                  "reference": "Procedure/ProzedurExample"
+                  "reference": "Procedure/b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f"
                 }
               }
             ]
@@ -125,7 +125,7 @@
               ]
             },
             "actor": {
-              "reference": "Practitioner/PractitionerSecondary"
+              "reference": "Practitioner/d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b"
             }
           },
           {
@@ -138,7 +138,7 @@
               ]
             },
             "actor": {
-              "reference": "Organization/OrganizationIssuer"
+              "reference": "Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"
             }
           }
         ],
@@ -155,7 +155,7 @@
             "system": "http://fhir.de/sid/gkv/kvid-10",
             "value": "K123456789"
           },
-          "reference": "Patient/PatientExample",
+          "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c",
           "display": "Max Mustermann"
         },
         "type": {
@@ -242,7 +242,7 @@
             ],
             "sequence": 1,
             "chargeItemReference": {
-              "reference": "ChargeItem/ChargeItemGoea1"
+              "reference": "ChargeItem/a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e"
             }
           },
           {
@@ -264,7 +264,7 @@
             ],
             "sequence": 3,
             "chargeItemReference": {
-              "reference": "ChargeItem/ChargeItemGoz"
+              "reference": "ChargeItem/b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f"
             }
           },
           {
@@ -286,7 +286,7 @@
             ],
             "sequence": 4,
             "chargeItemReference": {
-              "reference": "ChargeItem/ChargeItemLab"
+              "reference": "ChargeItem/c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a"
             }
           },
           {
@@ -308,7 +308,7 @@
             ],
             "sequence": 5,
             "chargeItemReference": {
-              "reference": "ChargeItem/ChargeItemMaterial"
+              "reference": "ChargeItem/d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b"
             }
           },
           {
@@ -330,16 +330,16 @@
             ],
             "sequence": 6,
             "chargeItemReference": {
-              "reference": "ChargeItem/ChargeItemReiseentschaedigung"
+              "reference": "ChargeItem/e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c"
             }
           }
         ],
         "date": "2024-03-15",
         "subject": {
-          "reference": "Patient/PatientExample"
+          "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
         },
         "issuer": {
-          "reference": "Organization/OrganizationIssuer"
+          "reference": "Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"
         },
         "note": [
           {
@@ -366,10 +366,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Patient/PatientExample",
+      "fullUrl": "urn:uuid:8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c",
       "resource": {
         "resourceType": "Patient",
-        "id": "PatientExample",
+        "id": "8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient"
@@ -463,10 +463,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Practitioner/PractitionerMain",
+      "fullUrl": "urn:uuid:c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a",
       "resource": {
         "resourceType": "Practitioner",
-        "id": "PractitionerMain",
+        "id": "c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"
@@ -556,10 +556,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Practitioner/PractitionerSecondary",
+      "fullUrl": "urn:uuid:d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b",
       "resource": {
         "resourceType": "Practitioner",
-        "id": "PractitionerSecondary",
+        "id": "d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"
@@ -649,10 +649,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Organization/OrganizationIssuer",
+      "fullUrl": "urn:uuid:e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c",
       "resource": {
         "resourceType": "Organization",
-        "id": "OrganizationIssuer",
+        "id": "e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"
@@ -753,10 +753,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Organization/OrganizationSecondary",
+      "fullUrl": "urn:uuid:f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d",
       "resource": {
         "resourceType": "Organization",
-        "id": "OrganizationSecondary",
+        "id": "f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"
@@ -834,10 +834,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/ChargeItemGoea1",
+      "fullUrl": "urn:uuid:a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "ChargeItemGoea1",
+        "id": "a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -937,12 +937,12 @@
           "code": "{count}"
         },
         "subject": {
-          "reference": "Patient/PatientExample"
+          "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Practitioner/PractitionerMain"
+              "reference": "Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a"
             }
           }
         ],
@@ -958,10 +958,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/ChargeItemGoz",
+      "fullUrl": "urn:uuid:b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "ChargeItemGoz",
+        "id": "b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -1034,12 +1034,12 @@
           }
         ],
         "subject": {
-          "reference": "Patient/PatientExample"
+          "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Practitioner/PractitionerMain"
+              "reference": "Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a"
             }
           }
         ],
@@ -1050,10 +1050,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/ChargeItemLab",
+      "fullUrl": "urn:uuid:c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "ChargeItemLab",
+        "id": "c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -1083,12 +1083,12 @@
           "text": "Teilprothese Oberkiefer"
         },
         "subject": {
-          "reference": "Patient/PatientExample"
+          "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Organization/OrganizationSecondary"
+              "reference": "Organization/f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d"
             }
           }
         ],
@@ -1099,10 +1099,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/ChargeItemMaterial",
+      "fullUrl": "urn:uuid:d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "ChargeItemMaterial",
+        "id": "d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -1142,12 +1142,12 @@
           "text": "Dentalmaterial"
         },
         "subject": {
-          "reference": "Patient/PatientExample"
+          "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Organization/OrganizationIssuer"
+              "reference": "Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"
             }
           }
         ],
@@ -1158,10 +1158,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/ChargeItem/ChargeItemReiseentschaedigung",
+      "fullUrl": "urn:uuid:e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c",
       "resource": {
         "resourceType": "ChargeItem",
-        "id": "ChargeItemReiseentschaedigung",
+        "id": "e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -1228,12 +1228,12 @@
           "text": "Reiseentschädigung für Hausbesuch"
         },
         "subject": {
-          "reference": "Patient/PatientExample"
+          "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
         },
         "performer": [
           {
             "actor": {
-              "reference": "Practitioner/PractitionerMain"
+              "reference": "Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a"
             }
           }
         ],
@@ -1244,10 +1244,10 @@
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Condition/DiagnoseExample",
+      "fullUrl": "urn:uuid:f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d",
       "resource": {
         "resourceType": "Condition",
-        "id": "DiagnoseExample",
+        "id": "f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose"
@@ -1264,16 +1264,16 @@
           ]
         },
         "subject": {
-          "reference": "Patient/PatientExample"
+          "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
         },
         "onsetDateTime": "2024-01-15"
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Condition/DiagnoseExample2",
+      "fullUrl": "urn:uuid:a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e",
       "resource": {
         "resourceType": "Condition",
-        "id": "DiagnoseExample2",
+        "id": "a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose"
@@ -1290,16 +1290,16 @@
           ]
         },
         "subject": {
-          "reference": "Patient/PatientExample"
+          "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
         },
         "onsetDateTime": "2024-01-15"
       }
     },
     {
-      "fullUrl": "https://[FD-endpunkt]/Procedure/ProzedurExample",
+      "fullUrl": "urn:uuid:b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f",
       "resource": {
         "resourceType": "Procedure",
-        "id": "ProzedurExample",
+        "id": "b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur"
@@ -1317,7 +1317,7 @@
           ]
         },
         "subject": {
-          "reference": "Patient/PatientExample"
+          "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
         },
         "performedDateTime": "2024-02-20"
       }

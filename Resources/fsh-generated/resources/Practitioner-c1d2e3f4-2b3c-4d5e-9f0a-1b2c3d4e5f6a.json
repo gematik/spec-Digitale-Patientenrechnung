@@ -1,6 +1,6 @@
 {
   "resourceType": "Practitioner",
-  "id": "PractitionerSecondary",
+  "id": "c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"
@@ -17,7 +17,7 @@
         ]
       },
       "system": "https://gematik.de/fhir/sid/telematik-id",
-      "value": "1-HBA-Testkarte-883110000123466"
+      "value": "1-HBA-Testkarte-883110000123465"
     }
   ],
   "name": [
@@ -36,17 +36,17 @@
         }
       ],
       "use": "official",
-      "text": "Dr. Anna Mueller",
-      "family": "Mueller",
+      "text": "Dr. Hans Schulz",
+      "family": "Schulz",
       "given": [
-        "Anna"
+        "Hans"
       ]
     }
   ],
   "telecom": [
     {
       "system": "phone",
-      "value": "+49 30 123457"
+      "value": "+49 30 123456"
     }
   ],
   "address": [

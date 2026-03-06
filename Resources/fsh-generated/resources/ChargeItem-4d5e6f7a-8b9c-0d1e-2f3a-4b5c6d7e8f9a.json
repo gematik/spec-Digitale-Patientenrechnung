@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "ChargeItemLab",
+  "id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -11,13 +11,27 @@
     {
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
       "valueCoding": {
-        "code": "Fremdlaborleistung",
+        "code": "GOÄ",
         "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
       }
     },
     {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+      "extension": [
+        {
+          "url": "Faktor",
+          "extension": [
+            {
+              "url": "Value",
+              "valueDecimal": 2.3
+            }
+          ]
+        }
+      ]
+    },
+    {
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
-      "valueDate": "2024-03-01"
+      "valueDate": "2018-10-04"
     }
   ],
   "quantity": {
@@ -27,20 +41,26 @@
     "code": "{count}"
   },
   "code": {
-    "text": "Teilprothese Oberkiefer"
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/goä",
+        "code": "1"
+      }
+    ],
+    "text": "Beratung, auch telefonisch"
   },
   "subject": {
-    "reference": "Patient/PatientExample"
+    "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
   },
   "performer": [
     {
       "actor": {
-        "reference": "Organization/OrganizationSecondary"
+        "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
       }
     }
   ],
   "occurrencePeriod": {
-    "start": "2024-03-01",
-    "end": "2024-03-10"
+    "start": "2018-10-04",
+    "end": "2018-10-04"
   }
 }
