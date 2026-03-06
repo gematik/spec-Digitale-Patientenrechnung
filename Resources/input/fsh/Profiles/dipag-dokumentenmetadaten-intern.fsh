@@ -83,7 +83,7 @@ Id: dipag-dokumentenmetadaten-intern
   * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#originaleRechnung
   * attachment 1..1 MS
     * contentType 1.. MS
-    * contentType from DiPagRestrictedMimeTypesVS (required)
+    * contentType = #application/pdf
       * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt."
     * data 0..0
       * ^comment = "Die angereicherte Rechnung wird durch den FD direkt als Binary-Ressource unter attachment.url referenziert."
@@ -93,7 +93,7 @@ Id: dipag-dokumentenmetadaten-intern
   * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#angereichertesPDF
   * attachment 1..1 MS
     * contentType 1.. MS
-    * contentType from DiPagRestrictedMimeTypesVS (required)
+    * contentType = #application/pdf
       * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt."
     * data 0..0
       * ^comment = "Die angereicherte Rechnung wird durch den FD direkt als Binary-Ressource unter attachment.url referenziert."
@@ -112,7 +112,7 @@ Id: dipag-dokumentenmetadaten-intern
   * format MS
   * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsanhang
   * attachment 1..1 MS
-    * contentType from DiPagRestrictedMimeTypesVS (required)
+    * contentType = #application/pdf
     * contentType 1.. MS
       * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnungsanhänge seitens der Leistungserbringer:in unterstützt."
     * data 0..0
@@ -137,6 +137,15 @@ Title: "Digitale Patientenrechnung Restricted Mime Types"
 
 * include urn:ietf:bcp:13#application/fhir+json
 * include urn:ietf:bcp:13#application/fhir+xml
+
+ValueSet: DiPagRestrictedMimeTypesInBinaryVS
+Id: dipag-restricted-mime-types-in-binary-vs
+Title: "Digitale Patientenrechnung Restricted Mime Types in Binary"
+* insert Meta
+
+* include urn:ietf:bcp:13#application/fhir+json
+* include urn:ietf:bcp:13#application/fhir+xml
+* include urn:ietf:bcp:13#application/pdf
 
 ValueSet: DiPagRechnungsstatusVS
 Id: dipag-rechnungsstatus-vs

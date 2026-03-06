@@ -52,12 +52,12 @@ InstanceOf: DiPagDokumentenmetadatenIntern
 * content[+]
   * format = DiPagAttachmentFormatCS#originaleRechnung
   * attachment
-    * contentType = #application/fhir+json
+    * contentType = #application/pdf
     * url = "[FD-endpunkt]/Binary/id-der-originalen-rechnung"
 * content[+]
   * format = DiPagAttachmentFormatCS#angereichertesPDF
   * attachment
-    * contentType = #application/fhir+json
+    * contentType = #application/pdf
     * url = "[FD-endpunkt]/Binary/id-der-angereicherten-rechnung"
 * content[+] 
   * format = DiPagAttachmentFormatCS#rechnungsinhalt

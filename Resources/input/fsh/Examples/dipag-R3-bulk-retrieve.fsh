@@ -39,11 +39,11 @@ Description: "Der Einfachheit halber wurden hier nur die relevanten Felder darge
 * description = "Rechnung Reiseimpfung vom 11.01.2024"
 * subject.display = "Erika Mustermann"
 * content[originaleRechnung].attachment
-  * contentType = #application/fhir+json
+  * contentType = #application/pdf
   * url = "[FD-endpunkt]/Binary/id-der-originalen-rechnung2"
 * content[strukturierterRechnungsinhalt].attachment
   * contentType = #application/fhir+json
   * url = "[FD-endpunkt]/Binary/id-des-strukturierten-rechnungsinhalts2"
 * content[angereicherteRechnung].attachment
-  * contentType = #application/fhir+json
+  * contentType = #application/pdf
   * url = "[FD-endpunkt]/Binary/id-des-angereicherten-pdfs2"

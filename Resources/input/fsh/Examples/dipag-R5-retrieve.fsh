@@ -32,9 +32,9 @@ Title: "Example DiPag Document Reference"
 * author.identifier.system = "https://gematik.de/fhir/sid/telematik-id"
 * author.identifier.value = "987654321"
 * author.display = "Dr. Hausarzt"
-* content[originaleRechnung].attachment.contentType = #application/fhir+json
+* content[originaleRechnung].attachment.contentType = #application/pdf
 * content[originaleRechnung].attachment.url = "[FD-endpunkt]/Binary/id-der-originalen-Rechnung"
-* content[angereicherteRechnung].attachment.contentType = #application/fhir+json
+* content[angereicherteRechnung].attachment.contentType = #application/pdf
 * content[angereicherteRechnung].attachment.url = "[FD-endpunkt]/Binary/id-des-angereicherten-PDFs"
 * content[strukturierterRechnungsinhalt].attachment.contentType = #application/fhir+json
 * content[strukturierterRechnungsinhalt].attachment.url = "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
@@ -50,7 +50,7 @@ InstanceOf: DiPagDokumentenmetadatenIntern
 * description = "Molekularpathologiebefund vom 31.12.21"
 * subject.display = "Max Mustermann"
 * content[anhang].attachment
-  * contentType = #application/fhir+json
+  * contentType = #application/pdf
   * url = "[FD-endpunkt]/Binary/id-des-anhangs"
 * context.related[patient] = Reference(BeispielPatient3-FD)
 
