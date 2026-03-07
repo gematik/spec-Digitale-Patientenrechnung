@@ -3,6 +3,7 @@ Parent: Bundle
 Id: dipag-rechnungsbundle
 Title: "Digitale Patientenrechnung - Rechnungsinhalte Bundle"
 Description: "Dieses Profil stellt das collection-Bundle dar, mit welchem die strukturierten Rechnungsinhalte zusammengefasst und als base64-kodiertes Binary in der DocumentReference referenziert werden."
+* insert Meta
 * type 1.. MS
 * type = #collection
 * timestamp MS
