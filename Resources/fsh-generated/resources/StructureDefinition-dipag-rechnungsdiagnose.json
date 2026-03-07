@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnungsdiagnose",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "DiPagRechnungsdiagnose",
   "title": "Digitale Patientenrechnung Rechnungsdiagnose",
   "status": "active",
   "experimental": false,
-  "date": "2025-10-06",
+  "date": "2026-03-07",
   "publisher": "gematik GmbH",
   "contact": [
     {

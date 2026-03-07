@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-abzug-kassenanteil",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-abzug-kassenanteil",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "DiPagAbzugKassenanteil",
   "title": "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent",
   "status": "active",
   "experimental": false,
-  "date": "2025-10-06",
+  "date": "2026-03-07",
   "publisher": "gematik GmbH",
   "contact": [
     {

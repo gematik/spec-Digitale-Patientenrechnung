@@ -5,10 +5,10 @@
   "id": "dipag-rechnung-markierung-vs",
   "title": "Digitale Patientenrechnung Rechnung Markierung VS",
   "description": "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-markierung-vs",
   "experimental": false,
-  "date": "2025-10-06",
+  "date": "2026-03-07",
   "publisher": "gematik GmbH",
   "contact": [
     {

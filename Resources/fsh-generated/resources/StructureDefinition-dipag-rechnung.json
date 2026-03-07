@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnung",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "DiPagRechnung",
   "title": "Digitale Patientenrechnung Rechnung",
   "status": "active",
   "experimental": false,
-  "date": "2025-10-06",
+  "date": "2026-03-07",
   "publisher": "gematik GmbH",
   "contact": [
     {
