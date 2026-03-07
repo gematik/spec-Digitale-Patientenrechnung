@@ -2,9 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnungsbundle",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle",
+  "version": "1.0.3",
   "name": "DiPagRechnungsBundle",
   "title": "Digitale Patientenrechnung - Rechnungsinhalte Bundle",
-  "status": "draft",
+  "status": "active",
+  "experimental": false,
+  "date": "2025-10-06",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "description": "Dieses Profil stellt das collection-Bundle dar, mit welchem die strukturierten Rechnungsinhalte zusammengefasst und als base64-kodiertes Binary in der DocumentReference referenziert werden.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
