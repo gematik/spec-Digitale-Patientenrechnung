@@ -11,6 +11,48 @@ canonical7: https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungspro
 
 {{index:current}}
 
+## Beispiele
+
+Im IG sind zwei Musterbeispiele für die Rechnungsinhalte enthalten:
+
+Dieses stellt ein Maximalbeispiel dar, welches alle möglichen Elemente befüllt. Es basiert auf keiner real existierenden Rechnung, sondern dient ausschließlich der Veranschaulichung aller möglichen Elemente und deren Befüllung.
+
+<tabs>
+    <tab title="Bundle-Example">      
+        {{render:Resources/fsh-generated/resources/Bundle-BundleExample.json}}
+    </tab>
+    <tab title="XML">      
+        {{xml:Resources/fsh-generated/resources/Bundle-BundleExample.json}}
+    </tab>
+    <tab title="JSON">
+        {{json:Resources/fsh-generated/resources/Bundle-BundleExample.json}}
+    </tab>
+    <tab title="Link">
+        {{link:Resources/fsh-generated/resources/Bundle-BundleExample.json}}
+    </tab>
+</tabs>
+
+Dieses wurde auf Basis einer realen Rechnung erstellt
+
+<tabs>
+    <tab title="Bundle-Musterrechnung">      
+        {{render:Resources/fsh-generated/resources/Bundle-MusterrechnungBundle.json}}
+    </tab>
+    <tab title="XML">      
+        {{xml:Resources/fsh-generated/resources/Bundle-MusterrechnungBundle.json}}
+    </tab>
+    <tab title="JSON">
+        {{json:Resources/fsh-generated/resources/Bundle-MusterrechnungBundle.json}}
+    </tab>
+    <tab title="Link">
+        {{link:Resources/fsh-generated/resources/Bundle-MusterrechnungBundle.json}}
+    </tab>
+</tabs>
+
+Die Rechnung:
+
+{{render:Material/Musterrechnung_Arztbehandlung.png}} 
+
 ## Zuordnung Rechnungsinhalte zum FHIR Element
 
 <fql>

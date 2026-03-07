@@ -14,11 +14,11 @@ InstanceOf: Bundle
 Usage: #example
 * type = #batch-response
 * entry[+]
-  * fullUrl = "https://example.org/fhir/DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
-  * resource = BeispielDocumentReferenceRechnungRetrieve
+  * fullUrl = "urn:uuid:f47ac10b-58cc-4372-a567-0e02b2c3d479"
+  * resource = BeispielParameterRetrieveOutput
   * response.status = "200"
 * entry[+]
-  * fullUrl = "https://example.org/fhir/DocumentReference/BeispielDocumentReferenceRechnungRetrieve2"
+  * fullUrl = "urn:uuid:7f4a8b2e-9c1d-4e5f-a6b8-3c2d9e1f0a7b"
   * resource = BeispielDocumentReferenceRechnungRetrieve2
   * response.status = "200"
 
