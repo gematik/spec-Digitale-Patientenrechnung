@@ -1,6 +1,6 @@
 {
   "resourceType": "Patient",
-  "id": "PatientExample",
+  "id": "8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient"

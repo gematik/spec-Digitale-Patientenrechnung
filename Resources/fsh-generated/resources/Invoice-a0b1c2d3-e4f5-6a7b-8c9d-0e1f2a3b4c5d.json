@@ -1,6 +1,6 @@
 {
   "resourceType": "Invoice",
-  "id": "MusterrechnungInvoice",
+  "id": "a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"
@@ -61,7 +61,7 @@
         ]
       },
       "actor": {
-        "reference": "Practitioner/MusterrechnungArzt"
+        "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
       }
     },
     {
@@ -74,7 +74,7 @@
         ]
       },
       "actor": {
-        "reference": "Organization/MusterrechnungPraxis"
+        "reference": "Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
       }
     }
   ],
@@ -91,7 +91,7 @@
       "system": "http://fhir.de/sid/gkv/kvid-10",
       "value": "B123456789"
     },
-    "reference": "Patient/MusterrechnungPatient",
+    "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
     "display": "Herr B. Patient"
   },
   "type": {
@@ -116,7 +116,7 @@
       ],
       "sequence": 1,
       "chargeItemReference": {
-        "reference": "ChargeItem/MusterrechnungPos1"
+        "reference": "ChargeItem/4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
       }
     },
     {
@@ -131,7 +131,7 @@
       ],
       "sequence": 2,
       "chargeItemReference": {
-        "reference": "ChargeItem/MusterrechnungPos2"
+        "reference": "ChargeItem/5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b"
       }
     },
     {
@@ -146,7 +146,7 @@
       ],
       "sequence": 3,
       "chargeItemReference": {
-        "reference": "ChargeItem/MusterrechnungPos3"
+        "reference": "ChargeItem/6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c"
       }
     },
     {
@@ -161,7 +161,7 @@
       ],
       "sequence": 4,
       "chargeItemReference": {
-        "reference": "ChargeItem/MusterrechnungPos4"
+        "reference": "ChargeItem/7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d"
       }
     },
     {
@@ -176,7 +176,7 @@
       ],
       "sequence": 5,
       "chargeItemReference": {
-        "reference": "ChargeItem/MusterrechnungPos5"
+        "reference": "ChargeItem/8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e"
       }
     },
     {
@@ -191,7 +191,7 @@
       ],
       "sequence": 6,
       "chargeItemReference": {
-        "reference": "ChargeItem/MusterrechnungPos6"
+        "reference": "ChargeItem/9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f"
       }
     },
     {
@@ -206,16 +206,16 @@
       ],
       "sequence": 7,
       "chargeItemReference": {
-        "reference": "ChargeItem/MusterrechnungPos7"
+        "reference": "ChargeItem/0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a"
       }
     }
   ],
   "date": "2018-10-24",
   "subject": {
-    "reference": "Patient/MusterrechnungPatient"
+    "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
   },
   "issuer": {
-    "reference": "Organization/MusterrechnungPraxis"
+    "reference": "Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
   },
   "note": [
     {

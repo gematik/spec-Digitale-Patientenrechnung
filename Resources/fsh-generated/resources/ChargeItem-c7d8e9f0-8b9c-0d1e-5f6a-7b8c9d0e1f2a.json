@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "MusterrechnungPos2",
+  "id": "c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -11,27 +11,13 @@
     {
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
       "valueCoding": {
-        "code": "GOÄ",
+        "code": "Fremdlaborleistung",
         "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
       }
     },
     {
-      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
-      "extension": [
-        {
-          "url": "Faktor",
-          "extension": [
-            {
-              "url": "Value",
-              "valueDecimal": 2.3
-            }
-          ]
-        }
-      ]
-    },
-    {
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
-      "valueDate": "2018-10-04"
+      "valueDate": "2024-03-01"
     }
   ],
   "quantity": {
@@ -41,26 +27,20 @@
     "code": "{count}"
   },
   "code": {
-    "coding": [
-      {
-        "system": "http://fhir.de/CodeSystem/bäk/goä",
-        "code": "5"
-      }
-    ],
-    "text": "Symptombezogene Untersuchung"
+    "text": "Teilprothese Oberkiefer"
   },
   "subject": {
-    "reference": "Patient/MusterrechnungPatient"
+    "reference": "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
   },
   "performer": [
     {
       "actor": {
-        "reference": "Practitioner/MusterrechnungArzt"
+        "reference": "Organization/f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d"
       }
     }
   ],
   "occurrencePeriod": {
-    "start": "2018-10-04",
-    "end": "2018-10-04"
+    "start": "2024-03-01",
+    "end": "2024-03-10"
   }
 }

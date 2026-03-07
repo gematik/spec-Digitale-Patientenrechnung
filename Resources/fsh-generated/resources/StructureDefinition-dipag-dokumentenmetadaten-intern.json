@@ -392,11 +392,8 @@
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt.",
         "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-vs"
-        }
+        "patternCode": "application/pdf",
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.content:originaleRechnung.attachment.data",
@@ -438,11 +435,8 @@
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt.",
         "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-vs"
-        }
+        "patternCode": "application/pdf",
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.content:angereicherteRechnung.attachment.data",
@@ -530,11 +524,8 @@
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnungsanhänge seitens der Leistungserbringer:in unterstützt.",
         "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-vs"
-        }
+        "patternCode": "application/pdf",
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.content:anhang.attachment.data",

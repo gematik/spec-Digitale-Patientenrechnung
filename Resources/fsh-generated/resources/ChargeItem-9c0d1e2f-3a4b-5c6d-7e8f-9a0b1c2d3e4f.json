@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "ChargeItemMaterial",
+  "id": "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -11,46 +11,56 @@
     {
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
       "valueCoding": {
-        "code": "SachkostenAuslagen",
+        "code": "GOÄ",
         "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
       }
     },
     {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+      "extension": [
+        {
+          "url": "Faktor",
+          "extension": [
+            {
+              "url": "Value",
+              "valueDecimal": 1.15
+            }
+          ]
+        }
+      ]
+    },
+    {
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
-      "valueDate": "2024-02-20"
+      "valueDate": "2018-10-19"
     }
   ],
-  "productCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://fhir.de/CodeSystem/ifa/pzn",
-        "code": "12345678",
-        "display": "Komposit XYZ"
-      }
-    ],
-    "text": "Komposit-Füllungsmaterial"
-  },
   "quantity": {
     "system": "http://unitsofmeasure.org",
-    "value": 2,
+    "value": 1,
     "unit": "Anzahl",
     "code": "{count}"
   },
   "code": {
-    "text": "Dentalmaterial"
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/goä",
+        "code": "3501"
+      }
+    ],
+    "text": "Blutsenkung"
   },
   "subject": {
-    "reference": "Patient/PatientExample"
+    "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
   },
   "performer": [
     {
       "actor": {
-        "reference": "Organization/OrganizationIssuer"
+        "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
       }
     }
   ],
   "occurrencePeriod": {
-    "start": "2024-02-20",
-    "end": "2024-02-20"
+    "start": "2018-10-19",
+    "end": "2018-10-19"
   }
 }

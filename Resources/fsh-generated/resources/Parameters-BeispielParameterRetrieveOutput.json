@@ -97,7 +97,7 @@
               "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             },
             "attachment": {
-              "contentType": "application/fhir+json",
+              "contentType": "application/pdf",
               "url": "[FD-endpunkt]/Binary/id-der-originalen-rechnung"
             }
           },
@@ -107,7 +107,7 @@
               "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             },
             "attachment": {
-              "contentType": "application/fhir+json",
+              "contentType": "application/pdf",
               "url": "[FD-endpunkt]/Binary/id-der-angereicherten-rechnung"
             }
           },

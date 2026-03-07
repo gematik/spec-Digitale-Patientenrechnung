@@ -84,23 +84,23 @@
         ],
         "content": [
           {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "[FD-endpunkt]/Binary/id-der-originalen-Rechnung"
+            },
             "format": {
               "code": "originaleRechnung",
               "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
-            },
-            "attachment": {
-              "contentType": "application/fhir+json",
-              "url": "[FD-endpunkt]/Binary/id-der-originalen-Rechnung"
             }
           },
           {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "[FD-endpunkt]/Binary/id-des-angereicherten-PDFs"
+            },
             "format": {
               "code": "angereichertesPDF",
               "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
-            },
-            "attachment": {
-              "contentType": "application/fhir+json",
-              "url": "[FD-endpunkt]/Binary/id-des-angereicherten-PDFs"
             }
           },
           {
