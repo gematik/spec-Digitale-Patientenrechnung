@@ -27,7 +27,7 @@ Die Input- und Output-Parameter werden durch die OperationDefinition `https://ge
 |Dokumnent kann anhand des Rechnungstokens nicht gefunden werden|`404 - Not Found`|
 |Andere HTTP-Methode wird verwendet|`405 - Method Not Allowed`|
 
-Anhand des übermittelten Dokumententokens MUSS der FD die entsprechende DocumentReference suchen. Das originale Rechnungsdokument MUSS durch den FD unter `DocumentReference.content:rechnungspdf` ausgeblendet werden, in Abhänigkeit des `originaleRechnung`-Parameter. Dies gilt ebenfalls für die Signatur-Extension.
+Anhand des übermittelten Dokumententokens MUSS der FD die entsprechende DocumentReference suchen. Das originale Rechnungsdokument MUSS durch den FD unter `DocumentReference.content:originaleRechnung` ausgeblendet werden, in Abhänigkeit des `originaleRechnung`-Parameter. Dies gilt ebenfalls für die Signatur-Extension auf `DocumentReference` Ebene.
 
 Die DocumentReference-Ressource KANN direkt an den Client zurückgegeben werden ohne, dass diese in eine Parameter-Ressource eingebettet wird.
 
