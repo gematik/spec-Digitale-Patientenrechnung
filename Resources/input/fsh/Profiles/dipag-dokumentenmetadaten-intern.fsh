@@ -28,6 +28,8 @@ Id: dipag-dokumentenmetadaten-intern
   * ^comment = "Die Leistungsart wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
 * extension[behandlungsart]
   * ^comment = "Die Behandlungsart wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
+* extension[docRef-signature]
+  * ^comment = "Die Signatur auf Ebene der DocumentReference muss nur beim Typ Rechnung vorhanden sein unnd umfasst eine Signatur über die originale Rechnung und die strukturierten Rechnungsinhalte."
 * meta.extension MS
 * meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
 * meta.extension[markierung]
@@ -82,6 +84,9 @@ Id: dipag-dokumentenmetadaten-intern
   * format MS
   * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#originaleRechnung
   * attachment 1..1 MS
+    * extension DiPagDocRefSignature named signature 1..1 MS
+    * extension[signature]
+      * ^comment = "Die Signatur auf Ebene der Attachment muss vorhanden sein und umfasst eine Signatur über den Hash der originalen Rechnung."
     * contentType 1.. MS
     * contentType = #application/pdf
       * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt."
@@ -92,6 +97,9 @@ Id: dipag-dokumentenmetadaten-intern
   * format MS
   * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#angereichertesPDF
   * attachment 1..1 MS
+    * extension DiPagDocRefSignature named signature 1..1 MS
+    * extension[signature]
+      * ^comment = "Die Signatur auf Ebene der Attachment muss vorhanden sein und umfasst eine Signatur über den Hash der angereicherten Rechnung."
     * contentType 1.. MS
     * contentType = #application/pdf
       * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt."
@@ -102,7 +110,10 @@ Id: dipag-dokumentenmetadaten-intern
   * format MS
   * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsinhalt
   * attachment 1..1 MS
-    * contentType from DiPagRestrictedMimeTypesVS (required)
+    * extension DiPagDocRefSignature named signature 1..1 MS
+    * extension[signature]
+      * ^comment = "Die Signatur auf Ebene der Attachment muss vorhanden sein und umfasst eine Signatur über den Hash der strukturierten Rechnungsinhalte. Die strukturierten Rechnungsinhalte müssen im Format fhir+json vorhanden sein."
+    * contentType = #application/fhir+json
     * contentType 1.. MS
       * ^comment = "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden."
     * data 0..0
@@ -112,6 +123,9 @@ Id: dipag-dokumentenmetadaten-intern
   * format MS
   * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsanhang
   * attachment 1..1 MS
+    * extension DiPagDocRefSignature named signature 1..1 MS
+    * extension[signature]
+      * ^comment = "Die Signatur auf Ebene der Attachment muss vorhanden sein und umfasst eine Signatur über den Hash des Anhangs."
     * contentType = #application/pdf
     * contentType 1.. MS
       * ^comment = "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnungsanhänge seitens der Leistungserbringer:in unterstützt."
@@ -130,21 +144,12 @@ Id: dipag-dokumentenmetadaten-intern
 
 // ------------- ValueSets -------------
 
-ValueSet: DiPagRestrictedMimeTypesVS
-Id: dipag-restricted-mime-types-vs
-Title: "Digitale Patientenrechnung Restricted Mime Types"
-* insert Meta
-
-* include urn:ietf:bcp:13#application/fhir+json
-* include urn:ietf:bcp:13#application/fhir+xml
-
 ValueSet: DiPagRestrictedMimeTypesInBinaryVS
 Id: dipag-restricted-mime-types-in-binary-vs
 Title: "Digitale Patientenrechnung Restricted Mime Types in Binary"
 * insert Meta
 
 * include urn:ietf:bcp:13#application/fhir+json
-* include urn:ietf:bcp:13#application/fhir+xml
 * include urn:ietf:bcp:13#application/pdf
 
 ValueSet: DiPagRechnungsstatusVS
@@ -182,9 +187,8 @@ Extension: DiPagDocRefSignature
 Id: dipag-docref-signature
 Title: "Digitale Patientenrechnung DocRef Signature"
 Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten"
-Context: DocumentReference
+Context: DocumentReference, DocumentRefwerence.content.attachment
 * insert Meta
-
 * value[x] 1.. MS
 * value[x] only Signature
 
@@ -213,7 +217,7 @@ Context: DocumentReference
 
 Invariant: SignaturVerpflichtendRechnung
 Description: "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt."
-Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'angereichertesPDF').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()"
+Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()"
 Severity: #error
 
 

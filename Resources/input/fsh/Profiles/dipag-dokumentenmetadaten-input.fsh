@@ -3,7 +3,6 @@ Title: "Digitale Patientenrechnung Dokumentenmetadaten Eingang"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-eingang
 * insert Meta
-* obeys SignaturVerpflichtendRechnung
 * obeys RechnungOderAnhang
 * status MS
 * status = #current
@@ -53,7 +52,7 @@ Id: dipag-dokumentenmetadaten-eingang
   * format MS
   * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsinhalt
   * attachment 1..1 MS
-    * contentType from DiPagRestrictedMimeTypesVS (required)
+    * contentType = #application/fhir+json
     * contentType 1.. MS
       * ^comment = "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden."
     * data 1.. MS
