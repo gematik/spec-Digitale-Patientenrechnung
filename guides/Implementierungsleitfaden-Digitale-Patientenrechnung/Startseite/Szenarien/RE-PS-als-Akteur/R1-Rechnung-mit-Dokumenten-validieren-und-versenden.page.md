@@ -35,7 +35,7 @@ Der FD muss die syntaktischen und semantischen Prüfungen der Rechnung durchfüh
 
 ### Signatur
 
-Die Signatur ist auf zwei Ebenen definiert:
+Die Signatur ist auf drei Ebenen definiert:
 
 **Signatur auf Ebene der Attachments**
 
@@ -44,6 +44,10 @@ Für jedes übermittelte Attachment (originale Rechnung, angereicherte Rechnung,
 **Signatur auf Ebene der DocumentReference**
 
 Bei Rechnungsdokumenten (d.h. `type.coding` enthält KDL-Code `AM010106`) MUSS zusätzlich eine Signatur auf Ebene der DocumentReference vorhanden sein (Invariante `SignaturVerpflichtendRechnung`). Diese Signatur wird über die Extension `docRef-signature` an der DocumentReference abgebildet und umfasst eine Signatur über die originale Rechnung sowie die strukturierten Rechnungsinhalte.
+
+**Signatur innerhalb der PDF/A-Dokumente**
+
+Im angereicherten PDF/A und im PDF/A eines Anhangs muss die Signatur eingebettet werden.
 
 Weitere Details zur Signatur, siehe [gemSpec_DiPag_FD - Abschnitt 6.5 Signatur](https://gemspec.gematik.de/docs/gemSpec/gemSpec_DiPag_FD/gemSpec_DiPag_FD_V1.1.1/#6.5).
 
