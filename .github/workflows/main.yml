@@ -74,8 +74,10 @@ jobs:
           include: errors
           filters: |
             # Struktur: fileName|messageId|detailsWildcard|location
-            |Validation_VAL_Profile_MatchMultiple||*​type.​coding[0]
-            |Terminology_TX_Confirm_4a||*type.​coding[0]
+            |Validation_VAL_Profile_MatchMultiple|*|DocumentReference.​type.​coding[0]
+            |Terminology_TX_Confirm_4a|*|DocumentReference.​type.​coding[0]
+            |Validation_VAL_Profile_MatchMultiple|*|Parameters.*
+            |Terminology_TX_Confirm_4a|*|Parameters.*
 
 
           

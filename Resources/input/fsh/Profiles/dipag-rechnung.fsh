@@ -54,8 +54,8 @@ Id: dipag-rechnung
 * extension[Korrekturrechnung]
   * ^short = "Info Korrekturrechnung"
   * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, SOLL die ersetzte Rechnung hier referenziert werden."
-  * valueCanonical 1..1 MS
-  * valueCanonical only Canonical(DiPagRechnung or Invoice)
+  * valueReference 1..1 MS
+  * valueReference only Reference(DiPagRechnung or Invoice)
 * extension[Korrekturtoken]
   * ^short = "Info Korrekturtoken"
   * ^comment = "Wenn die Instanz dieser Rechnung eine Korrektur einer anderen Rechnung ist, SOLL das Token der ersetzten Rechnung hier angegeben werden."
