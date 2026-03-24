@@ -32,13 +32,6 @@
         "path": "DocumentReference",
         "constraint": [
           {
-            "key": "SignaturVerpflichtendRechnung",
-            "severity": "error",
-            "human": "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt.",
-            "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'angereichertesPDF').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()",
-            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
-          },
-          {
             "key": "RechnungOderAnhang",
             "severity": "error",
             "human": "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten.",
@@ -239,11 +232,8 @@
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden.",
         "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-vs"
-        }
+        "patternCode": "application/fhir+json",
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.data",

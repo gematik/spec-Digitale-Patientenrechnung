@@ -169,13 +169,13 @@
             }
           },
           {
-            "format": {
-              "code": "rechnungsinhalt",
-              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
-            },
             "attachment": {
               "contentType": "application/fhir+json",
               "url": "[FD-endpunkt]/Binary/id-des-strukturierten-rechnungsinhalts2"
+            },
+            "format": {
+              "code": "rechnungsinhalt",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
             }
           },
           {

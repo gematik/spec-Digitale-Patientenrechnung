@@ -28,9 +28,6 @@
             "code": "application/fhir+json"
           },
           {
-            "code": "application/fhir+xml"
-          },
-          {
             "code": "application/pdf"
           }
         ]
