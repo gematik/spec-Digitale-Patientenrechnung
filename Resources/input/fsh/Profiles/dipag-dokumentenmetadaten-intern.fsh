@@ -221,9 +221,9 @@ Context: DocumentReference
 // ------------- Constraints -------------
 
 Invariant: SignaturVerpflichtendRechnung
-Description: "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt."
+Description: "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt. Diese Invariante ist als Warnung eingestuft, weil in R5 zur Ausgabe entfernt wird und diese Ausgabe ohne Validierungsfehler sein soll."
 Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()"
-Severity: #error
+Severity: #warning
 
 
 
