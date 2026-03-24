@@ -20,10 +20,11 @@ Die Input- und Output-Parameter werden durch die OperationDefinition `https://ge
 |API-Zustand|HTTP-Status-Code|
 |-|-|
 |Erfolgsfall|`200 - OK`|
-|Eine DocumentReferenz mit dem selben Identifier extistiert bereits|`200 - OK` In diesem Fall wird der ursprüngliche Response mit Rechnungs-Token erneut zurück gegeben|
+|Eine DocumentReferenz mit dem selben Hash existiert bereits und der Modus = `korrektur` ist gesetzt|`200 - OK` Die Rechnung wird als Duplikat angelegt|
+|Eine DocumentReferenz mit dem selben Hash existiert bereits und der Modus = `korrektur` ist **nicht** gesetzt|`409 - Conflict` Im OperationOutcome enthalten ist der Zeitpunkt, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.|
 |Weitere Parameter in HTTP-Anfrage enthalten|`400 - Bad Request`|
 |Syntax für Parameter ist nicht korrekt oder Kardinalitäten werden nicht eingehalten|`400 - Bad Request`|
-|Gravierende Fehler treten während der Validierung auf - Mode = 'normal'|`400 - Bad Request`|
+|Gravierende Fehler treten während der Validierung auf - Modus = 'normal'|`400 - Bad Request`|
 |Kein valides Access-Token wird mitgesendet|`401 - Unauthorized`|
 |Autorisierter Benutzer verfügt über keine ausreichende Berechtigung die Interaktion auszuführen|`403 - Forbidden`|
 |Fehlende Berechtigung für den Leistungserbringer das Postfach zu verwenden|`404 - Not Found` In diesem Fall: OperationOutcome mit Hinweis, dass Einwilligung nicht vorliegt oder Benutzer nicht vorhanden ist|
@@ -32,6 +33,23 @@ Die Input- und Output-Parameter werden durch die OperationDefinition `https://ge
 ### Dokumentenvalidierung
 
 Der FD muss die syntaktischen und semantischen Prüfungen der Rechnung durchführen welche in AF_10136 unter 'Ablauf' beschrieben sind. Bei der Verarbeitung einer Rechnungen mit einer bereits im FD bekannten Signatur MUSS eine Validierungswarnung durch den FD herausgegeben werden. Zudem MÜSSEN die übermittelten Dokumente ein valides PDF/A sein. Andernfalls ist der Request mit `400 - Bad Request` abzulehnen.
+
+### Hash-Bildung und Duplikatserkennung
+
+Das identifizierende Merkmal für die Duplikaterkennung wird in Form eines SHA-256-Werts über das Originale Rechnungs-PDF und die strukturierten Daten gebildet:
+
+1. Der Server MUSS base64 des Original-Rechnungs-PDF decodieren und den SHA-256-Hash für den RAW-PDF-Inhalt bestimmen: Hash A
+2. Der Server MUSS base64 des Original-Rechnungs-PDF decodieren und den SHA-256-Hash für den RAW-JSON-Inhalt bestimmen: Hash B
+3. Der Server MUSS für den Identity-Hash einen SHA-256-Hash über die Konkatenation aus Hash A und Hash B bilden
+4. Der Server speichert den Identity-Hash sowie den Zeitpunkt, zu dem der Hash erzeugt wurde.
+
+Die so erzeugten Hashes können dann auch für die Signatur (s.u.) genutzt werden.
+
+Wird vom RE-System eine `$invoice-submit` Operation ausgeführt, die zum selben Hashwert führt gehen wir von einem Duplikat aus und antworten mit einem HTTP `409 - Conflict`. Im OperationOutcome enthalten ist der Zeitpunkt, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.
+
+Wenn der Modus `korrektur` gesetzt ist, wird die Rechnung ganz normal als Duplikat angelegt.
+
+Für Anhänge gibt es keinen Dublettenprüfung: ein einzelner Bericht soll auch an mehrere Rechnungen angehängt werden können. 
 
 ### Signatur
 
