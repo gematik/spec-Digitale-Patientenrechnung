@@ -74,9 +74,9 @@ jobs:
           include: errors
           filters: |
             # Struktur: fileName|messageId|detailsWildcard|location
-            |Validation_VAL_Profile_MatchMultiple||*.​type.​coding*
-            |Terminology_TX_Confirm_4a||*.​type.​coding*
-            
+            |Validation_VAL_Profile_MatchMultiple||*​type.​coding[0]
+            |Terminology_TX_Confirm_4a||*type.​coding[0]
+
 
           
       - name: Add & Commit
