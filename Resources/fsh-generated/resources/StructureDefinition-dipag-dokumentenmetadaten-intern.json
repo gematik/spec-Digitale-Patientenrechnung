@@ -33,8 +33,8 @@
         "constraint": [
           {
             "key": "SignaturVerpflichtendRechnung",
-            "severity": "error",
-            "human": "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt.",
+            "severity": "warning",
+            "human": "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt. Diese Invariante ist als Warnung eingestuft, weil in R5 zur Ausgabe entfernt wird und diese Ausgabe ohne Validierungsfehler sein soll.",
             "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()",
             "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
           }
@@ -105,6 +105,16 @@
       {
         "id": "DocumentReference.extension",
         "path": "DocumentReference.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "mustSupport": true
       },
       {
