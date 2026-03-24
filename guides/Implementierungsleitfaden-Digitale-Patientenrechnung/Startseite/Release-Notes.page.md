@@ -10,6 +10,10 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.0.5
+
+- Die Spezifikation wurde um ein dreistufiges Signaturkonzept erweitert, bei dem Signaturen auf Attachment-Ebene, auf DocumentReference-Ebene sowie eingebettet in relevante PDF/A-Dokumente beschrieben und in Profilen, Beispielen und Leitfaden konsistent abgebildet wurden.
+
 ### Version 1.0.4
 
 #### Profile und Extensions
