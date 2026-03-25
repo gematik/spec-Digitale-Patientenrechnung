@@ -82,8 +82,8 @@ Usage: #definition
       * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
-      * name = "dipag-makierung"
-      * definition = "https://gematik.de/fhir/dipag/SearchParameter/dipag-makierung"
+      * name = "dipag-markierung"
+      * definition = "https://gematik.de/fhir/dipag/SearchParameter/dipag-markierung"
       * type = #token
     * operation[+]
       * insert Expectation (#SHALL)
