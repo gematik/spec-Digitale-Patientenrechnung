@@ -30,6 +30,16 @@
       {
         "id": "Invoice.extension",
         "path": "Invoice.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "min": 2
       },
       {
@@ -270,7 +280,7 @@
         "min": 1,
         "type": [
           {
-            "code": "canonical",
+            "code": "Reference",
             "targetProfile": [
               "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung",
               "http://hl7.org/fhir/StructureDefinition/Invoice"
@@ -1051,6 +1061,20 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.totalPriceComponent:Abzug.extension",
+        "path": "Invoice.totalPriceComponent.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
         "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil",
         "path": "Invoice.totalPriceComponent.extension",
         "sliceName": "Kassenanteil",
@@ -1136,6 +1160,16 @@
       {
         "id": "Invoice.paymentTerms.extension",
         "path": "Invoice.paymentTerms.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "min": 1
       },
       {

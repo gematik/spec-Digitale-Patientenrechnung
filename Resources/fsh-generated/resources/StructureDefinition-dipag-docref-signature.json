@@ -27,6 +27,10 @@
     {
       "expression": "DocumentReference",
       "type": "element"
+    },
+    {
+      "expression": "DocumentReference.content.attachment",
+      "type": "element"
     }
   ],
   "type": "Extension",

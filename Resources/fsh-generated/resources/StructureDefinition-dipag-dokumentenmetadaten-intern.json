@@ -33,9 +33,9 @@
         "constraint": [
           {
             "key": "SignaturVerpflichtendRechnung",
-            "severity": "error",
-            "human": "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt.",
-            "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'angereichertesPDF').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()",
+            "severity": "warning",
+            "human": "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt. Diese Invariante ist als Warnung eingestuft, weil in R5 zur Ausgabe entfernt wird und diese Ausgabe ohne Validierungsfehler sein soll.",
+            "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()",
             "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
           }
         ]
@@ -105,12 +105,23 @@
       {
         "id": "DocumentReference.extension",
         "path": "DocumentReference.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "mustSupport": true
       },
       {
         "id": "DocumentReference.extension:docRef-signature",
         "path": "DocumentReference.extension",
         "sliceName": "docRef-signature",
+        "comment": "Die Signatur auf Ebene der DocumentReference muss nur beim Typ Rechnung vorhanden sein unnd umfasst eine Signatur über die originale Rechnung und die strukturierten Rechnungsinhalte.",
         "min": 0,
         "max": "1",
         "type": [
@@ -121,6 +132,61 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature.value[x].type",
+        "path": "DocumentReference.extension.value[x].type",
+        "patternCoding": {
+          "code": "1.2.840.10065.1.12.1.13",
+          "system": "urn:iso-astm:E1762-95:2013"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature.value[x].when",
+        "path": "DocumentReference.extension.value[x].when",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature.value[x].who",
+        "path": "DocumentReference.extension.value[x].who",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature.value[x].who.identifier",
+        "path": "DocumentReference.extension.value[x].who.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature.value[x].who.identifier.system",
+        "path": "DocumentReference.extension.value[x].who.identifier.system",
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature.value[x].who.identifier.value",
+        "path": "DocumentReference.extension.value[x].who.identifier.value",
+        "patternString": "urn:oid:1.2.276.0.76.4.323",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature.value[x].targetFormat",
+        "path": "DocumentReference.extension.value[x].targetFormat",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-in-binary-vs"
+        }
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature.value[x].sigFormat",
+        "path": "DocumentReference.extension.value[x].sigFormat",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature.value[x].data",
+        "path": "DocumentReference.extension.value[x].data",
         "mustSupport": true
       },
       {
@@ -388,6 +454,78 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature",
+        "path": "DocumentReference.content.attachment.extension",
+        "sliceName": "signature",
+        "comment": "Die Signatur auf Ebene der Attachment muss vorhanden sein und umfasst eine Signatur über den Hash der originalen Rechnung. Die Extension hat keine Mindestkardinalität von 1, da sie in R5 entfernt wird und die Instanz dann immer noch valide sein muss.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].type",
+        "path": "DocumentReference.content.attachment.extension.value[x].type",
+        "patternCoding": {
+          "code": "1.2.840.10065.1.12.1.13",
+          "system": "urn:iso-astm:E1762-95:2013"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].when",
+        "path": "DocumentReference.content.attachment.extension.value[x].when",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].who",
+        "path": "DocumentReference.content.attachment.extension.value[x].who",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].who.identifier",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].who.identifier.system",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.system",
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].who.identifier.value",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.value",
+        "patternString": "urn:oid:1.2.276.0.76.4.323",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].targetFormat",
+        "path": "DocumentReference.content.attachment.extension.value[x].targetFormat",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-in-binary-vs"
+        }
+      },
+      {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].sigFormat",
+        "path": "DocumentReference.content.attachment.extension.value[x].sigFormat",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].data",
+        "path": "DocumentReference.content.attachment.extension.value[x].data",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.content:originaleRechnung.attachment.contentType",
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Zum Zeitpunkt der Veröffentlichung werden nur PDF-Dokumente als Rechnung seitens der Leistungserbringer:in unterstützt.",
@@ -428,6 +566,78 @@
       {
         "id": "DocumentReference.content:angereicherteRechnung.attachment",
         "path": "DocumentReference.content.attachment",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature",
+        "path": "DocumentReference.content.attachment.extension",
+        "sliceName": "signature",
+        "comment": "Die Signatur auf Ebene der Attachment muss vorhanden sein und umfasst eine Signatur über den Hash der angereicherten Rechnung.Die Extension hat keine Mindestkardinalität von 1, da sie in R5 entfernt wird und die Instanz dann immer noch valide sein muss.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].type",
+        "path": "DocumentReference.content.attachment.extension.value[x].type",
+        "patternCoding": {
+          "code": "1.2.840.10065.1.12.1.13",
+          "system": "urn:iso-astm:E1762-95:2013"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].when",
+        "path": "DocumentReference.content.attachment.extension.value[x].when",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].who",
+        "path": "DocumentReference.content.attachment.extension.value[x].who",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].who.identifier",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].who.identifier.system",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.system",
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].who.identifier.value",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.value",
+        "patternString": "urn:oid:1.2.276.0.76.4.323",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].targetFormat",
+        "path": "DocumentReference.content.attachment.extension.value[x].targetFormat",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-in-binary-vs"
+        }
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].sigFormat",
+        "path": "DocumentReference.content.attachment.extension.value[x].sigFormat",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].data",
+        "path": "DocumentReference.content.attachment.extension.value[x].data",
         "mustSupport": true
       },
       {
@@ -474,15 +684,84 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature",
+        "path": "DocumentReference.content.attachment.extension",
+        "sliceName": "signature",
+        "comment": "Die Signatur auf Ebene der Attachment muss vorhanden sein und umfasst eine Signatur über den Hash der strukturierten Rechnungsinhalte. Die strukturierten Rechnungsinhalte müssen im Format fhir+json vorhanden sein. Die Extension hat keine Mindestkardinalität von 1, da sie in R5 entfernt wird und die Instanz dann immer noch valide sein muss.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].type",
+        "path": "DocumentReference.content.attachment.extension.value[x].type",
+        "patternCoding": {
+          "code": "1.2.840.10065.1.12.1.13",
+          "system": "urn:iso-astm:E1762-95:2013"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].when",
+        "path": "DocumentReference.content.attachment.extension.value[x].when",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].who",
+        "path": "DocumentReference.content.attachment.extension.value[x].who",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].who.identifier",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].who.identifier.system",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.system",
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].who.identifier.value",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.value",
+        "patternString": "urn:oid:1.2.276.0.76.4.323",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].targetFormat",
+        "path": "DocumentReference.content.attachment.extension.value[x].targetFormat",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-in-binary-vs"
+        }
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].sigFormat",
+        "path": "DocumentReference.content.attachment.extension.value[x].sigFormat",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].data",
+        "path": "DocumentReference.content.attachment.extension.value[x].data",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.contentType",
         "path": "DocumentReference.content.attachment.contentType",
         "comment": "Strukturierte Rechnungsinhalte können seitens der Leistungserbringer:in sowohl als JSON als auch XML übergeben werden.",
         "min": 1,
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-vs"
-        }
+        "patternCode": "application/fhir+json",
+        "mustSupport": true
       },
       {
         "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.data",
@@ -517,6 +796,78 @@
       {
         "id": "DocumentReference.content:anhang.attachment",
         "path": "DocumentReference.content.attachment",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature",
+        "path": "DocumentReference.content.attachment.extension",
+        "sliceName": "signature",
+        "comment": "Die Signatur auf Ebene der Attachment muss vorhanden sein und umfasst eine Signatur über den Hash des Anhangs. Die Extension hat keine Mindestkardinalität von 1, da sie in R5 entfernt wird und die Instanz dann immer noch valide sein muss.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].type",
+        "path": "DocumentReference.content.attachment.extension.value[x].type",
+        "patternCoding": {
+          "code": "1.2.840.10065.1.12.1.13",
+          "system": "urn:iso-astm:E1762-95:2013"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].when",
+        "path": "DocumentReference.content.attachment.extension.value[x].when",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].who",
+        "path": "DocumentReference.content.attachment.extension.value[x].who",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].who.identifier",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].who.identifier.system",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.system",
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].who.identifier.value",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.value",
+        "patternString": "urn:oid:1.2.276.0.76.4.323",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].targetFormat",
+        "path": "DocumentReference.content.attachment.extension.value[x].targetFormat",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-in-binary-vs"
+        }
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].sigFormat",
+        "path": "DocumentReference.content.attachment.extension.value[x].sigFormat",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].data",
+        "path": "DocumentReference.content.attachment.extension.value[x].data",
         "mustSupport": true
       },
       {

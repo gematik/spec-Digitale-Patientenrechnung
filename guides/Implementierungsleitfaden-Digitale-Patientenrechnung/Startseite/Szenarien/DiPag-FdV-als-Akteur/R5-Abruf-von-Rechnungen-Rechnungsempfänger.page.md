@@ -15,7 +15,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |Suchparameter `subject:text`| Kardinalität: 0..1<br>Name Rechnungsempfänger/Behandelte Person<br>Type: string<br>Der Suchparameter MUSS durch den Client mit dem Modifier `:text` verwendet werden. Dieser Suchmodifier ermöglicht eine Suche auf DocumentReference.subject.display.|
 |Suchparameter `author:text`|Kardinalität: 0..1<br>Name des Leistungserbringer<br>Type: string<br>Der Suchparameter MUSS durch den Client mit dem Modifier `:text` verwendet werden. Dieser Suchmodifier ermöglicht eine Suche auf DocumentReference.author.display.|
 |Suchparameter `type`|Kardinalität: 0..1<br>Dokumententyp (z.B. Rechnung)<br>Type: token<br>Der FD MUSS den Modifier `:not` unterstützen.|
-|Suchparameter `dipag-makierung`|Kardinalität: 0..1<br>Manuelle Markierungen<br>Type: token|
+|Suchparameter `dipag-markierung`|Kardinalität: 0..1<br>Manuelle Markierungen<br>Type: token|
 |Suchresultatparameter `_sort`|Als Sortierkriterien können die oben genannten Suchparameter inkl. Custom SearchParameter verwendet werden für die Inhalte die als Sortierkriterien in Tabelle 18: Use Case Abruf von Rechnungen (Rechnungsempfänger) - Feature-Dokument Digitale Patientenrechnung genannt sind|
 |Suchresultatparameter `_count`|Durch den Client gewünschte Page-Size, der FD KANN Vorgaben für die Maximale Page-Size definieren|
 |User-Kontext `KVNR`| Kardinalität: 1..1<br>Hinweis: Die KVNR ist aus dem Claim `urn:telematik:claims:id` des mitzusendenen Access-Token zu extrahieren.|
@@ -70,7 +70,7 @@ mit Body:
 
 * Der FD MUSS die Suche auf DocumentReference-Ressourcen begrenzen die unter DocumentReference.related auf einen Benutzer verweisen welcher durch die KVNR aus dem Access-Token identifiziert wird, um sicherzustellen, dass nur DocumentReference-Ressourcen aus dem Postfach des angemeldeten Rechnungsempfängers zurückgegeben werden.
 
-* Der FD MUSS die Signatur-Extension (DocumentReference.extension:docRef-signature) vor der Rückgabe an den Client entfernen.
+* Der FD MUSS die Signatur-Extension an allen Stellen (`DocumentReference.extension:docRef-signature`, `DocumentReference.content.attachment.extension:docRef-signature`) vor der Rückgabe an den Client entfernen.
 
 * Falls es sich bei der DocumentReference um ein Rechnungsdokument handelt, MUSS der FD das Content-Element für das Rechnungspdf entfernen, sodass nur die Content-Elemente für das angereicherte PDF/A, sowie die strukturierten Rechnungsinhalte zurückgegeben werden.
 

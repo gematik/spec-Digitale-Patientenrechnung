@@ -49,7 +49,7 @@
         "path": "Extension.value[x]",
         "type": [
           {
-            "code": "canonical"
+            "code": "Reference"
           }
         ]
       }

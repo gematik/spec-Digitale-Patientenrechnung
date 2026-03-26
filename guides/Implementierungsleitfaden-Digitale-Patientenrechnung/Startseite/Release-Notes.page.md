@@ -13,6 +13,8 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 ### Version 1.0.5
 
 - Die Spezifikation wurde um die fachliche Beschreibung der Duplikaterkennung beim $invoice-submit erweitert und um den Modus "korrektur" zur Einreichung bereits bekannter Rechnungen ergänzt.
+- Die Spezifikation wurde um ein dreistufiges Signaturkonzept erweitert, bei dem Signaturen auf Attachment-Ebene, auf DocumentReference-Ebene sowie eingebettet in relevante PDF/A-Dokumente beschrieben und in Profilen, Beispielen und Leitfaden konsistent abgebildet wurden.
+- Die Extenion `DiPagInvoiceReplaces` musste von Typ `valueCanonical` auf `valueReference` geändert werden, da die Referenzierung von Rechnungen als Canonical in diesem Kontext nicht möglich ist. Alle Profile, Beispiele und Leitfadenstellen wurden entsprechend angepasst.
 
 ### Version 1.0.4
 

@@ -58,17 +58,17 @@
             "valueSignature": {
               "type": [
                 {
-                  "code": "1.2.840.10065.1.12.1.1",
+                  "code": "1.2.840.10065.1.12.1.13",
                   "system": "urn:iso-astm:E1762-95:2013"
                 }
               ],
-              "when": "2026-02-11T10:00:00+01:00",
               "who": {
                 "identifier": {
-                  "system": "https://gematik.de/fhir/sid/telematik-id",
-                  "value": "987654321"
+                  "system": "urn:ietf:rfc:3986",
+                  "value": "urn:oid:1.2.276.0.76.4.323"
                 }
               },
+              "when": "2026-02-11T10:00:00+01:00",
               "data": "ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbXRwWkNJNkltVjRZVzUwSW4wLi4u"
             }
           }
@@ -86,6 +86,27 @@
           {
             "attachment": {
               "contentType": "application/pdf",
+              "extension": [
+                {
+                  "valueSignature": {
+                    "type": [
+                      {
+                        "code": "1.2.840.10065.1.12.1.13",
+                        "system": "urn:iso-astm:E1762-95:2013"
+                      }
+                    ],
+                    "who": {
+                      "identifier": {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:oid:1.2.276.0.76.4.323"
+                      }
+                    },
+                    "when": "2026-02-11T10:00:00+01:00",
+                    "data": "SGFzaE9yaWdpbmFsUkVjaG51bmdQREZBc2lnbmVkQnlGRDIwMjYwMjEx"
+                  },
+                  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
+                }
+              ],
               "url": "[FD-endpunkt]/Binary/id-der-originalen-Rechnung"
             },
             "format": {
@@ -96,6 +117,27 @@
           {
             "attachment": {
               "contentType": "application/pdf",
+              "extension": [
+                {
+                  "valueSignature": {
+                    "type": [
+                      {
+                        "code": "1.2.840.10065.1.12.1.13",
+                        "system": "urn:iso-astm:E1762-95:2013"
+                      }
+                    ],
+                    "who": {
+                      "identifier": {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:oid:1.2.276.0.76.4.323"
+                      }
+                    },
+                    "when": "2026-02-11T10:00:00+01:00",
+                    "data": "SGFzaEFuZ2VyZWljaGVydGVzUERGc2lnbmVkQnlGRDIwMjYwMjExQVA="
+                  },
+                  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
+                }
+              ],
               "url": "[FD-endpunkt]/Binary/id-des-angereicherten-PDFs"
             },
             "format": {
@@ -104,13 +146,34 @@
             }
           },
           {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "extension": [
+                {
+                  "valueSignature": {
+                    "type": [
+                      {
+                        "code": "1.2.840.10065.1.12.1.13",
+                        "system": "urn:iso-astm:E1762-95:2013"
+                      }
+                    ],
+                    "who": {
+                      "identifier": {
+                        "system": "urn:ietf:rfc:3986",
+                        "value": "urn:oid:1.2.276.0.76.4.323"
+                      }
+                    },
+                    "when": "2026-02-11T10:00:00+01:00",
+                    "data": "U3RydWt0dXJpZXJ0ZXJJbmhhbHRTaWduYXR1ckZEMjAyNjAyMTFmamg="
+                  },
+                  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
+                }
+              ],
+              "url": "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
+            },
             "format": {
               "code": "rechnungsinhalt",
               "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
-            },
-            "attachment": {
-              "contentType": "application/fhir+json",
-              "url": "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
             }
           }
         ],
