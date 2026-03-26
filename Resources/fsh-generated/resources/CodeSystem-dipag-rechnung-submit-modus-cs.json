@@ -18,6 +18,11 @@
       "code": "normal",
       "display": "Normal",
       "definition": "Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
+    },
+    {
+      "code": "korrektur",
+      "display": "Korrektur",
+      "definition": "Digitale Patientenrechnung wird als Korrektur einer bereits eingereichten Rechnung eingereicht, z.B. zum Nachsenden der Anhänge. Der Fachdienst validiert die Digitale Patientenrechnung und speichert diese. Die Dublettenprüfung wird damit umgangen"
     }
   ],
   "experimental": false,
@@ -35,5 +40,5 @@
   ],
   "caseSensitive": true,
   "hierarchyMeaning": "is-a",
-  "count": 2
+  "count": 3
 }
