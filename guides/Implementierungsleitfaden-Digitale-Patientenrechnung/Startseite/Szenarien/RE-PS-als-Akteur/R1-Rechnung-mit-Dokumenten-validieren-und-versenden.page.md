@@ -39,7 +39,7 @@ Die Signatur ist auf drei Ebenen definiert:
 
 **Signatur auf Ebene der Attachments**
 
-Für jedes übermittelte Attachment (originale Rechnung, angereicherte Rechnung, strukturierte Rechnungsinhalte, Anhang) MUSS eine individuelle Signatur über den Hash des jeweiligen Attachments vorhanden sein. Die Signatur wird über die Extension `DiPagDocRefSignature` direkt am jeweiligen `content.attachment` abgebildet.
+Für jedes Element der Rechnung (originale Rechnung, angereicherte Rechnung, strukturierte Rechnungsinhalte, Anhang) MUSS eine individuelle Signatur über den Hash des jeweiligen Elements vorhanden sein. Die Signatur wird über die Extension `DiPagDocRefSignature` direkt am jeweiligen `content.attachment` abgebildet.
 
 **Signatur auf Ebene der DocumentReference**
 
