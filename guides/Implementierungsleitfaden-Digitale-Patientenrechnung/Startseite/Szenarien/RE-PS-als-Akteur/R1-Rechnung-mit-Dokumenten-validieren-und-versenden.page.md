@@ -45,9 +45,9 @@ Das identifizierende Merkmal für die Duplikaterkennung wird in Form eines SHA-2
 
 Die so erzeugten Hashes können dann auch für die Signatur (s.u.) genutzt werden.
 
-Wird vom RE-System eine `$invoice-submit` Operation ausgeführt, die zum selben Hashwert führt gehen wir von einem Duplikat aus und antworten mit einem HTTP `409 - Conflict`. Im OperationOutcome enthalten ist der Zeitpunkt, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.
+Wird vom RE-System eine `$invoice-submit` Operation ausgeführt, die zum selben Hashwert führt, geht der Fachdienst von einem Duplikat aus und antworten mit einem HTTP `409 - Conflict`. Im OperationOutcome enthalten der Zeitpunkt enhalten, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.
 
-Wenn der Modus `korrektur` gesetzt ist, wird die Rechnung ganz normal als Duplikat angelegt.
+Wenn der Modus `korrektur` gesetzt ist, wird die Rechnung als Duplikat angelegt.
 
 Für Anhänge gibt es keinen Dublettenprüfung: ein einzelner Bericht soll auch an mehrere Rechnungen angehängt werden können. 
 
