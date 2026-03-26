@@ -159,8 +159,15 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.extension:docRef-signature.value[x].who.display",
-        "path": "DocumentReference.extension.value[x].who.display",
+        "id": "DocumentReference.extension:docRef-signature.value[x].who.identifier.system",
+        "path": "DocumentReference.extension.value[x].who.identifier.system",
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.extension:docRef-signature.value[x].who.identifier.value",
+        "path": "DocumentReference.extension.value[x].who.identifier.value",
+        "patternString": "urn:oid:1.2.276.0.76.4.323",
         "mustSupport": true
       },
       {
@@ -488,8 +495,15 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].who.display",
-        "path": "DocumentReference.content.attachment.extension.value[x].who.display",
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].who.identifier.system",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.system",
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:originaleRechnung.attachment.extension:signature.value[x].who.identifier.value",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.value",
+        "patternString": "urn:oid:1.2.276.0.76.4.323",
         "mustSupport": true
       },
       {
@@ -596,8 +610,15 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].who.display",
-        "path": "DocumentReference.content.attachment.extension.value[x].who.display",
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].who.identifier.system",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.system",
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:angereicherteRechnung.attachment.extension:signature.value[x].who.identifier.value",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.value",
+        "patternString": "urn:oid:1.2.276.0.76.4.323",
         "mustSupport": true
       },
       {
@@ -704,8 +725,15 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].who.display",
-        "path": "DocumentReference.content.attachment.extension.value[x].who.display",
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].who.identifier.system",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.system",
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:strukturierterRechnungsinhalt.attachment.extension:signature.value[x].who.identifier.value",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.value",
+        "patternString": "urn:oid:1.2.276.0.76.4.323",
         "mustSupport": true
       },
       {
@@ -812,8 +840,15 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].who.display",
-        "path": "DocumentReference.content.attachment.extension.value[x].who.display",
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].who.identifier.system",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.system",
+        "patternUri": "urn:ietf:rfc:3986",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.content:anhang.attachment.extension:signature.value[x].who.identifier.value",
+        "path": "DocumentReference.content.attachment.extension.value[x].who.identifier.value",
+        "patternString": "urn:oid:1.2.276.0.76.4.323",
         "mustSupport": true
       },
       {
