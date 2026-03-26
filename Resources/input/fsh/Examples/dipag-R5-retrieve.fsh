@@ -82,7 +82,7 @@ InstanceOf: DiPagDokumentenmetadatenIntern
     * who
       * identifier
         * system = "urn:ietf:rfc:3986"
-      * value = "urn:oid:1.2.276.0.76.4.323"
+        * value = "urn:oid:1.2.276.0.76.4.323"
     * data = "QW5oYW5nRG9rdW1lbnRTaWduYXR1ckZEMjAyNjAyMTFkbHBxcnN0dXY="
 * context.related[patient] = Reference(BeispielPatient3-FD)
 
