@@ -23,8 +23,8 @@
               "when": "2026-02-11T10:00:00+01:00",
               "who": {
                 "identifier": {
-                  "system": "https://gematik.de/fhir/sid/telematik-id",
-                  "value": "987654321"
+                  "system": "urn:ietf:rfc:3986",
+                  "value": "urn:oid:1.2.276.0.76.4.323"
                 }
               },
               "data": "QW5oYW5nRG9rdW1lbnRTaWduYXR1ckZEMjAyNjAyMTFkbHBxcnN0dXY="
