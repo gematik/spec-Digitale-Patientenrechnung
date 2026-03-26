@@ -33,7 +33,10 @@ RuleSet: Signature
   * when MS
   * who MS
   * who.identifier MS
-  * who.display MS
+    * system MS
+    * system = "urn:ietf:rfc:3986"
+    * value MS
+    * value = "urn:oid:1.2.276.0.76.4.323"
   * targetFormat MS
   * targetFormat from DiPagRestrictedMimeTypesInBinaryVS (required)
   * sigFormat MS
