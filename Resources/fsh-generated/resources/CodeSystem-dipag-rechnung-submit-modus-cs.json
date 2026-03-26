@@ -22,7 +22,7 @@
     {
       "code": "korrektur",
       "display": "Korrektur",
-      "definition": "Digitale Patientenrechnung wird als Korrektur einer bereits eingereichten Rechnung eingereicht, z.B. zum Nachsenden der Anhänge. Der Fachdienst validiert die Digitale Patientenrechnung und speichert diese. Die Dublettenprüfung wird damit umgangen"
+      "definition": "Digitale Patientenrechnung wird als Korrektur einer bereits eingereichten Rechnung eingereicht. Es muss sich dabei um eine bereits eingereichte Rechnung handeln. Der Fachdienst validiert die Digitale Patientenrechnung und speichert diese als Korrektur der bestehenden Rechnung."
     }
   ],
   "experimental": false,
