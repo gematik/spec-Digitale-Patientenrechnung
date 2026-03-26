@@ -6,7 +6,7 @@
   "id": "dipag-dokument-artderarchivierung-cs",
   "title": "Digitale Patientenrechnung Dokument ArtDerArchivierung CS",
   "description": "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-dokument-artderarchivierung-cs",
   "concept": [
     {
@@ -19,7 +19,7 @@
     }
   ],
   "experimental": false,
-  "date": "2026-03-07",
+  "date": "2026-03-26",
   "publisher": "gematik GmbH",
   "contact": [
     {

@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-docref-fachrichtung",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-fachrichtung",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "name": "DiPagDocRefFachrichtung",
   "title": "Digitale Patientenrechnung DocRef Fachrichtung",
   "status": "active",
   "experimental": false,
-  "date": "2026-03-07",
+  "date": "2026-03-26",
   "publisher": "gematik GmbH",
   "contact": [
     {

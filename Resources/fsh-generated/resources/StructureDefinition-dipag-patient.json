@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-patient",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "name": "DiPagPatient",
   "status": "active",
   "experimental": false,
-  "date": "2026-03-07",
+  "date": "2026-03-26",
   "publisher": "gematik GmbH",
   "contact": [
     {

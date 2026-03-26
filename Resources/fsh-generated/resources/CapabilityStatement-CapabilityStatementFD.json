@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
   "url": "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -16,7 +16,7 @@
       ]
     }
   ],
-  "date": "2026-03-07",
+  "date": "2026-03-26",
   "name": "CapabilityStatementFD",
   "title": "CapabilityStatement Fachdienst E-Rechnnung",
   "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",

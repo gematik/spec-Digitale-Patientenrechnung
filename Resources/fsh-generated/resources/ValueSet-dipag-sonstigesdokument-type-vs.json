@@ -5,10 +5,10 @@
   "id": "dipag-sonstigesdokument-type-vs",
   "title": "Digitale Patientenrechnung Sonstiges Dokument Type VS",
   "description": "ValueSet zur Klassifizierung von weiteren Dokumenten",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-sonstigesdokument-type-vs",
   "experimental": false,
-  "date": "2026-03-07",
+  "date": "2026-03-26",
   "publisher": "gematik GmbH",
   "contact": [
     {

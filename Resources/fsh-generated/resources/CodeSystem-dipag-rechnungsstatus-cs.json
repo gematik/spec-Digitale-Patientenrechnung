@@ -6,7 +6,7 @@
   "id": "dipag-rechnungsstatus-cs",
   "title": "Digitale Patientenrechnung Rechnungsstatus CS",
   "description": "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
   "concept": [
     {
@@ -23,7 +23,7 @@
     }
   ],
   "experimental": false,
-  "date": "2026-03-07",
+  "date": "2026-03-26",
   "publisher": "gematik GmbH",
   "contact": [
     {

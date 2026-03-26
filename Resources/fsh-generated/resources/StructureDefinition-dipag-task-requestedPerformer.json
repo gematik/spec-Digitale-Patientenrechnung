@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-task-requestedPerformer",
   "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "name": "DiPagTaskRequestedPerformer",
   "title": "Digitale Patientenrechnung Task RequestedPerformer",
   "status": "active",
   "experimental": false,
-  "date": "2026-03-07",
+  "date": "2026-03-26",
   "publisher": "gematik GmbH",
   "contact": [
     {
