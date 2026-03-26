@@ -12,12 +12,12 @@ Title: "Example DiPag Document Reference"
   * currency = #EUR
 * extension[docRef-signature].url = "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature"
 * extension[docRef-signature].valueSignature
-  * type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.1
+  * type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.13
   * when = "2026-02-11T10:00:00+01:00"
   * who
     * identifier
-      * system = "https://gematik.de/fhir/sid/telematik-id"
-      * value = "987654321"
+      * system = "urn:ietf:rfc:3986"
+      * value = "urn:oid:1.2.276.0.76.4.323"
   * data = "ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbXRwWkNJNkltVjRZVzUwSW4wLi4u"
 * author.identifier.value = "987654321"
 * meta.tag[0] = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#offen
@@ -34,10 +34,34 @@ Title: "Example DiPag Document Reference"
 * author.display = "Dr. Hausarzt"
 * content[originaleRechnung].attachment.contentType = #application/pdf
 * content[originaleRechnung].attachment.url = "[FD-endpunkt]/Binary/id-der-originalen-Rechnung"
+* content[originaleRechnung].attachment.extension[signature].valueSignature
+  * type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.13
+  * when = "2026-02-11T10:00:00+01:00"
+  * who
+    * identifier
+      * system = "urn:ietf:rfc:3986"
+      * value = "urn:oid:1.2.276.0.76.4.323"
+  * data = "SGFzaE9yaWdpbmFsUkVjaG51bmdQREZBc2lnbmVkQnlGRDIwMjYwMjEx"
 * content[angereicherteRechnung].attachment.contentType = #application/pdf
 * content[angereicherteRechnung].attachment.url = "[FD-endpunkt]/Binary/id-des-angereicherten-PDFs"
+* content[angereicherteRechnung].attachment.extension[signature].valueSignature
+  * type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.13
+  * when = "2026-02-11T10:00:00+01:00"
+  * who
+    * identifier
+      * system = "urn:ietf:rfc:3986"
+      * value = "urn:oid:1.2.276.0.76.4.323"
+  * data = "SGFzaEFuZ2VyZWljaGVydGVzUERGc2lnbmVkQnlGRDIwMjYwMjExQVA="
 * content[strukturierterRechnungsinhalt].attachment.contentType = #application/fhir+json
 * content[strukturierterRechnungsinhalt].attachment.url = "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
+* content[strukturierterRechnungsinhalt].attachment.extension[signature].valueSignature
+  * type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.13
+  * when = "2026-02-11T10:00:00+01:00"
+  * who
+    * identifier
+      * system = "urn:ietf:rfc:3986"
+      * value = "urn:oid:1.2.276.0.76.4.323"
+  * data = "U3RydWt0dXJpZXJ0ZXJJbmhhbHRTaWduYXR1ckZEMjAyNjAyMTFmamg="
 * context.related[patient] = Reference(BeispielPatient3-FD)
 * context.related[anhaenge] = Reference(ExampleR5DocumentReferenceSonstigesDokument)
 
@@ -52,6 +76,14 @@ InstanceOf: DiPagDokumentenmetadatenIntern
 * content[anhang].attachment
   * contentType = #application/pdf
   * url = "[FD-endpunkt]/Binary/id-des-anhangs"
+  * extension[signature].valueSignature
+    * type = urn:iso-astm:E1762-95:2013#1.2.840.10065.1.12.1.13
+    * when = "2026-02-11T10:00:00+01:00"
+    * who
+      * identifier
+        * system = "urn:ietf:rfc:3986"
+        * value = "urn:oid:1.2.276.0.76.4.323"
+    * data = "QW5oYW5nRG9rdW1lbnRTaWduYXR1ckZEMjAyNjAyMTFkbHBxcnN0dXY="
 * context.related[patient] = Reference(BeispielPatient3-FD)
 
 

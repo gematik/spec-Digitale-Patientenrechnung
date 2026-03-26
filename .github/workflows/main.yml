@@ -36,7 +36,7 @@ jobs:
       # Java and .NET are already installed on ubuntu-latest
         
       - name: Firely.Terminal (GitHub Actions)
-        uses: FirelyTeam/firely-terminal-pipeline@v0.7.29
+        uses: FirelyTeam/firely-terminal-pipeline@v0.8.4
         with:
           PATH_TO_CONFORMANCE_RESOURCES: Resources/fsh-generated/resources/
           #PATH_TO_EXAMPLES: Examples
@@ -45,16 +45,44 @@ jobs:
           JAVA_VALIDATION_ENABLED: true
           JAVA_VALIDATION_OPTIONS: >
             -allow-example-urls true
+            -output validation.json
+            -html-output validation.html
             -show-message-ids
+            -language de
             -jurisdiction de
             -display-issues-are-warnings
-            -output-style compact
             -advisor-file validator/advisor.json
             -resolution-context file:Resources/fsh-generated/resources/
           SIMPLIFIER_USERNAME: ${{ secrets.SIMPLIFIER_USERNAME }}
           SIMPLIFIER_PASSWORD: ${{ secrets.SIMPLIFIER_PASSWORD }}
           SUSHI_ENABLED: true
           SUSHI_OPTIONS: Resources/
+
+      - name: Upload validation artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: fhir-validation-results
+          path: |
+            validation.json
+            validation.html
+          retention-days: 1
+
+      - name: Convert Validation Report
+        uses: patrick-werner/validation-outcome-markdown-renderer@v1
+        with:
+          bundle-file: validation.json
+          include: errors
+          filters: |
+            # Struktur: fileName|messageId|detailsWildcard|location
+            |Validation_VAL_Profile_MatchMultiple|*|DocumentReference.type.*
+            |Terminology_TX_Confirm_4a|*|DocumentReference.type.*
+            |Validation_VAL_Profile_MatchMultiple|*|Parameters.*
+            |Terminology_TX_Confirm_4a|*|Parameters.*
+            |Validation_VAL_Profile_MatchMultiple|*|Bundle.*
+            |Terminology_TX_Confirm_4a|*|Bundle.*
+            Invoice-c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a.json|Terminology_TX_Confirm_4a|*|Invoice.extension[3].extension[1].value.ofType(Coding)
+
+
           
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9

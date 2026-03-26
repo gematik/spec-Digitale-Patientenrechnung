@@ -35,11 +35,19 @@ Der FD muss die syntaktischen und semantischen Prüfungen der Rechnung durchfüh
 
 ### Signatur
 
-Die Signatur wird durch den FD über die Konkatenation aller Base64-kodierten Inhalte der Rechnung (d.h. Rechnungrepräsentation in PDF/A-Form und den strukturierten Rechnungsinhalten) gebildet werden, in der Reihenfolge:
+Die Signatur ist auf drei Ebenen definiert:
 
-1. Attachment mit contentType = application/pdf
-1. Attachment mit contentType = application/fhir+xml
-1. Attachment mit contentType = application/fhir+json  
+**Signatur auf Ebene der Attachments**
+
+Für jedes Element der Rechnung (originale Rechnung, angereicherte Rechnung, strukturierte Rechnungsinhalte, Anhang) MUSS eine individuelle Signatur über den Hash des jeweiligen Elements vorhanden sein. Die Signatur wird über die Extension `DiPagDocRefSignature` direkt am jeweiligen `content.attachment` abgebildet.
+
+**Signatur auf Ebene der DocumentReference**
+
+Bei Rechnungsdokumenten (d.h. `type.coding` enthält KDL-Code `AM010106`) MUSS zusätzlich eine Signatur auf Ebene der DocumentReference vorhanden sein (Invariante `SignaturVerpflichtendRechnung`). Diese Signatur wird über die Extension `docRef-signature` an der DocumentReference abgebildet und umfasst eine Signatur über die originale Rechnung sowie die strukturierten Rechnungsinhalte.
+
+**Signatur innerhalb der PDF/A-Dokumente**
+
+Im angereicherten PDF/A und im PDF/A eines Anhangs muss die Signatur eingebettet werden.
 
 Weitere Details zur Signatur, siehe [gemSpec_DiPag_FD - Abschnitt 6.5 Signatur](https://gemspec.gematik.de/docs/gemSpec/gemSpec_DiPag_FD/gemSpec_DiPag_FD_V1.1.1/#6.5).
 
