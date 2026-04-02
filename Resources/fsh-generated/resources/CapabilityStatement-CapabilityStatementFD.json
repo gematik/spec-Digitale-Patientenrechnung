@@ -217,6 +217,28 @@
               "name": "dipag-markierung",
               "definition": "https://gematik.de/fhir/dipag/SearchParameter/dipag-markierung",
               "type": "token"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "subject-display",
+              "definition": "https://gematik.de/fhir/dipag/SearchParameter/dipag-docRef-subject-display",
+              "type": "string"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "author-display",
+              "definition": "https://gematik.de/fhir/dipag/SearchParameter/dipag-docRef-author-display",
+              "type": "string"
             }
           ],
           "operation": [

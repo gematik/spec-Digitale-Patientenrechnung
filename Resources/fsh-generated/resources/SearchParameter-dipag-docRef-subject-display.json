@@ -1,0 +1,15 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "dipag-docRef-subject-display",
+  "url": "https://gematik.de/fhir/dipag/SearchParameter/dipag-docRef-subject-display",
+  "name": "DiPagDocRefSubjectDisplay",
+  "status": "active",
+  "publisher": "gematik GmbH",
+  "description": "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach dem Text in subject.display ermöglicht.",
+  "code": "subject-display",
+  "base": [
+    "DocumentReference"
+  ],
+  "type": "string",
+  "expression": "DocumentReference.subject.display"
+}
