@@ -170,8 +170,8 @@ Id: dipag-rechnung
   * ^short = "Weitere behandelnde Leistungserbringer"
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.
   Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
-  * role = ERGParticipantRoleCS#leistungserbringer
-  * actor only Reference(ERGPerson or ERGInstitution or Practitioner or Organization)
+  * role = DiPagParticipantRoleCS#leistungserbringer
+  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
 * participant[Forderungsinhaber]
   * ^short = "Abweichender Forderungsinhaber"
   * ^comment = "Der abweichender Forderungsinhaber SOLL vorhanden sein."
@@ -248,7 +248,7 @@ Id: dipag-rechnung
 * totalPriceComponent[MinderungNachGOZ]
   * ^short = "Minderungen nach §7 GOZ"
   * ^comment = "Im Falle einer GOZ Rechnung SOLLEN die Minderungen nach §7 GOZ vorhanden sein.
-  Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
+  Im Falle einer GOÄ, GOÄ-neu oder BEMA Rechnung ist das Element nicht gefordert."
   * type MS
   * type = #deduction
   * code 1.. MS
