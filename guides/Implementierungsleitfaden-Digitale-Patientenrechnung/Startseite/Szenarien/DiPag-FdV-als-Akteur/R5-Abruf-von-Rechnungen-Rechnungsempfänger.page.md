@@ -12,8 +12,8 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |HTTP-Methode|GET|
 |Endpunkt|/DocumentReference|
 |Suchparameter `_tag`| Kardinalität: 0..1<br>Rechnungsstatus<br>Type: token<br>Der FD MUSS den Modifier `:not` unterstützen.|
-|Suchparameter `subject:text`| Kardinalität: 0..1<br>Name Rechnungsempfänger/Behandelte Person<br>Type: string<br>Der Suchparameter MUSS durch den Client mit dem Modifier `:text` verwendet werden. Dieser Suchmodifier ermöglicht eine Suche auf DocumentReference.subject.display.|
-|Suchparameter `author:text`|Kardinalität: 0..1<br>Name des Leistungserbringer<br>Type: string<br>Der Suchparameter MUSS durch den Client mit dem Modifier `:text` verwendet werden. Dieser Suchmodifier ermöglicht eine Suche auf DocumentReference.author.display.|
+|Suchparameter `subject-display`| Kardinalität: 0..1<br>Name Rechnungsempfänger/Behandelte Person<br>Type: string<br>|
+|Suchparameter `author-display`|Kardinalität: 0..1<br>Name des Leistungserbringer<br>Type: string<br>|
 |Suchparameter `type`|Kardinalität: 0..1<br>Dokumententyp (z.B. Rechnung)<br>Type: token<br>Der FD MUSS den Modifier `:not` unterstützen.|
 |Suchparameter `dipag-markierung`|Kardinalität: 0..1<br>Manuelle Markierungen<br>Type: token|
 |Suchresultatparameter `_sort`|Als Sortierkriterien können die oben genannten Suchparameter inkl. Custom SearchParameter verwendet werden für die Inhalte die als Sortierkriterien in Tabelle 18: Use Case Abruf von Rechnungen (Rechnungsempfänger) - Feature-Dokument Digitale Patientenrechnung genannt sind|

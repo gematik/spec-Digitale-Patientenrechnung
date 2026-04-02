@@ -85,6 +85,16 @@ Usage: #definition
       * name = "dipag-markierung"
       * definition = "https://gematik.de/fhir/dipag/SearchParameter/dipag-markierung"
       * type = #token
+    * searchParam[+]
+      * insert Expectation (#SHALL)
+      * name = "subject-display"
+      * definition = "https://gematik.de/fhir/dipag/SearchParameter/dipag-docRef-subject-display"
+      * type = #string
+    * searchParam[+]
+      * insert Expectation (#SHALL)
+      * name = "author-display"
+      * definition = "https://gematik.de/fhir/dipag/SearchParameter/dipag-docRef-author-display"
+      * type = #string
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "retrieve"
