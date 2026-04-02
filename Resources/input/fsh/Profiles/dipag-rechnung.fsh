@@ -11,8 +11,8 @@ Id: dipag-rechnung
   DiPagFachrichtung named Fachrichtung 1..1 MS and
   DiPagInvoiceReplaces named Korrekturrechnung ..1 MS and
   DiPagTokenStornierteRechnung named Korrekturtoken ..1 MS and
-  DiPagInvoiceBasedOn named Antragsreferenz ..1 MS
-  ERGBemaPunktsumme named BemaPunktsumme ..1 MS
+  DiPagInvoiceBasedOn named Antragsreferenz ..1 MS and
+  DiPagBemaPunktsumme named BemaPunktsumme ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * ^short = "Diagnose"
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN Diagnosen und Prozeduren vorhanden sein.
@@ -238,7 +238,7 @@ Id: dipag-rechnung
   * type MS
   * type = #base
   * code 1.. MS
-  * code = ERGTotalPriceComponentTypeCS#Fremdlaborleistungen
+  * code = DiPagTotalPriceComponentTypeCS#Fremdlaborleistungen
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"
@@ -252,7 +252,7 @@ Id: dipag-rechnung
   * type MS
   * type = #deduction
   * code 1.. MS
-  * code = ERGTotalPriceComponentTypeCS#Minderung7GOZ
+  * code = DiPagTotalPriceComponentTypeCS#Minderung7GOZ
   * factor 0..0
   * amount ..1 MS
     * ^short = "Wert in EUR"
@@ -262,11 +262,6 @@ Id: dipag-rechnung
 * totalPriceComponent[Abzug]
   * ^short = "Abzug"
   * ^comment = "Der Abzug SOLL vorhanden sein."
-  * extension contains DiPagAbzugKassenanteil named Kassenanteil ..1 MS
-  * extension[Kassenanteil]
-    * ^short = "Kassenanteil in Prozent"
-    * ^comment = "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.
-    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
   * type MS
   * type = #deduction
   * code 1.. MS
