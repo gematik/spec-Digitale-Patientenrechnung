@@ -325,49 +325,6 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.extension:BemaPunktsumme",
-        "path": "Invoice.extension",
-        "sliceName": "BemaPunktsumme",
-        "comment": "Im Falle einer BEMA Rechnung SOLL die Punktsumme BEMA vorhanden sein.\n  Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnung ist das Element nicht gefordert.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagBemaPunktsumme"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:BemaPunktsumme.extension:Punktsumme",
-        "path": "Invoice.extension.extension",
-        "sliceName": "Punktsumme",
-        "short": "Summe Punktzahlen der BEMA-Leistungen",
-        "comment": "Die Summe Punktzahlen der BEMA-Leistungen SOLL vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:BemaPunktsumme.extension:Punktsumme.value[x]",
-        "path": "Invoice.extension.extension.value[x]",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:BemaPunktsumme.extension:Punktwert",
-        "path": "Invoice.extension.extension",
-        "sliceName": "Punktwert",
-        "short": "Punktwert der BEMA-Leistungen",
-        "comment": "Der Punktwert der BEMA-Leistungen SOLL vorhanden sein.",
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.extension:BemaPunktsumme.extension:Punktwert.value[x]",
-        "path": "Invoice.extension.extension.value[x]",
-        "mustSupport": true
-      },
-      {
         "id": "Invoice.extension:Antragsreferenz",
         "path": "Invoice.extension",
         "sliceName": "Antragsreferenz",
@@ -427,6 +384,49 @@
         "path": "Invoice.extension.value[x].value",
         "short": "Antragsreferenz",
         "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:BemaPunktsumme",
+        "path": "Invoice.extension",
+        "sliceName": "BemaPunktsumme",
+        "comment": "Im Falle einer BEMA Rechnung SOLL die Punktsumme BEMA vorhanden sein.\n  Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnung ist das Element nicht gefordert.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagBemaPunktsumme"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:BemaPunktsumme.extension:Punktsumme",
+        "path": "Invoice.extension.extension",
+        "sliceName": "Punktsumme",
+        "short": "Summe Punktzahlen der BEMA-Leistungen",
+        "comment": "Die Summe Punktzahlen der BEMA-Leistungen SOLL vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:BemaPunktsumme.extension:Punktsumme.value[x]",
+        "path": "Invoice.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:BemaPunktsumme.extension:Punktwert",
+        "path": "Invoice.extension.extension",
+        "sliceName": "Punktwert",
+        "short": "Punktwert der BEMA-Leistungen",
+        "comment": "Der Punktwert der BEMA-Leistungen SOLL vorhanden sein.",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.extension:BemaPunktsumme.extension:Punktwert.value[x]",
+        "path": "Invoice.extension.extension.value[x]",
         "mustSupport": true
       },
       {
@@ -1133,6 +1133,11 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:Abzug.extension:Kassenanteil.value[x]",
+        "path": "Invoice.totalPriceComponent.extension.value[x]",
         "mustSupport": true
       },
       {
