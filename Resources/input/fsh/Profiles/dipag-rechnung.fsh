@@ -26,7 +26,7 @@ Id: dipag-rechnung
     * ^comment = "Diagnosen und Prozeduren SOLLEN zur Rechnung zugeordnet sein."
 * extension[Behandlungszeitraum]
   * ^short = "Behandlungszeitraum"
-  * ^comment = "Entweder ein Behandlungszeitraum, oder ein -datum SOLL vorhanden sein."
+  * ^comment = "Entweder ein Behandlungszeitraum, oder ein -datum SOLL bei einer GOÄ Rechnung vorhanden sein. Im Falle einer GOZ- oder BEMA- und GOZ-Rechnung ist die Angabe eines Behandlungszeitraums oder -datums optional."
   * valuePeriod MS
     * start MS
       * ^short = "Startdatum"
@@ -48,7 +48,7 @@ Id: dipag-rechnung
 * extension[Fachrichtung]
   * ^short = "Fachrichtung"
   * ^comment = "Die Fachrichtung MUSS vorhanden sein.
-  Es wird empfohlen für zahnärztliche Rechnungen immer den Wert MZKH (Zahnmedizin) zu nutzen."
+  Im Zahärztlichen Bereich SOLLEN nur die Fachrichtungen Oralchirurgie (ORAL), Kieferorthopädie (KIEF) und Zahnmedizin (MZKH) verwendet werden."
   * valueCoding 1..1 MS
     * system 1.. MS
     * code 1.. MS
@@ -167,17 +167,17 @@ Id: dipag-rechnung
   Leistungserbringer 1..* MS and
   Forderungsinhaber ..1 MS
 * participant[Leistungserbringer]
-  * ^short = "Weitere behandelnde Leistungserbringer"
-  * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.
+  * ^short = "Behandelnde Leistungserbringer"
+  * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN weitere behandelnde Leistungserbringer vorhanden sein.
   Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
   * role = DiPagParticipantRoleCS#leistungserbringer
-  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
+  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization) //TODO Frage: Soll hier die Organisation gar nicht mehr nutzbar sein?
 * participant[Forderungsinhaber]
   * ^short = "Abweichender Forderungsinhaber"
   * ^comment = "Der abweichender Forderungsinhaber SOLL vorhanden sein."
   * role MS
   * role = DiPagParticipantRoleCS#forderungsinhaber
-  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
+  * actor only Reference(DiPagPerson or Practitioner) //TODO Frage: Soll hier die Organisation gar nicht mehr nutzbar sein?
 * note MS
   * ^short = "Hinweise an den Kostenträger"
   * ^comment = "Der Hinweise an den Kostenträger KANN vorhanden sein."
@@ -277,8 +277,8 @@ Id: dipag-rechnung
   * extension contains DiPagAbzugKassenanteil named Kassenanteil ..1 MS
   * extension[Kassenanteil]
     * ^short = "Kassenanteil in Prozent"
-    * ^comment = "Im Falle einer BEMA Rechnung SOLL der Kassenanteil in Prozent vorhanden sein.
-    Im Falle einer GOZ Rechnung KANN der  Kassenanteil in Prozent vorhanden sein.
+    * ^comment = "Im Falle einer BEMA oder gemischten BEMA und GOZ Rechnung SOLL der Kassenanteil in Prozent vorhanden sein.
+    Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.
     Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
     * valueQuantity 1.. MS
       * unit MS

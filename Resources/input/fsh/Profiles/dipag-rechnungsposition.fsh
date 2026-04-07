@@ -68,8 +68,8 @@ Id: dipag-rechnungsposition
 * extension[GebuehrenordnungAngaben]
   * extension[Einfachsatz] MS
     * ^short = "Gebühr Einfachsatz in EUR"
-    * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Gebühr Einfachsatz in EUR vorhanden sein.
-    Im Falle einer BEMA Rechnungsposition ist er nicht gefordert."
+    * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition, SOLL der Gebühr Einfachsatz in EUR vorhanden sein.
+    Im Falle einer BEMA oder GOZ Rechnungsposition ist er nicht gefordert."
     * valueMoney MS
       * currency 1.. MS
       * value 1.. MS
@@ -140,7 +140,7 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
   * end MS
 * performer MS
   * actor MS
-  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
+  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization or DiPagPractitionerRole or PractitionerRole) //TODO Frage: Soll hier die Organisation gar nicht mehr nutzbar sein?
     * ^short = "Referenz Behandelnder Leistungserbringer"
     * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition, SOLL die Referenz auf einen behandelnden Leistungserbringer vorhanden sein.
     Im Fall einer GOÄ Rechnungsposition, KANN ein behandelnder Leistungserbringer vorhanden sein.
