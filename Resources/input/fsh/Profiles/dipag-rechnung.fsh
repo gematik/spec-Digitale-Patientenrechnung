@@ -177,7 +177,7 @@ Id: dipag-rechnung
   * ^comment = "Der abweichender Forderungsinhaber SOLL vorhanden sein."
   * role MS
   * role = DiPagParticipantRoleCS#forderungsinhaber
-  * actor only Reference(DiPagPerson or Practitioner) //TODO Frage: Soll hier die Organisation gar nicht mehr nutzbar sein?
+  * actor only Reference(DiPagPerson or Practitioner or DiPagInstitution or Organization) //TODO Frage: Soll hier die Organisation gar nicht mehr nutzbar sein?
 * note MS
   * ^short = "Hinweise an den Kostenträger"
   * ^comment = "Der Hinweise an den Kostenträger KANN vorhanden sein."

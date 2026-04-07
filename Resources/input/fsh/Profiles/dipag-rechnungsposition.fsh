@@ -130,7 +130,7 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
   * text MS
     * ^short = "Bezeichnung für Auslagen/Sachkosten, z.B. Wirkstoffname oder Fremdlaborleistung"
 * occurrence[x] MS
-* occurrence[x] only Period
+* occurrence[x] only Period or dateTime
   * ^short = "Leistungszeitraum"
   * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Leistungszeitraum vorhanden sein.
   Im Falle einer BEMA Rechnungsposition, ist das Element nicht gefordert"
@@ -138,9 +138,11 @@ Mit 'Gebührenziffer' ist die eindeutige Kennung zu verstehen, die eine spezifis
   * ^short = "Behandlungszeitraum"
   * start MS
   * end MS
+* occurrenceDateTime MS
+  * ^short = "Behandlungsdatum"
 * performer MS
   * actor MS
-  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization or DiPagPractitionerRole or PractitionerRole) //TODO Frage: Soll hier die Organisation gar nicht mehr nutzbar sein?
+  * actor only Reference(DiPagPerson or DiPagInstitution or Organization) //TODO Frage: Soll hier die Organisation gar nicht mehr nutzbar sein?
     * ^short = "Referenz Behandelnder Leistungserbringer"
     * ^comment = "Im Falle einer GOÄ-neu Rechnungsposition, SOLL die Referenz auf einen behandelnden Leistungserbringer vorhanden sein.
     Im Fall einer GOÄ Rechnungsposition, KANN ein behandelnder Leistungserbringer vorhanden sein.
