@@ -47,7 +47,7 @@
         "path": "Invoice.extension",
         "sliceName": "Behandlungszeitraum",
         "short": "Behandlungszeitraum",
-        "comment": "Entweder ein Behandlungszeitraum, oder ein -datum SOLL vorhanden sein.",
+        "comment": "Entweder ein Behandlungszeitraum, oder ein -datum SOLL bei einer GOÄ Rechnung vorhanden sein. Im Falle einer GOZ- oder BEMA- und GOZ-Rechnung ist die Angabe eines Behandlungszeitraums oder -datums optional.",
         "min": 0,
         "max": "1",
         "type": [
@@ -225,7 +225,7 @@
         "path": "Invoice.extension",
         "sliceName": "Fachrichtung",
         "short": "Fachrichtung",
-        "comment": "Die Fachrichtung MUSS vorhanden sein.\n  Es wird empfohlen für zahnärztliche Rechnungen immer den Wert MZKH (Zahnmedizin) zu nutzen.",
+        "comment": "Die Fachrichtung MUSS vorhanden sein.\n  Im Zahärztlichen Bereich SOLLEN nur die Fachrichtungen Oralchirurgie (ORAL), Kieferorthopädie (KIEF) und Zahnmedizin (MZKH) verwendet werden.",
         "min": 1,
         "max": "1",
         "type": [
@@ -704,8 +704,8 @@
         "id": "Invoice.participant:Leistungserbringer",
         "path": "Invoice.participant",
         "sliceName": "Leistungserbringer",
-        "short": "Weitere behandelnde Leistungserbringer",
-        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.\n  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein.",
+        "short": "Behandelnde Leistungserbringer",
+        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN weitere behandelnde Leistungserbringer vorhanden sein.\n  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein.",
         "min": 1,
         "max": "*",
         "mustSupport": true
@@ -769,8 +769,8 @@
             "code": "Reference",
             "targetProfile": [
               "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person",
-              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
@@ -1122,7 +1122,7 @@
         "path": "Invoice.totalPriceComponent.extension",
         "sliceName": "Kassenanteil",
         "short": "Kassenanteil in Prozent",
-        "comment": "Im Falle einer BEMA Rechnung SOLL der Kassenanteil in Prozent vorhanden sein.\n    Im Falle einer GOZ Rechnung KANN der  Kassenanteil in Prozent vorhanden sein.\n    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert.",
+        "comment": "Im Falle einer BEMA oder gemischten BEMA und GOZ Rechnung SOLL der Kassenanteil in Prozent vorhanden sein.\n    Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.\n    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert.",
         "min": 0,
         "max": "1",
         "type": [

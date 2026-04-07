@@ -325,7 +325,7 @@
         "path": "ChargeItem.extension.extension",
         "sliceName": "Einfachsatz",
         "short": "Gebühr Einfachsatz in EUR",
-        "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Gebühr Einfachsatz in EUR vorhanden sein.\n    Im Falle einer BEMA Rechnungsposition ist er nicht gefordert.",
+        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnungsposition, SOLL der Gebühr Einfachsatz in EUR vorhanden sein.\n    Im Falle einer BEMA oder GOZ Rechnungsposition ist er nicht gefordert.",
         "mustSupport": true
       },
       {
@@ -563,8 +563,35 @@
       {
         "id": "ChargeItem.occurrence[x]",
         "path": "ChargeItem.occurrence[x]",
-        "short": "Behandlungszeitraum",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Leistungszeitraum",
         "comment": "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Leistungszeitraum vorhanden sein.\n  Im Falle einer BEMA Rechnungsposition, ist das Element nicht gefordert",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.occurrence[x]:occurrencePeriod",
+        "path": "ChargeItem.occurrence[x]",
+        "sliceName": "occurrencePeriod",
+        "short": "Behandlungszeitraum",
+        "min": 0,
+        "max": "1",
         "type": [
           {
             "code": "Period"
@@ -573,13 +600,27 @@
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.occurrence[x].start",
+        "id": "ChargeItem.occurrence[x]:occurrencePeriod.start",
         "path": "ChargeItem.occurrence[x].start",
         "mustSupport": true
       },
       {
-        "id": "ChargeItem.occurrence[x].end",
+        "id": "ChargeItem.occurrence[x]:occurrencePeriod.end",
         "path": "ChargeItem.occurrence[x].end",
+        "mustSupport": true
+      },
+      {
+        "id": "ChargeItem.occurrence[x]:occurrenceDateTime",
+        "path": "ChargeItem.occurrence[x]",
+        "sliceName": "occurrenceDateTime",
+        "short": "Behandlungsdatum",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -598,7 +639,6 @@
             "targetProfile": [
               "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person",
               "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
               "http://hl7.org/fhir/StructureDefinition/Organization"
             ]
           }
