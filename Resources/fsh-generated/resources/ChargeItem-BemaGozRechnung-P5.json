@@ -11,30 +11,18 @@
     {
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
       "valueCoding": {
-        "code": "GOZ",
+        "code": "BEMA",
         "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
       }
     },
     {
       "extension": [
         {
-          "extension": [
-            {
-              "url": "Value",
-              "valueDecimal": 1.132
-            }
-          ],
-          "url": "Faktor"
+          "url": "Punktzahl",
+          "valueDecimal": 18
         }
       ],
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
-    },
-    {
-      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
-      "valueCoding": {
-        "code": "A",
-        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"
-      }
     }
   ],
   "quantity": {
