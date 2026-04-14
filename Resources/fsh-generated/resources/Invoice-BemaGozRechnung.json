@@ -244,7 +244,7 @@
       "type": "deduction",
       "amount": {
         "currency": "EUR",
-        "value": 172.3
+        "value": -172.3
       },
       "code": {
         "coding": [
