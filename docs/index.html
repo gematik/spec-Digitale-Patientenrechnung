@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DiPag Invoice Viewer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>DiPag Invoice Viewer</h1>
+    <div class="toolbar">
+      <label for="invoice-select">Rechnung:</label>
+      <select id="invoice-select">
+        <option value="">-- Rechnung auswählen --</option>
+      </select>
+      <button id="split-btn" class="btn" disabled title="Rechnung und PDF nebeneinander anzeigen">
+        Splitscreen
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="single">
+    <div id="invoice-pane" class="pane active">
+      <div id="tab-bar" class="tab-bar hidden">
+        <button class="tab active" data-tab="invoice">Rechnung</button>
+        <button class="tab" id="pdf-tab-btn" data-tab="pdf">PDF</button>
+      </div>
+      <div id="invoice-view" class="tab-content active">
+        <div id="invoice-placeholder" class="placeholder">
+          Bitte eine Rechnung auswählen.
+        </div>
+        <div id="invoice-content" class="hidden"></div>
+        <div id="invoice-error" class="error hidden"></div>
+      </div>
+      <div id="pdf-view" class="tab-content hidden">
+        <div id="pdf-container">
+          <iframe id="pdf-frame" title="Rechnungs-PDF"></iframe>
+        </div>
+      </div>
+    </div>
+    <div id="split-pane" class="pane hidden">
+      <div class="split-pdf-header">PDF</div>
+      <div id="split-pdf-container">
+        <iframe id="split-pdf-frame" title="Rechnungs-PDF (Split)"></iframe>
+      </div>
+    </div>
+  </main>
+
+  <script src="viewer.js"></script>
+</body>
+</html>

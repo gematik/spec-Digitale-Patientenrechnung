@@ -1,0 +1,56 @@
+name: Deploy Viewer to GitHub Pages
+
+on:
+  push:
+    branches: [removing-bema-related-stuff]   # TODO(switch-to-master): change to [master]
+  workflow_dispatch:
+
+permissions:
+  pages: write
+  id-token: write
+  contents: read
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage invoice data
+        run: |
+          mkdir -p docs/data docs/pdfs
+          cp Resources/fsh-generated/resources/Invoice-*.json      docs/data/ || true
+          cp Resources/fsh-generated/resources/ChargeItem-*.json   docs/data/ || true
+          cp Resources/fsh-generated/resources/Organization-*.json docs/data/ || true
+          cp Resources/fsh-generated/resources/Patient-*.json      docs/data/ || true
+          cp Resources/fsh-generated/resources/Practitioner-*.json docs/data/ || true
+          cp Resources/fsh-generated/resources/CodeSystem-*.json   docs/data/ || true
+          cp "Material/KFO Mehrkostenberechnungen.pdf/"*.pdf docs/pdfs/ || true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Extract code displays
+        run: node docs/build/extract-displays.mjs
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
