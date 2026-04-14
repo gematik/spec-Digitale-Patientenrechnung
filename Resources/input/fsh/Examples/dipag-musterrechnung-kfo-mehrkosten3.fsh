@@ -110,6 +110,7 @@ TODO   KZV-spezifische Felder nicht in DiPag vorgesehen:
 * totalNet insert Amount(91.04) //TODO Keine Steuerangaben (BEMA = steuerfrei); totalNet = totalGross
 * totalGross insert Amount(91.04)
 * paymentTerms = "Bitte zahlen Sie den Versichertenanteil in Höhe von 91,04 EUR."
+* paymentTerms.extension[Zahlungsziel].valueDate = "2024-02-09"
 
 // ============================================================================
 // RECHNUNGSPOSITIONEN – Sachleistungen (23.09.2024)

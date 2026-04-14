@@ -63,6 +63,7 @@ TODO   Begründungen (Bgr) zu den erhöhten Faktoren (>2,3-facher Schwellenwert)
 * totalNet insert Amount(530.26) //TODO Keine Steuerangaben auf der Rechnung (GOZ = steuerfrei); totalNet = totalGross
 * totalGross insert Amount(530.26)
 * paymentTerms = "Bitte zahlen Sie 530,26 EUR unter Angabe der Rechnungsnummer 325349020031."
+* paymentTerms.extension[Zahlungsziel].valueDate = "2025-08-30"
 
 // ============================================================================
 // RECHNUNGSPOSITIONEN – Sitzung 23.07.2025
