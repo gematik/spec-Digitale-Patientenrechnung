@@ -1,0 +1,66 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "BemaGozRechnung-P7",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+    ]
+  },
+  "status": "billable",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+      "valueCoding": {
+        "code": "GOZ",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+      }
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "Value",
+              "valueDecimal": 1.132
+            }
+          ],
+          "url": "Faktor"
+        }
+      ],
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
+      "valueCoding": {
+        "code": "A",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"
+      }
+    }
+  ],
+  "quantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 2,
+    "unit": "{#}",
+    "code": "{#}"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/bema",
+        "code": "128a",
+        "display": "Eingliederung eines konfektionierten Vollbogens aus Edelstahl einschließlich Material- und Laborkosten"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/BemaGozPatient"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Organization/BemaGozBehandler"
+      }
+    }
+  ],
+  "occurrenceDateTime": "2024-08-20"
+}

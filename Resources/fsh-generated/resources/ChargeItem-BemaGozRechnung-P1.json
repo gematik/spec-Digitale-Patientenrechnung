@@ -1,0 +1,71 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "BemaGozRechnung-P1",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+    ]
+  },
+  "status": "billable",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+      "valueCoding": {
+        "code": "GOZ",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+      }
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "Value",
+              "valueDecimal": 3.6
+            }
+          ],
+          "url": "Faktor"
+        }
+      ],
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
+      "valueCoding": {
+        "code": "A",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"
+      }
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/gzä",
+        "code": "6100",
+        "display": "Eingliederung eines Klebebrackets zur Aufnahme orthodontischer Hilfsmittel"
+      }
+    ]
+  },
+  "quantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 1,
+    "unit": "{#}",
+    "code": "{#}"
+  },
+  "subject": {
+    "reference": "Patient/BemaGozPatient"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Organization/BemaGozBehandler"
+      }
+    }
+  ],
+  "occurrenceDateTime": "2024-07-01",
+  "reason": [
+    {
+      "text": "BioQuick Brackets - Besondere Schwierigkeit und erhöhter Zeitaufwand wegen hochpräziser Ausrichtung und Anbringung unter besonderer Berücksichtigung der individuellen Zahnanatomie"
+    }
+  ]
+}
