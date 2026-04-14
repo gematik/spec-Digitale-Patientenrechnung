@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "BemaGozRechnung-P10",
+  "id": "KfoMehrkosten1-P2",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -19,7 +19,7 @@
       "extension": [
         {
           "url": "Punktzahl",
-          "valueDecimal": 32
+          "valueDecimal": 18
         }
       ],
       "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
@@ -27,7 +27,7 @@
   ],
   "quantity": {
     "system": "http://unitsofmeasure.org",
-    "value": 2,
+    "value": 1,
     "unit": "{#}",
     "code": "{#}"
   },
@@ -35,20 +35,20 @@
     "coding": [
       {
         "system": "http://fhir.de/CodeSystem/bäk/bema",
-        "code": "128a",
-        "display": "Eingliederung eines konfektionierten Vollbogens aus Edelstahl einschließlich Material- und Laborkosten"
+        "code": "126a",
+        "display": "Eingliedern eines Brackets oder eines Attachments aus Edelstahl oder nickelfreiem Metall einschließlich Material- und Laborkosten"
       }
     ]
   },
   "subject": {
-    "reference": "Patient/BemaGozPatient"
+    "reference": "Patient/KfoMehrkosten1Patient"
   },
   "performer": [
     {
       "actor": {
-        "reference": "Organization/BemaGozBehandler"
+        "reference": "Organization/KfoMehrkosten1Behandler"
       }
     }
   ],
-  "occurrenceDateTime": "2024-09-16"
+  "occurrenceDateTime": "2024-07-01"
 }

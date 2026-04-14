@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "BemaGozRechnung-P4",
+  "id": "KfoMehrkosten1-P3",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -21,7 +21,7 @@
           "extension": [
             {
               "url": "Value",
-              "valueDecimal": 3.6
+              "valueDecimal": 2.3
             }
           ],
           "url": "Faktor"
@@ -41,41 +41,31 @@
     "coding": [
       {
         "system": "http://fhir.de/CodeSystem/bäk/gzä",
-        "code": "6100",
-        "display": "Eingliederung eines Klebebrackets zur Aufnahme orthodontischer Hilfsmittel"
+        "code": "2000",
+        "display": "Versiegelung von kariesfreien Zahnfissuren mit aushärtenden Kunststoffen, auch Glattflächenversiegelung, je Zahn"
       }
     ]
   },
   "quantity": {
     "system": "http://unitsofmeasure.org",
-    "value": 3,
+    "value": 1,
     "unit": "{#}",
     "code": "{#}"
   },
-  "bodysite": [
-    {
-      "extension": [
-        {
-          "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion",
-          "valueString": "27, 37, 47"
-        }
-      ]
-    }
-  ],
   "subject": {
-    "reference": "Patient/BemaGozPatient"
+    "reference": "Patient/KfoMehrkosten1Patient"
   },
   "performer": [
     {
       "actor": {
-        "reference": "Organization/BemaGozBehandler"
+        "reference": "Organization/KfoMehrkosten1Behandler"
       }
     }
   ],
-  "occurrenceDateTime": "2024-08-20",
+  "occurrenceDateTime": "2024-07-01",
   "reason": [
     {
-      "text": "BioQuick Brackets - Besondere Schwierigkeit und erhöhter Zeitaufwand wegen hochpräziser Ausrichtung und Anbringung unter besonderer Berücksichtigung der individuellen Zahnanatomie"
+      "text": "bei erhöhtem Kariesrisiko während einer Multibracketbehandlung, Bracketumfeldversiegelung"
     }
   ]
 }

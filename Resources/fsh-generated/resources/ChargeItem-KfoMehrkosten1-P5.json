@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "BemaGozRechnung-P2",
+  "id": "KfoMehrkosten1-P5",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -27,7 +27,7 @@
   ],
   "quantity": {
     "system": "http://unitsofmeasure.org",
-    "value": 1,
+    "value": 3,
     "unit": "{#}",
     "code": "{#}"
   },
@@ -41,14 +41,14 @@
     ]
   },
   "subject": {
-    "reference": "Patient/BemaGozPatient"
+    "reference": "Patient/KfoMehrkosten1Patient"
   },
   "performer": [
     {
       "actor": {
-        "reference": "Organization/BemaGozBehandler"
+        "reference": "Organization/KfoMehrkosten1Behandler"
       }
     }
   ],
-  "occurrenceDateTime": "2024-07-01"
+  "occurrenceDateTime": "2024-08-20"
 }

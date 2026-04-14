@@ -1,6 +1,6 @@
 {
   "resourceType": "ChargeItem",
-  "id": "BemaGozRechnung-P8",
+  "id": "KfoMehrkosten1-P6",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
@@ -21,7 +21,7 @@
           "extension": [
             {
               "url": "Value",
-              "valueDecimal": 2.3
+              "valueDecimal": 3.6
             }
           ],
           "url": "Faktor"
@@ -41,14 +41,14 @@
     "coding": [
       {
         "system": "http://fhir.de/CodeSystem/bäk/gzä",
-        "code": "2000",
-        "display": "Versiegelung von kariesfreien Zahnfissuren mit aushärtenden Kunststoffen, auch Glattflächenversiegelung, je Zahn"
+        "code": "6150",
+        "display": "Eingliederung eines ungeteilten Bogens, alle Zahngruppen umfassend, je Kiefer"
       }
     ]
   },
   "quantity": {
     "system": "http://unitsofmeasure.org",
-    "value": 3,
+    "value": 2,
     "unit": "{#}",
     "code": "{#}"
   },
@@ -57,25 +57,25 @@
       "extension": [
         {
           "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion",
-          "valueString": "27, 37, 47"
+          "valueString": "OK, UK"
         }
       ]
     }
   ],
   "subject": {
-    "reference": "Patient/BemaGozPatient"
+    "reference": "Patient/KfoMehrkosten1Patient"
   },
   "performer": [
     {
       "actor": {
-        "reference": "Organization/BemaGozBehandler"
+        "reference": "Organization/KfoMehrkosten1Behandler"
       }
     }
   ],
   "occurrenceDateTime": "2024-08-20",
   "reason": [
     {
-      "text": "bei erhöhtem Kariesrisiko während einer Multibracketbehandlung, Bracketumfeldversiegelung"
+      "text": "superrealistische, thermoaktive Bögen bei selbstligierten Brackets"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "resourceType": "Invoice",
-  "id": "BemaGozRechnung",
+  "id": "KfoMehrkosten1Rechnung",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"
@@ -48,7 +48,7 @@
         ]
       },
       "actor": {
-        "reference": "Organization/BemaGozBehandler"
+        "reference": "Organization/KfoMehrkosten1Behandler"
       }
     }
   ],
@@ -57,7 +57,7 @@
       "system": "http://fhir.de/sid/gkv/kvid-10",
       "value": "A123456789"
     },
-    "reference": "Patient/BemaGozPatient",
+    "reference": "Patient/KfoMehrkosten1Patient",
     "display": "Max Muster"
   },
   "type": {
@@ -85,7 +85,7 @@
       ],
       "sequence": 1,
       "chargeItemReference": {
-        "reference": "ChargeItem/BemaGozRechnung-P1"
+        "reference": "ChargeItem/KfoMehrkosten1-P1"
       }
     },
     {
@@ -100,7 +100,7 @@
       ],
       "sequence": 2,
       "chargeItemReference": {
-        "reference": "ChargeItem/BemaGozRechnung-P2"
+        "reference": "ChargeItem/KfoMehrkosten1-P2"
       }
     },
     {
@@ -115,7 +115,7 @@
       ],
       "sequence": 3,
       "chargeItemReference": {
-        "reference": "ChargeItem/BemaGozRechnung-P3"
+        "reference": "ChargeItem/KfoMehrkosten1-P3"
       }
     },
     {
@@ -130,7 +130,7 @@
       ],
       "sequence": 4,
       "chargeItemReference": {
-        "reference": "ChargeItem/BemaGozRechnung-P4"
+        "reference": "ChargeItem/KfoMehrkosten1-P4"
       }
     },
     {
@@ -145,7 +145,7 @@
       ],
       "sequence": 5,
       "chargeItemReference": {
-        "reference": "ChargeItem/BemaGozRechnung-P5"
+        "reference": "ChargeItem/KfoMehrkosten1-P5"
       }
     },
     {
@@ -160,7 +160,7 @@
       ],
       "sequence": 6,
       "chargeItemReference": {
-        "reference": "ChargeItem/BemaGozRechnung-P6"
+        "reference": "ChargeItem/KfoMehrkosten1-P6"
       }
     },
     {
@@ -175,7 +175,7 @@
       ],
       "sequence": 7,
       "chargeItemReference": {
-        "reference": "ChargeItem/BemaGozRechnung-P7"
+        "reference": "ChargeItem/KfoMehrkosten1-P7"
       }
     },
     {
@@ -190,7 +190,7 @@
       ],
       "sequence": 8,
       "chargeItemReference": {
-        "reference": "ChargeItem/BemaGozRechnung-P8"
+        "reference": "ChargeItem/KfoMehrkosten1-P8"
       }
     },
     {
@@ -205,7 +205,7 @@
       ],
       "sequence": 9,
       "chargeItemReference": {
-        "reference": "ChargeItem/BemaGozRechnung-P9"
+        "reference": "ChargeItem/KfoMehrkosten1-P9"
       }
     },
     {
@@ -220,7 +220,7 @@
       ],
       "sequence": 10,
       "chargeItemReference": {
-        "reference": "ChargeItem/BemaGozRechnung-P10"
+        "reference": "ChargeItem/KfoMehrkosten1-P10"
       }
     }
   ],
@@ -257,11 +257,11 @@
     }
   ],
   "subject": {
-    "reference": "Patient/BemaGozPatient"
+    "reference": "Patient/KfoMehrkosten1Patient"
   },
   "date": "2024-09-30",
   "issuer": {
-    "reference": "Organization/BemaGozBehandler"
+    "reference": "Organization/KfoMehrkosten1Behandler"
   },
   "totalNet": {
     "currency": "EUR",
