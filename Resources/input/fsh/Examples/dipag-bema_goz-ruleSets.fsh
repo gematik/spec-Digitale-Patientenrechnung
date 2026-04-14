@@ -1,7 +1,3 @@
-RuleSet: BemaGozPosition
-* subject.reference = "Patient/BemaGozPatient"
-* performer.actor.reference = "Organization/BemaGozBehandler"
-
 RuleSet: GozCoding(code, display)
 * code.coding[GOZ]
   * system = "http://fhir.de/CodeSystem/bäk/gzä"
@@ -30,13 +26,6 @@ RuleSet: Anzahl(value)
   * value = {value}
   * unit = "{#}"
   * code = #{#} "Anzahl"
-
-RuleSet: lineItem(num, value)
-* lineItem[+]
-  * sequence = {num}
-  * chargeItemReference = Reference(BemaGozRechnung-P{num})
-  * priceComponent[BruttoBetrag] //TODO Den Steuer Teil kann ich nicht aus der Rechnung lesen. Ist der nicht relevant bei GOZ?
-    * amount insert Amount({value})
 
 RuleSet: Amount(value)
 * currency = #EUR

@@ -1,3 +1,14 @@
+RuleSet: BemaGozPosition
+* subject.reference = "Patient/BemaGozPatient"
+* performer.actor.reference = "Organization/BemaGozBehandler"
+
+RuleSet: lineItem(num, value)
+* lineItem[+]
+  * sequence = {num}
+  * chargeItemReference = Reference(BemaGozRechnung-P{num})
+  * priceComponent[BruttoBetrag] //TODO Den Steuer Teil kann ich nicht aus der Rechnung lesen. Ist der nicht relevant bei GOZ?
+    * amount insert Amount({value})
+
 Instance: BemaGozRechnung
 InstanceOf: DiPagRechnung
 Usage: #example
@@ -17,7 +28,7 @@ Title: "BemaGozRechnung"
 * recipient
   * reference = "Patient/BemaGozPatient"
   * identifier.value = "A123456789"
-  * display = "Max Mustermann"
+  * display = "Max Muster"
 * date = "2024-09-30"
 * participant[Leistungserbringer].actor.reference = "Organization/BemaGozBehandler"
 * issuer.reference = "Organization/BemaGozBehandler"
