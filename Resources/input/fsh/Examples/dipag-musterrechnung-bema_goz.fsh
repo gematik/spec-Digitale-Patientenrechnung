@@ -3,7 +3,7 @@ InstanceOf: DiPagRechnung
 Usage: #example
 Title: "BemaGozRechnung"
 /*TODO Folgende Infos bekomme ich nicht unter:
-- Unser Zeichen P-46267-UZ-1
+- Unser Zeichen P-46267-UZ-1 -> Peter klärt fragt nach, aber ja, aktuell nicht drin
 - Bema Abzüge pro LineItem (Abzgl. BEMA-Gebühr 126a/128a mit einem Betrag von x EUR unter Vorleistungen anderer Kostenträger. Die Summe daraus haben wir abgebildet.)
 */
 * extension[Behandlungsart].valueCoding = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB
@@ -12,15 +12,15 @@ Title: "BemaGozRechnung"
   * system = "http://example.org/rechnungsnummer"
   * value = "00122704"
 * type.coding[AusrichtungDerRechnung] = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs#GOZ
-* type.coding[Rechnungsart] = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs#ABSCHLUSS //TODO Wo lese ich das aus der Rechnung raus?
+* type.coding[Rechnungsart] = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs#ABSCHLUSS //TODO Wo lese ich das aus der Rechnung raus? -> Peter klärt das
 * subject.reference = "Patient/BemaGozPatient"
 * recipient
-  * reference = "Patient/BemaGozPatient" //Nehme ich der Einfacheit halber an
+  * reference = "Patient/BemaGozPatient"
   * identifier.value = "A123456789"
   * display = "Max Mustermann"
 * date = "2024-09-30"
 * participant[Leistungserbringer].actor.reference = "Organization/BemaGozBehandler"
-* issuer.reference = "Organization/BemaGozBehandler" //Nehme ich der Einfacheit halber an
+* issuer.reference = "Organization/BemaGozBehandler"
 * insert lineItem(1, 33.41)
 * insert lineItem(2, -18.46)
 * insert lineItem(3, 11.64)
@@ -33,10 +33,10 @@ Title: "BemaGozRechnung"
 * insert lineItem(10, -32.82)
 * totalPriceComponent[SummeRechnungspositionen]
   * amount insert Amount(483.92)
-* totalPriceComponent[Abzug] //TODO Aus der Rechnung werden auch die Einzelbeträge pro Position genannt. Abgebildet haben wir das aber nur als eins?
+* totalPriceComponent[Abzug]
   * code = https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs#VorleistungKst
-  * amount insert Amount(172.30)
-* totalNet insert Amount(311.62) //TODO Was ist mit Steuern?
+  * amount insert Amount(-172.30)
+* totalNet insert Amount(311.62) //TODO Was ist mit Steuern? --> Klärt Peter
 * totalGross insert Amount(311.62)
 * paymentTerms = "Bitte überweisen Sie den Betrag in Höhe von 311,62 EUR unter Angabe der Rechnungsnummer: 00122704 bis spätestens 01.11.2024 auf unser unten angegebens Konto.
 IBAN: DE12345678901234567890
@@ -59,7 +59,7 @@ Instance: BemaGozRechnung-P2
 InstanceOf: DiPagRechnungsposition
 Usage: #example
 Title: "BemaGozRechnung Rechnungsposition 2 - BEMA Abzug P1"
-* insert BemaGozPositionExtensions(1.132) //TODO Annahme aus anderem Rechnungsbeispiel
+* insert BemaPositionExtensions(18)
 * insert BemaCoding(#126a, [["Eingliedern eines Brackets oder eines Attachments aus Edelstahl oder nickelfreiem Metall einschließlich Material- und Laborkosten"]])
 * insert BemaGozPosition
 * occurrenceDateTime = "2024-07-01"
@@ -92,7 +92,7 @@ Instance: BemaGozRechnung-P5
 InstanceOf: DiPagRechnungsposition
 Usage: #example
 Title: "BemaGozRechnung Rechnungsposition 5 - BEMA Abzug P4"
-* insert BemaGozPositionExtensions(1.132) //TODO Annahme aus anderem Rechnungsbeispiel
+* insert BemaPositionExtensions(18)
 * insert BemaCoding(#126a, [["Eingliedern eines Brackets oder eines Attachments aus Edelstahl oder nickelfreiem Metall einschließlich Material- und Laborkosten"]])
 * insert BemaGozPosition
 * occurrenceDateTime = "2024-08-20"
@@ -114,7 +114,7 @@ Instance: BemaGozRechnung-P7
 InstanceOf: DiPagRechnungsposition
 Usage: #example
 Title: "BemaGozRechnung Rechnungsposition 7 - BEMA Abzug P6"
-* insert BemaGozPositionExtensions(1.132) //TODO Annahme aus anderem Rechnungsbeispiel
+* insert BemaPositionExtensions(32)
 * insert BemaCoding(#128a, [["Eingliederung eines konfektionierten Vollbogens aus Edelstahl einschließlich Material- und Laborkosten"]])
 * insert BemaGozPosition
 * occurrenceDateTime = "2024-08-20"
@@ -147,7 +147,7 @@ Instance: BemaGozRechnung-P10
 InstanceOf: DiPagRechnungsposition
 Usage: #example
 Title: "BemaGozRechnung Rechnungsposition 10 - BEMA Abzug P9"
-* insert BemaGozPositionExtensions(1.132) //TODO Annahme aus anderem Rechnungsbeispiel
+* insert BemaPositionExtensions(32)
 * insert BemaCoding(#128a, [["Eingliederung eines konfektionierten Vollbogens aus Edelstahl einschließlich Material- und Laborkosten"]])
 * insert BemaGozPosition
 * occurrenceDateTime = "2024-09-16"
@@ -165,16 +165,20 @@ RuleSet: GozCoding(code, display)
 
 RuleSet: BemaCoding(code, display)
 * code.coding[+]
-  * system = "http://fhir.de/CodeSystem/bäk/bema" //TODO System für BEMA nur Platzhalter
+  * system = "http://fhir.de/CodeSystem/bäk/bema" //TODO System für BEMA nur Platzhalter -> gerade noch offen lassen, Peter fragt an bei der KZBV
   * code = {code}
   * display = {display}
 
 RuleSet: BemaGozPositionExtensions(faktor)
 * extension[Rechnungspositionstyp].valueCoding = https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs#GOZ
-* extension[GebuehrenordnungAngaben] //TODO Wo erkenne ich die Punktzahl von BEMA? Wie bekomme ich die BEMA Minderung mit rein?
+* extension[GebuehrenordnungAngaben] //TODO Wo erkenne ich die Punktzahl von BEMA? -> Aus dem Katalog
   * extension[Faktor]
     * extension[Value].valueDecimal = {faktor}
-* extension[Zusatz].valueCoding = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs#A //TODO Wo lese ich das aus der Rechnung raus?
+* extension[Zusatz].valueCoding = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs#A //TODO Wo lese ich das aus der Rechnung raus? -> Peter klärt es
+
+RuleSet: BemaPositionExtensions(punktzahl)
+* extension[Rechnungspositionstyp].valueCoding = https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs#BEMA
+* extension[GebuehrenordnungAngaben].extension[Punktzahl].valueDecimal = {punktzahl}
 
 RuleSet: Anzahl(value)
 * quantity
