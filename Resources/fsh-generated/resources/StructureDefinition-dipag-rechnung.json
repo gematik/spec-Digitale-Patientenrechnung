@@ -705,7 +705,7 @@
         "path": "Invoice.participant",
         "sliceName": "Leistungserbringer",
         "short": "Behandelnde Leistungserbringer",
-        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN weitere behandelnde Leistungserbringer vorhanden sein.\n  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein.",
+        "comment": "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN weitere behandelnde Leistungserbringer vorhanden sein.\n  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein.\n  \n  Im Falle einer GOZ oder BEMA Rechnung, MÜSSEN Leistungserbringer als Organisation referenziert werden, die Angabe von Personen ist in diesem Fall nicht zulässig.",
         "min": 1,
         "max": "*",
         "mustSupport": true
