@@ -1,0 +1,66 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+    ]
+  },
+  "status": "billable",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+      "valueCoding": {
+        "code": "GOÄ",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+      "extension": [
+        {
+          "url": "Faktor",
+          "extension": [
+            {
+              "url": "Value",
+              "valueDecimal": 2.3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+      "valueDate": "2018-10-04"
+    }
+  ],
+  "quantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 1,
+    "unit": "Anzahl",
+    "code": "{count}"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/goä",
+        "code": "1"
+      }
+    ],
+    "text": "Beratung, auch telefonisch"
+  },
+  "subject": {
+    "reference": "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+      }
+    }
+  ],
+  "occurrencePeriod": {
+    "start": "2018-10-04",
+    "end": "2018-10-04"
+  }
+}

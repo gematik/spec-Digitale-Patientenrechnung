@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagRechnungAbrechnungsartCS",
+  "id": "dipag-rechnung-abrechnungsart-cs",
+  "title": "Digitale Patientenrechnung Rechnung Abrechnungsart CS",
+  "description": "CodeSystem für die verschiedenen Abrechnungsarten innerhalb einer E-Rechnnung",
+  "version": "1.0.5",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs",
+  "concept": [
+    {
+      "code": "BEMA",
+      "display": "Einheitliche Bewertungsmaßstab für zahnärztliche Leistungen"
+    },
+    {
+      "code": "GOÄ",
+      "display": "Gebührenordnung für Ärzte"
+    },
+    {
+      "code": "GOZ",
+      "display": "Gebührenordnung für Zahnärzte"
+    }
+  ],
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
+  "count": 3
+}

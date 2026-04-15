@@ -1,0 +1,56 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagRechnungspositionTypeCS",
+  "id": "dipag-chargeitem-type-cs",
+  "title": "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem",
+  "version": "1.0.5",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+  "concept": [
+    {
+      "code": "GOÄ",
+      "display": "Leistung nach Gebührenordnung GOÄ"
+    },
+    {
+      "code": "GOZ",
+      "display": "Leistung nach Gebührenordnung GOZ"
+    },
+    {
+      "code": "BEMA",
+      "display": "BEMA-Leistung"
+    },
+    {
+      "code": "EigenlaborleistungMaterial",
+      "display": "Eigenlaborleistung/Material"
+    },
+    {
+      "code": "Fremdlaborleistung",
+      "display": "Fremdlaborleistung"
+    },
+    {
+      "code": "SachkostenAuslagen",
+      "display": "Sachkosten/Auslagen"
+    },
+    {
+      "code": "WegegeldReiseentschaedigung",
+      "display": "Wegegeld/Reiseentschädigung"
+    }
+  ],
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
+  "count": 7
+}

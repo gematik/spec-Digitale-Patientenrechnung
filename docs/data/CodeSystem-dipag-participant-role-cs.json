@@ -1,0 +1,36 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagParticipantRoleCS",
+  "id": "dipag-participant-role-cs",
+  "title": "Digitale Patientenrechnung Teilnehmer Rolle",
+  "version": "1.0.5",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs",
+  "concept": [
+    {
+      "code": "leistungserbringer",
+      "display": "Leistungserbringer"
+    },
+    {
+      "code": "forderungsinhaber",
+      "display": "Forderungsinhaber"
+    }
+  ],
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
+  "count": 2
+}
