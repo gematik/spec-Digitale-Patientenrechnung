@@ -6,16 +6,14 @@ on:
   workflow_dispatch:
 
 permissions:
-  pages: write
-  id-token: write
-  contents: read
+  contents: write
 
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -39,18 +37,18 @@ jobs:
       - name: Extract code displays
         run: node docs/build/extract-displays.mjs
 
-      - uses: actions/configure-pages@v5
+      - name: Deploy docs to github-pages branch
+        run: |
+          cp -r docs /tmp/built-docs
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin github-pages
+          git checkout github-pages
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+          rm -rf docs
+          cp -r /tmp/built-docs docs
+
+          git add docs/
+          git commit -m "Deploy: $(date -u +%Y-%m-%dT%H:%M:%SZ)" || echo "Nothing to commit"
+          git push origin github-pages
