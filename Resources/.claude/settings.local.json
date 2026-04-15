@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(sushi .)",
-      "Bash(ls Resources/input/fsh/Examples/*.fsh)",
-      "WebFetch(domain:localhost)"
-    ]
-  }
-}

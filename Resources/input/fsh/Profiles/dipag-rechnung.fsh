@@ -169,7 +169,9 @@ Id: dipag-rechnung
 * participant[Leistungserbringer]
   * ^short = "Behandelnde Leistungserbringer"
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN weitere behandelnde Leistungserbringer vorhanden sein.
-  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
+  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein.
+  
+  Im Falle einer GOZ oder BEMA Rechnung, MÜSSEN Leistungserbringer als Organisation referenziert werden, die Angabe von Personen ist in diesem Fall nicht zulässig."
   * role = DiPagParticipantRoleCS#leistungserbringer
   * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization) //TODO Frage: Soll hier die Organisation gar nicht mehr nutzbar sein?
 * participant[Forderungsinhaber]
