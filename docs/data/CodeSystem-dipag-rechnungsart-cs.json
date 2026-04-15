@@ -1,0 +1,37 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagRechnungsartCS",
+  "id": "dipag-rechnungsart-cs",
+  "title": "Digitale Patientenrechnung Rechnungsart CS",
+  "description": "CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung",
+  "version": "1.0.5",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs",
+  "concept": [
+    {
+      "code": "ABSCHLUSS",
+      "display": "Abschlussrechnung"
+    },
+    {
+      "code": "TEIL",
+      "display": "Teilrechnung"
+    }
+  ],
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
+  "count": 2
+}

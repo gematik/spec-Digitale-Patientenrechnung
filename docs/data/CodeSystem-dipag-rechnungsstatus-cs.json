@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagARechnungsstatusCS",
+  "id": "dipag-rechnungsstatus-cs",
+  "title": "Digitale Patientenrechnung Rechnungsstatus CS",
+  "description": "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments",
+  "version": "1.0.5",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
+  "concept": [
+    {
+      "code": "offen",
+      "display": "Offen"
+    },
+    {
+      "code": "erledigt",
+      "display": "Erledigt"
+    },
+    {
+      "code": "papierkorb",
+      "display": "Papierkorb"
+    }
+  ],
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
+  "count": 3
+}
