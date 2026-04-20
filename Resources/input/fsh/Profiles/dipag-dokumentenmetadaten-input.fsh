@@ -4,6 +4,15 @@ Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-eingang
 * insert Meta
 * obeys RechnungOderAnhang
+* meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
+* meta.extension[markierung]
+  * ^comment = "Beim Submit einer Rechnung darf nur die Markierung 'Persönlich' gesetzt werden. Alle anderen Markierungen sind ausschließlich im Fachdienst zu setzen.
+  Ein optionaler Freitext mit Details zur Markierung kann über die Extension 'details' angegeben werden."
+  * extension[markierung] MS
+    * valueCoding MS
+    * valueCoding = #persoenlich
+  * extension[details] MS
+    * valueString MS
 * status MS
 * status = #current
   * ^comment = "Versionierung von Dokumenten ist nicht unterstützt. Nur jeweils die aktuelle Version des Dokumentes wird akzeptiert."
