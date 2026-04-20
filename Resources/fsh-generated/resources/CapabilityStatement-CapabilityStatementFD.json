@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
   "url": "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",

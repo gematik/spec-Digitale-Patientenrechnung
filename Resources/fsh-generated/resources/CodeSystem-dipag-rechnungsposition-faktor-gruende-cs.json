@@ -5,7 +5,7 @@
   "name": "DiPagRechnungspositionFaktorGruendeCS",
   "id": "dipag-rechnungsposition-faktor-gruende-cs",
   "title": "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs",
   "concept": [
     {

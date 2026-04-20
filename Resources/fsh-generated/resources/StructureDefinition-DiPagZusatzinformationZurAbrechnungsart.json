@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "DiPagZusatzinformationZurAbrechnungsart",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagZusatzinformationZurAbrechnungsart",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "DiPagZusatzinformationZurAbrechnungsart",
   "title": "Zusatzinformation zur Abrechnungsart",
   "status": "active",

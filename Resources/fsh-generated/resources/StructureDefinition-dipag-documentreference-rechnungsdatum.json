@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-documentreference-rechnungsdatum",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "DiPagDocumentReferenceRechnungsdatum",
   "title": "Digitale Patientenrechnung DocumentReference Rechnungsdatum",
   "status": "active",

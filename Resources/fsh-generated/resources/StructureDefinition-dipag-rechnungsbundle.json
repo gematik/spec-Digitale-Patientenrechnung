@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnungsbundle",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "DiPagRechnungsBundle",
   "title": "Digitale Patientenrechnung - Rechnungsinhalte Bundle",
   "status": "active",

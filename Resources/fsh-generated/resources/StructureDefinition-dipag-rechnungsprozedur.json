@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnungsprozedur",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "DiPagRechnungsprozedur",
   "title": "Digitale Patientenrechnung Rechnungsprozedur",
   "status": "active",

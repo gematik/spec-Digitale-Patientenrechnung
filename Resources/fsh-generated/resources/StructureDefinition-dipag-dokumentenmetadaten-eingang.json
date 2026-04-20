@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-dokumentenmetadaten-eingang",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "DiPagDokumentenmetadatenEingang",
   "title": "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
   "status": "active",

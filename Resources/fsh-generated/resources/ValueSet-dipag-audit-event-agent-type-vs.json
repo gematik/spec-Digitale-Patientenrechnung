@@ -4,7 +4,7 @@
   "name": "DiPagAuditEventAgentTypeVS",
   "id": "dipag-audit-event-agent-type-vs",
   "title": "Digitale Patientenrechnung Audit Event Agent Type",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-agent-type-vs",
   "experimental": false,
   "date": "2026-03-26",

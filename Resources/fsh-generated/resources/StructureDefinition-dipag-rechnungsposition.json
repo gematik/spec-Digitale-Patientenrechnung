@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnungsposition",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "DiPagRechnungsposition",
   "title": "Digitale Patientenrechnung Rechnungsposition",
   "status": "active",

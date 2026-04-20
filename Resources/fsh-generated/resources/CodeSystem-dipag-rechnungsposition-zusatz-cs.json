@@ -5,7 +5,7 @@
   "name": "DiPagRechnungspositionZusatzCS",
   "id": "dipag-rechnungsposition-zusatz-cs",
   "title": "Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs",
   "concept": [
     {

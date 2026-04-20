@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "DiPagInvoiceBasedOn",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagInvoiceBasedOn",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "DiPagInvoiceBasedOn",
   "title": "Digitale Patientenrechnung BasedOn Extension",
   "status": "active",

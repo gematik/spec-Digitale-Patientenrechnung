@@ -6,7 +6,7 @@
   "id": "dipag-rechnung-markierung-cs",
   "title": "Digitale Patientenrechnung Rechnung Markierung CS",
   "description": "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs",
   "concept": [
     {
