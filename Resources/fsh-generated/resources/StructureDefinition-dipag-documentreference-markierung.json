@@ -38,6 +38,33 @@
   "differential": {
     "element": [
       {
+        "id": "Extension",
+        "path": "Extension",
+        "constraint": [
+          {
+            "key": "DiPagDocumentReferenceMarkierung-2",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
+            "severity": "error",
+            "human": "Details zum Gelesen-Status können nur angegeben werden wenn die Markierung vom Typ 'Gelesen' ist",
+            "expression": "extension.where(url = 'gelesen').value.exists() implies extension.where(url = 'markierung').valueCoding.where(code = 'gelesen').exists()"
+          },
+          {
+            "key": "DiPagDocumentReferenceMarkierung-1",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
+            "severity": "error",
+            "human": "Details zur Art der Archivierung können nur angegeben werden wenn die Markierung vom Typ 'Archiviert' ist",
+            "expression": "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').valueCoding.where(code = 'archiviert').exists()"
+          },
+          {
+            "key": "DiPagDocumentReferenceMarkierung-3",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
+            "severity": "error",
+            "human": "Details zu Status mit Kostenträger-Referenz können nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', eingereicht-post, 'geteilt' oder 'abgerufen' ist",
+            "expression": "extension.where(url = 'kostentraeger').value.exists() implies (extension.where(url = 'markierung').valueCoding.where(code = 'eingereicht-frontend').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'eingereicht-post').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'geteilt').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'abgerufen').exists())"
+          }
+        ]
+      },
+      {
         "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 1
@@ -132,16 +159,7 @@
         "path": "Extension.extension",
         "sliceName": "gelesen",
         "min": 0,
-        "max": "1",
-        "constraint": [
-          {
-            "key": "DiPagDocumentReferenceMarkierung-2",
-            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
-            "severity": "error",
-            "human": "Details zum Gelesen-Status können nur angegeben werden wenn die Markierung vom Typ 'Gelesen' ist",
-            "expression": "extension.where(url = 'gelesen').value.exists() implies extension.where(url = 'markierung').value.coding.where(code = 'gelesen').exists()"
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Extension.extension:gelesen.extension",
@@ -168,16 +186,7 @@
         "path": "Extension.extension",
         "sliceName": "artDerArchivierung",
         "min": 0,
-        "max": "1",
-        "constraint": [
-          {
-            "key": "DiPagDocumentReferenceMarkierung-1",
-            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
-            "severity": "error",
-            "human": "Details zur Art der Archivierung können nur angegeben werden wenn die Markierung vom Typ 'Archiviert' ist",
-            "expression": "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').value.coding.where(code = 'archiviert').exists()"
-          }
-        ]
+        "max": "1"
       },
       {
         "id": "Extension.extension:artDerArchivierung.extension",
@@ -201,6 +210,33 @@
           "strength": "required",
           "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-dokument-artderarchivierung-vs"
         }
+      },
+      {
+        "id": "Extension.extension:kostentraeger",
+        "path": "Extension.extension",
+        "sliceName": "kostentraeger",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:kostentraeger.extension",
+        "path": "Extension.extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.extension:kostentraeger.url",
+        "path": "Extension.extension.url",
+        "fixedUri": "kostentraeger"
+      },
+      {
+        "id": "Extension.extension:kostentraeger.value[x]",
+        "path": "Extension.extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference"
+          }
+        ]
       },
       {
         "id": "Extension.url",

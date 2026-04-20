@@ -41,6 +41,48 @@
         ]
       },
       {
+        "id": "DocumentReference.meta.extension:markierung",
+        "path": "DocumentReference.meta.extension",
+        "sliceName": "markierung",
+        "comment": "Beim Submit einer Rechnung darf nur die Markierung 'Persönlich' gesetzt werden. Alle anderen Markierungen sind ausschließlich im Fachdienst zu setzen.\n  Ein optionaler Freitext mit Details zur Markierung kann über die Extension 'details' angegeben werden.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:markierung",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "markierung",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:markierung.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "patternCoding": {
+          "code": "persoenlich"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:details",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "details",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:details.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
         "comment": "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Das System MUSS eindeutig pro Leistungserbringer:in vergeben werden.",
