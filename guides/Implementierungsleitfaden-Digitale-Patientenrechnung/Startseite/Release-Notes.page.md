@@ -10,6 +10,29 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.0.6
+
+#### Profile und Extensions
+
+* **DiPagDocumentReferenceMarkierung**: Neue Extension `kostentraeger` hinzugefügt, um den Kostenträger im Rahmen der Markierung abzubilden
+* **DiPagDokumentenmetadatenIntern**: Must-Support-Flags an den verwendeten Extensions ergänzt
+* **DiPagDokumentenmetadatenEingang**: Möglichkeit ergänzt, ein Dokument als "persoenlich" zu kennzeichnen
+
+#### OperationDefinitions
+
+* **DiPagOperationSubmit** (`invoice-submit`): Modus `korrektur` aus den möglichen Einreichungsmodi entfernt
+
+#### CapabilityStatement
+
+* **CapabilityStatementFD**: Zwei neue Custom Search Parameter hinzugefügt:
+  * `dipag-docRef-author-display` – Suche nach dem Anzeigenamen des Autors einer DocumentReference
+  * `dipag-docRef-subject-display` – Suche nach dem Anzeigenamen des Patienten einer DocumentReference
+
+#### Dokumentation
+
+* Aktualisierung der Beschreibung für den Abruf von Rechnungen durch den Rechnungsempfänger entsprechend der neuen Search Parameter
+* Überarbeitung des BEMA-Implementierungsleitfadens (Index) mit Inhalten aus PR#42
+
 ### Version 1.0.5
 
 - Die Spezifikation wurde um die fachliche Beschreibung der Duplikaterkennung beim $invoice-submit erweitert und um den Modus "korrektur" zur Einreichung bereits bekannter Rechnungen ergänzt.
