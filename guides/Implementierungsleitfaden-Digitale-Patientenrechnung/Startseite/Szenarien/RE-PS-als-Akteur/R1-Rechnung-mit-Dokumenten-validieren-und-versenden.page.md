@@ -20,8 +20,7 @@ Die Input- und Output-Parameter werden durch die OperationDefinition `https://ge
 |API-Zustand|HTTP-Status-Code|
 |-|-|
 |Erfolgsfall|`200 - OK`|
-|Eine DocumentReferenz mit dem selben Hash existiert bereits und der Modus = `korrektur` ist gesetzt|`200 - OK` Die Rechnung wird als Duplikat angelegt|
-|Eine DocumentReferenz mit dem selben Hash existiert bereits und der Modus = `korrektur` ist **nicht** gesetzt|`409 - Conflict` Im OperationOutcome enthalten ist der Zeitpunkt, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.|
+|Eine DocumentReferenz mit dem selben Hash existiert bereits|`409 - Conflict` Im OperationOutcome enthalten ist der Zeitpunkt, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.|
 |Weitere Parameter in HTTP-Anfrage enthalten|`400 - Bad Request`|
 |Syntax für Parameter ist nicht korrekt oder Kardinalitäten werden nicht eingehalten|`400 - Bad Request`|
 |Gravierende Fehler treten während der Validierung auf - Modus = 'normal'|`400 - Bad Request`|
@@ -46,8 +45,6 @@ Das identifizierende Merkmal für die Duplikaterkennung wird in Form eines SHA-2
 Die so erzeugten Hashes können dann auch für die Signatur (s.u.) genutzt werden.
 
 Wird vom RE-System eine `$invoice-submit` Operation ausgeführt, die zum selben Hashwert führt, geht der Fachdienst von einem Duplikat aus und antworten mit einem HTTP `409 - Conflict`. Im OperationOutcome enthalten der Zeitpunkt enhalten, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.
-
-Wenn der Modus `korrektur` gesetzt ist, wird die Rechnung als Duplikat angelegt.
 
 Für Anhänge gibt es keinen Dublettenprüfung: ein einzelner Bericht soll auch an mehrere Rechnungen angehängt werden können. 
 

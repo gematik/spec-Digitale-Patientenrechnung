@@ -35,6 +35,20 @@ Id: dipag-dokumentenmetadaten-intern
 * meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
 * meta.extension[markierung]
   * ^comment = "Vgl. Abschnitt '4.4.2 Markierungen' des Feature-Dokuments Digitale Patientenrechnung"
+  * extension[markierung] MS
+    * valueCoding MS
+  * extension[zeitpunkt] MS
+    * valueDateTime MS
+  * extension[details] MS
+    * valueString MS
+  * extension[gelesen] MS
+    * valueBoolean MS
+  * extension[artDerArchivierung] MS
+    * valueCoding MS
+  * extension[kostentraeger] MS
+    * valueReference MS
+      * identifier MS
+      * display MS
 * meta.tag MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"

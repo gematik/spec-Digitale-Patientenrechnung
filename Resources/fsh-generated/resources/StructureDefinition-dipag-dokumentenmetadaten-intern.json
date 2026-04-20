@@ -63,6 +63,82 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.meta.extension:markierung.extension:markierung",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "markierung",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:markierung.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:zeitpunkt",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "zeitpunkt",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:zeitpunkt.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:details",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "details",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:details.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:gelesen",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "gelesen",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:gelesen.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:artDerArchivierung",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "artDerArchivierung",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:artDerArchivierung.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:kostentraeger",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "kostentraeger",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:kostentraeger.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:kostentraeger.value[x].identifier",
+        "path": "DocumentReference.meta.extension.extension.value[x].identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:kostentraeger.value[x].display",
+        "path": "DocumentReference.meta.extension.extension.value[x].display",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.meta.tag",
         "path": "DocumentReference.meta.tag",
         "slicing": {

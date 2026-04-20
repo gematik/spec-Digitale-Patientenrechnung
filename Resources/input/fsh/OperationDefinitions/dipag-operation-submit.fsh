@@ -97,7 +97,6 @@ Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi fü
 * ^hierarchyMeaning = #is-a
 * #test "Test" "Digitale Patientenrechnung wird als Test eingereicht. Der Fachdienst validiert nur die Digitale Patientenrechnung und speichert diese nicht."
 * #normal "Normal" "Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
-* #korrektur "Korrektur" "Digitale Patientenrechnung wird als Korrektur einer bereits eingereichten Rechnung eingereicht. Es muss sich dabei um eine bereits eingereichte Rechnung handeln. Der Fachdienst validiert die Digitale Patientenrechnung und speichert diese als Korrektur der bestehenden Rechnung."
 
 ValueSet:  DiPagRechnungSubmitModusVS
 Id: dipag-rechnung-submit-modus-vs
