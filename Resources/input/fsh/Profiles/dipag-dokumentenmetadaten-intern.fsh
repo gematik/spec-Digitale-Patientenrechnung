@@ -14,7 +14,6 @@ Id: dipag-dokumentenmetadaten-intern
   DiPagDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
   DiPagDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS and
   DiPagDocRefFachrichtung named fachrichtung 0..1 MS and
-  DiPagDocRefLeistungsart named leistungsart 0..1 MS and //TODO Noch in Klärung durch Peter, was dahinter steckt
   DiPagBehandlungsart named behandlungsart 0..1 MS
 * extension[rechnungsdatum]
   * ^comment = "Das Rechnungsdatum wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
@@ -24,8 +23,6 @@ Id: dipag-dokumentenmetadaten-intern
   * ^comment = "Der Gesamtbetrag wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
 * extension[fachrichtung]
   * ^comment = "Die Fachrichtung wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
-* extension[leistungsart]
-  * ^comment = "Die Leistungsart wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
 * extension[behandlungsart]
   * ^comment = "Die Behandlungsart wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
 * extension[docRef-signature]
@@ -221,16 +218,6 @@ Context: DocumentReference
 * value[x] 1.. MS
 * value[x] only Coding
 * value[x] from http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (required)
-
-Extension: DiPagDocRefLeistungsart
-Id: dipag-docref-leistungsart
-Title: "Digitale Patientenrechnung DocRef Leistungsart"
-Description: "Extension zur Angabe einer Leistungsart"
-Context: DocumentReference
-* insert Meta
-
-* value[x] 1.. MS
-* value[x] only Coding
 
 // ------------- Constraints -------------
 
