@@ -1,0 +1,529 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  background: #f5f5f5;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ── Header ── */
+header {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #005a9e;
+  white-space: nowrap;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.toolbar label {
+  color: #555;
+  font-size: 13px;
+}
+
+#invoice-select {
+  font-size: 13px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-width: 260px;
+}
+
+.btn {
+  font-size: 13px;
+  padding: 4px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.btn.active {
+  background: #005a9e;
+  color: #fff;
+  border-color: #005a9e;
+}
+
+/* ── Main layout ── */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* ── Panes ── */
+.pane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #fff;
+  min-width: 0;
+}
+
+.pane + .pane {
+  border-left: 2px solid #ddd;
+}
+
+.pane.hidden {
+  display: none;
+}
+
+/* ── Tab bar ── */
+.tab-bar {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+  background: #fafafa;
+}
+
+.tab-bar.hidden {
+  display: none;
+}
+
+.tab {
+  padding: 7px 16px;
+  font-size: 13px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  color: #555;
+}
+
+.tab.active {
+  border-bottom-color: #005a9e;
+  color: #005a9e;
+  font-weight: 600;
+}
+
+.tab:hover:not(.active) {
+  background: #f0f0f0;
+}
+
+/* ── Tab content ── */
+.tab-content {
+  flex: 1;
+  overflow: auto;
+}
+
+.tab-content.hidden {
+  display: none;
+}
+
+/* ── Placeholder / Error ── */
+.placeholder {
+  padding: 40px;
+  color: #888;
+  font-size: 14px;
+}
+
+.error {
+  padding: 16px;
+  color: #c00;
+  background: #fff5f5;
+  border: 1px solid #fcc;
+  border-radius: 4px;
+  margin: 16px;
+  font-size: 13px;
+}
+
+.error.hidden,
+.hidden {
+  display: none !important;
+}
+
+/* ── Invoice content ── */
+#invoice-content {
+  padding: 20px 24px;
+  max-width: 900px;
+}
+
+.invoice-header {
+  margin-bottom: 20px;
+}
+
+.invoice-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.invoice-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-status {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.badge-type {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+.badge-art {
+  background: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.badge-unresolved {
+  background: #fff3e0;
+  color: #e65100;
+  font-size: 10px;
+}
+
+/* ── Sections ── */
+.section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+/* ── Key-value grid ── */
+.kv-grid {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 4px 12px;
+  font-size: 13px;
+}
+
+.kv-key {
+  color: #666;
+}
+
+.kv-val {
+  color: #222;
+  word-break: break-word;
+}
+
+/* ── Legend ── */
+.legend {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+  font-size: 11px;
+  color: #555;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legend-item::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 14px;
+  border-radius: 1px;
+}
+
+.legend-goz::before         { background: #64b5f6; }
+.legend-goae::before        { background: #4fc3f7; }
+.legend-bema::before        { background: #81c784; }
+.legend-eigenlabor::before  { background: #ffb74d; }
+.legend-fremdlabor::before  { background: #ff8a65; }
+.legend-sachkosten::before  { background: #ce93d8; }
+.legend-wegegeld::before    { background: #90a4ae; }
+
+/* ── Positions table ── */
+.positions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.positions-table th {
+  background: #f5f5f5;
+  text-align: left;
+  padding: 6px 8px;
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.positions-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: top;
+}
+
+.positions-table tr:hover td {
+  background: #fafafa;
+}
+
+.pos-goz td:first-child        { border-left: 3px solid #64b5f6; }
+.pos-goae td:first-child       { border-left: 3px solid #4fc3f7; }
+.pos-bema td:first-child       { border-left: 3px solid #81c784; }
+.pos-bema td                   { background: #fafff8; }
+.pos-eigenlabor td:first-child { border-left: 3px solid #ffb74d; }
+.pos-fremdlabor td:first-child { border-left: 3px solid #ff8a65; }
+.pos-sachkosten td:first-child { border-left: 3px solid #ce93d8; }
+.pos-wegegeld td:first-child   { border-left: 3px solid #90a4ae; }
+
+.amount-neg {
+  color: #c62828;
+}
+
+.amount-pos {
+  color: #1b5e20;
+}
+
+td.amount, th.amount {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.reason-text {
+  color: #555;
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* ── Totals ── */
+.totals-table {
+  width: 100%;
+  max-width: 360px;
+  margin-left: auto;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.totals-table td {
+  padding: 4px 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.totals-table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.totals-table .total-gross td {
+  font-weight: 700;
+  font-size: 14px;
+  border-top: 2px solid #ddd;
+}
+
+/* ── Split PDF pane ── */
+.split-pdf-header {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888;
+  padding: 7px 16px;
+  background: #fafafa;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+}
+
+#split-pdf-container,
+#pdf-container {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+}
+
+#pdf-view {
+  display: flex;
+  flex-direction: column;
+}
+
+#split-pane {
+  display: flex;
+  flex-direction: column;
+}
+
+#pdf-frame,
+#split-pdf-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+  flex: 1;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  #split-pane {
+    display: none !important;
+  }
+}
+
+/* ── JSON Viewer ── */
+#json-container,
+#split-json-container {
+  padding: 20px;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow: auto;
+  height: 100%;
+}
+
+.json-node {
+  position: relative;
+}
+
+.json-header {
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+}
+
+.json-header:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.json-toggle {
+  display: inline-block;
+  width: 16px;
+  color: #808080;
+  font-size: 11px;
+  margin-right: 4px;
+  transition: transform 0.2s;
+}
+
+.json-key {
+  color: #9cdcfe;
+}
+
+.json-string {
+  color: #ce9178;
+}
+
+.json-number {
+  color: #b5cea8;
+}
+
+.json-boolean {
+  color: #569cd6;
+}
+
+.json-null {
+  color: #569cd6;
+}
+
+.json-bracket {
+  color: #d4d4d4;
+}
+
+.json-comma {
+  color: #d4d4d4;
+  margin-left: 2px;
+}
+
+.json-count {
+  color: #808080;
+  font-style: italic;
+  font-size: 11px;
+  display: none;
+}
+
+.json-content {
+  display: block;
+}
+
+.json-content.collapsed {
+  display: none;
+}
+
+.json-footer {
+  display: block;
+}
+
+.json-footer.collapsed {
+  display: inline;
+  margin-left: 4px;
+}
+
+/* ── Split tab content ── */
+.split-tab-content {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.split-tab-content.hidden {
+  display: none;
+}
+
+#split-invoice-container {
+  padding: 20px 24px;
+  max-width: 900px;
+  overflow: auto;
+  flex: 1;
+}
+
+#split-tab-bar {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+  background: #fafafa;
+}

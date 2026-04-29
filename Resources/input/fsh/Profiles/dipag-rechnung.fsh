@@ -11,11 +11,12 @@ Id: dipag-rechnung
   DiPagFachrichtung named Fachrichtung 1..1 MS and
   DiPagInvoiceReplaces named Korrekturrechnung ..1 MS and
   DiPagTokenStornierteRechnung named Korrekturtoken ..1 MS and
-  DiPagInvoiceBasedOn named Antragsreferenz ..1 MS
+  DiPagInvoiceBasedOn named Antragsreferenz ..1 MS and
+  DiPagBemaPunktsumme named BemaPunktsumme ..1 MS
 * extension[AbrechnungsDiagnoseProzedur]
   * ^short = "Diagnose"
   * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN Diagnosen und Prozeduren vorhanden sein.
-  Im Falle einer GOZ Rechnung werden keine Diagnosen oder Prozedur gefordert."
+  Im Falle einer GOZ oder BEMA Rechnung werden keine Diagnosen oder Prozedur gefordert."
   * extension[Use].valueCoding MS
     * ^short = "Kennzeichen Hauptdiagnose"
     * ^comment = "Das Kennzeichen Hauptdiagnose SOLL vorhanden sein, wenn es sich um eine HD handelt."
@@ -25,7 +26,7 @@ Id: dipag-rechnung
     * ^comment = "Diagnosen und Prozeduren SOLLEN zur Rechnung zugeordnet sein."
 * extension[Behandlungszeitraum]
   * ^short = "Behandlungszeitraum"
-  * ^comment = "Entweder ein Behandlungszeitraum, oder ein -datum SOLL vorhanden sein."
+  * ^comment = "Entweder ein Behandlungszeitraum, oder ein -datum SOLL bei einer GOÄ Rechnung vorhanden sein. Im Falle einer GOZ- oder BEMA- und GOZ-Rechnung ist die Angabe eines Behandlungszeitraums oder -datums optional."
   * valuePeriod MS
     * start MS
       * ^short = "Startdatum"
@@ -35,7 +36,7 @@ Id: dipag-rechnung
     * ^short = "Behandlungsdatum"
 * extension[AbrechnungsDiagnoseProzedurFreitext]
   * ^short = "Einleitung (Diagnose und Prozedure als Freitextangabe)"
-  * ^comment = "Im Falle einer GOÄ oder GOZ Rechnung, SOLLEN Diagnose und Prozedure als Freitextangabe vorhanden sein.
+  * ^comment = "Im Falle einer GOÄ, GOZ oder BEMA Rechnung, SOLLEN Diagnose und Prozedure als Freitextangabe vorhanden sein.
   Im Falle einer GOÄ-neu Rechnung werden keine Diagnosen und Prozeduren als Freitext gefordert."
   * valueString 1.. MS
 * extension[Behandlungsart]
@@ -47,7 +48,7 @@ Id: dipag-rechnung
 * extension[Fachrichtung]
   * ^short = "Fachrichtung"
   * ^comment = "Die Fachrichtung MUSS vorhanden sein.
-  Es wird empfohlen für zahnärztliche Rechnungen immer den Wert MZKH (Zahnmedizin) zu nutzen."
+  Im Zahärztlichen Bereich SOLLEN nur die Fachrichtungen Oralchirurgie (ORAL), Kieferorthopädie (KIEF) und Zahnmedizin (MZKH) verwendet werden."
   * valueCoding 1..1 MS
     * system 1.. MS
     * code 1.. MS
@@ -62,6 +63,17 @@ Id: dipag-rechnung
   * valueIdentifier MS
     * system 1.. MS
     * value 1.. MS
+* extension[BemaPunktsumme]
+  * ^comment = "Im Falle einer BEMA Rechnung SOLL die Punktsumme BEMA vorhanden sein.
+  Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnung ist das Element nicht gefordert."
+  * extension[Punktsumme] MS
+    * ^short = "Summe Punktzahlen der BEMA-Leistungen"
+    * ^comment = "Die Summe Punktzahlen der BEMA-Leistungen SOLL vorhanden sein."
+    * valueDecimal MS
+  * extension[Punktwert] MS
+    * ^short = "Punktwert der BEMA-Leistungen"
+    * ^comment = "Der Punktwert der BEMA-Leistungen SOLL vorhanden sein."
+    * valueDecimal MS
 * extension[Antragsreferenz]
   * valueIdentifier 1..1 MS
     * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#antragsreferenz
@@ -155,17 +167,19 @@ Id: dipag-rechnung
   Leistungserbringer 1..* MS and
   Forderungsinhaber ..1 MS
 * participant[Leistungserbringer]
-  * ^short = "Weitere behandelnde Leistungserbringer"
-  * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLLEN weitere behandelnde Leistungserbringer vorhanden sein.
-  Im Falle einer GOZ Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein."
+  * ^short = "Behandelnde Leistungserbringer"
+  * ^comment = "Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN weitere behandelnde Leistungserbringer vorhanden sein.
+  Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein.
+  
+  Im Falle einer GOZ oder BEMA Rechnung, MÜSSEN Leistungserbringer als Organisation referenziert werden, die Angabe von Personen ist in diesem Fall nicht zulässig."
   * role = DiPagParticipantRoleCS#leistungserbringer
-  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
+  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization) //TODO Frage: Soll hier die Organisation gar nicht mehr nutzbar sein?
 * participant[Forderungsinhaber]
   * ^short = "Abweichender Forderungsinhaber"
   * ^comment = "Der abweichender Forderungsinhaber SOLL vorhanden sein."
   * role MS
   * role = DiPagParticipantRoleCS#forderungsinhaber
-  * actor only Reference(DiPagPerson or DiPagInstitution or Practitioner or Organization)
+  * actor only Reference(DiPagPerson or Practitioner or DiPagInstitution or Organization) //TODO Frage: Soll hier die Organisation gar nicht mehr nutzbar sein?
 * note MS
   * ^short = "Hinweise an den Kostenträger"
   * ^comment = "Der Hinweise an den Kostenträger KANN vorhanden sein."
@@ -209,7 +223,7 @@ Id: dipag-rechnung
 * totalPriceComponent[MinderungNachGOZ]
   * ^short = "Minderungen nach §7 GOZ"
   * ^comment = "Im Falle einer GOZ Rechnung SOLLEN die Minderungen nach §7 GOZ vorhanden sein.
-  Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
+  Im Falle einer GOÄ, GOÄ-neu oder BEMA Rechnung ist das Element nicht gefordert."
   * type MS
   * type = #deduction
   * code 1.. MS
@@ -233,14 +247,23 @@ Id: dipag-rechnung
     * currency 1.. MS
     * currency = #EUR
     * value 1.. MS
+* totalPriceComponent[MinderungNachGOZ]
+  * ^short = "Minderungen nach §7 GOZ"
+  * ^comment = "Im Falle einer GOZ Rechnung SOLLEN die Minderungen nach §7 GOZ vorhanden sein.
+  Im Falle einer GOÄ, GOÄ-neu oder BEMA Rechnung ist das Element nicht gefordert."
+  * type MS
+  * type = #deduction
+  * code 1.. MS
+  * code = DiPagTotalPriceComponentTypeCS#Minderung7GOZ
+  * factor 0..0
+  * amount ..1 MS
+    * ^short = "Wert in EUR"
+    * currency 1.. MS
+    * currency = #EUR
+    * value 1.. MS
 * totalPriceComponent[Abzug]
   * ^short = "Abzug"
   * ^comment = "Der Abzug SOLL vorhanden sein."
-  * extension contains DiPagAbzugKassenanteil named Kassenanteil ..1 MS
-  * extension[Kassenanteil]
-    * ^short = "Kassenanteil in Prozent"
-    * ^comment = "Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.
-    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
   * type MS
   * type = #deduction
   * code 1.. MS
@@ -253,6 +276,17 @@ Id: dipag-rechnung
     * currency 1.. MS
     * currency = #EUR
     * value 1.. MS
+  * extension contains DiPagAbzugKassenanteil named Kassenanteil ..1 MS
+  * extension[Kassenanteil]
+    * ^short = "Kassenanteil in Prozent"
+    * ^comment = "Im Falle einer BEMA oder gemischten BEMA und GOZ Rechnung SOLL der Kassenanteil in Prozent vorhanden sein.
+    Im Falle einer GOZ Rechnung KANN der Kassenanteil in Prozent vorhanden sein.
+    Im Falle einer GOÄ oder GOÄ-neu Rechnung ist das Element nicht gefordert."
+    * valueQuantity 1.. MS
+      * unit MS
+      * value MS
+      * system MS
+      * code MS
 * lineItem MS
   * ^short = "Rechnungspositionen"
 * lineItem.sequence 1.. MS
@@ -272,7 +306,8 @@ Id: dipag-rechnung
   Steuern ..1 MS
 * lineItem.priceComponent[BruttoBetrag]
   * ^short = "Betrag pro Rechnungsposition"
-  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Betrag pro Rechnungsposition vorhanden sein."
+  * ^comment = "Im Falle einer GOÄ, GOÄ-neu oder GOZ Rechnungsposition, SOLL der Betrag pro Rechnungsposition vorhanden sein.
+  Im Falle einer BEMA Rechnungsposition ist das Element nicht gefordert."
   * type MS
   * type = #base
   * factor 0..0

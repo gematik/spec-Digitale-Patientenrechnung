@@ -1,0 +1,66 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "KfoMehrkosten2-P8",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+    ]
+  },
+  "status": "billable",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+      "valueCoding": {
+        "code": "GOZ",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+      }
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "Value",
+              "valueDecimal": 2.3
+            }
+          ],
+          "url": "Faktor"
+        }
+      ],
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
+      "valueCoding": {
+        "code": "A",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"
+      }
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/gzä",
+        "code": "2000",
+        "display": "Versiegelung von kariesfreien Zahnfissuren mit aushärtenden Kunststoffen, auch Glattflächenversiegelung, je Zahn"
+      }
+    ]
+  },
+  "quantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 2,
+    "unit": "{#}",
+    "code": "{#}"
+  },
+  "subject": {
+    "reference": "Patient/KfoMehrkosten2Patient"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Organization/KfoMehrkosten2Behandler"
+      }
+    }
+  ],
+  "occurrenceDateTime": "2025-09-24"
+}
