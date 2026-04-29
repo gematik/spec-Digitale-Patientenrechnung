@@ -597,7 +597,6 @@ function toggleSplit() {
   const main = document.getElementById('main');
   const btn  = document.getElementById('split-btn');
   const splitPane = document.getElementById('split-pane');
-  const tabBar = document.getElementById('tab-bar');
   const isSplit = main.classList.contains('split');
 
   if (isSplit) {
@@ -605,17 +604,14 @@ function toggleSplit() {
     splitPane.classList.add('hidden');
     btn.classList.remove('active');
     btn.textContent = 'Splitscreen';
-    // Restore tab bar so user can switch tabs in single mode
-    tabBar.classList.remove('hidden');
   } else {
     main.classList.add('split');
     splitPane.classList.remove('hidden');
     btn.classList.add('active');
     btn.textContent = 'Splitscreen ✕';
-    // Hide main tab bar — use split tab bar instead
-    tabBar.classList.add('hidden');
-    switchTab('invoice', false);
-    switchTab('pdf', true); // Show PDF in split pane by default
+    // Initialize split pane - show PDF by default if available, otherwise JSON
+    const hasPdf = currentEntry && currentEntry.pdf;
+    switchTab(hasPdf ? 'pdf' : 'json', true);
     // Sync split invoice content
     const invoiceContent = document.getElementById('invoice-content').innerHTML;
     document.getElementById('split-invoice-container').innerHTML = invoiceContent;
