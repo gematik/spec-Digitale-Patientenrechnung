@@ -24,6 +24,7 @@
     <div id="invoice-pane" class="pane active">
       <div id="tab-bar" class="tab-bar hidden">
         <button class="tab active" data-tab="invoice">Rechnung</button>
+        <button class="tab" id="json-tab-btn" data-tab="json">JSON</button>
         <button class="tab" id="pdf-tab-btn" data-tab="pdf">PDF</button>
       </div>
       <div id="invoice-view" class="tab-content active">
@@ -33,6 +34,9 @@
         <div id="invoice-content" class="hidden"></div>
         <div id="invoice-error" class="error hidden"></div>
       </div>
+      <div id="json-view" class="tab-content hidden">
+        <div id="json-container"></div>
+      </div>
       <div id="pdf-view" class="tab-content hidden">
         <div id="pdf-container">
           <iframe id="pdf-frame" title="Rechnungs-PDF"></iframe>
@@ -40,9 +44,21 @@
       </div>
     </div>
     <div id="split-pane" class="pane hidden">
-      <div class="split-pdf-header">PDF</div>
-      <div id="split-pdf-container">
-        <iframe id="split-pdf-frame" title="Rechnungs-PDF (Split)"></iframe>
+      <div id="split-tab-bar" class="tab-bar">
+        <button class="tab active" data-tab="split-invoice" data-split-target="invoice">Rechnung</button>
+        <button class="tab" id="split-json-tab-btn" data-tab="split-json" data-split-target="json">JSON</button>
+        <button class="tab" id="split-pdf-tab-btn" data-tab="split-pdf" data-split-target="pdf">PDF</button>
+      </div>
+      <div id="split-invoice-view" class="split-tab-content active">
+        <div id="split-invoice-container"></div>
+      </div>
+      <div id="split-json-view" class="split-tab-content hidden">
+        <div id="split-json-container"></div>
+      </div>
+      <div id="split-pdf-view" class="split-tab-content hidden">
+        <div id="split-pdf-container">
+          <iframe id="split-pdf-frame" title="Rechnungs-PDF (Split)"></iframe>
+        </div>
       </div>
     </div>
   </main>

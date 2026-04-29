@@ -412,3 +412,118 @@ td.amount, th.amount {
     display: none !important;
   }
 }
+
+/* ── JSON Viewer ── */
+#json-container,
+#split-json-container {
+  padding: 20px;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow: auto;
+  height: 100%;
+}
+
+.json-node {
+  position: relative;
+}
+
+.json-header {
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+}
+
+.json-header:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.json-toggle {
+  display: inline-block;
+  width: 16px;
+  color: #808080;
+  font-size: 11px;
+  margin-right: 4px;
+  transition: transform 0.2s;
+}
+
+.json-key {
+  color: #9cdcfe;
+}
+
+.json-string {
+  color: #ce9178;
+}
+
+.json-number {
+  color: #b5cea8;
+}
+
+.json-boolean {
+  color: #569cd6;
+}
+
+.json-null {
+  color: #569cd6;
+}
+
+.json-bracket {
+  color: #d4d4d4;
+}
+
+.json-comma {
+  color: #d4d4d4;
+  margin-left: 2px;
+}
+
+.json-count {
+  color: #808080;
+  font-style: italic;
+  font-size: 11px;
+  display: none;
+}
+
+.json-content {
+  display: block;
+}
+
+.json-content.collapsed {
+  display: none;
+}
+
+.json-footer {
+  display: block;
+}
+
+.json-footer.collapsed {
+  display: inline;
+  margin-left: 4px;
+}
+
+/* ── Split tab content ── */
+.split-tab-content {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.split-tab-content.hidden {
+  display: none;
+}
+
+#split-invoice-container {
+  padding: 20px 24px;
+  max-width: 900px;
+  overflow: auto;
+  flex: 1;
+}
+
+#split-tab-bar {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  flex-shrink: 0;
+  background: #fafafa;
+}
