@@ -30,6 +30,7 @@ let config = null;
 let codeDisplays = {};    // { url#code -> display }
 let resourceCache = {};   // { "ResourceType/id" -> resource | null }
 let currentEntry = null;
+let currentBundle = null; // Full FHIR Bundle for JSON view
 
 // ── Boot ─────────────────────────────────────────────────────────────────────
 async function init() {
@@ -63,7 +64,11 @@ async function init() {
 
   // Tabs
   document.querySelectorAll('.tab').forEach(tab => {
-    tab.addEventListener('click', () => switchTab(tab.dataset.tab));
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.splitTarget || tab.dataset.tab;
+      const isSplitTab = tab.closest('#split-tab-bar') !== null;
+      switchTab(target, isSplitTab);
+    });
   });
 }
 
@@ -92,6 +97,9 @@ async function loadInvoice(entry) {
   const refs = collectRefs(invoice);
   await Promise.all(refs.map(ref => resolveRef(ref, entry)));
 
+  // Create bundle for JSON view
+  currentBundle = createBundle(invoice, refs);
+
   const html = renderInvoice(invoice, entry);
   const contentEl = document.getElementById('invoice-content');
   contentEl.innerHTML = html;
@@ -99,30 +107,35 @@ async function loadInvoice(entry) {
   document.getElementById('invoice-placeholder').classList.add('hidden');
   document.getElementById('invoice-error').classList.add('hidden');
 
+  // Render JSON view
+  renderJsonView();
+
   // PDF setup
   const hasPdf = !!entry.pdf;
   const tabBar = document.getElementById('tab-bar');
   const pdfTabBtn = document.getElementById('pdf-tab-btn');
+  const jsonTabBtn = document.getElementById('json-tab-btn');
+  const splitJsonTabBtn = document.getElementById('split-json-tab-btn');
   const splitBtn = document.getElementById('split-btn');
 
+  // Always show tab bar and JSON tab when invoice is loaded
+  tabBar.classList.remove('hidden');
+  jsonTabBtn.classList.remove('hidden');
+  splitJsonTabBtn.classList.remove('hidden');
+
   if (hasPdf) {
-    tabBar.classList.remove('hidden');
     pdfTabBtn.classList.remove('hidden');
     splitBtn.disabled = false;
     document.getElementById('pdf-frame').src = entry.pdf;
     document.getElementById('split-pdf-frame').src = entry.pdf;
+    document.getElementById('split-pdf-tab-btn').classList.remove('hidden');
   } else {
-    tabBar.classList.add('hidden');
     pdfTabBtn.classList.add('hidden');
-    splitBtn.disabled = true;
-    // Make sure we're on the invoice tab
-    switchTab('invoice');
-    // Collapse split if active
-    const main = document.getElementById('main');
-    if (main.classList.contains('split')) toggleSplit();
+    splitBtn.disabled = false; // Still allow split mode for invoice/JSON
+    document.getElementById('split-pdf-tab-btn').classList.add('hidden');
   }
 
-  switchTab('invoice');
+  switchTab('invoice', false);
 }
 
 function collectRefs(invoice) {
@@ -562,10 +575,22 @@ function fmtAmount(val) {
 }
 
 // ── UI helpers ────────────────────────────────────────────────────────────────
-function switchTab(tab) {
-  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === tab));
-  document.getElementById('invoice-view').classList.toggle('hidden', tab !== 'invoice');
-  document.getElementById('pdf-view').classList.toggle('hidden', tab !== 'pdf');
+function switchTab(tab, isSplit = false) {
+  if (isSplit) {
+    // Switch split pane tabs
+    document.querySelectorAll('#split-tab-bar .tab').forEach(t => 
+      t.classList.toggle('active', t.dataset.splitTarget === tab));
+    document.getElementById('split-invoice-view').classList.toggle('hidden', tab !== 'invoice');
+    document.getElementById('split-json-view').classList.toggle('hidden', tab !== 'json');
+    document.getElementById('split-pdf-view').classList.toggle('hidden', tab !== 'pdf');
+  } else {
+    // Switch main pane tabs
+    document.querySelectorAll('#tab-bar .tab').forEach(t => 
+      t.classList.toggle('active', t.dataset.tab === tab));
+    document.getElementById('invoice-view').classList.toggle('hidden', tab !== 'invoice');
+    document.getElementById('json-view').classList.toggle('hidden', tab !== 'json');
+    document.getElementById('pdf-view').classList.toggle('hidden', tab !== 'pdf');
+  }
 }
 
 function toggleSplit() {
@@ -580,16 +605,22 @@ function toggleSplit() {
     splitPane.classList.add('hidden');
     btn.classList.remove('active');
     btn.textContent = 'Splitscreen';
-    // Restore tab bar so user can switch to PDF tab in single mode
+    // Restore tab bar so user can switch tabs in single mode
     tabBar.classList.remove('hidden');
   } else {
     main.classList.add('split');
     splitPane.classList.remove('hidden');
     btn.classList.add('active');
     btn.textContent = 'Splitscreen ✕';
-    // Hide tab bar — PDF is shown in the right pane, not via tabs
+    // Hide main tab bar — use split tab bar instead
     tabBar.classList.add('hidden');
-    switchTab('invoice');
+    switchTab('invoice', false);
+    switchTab('pdf', true); // Show PDF in split pane by default
+    // Sync split invoice content
+    const invoiceContent = document.getElementById('invoice-content').innerHTML;
+    document.getElementById('split-invoice-container').innerHTML = invoiceContent;
+    // Sync split JSON content
+    renderJsonView(true);
   }
 }
 
@@ -616,6 +647,147 @@ async function fetchJson(url) {
   const res = await fetch(url);
   if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
   return res.json();
+}
+
+// ── Bundle creation ──────────────────────────────────────────────────────────
+function createBundle(invoice, refs) {
+  const bundle = {
+    resourceType: 'Bundle',
+    type: 'collection',
+    timestamp: new Date().toISOString(),
+    entry: []
+  };
+
+  // Add invoice first
+  bundle.entry.push({
+    fullUrl: `Invoice/${invoice.id}`,
+    resource: invoice
+  });
+
+  // Add all referenced resources
+  for (const ref of refs) {
+    const resource = resourceCache[ref];
+    if (resource) {
+      bundle.entry.push({
+        fullUrl: ref,
+        resource: resource
+      });
+    }
+  }
+
+  return bundle;
+}
+
+// ── JSON Viewer ──────────────────────────────────────────────────────────────
+function renderJsonView(isSplit = false) {
+  if (!currentBundle) return;
+  
+  const container = isSplit 
+    ? document.getElementById('split-json-container')
+    : document.getElementById('json-container');
+  
+  container.innerHTML = '';
+  const viewer = createJsonViewer(currentBundle);
+  container.appendChild(viewer);
+}
+
+function createJsonViewer(obj, key = null, level = 0) {
+  const container = document.createElement('div');
+  container.className = 'json-node';
+  
+  if (obj === null) {
+    container.innerHTML = `${key ? `<span class="json-key">"${esc(key)}"</span>: ` : ''}<span class="json-null">null</span>`;
+    return container;
+  }
+  
+  if (typeof obj !== 'object') {
+    const value = typeof obj === 'string' 
+      ? `<span class="json-string">"${esc(obj)}"</span>`
+      : `<span class="json-${typeof obj}">${esc(String(obj))}</span>`;
+    container.innerHTML = key 
+      ? `<span class="json-key">"${esc(key)}"</span>: ${value}`
+      : value;
+    return container;
+  }
+  
+  const isArray = Array.isArray(obj);
+  const entries = isArray ? obj.map((v, i) => [i, v]) : Object.entries(obj);
+  const openBracket = isArray ? '[' : '{';
+  const closeBracket = isArray ? ']' : '}';
+  
+  if (entries.length === 0) {
+    container.innerHTML = key 
+      ? `<span class="json-key">"${esc(key)}"</span>: ${openBracket}${closeBracket}`
+      : `${openBracket}${closeBracket}`;
+    return container;
+  }
+  
+  const header = document.createElement('div');
+  header.className = 'json-header';
+  
+  const toggle = document.createElement('span');
+  toggle.className = 'json-toggle';
+  toggle.textContent = '▼';
+  
+  const keySpan = document.createElement('span');
+  if (key !== null) {
+    keySpan.innerHTML = `<span class="json-key">"${esc(String(key))}"</span>: `;
+  }
+  
+  const bracket = document.createElement('span');
+  bracket.className = 'json-bracket';
+  bracket.textContent = openBracket;
+  
+  const count = document.createElement('span');
+  count.className = 'json-count';
+  count.textContent = ` ${entries.length} ${isArray ? 'items' : 'properties'} `;
+  
+  header.appendChild(toggle);
+  header.appendChild(keySpan);
+  header.appendChild(bracket);
+  header.appendChild(count);
+  
+  const content = document.createElement('div');
+  content.className = 'json-content';
+  
+  for (let i = 0; i < entries.length; i++) {
+    const [k, v] = entries[i];
+    const child = createJsonViewer(v, isArray ? null : k, level + 1);
+    child.style.marginLeft = '20px';
+    if (i < entries.length - 1) {
+      const comma = document.createElement('span');
+      comma.className = 'json-comma';
+      comma.textContent = ',';
+      child.appendChild(comma);
+    }
+    content.appendChild(child);
+  }
+  
+  const footer = document.createElement('div');
+  footer.className = 'json-footer';
+  footer.innerHTML = `<span class="json-bracket">${closeBracket}</span>`;
+  
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isCollapsed = content.classList.contains('collapsed');
+    if (isCollapsed) {
+      content.classList.remove('collapsed');
+      footer.classList.remove('collapsed');
+      toggle.textContent = '▼';
+      count.style.display = 'none';
+    } else {
+      content.classList.add('collapsed');
+      footer.classList.add('collapsed');
+      toggle.textContent = '▶';
+      count.style.display = 'inline';
+    }
+  });
+  
+  container.appendChild(header);
+  container.appendChild(content);
+  container.appendChild(footer);
+  
+  return container;
 }
 
 // ── Start ────────────────────────────────────────────────────────────────────
