@@ -67,16 +67,6 @@ Usage: #definition
       * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
-      * name = "subject"
-      * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-subject"
-      * type = #reference
-    * searchParam[+]
-      * insert Expectation (#SHALL)
-      * name = "author"
-      * definition = "http://hl7.org/fhir/SearchParameter/DocumentReference-author"
-      * type = #reference
-    * searchParam[+]
-      * insert Expectation (#SHALL)
       * name = "type"
       * definition = "http://hl7.org/fhir/SearchParameter/clinical-type"
       * type = #token
