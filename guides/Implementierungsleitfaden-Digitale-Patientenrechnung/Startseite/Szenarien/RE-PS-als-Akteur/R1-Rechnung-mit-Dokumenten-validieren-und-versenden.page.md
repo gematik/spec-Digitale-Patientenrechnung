@@ -156,7 +156,7 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 
 * `DocumentReference.attachment.data` muss aus der übermittelten DocumentReference herausgelöst werden. Der Inhalt MUSS in einer durch den FD neu angelegten Binary-Ressource gespeichert werden. Die Binary-Ressource MUSS unter `attachment.url` mit einer absoluten URL referenziert werden. `DocumentReference.attachment.data` ist anschließend zu löschen. Dies gilt für alle durch den Client übermittelte Dokumente.
 
-* Die originale Rechnung (`DocumentReference.type = IHEXDStypeCode#ABRE`) MUSS angereichert werden mit den strukturierten Rechnungsinhalten. Der FD MUSS die Inhalte strukturiert im FHIR-Format innerhalb eines PDF/A einbetten.
+* Die originale Rechnung (`DocumentReference.type = IHEXDStypeCode#AM010106`) MUSS angereichert werden mit den strukturierten Rechnungsinhalten. Der FD MUSS die Inhalte strukturiert im FHIR-Format innerhalb eines PDF/A einbetten.
 
 * Das neu erzeugte PDF/A muss als Binary nach den Vorgaben von `DocumentReference.content:angereicherteRechnung` aus dem oben aufgeführten Profil hinterlegt werden.
 
