@@ -5,5 +5,6 @@ Description:  "CodeSystem für die verschiedenen Abrechnungsarten innerhalb eine
 * insert Meta
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
+* #BEMA "Einheitliche Bewertungsmaßstab für zahnärztliche Leistungen"
 * #GOÄ "Gebührenordnung für Ärzte"
 * #GOZ "Gebührenordnung für Zahnärzte"

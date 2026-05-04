@@ -68,7 +68,9 @@ Id: dipag-institution
   * coding.code 1.. MS
 * name MS
   * ^short = "Institutionsname"
-  * ^comment = "Der Institutionsname SOLL vorhanden sein."
+  * ^comment = "Der Institutionsname SOLL vorhanden sein.
+  
+  Im Namen kann auch eine Inhaberschaftsangabe vorhanden sein, z.B. 'Praxis Dr. Muster' oder 'MVZ Dr. Muster'."
 * telecom MS
 * telecom ^slicing.discriminator.type = #value
 * telecom ^slicing.discriminator.path = "system"

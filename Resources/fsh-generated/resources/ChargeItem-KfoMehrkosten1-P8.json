@@ -1,0 +1,81 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "KfoMehrkosten1-P8",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+    ]
+  },
+  "status": "billable",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+      "valueCoding": {
+        "code": "GOZ",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+      }
+    },
+    {
+      "extension": [
+        {
+          "extension": [
+            {
+              "url": "Value",
+              "valueDecimal": 2.3
+            }
+          ],
+          "url": "Faktor"
+        }
+      ],
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
+      "valueCoding": {
+        "code": "A",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"
+      }
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/gzä",
+        "code": "2000",
+        "display": "Versiegelung von kariesfreien Zahnfissuren mit aushärtenden Kunststoffen, auch Glattflächenversiegelung, je Zahn"
+      }
+    ]
+  },
+  "quantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 3,
+    "unit": "{#}",
+    "code": "{#}"
+  },
+  "bodysite": [
+    {
+      "extension": [
+        {
+          "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion",
+          "valueString": "27, 37, 47"
+        }
+      ]
+    }
+  ],
+  "subject": {
+    "reference": "Patient/KfoMehrkosten1Patient"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Organization/KfoMehrkosten1Behandler"
+      }
+    }
+  ],
+  "occurrenceDateTime": "2024-08-20",
+  "reason": [
+    {
+      "text": "bei erhöhtem Kariesrisiko während einer Multibracketbehandlung, Bracketumfeldversiegelung"
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "resourceType": "Invoice",
+  "id": "KfoMehrkosten2Rechnung",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "invoice",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+          }
+        ]
+      },
+      "system": "http://example.org/rechnungsnummer",
+      "value": "UNK123456"
+    }
+  ],
+  "status": "issued",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart",
+      "valueCoding": {
+        "code": "AMB",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+      }
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung",
+      "valueCoding": {
+        "code": "MZKH",
+        "system": "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen"
+      }
+    }
+  ],
+  "participant": [
+    {
+      "role": {
+        "coding": [
+          {
+            "code": "leistungserbringer",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Organization/KfoMehrkosten2Behandler"
+      }
+    }
+  ],
+  "recipient": {
+    "identifier": {
+      "system": "http://fhir.de/sid/gkv/kvid-10",
+      "value": "A123456780"
+    },
+    "reference": "Patient/KfoMehrkosten2Patient",
+    "display": "Maria Muster"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs",
+        "code": "GOZ"
+      },
+      {
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs",
+        "code": "TEIL"
+      }
+    ]
+  },
+  "lineItem": [
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "currency": "EUR",
+            "value": 104.06
+          }
+        }
+      ],
+      "sequence": 1,
+      "chargeItemReference": {
+        "reference": "ChargeItem/KfoMehrkosten2-P1"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "currency": "EUR",
+            "value": -40.76
+          }
+        }
+      ],
+      "sequence": 2,
+      "chargeItemReference": {
+        "reference": "ChargeItem/KfoMehrkosten2-P2"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "currency": "EUR",
+            "value": 196.84
+          }
+        }
+      ],
+      "sequence": 3,
+      "chargeItemReference": {
+        "reference": "ChargeItem/KfoMehrkosten2-P3"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "currency": "EUR",
+            "value": -72.47
+          }
+        }
+      ],
+      "sequence": 4,
+      "chargeItemReference": {
+        "reference": "ChargeItem/KfoMehrkosten2-P4"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "currency": "EUR",
+            "value": 23.28
+          }
+        }
+      ],
+      "sequence": 5,
+      "chargeItemReference": {
+        "reference": "ChargeItem/KfoMehrkosten2-P5"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "currency": "EUR",
+            "value": 104.06
+          }
+        }
+      ],
+      "sequence": 6,
+      "chargeItemReference": {
+        "reference": "ChargeItem/KfoMehrkosten2-P6"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "currency": "EUR",
+            "value": -40.76
+          }
+        }
+      ],
+      "sequence": 7,
+      "chargeItemReference": {
+        "reference": "ChargeItem/KfoMehrkosten2-P7"
+      }
+    },
+    {
+      "priceComponent": [
+        {
+          "type": "base",
+          "amount": {
+            "currency": "EUR",
+            "value": 23.28
+          }
+        }
+      ],
+      "sequence": 8,
+      "chargeItemReference": {
+        "reference": "ChargeItem/KfoMehrkosten2-P8"
+      }
+    }
+  ],
+  "totalPriceComponent": [
+    {
+      "type": "base",
+      "code": {
+        "coding": [
+          {
+            "code": "SummeRechnungspositionen",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs"
+          }
+        ]
+      },
+      "amount": {
+        "currency": "EUR",
+        "value": 451.52
+      }
+    },
+    {
+      "type": "deduction",
+      "amount": {
+        "currency": "EUR",
+        "value": -153.99
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "VorleistungKst",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs"
+          }
+        ]
+      }
+    }
+  ],
+  "subject": {
+    "reference": "Patient/KfoMehrkosten2Patient"
+  },
+  "date": "2025-10-07",
+  "issuer": {
+    "reference": "Organization/KfoMehrkosten2Behandler"
+  },
+  "totalNet": {
+    "currency": "EUR",
+    "value": 297.53
+  },
+  "totalGross": {
+    "currency": "EUR",
+    "value": 297.53
+  },
+  "paymentTerms": "Bitte zahlen Sie 297,53 EUR mit dem Verwendungszweck 293495/039760 bis spätestens 06.11.2025 an:\nEmpfänger: Büdingen Dent\nIBAN: DE90 5165 0079 0120 0008 37\nBIC: HELADEF1FRI\nBank: Sparkasse Oberhessen",
+  "_paymentTerms": {
+    "extension": [
+      {
+        "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+        "valueDate": "2025-11-06"
+      }
+    ]
+  }
+}
