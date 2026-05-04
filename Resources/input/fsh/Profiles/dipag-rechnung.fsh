@@ -174,10 +174,23 @@ Id: dipag-rechnung
   * ^comment = "Die Zahlungsdaten zur Überweisung SOLLEN vorhanden sein.
   Weitere Zahlungsmethoden wie bspw. Paypal, Klarna, Kreditkarte KÖNNEN auch hier angegeben werden.
   Ebenfalls sollte hier der Zahlbetrag in EUR inkl. potenzieller Abzüge durch Anzahlungen, Vorauszahlungen oder Abschlagzahlungen."
-* paymentTerms.extension contains DiPagZahlungsziel named Zahlungsziel 1..1 MS
+* paymentTerms.extension contains
+    DiPagZahlungsziel named Zahlungsziel 1..1 MS and
+    DiPagBankverbindung named Bankverbindung 0..1 MS and
+    DiPagBankname named Bankname 0..1 MS and
+    DiPagVerwendungszweck named Verwendungszweck 0..1 MS
 * paymentTerms.extension[Zahlungsziel]
   * ^short = "Zahlungsziel als Datum oder Fristangabe"
   * ^comment = "Das Zahlungsziel SOLL vorhanden sein."
+* paymentTerms.extension[Bankverbindung]
+  * ^short = "Bankverbindung für die Überweisung"
+  * ^comment = "Die Bankverbindung für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden."
+* paymentTerms.extension[Bankname]
+  * ^short = "Bankname für die Überweisung"
+  * ^comment = "Der Bankname für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden."
+* paymentTerms.extension[Verwendungszweck]
+  * ^short = "Verwendungszweck für die Überweisung"
+  * ^comment = "Der Verwendungszweck für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden."
 * totalNet 1.. MS
   * ^short = "Rechnungsbetrag (Netto)"
   * ^comment = "Der Rechnungsbetrag in Netto MUSS vorhanden sein."
@@ -300,9 +313,3 @@ Id: dipag-rechnung
   * type = #tax
   * factor 0..0
   * amount 1.. MS
-
-Extension: DiPagZahlungsziel
-Id: dipag-zahlungsziel
-Title: "Digitale Patientenrechnung Zahlungsziel"
-* insert Meta
-* value[x] only date
