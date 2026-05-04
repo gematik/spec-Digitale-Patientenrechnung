@@ -196,6 +196,22 @@ Id: dipag-rechnung
 * totalPriceComponent[SummeRechnungspositionen]
   * ^short = "Summe aller Rechnungspositionen"
   * ^comment = "Die Summe aller Rechnungspositionen SOLL vorhanden sein."
+  * extension contains DiPagTeilsumme named TeilSummenRechnungspositionen ..* MS
+  * extension[TeilSummenRechnungspositionen]
+    * extension[type] MS
+      * valueCoding MS
+        * system 1.. MS
+        * code 1.. MS
+    * extension[summe] MS
+      * valueMoney MS
+        * currency 1.. MS
+        * value 1.. MS
+    * extension[uStProzent] MS
+      * valueDecimal 1.. MS
+    * extension[uStBetrag] MS
+      * valueMoney MS
+        * currency 1.. MS
+        * value 1.. MS
   * type MS
   * type = #base
   * code 1.. MS

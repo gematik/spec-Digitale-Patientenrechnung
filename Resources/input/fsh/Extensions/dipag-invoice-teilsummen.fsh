@@ -3,20 +3,20 @@ Id: DiPagTeilsumme
 Title: "Digitale Patientenrechnung Teilsumme"
 Context: Invoice.totalPriceComponent
 * extension contains
-  Type ..1 and
-  Summe ..1 and
-  UStProzent ..1 and
-  UStBetrag ..1
-* extension[Type]
+  type ..1 and
+  summe ..1 and
+  uStProzent ..1 and
+  uStBetrag ..1
+* extension[type]
   * value[x] only Coding
   * valueCoding from DiPagRechnungspositionTypeVS (required)
-* extension[Summe]
+* extension[summe]
   * value[x] only Money
   * valueMoney
     * currency = #EUR
-* extension[UStProzent]
+* extension[uStProzent]
   * value[x] only decimal
-* extension[UStBetrag]
+* extension[uStBetrag]
   * value[x] only Money
   * valueMoney
     * currency = #EUR
