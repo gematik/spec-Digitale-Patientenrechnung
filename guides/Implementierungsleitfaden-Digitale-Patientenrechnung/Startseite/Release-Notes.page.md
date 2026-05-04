@@ -10,6 +10,10 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.0.7
+
+folgt
+
 ### Version 1.0.6
 
 #### Profile und Extensions
