@@ -49,9 +49,6 @@ Id: dipag-dokumentenmetadaten-eingang
   * ^patternCoding.code = #AM010106
 * description 1..1 MS
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
-* subject 1.. MS
-  * ^comment = "Vollständiger Name der behandelten Person. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung."
-  * display 1..1 MS
 * content 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "format"
