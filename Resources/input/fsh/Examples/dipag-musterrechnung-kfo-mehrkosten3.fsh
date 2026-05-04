@@ -102,8 +102,8 @@ TODO   KZV-spezifische Felder nicht in DiPag vorgesehen:
 * insert lineItemKfo3(13, 27.57)  // Labor 740-0 Verbindungselemente/inframaxillar
 * insert lineItemKfo3(14, 20.92)  // Labor 711-0 Abschirmelement
 * insert lineItemKfo3(15, 24.74)  // Labor 750-0 Einarmiges H-/A-Element
-* totalPriceComponent[SummeRechnungspositionen]
-  * amount insert Amount(467.77) //TODO Was ist mit den 90,71 EUR KFO-Kosten (kein Versichertenanteil), die auf der Rechnung nur summarisch ausgewiesen sind? 
+* totalPriceComponent[SummeRechnungspositionen] //Todo gesamtsumme BEMA einfügen
+  * amount insert Amount(467.77) //TODO Was ist mit den 90,71 EUR KFO-Kosten (kein Versichertenanteil), die auf der Rechnung nur summarisch ausgewiesen sind?
 * totalPriceComponent[Abzug]
   * code = https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs#VorleistungKst
   * amount insert Amount(-376.73) // Kassenanteil: 100% Sachleistungen (12,56 EUR) + 80% Kostenerstattungsleistungen+Labor (364,17 EUR)
