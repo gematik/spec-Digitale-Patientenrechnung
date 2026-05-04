@@ -11,7 +11,7 @@ Id: dipag-dokumentenmetadaten-intern
 * extension contains 
   DiPagDocRefSignature named docRef-signature 0..1 MS and
   DiPagDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
-  DiPagDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
+  DiPagZahlungsziel named zahlungszieldatum 0..1 MS and
   DiPagDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS and
   DiPagDocRefFachrichtung named fachrichtung 0..1 MS and
   DiPagBehandlungsart named behandlungsart 0..1 MS
