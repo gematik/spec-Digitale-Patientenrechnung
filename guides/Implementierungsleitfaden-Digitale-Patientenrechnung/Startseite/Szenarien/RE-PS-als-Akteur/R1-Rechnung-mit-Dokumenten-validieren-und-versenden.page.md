@@ -168,6 +168,10 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 
 * `DocumentReference.extension:rechnungsdatum` und `DocumentReference.extension:gesamtbetrag` MÜSSEN durch den FD beim Empfang der Operation auf Basis der übermittelten Dokumenteninhalte extrahiert und gesetzt werden. Durch den Client übermittelte Angaben in diesen Extensions sind zu überschreiben.
 
+* `DocumentReference.identifier[Rechnungsnummer]` MUSS durch den FD beim Empfang der Operation auf Basis der übermittelten Dokumenteninhalte extrahiert und gesetzt werden. Durch den Client übermittelte Angaben in diesen Extensions sind zu überschreiben.
+
+* `DocumentReference.identifier[AnhangIdentifier]` MUSS durch den FD für Angänge vom so wie vom Client gesetzt übernommen werden.
+
 * Hinweis: In der FHIR-Repräsentation erfolgt **keine** Differenzierung zwischen dem Datenobjekt für die Rechnungsdokumente und dem Rechnungsworkflow. Der Workflowstatus wird somit innerhalb der DocumentReference abgebildet. `DocumentReference.meta.tag:dipag-rechnungsstatus` MUSS durch den FD auf "Offen" gesetzt werden beim Empfang der Rechnung.
 
 ### Hinweise zur Abbildung des Workflow-Objektes (fachliches Datenmodell)

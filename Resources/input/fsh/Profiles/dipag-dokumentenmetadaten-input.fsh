@@ -16,10 +16,22 @@ Id: dipag-dokumentenmetadaten-eingang
 * status MS
 * status = #current
   * ^comment = "Versionierung von Dokumenten ist nicht unterstützt. Nur jeweils die aktuelle Version des Dokumentes wird akzeptiert."
-* identifier 1.. MS
-  * ^comment = "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Das System MUSS eindeutig pro Leistungserbringer:in vergeben werden."
+* identifier MS
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.rules = #open
+* identifier 
+  contains AnhangIdentifier 0..1 MS
+* identifier[AnhangIdentifier]
+  * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#anhang
+  * ^short = "Anhangs-Identifier"
+  * ^comment = "Eindeutiger Identifikator für Anhänge vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Bei Anhängen MUSS das System eindeutig pro Leistungserbringer:in vergeben werden."
+  * type 1.. MS
+  * type = DiPagRechnungIdentifierTypeCS#anhang
   * system 1.. MS
+    * ^short = "NamingSystem des Anhangs-Identifier"
   * value 1.. MS
+    * ^short = "Anhangs-Identifier"
 * type 1.. MS
   * ^comment = "Kodierung des Dokumentes als 'Rechnung', sowie darüber hinausgehende Klassifizierung per KDL"
 * type.coding 1.. 
