@@ -13,6 +13,7 @@ Id: dipag-dokumentenmetadaten-eingang
     * valueCoding = #persoenlich
   * extension[details] MS
     * valueString MS
+      * ^maxLength = 1024
 * status MS
 * status = #current
   * ^comment = "Versionierung von Dokumenten ist nicht unterstützt. Nur jeweils die aktuelle Version des Dokumentes wird akzeptiert."
@@ -32,6 +33,7 @@ Id: dipag-dokumentenmetadaten-eingang
     * ^short = "NamingSystem des Anhangs-Identifier"
   * value 1.. MS
     * ^short = "Anhangs-Identifier"
+    * ^maxLength = 200
 * type 1.. MS
   * ^comment = "Kodierung des Dokumentes als 'Rechnung', sowie darüber hinausgehende Klassifizierung per KDL"
 * type.coding 1.. 
@@ -49,6 +51,7 @@ Id: dipag-dokumentenmetadaten-eingang
   * ^patternCoding.code = #AM010106
 * description 1..1 MS
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
+  * ^maxLength = 5000
 * content 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "format"
