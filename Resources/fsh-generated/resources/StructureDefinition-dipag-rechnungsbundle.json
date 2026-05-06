@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnungsbundle",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "name": "DiPagRechnungsBundle",
   "title": "Digitale Patientenrechnung - Rechnungsinhalte Bundle",
   "status": "active",
@@ -42,12 +42,43 @@
       {
         "id": "Bundle.entry",
         "path": "Bundle.entry",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "profile",
+              "path": "resource"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Bundle.entry.resource",
         "path": "Bundle.entry.resource",
         "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:Rechnung",
+        "path": "Bundle.entry",
+        "sliceName": "Rechnung",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true
+      },
+      {
+        "id": "Bundle.entry:Rechnung.resource",
+        "path": "Bundle.entry.resource",
+        "comment": "Alle aus der Rechnung (Invoice mit Profil DipagRechnung) referenzierten Ressourcen müssen ebenfalls in diesem Bundle enthalten sein, damit die Referenzen aufgelöst werden können.",
+        "type": [
+          {
+            "code": "Invoice",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"
+            ]
+          }
+        ]
       }
     ]
   }

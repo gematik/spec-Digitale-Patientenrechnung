@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnung",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "name": "DiPagRechnung",
   "title": "Digitale Patientenrechnung Rechnung",
   "status": "active",
@@ -884,6 +884,117 @@
         "mustSupport": true
       },
       {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension",
+        "path": "Invoice.totalPriceComponent.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen",
+        "path": "Invoice.totalPriceComponent.extension",
+        "sliceName": "TeilSummenRechnungspositionen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:type",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "type",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:type.value[x]",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:type.value[x].system",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:type.value[x].code",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:summe",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "summe",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:summe.value[x]",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:summe.value[x].value",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x].value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:summe.value[x].currency",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x].currency",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:uStProzent",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "uStProzent",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:uStProzent.value[x]",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x]",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:uStBetrag",
+        "path": "Invoice.totalPriceComponent.extension.extension",
+        "sliceName": "uStBetrag",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:uStBetrag.value[x]",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:uStBetrag.value[x].value",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x].value",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.extension:TeilSummenRechnungspositionen.extension:uStBetrag.value[x].currency",
+        "path": "Invoice.totalPriceComponent.extension.extension.value[x].currency",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "Invoice.totalPriceComponent:SummeRechnungspositionen.type",
         "path": "Invoice.totalPriceComponent.type",
         "patternCode": "base",
@@ -1185,6 +1296,60 @@
             "code": "Extension",
             "profile": [
               "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.paymentTerms.extension:Bankverbindung",
+        "path": "Invoice.paymentTerms.extension",
+        "sliceName": "Bankverbindung",
+        "short": "Bankverbindung für die Überweisung",
+        "comment": "Die Bankverbindung für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagBankverbindung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.paymentTerms.extension:Bankname",
+        "path": "Invoice.paymentTerms.extension",
+        "sliceName": "Bankname",
+        "short": "Bankname für die Überweisung",
+        "comment": "Der Bankname für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagBankname"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Invoice.paymentTerms.extension:Verwendungszweck",
+        "path": "Invoice.paymentTerms.extension",
+        "sliceName": "Verwendungszweck",
+        "short": "Verwendungszweck für die Überweisung",
+        "comment": "Der Verwendungszweck für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagVerwendungszweck"
             ]
           }
         ],

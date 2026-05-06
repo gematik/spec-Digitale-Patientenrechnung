@@ -5,7 +5,7 @@
   "name": "DiPagRechnungIdentifierTypeCS",
   "id": "dipag-rechnung-identifier-type-cs",
   "title": "Digitale Patientenrechnung Rechnung Identifier Type CS",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs",
   "concept": [
     {
@@ -15,6 +15,10 @@
     {
       "code": "antragsreferenz",
       "display": "Antragsreferenz"
+    },
+    {
+      "code": "anhang",
+      "display": "Anghangsidentifikator"
     },
     {
       "code": "ustid",
@@ -37,5 +41,5 @@
   ],
   "caseSensitive": true,
   "hierarchyMeaning": "is-a",
-  "count": 3
+  "count": 4
 }

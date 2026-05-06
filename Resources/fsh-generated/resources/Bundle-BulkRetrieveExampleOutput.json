@@ -52,8 +52,8 @@
                   "valueDateTime": "2024-01-10"
                 },
                 {
-                  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-zahlungszieldatum",
-                  "valueDateTime": "2024-02-10"
+                  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+                  "valueDate": "2024-02-10"
                 },
                 {
                   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag",

@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
   "url": "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -173,28 +173,6 @@
               "name": "_tag",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-tag",
               "type": "token"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "name": "subject",
-              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-subject",
-              "type": "reference"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "name": "author",
-              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-author",
-              "type": "reference"
             },
             {
               "extension": [

@@ -43,8 +43,8 @@
             "valueDateTime": "2023-09-28T13:00:00.123+02:00"
           },
           {
-            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-zahlungszieldatum",
-            "valueDateTime": "2023-10-28T13:00:00.123+02:00"
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+            "valueDate": "2023-10-28"
           },
           {
             "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag",
