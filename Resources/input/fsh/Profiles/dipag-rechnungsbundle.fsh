@@ -8,4 +8,10 @@ Description: "Dieses Profil stellt das collection-Bundle dar, mit welchem die st
 * type = #collection
 * timestamp MS
 * entry MS
-* entry.resource MS //TODO Profile plus Beschreibung, dass nicht mehr Ressourcen drin sein dürfen, als in der Invoice referenziert sind.
+* entry.resource MS
+* entry ^slicing.discriminator.type = #profile
+* entry ^slicing.discriminator.path = "resource"
+* entry ^slicing.rules = #open
+* entry contains Rechnung 1.. MS
+* entry[Rechnung].resource only DiPagRechnung
+  * ^comment = "Alle aus der Rechnung (Invoice mit Profil DipagRechnung) referenzierten Ressourcen müssen ebenfalls in diesem Bundle enthalten sein, damit die Referenzen aufgelöst werden können."
