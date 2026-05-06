@@ -23,7 +23,7 @@ Instance: BeispielParameterChangeStatusInput2
 InstanceOf: Parameters
 * parameter[+]
   * name = "tag"
-  * valueCode = #gelesen
+  * valueCode = #papierkorb
 
 Instance: BeispielParameterChangeStatusOutput2
 InstanceOf: Parameters
@@ -38,7 +38,7 @@ Usage: #inline
 * lastUpdated = "2024-05-11T13:01:00.000+02:00"
 * tag[+]
   * system = "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs"
-  * code = #gelesen
+  * code = #papierkorb
 
 Instance: BulkChangeStatusExampleInput
 InstanceOf: Bundle

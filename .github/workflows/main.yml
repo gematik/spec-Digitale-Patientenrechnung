@@ -83,6 +83,7 @@ jobs:
             Invoice-c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a.json|Terminology_TX_Confirm_4a|*|Invoice.extension[3].extension[1].value.ofType(Coding)
             |code-invalid|*AM010106*|Bundle.*
             |code-invalid|*AM010106*|Parameters.*
+            |Terminology_TX_NoValid_12|*AM010106*|*
 
           
       - name: Add & Commit
