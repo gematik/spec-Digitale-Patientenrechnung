@@ -293,6 +293,7 @@
         "id": "DocumentReference.content:strukturierterRechnungsinhalt",
         "path": "DocumentReference.content",
         "sliceName": "strukturierterRechnungsinhalt",
+        "comment": "Das base64 kodierte Collection-Bundle mit den strukturierten Rechnungsinhalten darf nicht größer als 512kB sein.",
         "min": 0,
         "max": "1",
         "mustSupport": true
