@@ -70,6 +70,7 @@ Id: dipag-dokumentenmetadaten-eingang
       * ^comment = "Base64-kodiertes PDF. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden."
     * url 0..0
 * content[strukturierterRechnungsinhalt]
+  * ^comment = "Das base64 kodierte Collection-Bundle mit den strukturierten Rechnungsinhalten darf nicht größer als 512kB sein."
   * format MS
   * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsinhalt
   * attachment 1..1 MS

@@ -12,6 +12,9 @@ Description: "Dieses Profil stellt das collection-Bundle dar, mit welchem die st
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
 * entry ^slicing.rules = #open
-* entry contains Rechnung 1.. MS
+* entry contains Rechnung 1..1 MS
 * entry[Rechnung].resource only DiPagRechnung
   * ^comment = "Alle aus der Rechnung (Invoice mit Profil DipagRechnung) referenzierten Ressourcen müssen ebenfalls in diesem Bundle enthalten sein, damit die Referenzen aufgelöst werden können."
+* entry contains BehandeltePerson 1.. MS
+* entry[BehandeltePerson].resource only DiPagPatient
+  * ^comment = "Mindestens die behandelte Person, abgebildet durch eine Patient-Instanz, muss in diesem Bundle enthalten sein, da beim submit der Rechnung die Referenz auf die behandelte Person in der Patient-Instanz als subject der DocumentReference gesetzt wird."
