@@ -6,9 +6,9 @@ Id: dipag-nutzungsprotokoll
 * type MS
   * ^comment = "Angabe ob es sich um eine zu protokollierende Nutzerinteraktion nach Abschnittt '5.5.9 Nutzerprotokolle' des Feature-Dokuments 'Digitale Patientenrechnung' handelt oder um eine durchgeführte REST-API-Interaktion durch den FD."
 * type from DiPagAuditEventTypeVS (required)
-* subtype MS
+* subtype 1..1 MS
   * ^comment = "Erlaubt die Kodierung aller REST-API Operationen der Spec-Digitale Patientenrechnung"
-* subtype from DiPagAuditEventSubTypeVS (extensible)
+* subtype from DiPagAuditEventSubTypeVS (required)
 * action MS
   * ^comment = "Angabe ob es sich um eine lesende/schreibende/ausführende Interaktion handelt."
 * recorded MS
@@ -22,27 +22,41 @@ Id: dipag-nutzungsprotokoll
   * type from DiPagAuditEventAgentTypeVS (required)
   * who MS
   * who.identifier ..1 MS
-  * who.identifier ^comment = "Der Identifier wird vom Server gesetzt und kann entweder eine KVNR oder Telematik-ID sein"
+  * who.identifier ^comment = "Der Identifier wird vom Server gesetzt und kann entweder eine KVNR oder Telematik-ID sein. Im Falle einer Applikations-internen Aktivität muss die OID des FdV gesetzt werden."
   * who.display 1.. MS
-  * requestor MS
-* source.observer.display MS
-* source.observer.display ^comment = "Freitext-Rolle des Servers, auf das Event ausgelöst wurde"
+* source.observer
+  * display MS
+    * ^comment = "Name des DiPag Fachdienst-Server, auf dem das Event ausgelöst wurde"
+  * identifier MS
+    * ^comment = "Identifier (OID) des DiPag Fachdienst-Server, auf dem das Event ausgelöst wurde"
 * entity MS
-* entity.what MS
-* entity.what ^comment = "Referenzierung aller durch die zu protokollierende Interaktion betroffenen Ressourcen"
-* entity.what.display MS
-* entity.name MS
-* entity.description MS
 * entity ^slicing.discriminator.type = #pattern
 * entity ^slicing.discriminator.path = "what.type"
 * entity ^slicing.rules = #open
-* entity contains Versicherter ..1 MS
-* entity[Versicherter].what.type = http://hl7.org/fhir/resource-types#Patient
-* entity[Versicherter].what.identifier only IdentifierKvid10
-  * ^patternIdentifier.type = http://fhir.de/CodeSystem/identifier-type-de-basis#KVZ10
-  * type 1.. MS
-  * system MS
-  * value MS
+* entity contains Versicherter 1..1 MS
+* entity[Versicherter].what
+  * ^comment = "Referenz auf das von der zu protokollierenden Interaktion betroffene Benutzerkonto im Fachdienst."
+  * type MS
+  * type = http://hl7.org/fhir/resource-types#Patient
+  * reference MS
+* entity contains DocumentReference 0..* MS
+* entity[DocumentReference]
+  * what
+    * ^comment = "Referenz auf alle betroffenen DocumentReference Resourcen"
+    * type MS
+    * type = http://hl7.org/fhir/resource-types#DocumentReference
+    * reference MS
+  * name 1.. MS
+    * ^comment = "Freitextname des Dokumentes, auf das sich die Referenz bezieht"
+* entity contains Binary 0..* MS
+* entity[Binary]
+  * what
+    * ^comment = "Referenz auf alle betroffenen Binary   Resourcen"
+    * type MS
+    * type = http://hl7.org/fhir/resource-types#Binary
+    * reference MS
+  * name 1.. MS
+    * ^comment = "Freitextname des Dokumenten-Binary, auf das sich die Referenz bezieht"
 
 CodeSystem: DiPagOperationenCS
 Id: dipag-operationen-cs
@@ -56,16 +70,6 @@ Title: "Digitale Patientenrechnung Operationen"
 * #process-flag "Digitale Patientenrechnung_ProcessFlag"
 * #erase "Digitale Patientenrechnung_Erase"
 
-CodeSystem: DiPagPropRestInterationsCS
-Id: dipag-prop-rest-interactions-cs
-Title: "Digitale Patientenrechnung proprietäre RESTful Interaktionen"
-* insert Meta
-* ^caseSensitive = true
-* ^hierarchyMeaning = #is-a
-* #create "Erstellen"
-* #read "Lesen"
-* #update "Aktualisieren"
-* #delete "Löschen"
 
 ValueSet: DiPagAuditEventSubTypeVS
 Id: dipag-audit-event-sub-type-vs
@@ -73,7 +77,6 @@ Title: "Digitale Patientenrechnung Audit Event Sub-Type"
 * insert Meta
 * include codes from system $restful-interaction
 * include codes from system DiPagOperationenCS
-* include codes from system DiPagPropRestInterationsCS
 
 ValueSet: DiPagAuditEventTypeVS
 Id: dipag-audit-event-type-vs

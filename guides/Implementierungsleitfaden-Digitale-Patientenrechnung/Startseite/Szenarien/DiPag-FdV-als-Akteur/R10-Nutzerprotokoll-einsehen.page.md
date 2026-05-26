@@ -11,11 +11,10 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |-|-|
 |HTTP-Methode|GET|
 |Endpunkt|/AuditEvent|
-|Suchparameter `agent:text`| Kardinalität: 0..1<br>Name Rechnungsersteller/Kostenträger/FachdienstVersicherte Person<br>Hinweis: Alle Akteure werden mit unterschiedlichen Rollen als `agent` erfasst<br>Type: string|
+|Suchparameter `agent-display`| Kardinalität: 0..1<br>Name Rechnungsersteller/Kostenträger/FachdienstVersicherte Person<br>Hinweis: Alle Akteure werden mit unterschiedlichen Rollen als `agent` erfasst<br>Type: string|
 |Suchparameter `date`| Kardinalität: 0..1<br>Type: date|
 |Suchresultatparameter `_sort`|Als Sortierkriterien können die oben genannten Suchparameter verwendet werden für die Inhalte die als Sortierkriterien in Tabelle 39: Use Case Nutzerprotokoll einsehen - Feature-Dokument Digitale Patientenrechnung genannt sind|
 |Suchresultatparameter `_count`|Durch den Client gewünschte Page-Size, der FD KANN Vorgaben für die Maximale Page-Size definieren|
-|User-Kontext `KVNR`| Kardinalität: 1..1<br>Hinweis: Die KVNR ist aus dem Claim `urn:telematik:claims:id` des mitzusendenen Access-Token zu extrahieren.|
 
 
 |API-Zustand|HTTP-Status-Code|
@@ -59,4 +58,17 @@ mit Body:
 
 ### Verarbeitungsschritte im FD
 
-* Der FD MUSS die Suche auf AuditEvent-Ressourcen begrenzen die unter `AuditEvent.agent.who` auf einen Benutzer verweisen, welcher durch die KVNR aus dem Access-Token identifiziert wird, um sicherzustellen, dass nur persönliche AuditEvent-Ressourcen des angemeldeten Rechnungsempfänger zurückgegeben werden.
+#### Lesen von AuditEvent-Ressourcen
+
+* Der FD MUSS die Suche auf AuditEvent-Ressourcen begrenzen die unter `AuditEvent.entity:Versicherter.what` auf einen Benutzer verweisen, welcher durch die KVNR aus dem Access-Token identifiziert wird, um sicherzustellen, dass nur persönliche AuditEvent-Ressourcen des angemeldeten Rechnungsempfänger zurückgegeben werden.
+* Die oben aufgeführten Suchparameter schränken die Ergebnismenge weiter ein, bzw. modifizieren das Ergebnis bspw. durch Sortierung, um die Suche nach relevanten AuditEvent-Ressourcen zu ermöglichen.
+
+#### Erfassung von AuditEvent-Ressourcen
+
+* Beim Eintreten eines Events muss das FdV den korrekten `type` und `subtype` setzen
+* Beim Eintreten eines Events muss der Fachdienst die auslösende Instanz korrekt im `agent.who` Element setzen. Um eine Suche für den Versicherten zu ermöglichen, muss auch das `agent.who.display` gesetzt sein. Hierbei ist meist der Name der auslösenden Instanz (z.B. Name des Rechnungserstellers) sinnvoll.
+* Beim Eintreten eines Events muss der Fachdienst die OID und den Namen des Servers als `observer` setzen
+* Beim Eintreten eines Events muss der Fachdienst das Nutzerkonto des betroffenen Versicherten in `entity:Versicherter.what` referenzieren. Ein AuditEvent ohne diese Referenz kann aktuell keinem Konto angezeigt werden und ist ungültig.
+Zusätzlich müssen alle betroffenen DocumentReference und Binary Ressourcen referenziert werden. 
+  * Bei DocumentReference wird vom Fachdienst als `entity:DocumentReference.name` der Inhalt des Elementes `description` aus dem Profil **DiPagDokumentenmetadatenIntern** gesetzt.
+  * Bei Binary wird vom Fachdienst als `entity:Binary.name` der Inhalt des Binary spezifiziert und mit dem Inhalt des Elementes `description` aus dem Profil **DiPagDokumentenmetadatenIntern** kombiniert. Beispiel: "Strukturierter Rechnungsinhalt zu Rechnung Reiseimpfung vom 10.01.2024" wobei "Rechnung Reiseimpfung vom 10.01.2024" der Inhalt aus `DocumentReference.description` ist.

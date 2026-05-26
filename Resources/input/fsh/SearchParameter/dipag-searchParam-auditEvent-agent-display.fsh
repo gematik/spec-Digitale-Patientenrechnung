@@ -1,0 +1,14 @@
+Instance: dipag-auditEvent-agent-who-display
+InstanceOf: SearchParameter
+Usage: #example
+Title: "Suchparameter AuditEvent.agent.who.display"
+Description: "Ein SearchParameter auf der Ressource AuditEvent, der die Suche nach dem Text in agent.who.display ermöglicht."
+* url = Canonical(dipag-auditEvent-agent-who-display)
+* name = "DiPagAuditEventAgentWhoDisplay"
+* status = #active
+* publisher = "gematik GmbH"
+* description = "Ein SearchParameter auf der Ressource AuditEvent, der die Suche nach dem Text in agent.who.display ermöglicht. Die Länge des Suchstrings ist auf 200 Zeichen begrenzt."
+* code = #agent-display
+* base = #AuditEvent
+* type = #string
+* expression = "AuditEvent.agent.who.display"
