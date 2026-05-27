@@ -1,11 +1,11 @@
 // Diese Extension basiert auf dem DRAFT der HL7 Financial Management Working Group (FM WG)
 // für die Standard-Extension 'PaymentTo'. Die HL7 FM WG wird diese Extension im offiziellen
 // HL7 Extension Package veröffentlichen. Die Nutzung dieser Extension ist daher ausschließlich
-// im Rahmen des PoC vorgesehen und wird sich mit der Fertigstellung der offiziellen
+// im Rahmen des MVP vorgesehen und wird sich mit der Fertigstellung der offiziellen
 // HL7-Standard-Extension ändern.
 Extension: DiPagPaymentTo
 Id: DiPagPaymentTo
-Title: "DiPag PaymentTo Extension (PoC – basiert auf HL7 FM WG Draft)"
+Title: "DiPag PaymentTo Extension (MVP – basiert auf HL7 FM WG Draft)"
 Description: """Diese Extension basiert auf dem **DRAFT** der HL7 Financial Management Working Group (FM WG) für die Standard-Extension *PaymentTo*.
 
 Die Struktur entspricht dem aktuellen Entwurf der FM WG:
@@ -15,11 +15,11 @@ Die Struktur entspricht dem aktuellen Entwurf der FM WG:
 - **bank**: Name der Bank
 - **branch**: Bankleitzahl / BIC
 - **reference**: Verwendungszweck (typischerweise die Rechnungsnummer)
-- **accountHolderName**: Name des Kontoinhabers (PoC-spezifische Ergänzung, im HL7-Draft noch nicht enthalten)
+- **accountHolderName**: Name des Kontoinhabers (MVP-spezifische Ergänzung, im HL7-Draft noch nicht enthalten)
 - **contact**: Kontaktdaten des Zahlungsempfängers
 - **notes**: Weitere Hinweise zur Zahlung
 
-**Hinweis zur Nutzung:** Die HL7 FM WG wird diese Extension im offiziellen HL7 Extension Package veröffentlichen. Die Verwendung dieser Extension ist daher **ausschließlich im Rahmen dieses PoC** vorgesehen und wird sich mit der Fertigstellung der offiziellen HL7-Standard-Extension ändern."""
+**Hinweis zur Nutzung:** Die HL7 FM WG wird diese Extension im offiziellen HL7 Extension Package veröffentlichen. Die Verwendung dieser Extension ist daher **ausschließlich im Rahmen dieses MVP** vorgesehen und wird sich mit der Fertigstellung der offiziellen HL7-Standard-Extension ändern."""
 Context: Invoice.paymentTerms
 * insert Meta
 * extension contains
@@ -53,7 +53,7 @@ Context: Invoice.paymentTerms
   * value[x] only string
 * extension[accountHolderName]
   * ^short = "Name of the account holder"
-  * ^comment = "Name des Kontoinhabers. PoC-spezifische Ergänzung – im aktuellen HL7-FM-WG-Draft noch nicht vorgesehen. Die Abbildung kann sich mit der Veröffentlichung der offiziellen HL7-Standard-Extension ändern."
+  * ^comment = "Name des Kontoinhabers. MVP-spezifische Ergänzung – im aktuellen HL7-FM-WG-Draft noch nicht vorgesehen. Die Abbildung kann sich mit der Veröffentlichung der offiziellen HL7-Standard-Extension ändern."
   * value[x] only string
 * extension[contact]
   * ^short = "Kontaktdaten des Zahlungsempfängers"

@@ -16,7 +16,6 @@ Description:  "ValueSet für die Differenzierung von verschiedenen Arten von Mar
 * DiPagRechnungMarkierungCS#gelesen "Gelesen"
 * DiPagRechnungMarkierungCS#bezahlt "Bezahlt"
 * DiPagRechnungMarkierungCS#archiviert "Archiviert"
-* DiPagRechnungMarkierungCS#abgerufen "Abgerufen durch Kostenträger"
 
 
 

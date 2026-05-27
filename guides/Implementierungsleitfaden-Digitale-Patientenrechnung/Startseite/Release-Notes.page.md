@@ -18,7 +18,7 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 * **DiPagDokumentenmetadatenIntern**: Extension `leistungsart` entfernt
 * **DiPagRechnungsBundle**: Neuer Slice `Rechnung`; Patient-Instanz und `patient.name.text` nun verpflichtend
 * **DiPagZahlungsziel**: `zahlungszieldatum` und `zahlungsziel` zu einer einzigen Extension zusammengeführt
-* **DiPagPaymentTo** (neu, PoC): Bankverbindung (IBAN, BIC, Verwendungszweck, Kontoinhaber) basierend auf HL7 FM WG Draft; Abbildung wird sich mit Veröffentlichung der offiziellen HL7-Extension ändern
+* **DiPagPaymentTo** (neu, MVP): Bankverbindung (IBAN, BIC, Verwendungszweck, Kontoinhaber) basierend auf HL7 FM WG Draft; Abbildung wird sich mit Veröffentlichung der offiziellen HL7-Extension ändern
 * KDL-Restriktionen aus Profilen entfernt
 
 #### OperationDefinitions
