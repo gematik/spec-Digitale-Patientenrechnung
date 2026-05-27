@@ -176,21 +176,13 @@ Id: dipag-rechnung
   Ebenfalls sollte hier der Zahlbetrag in EUR inkl. potenzieller Abzüge durch Anzahlungen, Vorauszahlungen oder Abschlagzahlungen."
 * paymentTerms.extension contains
     DiPagZahlungsziel named Zahlungsziel 1..1 MS and
-    DiPagBankverbindung named Bankverbindung 0..1 MS and
-    DiPagBankname named Bankname 0..1 MS and
-    DiPagVerwendungszweck named Verwendungszweck 0..1 MS
+    DiPagPaymentTo named PaymentTo 0..1 MS
 * paymentTerms.extension[Zahlungsziel]
   * ^short = "Zahlungsziel als Datum oder Fristangabe"
   * ^comment = "Das Zahlungsziel SOLL vorhanden sein."
-* paymentTerms.extension[Bankverbindung]
-  * ^short = "Bankverbindung für die Überweisung"
-  * ^comment = "Die Bankverbindung für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden."
-* paymentTerms.extension[Bankname]
-  * ^short = "Bankname für die Überweisung"
-  * ^comment = "Der Bankname für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden."
-* paymentTerms.extension[Verwendungszweck]
-  * ^short = "Verwendungszweck für die Überweisung"
-  * ^comment = "Der Verwendungszweck für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden."
+* paymentTerms.extension[PaymentTo]
+  * ^short = "Zahlungsverbindung für die Überweisung (basiert auf HL7 FM WG Draft)"
+  * ^comment = "Die Zahlungsverbindung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden. Diese Extension basiert auf dem DRAFT der HL7 Financial Management Working Group und wird sich mit der Veröffentlichung der offiziellen HL7-Standard-Extension ändern."
 * totalNet 1.. MS
   * ^short = "Rechnungsbetrag (Netto)"
   * ^comment = "Der Rechnungsbetrag in Netto MUSS vorhanden sein."

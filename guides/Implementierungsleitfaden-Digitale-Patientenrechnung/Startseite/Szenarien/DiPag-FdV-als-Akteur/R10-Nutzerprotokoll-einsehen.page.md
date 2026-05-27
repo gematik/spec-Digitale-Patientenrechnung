@@ -12,7 +12,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |HTTP-Methode|GET|
 |Endpunkt|/AuditEvent|
 |Suchparameter `agent-display`| Kardinalität: 0..1<br>Name Rechnungsersteller/Kostenträger/FachdienstVersicherte Person<br>Hinweis: Alle Akteure werden mit unterschiedlichen Rollen als `agent` erfasst<br>Type: string|
-|Suchparameter `date`| Kardinalität: 0..1<br>Type: date|
+|Suchparameter `date`| Kardinalität: 0..*<br>Type: date|
 |Suchresultatparameter `_sort`|Als Sortierkriterien können die oben genannten Suchparameter verwendet werden für die Inhalte die als Sortierkriterien in Tabelle 39: Use Case Nutzerprotokoll einsehen - Feature-Dokument Digitale Patientenrechnung genannt sind|
 |Suchresultatparameter `_count`|Durch den Client gewünschte Page-Size, der FD KANN Vorgaben für die Maximale Page-Size definieren|
 

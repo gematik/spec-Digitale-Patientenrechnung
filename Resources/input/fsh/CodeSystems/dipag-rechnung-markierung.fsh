@@ -5,14 +5,14 @@ Description:  "CodeSystem für die Differenzierung von verschiedenen Arten von M
 * insert Meta
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
-* #eingereicht-frontend "Eingereicht (per Frontend)"
-* #eingereicht-post "Eingereicht (per Post)"
-* #geteilt "Geteilt"
-* #abgerufen "Abgerufen durch Kostenträger"
-* #gelesen "Gelesen"
-* #bezahlt "Bezahlt"
-* #archiviert "Archiviert"
-* #persoenlich "Persönlich"
+* #eingereicht-frontend "Eingereicht (per Frontend)" "Bei Einreichung durch Versicherten"
+* #eingereicht-post "Eingereicht (per Post)" "Bei Postversand durch Versicherten"
+* #geteilt "Geteilt" "Bei Teilen durch den Versicherten"
+* #abgerufen "Abgerufen durch Kostenträger" "Bei Abruf eines Dokuments/einer Rechnung durch den Kostenträger, durch den Fachdienst"
+* #gelesen "Gelesen" "Beim Einsehen von Rechnungen oder Dokumenten durch den Versicherten im DiPag FdV"
+* #bezahlt "Bezahlt" "Bei Zahlung durch den Versicherten"
+* #archiviert "Archiviert" "Bei Archivierung durch den Versicherten"
+* #persoenlich "Persönlich" "Durch den Rechnungsersteller bei Versenden von Dokumenten, die ausschließlich nur persönlich an den Versicherten gerichtet sind."
 
 CodeSystem:  DiPagDokumentArtDerArchivierungCS
 Id: dipag-dokument-artderarchivierung-cs
