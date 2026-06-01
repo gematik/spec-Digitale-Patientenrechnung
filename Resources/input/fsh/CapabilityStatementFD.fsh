@@ -48,7 +48,7 @@ Usage: #definition
   * resource[+]
     * type = #DocumentReference
     * insert Expectation (#SHALL)
-    * supportedProfile = Canonical(DiPagRechnungsdokument)
+    * supportedProfile = Canonical(DiPagDokumentenmetadatenIntern)
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #read

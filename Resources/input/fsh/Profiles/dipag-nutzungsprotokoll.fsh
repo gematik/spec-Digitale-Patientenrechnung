@@ -22,7 +22,7 @@ Id: dipag-nutzungsprotokoll
   * type from DiPagAuditEventAgentTypeVS (required)
   * who MS
   * who.identifier ..1 MS
-  * who.identifier ^comment = "Der Identifier wird vom Server gesetzt und kann entweder eine KVNR oder Telematik-ID sein. Im Falle einer Applikations-internen Aktivität muss die OID des FdV gesetzt werden."
+  * who.identifier ^comment = "Der Identifier wird vom Server gesetzt und kann entweder eine KVNR oder Telematik-ID sein. Im Falle einer Applikations-internen Aktivität muss die OID des FD gesetzt werden."
   * who.display 1.. MS
 * source.observer
   * display MS

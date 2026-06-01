@@ -32,10 +32,10 @@ Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können übe
     * use = #in
     * min = 1
     * max = "1"
-    * documentation = "Typ der Markierung"
+    * documentation = "Typ der Markierung, es können alle Markierungen mitgegeben werden, die Markierungen 'persönlich' und 'abgerufen durch KTR' werden aber wie oben beschrieben ignoriert."
     * type = #Coding
     * binding
-      * valueSet = Canonical(DiPagRechnungMarkierungOperationVS)
+      * valueSet = Canonical(DiPagRechnungMarkierungVS)
       * strength = #required
   * part[+]
     * name = #zeitpunkt
