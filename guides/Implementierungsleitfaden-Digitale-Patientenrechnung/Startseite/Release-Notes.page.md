@@ -14,10 +14,12 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 #### Profile und Extensions
 
-* **DiPagDokumentenmetadatenEingang**: `subject` entfernt; neue Invariante `MarkierungNurFuerAnhang` – Markierungen beim Submit sind ausschließlich für Anhänge erlaubt, nicht für Rechnungsdokumente
-* **DiPagDokumentenmetadatenIntern**: Extension `leistungsart` entfernt
+* **DiPagRechnung**: `DiPagTeilsumme`-Extension auf `totalPriceComponent[SummeRechnungspositionen]` wiederhergestellt (versehentlich entfernt)
+* **DiPagTeilsumme**: Slicenamen auf camelCase geändert (`type`, `summe`, `uStProzent`, `uStBetrag`)
+* **DiPagDokumentenmetadatenEingang**: `subject` entfernt; neue Invarianten `MarkierungNurFuerAnhang` und `AnhangIdentifierPflicht` (Anhänge müssen einen `AnhangIdentifier` enthalten); Identifier-Slicing `AnhangIdentifier` eingeführt; Max-Length für `description` (5000) und Markierungsdetails (1024); Hinweis auf 512-kB-Limit für strukturierten Rechnungsinhalt
+* **DiPagDokumentenmetadatenIntern**: Extension `leistungsart` entfernt; Identifier-Slicing (`Rechnungsnummer`, `AnhangIdentifier`) eingeführt; `zahlungszieldatum` nutzt nun `DiPagZahlungsziel` (Typ `date` statt `dateTime`)
 * **DiPagRechnungsBundle**: Neuer Slice `Rechnung`; Patient-Instanz und `patient.name.text` nun verpflichtend
-* **DiPagZahlungsziel**: `zahlungszieldatum` und `zahlungsziel` zu einer einzigen Extension zusammengeführt
+* **DiPagZahlungsziel**: `zahlungszieldatum` und `zahlungsziel` zu einer einzigen Extension zusammengeführt; Kontext um `DocumentReference` erweitert
 * **DiPagPaymentTo** (neu, MVP): Bankverbindung (IBAN, BIC, Verwendungszweck, Kontoinhaber) basierend auf HL7 FM WG Draft; Abbildung wird sich mit Veröffentlichung der offiziellen HL7-Extension ändern
 * KDL-Restriktionen aus Profilen entfernt
 
@@ -30,9 +32,13 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 * **DiPagNutzungsprotokoll**: AuditEvent-Profiling überarbeitet (Slicing für `Versicherter`, `DocumentReference` und `Binary` in `entity`; `agent.who.display` verpflichtend)
 * Neuer Search Parameter `dipag-searchParam-auditEvent-agent-display` für die Suche nach dem Agenten im Nutzungsprotokoll
 
+#### CodeSystems
+
+* **DiPagRechnungIdentifierTypeCS**: Neuer Code `anhang` für Anhangidentifikatoren
+
 #### CapabilityStatement und Search Parameter
 
-* Veralteten Search Parameter entfernt; IHE-Codes entfernt
+* Veraltete Search Parameter (`subject`, `author` vom Typ Reference) entfernt; `supportedProfile` auf `DiPagDokumentenmetadatenIntern` geändert
 * Zeichenlimit (200) für bestehende Search Parameter `dipag-docRef-author-display` und `dipag-docRef-subject-display` ergänzt
 
 #### Sonstige Änderungen

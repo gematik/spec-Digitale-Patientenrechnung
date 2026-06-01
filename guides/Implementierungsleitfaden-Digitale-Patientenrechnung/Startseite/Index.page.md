@@ -23,7 +23,7 @@ Realm: Deutschland
 
 Reifegrad: Draft (STU Ballot folgt)
 
-Datum: 04.05.2026
+Datum: 01.06.2026
 
 ### Herausgeber
 
