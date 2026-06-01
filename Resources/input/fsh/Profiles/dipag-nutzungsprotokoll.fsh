@@ -30,6 +30,12 @@ Id: dipag-nutzungsprotokoll
   * identifier MS
     * ^comment = "Identifier (OID) des DiPag Fachdienst-Server, auf dem das Event ausgelöst wurde"
 * entity MS
+  * detail MS
+    * ^comment = "Details zum Dokument, z.B. die Art der Interaktion"
+    * type MS
+    * type from DiPagAuditEventDetailVS (required)
+    * valueString MS
+      * ^comment = "Freitextliche Angabe zu den Details der Interaktion. Der Freitext soll verständlich und für die Anzeige im Frontend geeignet sein."
 * entity ^slicing.discriminator.type = #pattern
 * entity ^slicing.discriminator.path = "what.type"
 * entity ^slicing.rules = #open
@@ -92,3 +98,21 @@ Title: "Digitale Patientenrechnung Audit Event Agent Type"
 * insert Meta
 * $extraSecurityRoleType#humanuser "human user"
 * $extraSecurityRoleType#dataprocessor "data processor"
+
+CodeSystem: DiPagAuditEventDetailCS
+Id: dipag-audit-event-detail-cs
+Title: "Digitale Patientenrechnung Audit Event Detail"
+* insert Meta
+* ^caseSensitive = true
+* ^hierarchyMeaning = #is-a
+* #Allgemein "Allgemeine Interaktion mit einem Objekt"
+* #Rechnungsversand-Berechtigung "Rechnungsversand-Berechtigung"
+* #DocumentReference.meta.tag:dipag-rechnungsstatus "Rechnungsstatus"
+* #DocumentReference.meta.extension:markierung "Markierung"
+
+
+ValueSet: DiPagAuditEventDetailVS
+Id: dipag-audit-event-detail-vs
+Title: "Digitale Patientenrechnung Audit Event Detail"
+* insert Meta
+* include codes from system DiPagAuditEventDetailCS
