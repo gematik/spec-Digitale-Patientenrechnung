@@ -31,7 +31,7 @@ Als Antwort MUSS der FD ein [FHIR-SearchSet-Bundle](https://www.hl7.org/fhir/r4/
 ### Beispiele
 
 ```
-HTTP GET [fachdienst-endpunkt]/AuditEvent?agent:text=11223344
+HTTP GET [fachdienst-endpunkt]/AuditEvent?agent-display=Max Mustermann
 ```
 
 Antwort des Fachdienstes im Erfolgsfall:
