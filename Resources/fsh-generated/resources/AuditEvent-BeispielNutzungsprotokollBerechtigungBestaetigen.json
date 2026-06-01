@@ -1,6 +1,6 @@
 {
   "resourceType": "AuditEvent",
-  "id": "BeispielNutzungsprotokollChangeStatus",
+  "id": "BeispielNutzungsprotokollBerechtigungBestaetigen",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
@@ -11,18 +11,11 @@
       "what": {
         "type": "Patient",
         "reference": "Patient/NutzerkontoPatient"
-      }
-    },
-    {
-      "what": {
-        "type": "DocumentReference",
-        "reference": "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
       },
-      "name": "Rechnung Reiseimpfung vom 10.01.2024",
       "detail": [
         {
-          "type": "DocumentReference.meta.tag:dipag-rechnungsstatus",
-          "valueString": "Rechnungsstatus geändert auf 'Bezahlt'"
+          "type": "Rechnungsversand-Berechtigung",
+          "valueString": "Die Berechtigungsregel zum Rechnungsversand für Zahnarztpraxis Müller wurde durch den Rechnungsempfänger bestätigt."
         }
       ]
     }
@@ -33,12 +26,12 @@
   },
   "subtype": [
     {
-      "code": "change-status",
-      "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
+      "code": "update",
+      "system": "http://hl7.org/fhir/restful-interaction"
     }
   ],
-  "action": "E",
-  "recorded": "2024-05-31T14:30:00.000000+00:00",
+  "action": "U",
+  "recorded": "2024-05-21T10:30:00.000000+00:00",
   "outcome": "0",
   "agent": [
     {

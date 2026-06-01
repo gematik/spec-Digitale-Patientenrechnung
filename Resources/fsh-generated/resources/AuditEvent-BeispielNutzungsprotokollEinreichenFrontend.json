@@ -1,6 +1,6 @@
 {
   "resourceType": "AuditEvent",
-  "id": "BeispielNutzungsprotokollRetrieve",
+  "id": "BeispielNutzungsprotokollEinreichenFrontend",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
@@ -21,31 +21,10 @@
       "name": "Rechnung Reiseimpfung vom 10.01.2024",
       "detail": [
         {
-          "type": "Allgemein",
-          "valueString": "Rechnung abgerufen"
+          "type": "DocumentReference.meta.extension:markierung",
+          "valueString": "Die Rechnung wurde über das Frontend eingereicht."
         }
       ]
-    },
-    {
-      "what": {
-        "type": "Binary",
-        "reference": "Binary/id-der-originalen-rechnung"
-      },
-      "name": "Originale Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
-    },
-    {
-      "what": {
-        "type": "Binary",
-        "reference": "Binary/id-der-angereicherten-rechnung"
-      },
-      "name": "Angereicherte Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
-    },
-    {
-      "what": {
-        "type": "Binary",
-        "reference": "Binary/id-des-strukturierten-Rechnungsinhalts"
-      },
-      "name": "Strukturierter Rechnungsinhalt zu Rechnung Reiseimpfung vom 10.01.2024"
     }
   ],
   "type": {
@@ -54,12 +33,12 @@
   },
   "subtype": [
     {
-      "code": "retrieve",
+      "code": "process-flag",
       "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
     }
   ],
   "action": "E",
-  "recorded": "2024-05-30T09:15:22.000000+00:00",
+  "recorded": "2024-06-03T08:20:00.000000+00:00",
   "outcome": "0",
   "agent": [
     {

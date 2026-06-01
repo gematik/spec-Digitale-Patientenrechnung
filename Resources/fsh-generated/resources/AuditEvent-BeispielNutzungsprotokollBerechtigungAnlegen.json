@@ -1,6 +1,6 @@
 {
   "resourceType": "AuditEvent",
-  "id": "BeispielNutzungsprotokoll",
+  "id": "BeispielNutzungsprotokollBerechtigungAnlegen",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
@@ -11,41 +11,13 @@
       "what": {
         "type": "Patient",
         "reference": "Patient/NutzerkontoPatient"
-      }
-    },
-    {
-      "what": {
-        "type": "DocumentReference",
-        "reference": "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
       },
-      "name": "Rechnung Reiseimpfung vom 10.01.2024",
       "detail": [
         {
-          "type": "Allgemein",
-          "valueString": "Rechnung eingereicht"
+          "type": "Rechnungsversand-Berechtigung",
+          "valueString": "Die Rechnungsversand-Berechtigung für Zahnarztpraxis Müller wurde angelegt."
         }
       ]
-    },
-    {
-      "what": {
-        "type": "Binary",
-        "reference": "Binary/id-der-originalen-rechnung"
-      },
-      "name": "Originale Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
-    },
-    {
-      "what": {
-        "type": "Binary",
-        "reference": "Binary/id-der-angereicherten-rechnung"
-      },
-      "name": "Angereicherte Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
-    },
-    {
-      "what": {
-        "type": "Binary",
-        "reference": "Binary/id-des-strukturierten-Rechnungsinhalts"
-      },
-      "name": "Strukturierter Rechnungsinhalt zu Rechnung Reiseimpfung vom 10.01.2024"
     }
   ],
   "type": {
@@ -54,12 +26,12 @@
   },
   "subtype": [
     {
-      "code": "invoice-submit",
-      "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
+      "code": "create",
+      "system": "http://hl7.org/fhir/restful-interaction"
     }
   ],
-  "action": "E",
-  "recorded": "2024-05-29T11:25:54.123456+00:02",
+  "action": "C",
+  "recorded": "2024-05-20T09:00:00.000000+00:00",
   "outcome": "0",
   "agent": [
     {
@@ -84,14 +56,14 @@
           "system": "https://gematik.de/fhir/sid/telematik-id",
           "value": "11223344"
         },
-        "display": "Beispiel Leistungsempfänmger"
+        "display": "Zahnarztpraxis Müller"
       },
       "requestor": true
     }
   ],
   "source": {
     "observer": {
-      "display": "FD",
+      "display": "DiPag FD Server",
       "identifier": {
         "system": "urn:ietf:rfc:3986",
         "value": "urn:oid:1.2.276.0.76.4.323"

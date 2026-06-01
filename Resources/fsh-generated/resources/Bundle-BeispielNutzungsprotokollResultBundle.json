@@ -2,19 +2,19 @@
   "resourceType": "Bundle",
   "id": "BeispielNutzungsprotokollResultBundle",
   "type": "searchset",
-  "total": 5,
+  "total": 7,
   "link": [
     {
       "relation": "self",
-      "url": "https://example.com/fhir/AuditEvent?agent:text=11223344"
+      "url": "https://example.com/fhir/AuditEvent?agent-display=Max%20Mustermann"
     }
   ],
   "entry": [
     {
-      "fullUrl": "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokoll",
+      "fullUrl": "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokollNutzerkontoEinrichten",
       "resource": {
         "resourceType": "AuditEvent",
-        "id": "BeispielNutzungsprotokoll",
+        "id": "BeispielNutzungsprotokollNutzerkontoEinrichten",
         "meta": {
           "profile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
@@ -25,41 +25,13 @@
             "what": {
               "type": "Patient",
               "reference": "Patient/NutzerkontoPatient"
-            }
-          },
-          {
-            "what": {
-              "type": "DocumentReference",
-              "reference": "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
             },
-            "name": "Rechnung Reiseimpfung vom 10.01.2024",
             "detail": [
               {
                 "type": "Allgemein",
-                "valueString": "Rechnung eingereicht"
+                "valueString": "Ein Nutzerkonto wurde eingerichtet."
               }
             ]
-          },
-          {
-            "what": {
-              "type": "Binary",
-              "reference": "Binary/id-der-originalen-rechnung"
-            },
-            "name": "Originale Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
-          },
-          {
-            "what": {
-              "type": "Binary",
-              "reference": "Binary/id-der-angereicherten-rechnung"
-            },
-            "name": "Angereicherte Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
-          },
-          {
-            "what": {
-              "type": "Binary",
-              "reference": "Binary/id-des-strukturierten-Rechnungsinhalts"
-            },
-            "name": "Strukturierter Rechnungsinhalt zu Rechnung Reiseimpfung vom 10.01.2024"
           }
         ],
         "type": {
@@ -68,12 +40,12 @@
         },
         "subtype": [
           {
-            "code": "invoice-submit",
-            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
+            "code": "create",
+            "system": "http://hl7.org/fhir/restful-interaction"
           }
         ],
         "action": "C",
-        "recorded": "2024-05-29T11:25:54.123456+00:02",
+        "recorded": "2024-01-15T10:00:00.000000+00:00",
         "outcome": "0",
         "agent": [
           {
@@ -87,25 +59,17 @@
             },
             "who": {
               "identifier": {
-                "type": {
-                  "coding": [
-                    {
-                      "code": "PRN",
-                      "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-                    }
-                  ]
-                },
-                "system": "https://gematik.de/fhir/sid/telematik-id",
-                "value": "11223344"
+                "system": "http://fhir.de/sid/gkv/kvid-10",
+                "value": "A123456789"
               },
-              "display": "Beispiel Leistungsempfänmger"
+              "display": "Max Mustermann"
             },
             "requestor": true
           }
         ],
         "source": {
           "observer": {
-            "display": "FdV",
+            "display": "DiPag FD Server",
             "identifier": {
               "system": "urn:ietf:rfc:3986",
               "value": "urn:oid:1.2.276.0.76.4.323"
@@ -179,7 +143,7 @@
             "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
           }
         ],
-        "action": "R",
+        "action": "E",
         "recorded": "2024-05-30T09:15:22.000000+00:00",
         "outcome": "0",
         "agent": [
@@ -257,7 +221,7 @@
             "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
           }
         ],
-        "action": "U",
+        "action": "E",
         "recorded": "2024-05-31T14:30:00.000000+00:00",
         "outcome": "0",
         "agent": [
@@ -335,8 +299,157 @@
             "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
           }
         ],
-        "action": "U",
+        "action": "E",
         "recorded": "2024-06-01T10:00:00.000000+00:00",
+        "outcome": "0",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "humanuser",
+                  "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+                }
+              ]
+            },
+            "who": {
+              "identifier": {
+                "system": "http://fhir.de/sid/gkv/kvid-10",
+                "value": "A123456789"
+              },
+              "display": "Max Mustermann"
+            },
+            "requestor": true
+          }
+        ],
+        "source": {
+          "observer": {
+            "display": "DiPag FD Server",
+            "identifier": {
+              "system": "urn:ietf:rfc:3986",
+              "value": "urn:oid:1.2.276.0.76.4.323"
+            }
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokollEinreichenFrontend",
+      "resource": {
+        "resourceType": "AuditEvent",
+        "id": "BeispielNutzungsprotokollEinreichenFrontend",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
+          ]
+        },
+        "entity": [
+          {
+            "what": {
+              "type": "Patient",
+              "reference": "Patient/NutzerkontoPatient"
+            }
+          },
+          {
+            "what": {
+              "type": "DocumentReference",
+              "reference": "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
+            },
+            "name": "Rechnung Reiseimpfung vom 10.01.2024",
+            "detail": [
+              {
+                "type": "DocumentReference.meta.extension:markierung",
+                "valueString": "Die Rechnung wurde über das Frontend eingereicht."
+              }
+            ]
+          }
+        ],
+        "type": {
+          "code": "rest",
+          "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
+        },
+        "subtype": [
+          {
+            "code": "process-flag",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
+          }
+        ],
+        "action": "E",
+        "recorded": "2024-06-03T08:20:00.000000+00:00",
+        "outcome": "0",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "humanuser",
+                  "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+                }
+              ]
+            },
+            "who": {
+              "identifier": {
+                "system": "http://fhir.de/sid/gkv/kvid-10",
+                "value": "A123456789"
+              },
+              "display": "Max Mustermann"
+            },
+            "requestor": true
+          }
+        ],
+        "source": {
+          "observer": {
+            "display": "DiPag FD Server",
+            "identifier": {
+              "system": "urn:ietf:rfc:3986",
+              "value": "urn:oid:1.2.276.0.76.4.323"
+            }
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokollBerechtigungBestaetigen",
+      "resource": {
+        "resourceType": "AuditEvent",
+        "id": "BeispielNutzungsprotokollBerechtigungBestaetigen",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
+          ]
+        },
+        "entity": [
+          {
+            "what": {
+              "type": "Patient",
+              "reference": "Patient/NutzerkontoPatient"
+            },
+            "detail": [
+              {
+                "type": "Rechnungsversand-Berechtigung",
+                "valueString": "Die Berechtigungsregel zum Rechnungsversand für Zahnarztpraxis Müller wurde durch den Rechnungsempfänger bestätigt."
+              }
+            ]
+          }
+        ],
+        "type": {
+          "code": "rest",
+          "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
+        },
+        "subtype": [
+          {
+            "code": "update",
+            "system": "http://hl7.org/fhir/restful-interaction"
+          }
+        ],
+        "action": "U",
+        "recorded": "2024-05-21T10:30:00.000000+00:00",
         "outcome": "0",
         "agent": [
           {
@@ -418,7 +531,7 @@
             "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
           }
         ],
-        "action": "D",
+        "action": "E",
         "recorded": "2024-06-02T16:45:00.000000+00:00",
         "outcome": "0",
         "agent": [
