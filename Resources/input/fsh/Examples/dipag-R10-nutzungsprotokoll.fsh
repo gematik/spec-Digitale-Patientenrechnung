@@ -21,6 +21,9 @@ InstanceOf: DiPagNutzungsprotokoll
 * entity[DocumentReference]
   * what = Reference(BeispielDocumentReferenceRechnungRetrieve)
   * name = "Rechnung Reiseimpfung vom 10.01.2024"
+  * detail[+]
+    * type = DiPagAuditEventDetailCS#Allgemein
+    * valueString = "Rechnung eingereicht"
 * entity[Binary][+]
   * what = Reference(Binary/id-der-originalen-rechnung)
   * name = "Originale Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
@@ -54,6 +57,9 @@ InstanceOf: DiPagNutzungsprotokoll
 * entity[DocumentReference]
   * what = Reference(BeispielDocumentReferenceRechnungRetrieve)
   * name = "Rechnung Reiseimpfung vom 10.01.2024"
+  * detail[+]
+    * type = DiPagAuditEventDetailCS#Allgemein
+    * valueString = "Rechnung abgerufen"
 * entity[Binary][+]
   * what = Reference(Binary/id-der-originalen-rechnung)
   * name = "Originale Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
@@ -87,6 +93,9 @@ InstanceOf: DiPagNutzungsprotokoll
 * entity[DocumentReference]
   * what = Reference(BeispielDocumentReferenceRechnungRetrieve)
   * name = "Rechnung Reiseimpfung vom 10.01.2024"
+  * detail[+]
+    * type = DiPagAuditEventDetailCS#DocumentReference.meta.tag:dipag-rechnungsstatus
+    * valueString = "Rechnungsstatus geändert auf 'Bezahlt'"
 
 
 Instance: BeispielNutzungsprotokollProcessFlag
@@ -111,6 +120,9 @@ InstanceOf: DiPagNutzungsprotokoll
 * entity[DocumentReference]
   * what = Reference(BeispielDocumentReferenceRechnungRetrieve)
   * name = "Rechnung Reiseimpfung vom 10.01.2024"
+  * detail[+]
+    * type = DiPagAuditEventDetailCS#DocumentReference.meta.extension:markierung
+    * valueString = "Markierung 'Persönlich' gesetzt"
 
 
 Instance: BeispielNutzungsprotokollErase
@@ -134,6 +146,9 @@ InstanceOf: DiPagNutzungsprotokoll
 * entity[Versicherter].what = Reference(Patient/NutzerkontoPatient)
 * entity[DocumentReference]
   * name = "Rechnung Reiseimpfung vom 10.01.2024"
+  * detail[+]
+    * type = DiPagAuditEventDetailCS#Allgemein
+    * valueString = "Rechnung gelöscht"
 * entity[Binary][+]
   * name = "Originale Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
 * entity[Binary][+]
