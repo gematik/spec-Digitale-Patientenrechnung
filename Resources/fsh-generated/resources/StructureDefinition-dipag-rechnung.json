@@ -1302,54 +1302,18 @@
         "mustSupport": true
       },
       {
-        "id": "Invoice.paymentTerms.extension:Bankverbindung",
+        "id": "Invoice.paymentTerms.extension:PaymentTo",
         "path": "Invoice.paymentTerms.extension",
-        "sliceName": "Bankverbindung",
-        "short": "Bankverbindung für die Überweisung",
-        "comment": "Die Bankverbindung für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden.",
+        "sliceName": "PaymentTo",
+        "short": "Zahlungsverbindung für die Überweisung (basiert auf HL7 FM WG Draft)",
+        "comment": "Die Zahlungsverbindung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden. Diese Extension basiert auf dem DRAFT der HL7 Financial Management Working Group und wird sich mit der Veröffentlichung der offiziellen HL7-Standard-Extension ändern.",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagBankverbindung"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.paymentTerms.extension:Bankname",
-        "path": "Invoice.paymentTerms.extension",
-        "sliceName": "Bankname",
-        "short": "Bankname für die Überweisung",
-        "comment": "Der Bankname für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagBankname"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Invoice.paymentTerms.extension:Verwendungszweck",
-        "path": "Invoice.paymentTerms.extension",
-        "sliceName": "Verwendungszweck",
-        "short": "Verwendungszweck für die Überweisung",
-        "comment": "Der Verwendungszweck für die Überweisung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagVerwendungszweck"
+              "https://gematik.de/fhir/dipag/StructureDefinition/DiPagPaymentTo"
             ]
           }
         ],

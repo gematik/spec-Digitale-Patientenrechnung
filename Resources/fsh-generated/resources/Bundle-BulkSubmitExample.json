@@ -78,6 +78,20 @@
                 ]
               },
               "status": "current",
+              "identifier": [
+                {
+                  "type": {
+                    "coding": [
+                      {
+                        "code": "anhang",
+                        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+                      }
+                    ]
+                  },
+                  "system": "https://example.org/fhir/sid/anhangids",
+                  "value": "987-654-321"
+                }
+              ],
               "content": [
                 {
                   "attachment": {
@@ -88,12 +102,6 @@
                     "code": "rechnungsanhang",
                     "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
                   }
-                }
-              ],
-              "identifier": [
-                {
-                  "system": "https://example.org/fhir/sid/anhangids",
-                  "value": "987-654-321"
                 }
               ],
               "type": {
@@ -193,6 +201,20 @@
                 ]
               },
               "status": "current",
+              "identifier": [
+                {
+                  "type": {
+                    "coding": [
+                      {
+                        "code": "anhang",
+                        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+                      }
+                    ]
+                  },
+                  "system": "https://example.org/fhir/sid/anhangids",
+                  "value": "987-654-321"
+                }
+              ],
               "content": [
                 {
                   "attachment": {
@@ -203,12 +225,6 @@
                     "code": "rechnungsanhang",
                     "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
                   }
-                }
-              ],
-              "identifier": [
-                {
-                  "system": "https://example.org/fhir/sid/anhangids",
-                  "value": "987-654-321"
                 }
               ],
               "type": {

@@ -21,41 +21,63 @@
       "name": "markierung",
       "use": "in",
       "min": 1,
-      "max": "1",
-      "documentation": "Name der Markierung",
-      "type": "Coding"
-    },
-    {
-      "name": "zeitpunkt",
-      "use": "in",
-      "min": 1,
-      "max": "1",
-      "documentation": "Optionaler Zeitpunkt der Markierung",
-      "type": "dateTime"
-    },
-    {
-      "name": "details",
-      "use": "in",
-      "min": 1,
-      "max": "1",
-      "documentation": "Optionale Details als Freitext zur Markierung",
-      "type": "string"
-    },
-    {
-      "name": "gelesen",
-      "use": "in",
-      "min": 1,
-      "max": "1",
-      "documentation": "Gelesen-Status falls Markierung vom Typ 'gelesen' ist",
-      "type": "boolean"
-    },
-    {
-      "name": "artDerArchivierung",
-      "use": "in",
-      "min": 1,
-      "max": "1",
-      "documentation": "Details zur Art der Archivierung falls Markierung vom Typ 'archiviert' ist",
-      "type": "Coding"
+      "max": "*",
+      "documentation": "Markierung",
+      "type": "Coding",
+      "part": [
+        {
+          "name": "markierung",
+          "use": "in",
+          "min": 1,
+          "max": "1",
+          "documentation": "Typ der Markierung, es können alle Markierungen mitgegeben werden, die Markierungen 'persönlich' und 'abgerufen durch KTR' werden aber wie oben beschrieben ignoriert.",
+          "type": "Coding",
+          "binding": {
+            "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-markierung-vs",
+            "strength": "required"
+          }
+        },
+        {
+          "name": "zeitpunkt",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Optionaler Zeitpunkt der Markierung",
+          "type": "dateTime"
+        },
+        {
+          "name": "details",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Optionale Details als Freitext zur Markierung",
+          "type": "string"
+        },
+        {
+          "name": "gelesen",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Gelesen-Status falls Markierung vom Typ 'gelesen' ist. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'gelesen' ist.",
+          "type": "boolean"
+        },
+        {
+          "name": "artDerArchivierung",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Details zur Art der Archivierung falls Markierung vom Typ 'archiviert' ist. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'archiviert' ist.",
+          "type": "Coding"
+        },
+        {
+          "name": "kostentraeger",
+          "use": "in",
+          "min": 0,
+          "max": "1",
+          "documentation": "Referenz auf den Kostenträger. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', 'eingereicht-post', 'geteilt' oder 'abgerufen' ist.",
+          "type": "Reference"
+        }
+      ]
     },
     {
       "name": "meta",

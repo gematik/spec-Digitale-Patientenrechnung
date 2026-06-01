@@ -2,7 +2,7 @@
   "resourceType": "Bundle",
   "id": "BeispielNutzungsprotokollResultBundle",
   "type": "searchset",
-  "total": 1,
+  "total": 5,
   "link": [
     {
       "relation": "self",
@@ -20,6 +20,48 @@
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
           ]
         },
+        "entity": [
+          {
+            "what": {
+              "type": "Patient",
+              "reference": "Patient/NutzerkontoPatient"
+            }
+          },
+          {
+            "what": {
+              "type": "DocumentReference",
+              "reference": "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
+            },
+            "name": "Rechnung Reiseimpfung vom 10.01.2024",
+            "detail": [
+              {
+                "type": "Allgemein",
+                "valueString": "Rechnung eingereicht"
+              }
+            ]
+          },
+          {
+            "what": {
+              "type": "Binary",
+              "reference": "Binary/id-der-originalen-rechnung"
+            },
+            "name": "Originale Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
+          },
+          {
+            "what": {
+              "type": "Binary",
+              "reference": "Binary/id-der-angereicherten-rechnung"
+            },
+            "name": "Angereicherte Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
+          },
+          {
+            "what": {
+              "type": "Binary",
+              "reference": "Binary/id-des-strukturierten-Rechnungsinhalts"
+            },
+            "name": "Strukturierter Rechnungsinhalt zu Rechnung Reiseimpfung vom 10.01.2024"
+          }
+        ],
         "type": {
           "code": "rest",
           "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
@@ -63,16 +105,351 @@
         ],
         "source": {
           "observer": {
-            "display": "FdV"
+            "display": "FdV",
+            "identifier": {
+              "system": "urn:ietf:rfc:3986",
+              "value": "urn:oid:1.2.276.0.76.4.323"
+            }
           }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokollRetrieve",
+      "resource": {
+        "resourceType": "AuditEvent",
+        "id": "BeispielNutzungsprotokollRetrieve",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
+          ]
         },
         "entity": [
           {
             "what": {
+              "type": "Patient",
+              "reference": "Patient/NutzerkontoPatient"
+            }
+          },
+          {
+            "what": {
+              "type": "DocumentReference",
               "reference": "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
+            },
+            "name": "Rechnung Reiseimpfung vom 10.01.2024",
+            "detail": [
+              {
+                "type": "Allgemein",
+                "valueString": "Rechnung abgerufen"
+              }
+            ]
+          },
+          {
+            "what": {
+              "type": "Binary",
+              "reference": "Binary/id-der-originalen-rechnung"
+            },
+            "name": "Originale Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
+          },
+          {
+            "what": {
+              "type": "Binary",
+              "reference": "Binary/id-der-angereicherten-rechnung"
+            },
+            "name": "Angereicherte Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
+          },
+          {
+            "what": {
+              "type": "Binary",
+              "reference": "Binary/id-des-strukturierten-Rechnungsinhalts"
+            },
+            "name": "Strukturierter Rechnungsinhalt zu Rechnung Reiseimpfung vom 10.01.2024"
+          }
+        ],
+        "type": {
+          "code": "rest",
+          "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
+        },
+        "subtype": [
+          {
+            "code": "retrieve",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
+          }
+        ],
+        "action": "R",
+        "recorded": "2024-05-30T09:15:22.000000+00:00",
+        "outcome": "0",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "humanuser",
+                  "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+                }
+              ]
+            },
+            "who": {
+              "identifier": {
+                "system": "http://fhir.de/sid/gkv/kvid-10",
+                "value": "A123456789"
+              },
+              "display": "Max Mustermann"
+            },
+            "requestor": true
+          }
+        ],
+        "source": {
+          "observer": {
+            "display": "DiPag FD Server",
+            "identifier": {
+              "system": "urn:ietf:rfc:3986",
+              "value": "urn:oid:1.2.276.0.76.4.323"
             }
           }
-        ]
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokollChangeStatus",
+      "resource": {
+        "resourceType": "AuditEvent",
+        "id": "BeispielNutzungsprotokollChangeStatus",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
+          ]
+        },
+        "entity": [
+          {
+            "what": {
+              "type": "Patient",
+              "reference": "Patient/NutzerkontoPatient"
+            }
+          },
+          {
+            "what": {
+              "type": "DocumentReference",
+              "reference": "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
+            },
+            "name": "Rechnung Reiseimpfung vom 10.01.2024",
+            "detail": [
+              {
+                "type": "DocumentReference.meta.tag:dipag-rechnungsstatus",
+                "valueString": "Rechnungsstatus geändert auf 'Bezahlt'"
+              }
+            ]
+          }
+        ],
+        "type": {
+          "code": "rest",
+          "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
+        },
+        "subtype": [
+          {
+            "code": "change-status",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
+          }
+        ],
+        "action": "U",
+        "recorded": "2024-05-31T14:30:00.000000+00:00",
+        "outcome": "0",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "humanuser",
+                  "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+                }
+              ]
+            },
+            "who": {
+              "identifier": {
+                "system": "http://fhir.de/sid/gkv/kvid-10",
+                "value": "A123456789"
+              },
+              "display": "Max Mustermann"
+            },
+            "requestor": true
+          }
+        ],
+        "source": {
+          "observer": {
+            "display": "DiPag FD Server",
+            "identifier": {
+              "system": "urn:ietf:rfc:3986",
+              "value": "urn:oid:1.2.276.0.76.4.323"
+            }
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokollProcessFlag",
+      "resource": {
+        "resourceType": "AuditEvent",
+        "id": "BeispielNutzungsprotokollProcessFlag",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
+          ]
+        },
+        "entity": [
+          {
+            "what": {
+              "type": "Patient",
+              "reference": "Patient/NutzerkontoPatient"
+            }
+          },
+          {
+            "what": {
+              "type": "DocumentReference",
+              "reference": "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
+            },
+            "name": "Rechnung Reiseimpfung vom 10.01.2024",
+            "detail": [
+              {
+                "type": "DocumentReference.meta.extension:markierung",
+                "valueString": "Markierung 'Persönlich' gesetzt"
+              }
+            ]
+          }
+        ],
+        "type": {
+          "code": "rest",
+          "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
+        },
+        "subtype": [
+          {
+            "code": "process-flag",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
+          }
+        ],
+        "action": "U",
+        "recorded": "2024-06-01T10:00:00.000000+00:00",
+        "outcome": "0",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "humanuser",
+                  "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+                }
+              ]
+            },
+            "who": {
+              "identifier": {
+                "system": "http://fhir.de/sid/gkv/kvid-10",
+                "value": "A123456789"
+              },
+              "display": "Max Mustermann"
+            },
+            "requestor": true
+          }
+        ],
+        "source": {
+          "observer": {
+            "display": "DiPag FD Server",
+            "identifier": {
+              "system": "urn:ietf:rfc:3986",
+              "value": "urn:oid:1.2.276.0.76.4.323"
+            }
+          }
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    },
+    {
+      "fullUrl": "https://example.com/fhir/AuditEvent/BeispielNutzungsprotokollErase",
+      "resource": {
+        "resourceType": "AuditEvent",
+        "id": "BeispielNutzungsprotokollErase",
+        "meta": {
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
+          ]
+        },
+        "entity": [
+          {
+            "what": {
+              "type": "Patient",
+              "reference": "Patient/NutzerkontoPatient"
+            }
+          },
+          {
+            "name": "Rechnung Reiseimpfung vom 10.01.2024",
+            "detail": [
+              {
+                "type": "Allgemein",
+                "valueString": "Rechnung gelöscht"
+              }
+            ]
+          },
+          {
+            "name": "Originale Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
+          },
+          {
+            "name": "Angereicherte Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
+          },
+          {
+            "name": "Strukturierter Rechnungsinhalt zu Rechnung Reiseimpfung vom 10.01.2024"
+          }
+        ],
+        "type": {
+          "code": "rest",
+          "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
+        },
+        "subtype": [
+          {
+            "code": "erase",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
+          }
+        ],
+        "action": "D",
+        "recorded": "2024-06-02T16:45:00.000000+00:00",
+        "outcome": "0",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "humanuser",
+                  "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+                }
+              ]
+            },
+            "who": {
+              "identifier": {
+                "system": "http://fhir.de/sid/gkv/kvid-10",
+                "value": "A123456789"
+              },
+              "display": "Max Mustermann"
+            },
+            "requestor": true
+          }
+        ],
+        "source": {
+          "observer": {
+            "display": "DiPag FD Server",
+            "identifier": {
+              "system": "urn:ietf:rfc:3986",
+              "value": "urn:oid:1.2.276.0.76.4.323"
+            }
+          }
+        }
       },
       "search": {
         "mode": "match"

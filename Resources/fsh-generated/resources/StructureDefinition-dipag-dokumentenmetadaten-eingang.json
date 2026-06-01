@@ -37,6 +37,20 @@
             "human": "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten.",
             "expression": "content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())",
             "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
+          },
+          {
+            "key": "MarkierungNurFuerAnhang",
+            "severity": "error",
+            "human": "Die Markierung darf nur gesetzt sein, wenn das Dokument kein Rechnungsdokument (AM010106) ist.",
+            "expression": "meta.extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung').exists() implies type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not()",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
+          },
+          {
+            "key": "AnhangIdentifierPflicht",
+            "severity": "error",
+            "human": "Ein identifier:AnhangIdentifier MUSS angegeben werden, wenn das Dokument kein Rechnungsdokument (AM010106) ist.",
+            "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not() implies identifier.where(type.coding.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs' and code = 'anhang').exists()).exists()",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
           }
         ]
       },
@@ -44,7 +58,7 @@
         "id": "DocumentReference.meta.extension:markierung",
         "path": "DocumentReference.meta.extension",
         "sliceName": "markierung",
-        "comment": "Beim Submit einer Rechnung darf nur die Markierung 'Persönlich' gesetzt werden. Alle anderen Markierungen sind ausschließlich im Fachdienst zu setzen.\n  Ein optionaler Freitext mit Details zur Markierung kann über die Extension 'details' angegeben werden.",
+        "comment": "Beim Submit eines Anhang darf nur die Markierung 'Persönlich' gesetzt werden. Alle anderen Markierungen sind ausschließlich im Fachdienst zu setzen.\n  Ein optionaler Freitext mit Details zur Markierung kann über die Extension 'details' angegeben werden.",
         "min": 0,
         "max": "*",
         "type": [
@@ -293,7 +307,7 @@
         "id": "DocumentReference.content:strukturierterRechnungsinhalt",
         "path": "DocumentReference.content",
         "sliceName": "strukturierterRechnungsinhalt",
-        "comment": "Das base64 kodierte Collection-Bundle mit den strukturierten Rechnungsinhalten darf nicht größer als 512kB sein.",
+        "comment": "Das base64 kodierte Collection-Bundle mit den strukturierten Rechnungsinhalten darf nicht größer als 512 kB sein.",
         "min": 0,
         "max": "1",
         "mustSupport": true

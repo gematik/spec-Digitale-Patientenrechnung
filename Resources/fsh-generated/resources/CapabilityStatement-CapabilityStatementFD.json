@@ -129,7 +129,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
           ],
           "interaction": [
             {
@@ -312,9 +312,9 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "name": "agent",
-              "definition": "http://hl7.org/fhir/SearchParameter/AuditEvent-agent",
-              "type": "reference"
+              "name": "agent-display",
+              "definition": "https://gematik.de/fhir/dipag/SearchParameter/dipag-auditEvent-agent-who-display",
+              "type": "string"
             },
             {
               "extension": [
@@ -324,7 +324,7 @@
                 }
               ],
               "name": "date",
-              "definition": "hhttp://hl7.org/fhir/SearchParameter/AuditEvent-date",
+              "definition": "http://hl7.org/fhir/SearchParameter/AuditEvent-date",
               "type": "date"
             }
           ]
