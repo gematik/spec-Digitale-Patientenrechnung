@@ -3,10 +3,10 @@ Title: "Digitale Patientenrechnung Dokumentenmetadaten Eingang"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-eingang
 * insert Meta
-* obeys RechnungOderAnhang
+* obeys RechnungOderAnhang and MarkierungNurFuerAnhang and AnhangIdentifierPflicht
 * meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
 * meta.extension[markierung]
-  * ^comment = "Beim Submit einer Rechnung darf nur die Markierung 'Persönlich' gesetzt werden. Alle anderen Markierungen sind ausschließlich im Fachdienst zu setzen.
+  * ^comment = "Beim Submit eines Anhang darf nur die Markierung 'Persönlich' gesetzt werden. Alle anderen Markierungen sind ausschließlich im Fachdienst zu setzen.
   Ein optionaler Freitext mit Details zur Markierung kann über die Extension 'details' angegeben werden."
   * extension[markierung] MS
     * valueCoding MS
@@ -70,7 +70,7 @@ Id: dipag-dokumentenmetadaten-eingang
       * ^comment = "Base64-kodiertes PDF. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden."
     * url 0..0
 * content[strukturierterRechnungsinhalt]
-  * ^comment = "Das base64 kodierte Collection-Bundle mit den strukturierten Rechnungsinhalten darf nicht größer als 512kB sein."
+  * ^comment = "Das base64 kodierte Collection-Bundle mit den strukturierten Rechnungsinhalten darf nicht größer als 512 kB sein."
   * format MS
   * format = https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs#rechnungsinhalt
   * attachment 1..1 MS
@@ -94,7 +94,17 @@ Id: dipag-dokumentenmetadaten-eingang
 
 // ------------- Constraints -------------
 
+Invariant: AnhangIdentifierPflicht
+Description: "Ein identifier:AnhangIdentifier MUSS angegeben werden, wenn das Dokument kein Rechnungsdokument (AM010106) ist."
+Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not() implies identifier.where(type.coding.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs' and code = 'anhang').exists()).exists()"
+Severity: #error
+
+Invariant: MarkierungNurFuerAnhang
+Description: "Die Markierung darf nur gesetzt sein, wenn das Dokument kein Rechnungsdokument (AM010106) ist."
+Expression: "meta.extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung').exists() implies type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not()"
+Severity: #error
+
 Invariant: RechnungOderAnhang
 Description: "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten."
 Expression: "content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
-Severity: #error
+Severity: #error 

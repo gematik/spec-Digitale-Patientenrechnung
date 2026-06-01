@@ -48,7 +48,7 @@ Usage: #definition
   * resource[+]
     * type = #DocumentReference
     * insert Expectation (#SHALL)
-    * supportedProfile = Canonical(DiPagRechnungsdokument)
+    * supportedProfile = Canonical(DiPagDokumentenmetadatenIntern)
     * interaction[+]
       * insert Expectation (#SHALL)
       * code = #read
@@ -118,13 +118,13 @@ Usage: #definition
       * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
-      * name = "agent"
-      * definition = "http://hl7.org/fhir/SearchParameter/AuditEvent-agent"
-      * type = #reference
+      * name = "agent-display"
+      * definition = "https://gematik.de/fhir/dipag/SearchParameter/dipag-auditEvent-agent-who-display"
+      * type = #string
     * searchParam[+]
       * insert Expectation (#SHALL)
       * name = "date"
-      * definition = "hhttp://hl7.org/fhir/SearchParameter/AuditEvent-date"
+      * definition = "http://hl7.org/fhir/SearchParameter/AuditEvent-date"
       * type = #date
   * resource[+]
     * type = #Binary

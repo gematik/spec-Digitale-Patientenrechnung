@@ -12,7 +12,32 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ### Version 1.0.7
 
-folgt
+#### Profile und Extensions
+
+* **DiPagDokumentenmetadatenEingang**: `subject` entfernt; neue Invariante `MarkierungNurFuerAnhang` – Markierungen beim Submit sind ausschließlich für Anhänge erlaubt, nicht für Rechnungsdokumente
+* **DiPagDokumentenmetadatenIntern**: Extension `leistungsart` entfernt
+* **DiPagRechnungsBundle**: Neuer Slice `Rechnung`; Patient-Instanz und `patient.name.text` nun verpflichtend
+* **DiPagZahlungsziel**: `zahlungszieldatum` und `zahlungsziel` zu einer einzigen Extension zusammengeführt
+* **DiPagPaymentTo** (neu, MVP): Bankverbindung (IBAN, BIC, Verwendungszweck, Kontoinhaber) basierend auf HL7 FM WG Draft; Abbildung wird sich mit Veröffentlichung der offiziellen HL7-Extension ändern
+* KDL-Restriktionen aus Profilen entfernt
+
+#### OperationDefinitions
+
+* **DiPagOperationProcessFlag** (`process-flag`): Semantik auf Complete-Replacement-Prinzip präzisiert; Sonderbehandlung der Markierungen `persönlich` und `abgerufen durch KTR` explizit beschrieben
+
+#### Nutzungsprotokoll
+
+* **DiPagNutzungsprotokoll**: AuditEvent-Profiling überarbeitet (Slicing für `Versicherter`, `DocumentReference` und `Binary` in `entity`; `agent.who.display` verpflichtend)
+* Neuer Search Parameter `dipag-searchParam-auditEvent-agent-display` für die Suche nach dem Agenten im Nutzungsprotokoll
+
+#### CapabilityStatement und Search Parameter
+
+* Veralteten Search Parameter entfernt; IHE-Codes entfernt
+* Zeichenlimit (200) für bestehende Search Parameter `dipag-docRef-author-display` und `dipag-docRef-subject-display` ergänzt
+
+#### Sonstige Änderungen
+
+* Neue Beschreibung und Beispiel für R7-Bulk-Abruf
 
 ### Version 1.0.6
 
