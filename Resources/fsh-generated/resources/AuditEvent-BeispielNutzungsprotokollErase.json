@@ -42,7 +42,7 @@
       "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
     }
   ],
-  "action": "D",
+  "action": "E",
   "recorded": "2024-06-02T16:45:00.000000+00:00",
   "outcome": "0",
   "agent": [

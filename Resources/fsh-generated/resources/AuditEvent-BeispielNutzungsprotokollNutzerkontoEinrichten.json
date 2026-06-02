@@ -1,6 +1,6 @@
 {
   "resourceType": "AuditEvent",
-  "id": "BeispielNutzungsprotokollRetrieve",
+  "id": "BeispielNutzungsprotokollNutzerkontoEinrichten",
   "meta": {
     "profile": [
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
@@ -11,41 +11,13 @@
       "what": {
         "type": "Patient",
         "reference": "Patient/NutzerkontoPatient"
-      }
-    },
-    {
-      "what": {
-        "type": "DocumentReference",
-        "reference": "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
       },
-      "name": "Rechnung Reiseimpfung vom 10.01.2024",
       "detail": [
         {
           "type": "Allgemein",
-          "valueString": "Rechnung abgerufen"
+          "valueString": "Ein Nutzerkonto wurde eingerichtet."
         }
       ]
-    },
-    {
-      "what": {
-        "type": "Binary",
-        "reference": "Binary/id-der-originalen-rechnung"
-      },
-      "name": "Originale Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
-    },
-    {
-      "what": {
-        "type": "Binary",
-        "reference": "Binary/id-der-angereicherten-rechnung"
-      },
-      "name": "Angereicherte Rechnung zu Rechnung Reiseimpfung vom 10.01.2024"
-    },
-    {
-      "what": {
-        "type": "Binary",
-        "reference": "Binary/id-des-strukturierten-Rechnungsinhalts"
-      },
-      "name": "Strukturierter Rechnungsinhalt zu Rechnung Reiseimpfung vom 10.01.2024"
     }
   ],
   "type": {
@@ -54,12 +26,12 @@
   },
   "subtype": [
     {
-      "code": "retrieve",
-      "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"
+      "code": "create",
+      "system": "http://hl7.org/fhir/restful-interaction"
     }
   ],
-  "action": "E",
-  "recorded": "2024-05-30T09:15:22.000000+00:00",
+  "action": "C",
+  "recorded": "2024-01-15T10:00:00.000000+00:00",
   "outcome": "0",
   "agent": [
     {
