@@ -21,14 +21,12 @@ Dies MUSS der Client mittels eines ``Prefer: respond-async``-Headers nach [RFC72
 
 |API-Zustand|HTTP-Status-Code|
 |-|-|
-|Erfolgsfall|`200 - OK`|
-|Eine DocumentReferenz mit dem selben Hash existiert bereits|`409 - Conflict` Im OperationOutcome enthalten ist der Zeitpunkt, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.|
+|Erfolgsfall|`202 - Accepted`|
+|Eine DocumentReferenz mit dem selben Identifier extistiert bereits|`200 - OK` In diesem Fall wird der ursprüngliche Response mit Rechnungs-Token erneut zurück gegeben|
 |Weitere Parameter in HTTP-Anfrage enthalten|`400 - Bad Request`|
 |Syntax für Parameter ist nicht korrekt oder Kardinalitäten werden nicht eingehalten|`400 - Bad Request`|
-|Gravierende Fehler treten während der Validierung auf - Modus = 'normal'|`400 - Bad Request`|
 |Kein valides Access-Token wird mitgesendet|`401 - Unauthorized`|
 |Autorisierter Benutzer verfügt über keine ausreichende Berechtigung die Interaktion auszuführen|`403 - Forbidden`|
-|Fehlende Berechtigung für den Leistungserbringer das Postfach zu verwenden|`404 - Not Found` In diesem Fall: OperationOutcome mit Hinweis, dass Einwilligung nicht vorliegt oder Benutzer nicht vorhanden ist|
 |Andere HTTP-Methode wird verwendet|`405 - Method Not Allowed`|
 
 In einem ``Location``-Header MUSS der FD dem RE-PS eine absolute URL mitteilen unter welcher das RE-PS per Polling prüfen kann, ob die Interaktion abgeschlossen wurde und entsprechende Rückgabewerte seitens der ``$retrieve``-Operation vorliegen. Der Aufbau der ``Location``-URL MUSS aus kryptografisch zufälligen Teilen bestehen, sodass der Aufbau nicht deterministisch ermittelt oder erraten werden kann. Der Server SOLLTE RE-PS-Clients mit einem HTTP-Status-Code ``429 Too Many Requests`` abweisen, falls nach dem Ermessen des FDs die ``Location``-URL zu häufig geprüft wird. Der FD SOLLTE einen [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After)-Header entsprechend den Vorgaben aus der [FHIR-Kernspezifikation](https://www.hl7.org/fhir/R4/async.html#3.1.6.4) verwenden.
