@@ -62,6 +62,9 @@ mit Body:
 
 * Der FD MUSS die Suche auf AuditEvent-Ressourcen begrenzen die unter `AuditEvent.entity:Versicherter.what` auf einen Benutzer verweisen, welcher durch die KVNR aus dem Access-Token identifiziert wird, um sicherzustellen, dass nur persönliche AuditEvent-Ressourcen des angemeldeten Rechnungsempfänger zurückgegeben werden.
 * Die oben aufgeführten Suchparameter schränken die Ergebnismenge weiter ein, bzw. modifizieren das Ergebnis bspw. durch Sortierung, um die Suche nach relevanten AuditEvent-Ressourcen zu ermöglichen.
+* Bei der Suche mittels `date` Suchparameter sind nur die folgenden Modifikatoren zulässig: `eq`, `gt`, `lt`, `ge`, `le`. Alle anderen Modifikatoren werden mit einem Fehlercode 400 beantwortet werden.
+* Die Suche nach einer `date`-Range darf nicht größer als ein Jahr sein. Anfragen, die größer als ein Jahr sind, werden auf ein Jahr begrenzt und in einem OperationsOutcome mit einem entsprechenden Hinweis beantwortet.
+
 
 #### Erfassung von AuditEvent-Ressourcen
 
