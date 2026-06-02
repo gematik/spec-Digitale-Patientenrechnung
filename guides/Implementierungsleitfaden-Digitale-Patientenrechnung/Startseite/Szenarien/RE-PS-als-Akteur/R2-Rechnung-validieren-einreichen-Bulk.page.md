@@ -35,7 +35,7 @@ In einem ``Location``-Header MUSS der FD dem RE-PS eine absolute URL mitteilen u
 
 Nach der Verarbeitung des ``batch``-Bundles MUSS der FD das ``batch-response``-Bundle unter der ``Location``-URL bereitstellen, welches die Ergebnisse entsprechnd der Verarbeitung der einzelnen Dokumente nach AF_10271 enthält. Es ist zu beachten, dass der FD die Autorisierung für jedes Dokument gemäß den Vorgaben zu AF_10271 individuell prüfen MUSS. Der FD MUSS sicherstellen, dass das ``batch-response``-Bundle nur einem validen Access-Token abgerufen werden kann.
 
-Sollte die ``Location``-URL unvorhergesehen nicht durch den RE-PS abfragbar sein (Systemausfall oder andere Fehler), kann das ``batch``-Bundles erneut versendet werden. Bereits beim ersten Versand erfolgreich verarbeitete Daten werden in dem Fall mit `200 - OK` bestätigt und die ursprüngliche Response wird zurückgegeben. Es kommt folglich nicht zu Dubletten. Der Abgleich erfolgt auf Basis des ``DocumentReference.identifier``, welcher nur einmalig im FD vorkommen darf. Es wird ein Rate-Limit für die Bulk Schnittstelle geben.
+Sollte die ``Location``-URL unvorhergesehen nicht durch den RE-PS abfragbar sein (Systemausfall oder andere Fehler), kann das ``batch``-Bundles erneut versendet werden. Bereits beim ersten Versand erfolgreich verarbeitete Daten werden in dem Fall mit `200 - OK` bestätigt und die ursprüngliche Response wird zurückgegeben. Das Handling von Dubletten erfolgt äquivalent zu R1.
 
 ### Beispiel
 
