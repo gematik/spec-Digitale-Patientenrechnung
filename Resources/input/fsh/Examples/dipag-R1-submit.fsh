@@ -63,7 +63,8 @@ Usage: #example
 Instance: BeispielDocumentReferenceSonstigesDokument3-FD
 InstanceOf: DiPagDokumentenmetadatenEingang
 Usage: #example
-* identifier
+* identifier[AnhangIdentifier]
+  * type = DiPagRechnungIdentifierTypeCS#anhang
   * system = "https://example.org/fhir/sid/anhangids"
   * value = "987-654-321"
 * status = #current

@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
   "url": "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -129,7 +129,7 @@
             }
           ],
           "supportedProfile": [
-            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
           ],
           "interaction": [
             {
@@ -173,28 +173,6 @@
               "name": "_tag",
               "definition": "http://hl7.org/fhir/SearchParameter/Resource-tag",
               "type": "token"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "name": "subject",
-              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-subject",
-              "type": "reference"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "name": "author",
-              "definition": "http://hl7.org/fhir/SearchParameter/DocumentReference-author",
-              "type": "reference"
             },
             {
               "extension": [
@@ -334,9 +312,9 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "name": "agent",
-              "definition": "http://hl7.org/fhir/SearchParameter/AuditEvent-agent",
-              "type": "reference"
+              "name": "agent-display",
+              "definition": "https://gematik.de/fhir/dipag/SearchParameter/dipag-auditEvent-agent-who-display",
+              "type": "string"
             },
             {
               "extension": [
@@ -346,7 +324,7 @@
                 }
               ],
               "name": "date",
-              "definition": "hhttp://hl7.org/fhir/SearchParameter/AuditEvent-date",
+              "definition": "http://hl7.org/fhir/SearchParameter/AuditEvent-date",
               "type": "date"
             }
           ]

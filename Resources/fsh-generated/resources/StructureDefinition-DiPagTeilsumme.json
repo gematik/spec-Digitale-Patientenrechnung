@@ -20,24 +20,24 @@
   "differential": {
     "element": [
       {
-        "id": "Extension.extension:Type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
-        "sliceName": "Type",
+        "sliceName": "type",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:Type.extension",
+        "id": "Extension.extension:type.extension",
         "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:Type.url",
+        "id": "Extension.extension:type.url",
         "path": "Extension.extension.url",
-        "fixedUri": "Type"
+        "fixedUri": "type"
       },
       {
-        "id": "Extension.extension:Type.value[x]",
+        "id": "Extension.extension:type.value[x]",
         "path": "Extension.extension.value[x]",
         "type": [
           {
@@ -50,24 +50,24 @@
         }
       },
       {
-        "id": "Extension.extension:Summe",
+        "id": "Extension.extension:summe",
         "path": "Extension.extension",
-        "sliceName": "Summe",
+        "sliceName": "summe",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:Summe.extension",
+        "id": "Extension.extension:summe.extension",
         "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:Summe.url",
+        "id": "Extension.extension:summe.url",
         "path": "Extension.extension.url",
-        "fixedUri": "Summe"
+        "fixedUri": "summe"
       },
       {
-        "id": "Extension.extension:Summe.value[x]",
+        "id": "Extension.extension:summe.value[x]",
         "path": "Extension.extension.value[x]",
         "type": [
           {
@@ -76,29 +76,29 @@
         ]
       },
       {
-        "id": "Extension.extension:Summe.value[x].currency",
+        "id": "Extension.extension:summe.value[x].currency",
         "path": "Extension.extension.value[x].currency",
         "patternCode": "EUR"
       },
       {
-        "id": "Extension.extension:UStProzent",
+        "id": "Extension.extension:uStProzent",
         "path": "Extension.extension",
-        "sliceName": "UStProzent",
+        "sliceName": "uStProzent",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:UStProzent.extension",
+        "id": "Extension.extension:uStProzent.extension",
         "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:UStProzent.url",
+        "id": "Extension.extension:uStProzent.url",
         "path": "Extension.extension.url",
-        "fixedUri": "UStProzent"
+        "fixedUri": "uStProzent"
       },
       {
-        "id": "Extension.extension:UStProzent.value[x]",
+        "id": "Extension.extension:uStProzent.value[x]",
         "path": "Extension.extension.value[x]",
         "type": [
           {
@@ -107,24 +107,24 @@
         ]
       },
       {
-        "id": "Extension.extension:UStBetrag",
+        "id": "Extension.extension:uStBetrag",
         "path": "Extension.extension",
-        "sliceName": "UStBetrag",
+        "sliceName": "uStBetrag",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Extension.extension:UStBetrag.extension",
+        "id": "Extension.extension:uStBetrag.extension",
         "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:UStBetrag.url",
+        "id": "Extension.extension:uStBetrag.url",
         "path": "Extension.extension.url",
-        "fixedUri": "UStBetrag"
+        "fixedUri": "uStBetrag"
       },
       {
-        "id": "Extension.extension:UStBetrag.value[x]",
+        "id": "Extension.extension:uStBetrag.value[x]",
         "path": "Extension.extension.value[x]",
         "type": [
           {
@@ -133,7 +133,7 @@
         ]
       },
       {
-        "id": "Extension.extension:UStBetrag.value[x].currency",
+        "id": "Extension.extension:uStBetrag.value[x].currency",
         "path": "Extension.extension.value[x].currency",
         "patternCode": "EUR"
       },

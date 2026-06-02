@@ -20,8 +20,7 @@ Die Input- und Output-Parameter werden durch die OperationDefinition `https://ge
 |API-Zustand|HTTP-Status-Code|
 |-|-|
 |Erfolgsfall|`200 - OK`|
-|Eine DocumentReferenz mit dem selben Hash existiert bereits und der Modus = `korrektur` ist gesetzt|`200 - OK` Die Rechnung wird als Duplikat angelegt|
-|Eine DocumentReferenz mit dem selben Hash existiert bereits und der Modus = `korrektur` ist **nicht** gesetzt|`409 - Conflict` Im OperationOutcome enthalten ist der Zeitpunkt, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.|
+|Eine DocumentReferenz mit dem selben Hash existiert bereits|`409 - Conflict` Im OperationOutcome enthalten ist der Zeitpunkt, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.|
 |Weitere Parameter in HTTP-Anfrage enthalten|`400 - Bad Request`|
 |Syntax für Parameter ist nicht korrekt oder Kardinalitäten werden nicht eingehalten|`400 - Bad Request`|
 |Gravierende Fehler treten während der Validierung auf - Modus = 'normal'|`400 - Bad Request`|
@@ -46,8 +45,6 @@ Das identifizierende Merkmal für die Duplikaterkennung wird in Form eines SHA-2
 Die so erzeugten Hashes können dann auch für die Signatur (s.u.) genutzt werden.
 
 Wird vom RE-System eine `$invoice-submit` Operation ausgeführt, die zum selben Hashwert führt, geht der Fachdienst von einem Duplikat aus und antworten mit einem HTTP `409 - Conflict`. Im OperationOutcome enthalten der Zeitpunkt enhalten, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.
-
-Wenn der Modus `korrektur` gesetzt ist, wird die Rechnung als Duplikat angelegt.
 
 Für Anhänge gibt es keinen Dublettenprüfung: ein einzelner Bericht soll auch an mehrere Rechnungen angehängt werden können. 
 
@@ -159,7 +156,7 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 
 * `DocumentReference.attachment.data` muss aus der übermittelten DocumentReference herausgelöst werden. Der Inhalt MUSS in einer durch den FD neu angelegten Binary-Ressource gespeichert werden. Die Binary-Ressource MUSS unter `attachment.url` mit einer absoluten URL referenziert werden. `DocumentReference.attachment.data` ist anschließend zu löschen. Dies gilt für alle durch den Client übermittelte Dokumente.
 
-* Die originale Rechnung (`DocumentReference.type = IHEXDStypeCode#ABRE`) MUSS angereichert werden mit den strukturierten Rechnungsinhalten. Der FD MUSS die Inhalte strukturiert im FHIR-Format innerhalb eines PDF/A einbetten.
+* Die originale Rechnung (`DocumentReference.type = KDL#AM010106`) MUSS angereichert werden mit den strukturierten Rechnungsinhalten. Der FD MUSS die Inhalte strukturiert im FHIR-Format innerhalb eines PDF/A einbetten.
 
 * Das neu erzeugte PDF/A muss als Binary nach den Vorgaben von `DocumentReference.content:angereicherteRechnung` aus dem oben aufgeführten Profil hinterlegt werden.
 
@@ -170,6 +167,12 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 * `DocumentReference.author.identifier` MUSS durch den FD auf die im Access-Token enthaltene Telematik-ID gesetzt werden. Durch den Client übermittelte Angaben in DocumentReference.author sind zu überschreiben.
 
 * `DocumentReference.extension:rechnungsdatum` und `DocumentReference.extension:gesamtbetrag` MÜSSEN durch den FD beim Empfang der Operation auf Basis der übermittelten Dokumenteninhalte extrahiert und gesetzt werden. Durch den Client übermittelte Angaben in diesen Extensions sind zu überschreiben.
+
+* `DocumentReference.identifier[Rechnungsnummer]` MUSS durch den FD beim Empfang der Operation auf Basis der übermittelten Dokumenteninhalte extrahiert und gesetzt werden. Durch den Client übermittelte Angaben in diesen Extensions sind zu überschreiben.
+
+* `DocumentReference.identifier[AnhangIdentifier]` MUSS durch den FD für Anhänge vom Client gesetzt übernommen werden.
+
+* `DocumentReference.subject` MUSS durch den FD beim Empfang der Operation auf Basis der Patient-Instanz, welche in den strukturierten Rechnungsinhalten als subject der Invoice referenziert wird. Hierbei wird `Patient.name.text` als `subject.display` gesetzt.
 
 * Hinweis: In der FHIR-Repräsentation erfolgt **keine** Differenzierung zwischen dem Datenobjekt für die Rechnungsdokumente und dem Rechnungsworkflow. Der Workflowstatus wird somit innerhalb der DocumentReference abgebildet. `DocumentReference.meta.tag:dipag-rechnungsstatus` MUSS durch den FD auf "Offen" gesetzt werden beim Empfang der Rechnung.
 

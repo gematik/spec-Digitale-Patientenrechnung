@@ -24,12 +24,18 @@ Im Folgenden sind die Anpassungen an **Profilen**, **Extensions**, **CodeSysteme
         - [..]Im Falle einer GOZ oder BEMA Rechnung werden keine Diagnosen oder Prozedur gefordert.
     - `extension[AbrechnungsDiagnoseProzedurFreitext]`
         - [..]Im Falle einer GOÄ, GOZ oder BEMA Rechnung, SOLLEN Diagnose und Prozedure als Freitextangabe vorhanden sein.
+    - `extension[Behandlungszeitraum]`
+        - [..]Im Falle einer GOZ- oder BEMA-Rechnung ist die Angabe eines Behandlungszeitraums oder -datums optional.
+    - `extension[Fachrichtung]`
+        - Die Empfehlung "MZKH für alle zahnärztlichen Rechnungen" wurde durch eine präzisere Vorgabe ersetzt: Im zahnärztlichen Bereich SOLLEN nur die Fachrichtungen Oralchirurgie (ORAL), Kieferorthopädie (KIEF) und Zahnmedizin (MZKH) verwendet werden.
     - `participant[Leistungserbringer]`
+        - Das `^short` wurde von "Weitere behandelnde Leistungserbringer" zu "Behandelnde Leistungserbringer" korrigiert.
         - [..]Im Falle einer GOZ oder BEMA Rechnung, KÖNNEN weitere behandelnde Leistungserbringer vorhanden sein.
+        - Im Falle einer GOZ oder BEMA Rechnung, MÜSSEN Leistungserbringer als Organisation referenziert werden, die Angabe von Personen ist in diesem Fall nicht zulässig.
     - `totalPriceComponent[MinderungNachGOZ]`
         - [..]Im Falle einer GOÄ, GOÄ-neu oder BEMA Rechnung ist das Element nicht gefordert.
-    - `totalPriceComponent[MinderungNachGOZ].extension[Kassenanteil]`
-        - Im Falle einer BEMA Rechnung SOLL der Kassenanteil in Prozent vorhanden sein.[..]
+    - `totalPriceComponent[Abzug].extension[Kassenanteil]`
+        - Im Falle einer BEMA oder gemischten BEMA und GOZ Rechnung SOLL der Kassenanteil in Prozent vorhanden sein.[..]
     - `lineItem.priceComponent[BruttoBetrag]`
         - [..]Im Falle einer BEMA Rechnungsposition ist das Element nicht gefordert.
 
@@ -42,15 +48,16 @@ Im Folgenden sind die Anpassungen an **Profilen**, **Extensions**, **CodeSysteme
     - `extension[WegegeldReiseentschaedigung]`
         - [..]Im Falle einer BEMA Rechnungsposition ist das Element nicht gefordert.
     - `extension[Einfachsatz]`
-        - [..]Im Falle einer BEMA Rechnungsposition ist er nicht gefordert.
-    - `extension[Faktor].extension[Value]`
+        - [..]Im Falle einer BEMA oder GOZ Rechnungsposition ist er nicht gefordert.
+    - `extension[GebuehrenordnungAngaben].extension[Faktor Grund]`
         - [..]Im Falle einer GOZ oder BEMA Rechnungsposition ist der Faktor Grund nicht gefordert.
     - `extension[MinderungP6GOÄ]`
         - [..]Im Falle einer GOZ oder BEMA Rechnungsposition ist das Element nicht gefordert.
     - `occurrence[x]`
-        - [..]Im Falle einer BEMA Rechnungsposition, ist das Element nicht gefordert.
-    - `occurrencePeriod`
+        - [..]Im Falle einer BEMA Rechnungsposition ist das Element nicht gefordert. Zusätzlich wird neben `Period` nun auch `dateTime` unterstützt (`occurrenceDateTime` als neues MS-Element).
+    - `performer.actor`
         - [..]Bei GOZ oder BEMA Leistungen ist ein behandelnder Leistungserbringer nicht gefordert.
+        - Der Referenz-Typ wurde für GOZ- und BEMA-Rechnungspositionen eingeschränkt: `Practitioner` ist nicht mehr zulässig, nur noch `DiPagPerson`, `DiPagInstitution` und `Organization`.
     - `reason.text`
         - [..]Bei einer BEMA Rechnungsposition ist die Begründung in Abhängigkeit zur Gebührenziffer nicht gefordert.
     - `bodysite.extension[ZahnRegion]`
@@ -60,6 +67,11 @@ Im Folgenden sind die Anpassungen an **Profilen**, **Extensions**, **CodeSysteme
     - `quantity`
         - [..]Ist die Rechnungsposition vom Typ 'GOÄ', 'GOZ' oder 'BEMA' SOLL hier die Anzahl vorhanden sein.
     
+
+#### {{link:DiPagInstitution}}
+
+- `name`
+    - Die Beschreibung wurde um den Hinweis ergänzt, dass der Institutionsname eine Inhaberschaftsangabe enthalten kann, z.B. "Praxis Dr. Muster" oder "MVZ Dr. Muster".
 
 ### Extensions
 
@@ -86,7 +98,11 @@ Damit lassen sich Abzüge im `totalPriceComponent` einer Rechnung nach diesem Ab
 
 ### Implementation Guide
 
-Im [IG](https://simplifier.net/guide/digitalepatientenrechnung-implementierungsleitfaden) wurde für die oben genannte Extension eine Seite hinzugefügt. Alle weiteren Anpassungen im IG erfolgen automatisch in den Tabellen, welche die Beschreibungen aus den Profilen laden. Es sind die im Abschnitt **Profile** genannten Anpassungen.
+Im [IG](https://simplifier.net/guide/digitalepatientenrechnung-implementierungsleitfaden) wurden folgende Änderungen vorgenommen:
+
+- Neue Seite für die Extension `DiPagBemaPunktsumme` wurde hinzugefügt.
+- Neue Seite für die Extension `Invoice-Korrekturrechnung` wurde in der `toc.yaml` ergänzt.
+- Alle weiteren Anpassungen erfolgen automatisch in den Tabellen, welche die Beschreibungen aus den Profilen laden. Es sind die im Abschnitt **Profile** genannten Anpassungen.
 
 ### Status
 

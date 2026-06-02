@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-patient",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "name": "DiPagPatient",
   "status": "active",
   "experimental": false,
@@ -151,6 +151,7 @@
         "path": "Patient.name.text",
         "short": "Voller Name inkl. Anrede",
         "comment": "Die Anrede SOLLEN vorhanden sein.",
+        "min": 1,
         "mustSupport": true
       },
       {
