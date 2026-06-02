@@ -156,7 +156,7 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 
 * `DocumentReference.attachment.data` muss aus der übermittelten DocumentReference herausgelöst werden. Der Inhalt MUSS in einer durch den FD neu angelegten Binary-Ressource gespeichert werden. Die Binary-Ressource MUSS unter `attachment.url` mit einer absoluten URL referenziert werden. `DocumentReference.attachment.data` ist anschließend zu löschen. Dies gilt für alle durch den Client übermittelte Dokumente.
 
-* Die originale Rechnung (`DocumentReference.type = IHEXDStypeCode#ABRE`) MUSS angereichert werden mit den strukturierten Rechnungsinhalten. Der FD MUSS die Inhalte strukturiert im FHIR-Format innerhalb eines PDF/A einbetten.
+* Die originale Rechnung (`DocumentReference.type = KDL#AM010106`) MUSS angereichert werden mit den strukturierten Rechnungsinhalten. Der FD MUSS die Inhalte strukturiert im FHIR-Format innerhalb eines PDF/A einbetten.
 
 * Das neu erzeugte PDF/A muss als Binary nach den Vorgaben von `DocumentReference.content:angereicherteRechnung` aus dem oben aufgeführten Profil hinterlegt werden.
 
@@ -167,6 +167,12 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 * `DocumentReference.author.identifier` MUSS durch den FD auf die im Access-Token enthaltene Telematik-ID gesetzt werden. Durch den Client übermittelte Angaben in DocumentReference.author sind zu überschreiben.
 
 * `DocumentReference.extension:rechnungsdatum` und `DocumentReference.extension:gesamtbetrag` MÜSSEN durch den FD beim Empfang der Operation auf Basis der übermittelten Dokumenteninhalte extrahiert und gesetzt werden. Durch den Client übermittelte Angaben in diesen Extensions sind zu überschreiben.
+
+* `DocumentReference.identifier[Rechnungsnummer]` MUSS durch den FD beim Empfang der Operation auf Basis der übermittelten Dokumenteninhalte extrahiert und gesetzt werden. Durch den Client übermittelte Angaben in diesen Extensions sind zu überschreiben.
+
+* `DocumentReference.identifier[AnhangIdentifier]` MUSS durch den FD für Anhänge vom Client gesetzt übernommen werden.
+
+* `DocumentReference.subject` MUSS durch den FD beim Empfang der Operation auf Basis der Patient-Instanz, welche in den strukturierten Rechnungsinhalten als subject der Invoice referenziert wird. Hierbei wird `Patient.name.text` als `subject.display` gesetzt.
 
 * Hinweis: In der FHIR-Repräsentation erfolgt **keine** Differenzierung zwischen dem Datenobjekt für die Rechnungsdokumente und dem Rechnungsworkflow. Der Workflowstatus wird somit innerhalb der DocumentReference abgebildet. `DocumentReference.meta.tag:dipag-rechnungsstatus` MUSS durch den FD auf "Offen" gesetzt werden beim Empfang der Rechnung.
 

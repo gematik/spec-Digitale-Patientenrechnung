@@ -25,7 +25,7 @@ InstanceOf: Parameters
 Instance: BeispielDocumentReferenceRechnungRetrieve
 InstanceOf: DiPagDokumentenmetadatenIntern
 * extension[rechnungsdatum].valueDateTime = "2024-01-10"
-* extension[zahlungszieldatum].valueDateTime = "2024-02-10"
+* extension[zahlungszieldatum].valueDate = "2024-02-10"
 * extension[gesamtbetrag].valueMoney
   * value = 120.00
   * currency = #EUR

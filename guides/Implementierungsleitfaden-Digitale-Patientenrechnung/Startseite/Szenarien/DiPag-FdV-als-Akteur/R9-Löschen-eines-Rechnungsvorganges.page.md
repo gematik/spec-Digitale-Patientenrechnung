@@ -7,6 +7,7 @@ topic: AF_10245
 
 Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das DiPag FdV als Client. Anwendungsfall AF_10245 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 27: Use Case Automatisches endgültiges Löschen von Rechnungen" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
 
+
 |||
 |-|-|
 |HTTP-Methode|POST|
@@ -22,6 +23,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |Fehlende Berechtigung für den Rechnungsempfänger den Dokumentenstatus permanent zu löschen|`404 - Not Found`|
 |Operation wird auf nicht existierender DocumentReference-Ressource aufgerufen|`404 - Not Found`|
 |Andere HTTP-Methode wird verwendet|`405 - Method Not Allowed`|
+|Unerlaubter Dokumententyp der zu löschenden DocumentReference-Ressource|`412 - Precondition Failed`|
 |Operation wird auf einer DocumentReference-Ressource aufgerufen die sich nicht im Bearbeitungsstatus 'Papierkorb' befindet|`412 - Precondition Failed`|
 
 Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/dipag/OperationDefinition/Erase` beschrieben. In der derzeitgen Version der Operation exisieren jedoch keine Input- oder Output-Parameter.
@@ -42,6 +44,6 @@ HTTP 200 OK
 
 ### Verarbeitungsschritte im FD
 
-* Der FD MUSS die DocumentReference-Ressource und alle dazugehörigen Binary-Ressourcen permanent und unverzüglich löschen. Die entsprechenden Dokumententokens verlieren permanent ihre Gültigkeit.
+* Der FD MUSS die DocumentReference-Ressource und alle dazugehörigen Binary-Ressourcen permanent und unverzüglich löschen. Die entsprechenden Dokumententokens verlieren permanent ihre Gültigkeit. Das gilt auch für alle zugehörigen Anhänge.
 
 ----

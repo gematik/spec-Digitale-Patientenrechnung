@@ -1,0 +1,73 @@
+{
+  "resourceType": "AuditEvent",
+  "id": "BeispielNutzungsprotokollBerechtigungAbfragen",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"
+    ]
+  },
+  "entity": [
+    {
+      "what": {
+        "type": "Patient",
+        "reference": "Patient/NutzerkontoPatient"
+      },
+      "detail": [
+        {
+          "type": "Allgemein",
+          "valueString": "Die Berechtigung zum Rechnungsversand wurde abgefragt."
+        }
+      ]
+    }
+  ],
+  "type": {
+    "code": "rest",
+    "system": "http://terminology.hl7.org/CodeSystem/audit-event-type"
+  },
+  "subtype": [
+    {
+      "code": "read",
+      "system": "http://hl7.org/fhir/restful-interaction"
+    }
+  ],
+  "action": "R",
+  "recorded": "2024-05-22T08:15:00.000000+00:00",
+  "outcome": "0",
+  "agent": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "humanuser",
+            "system": "http://terminology.hl7.org/CodeSystem/extra-security-role-type"
+          }
+        ]
+      },
+      "who": {
+        "identifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "PRN",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }
+            ]
+          },
+          "system": "https://gematik.de/fhir/sid/telematik-id",
+          "value": "11223344"
+        },
+        "display": "Zahnarztpraxis Müller"
+      },
+      "requestor": true
+    }
+  ],
+  "source": {
+    "observer": {
+      "display": "DiPag FD Server",
+      "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:oid:1.2.276.0.76.4.323"
+      }
+    }
+  }
+}

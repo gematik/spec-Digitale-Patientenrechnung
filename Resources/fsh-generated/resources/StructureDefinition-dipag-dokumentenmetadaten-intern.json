@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-dokumentenmetadaten-intern",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "name": "DiPagDokumentenmetadatenIntern",
   "title": "Digitale Patientenrechnung Dokumentenmetadaten Intern",
   "status": "active",
@@ -293,7 +293,7 @@
           {
             "code": "Extension",
             "profile": [
-              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-zahlungszieldatum"
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel"
             ]
           }
         ],
@@ -334,23 +334,6 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.extension:leistungsart",
-        "path": "DocumentReference.extension",
-        "sliceName": "leistungsart",
-        "comment": "Die Leistungsart wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-leistungsart"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "DocumentReference.extension:behandlungsart",
         "path": "DocumentReference.extension",
         "sliceName": "behandlungsart",
@@ -370,19 +353,111 @@
       {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
-        "comment": "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Das System MUSS eindeutig pro Leistungserbringer:in vergeben werden.",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.identifier.system",
+        "id": "DocumentReference.identifier:Rechnungsnummer",
+        "path": "DocumentReference.identifier",
+        "sliceName": "Rechnungsnummer",
+        "short": "Rechnungs-Nr. (der LEI)",
+        "comment": "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein.",
+        "min": 0,
+        "max": "1",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "invoice",
+                "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:Rechnungsnummer.type",
+        "path": "DocumentReference.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "invoice",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:Rechnungsnummer.system",
         "path": "DocumentReference.identifier.system",
+        "short": "NamingSystem der Rechnungs-Nr. (der LEI)",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.identifier.value",
+        "id": "DocumentReference.identifier:Rechnungsnummer.value",
         "path": "DocumentReference.identifier.value",
+        "short": "Rechnungs-Nr. (der LEI)",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:AnhangIdentifier",
+        "path": "DocumentReference.identifier",
+        "sliceName": "AnhangIdentifier",
+        "short": "Anhangs-Identifier",
+        "comment": "Eindeutiger Identifikator für Anhänge vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Bei Anhängen MUSS das System eindeutig pro Leistungserbringer:in vergeben werden.",
+        "min": 0,
+        "max": "1",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "anhang",
+                "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:AnhangIdentifier.type",
+        "path": "DocumentReference.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "anhang",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:AnhangIdentifier.system",
+        "path": "DocumentReference.identifier.system",
+        "short": "NamingSystem des Anhangs-Identifier",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:AnhangIdentifier.value",
+        "path": "DocumentReference.identifier.value",
+        "short": "Anhangs-Identifier",
         "min": 1,
         "mustSupport": true
       },

@@ -174,10 +174,15 @@ Id: dipag-rechnung
   * ^comment = "Die Zahlungsdaten zur Überweisung SOLLEN vorhanden sein.
   Weitere Zahlungsmethoden wie bspw. Paypal, Klarna, Kreditkarte KÖNNEN auch hier angegeben werden.
   Ebenfalls sollte hier der Zahlbetrag in EUR inkl. potenzieller Abzüge durch Anzahlungen, Vorauszahlungen oder Abschlagzahlungen."
-* paymentTerms.extension contains DiPagZahlungsziel named Zahlungsziel 1..1 MS
+* paymentTerms.extension contains
+    DiPagZahlungsziel named Zahlungsziel 1..1 MS and
+    DiPagPaymentTo named PaymentTo 0..1 MS
 * paymentTerms.extension[Zahlungsziel]
   * ^short = "Zahlungsziel als Datum oder Fristangabe"
   * ^comment = "Das Zahlungsziel SOLL vorhanden sein."
+* paymentTerms.extension[PaymentTo]
+  * ^short = "Zahlungsverbindung für die Überweisung (basiert auf HL7 FM WG Draft)"
+  * ^comment = "Die Zahlungsverbindung SOLL vorhanden sein, wenn die Zahlungsdaten zur Überweisung angegeben werden. Diese Extension basiert auf dem DRAFT der HL7 Financial Management Working Group und wird sich mit der Veröffentlichung der offiziellen HL7-Standard-Extension ändern."
 * totalNet 1.. MS
   * ^short = "Rechnungsbetrag (Netto)"
   * ^comment = "Der Rechnungsbetrag in Netto MUSS vorhanden sein."
@@ -196,6 +201,22 @@ Id: dipag-rechnung
 * totalPriceComponent[SummeRechnungspositionen]
   * ^short = "Summe aller Rechnungspositionen"
   * ^comment = "Die Summe aller Rechnungspositionen SOLL vorhanden sein."
+  * extension contains DiPagTeilsumme named TeilSummenRechnungspositionen ..* MS
+  * extension[TeilSummenRechnungspositionen]
+    * extension[type] MS
+      * valueCoding MS
+        * system 1.. MS
+        * code 1.. MS
+    * extension[summe] MS
+      * valueMoney MS
+        * currency 1.. MS
+        * value 1.. MS
+    * extension[uStProzent] MS
+      * valueDecimal 1.. MS
+    * extension[uStBetrag] MS
+      * valueMoney MS
+        * currency 1.. MS
+        * value 1.. MS
   * type MS
   * type = #base
   * code 1.. MS
@@ -284,9 +305,3 @@ Id: dipag-rechnung
   * type = #tax
   * factor 0..0
   * amount 1.. MS
-
-Extension: DiPagZahlungsziel
-Id: dipag-zahlungsziel
-Title: "Digitale Patientenrechnung Zahlungsziel"
-* insert Meta
-* value[x] only date

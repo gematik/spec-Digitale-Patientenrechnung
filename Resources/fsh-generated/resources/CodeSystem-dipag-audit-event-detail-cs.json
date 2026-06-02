@@ -1,0 +1,44 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagAuditEventDetailCS",
+  "id": "dipag-audit-event-detail-cs",
+  "title": "Digitale Patientenrechnung Audit Event Detail",
+  "version": "1.0.7",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs",
+  "concept": [
+    {
+      "code": "Allgemein",
+      "display": "Allgemeine Interaktion mit einem Objekt"
+    },
+    {
+      "code": "Rechnungsversand-Berechtigung",
+      "display": "Rechnungsversand-Berechtigung"
+    },
+    {
+      "code": "DocumentReference.meta.tag:dipag-rechnungsstatus",
+      "display": "Rechnungsstatus"
+    },
+    {
+      "code": "DocumentReference.meta.extension:markierung",
+      "display": "Markierung"
+    }
+  ],
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
+  "count": 4
+}

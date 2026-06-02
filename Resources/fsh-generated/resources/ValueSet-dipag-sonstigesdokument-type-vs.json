@@ -5,7 +5,7 @@
   "id": "dipag-sonstigesdokument-type-vs",
   "title": "Digitale Patientenrechnung Sonstiges Dokument Type VS",
   "description": "ValueSet zur Klassifizierung von weiteren Dokumenten",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-sonstigesdokument-type-vs",
   "experimental": false,
   "date": "2026-03-26",
@@ -23,14 +23,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
-        "filter": [
-          {
-            "property": "child",
-            "op": "exists",
-            "value": "true"
-          }
-        ]
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl"
       }
     ],
     "exclude": [

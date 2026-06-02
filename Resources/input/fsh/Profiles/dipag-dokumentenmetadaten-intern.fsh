@@ -11,10 +11,9 @@ Id: dipag-dokumentenmetadaten-intern
 * extension contains 
   DiPagDocRefSignature named docRef-signature 0..1 MS and
   DiPagDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
-  DiPagDocumentReferenceZahlungszieldatum named zahlungszieldatum 0..1 MS and
+  DiPagZahlungsziel named zahlungszieldatum 0..1 MS and
   DiPagDocumentReferenceGesamtbetrag named gesamtbetrag 0..1 MS and
   DiPagDocRefFachrichtung named fachrichtung 0..1 MS and
-  DiPagDocRefLeistungsart named leistungsart 0..1 MS and //TODO Noch in Klärung durch Peter, was dahinter steckt
   DiPagBehandlungsart named behandlungsart 0..1 MS
 * extension[rechnungsdatum]
   * ^comment = "Das Rechnungsdatum wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
@@ -24,8 +23,6 @@ Id: dipag-dokumentenmetadaten-intern
   * ^comment = "Der Gesamtbetrag wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
 * extension[fachrichtung]
   * ^comment = "Die Fachrichtung wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
-* extension[leistungsart]
-  * ^comment = "Die Leistungsart wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
 * extension[behandlungsart]
   * ^comment = "Die Behandlungsart wird aus den strukturierten Inhalten durch den FD extrahiert. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung"
 * extension[docRef-signature]
@@ -63,9 +60,32 @@ Id: dipag-dokumentenmetadaten-intern
 * status = #current
   * ^comment = "Versionierung von Dokumenten ist nicht unterstützt. Nur jeweils die aktuelle Version des Dokumentes wird akzeptiert."
 * identifier 1.. MS
-  * ^comment = "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Das System MUSS eindeutig pro Leistungserbringer:in vergeben werden."
+* identifier ^slicing.discriminator.type = #pattern
+* identifier ^slicing.discriminator.path = "$this"
+* identifier ^slicing.rules = #open
+* identifier 
+  contains Rechnungsnummer 0..1 MS and
+  AnhangIdentifier 0..1 MS
+* identifier[Rechnungsnummer]
+  * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#invoice
+  * ^short = "Rechnungs-Nr. (der LEI)"
+  * ^comment = "Die Rechnungs-Nr. (der LEI) MUSS vorhanden sein."
+  * type 1.. MS
+  * type = DiPagRechnungIdentifierTypeCS#invoice
   * system 1.. MS
+    * ^short = "NamingSystem der Rechnungs-Nr. (der LEI)"
   * value 1.. MS
+    * ^short = "Rechnungs-Nr. (der LEI)"
+* identifier[AnhangIdentifier]
+  * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#anhang
+  * ^short = "Anhangs-Identifier"
+  * ^comment = "Eindeutiger Identifikator für Anhänge vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Bei Anhängen MUSS das System eindeutig pro Leistungserbringer:in vergeben werden."
+  * type 1.. MS
+  * type = DiPagRechnungIdentifierTypeCS#anhang
+  * system 1.. MS
+    * ^short = "NamingSystem des Anhangs-Identifier"
+  * value 1.. MS
+    * ^short = "Anhangs-Identifier"
 * type 1.. MS
   * ^comment = "Kodierung des Dokumentes als 'Rechnung', sowie darüber hinausgehende Klassifizierung per KDL"
 * type.coding 1.. 
@@ -221,16 +241,6 @@ Context: DocumentReference
 * value[x] 1.. MS
 * value[x] only Coding
 * value[x] from http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (required)
-
-Extension: DiPagDocRefLeistungsart
-Id: dipag-docref-leistungsart
-Title: "Digitale Patientenrechnung DocRef Leistungsart"
-Description: "Extension zur Angabe einer Leistungsart"
-Context: DocumentReference
-* insert Meta
-
-* value[x] 1.. MS
-* value[x] only Coding
 
 // ------------- Constraints -------------
 

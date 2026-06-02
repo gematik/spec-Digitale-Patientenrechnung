@@ -6,40 +6,48 @@
   "id": "dipag-rechnung-markierung-cs",
   "title": "Digitale Patientenrechnung Rechnung Markierung CS",
   "description": "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs",
   "concept": [
     {
       "code": "eingereicht-frontend",
-      "display": "Eingereicht (per Frontend)"
+      "display": "Eingereicht (per Frontend)",
+      "definition": "Bei Einreichung durch Versicherten"
     },
     {
       "code": "eingereicht-post",
-      "display": "Eingereicht (per Post)"
+      "display": "Eingereicht (per Post)",
+      "definition": "Bei Postversand durch Versicherten"
     },
     {
       "code": "geteilt",
-      "display": "Geteilt"
+      "display": "Geteilt",
+      "definition": "Bei Teilen durch den Versicherten"
     },
     {
       "code": "abgerufen",
-      "display": "Abgerufen durch Kostenträger"
+      "display": "Abgerufen durch Kostenträger",
+      "definition": "Bei Abruf eines Dokuments/einer Rechnung durch den Kostenträger, durch den Fachdienst"
     },
     {
       "code": "gelesen",
-      "display": "Gelesen"
+      "display": "Gelesen",
+      "definition": "Beim Einsehen von Rechnungen oder Dokumenten durch den Versicherten im DiPag FdV"
     },
     {
       "code": "bezahlt",
-      "display": "Bezahlt"
+      "display": "Bezahlt",
+      "definition": "Bei Zahlung durch den Versicherten"
     },
     {
       "code": "archiviert",
-      "display": "Archiviert"
+      "display": "Archiviert",
+      "definition": "Bei Archivierung durch den Versicherten"
     },
     {
       "code": "persoenlich",
-      "display": "Persönlich"
+      "display": "Persönlich",
+      "definition": "Durch den Rechnungsersteller bei Versenden von Dokumenten, die ausschließlich nur persönlich an den Versicherten gerichtet sind."
     }
   ],
   "experimental": false,
