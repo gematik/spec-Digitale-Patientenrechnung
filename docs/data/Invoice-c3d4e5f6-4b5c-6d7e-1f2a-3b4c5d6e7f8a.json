@@ -333,12 +333,43 @@
       "text": "Gemäß §1 Abs. 2 GOÄ werden diese Leistungen nach dieser Gebührenordnung für Ärzte berechnet. Bitte überweisen Sie den Betrag innerhalb von 14 Tagen."
     }
   ],
-  "paymentTerms": "Überweisung auf Konto: IBAN DE89370400440532013000, BIC COBADEFFXXX. Zahlbar bis zum 30.04.2024 ohne Abzug.",
+  "paymentTerms": "Bitte überweisen Sie den Rechnungsbetrag bis zum 30.04.2024 auf folgendes Konto.",
   "_paymentTerms": {
     "extension": [
       {
         "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
         "valueDate": "2024-04-30"
+      },
+      {
+        "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagPaymentTo",
+        "extension": [
+          {
+            "url": "paymentType",
+            "valueCodeableConcept": {
+              "text": "IBAN"
+            }
+          },
+          {
+            "url": "account",
+            "valueString": "DE89370400440532013000"
+          },
+          {
+            "url": "bank",
+            "valueString": "Commerzbank AG"
+          },
+          {
+            "url": "branch",
+            "valueString": "COBADEFFXXX"
+          },
+          {
+            "url": "accountHolderName",
+            "valueString": "Zahnarztpraxis Dr. Schulz"
+          },
+          {
+            "url": "reference",
+            "valueString": "RG-2024-001234"
+          }
+        ]
       }
     ]
   },
