@@ -40,7 +40,8 @@ InstanceOf: DiPagDokumentenmetadatenEingang
 
 Instance: BeispielDocumentReferenceSonstigesDokument3-LE
 InstanceOf: DiPagDokumentenmetadatenEingang
-* identifier
+* identifier[AnhangIdentifier]
+  * type = DiPagRechnungIdentifierTypeCS#anhang
   * system = "https://example.org/fhir/sid/anhangids"
   * value = "987-654-321"
 * status = #current
@@ -79,7 +80,8 @@ InstanceOf: DiPagDokumentenmetadatenEingang
 
 Instance: BeispielDocumentReferenceSonstigesDokument3.1-LE
 InstanceOf: DiPagDokumentenmetadatenEingang
-* identifier
+* identifier[AnhangIdentifier]
+  * type = DiPagRechnungIdentifierTypeCS#anhang
   * system = "https://example.org/fhir/sid/anhangids"
   * value = "987-654-321"
 * status = #current
@@ -166,7 +168,8 @@ InstanceOf: DiPagDokumentenmetadatenEingang
 
 Instance: BeispielDocumentReferenceSonstigesDokument3.1-FD
 InstanceOf: DiPagDokumentenmetadatenEingang
-* identifier
+* identifier[AnhangIdentifier]
+  * type = DiPagRechnungIdentifierTypeCS#anhang
   * system = "https://example.org/fhir/sid/anhangids"
   * value = "987-654-321"
 * status = #current

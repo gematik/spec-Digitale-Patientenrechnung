@@ -23,7 +23,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständige Digitale Patientenrechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur."
+  * documentation = "Vollständige Digitale Patientenrechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden ignoriert."
   * type = #DocumentReference
   * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
 * parameter[+]
@@ -31,7 +31,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Weitere Anhänge zur Digitalen Patientenrechnung als PDF."
+  * documentation = "Weitere Anhänge zur Digitalen Patientenrechnung als PDF. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden ignoriert."
   * type = #DocumentReference
   * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
 * parameter[+]
@@ -97,7 +97,6 @@ Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi fü
 * ^hierarchyMeaning = #is-a
 * #test "Test" "Digitale Patientenrechnung wird als Test eingereicht. Der Fachdienst validiert nur die Digitale Patientenrechnung und speichert diese nicht."
 * #normal "Normal" "Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
-* #korrektur "Korrektur" "Digitale Patientenrechnung wird als Korrektur einer bereits eingereichten Rechnung eingereicht. Es muss sich dabei um eine bereits eingereichte Rechnung handeln. Der Fachdienst validiert die Digitale Patientenrechnung und speichert diese als Korrektur der bestehenden Rechnung."
 
 ValueSet:  DiPagRechnungSubmitModusVS
 Id: dipag-rechnung-submit-modus-vs

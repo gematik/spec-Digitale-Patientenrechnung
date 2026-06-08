@@ -35,7 +35,7 @@ Als Antwort MUSS der FD ein [FHIR-SearchSet-Bundle](https://www.hl7.org/fhir/r4/
 
 Suche anhand der Art des Dokumentes (nur Rechnungen):
 ```
-HTTP GET [fachdienst-endpunkt]/DocumentReference?type=ABRE
+HTTP GET [fachdienst-endpunkt]/DocumentReference?type=AM010106
 ```
 und/oder anhand des Status
 ```

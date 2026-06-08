@@ -37,7 +37,7 @@ Id: dipag-patient
   * ^short = "Name"
   * ^comment = "Der Name SOLL vorhanden sein."
   * use MS
-  * text MS
+  * text 1.. MS
     * ^short = "Voller Name inkl. Anrede"
     * ^comment = "Die Anrede SOLLEN vorhanden sein."
   * family MS

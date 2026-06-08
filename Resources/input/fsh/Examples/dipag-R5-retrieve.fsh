@@ -2,11 +2,8 @@
 Instance: ExampleR5DocumentReference
 InstanceOf: DiPagDokumentenmetadatenIntern
 Title: "Example DiPag Document Reference"
-* extension[rechnungsdatum].url = "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum"
 * extension[rechnungsdatum].valueDateTime = "2023-09-28T13:00:00.123+02:00"
-* extension[zahlungszieldatum].url = "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-zahlungszieldatum"
-* extension[zahlungszieldatum].valueDateTime = "2023-10-28T13:00:00.123+02:00"
-* extension[gesamtbetrag].url = "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag"
+* extension[zahlungszieldatum].valueDate = "2023-10-28"
 * extension[gesamtbetrag].valueMoney
   * value = 16.20
   * currency = #EUR

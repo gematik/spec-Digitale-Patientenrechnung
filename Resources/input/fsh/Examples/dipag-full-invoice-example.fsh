@@ -523,7 +523,21 @@ Usage: #example
   * actor = Reference(OrganizationIssuer)
 * note[0]
   * text = "Gemäß §1 Abs. 2 GOÄ werden diese Leistungen nach dieser Gebührenordnung für Ärzte berechnet. Bitte überweisen Sie den Betrag innerhalb von 14 Tagen."
-* paymentTerms = "Überweisung auf Konto: IBAN DE89370400440532013000, BIC COBADEFFXXX. Zahlbar bis zum 30.04.2024 ohne Abzug."
+* paymentTerms = "Bitte überweisen Sie den Rechnungsbetrag bis zum 30.04.2024 auf folgendes Konto."
+  * extension[PaymentTo]
+    * extension[paymentType]
+      * valueCodeableConcept
+        * text = "IBAN"
+    * extension[account]
+      * valueString = "DE89370400440532013000"
+    * extension[bank]
+      * valueString = "Commerzbank AG"
+    * extension[branch]
+      * valueString = "COBADEFFXXX"
+    * extension[accountHolderName]
+      * valueString = "Zahnarztpraxis Dr. Schulz"
+    * extension[reference]
+      * valueString = "RG-2024-001234"
   * extension[Zahlungsziel]
     * valueDate = "2024-04-30"
 * extension[Behandlungszeitraum]

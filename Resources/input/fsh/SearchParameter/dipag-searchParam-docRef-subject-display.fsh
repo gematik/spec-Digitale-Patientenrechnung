@@ -7,7 +7,7 @@ Description: "Ein SearchParameter auf der Ressource DocumentReference, der die S
 * name = "DiPagDocRefSubjectDisplay"
 * status = #active
 * publisher = "gematik GmbH"
-* description = "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach dem Text in subject.display ermöglicht."
+* description = "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach dem Text in subject.display ermöglicht. Die Länge des Suchstrings ist auf 200 Zeichen begrenzt."
 * code = #subject-display
 * base = #DocumentReference
 * type = #string

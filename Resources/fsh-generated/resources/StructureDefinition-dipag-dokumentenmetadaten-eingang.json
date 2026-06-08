@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-dokumentenmetadaten-eingang",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "name": "DiPagDokumentenmetadatenEingang",
   "title": "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
   "status": "active",
@@ -37,26 +37,127 @@
             "human": "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten.",
             "expression": "content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())",
             "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
+          },
+          {
+            "key": "MarkierungNurFuerAnhang",
+            "severity": "error",
+            "human": "Die Markierung darf nur gesetzt sein, wenn das Dokument kein Rechnungsdokument (AM010106) ist.",
+            "expression": "meta.extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung').exists() implies type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not()",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
+          },
+          {
+            "key": "AnhangIdentifierPflicht",
+            "severity": "error",
+            "human": "Ein identifier:AnhangIdentifier MUSS angegeben werden, wenn das Dokument kein Rechnungsdokument (AM010106) ist.",
+            "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not() implies identifier.where(type.coding.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs' and code = 'anhang').exists()).exists()",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
           }
         ]
       },
       {
+        "id": "DocumentReference.meta.extension:markierung",
+        "path": "DocumentReference.meta.extension",
+        "sliceName": "markierung",
+        "comment": "Beim Submit eines Anhang darf nur die Markierung 'Persönlich' gesetzt werden. Alle anderen Markierungen sind ausschließlich im Fachdienst zu setzen.\n  Ein optionaler Freitext mit Details zur Markierung kann über die Extension 'details' angegeben werden.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:markierung",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "markierung",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:markierung.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "patternCoding": {
+          "code": "persoenlich"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:details",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "details",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:details.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "maxLength": 1024,
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
-        "comment": "Eindeutiger Identifikator vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Das System MUSS eindeutig pro Leistungserbringer:in vergeben werden.",
-        "min": 1,
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.identifier.system",
+        "id": "DocumentReference.identifier:AnhangIdentifier",
+        "path": "DocumentReference.identifier",
+        "sliceName": "AnhangIdentifier",
+        "short": "Anhangs-Identifier",
+        "comment": "Eindeutiger Identifikator für Anhänge vergeben durch das RE-PS (z.B. Interne Dokumentennummer). Bei Anhängen MUSS das System eindeutig pro Leistungserbringer:in vergeben werden.",
+        "min": 0,
+        "max": "1",
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "anhang",
+                "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:AnhangIdentifier.type",
+        "path": "DocumentReference.identifier.type",
+        "min": 1,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "anhang",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+            }
+          ]
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:AnhangIdentifier.system",
         "path": "DocumentReference.identifier.system",
+        "short": "NamingSystem des Anhangs-Identifier",
         "min": 1,
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.identifier.value",
+        "id": "DocumentReference.identifier:AnhangIdentifier.value",
         "path": "DocumentReference.identifier.value",
+        "short": "Anhangs-Identifier",
         "min": 1,
+        "maxLength": 200,
         "mustSupport": true
       },
       {
@@ -133,23 +234,11 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.subject",
-        "path": "DocumentReference.subject",
-        "comment": "Vollständiger Name der behandelten Person. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung.",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.subject.display",
-        "path": "DocumentReference.subject.display",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
         "id": "DocumentReference.description",
         "path": "DocumentReference.description",
         "comment": "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;.",
         "min": 1,
+        "maxLength": 5000,
         "mustSupport": true
       },
       {
@@ -218,6 +307,7 @@
         "id": "DocumentReference.content:strukturierterRechnungsinhalt",
         "path": "DocumentReference.content",
         "sliceName": "strukturierterRechnungsinhalt",
+        "comment": "Das base64 kodierte Collection-Bundle mit den strukturierten Rechnungsinhalten darf nicht größer als 512 kB sein.",
         "min": 0,
         "max": "1",
         "mustSupport": true

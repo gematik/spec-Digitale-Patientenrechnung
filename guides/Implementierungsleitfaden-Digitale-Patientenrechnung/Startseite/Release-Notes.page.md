@@ -10,6 +10,64 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.0.7
+
+#### Profile und Extensions
+
+* **DiPagRechnung**: `DiPagTeilsumme`-Extension auf `totalPriceComponent[SummeRechnungspositionen]` wiederhergestellt (versehentlich entfernt)
+* **DiPagTeilsumme**: Slicenamen auf camelCase geändert (`type`, `summe`, `uStProzent`, `uStBetrag`)
+* **DiPagDokumentenmetadatenEingang**: `subject` entfernt; neue Invarianten `MarkierungNurFuerAnhang` und `AnhangIdentifierPflicht` (Anhänge müssen einen `AnhangIdentifier` enthalten); Identifier-Slicing `AnhangIdentifier` eingeführt; Max-Length für `description` (5000) und Markierungsdetails (1024); Hinweis auf 512-kB-Limit für strukturierten Rechnungsinhalt
+* **DiPagDokumentenmetadatenIntern**: Extension `leistungsart` entfernt; Identifier-Slicing (`Rechnungsnummer`, `AnhangIdentifier`) eingeführt; `zahlungszieldatum` nutzt nun `DiPagZahlungsziel` (Typ `date` statt `dateTime`)
+* **DiPagRechnungsBundle**: Neuer Slice `Rechnung`; Patient-Instanz und `patient.name.text` nun verpflichtend
+* **DiPagZahlungsziel**: `zahlungszieldatum` und `zahlungsziel` zu einer einzigen Extension zusammengeführt; Kontext um `DocumentReference` erweitert
+* **DiPagPaymentTo** (neu, MVP): Bankverbindung (IBAN, BIC, Verwendungszweck, Kontoinhaber) basierend auf HL7 FM WG Draft; Abbildung wird sich mit Veröffentlichung der offiziellen HL7-Extension ändern
+* KDL-Restriktionen aus Profilen entfernt
+
+#### OperationDefinitions
+
+* **DiPagOperationProcessFlag** (`process-flag`): Semantik auf Complete-Replacement-Prinzip präzisiert; Sonderbehandlung der Markierungen `persönlich` und `abgerufen durch KTR` explizit beschrieben
+
+#### Nutzungsprotokoll
+
+* **DiPagNutzungsprotokoll**: AuditEvent-Profiling überarbeitet (Slicing für `Versicherter`, `DocumentReference` und `Binary` in `entity`; `agent.who.display` verpflichtend)
+* Neuer Search Parameter `dipag-searchParam-auditEvent-agent-display` für die Suche nach dem Agenten im Nutzungsprotokoll
+
+#### CodeSystems
+
+* **DiPagRechnungIdentifierTypeCS**: Neuer Code `anhang` für Anhangidentifikatoren
+
+#### CapabilityStatement und Search Parameter
+
+* Veraltete Search Parameter (`subject`, `author` vom Typ Reference) entfernt; `supportedProfile` auf `DiPagDokumentenmetadatenIntern` geändert
+* Zeichenlimit (200) für bestehende Search Parameter `dipag-docRef-author-display` und `dipag-docRef-subject-display` ergänzt
+
+#### Sonstige Änderungen
+
+* Neue Beschreibung und Beispiel für R7-Bulk-Abruf
+
+### Version 1.0.6
+
+#### Profile und Extensions
+
+* **DiPagDocumentReferenceMarkierung**: Neue Extension `kostentraeger` hinzugefügt, um den Kostenträger im Rahmen der Markierung abzubilden
+* **DiPagDokumentenmetadatenIntern**: Must-Support-Flags an den verwendeten Extensions ergänzt
+* **DiPagDokumentenmetadatenEingang**: Möglichkeit ergänzt, ein Dokument als "persoenlich" zu kennzeichnen
+
+#### OperationDefinitions
+
+* **DiPagOperationSubmit** (`invoice-submit`): Modus `korrektur` aus den möglichen Einreichungsmodi entfernt
+
+#### CapabilityStatement
+
+* **CapabilityStatementFD**: Zwei neue Custom Search Parameter hinzugefügt:
+  * `dipag-docRef-author-display` – Suche nach dem Anzeigenamen des Autors einer DocumentReference
+  * `dipag-docRef-subject-display` – Suche nach dem Anzeigenamen des Patienten einer DocumentReference
+
+#### Dokumentation
+
+* Aktualisierung der Beschreibung für den Abruf von Rechnungen durch den Rechnungsempfänger entsprechend der neuen Search Parameter
+* Überarbeitung des BEMA-Implementierungsleitfadens (Index) mit Inhalten aus PR#42
+
 ### Version 1.0.5
 
 - Die Spezifikation wurde um die fachliche Beschreibung der Duplikaterkennung beim $invoice-submit erweitert und um den Modus "korrektur" zur Einreichung bereits bekannter Rechnungen ergänzt.

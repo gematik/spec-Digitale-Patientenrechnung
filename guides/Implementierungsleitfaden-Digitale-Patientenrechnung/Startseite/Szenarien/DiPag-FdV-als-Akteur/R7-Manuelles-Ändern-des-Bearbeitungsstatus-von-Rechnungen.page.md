@@ -80,4 +80,63 @@ mit Body:
 
 * Der FD MUSS anhand der übergebenen Parameter den Meta-Tag 'dipag-rechnungsstatus' auf der DokumentReference aktualisieren.
 
+### Bulk Statusänderungen
+
+Mehrere Statusänderungen können in einem einzigen Aufruf als FHIR-`batch`-Bundle gebündelt werden. Die Operation `$change-status` wird dabei für jede DocumentReference als separater `entry` im Bundle aufgerufen.
+
+|||
+|-|-|
+|HTTP-Methode|POST|
+|Endpunkt|/ (Root-Endpunkt)|
+
+|API-Zustand|HTTP-Status-Code|
+|-|-|
+|Erfolgsfall|`200 - OK`|
+|Kein valides Access-Token wird mitgesendet|`401 - Unauthorized`|
+|Autorisierter Benutzer verfügt über keine ausreichende Berechtigung die Interaktion auszuführen|`403 - Forbidden`|
+|Andere HTTP-Methode wird verwendet|`405 - Method Not Allowed`|
+
+Fehlerfälle auf Ebene der einzelnen Operationen (z.B. `404`, `412`) werden im `batch-response`-Bundle in den jeweiligen `entry.response.status`-Feldern zurückgegeben.
+
+```
+HTTP POST [fachdienst-endpunkt]/
+```
+
+<tabs>
+    <tab title="Parameter-Input">
+        {{render:Resources/fsh-generated/resources/Bundle-BulkChangeStatusExampleInput.json}}
+    </tab>
+    <tab title="XML">
+        {{xml:Resources/fsh-generated/resources/Bundle-BulkChangeStatusExampleInput.json}}
+    </tab>
+    <tab title="JSON">
+        {{json:Resources/fsh-generated/resources/Bundle-BulkChangeStatusExampleInput.json}}
+    </tab>
+    <tab title="Link">
+        {{link:Resources/fsh-generated/resources/Bundle-BulkChangeStatusExampleInput.json}}
+    </tab>
+</tabs>
+
+Antwort des Fachdienstes im Erfolgsfall:
+
+```
+HTTP 200 OK
+```
+mit Body:
+
+<tabs>
+    <tab title="Parameter-Input">
+        {{render:Resources/fsh-generated/resources/Bundle-BulkChangeStatusExampleOutput.json}}
+    </tab>
+    <tab title="XML">
+        {{xml:Resources/fsh-generated/resources/Bundle-BulkChangeStatusExampleOutput.json}}
+    </tab>
+    <tab title="JSON">
+        {{json:Resources/fsh-generated/resources/Bundle-BulkChangeStatusExampleOutput.json}}
+    </tab>
+    <tab title="Link">
+        {{link:Resources/fsh-generated/resources/Bundle-BulkChangeStatusExampleOutput.json}}
+    </tab>
+</tabs>
+
 ----
