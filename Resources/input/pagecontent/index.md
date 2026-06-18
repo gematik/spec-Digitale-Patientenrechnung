@@ -1,0 +1,37 @@
+# Digitale Patientenrechnung
+
+<br>
+
+<a href="https://simplifier.net/DigitalePatientenrechnung/~introduction" class="btn btn-primary">Zum Projekt auf Simplifier</a>
+
+### Zusammenfassung
+Der vorliegende Implementierungsleitfaden beschreibt die technischen Schnittstellen der TI-Anwendung "Digitale Patientenrechnung (DiPag)". Auf dieser Basis soll die Abrechnung medizinischer oder sonstiger Leistungen, die nicht dem Sachleistungsprinzip unterliegen, standardisiert zwischen Leistungserbringern, Patienten/
+versicherten Personen und Kostenträgern ermöglicht werden.
+
+Weitere Informationen siehe [§359a SGB V](https://www.gesetze-im-internet.de/sgb_5/__359a.html).
+
+### Status
+
+Version: 1.0.7
+
+Realm: Deutschland
+
+Reifegrad: Draft (STU Ballot folgt)
+
+Datum: 01.06.2026
+
+### Herausgeber
+
+gematik GmbH
+
+[Impressum](https://www.gematik.de/impressum/)
+
+### Ansprechpartner
+* Frank Weber
+* Peter Menze
+
+### Weitere Links
+<!-- z. B. Beschreibungen des UseCases, Datenmodell, ges. Vorgaben, fachliche Anforderungen, relevante Spezifikationen-->
+* [GitHub Projekt](https://github.com/gematik/spec-Digitale-Patientenrechnung)
+* [Feature-Dokument Digitale Patientenrechnung](https://gemspec.gematik.de/docs/gemF/gemF_DiPag/latest/)
+

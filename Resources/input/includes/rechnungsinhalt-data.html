@@ -1,0 +1,35 @@
+{% sqlToData rechnungsinhalt with targets as (
+    select Url, Json,
+      case Url
+        when 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution'       then 1
+        when 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-person'            then 2
+        when 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient'           then 3
+        when 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung'          then 4
+        when 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition' then 5
+        when 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose' then 6
+        when 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur' then 7
+      end as SortIdx
+    from Resources
+    where Type = 'StructureDefinition'
+      and Url in (
+        'https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution',
+        'https://gematik.de/fhir/dipag/StructureDefinition/dipag-person',
+        'https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient',
+        'https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung',
+        'https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition',
+        'https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose',
+        'https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur'
+      )
+  )
+  select
+    targets.SortIdx                                                                   as SortIdx,
+    coalesce(json_extract(targets.Json, '$.title'), json_extract(targets.Json, '$.name')) as ProfileName,
+    json_extract(elem.value, '$.short')                                              as Short,
+    json_extract(elem.value, '$.id')                                                 as Element,
+    json_extract(elem.value, '$.comment')                                            as Comment
+  from targets,
+       json_each(targets.Json, '$.differential.element') as elem
+  where coalesce(json_extract(elem.value, '$.mustSupport'), 0) = 1
+    and json_extract(elem.value, '$.short') is not null
+  order by SortIdx, Element
+%}

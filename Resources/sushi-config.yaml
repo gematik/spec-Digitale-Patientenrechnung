@@ -1,8 +1,92 @@
+id: de.gematik.dipag
 canonical: https://gematik.de/fhir/dipag
+name: DigitalePatientenrechnung
+title: "Implementierungsleitfaden Digitale Patientenrechnung"
+description: "Implementierungsleitfaden der TI-Anwendung Digitale Patientenrechnung (DiPag): FHIR-Spezifikation fuer den standardisierten Austausch von Rechnungen ueber nicht dem Sachleistungsprinzip unterliegende Leistungen zwischen Leistungserbringern, versicherten Personen und Kostentraegern (vgl. § 359a SGB V)."
+status: draft            # draft | active | retired | unknown  # TODO E3: vor Release ggf. auf 'active' setzen
+version: 1.0.7
 fhirVersion: 4.0.1
-FSHOnly: true
+copyrightYear: "2025+"
+releaseLabel: ci-build   # ci-build | draft | qa-preview | ballot | trial-use | release  # TODO E3: bei Release anpassen
+license: Apache-2.0
+jurisdiction: urn:iso:std:iso:3166#DE "Germany"
 applyExtensionMetadataToRoot: false
+
+publisher:
+  name: gematik GmbH
+  url: https://www.gematik.de
+
 dependencies:
   de.basisprofil.r4: 1.5.4
   dvmd.kdl.r4: 2025.0.1
   de.ihe-d.terminology: 3.0.1
+
+pages:
+  index.md:
+    title: Einfuehrung
+  zweckbestimmung.md:
+    title: Zweckbestimmung
+  use-cases.md:
+    title: Use Cases
+  akteure-und-interaktionen.md:
+    title: Akteure und Interaktionen
+  informationsmodell.md:
+    title: Informationsmodell
+  begriffsdefinitionen.md:
+    title: Begriffsdefinitionen
+  szenarien.md:
+    title: Szenarien
+  R0-rechnungsempfaenger-ermitteln.md:
+    title: "R0: Abfrage des Rechnungsempfaengers und dessen Einwilligung zum Rechnungsversand"
+  R1-rechnung-versenden.md:
+    title: "R1: Rechnung mit Dokumenten validieren und versenden"
+  R2-rechnung-einreichen-bulk.md:
+    title: "R2: Rechnung validieren/einreichen (Bulk)"
+  R3-pdf-abruf-rechnungsersteller.md:
+    title: "R3: Abfrage von angereicherten PDF/A per Token (Rechnungsersteller)"
+  R4-pdf-abruf-rechnungsersteller-bulk.md:
+    title: "R4: Abfrage von angereicherten PDF/A per Token (Rechnungsersteller, Bulk)"
+  R5-rechnungsabruf-rechnungsempfaenger.md:
+    title: "R5: Abruf von Rechnungen (Rechnungsempfaenger)"
+  R6-abfrage-token-rechnungsempfaenger.md:
+    title: "R6: Abfrage von Daten zu Rechnungen und Dokumenten per Token (Rechnungsempfaenger)"
+  R7-status-aendern.md:
+    title: "R7: Manuelles Aendern des Bearbeitungsstatus von Rechnungen"
+  R8-markieren.md:
+    title: "R8: Manuelles Markieren von Rechnungen und Dokumenten"
+  R9-loeschen.md:
+    title: "R9: Loeschen eines Rechnungsvorganges"
+  R10-nutzungsprotokoll.md:
+    title: "R10: Nutzerprotokoll einsehen"
+  R11-abfrage-token-kostentraeger.md:
+    title: "R11: Abfrage von Daten zu Rechnungen und Dokumenten per Token (Kostentraeger)"
+  rechnungsinhalt.md:
+    title: Rechnungsinhalt
+  release-notes.md:
+    title: Release Notes
+
+menu:
+  Einführung: index.html
+  Über diese Spezifikation:
+    Zweckbestimmung: zweckbestimmung.html
+    Use Cases: use-cases.html
+    Akteure und Interaktionen: akteure-und-interaktionen.html
+    Informationsmodell: informationsmodell.html
+    Begriffsdefinitionen: begriffsdefinitionen.html
+  Szenarien:
+    Übersicht: szenarien.html
+    "R0: Rechnungsempfaenger ermitteln": R0-rechnungsempfaenger-ermitteln.html
+    "R1: Rechnung versenden": R1-rechnung-versenden.html
+    "R2: Rechnung einreichen (Bulk)": R2-rechnung-einreichen-bulk.html
+    "R3: PDF/A-Abruf (Ersteller)": R3-pdf-abruf-rechnungsersteller.html
+    "R4: PDF/A-Abruf (Ersteller, Bulk)": R4-pdf-abruf-rechnungsersteller-bulk.html
+    "R5: Rechnungsabruf (Empfaenger)": R5-rechnungsabruf-rechnungsempfaenger.html
+    "R6: Abfrage per Token (Empfaenger)": R6-abfrage-token-rechnungsempfaenger.html
+    "R7: Status aendern": R7-status-aendern.html
+    "R8: Markieren": R8-markieren.html
+    "R9: Loeschen": R9-loeschen.html
+    "R10: Nutzerprotokoll": R10-nutzungsprotokoll.html
+    "R11: Abfrage per Token (Kostentraeger)": R11-abfrage-token-kostentraeger.html
+  Rechnungsinhalt: rechnungsinhalt.html
+  FHIR-Artefakte: artifacts.html
+  Release Notes: release-notes.html

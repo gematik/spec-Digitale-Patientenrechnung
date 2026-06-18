@@ -1,0 +1,12 @@
+== Suppressed Messages ==
+
+# Bekannte/erwartete Validator-Meldungen hier gezielt unterdrücken.
+# Format: https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+# - Eine exakte Meldungszeile  ODER
+# - eine mit % eingeleitete Regex  ODER
+# - ein Kommentarblock '# ... ===' zur Gruppierung.
+#
+# Hinweis: Die vorbestehenden Beispiel-/Terminologie-Validierungen (Platzhalter-
+# Referenzen, code-invalid AM010106, Slice-MatchMultiple etc.) werden bereits in
+# der Firely-CI (validator/advisor.json) gefiltert und sind hier bewusst noch
+# NICHT unterdrückt -> siehe Resources/todo.md (QA-Stabilisierung).
