@@ -10,6 +10,12 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version x.y.z
+
+#### OperationDefinitions
+
+* **DiPagOperationSubmit** (`invoice-submit`): Klarstellung der Validierungssemantik – zusätzliche, nicht profilierte Extensions in den Eingangsressourcen (Parameter `rechnung` und `anhang`) werden nicht ignoriert, sondern abgelehnt (strikte Validierung).
+
 ### Version 1.0.7
 
 #### Profile und Extensions

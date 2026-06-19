@@ -23,7 +23,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständige Digitale Patientenrechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden ignoriert."
+  * documentation = "Vollständige Digitale Patientenrechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
   * type = #DocumentReference
   * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
 * parameter[+]
@@ -31,7 +31,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Weitere Anhänge zur Digitalen Patientenrechnung als PDF. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden ignoriert."
+  * documentation = "Weitere Anhänge zur Digitalen Patientenrechnung als PDF. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
   * type = #DocumentReference
   * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
 * parameter[+]
