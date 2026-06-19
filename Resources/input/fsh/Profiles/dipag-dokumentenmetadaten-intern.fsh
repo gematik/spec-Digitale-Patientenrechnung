@@ -172,14 +172,18 @@ Id: dipag-dokumentenmetadaten-intern
       * ^comment = "Die angereicherte Rechnung wird durch den FD direkt als Binary-Ressource unter attachment.url referenziert."
     * url 1.. MS
 * context MS
-  * related 1.. MS 
-    * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in."
-    * ^slicing.discriminator.type = #type
-    * ^slicing.discriminator.path = "$this.resolve()"
+  * related 1.. MS
+    * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in. Die Slices werden über das Element Reference.type unterschieden und NICHT über die Auflösung der Referenz (resolve()), damit eine einzelne DocumentReference auch ohne Bundle-Kontext (z.B. als Ergebnis der $retrieve-Operation oder der Suche) validierbar bleibt. Der Fachdienst MUSS Reference.type entsprechend dem Zieltyp ('Patient' bzw. 'DocumentReference') setzen."
+    * ^slicing.discriminator.type = #pattern
+    * ^slicing.discriminator.path = "type"
     *  ^slicing.rules = #open
   * related contains patient 1..1 MS and anhaenge 0..* MS
   * related[patient] only Reference(Patient)
+    * type 1.. MS
+    * type = "Patient"
   * related[anhaenge] only Reference(DocumentReference)
+    * type 1.. MS
+    * type = "DocumentReference"
 
 // ------------- ValueSets -------------
 

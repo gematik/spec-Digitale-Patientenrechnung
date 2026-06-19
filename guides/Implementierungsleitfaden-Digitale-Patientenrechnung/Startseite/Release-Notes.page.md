@@ -10,6 +10,12 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version x.y.z
+
+#### Profile und Extensions
+
+* **DiPagDokumentenmetadatenIntern**: Slicing von `context.related` (`patient`, `anhaenge`) so umgestellt, dass es ohne Auflösung der Referenz funktioniert. Der Diskriminator nutzt nun `Reference.type` (Typ `pattern` auf Pfad `type`) statt `$this.resolve()`. Dadurch ist eine einzelne DocumentReference auch ohne Bundle-Kontext (z.B. als Ergebnis von `$retrieve` oder der Suche) validierbar. **Hinweis:** Der Fachdienst MUSS `Reference.type` (`Patient` bzw. `DocumentReference`) in `context.related` setzen.
+
 ### Version 1.0.7
 
 #### Profile und Extensions
