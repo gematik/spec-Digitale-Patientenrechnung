@@ -10,6 +10,16 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version x.y.z
+
+#### Profile und Extensions
+
+* **DiPagDokumentenmetadatenIntern**: Das Dokumenttoken wird als eigener Identifier-Slice `Token` (System `https://gematik.de/fhir/sid/dipag-token`, Kardinalität 1..1) profiliert. Das Token ist damit nicht mehr mit der technischen `DocumentReference.id` identisch und MUSS so vergeben werden, dass es nicht aus der `DocumentReference.id` ableitbar ist.
+
+#### CapabilityStatement und Search Parameter
+
+* Bei `DocumentReference` die `read`-Interaktion und den Suchparameter `_id` entfernt: Es gibt keinen Use Case, in dem nach der technischen Ressourcen-id gesucht bzw. ein Dokument darüber gelesen werden muss. Der Abruf erfolgt ausschließlich über die `$retrieve`-Operation (per Token) bzw. die fachlichen Suchparameter.
+
 ### Version 1.0.7
 
 #### Profile und Extensions

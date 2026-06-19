@@ -20,8 +20,11 @@ Title: "Example DiPag Document Reference"
 * meta.tag[0] = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#offen
 * meta.tag[0].display = "Offen"
 * status = http://hl7.org/fhir/document-reference-status#current
-* identifier.system = "http://example.com/fhir/identifiers"
-* identifier.value = "123456789"
+* identifier[Token].system = "https://gematik.de/fhir/sid/dipag-token"
+* identifier[Token].value = "tk-9f3a7c21-8b6e-4d2a-bc11-5e9d0a1f23c4"
+* identifier[Rechnungsnummer].type = DiPagRechnungIdentifierTypeCS#invoice
+* identifier[Rechnungsnummer].system = "http://example.com/fhir/identifiers"
+* identifier[Rechnungsnummer].value = "123456789"
 * type.coding[Rechnungstyp] = http://dvmd.de/fhir/CodeSystem/kdl#AM010106
 * type.coding[Rechnungstyp].display = "Rechnung ambulante/stationäre Behandlung"
 * description = "Laborbefund vom 28.9.2023"
@@ -64,7 +67,11 @@ Title: "Example DiPag Document Reference"
 
 Instance: ExampleR5DocumentReferenceSonstigesDokument
 InstanceOf: DiPagDokumentenmetadatenIntern
-* identifier
+* identifier[Token]
+  * system = "https://gematik.de/fhir/sid/dipag-token"
+  * value = "tk-2b7e44a0-1c3d-4f9a-9e88-77aa01bc6d52"
+* identifier[AnhangIdentifier]
+  * type = DiPagRechnungIdentifierTypeCS#anhang
   * system = "https://example.org/fhir/sid/anhangids"
   * value = "987-654-321"
 * type.coding[DokumentenKlassifizierung] = $kdl#PT130102 "Molekularpathologiebefund"
