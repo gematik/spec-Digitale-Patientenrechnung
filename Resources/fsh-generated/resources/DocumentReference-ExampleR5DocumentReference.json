@@ -13,6 +13,24 @@
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
     ]
   },
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/sid/dipag-token",
+      "value": "tk-9f3a7c21-8b6e-4d2a-bc11-5e9d0a1f23c4"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "invoice",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+          }
+        ]
+      },
+      "system": "http://example.com/fhir/identifiers",
+      "value": "123456789"
+    }
+  ],
   "status": "current",
   "type": {
     "coding": [
@@ -161,12 +179,6 @@
         "code": "rechnungsinhalt",
         "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
       }
-    }
-  ],
-  "identifier": [
-    {
-      "system": "http://example.com/fhir/identifiers",
-      "value": "123456789"
     }
   ],
   "description": "Laborbefund vom 28.9.2023",
