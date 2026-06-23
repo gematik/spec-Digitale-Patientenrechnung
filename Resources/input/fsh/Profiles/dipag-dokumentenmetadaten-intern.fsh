@@ -38,6 +38,7 @@ Id: dipag-dokumentenmetadaten-intern
     * valueDateTime MS
   * extension[details] MS
     * valueString MS
+      * ^maxLength = 1024
   * extension[gelesen] MS
     * valueBoolean MS
   * extension[artDerArchivierung] MS

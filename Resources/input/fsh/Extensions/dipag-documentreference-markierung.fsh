@@ -19,6 +19,7 @@ Context: DocumentReference.meta, Parameters.parameter.value[x]
 
 * extension[details].value[x] only string
 * extension[details].value[x] 1..1
+* extension[details].valueString ^maxLength = 1024
 
 * obeys gelesen
 * extension[gelesen].value[x] only boolean
@@ -31,6 +32,7 @@ Context: DocumentReference.meta, Parameters.parameter.value[x]
 * obeys kostentraeger
 * extension[kostentraeger].value[x] only Reference
 * extension[kostentraeger].value[x] 1..1
+* extension[kostentraeger].valueReference.display ^maxLength = 1024
 
 
 Invariant: artDerArchivierung
