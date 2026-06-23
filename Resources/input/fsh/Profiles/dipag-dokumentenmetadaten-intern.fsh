@@ -46,6 +46,7 @@ Id: dipag-dokumentenmetadaten-intern
     * valueReference MS
       * identifier MS
       * display MS
+        * ^maxLength = 1024
 * meta.tag MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -97,7 +98,8 @@ Id: dipag-dokumentenmetadaten-intern
   * system 1.. MS
   * code 1.. MS
   * display 1.. MS
-* type.coding[Rechnungstyp] 
+    * ^maxLength = 1024
+* type.coding[Rechnungstyp]
   * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
   * ^patternCoding.code = #AM010106
 * description 1..1 MS
@@ -105,11 +107,13 @@ Id: dipag-dokumentenmetadaten-intern
 * subject 1.. MS
   * ^comment = "Vollständiger Name der behandelten Person. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung."
   * display 1..1 MS
+    * ^maxLength = 1024
 * author MS
   * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Telematik-ID des einreichenden Akteurs."
   * identifier 1.. MS
   * identifier only IdentifierTelematikId
   * display 1.. MS
+    * ^maxLength = 1024
 * content 1.. MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "format"
