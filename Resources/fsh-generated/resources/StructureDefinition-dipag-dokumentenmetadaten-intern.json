@@ -136,7 +136,6 @@
       {
         "id": "DocumentReference.meta.extension:markierung.extension:kostentraeger.value[x].display",
         "path": "DocumentReference.meta.extension.extension.value[x].display",
-        "maxLength": 1024,
         "mustSupport": true
       },
       {
