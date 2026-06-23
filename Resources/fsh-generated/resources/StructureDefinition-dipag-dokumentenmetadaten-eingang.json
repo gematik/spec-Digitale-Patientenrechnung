@@ -219,6 +219,7 @@
         "id": "DocumentReference.type.coding:DokumentenKlassifizierung.display",
         "path": "DocumentReference.type.coding.display",
         "min": 1,
+        "maxLength": 1024,
         "mustSupport": true
       },
       {
