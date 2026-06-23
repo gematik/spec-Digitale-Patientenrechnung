@@ -60,7 +60,9 @@ Title: "Example DiPag Document Reference"
       * value = "urn:oid:1.2.276.0.76.4.323"
   * data = "U3RydWt0dXJpZXJ0ZXJJbmhhbHRTaWduYXR1ckZEMjAyNjAyMTFmamg="
 * context.related[patient] = Reference(BeispielPatient3-FD)
+* context.related[patient].type = "Patient"
 * context.related[anhaenge] = Reference(ExampleR5DocumentReferenceSonstigesDokument)
+* context.related[anhaenge].type = "DocumentReference"
 
 Instance: ExampleR5DocumentReferenceSonstigesDokument
 InstanceOf: DiPagDokumentenmetadatenIntern
@@ -82,6 +84,7 @@ InstanceOf: DiPagDokumentenmetadatenIntern
         * value = "urn:oid:1.2.276.0.76.4.323"
     * data = "QW5oYW5nRG9rdW1lbnRTaWduYXR1ckZEMjAyNjAyMTFkbHBxcnN0dXY="
 * context.related[patient] = Reference(BeispielPatient3-FD)
+* context.related[patient].type = "Patient"
 
 
 
