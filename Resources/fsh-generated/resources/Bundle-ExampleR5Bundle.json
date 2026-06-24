@@ -30,7 +30,7 @@
         "identifier": [
           {
             "system": "https://gematik.de/fhir/sid/dipag-token",
-            "value": "tk-9f3a7c21-8b6e-4d2a-bc11-5e9d0a1f23c4"
+            "value": "d0ab9ed15c5eb41afde78b16a42e1f84d9b2818c1c48406233ac4e237e85e7f2"
           },
           {
             "type": {

@@ -21,7 +21,7 @@ Title: "Example DiPag Document Reference"
 * meta.tag[0].display = "Offen"
 * status = http://hl7.org/fhir/document-reference-status#current
 * identifier[Token].system = "https://gematik.de/fhir/sid/dipag-token"
-* identifier[Token].value = "tk-9f3a7c21-8b6e-4d2a-bc11-5e9d0a1f23c4"
+* identifier[Token].value = "d0ab9ed15c5eb41afde78b16a42e1f84d9b2818c1c48406233ac4e237e85e7f2"
 * identifier[Rechnungsnummer].type = DiPagRechnungIdentifierTypeCS#invoice
 * identifier[Rechnungsnummer].system = "http://example.com/fhir/identifiers"
 * identifier[Rechnungsnummer].value = "123456789"
@@ -69,7 +69,7 @@ Instance: ExampleR5DocumentReferenceSonstigesDokument
 InstanceOf: DiPagDokumentenmetadatenIntern
 * identifier[Token]
   * system = "https://gematik.de/fhir/sid/dipag-token"
-  * value = "tk-2b7e44a0-1c3d-4f9a-9e88-77aa01bc6d52"
+  * value = "a1c4f7e2b9d6038c5e1a4b7d0f3c6e9a2d5b8c1e4f70a3d6b9c2e5f8a1d4b7c0"
 * identifier[AnhangIdentifier]
   * type = DiPagRechnungIdentifierTypeCS#anhang
   * system = "https://example.org/fhir/sid/anhangids"
