@@ -152,7 +152,8 @@
           {
             "code": "string"
           }
-        ]
+        ],
+        "maxLength": 1024
       },
       {
         "id": "Extension.extension:gelesen",
@@ -237,6 +238,11 @@
             "code": "Reference"
           }
         ]
+      },
+      {
+        "id": "Extension.extension:kostentraeger.value[x].display",
+        "path": "Extension.extension.value[x].display",
+        "maxLength": 1024
       },
       {
         "id": "Extension.url",

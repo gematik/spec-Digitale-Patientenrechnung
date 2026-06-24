@@ -517,6 +517,7 @@
         "id": "DocumentReference.type.coding:DokumentenKlassifizierung.display",
         "path": "DocumentReference.type.coding.display",
         "min": 1,
+        "maxLength": 1024,
         "mustSupport": true
       },
       {
@@ -542,6 +543,7 @@
         "id": "DocumentReference.subject.display",
         "path": "DocumentReference.subject.display",
         "min": 1,
+        "maxLength": 1024,
         "mustSupport": true
       },
       {
@@ -568,6 +570,7 @@
         "id": "DocumentReference.author.display",
         "path": "DocumentReference.author.display",
         "min": 1,
+        "maxLength": 1024,
         "mustSupport": true
       },
       {
