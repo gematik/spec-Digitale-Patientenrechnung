@@ -5,6 +5,10 @@ topic: AF_10160
 
 ## {{page-title}}
 
+| |  |
+|---------|---------------------|
+| <img src="https://raw.githubusercontent.com/gematik/spec-Digitale-Patientenrechnung/master/Material/piktogramme/Betriebskoordination_Gruen_gematik.svg" alt="gematik logo" width="75"/> | **Feedback erbeten:** Zu dieser Markierungs-Operation wird ausdrücklich um Feedback gebeten. |
+
 Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das DiPag FdV als Client. Anwendungsfall AF_10160 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 24: Use Case Manuelles Markieren von Rechnungen und Dokumenten" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
 
 |||
@@ -71,8 +75,6 @@ mit Body:
 </tabs>
 
 ### Verarbeitungsschritte im FD
-
-* Falls während eines Aufrufs der FD feststellt, dass das DiPag FdV versucht eine Markierung hinzuzufügen die bereits existiert, so ist diese Markierung zu ignorieren. `HTTP 200 - OK` wird in diesem Fall zurückgegeben.
 
 * Der FD MUSS anhand der übergebenen Parameter die Extension 'DiPagDocumentReferenceMarkierung' auf der DokumentReference erstellen und aktualisieren.
 
