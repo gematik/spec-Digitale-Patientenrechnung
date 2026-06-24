@@ -46,7 +46,8 @@ Id: dipag-dokumentenmetadaten-eingang
   * system 1.. MS
   * code 1.. MS
   * display 1.. MS
-* type.coding[Rechnungstyp] 
+    * ^maxLength = 1024
+* type.coding[Rechnungstyp]
   * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
   * ^patternCoding.code = #AM010106
 * description 1..1 MS

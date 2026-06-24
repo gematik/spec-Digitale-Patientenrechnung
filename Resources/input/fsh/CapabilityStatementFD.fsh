@@ -22,15 +22,7 @@ Usage: #definition
     * supportedProfile = Canonical(DiPagPatient)
     * interaction[+]
       * insert Expectation (#SHALL)
-      * code = #read
-    * interaction[+]
-      * insert Expectation (#SHALL)
       * code = #search-type
-    * searchParam[+]
-      * insert Expectation (#SHALL)
-      * name = "_id"
-      * definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
-      * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
       * name = "identifier"

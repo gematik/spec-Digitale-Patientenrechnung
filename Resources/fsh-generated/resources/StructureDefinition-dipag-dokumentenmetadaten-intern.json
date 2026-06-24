@@ -550,6 +550,7 @@
         "id": "DocumentReference.type.coding:DokumentenKlassifizierung.display",
         "path": "DocumentReference.type.coding.display",
         "min": 1,
+        "maxLength": 1024,
         "mustSupport": true
       },
       {
@@ -575,6 +576,7 @@
         "id": "DocumentReference.subject.display",
         "path": "DocumentReference.subject.display",
         "min": 1,
+        "maxLength": 1024,
         "mustSupport": true
       },
       {
@@ -601,6 +603,7 @@
         "id": "DocumentReference.author.display",
         "path": "DocumentReference.author.display",
         "min": 1,
+        "maxLength": 1024,
         "mustSupport": true
       },
       {
@@ -1095,13 +1098,13 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "type",
-              "path": "$this.resolve()"
+              "type": "pattern",
+              "path": "type"
             }
           ],
           "rules": "open"
         },
-        "comment": "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in.",
+        "comment": "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in. Die Slices werden über das Element Reference.type unterschieden und NICHT über die Auflösung der Referenz (resolve()), damit eine einzelne DocumentReference auch ohne Bundle-Kontext (z.B. als Ergebnis der $retrieve-Operation oder der Suche) validierbar bleibt. Der Fachdienst MUSS Reference.type entsprechend dem Zieltyp ('Patient' bzw. 'DocumentReference') setzen.",
         "min": 1,
         "mustSupport": true
       },
@@ -1122,6 +1125,13 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.context.related:patient.type",
+        "path": "DocumentReference.context.related.type",
+        "min": 1,
+        "patternUri": "Patient",
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.context.related:anhaenge",
         "path": "DocumentReference.context.related",
         "sliceName": "anhaenge",
@@ -1135,6 +1145,13 @@
             ]
           }
         ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.context.related:anhaenge.type",
+        "path": "DocumentReference.context.related.type",
+        "min": 1,
+        "patternUri": "DocumentReference",
         "mustSupport": true
       }
     ]

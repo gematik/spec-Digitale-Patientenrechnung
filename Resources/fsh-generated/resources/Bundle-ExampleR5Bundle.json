@@ -202,12 +202,24 @@
         "context": {
           "related": [
             {
+              "type": "Patient",
               "reference": "Patient/BeispielPatient3-FD"
             },
             {
+              "type": "DocumentReference",
               "reference": "DocumentReference/ExampleR5DocumentReferenceSonstigesDokument"
             }
           ]
+        },
+        "identifier": [
+          {
+            "system": "http://example.com/fhir/identifiers",
+            "value": "123456789"
+          }
+        ],
+        "description": "Laborbefund vom 28.9.2023",
+        "subject": {
+          "display": "Max Mustermann"
         }
       },
       "search": {

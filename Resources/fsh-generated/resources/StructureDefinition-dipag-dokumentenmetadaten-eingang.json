@@ -94,7 +94,6 @@
       {
         "id": "DocumentReference.meta.extension:markierung.extension:details.value[x]",
         "path": "DocumentReference.meta.extension.extension.value[x]",
-        "maxLength": 1024,
         "mustSupport": true
       },
       {
@@ -219,6 +218,7 @@
         "id": "DocumentReference.type.coding:DokumentenKlassifizierung.display",
         "path": "DocumentReference.type.coding.display",
         "min": 1,
+        "maxLength": 1024,
         "mustSupport": true
       },
       {

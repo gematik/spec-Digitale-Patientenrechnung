@@ -60,30 +60,10 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
               "code": "search-type"
             }
           ],
           "searchParam": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "name": "_id",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
-              "type": "token"
-            },
             {
               "extension": [
                 {
