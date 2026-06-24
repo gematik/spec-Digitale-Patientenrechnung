@@ -66,12 +66,6 @@
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "https://example.org/fhir/sid/anhangids",
-      "value": "987-654-321"
-    }
-  ],
   "type": {
     "coding": [
       {
