@@ -18,6 +18,10 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 #### OperationDefinitions
 * **DiPagOperationSubmit** (`invoice-submit`): Klarstellung der Validierungssemantik – zusätzliche, nicht profilierte Extensions in den Eingangsressourcen (Parameter `rechnung` und `anhang`) werden nicht ignoriert, sondern abgelehnt (strikte Validierung).
 
+#### Szenarien und API-Änderungen
+
+* **Bulk-Operationen ({{pagelink:AF_10136-Bulk}} und {{pagelink:AF_10271-Bulk}})**: Korrektur der asynchronen Verarbeitung an die [FHIR-Vorgaben zum asynchronen Request Pattern](https://www.hl7.org/fhir/R4/async.html) – die Annahme des `batch`-Bundles wird nun mit `202 - Accepted` bestätigt und die Polling-URL über den `Content-Location`-Header (statt `Location`) mitgeteilt. Beispiele entsprechend angepasst (R2 zuvor fälschlich `200 - OK` als Erfolgsfall).
+
 ### Version 1.0.7
 
 #### Profile und Extensions
