@@ -14,7 +14,13 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 #### Profile und Extensions
 
+* **DiPagDokumentenmetadatenIntern**: Das Dokumenttoken wird als eigener Identifier-Slice `Token` (System `https://gematik.de/fhir/sid/dipag-token`, Kardinalität 1..1) profiliert. Das Token ist damit nicht mehr mit der technischen `DocumentReference.id` identisch und MUSS so vergeben werden, dass es nicht aus der `DocumentReference.id` ableitbar ist.
+
+#### CapabilityStatement und Search Parameter
+
+* Bei `DocumentReference` die `read`-Interaktion und den Suchparameter `_id` entfernt: Es gibt keinen Use Case, in dem nach der technischen Ressourcen-id gesucht bzw. ein Dokument darüber gelesen werden muss. Der Abruf erfolgt ausschließlich über die `$retrieve`-Operation (per Token) bzw. die fachlichen Suchparameter.
 * **DiPagDokumentenmetadatenIntern**: Slicing von `context.related` (`patient`, `anhaenge`) so umgestellt, dass es ohne Auflösung der Referenz funktioniert. Der Diskriminator nutzt nun `Reference.type` (Typ `pattern` auf Pfad `type`) statt `$this.resolve()`. Dadurch ist eine einzelne DocumentReference auch ohne Bundle-Kontext (z.B. als Ergebnis von `$retrieve` oder der Suche) validierbar. **Hinweis:** Der Fachdienst MUSS `Reference.type` (`Patient` bzw. `DocumentReference`) in `context.related` setzen.
+
 #### OperationDefinitions
 * **DiPagOperationSubmit** (`invoice-submit`): Klarstellung der Validierungssemantik – zusätzliche, nicht profilierte Extensions in den Eingangsressourcen (Parameter `rechnung` und `anhang`) werden nicht ignoriert, sondern abgelehnt (strikte Validierung).
 

@@ -23,7 +23,7 @@ Description: "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnung
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Dokumenttoken zur Identifikation des Dokuments, welches abgerufen werden soll. Im Default wird nur die DocumentReference Ressource zurückgegeben. Durch die Angabe weiterer Parameter können zusätzlich das angereicherte PDF (bzw. der Anhang), die strukturierten Rechnungsinhalte und/oder die originale Rechnung mit Signatur zurückgegeben werden."
+  * documentation = "Dokumenttoken zur Identifikation des Dokuments, welches abgerufen werden soll. Das Token entspricht dem Identifier der DocumentReference mit dem System 'https://gematik.de/fhir/sid/dipag-token' (siehe Slice 'Token' im Profil DiPagDokumentenmetadatenIntern) und ist NICHT mit der technischen DocumentReference-id identisch. Im Default wird nur die DocumentReference Ressource zurückgegeben. Durch die Angabe weiterer Parameter können zusätzlich das angereicherte PDF (bzw. der Anhang), die strukturierten Rechnungsinhalte und/oder die originale Rechnung mit Signatur zurückgegeben werden."
   * type = #string
 * parameter[+]
   * name = #pdf
