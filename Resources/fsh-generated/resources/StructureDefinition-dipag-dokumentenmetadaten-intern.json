@@ -41,6 +41,11 @@
         ]
       },
       {
+        "id": "DocumentReference.id",
+        "path": "DocumentReference.id",
+        "comment": "Die technische DocumentReference-id dient ausschließlich der serverinternen Adressierung. Der Abruf eines Dokuments erfolgt nicht über die id, sondern ausschließlich über das Rechnungs-Token (siehe identifier:Token) via Retrieve-Operation. Das Token darf NICHT aus der id ableitbar sein."
+      },
+      {
         "id": "DocumentReference.meta.extension",
         "path": "DocumentReference.meta.extension",
         "mustSupport": true
@@ -362,6 +367,34 @@
           ],
           "rules": "open"
         },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:Token",
+        "path": "DocumentReference.identifier",
+        "sliceName": "Token",
+        "short": "Rechnungs-Token (Dokumenttoken)",
+        "comment": "Eindeutiges, vom Fachdienst vergebenes Token zur Identifikation des Dokuments beim Abruf über die Retrieve-Operation. Das Token wird als eigener Identifier geführt und ist NICHT mit der technischen DocumentReference-id identisch. Das Token MUSS so vergeben werden, dass es NICHT aus der DocumentReference-id abgeleitet werden kann (z.B. kryptographisch zufällig erzeugt).",
+        "min": 1,
+        "max": "1",
+        "patternIdentifier": {
+          "system": "https://gematik.de/fhir/sid/dipag-token"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:Token.system",
+        "path": "DocumentReference.identifier.system",
+        "short": "NamingSystem des Rechnungs-Tokens",
+        "min": 1,
+        "patternUri": "https://gematik.de/fhir/sid/dipag-token",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.identifier:Token.value",
+        "path": "DocumentReference.identifier.value",
+        "short": "Rechnungs-Token (Dokumenttoken)",
         "min": 1,
         "mustSupport": true
       },

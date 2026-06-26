@@ -7,6 +7,7 @@ Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-intern
 * insert Meta
 * obeys SignaturVerpflichtendRechnung
+* id ^comment = "Die technische DocumentReference-id dient ausschließlich der serverinternen Adressierung. Der Abruf eines Dokuments erfolgt nicht über die id, sondern ausschließlich über das Rechnungs-Token (siehe identifier:Token) via Retrieve-Operation. Das Token darf NICHT aus der id ableitbar sein."
 * extension MS
 * extension contains 
   DiPagDocRefSignature named docRef-signature 0..1 MS and
@@ -65,9 +66,19 @@ Id: dipag-dokumentenmetadaten-intern
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
-* identifier 
-  contains Rechnungsnummer 0..1 MS and
+* identifier
+  contains Token 1..1 MS and
+  Rechnungsnummer 0..1 MS and
   AnhangIdentifier 0..1 MS
+* identifier[Token]
+  * ^patternIdentifier.system = "https://gematik.de/fhir/sid/dipag-token"
+  * ^short = "Rechnungs-Token (Dokumenttoken)"
+  * ^comment = "Eindeutiges, vom Fachdienst vergebenes Token zur Identifikation des Dokuments beim Abruf über die Retrieve-Operation. Das Token wird als eigener Identifier geführt und ist NICHT mit der technischen DocumentReference-id identisch. Das Token MUSS so vergeben werden, dass es NICHT aus der DocumentReference-id abgeleitet werden kann (z.B. kryptographisch zufällig erzeugt)."
+  * system 1.. MS
+    * ^short = "NamingSystem des Rechnungs-Tokens"
+  * system = "https://gematik.de/fhir/sid/dipag-token"
+  * value 1.. MS
+    * ^short = "Rechnungs-Token (Dokumenttoken)"
 * identifier[Rechnungsnummer]
   * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#invoice
   * ^short = "Rechnungs-Nr. (der LEI)"
