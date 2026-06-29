@@ -26,7 +26,8 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 #### Szenarien und API-Änderungen
 
-* **Bulk-Operationen ({{pagelink:AF_10136-Bulk}} und {{pagelink:AF_10271-Bulk}})**: Korrektur der asynchronen Verarbeitung an die [FHIR-Vorgaben zum asynchronen Request Pattern](https://www.hl7.org/fhir/R4/async.html) – die Annahme des `batch`-Bundles wird nun mit `202 - Accepted` bestätigt und die Polling-URL über den `Content-Location`-Header (statt `Location`) mitgeteilt. Beispiele entsprechend angepasst (R2 zuvor fälschlich `200 - OK` als Erfolgsfall).
+* **Bulk-Einreichung ({{pagelink:AF_10136-Bulk}})**: Korrektur der asynchronen Verarbeitung an die [FHIR-Vorgaben zum asynchronen Request Pattern](https://www.hl7.org/fhir/R4/async.html) – die Annahme des `batch`-Bundles wird nun mit `202 - Accepted` bestätigt und die Polling-URL über den `Content-Location`-Header (statt `Location`) mitgeteilt. Beispiele entsprechend angepasst (R2 zuvor fälschlich `200 - OK` als Erfolgsfall).
+* **Bulk-Abruf per Token ({{pagelink:AF_10271-Bulk}})**: Die Verarbeitung wurde von asynchron wieder auf **synchron** umgestellt – die Annahme erfolgt nicht mehr mit `202 - Accepted` und Polling über eine `Content-Location`-URL, sondern der FD gibt das `batch-response`-Bundle direkt mit `200 - OK` im Body zurück. Hintergrund: Der Fachdienst implementiert diese Schnittstelle aktuell ausschließlich synchron. Die gematik bittet die Clienthersteller um Feedback, ob eine synchrone oder eine asynchrone Ausgestaltung bevorzugt wird (siehe Hinweis auf der Szenario-Seite).
 
 ### Version 1.0.7
 
