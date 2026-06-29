@@ -23,6 +23,7 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 #### OperationDefinitions
 * **DiPagOperationSubmit** (`invoice-submit`): Klarstellung der Validierungssemantik – zusätzliche, nicht profilierte Extensions in den Eingangsressourcen (Parameter `rechnung` und `anhang`) werden nicht ignoriert, sondern abgelehnt (strikte Validierung).
+* **DiPagOperationProcessFlag** (`process-flag`): Korrektur der mit 1.0.7 eingeführten Festlegungen. Kardinalität des Eingabeparameters `markierung` von `1..*` auf `0..*` geändert: Da `$process-flag` der einzige Endpunkt zur Pflege der Markierungen ist und nach dem Complete-Replacement-Prinzip arbeitet, war das vollständige Löschen aller Markierungen mit der bisherigen Mindestkardinalität nicht möglich. Ein leerer Markierungssatz entfernt nun alle änderbaren Markierungen; die nicht änderbaren Markierungen `persönlich` und `abgerufen durch KTR` bleiben ausgenommen. Beschreibung der Operation sowie Verarbeitungsschritte in {{pagelink:AF_10160}} entsprechend präzisiert (zuvor inkonsistente Hinzufügen-Semantik).
 
 #### Szenarien und API-Änderungen
 

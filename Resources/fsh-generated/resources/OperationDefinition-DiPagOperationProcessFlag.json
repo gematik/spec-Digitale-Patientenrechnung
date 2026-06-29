@@ -20,9 +20,9 @@
     {
       "name": "markierung",
       "use": "in",
-      "min": 1,
+      "min": 0,
       "max": "*",
-      "documentation": "Markierung",
+      "documentation": "Eine Markierung des Dokuments. Es gilt das Complete-Replacement-Prinzip; der gesamte übermittelte Markierungssatz ersetzt den bisherigen. Wird der Parameter nicht übergeben (0 Markierungen), werden alle änderbaren Markierungen entfernt (Löschen). Die Markierungen 'persönlich' und 'abgerufen durch KTR' bleiben hiervon ausgenommen.",
       "type": "Coding",
       "part": [
         {

@@ -76,6 +76,12 @@ mit Body:
 
 ### Verarbeitungsschritte im FD
 
-* Der FD MUSS anhand der übergebenen Parameter die Extension 'DiPagDocumentReferenceMarkierung' auf der DokumentReference erstellen und aktualisieren.
+* Die Operation folgt dem **Complete-Replacement-Prinzip**: Der übermittelte Markierungssatz ersetzt den bisherigen Markierungssatz des Dokuments vollständig. Markierungen, die nicht im Request enthalten sind, werden entfernt. Der Request MUSS daher stets alle weiterhin gültigen Markierungen inklusive ihrer jeweiligen Zusatzinformationen vollständig enthalten.
+
+* Wird kein `markierung`-Parameter übergeben (leerer Markierungssatz), MUSS der FD alle änderbaren Markierungen des Dokuments entfernen. Da `$process-flag` der einzige Endpunkt zur Pflege der Markierungen ist, wird hierüber auch das vollständige Löschen der Markierungen unterstützt.
+
+* Die Markierungen `persönlich` und `abgerufen durch KTR` können über diese Operation weder gesetzt noch entfernt werden; übermittelte Werte dieser Markierungen werden ignoriert und bleiben von der Ersetzung bzw. Löschung unberührt.
+
+* Der FD MUSS anhand der übergebenen Parameter die Extension `DiPagDocumentReferenceMarkierung` im Meta-Element der DocumentReference entsprechend erstellen, aktualisieren und entfernen.
 
 ----
