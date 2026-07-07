@@ -52,7 +52,7 @@ Für Anhänge gibt es keinen Dublettenprüfung: ein einzelner Bericht soll auch 
 
 | |  |
 |---------|---------------------|
-| <img src="https://raw.githubusercontent.com/gematik/spec-Digitale-Patientenrechnung/master/Material/piktogramme/Betriebskoordination_Gruen_gematik.svg" alt="gematik logo" width="75"/> | **Feedback erbeten:** Die konkrete Ausgestaltung des nachfolgend beschriebenen Signaturkonzepts wird bis zum LRM noch offengehalten. Die hier getroffenen Festlegungen sind daher als vorläufig zu verstehen. Die gematik bittet die Hersteller um Rückmeldung zur beschriebenen Umsetzung. |
+| <img src="https://raw.githubusercontent.com/gematik/spec-Digitale-Patientenrechnung/master/Material/piktogramme/Betriebskoordination_Gruen_gematik.svg" alt="gematik logo" width="75"/> | **Feedback erbeten:** Die konkrete Ausgestaltung des nachfolgend beschriebenen Signaturkonzepts wird bis zum "Last Responsible Moment" noch offengehalten. Die hier getroffenen Festlegungen sind daher als vorläufig zu verstehen. Die gematik bittet die Hersteller um Rückmeldung zur beschriebenen Umsetzung. |
 
 Die Signatur ist auf drei Ebenen definiert:
 
