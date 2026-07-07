@@ -21,6 +21,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 |Erfolgsfall|`200 - OK`|
 |Weitere Parameter in HTTP-Anfrage enthalten|`400 - Bad Request`|
 |Syntax für Parameter ist nicht korrekt oder Kardinalitäten werden nicht eingehalten|`400 - Bad Request`|
+|Verpflichtende Zusatzinformationen zu einer Markierung fehlen oder eine nur einmal zulässige Markierung wird mehrfach übergeben|`400 - Bad Request`|
 |Kein valides Access-Token wird mitgesendet|`401 - Unauthorized`|
 |Autorisierter Benutzer verfügt über keine ausreichende Berechtigung die Interaktion auszuführen|`403 - Forbidden`|
 |Fehlende Berechtigung für den Rechnungsempfänger die Dokumentenmarkierung zu verändern|`404 - Not Found`|
@@ -83,5 +84,22 @@ mit Body:
 * Die Markierungen `persönlich` und `abgerufen durch KTR` können über diese Operation weder gesetzt noch entfernt werden; übermittelte Werte dieser Markierungen werden ignoriert und bleiben von der Ersetzung bzw. Löschung unberührt.
 
 * Der FD MUSS anhand der übergebenen Parameter die Extension `DiPagDocumentReferenceMarkierung` im Meta-Element der DocumentReference entsprechend erstellen, aktualisieren und entfernen.
+
+* Der FD MUSS strikt validieren, dass zu jeder übermittelten Markierung die verpflichtenden Zusatzinformationen vollständig vorhanden sind (z. B. der Zusatz `artDerArchivierung` bei der Markierung `archiviert` sowie die Kostenträger-Referenz bei den Markierungen `eingereicht-frontend`, `eingereicht-post`, `geteilt` und `abgerufen`). Fehlen erforderliche Informationen, MUSS der FD den Request mit `400 - Bad Request` ablehnen; es werden keine Default-Werte angenommen. Diese Prüfung geht über die im Profil hinterlegten Invarianten hinaus, die lediglich die umgekehrte Richtung (Zulässigkeit eines Zusatzes in Abhängigkeit vom Markierungstyp) einschränken.
+
+* Enthält ein Request mehrere Markierungen eines Typs, der auf einer Rechnung nur einmal gesetzt werden kann (z. B. `gelesen` oder die Art der Archivierung), MUSS der FD den Request mit `400 - Bad Request` ablehnen.
+
+Die folgende Tabelle zeigt je Markierungstyp, ob eine Mehrfach-Markierung zulässig ist, wann und durch wen die Markierung verwendet wird sowie welche Verknüpfungen und ergänzenden Informationen verpflichtend bzw. optional sind:
+
+|Typ der Markierung|Mehrfach-Markierung?|Verwendung (wann und durch wen)|Verknüpfungen|Ergänzende Informationen|
+|-|-|-|-|-|
+|Eingereicht (per Frontend)|ja, eine pro Kostenträger|Bei Einreichung durch Versicherten|- Versicherter, der einreicht<br>- optional: Kostenträger, bei dem eingereicht wird|- Zeitpunkt<br>- optional: Details|
+|Eingereicht (per Post)|ja, eine pro Kostenträger|Bei Postversand durch Versicherten|- Versicherter, der einreicht<br>- optional: Kostenträger, bei dem eingereicht wird|- Zeitpunkt<br>- optional: Details|
+|Geteilt|ja, eine pro Kostenträger|Bei Teilen durch den Versicherten|- Versicherter, der Dokument/Rechnung teilt<br>- optional: Kostenträger, mit dem geteilt wird|- Zeitpunkt<br>- optional: Details|
+|Abgerufen durch Kostenträger|ja, eine pro Kostenträger|Bei Abruf eines Dokuments/einer Rechnung durch den Kostenträger, durch den Fachdienst|- Versicherter<br>- Kostenträger, der abgerufen hat|- Zeitpunkt|
+|Gelesen|nein|Beim Einsehen von Rechnungen oder Dokumenten durch den Versicherten im DiPag FdV|- Versicherter||
+|Bezahlt|nein|Bei Zahlung durch den Versicherten|- Versicherter|- Zeitpunkt<br>- optional: Details|
+|Archiviert|nein|Bei Archivierung durch den Versicherten|- Versicherter|- Art der Archivierung: ePA oder persönliche Ablage<br>- optional: Details|
+|Persönlich|nein|Durch den Rechnungsersteller bei Versenden von Dokumenten, die ausschließlich nur persönlich an den Versicherten gerichtet sind.|- Versicherter|- optional: Details|
 
 ----
