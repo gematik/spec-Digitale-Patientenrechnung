@@ -33,6 +33,18 @@
                 "valueString": "Bezahlt mit falschem Betreff"
               }
             ]
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
+            "extension": [
+              {
+                "url": "markierung",
+                "valueCoding": {
+                  "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs",
+                  "code": "gelesen"
+                }
+              }
+            ]
           }
         ]
       }

@@ -3,6 +3,7 @@ InstanceOf: SearchParameter
 Usage: #example
 Title: "Suchparameter DocumentReference dipag-markierung"
 Description: "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach einer manuellen Markierung ermöglicht."
+* version = "1.0.7"
 * url = Canonical(dipag-markierung)
 * name = "DiPagMakierung"
 * status = #active

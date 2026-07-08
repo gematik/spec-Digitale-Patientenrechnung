@@ -8,17 +8,17 @@ RuleSet: Expectation (expectation)
   * url = $capabilitystatement-expectation
   * valueCode = {expectation}
 
-RuleSet: Meta
+RuleSet: Meta(version)
 * ^status = #active
-* ^version = "1.0.7"
+* ^version = "{version}"
 * ^experimental = false
 * ^date = "2026-03-26"
 * ^publisher = "gematik GmbH"
 * ^contact.telecom.system = #url
 * ^contact.telecom.value = "http://gematik.de/"
 
-RuleSet: MetaInstance
-* version = "1.0.7"
+RuleSet: MetaInstance(version)
+* version = "{version}"
 * status = #active
 * experimental = false
 * publisher = "gematik GmbH"

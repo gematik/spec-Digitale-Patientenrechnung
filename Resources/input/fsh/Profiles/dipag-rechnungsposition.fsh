@@ -2,7 +2,7 @@ Profile: DiPagRechnungsposition
 Title: "Digitale Patientenrechnung Rechnungsposition"
 Parent: ChargeItem
 Id: dipag-rechnungsposition
-* insert Meta
+* insert Meta(1.0.7)
 * extension contains
   DiPagRechnungspositionType named Rechnungspositionstyp 1..1 MS and
   DiPagRechnungspositionZusatz named Zusatz ..1 MS and

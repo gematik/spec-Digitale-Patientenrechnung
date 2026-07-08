@@ -3,5 +3,6 @@ Id: DiPagRechnungspositionZusatz
 Title: "Digitale Patientenrechnung Rechnungsposition Zusatz Extension"
 Description: "In dieser Extension wird der Zusatz zu einer Rechnungsposition im Kontext der Digitalen Patientenrechnung abgebildet."
 Context: ChargeItem
+* insert Meta(1.0.7)
 * value[x] only Coding
 * valueCoding from DiPagRechnungspositionZusatzVS

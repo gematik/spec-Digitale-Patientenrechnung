@@ -1,6 +1,7 @@
 {
   "resourceType": "SearchParameter",
   "id": "dipag-markierung",
+  "version": "1.0.7",
   "url": "https://gematik.de/fhir/dipag/SearchParameter/dipag-markierung",
   "name": "DiPagMakierung",
   "status": "active",

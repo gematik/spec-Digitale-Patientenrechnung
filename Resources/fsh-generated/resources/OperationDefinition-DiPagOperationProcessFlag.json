@@ -3,9 +3,9 @@
   "id": "DiPagOperationProcessFlag",
   "url": "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag",
   "status": "active",
-  "version": "1.0.0-CC",
+  "version": "1.0.8",
   "experimental": false,
-  "date": "2024-06-20",
+  "date": "2026-07-08",
   "kind": "operation",
   "name": "DiPagProcessFlag",
   "code": "process-flag",
@@ -20,9 +20,9 @@
     {
       "name": "markierung",
       "use": "in",
-      "min": 1,
+      "min": 0,
       "max": "*",
-      "documentation": "Markierung",
+      "documentation": "Eine Markierung des Dokuments. Es gilt das Complete-Replacement-Prinzip; der gesamte übermittelte Markierungssatz ersetzt den bisherigen. Wird der Parameter nicht übergeben (0 Markierungen), werden alle änderbaren Markierungen entfernt (Löschen). Die Markierungen 'persönlich' und 'abgerufen durch KTR' bleiben hiervon ausgenommen.",
       "type": "Coding",
       "part": [
         {
@@ -52,14 +52,6 @@
           "max": "1",
           "documentation": "Optionale Details als Freitext zur Markierung",
           "type": "string"
-        },
-        {
-          "name": "gelesen",
-          "use": "in",
-          "min": 0,
-          "max": "1",
-          "documentation": "Gelesen-Status falls Markierung vom Typ 'gelesen' ist. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'gelesen' ist.",
-          "type": "boolean"
         },
         {
           "name": "artDerArchivierung",

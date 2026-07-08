@@ -3,6 +3,7 @@ InstanceOf: SearchParameter
 Usage: #example
 Title: "Suchparameter AuditEvent.agent.who.display"
 Description: "Ein SearchParameter auf der Ressource AuditEvent, der die Suche nach dem Text in agent.who.display ermöglicht."
+* version = "1.0.7"
 * url = Canonical(dipag-auditEvent-agent-who-display)
 * name = "DiPagAuditEventAgentWhoDisplay"
 * status = #active
