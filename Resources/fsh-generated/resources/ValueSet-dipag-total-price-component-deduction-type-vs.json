@@ -1,10 +1,24 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "DiPagTotalPriceComponentDeductionTypeVS",
   "id": "dipag-total-price-component-deduction-type-vs",
   "title": "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen",
+  "version": "1.0.7",
   "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-total-price-component-deduction-type-vs",
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {

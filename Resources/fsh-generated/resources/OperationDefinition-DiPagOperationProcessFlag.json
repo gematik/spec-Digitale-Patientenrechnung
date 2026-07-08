@@ -3,7 +3,7 @@
   "id": "DiPagOperationProcessFlag",
   "url": "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag",
   "status": "active",
-  "version": "1.0.0-CC",
+  "version": "1.0.7",
   "experimental": false,
   "date": "2024-06-20",
   "kind": "operation",
@@ -52,14 +52,6 @@
           "max": "1",
           "documentation": "Optionale Details als Freitext zur Markierung",
           "type": "string"
-        },
-        {
-          "name": "gelesen",
-          "use": "in",
-          "min": 0,
-          "max": "1",
-          "documentation": "Gelesen-Status falls Markierung vom Typ 'gelesen' ist. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'gelesen' ist.",
-          "type": "boolean"
         },
         {
           "name": "artDerArchivierung",

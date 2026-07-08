@@ -101,17 +101,6 @@
         "mustSupport": true
       },
       {
-        "id": "DocumentReference.meta.extension:markierung.extension:gelesen",
-        "path": "DocumentReference.meta.extension.extension",
-        "sliceName": "gelesen",
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.meta.extension:markierung.extension:gelesen.value[x]",
-        "path": "DocumentReference.meta.extension.extension.value[x]",
-        "mustSupport": true
-      },
-      {
         "id": "DocumentReference.meta.extension:markierung.extension:artDerArchivierung",
         "path": "DocumentReference.meta.extension.extension",
         "sliceName": "artDerArchivierung",

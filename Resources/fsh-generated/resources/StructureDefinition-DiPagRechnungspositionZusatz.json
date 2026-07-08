@@ -2,9 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "DiPagRechnungspositionZusatz",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
+  "version": "1.0.7",
   "name": "DiPagRechnungspositionZusatz",
   "title": "Digitale Patientenrechnung Rechnungsposition Zusatz Extension",
-  "status": "draft",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "description": "In dieser Extension wird der Zusatz zu einer Rechnungsposition im Kontext der Digitalen Patientenrechnung abgebildet.",
   "fhirVersion": "4.0.1",
   "kind": "complex-type",

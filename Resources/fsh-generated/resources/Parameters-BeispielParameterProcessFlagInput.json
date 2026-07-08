@@ -31,10 +31,6 @@
             "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs",
             "code": "gelesen"
           }
-        },
-        {
-          "name": "gelesen",
-          "valueBoolean": true
         }
       ]
     }
