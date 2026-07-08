@@ -1,6 +1,7 @@
 {
   "resourceType": "SearchParameter",
   "id": "dipag-auditEvent-agent-who-display",
+  "version": "1.0.7",
   "url": "https://gematik.de/fhir/dipag/SearchParameter/dipag-auditEvent-agent-who-display",
   "name": "DiPagAuditEventAgentWhoDisplay",
   "status": "active",
