@@ -1,7 +1,7 @@
 CodeSystem: DiPagTotalPriceComponentTypeCS
 Id: dipag-total-price-component-type-cs
 Title: "Digitale Patientenrechnung Art der Rechnungssumme"
-* insert Meta
+* insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * #SummeRechnungspositionen "Summe aller Rechnungspositionen"
@@ -14,5 +14,6 @@ Title: "Digitale Patientenrechnung Art der Rechnungssumme"
 ValueSet: DiPagTotalPriceComponentDeductionTypeVS
 Id: dipag-total-price-component-deduction-type-vs
 Title: "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen"
+* insert Meta(1.0.7)
 * DiPagTotalPriceComponentTypeCS#FestzuschussKasse "Festzuschuss Kasse"
 * DiPagTotalPriceComponentTypeCS#VorleistungKst "Vorleistungen anderer Kostenträger"

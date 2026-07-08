@@ -21,7 +21,7 @@ Die Struktur entspricht dem aktuellen Entwurf der FM WG:
 
 **Hinweis zur Nutzung:** Die HL7 FM WG wird diese Extension im offiziellen HL7 Extension Package veröffentlichen. Die Verwendung dieser Extension ist daher **ausschließlich im Rahmen dieses MVP** vorgesehen und wird sich mit der Fertigstellung der offiziellen HL7-Standard-Extension ändern."""
 Context: Invoice.paymentTerms
-* insert Meta
+* insert Meta(1.0.7)
 * extension contains
     paymentType 0..1 and
     account 0..1 and
@@ -68,5 +68,5 @@ Extension: DiPagZahlungsziel
 Id: dipag-zahlungsziel
 Title: "Digitale Patientenrechnung Zahlungsziel"
 Context: Invoice.paymentTerms, DocumentReference
-* insert Meta
+* insert Meta(1.0.7)
 * value[x] only date

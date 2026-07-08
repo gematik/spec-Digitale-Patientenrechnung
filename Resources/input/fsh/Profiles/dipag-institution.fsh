@@ -2,7 +2,7 @@ Profile: DiPagInstitution
 Parent: Organization
 Title: "Digitale Patientenrechnung Institution"
 Id: dipag-institution
-* insert Meta
+* insert Meta(1.0.7)
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"

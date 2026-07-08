@@ -2,7 +2,7 @@ Profile: DiPagRechnungsdokument
 Title: "Digitale Patientenrechnung Rechnungsdokument"
 Parent: Binary
 Id: dipag-rechnungsdokument
-* insert Meta
+* insert Meta(1.0.7)
 * contentType MS
 * contentType from DiPagRestrictedMimeTypesInBinaryVS (required)
   * ^short = "MIME-Type des Dokumentes"
