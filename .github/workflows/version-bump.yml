@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout PR-Branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.workflow_run.head_branch }}
           fetch-depth: 0
@@ -48,9 +48,9 @@ jobs:
       - name: Basis-Branch (master) holen
         run: git fetch origin master:refs/remotes/origin/master
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 22
 
       # Ermittelt das Bump-Level (bootstrap | unchanged | patch | minor | major),
       # ohne etwas zu schreiben.
