@@ -54,14 +54,6 @@
           "type": "string"
         },
         {
-          "name": "gelesen",
-          "use": "in",
-          "min": 0,
-          "max": "1",
-          "documentation": "Gelesen-Status falls Markierung vom Typ 'gelesen' ist. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'gelesen' ist.",
-          "type": "boolean"
-        },
-        {
           "name": "artDerArchivierung",
           "use": "in",
           "min": 0,

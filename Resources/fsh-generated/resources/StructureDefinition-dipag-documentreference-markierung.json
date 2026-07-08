@@ -42,13 +42,6 @@
         "path": "Extension",
         "constraint": [
           {
-            "key": "DiPagDocumentReferenceMarkierung-2",
-            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
-            "severity": "error",
-            "human": "Details zum Gelesen-Status können nur angegeben werden wenn die Markierung vom Typ 'Gelesen' ist",
-            "expression": "extension.where(url = 'gelesen').value.exists() implies extension.where(url = 'markierung').valueCoding.where(code = 'gelesen').exists()"
-          },
-          {
             "key": "DiPagDocumentReferenceMarkierung-1",
             "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
             "severity": "error",
@@ -154,33 +147,6 @@
           }
         ],
         "maxLength": 1024
-      },
-      {
-        "id": "Extension.extension:gelesen",
-        "path": "Extension.extension",
-        "sliceName": "gelesen",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Extension.extension:gelesen.extension",
-        "path": "Extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.extension:gelesen.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "gelesen"
-      },
-      {
-        "id": "Extension.extension:gelesen.value[x]",
-        "path": "Extension.extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
       },
       {
         "id": "Extension.extension:artDerArchivierung",
