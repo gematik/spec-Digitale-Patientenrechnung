@@ -45,6 +45,7 @@ jobs:
           JAVA_VALIDATION_ENABLED: true
           JAVA_VALIDATION_OPTIONS: >
             -allow-example-urls true
+            -tx n/a
             -output validation.json
             -html-output validation.html
             -show-message-ids
