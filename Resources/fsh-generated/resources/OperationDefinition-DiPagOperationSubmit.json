@@ -3,7 +3,7 @@
   "id": "DiPagOperationSubmit",
   "url": "https://gematik.de/fhir/dipag/OperationDefinition/Submit",
   "status": "active",
-  "version": "1.0.0-CC",
+  "version": "1.0.7",
   "experimental": false,
   "date": "2024-06-20",
   "kind": "operation",
