@@ -29,7 +29,7 @@
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs#GOZ": "Gebührenordnung für Zahnärzte",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs#invoice": "Rechnungsnummer",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs#antragsreferenz": "Antragsreferenz",
-  "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs#anhang": "Anghangsidentifikator",
+  "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs#anhang": "Anhangsidentifikator",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs#ustid": "Umsatzsteuer-ID Nummer (USt-ID-Nr)",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs#eingereicht-frontend": "Eingereicht (per Frontend)",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs#eingereicht-post": "Eingereicht (per Post)",
