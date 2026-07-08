@@ -40,8 +40,6 @@ Id: dipag-dokumentenmetadaten-intern
   * extension[details] MS
     * valueString MS
       * ^maxLength = 1024
-  * extension[gelesen] MS
-    * valueBoolean MS
   * extension[artDerArchivierung] MS
     * valueCoding MS
   * extension[kostentraeger] MS

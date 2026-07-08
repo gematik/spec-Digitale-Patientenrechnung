@@ -6,7 +6,6 @@ Context: DocumentReference.meta, Parameters.parameter.value[x]
 * extension contains markierung 1..1
 * extension contains zeitpunkt 0..1
 * extension contains details 0..1
-* extension contains gelesen 0..1
 * extension contains artDerArchivierung 0..1
 * extension contains kostentraeger 0..1
 
@@ -20,10 +19,6 @@ Context: DocumentReference.meta, Parameters.parameter.value[x]
 * extension[details].value[x] only string
 * extension[details].value[x] 1..1
 * extension[details].valueString ^maxLength = 1024
-
-* obeys gelesen
-* extension[gelesen].value[x] only boolean
-* extension[gelesen].value[x] 1..1
 
 * obeys artDerArchivierung
 * extension[artDerArchivierung].value[x] only Coding
@@ -40,12 +35,6 @@ Invariant: artDerArchivierung
 * severity = #error
 * human = "Details zur Art der Archivierung können nur angegeben werden wenn die Markierung vom Typ 'Archiviert' ist"
 * expression = "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').valueCoding.where(code = 'archiviert').exists()"
-
-Invariant: gelesen
-* key = "DiPagDocumentReferenceMarkierung-2"
-* severity = #error
-* human = "Details zum Gelesen-Status können nur angegeben werden wenn die Markierung vom Typ 'Gelesen' ist"
-* expression = "extension.where(url = 'gelesen').value.exists() implies extension.where(url = 'markierung').valueCoding.where(code = 'gelesen').exists()"
 
 Invariant: kostentraeger
 * key = "DiPagDocumentReferenceMarkierung-3"
