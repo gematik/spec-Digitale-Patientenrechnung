@@ -10,11 +10,13 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
-### Version x.y.z
+### Version 1.0.8
 
 #### Profile und Extensions
 
 * **DiPagDokumentenmetadatenIntern**: Das Dokumenttoken wird als eigener Identifier-Slice `Token` (System `https://gematik.de/fhir/sid/dipag-token`, Kardinalität 1..1) profiliert. Das Token ist damit nicht mehr mit der technischen `DocumentReference.id` identisch und MUSS so vergeben werden, dass es nicht aus der `DocumentReference.id` ableitbar ist.
+* **DiPagDocumentReferenceMarkierung**: Die separate `gelesen`-Sub-Extension (boolean) samt zugehöriger Invariante wurde entfernt – der Gelesen-Status wird ausschließlich über den Markierungstyp abgebildet. Max-Length (1024) für die Markierungsdetails (`details`) und den Anzeigetext des `kostentraeger` ergänzt.
+* **DiPagDokumentenmetadatenEingang**: Max-Length (1024) für Markierungsdetails und Coding-Anzeigetexte (`type.coding.display`) ergänzt.
 
 #### CapabilityStatement und Search Parameter
 
@@ -29,6 +31,10 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 * **Bulk-Einreichung ({{pagelink:AF_10136-Bulk}})**: Korrektur der asynchronen Verarbeitung an die [FHIR-Vorgaben zum asynchronen Request Pattern](https://www.hl7.org/fhir/R4/async.html) – die Annahme des `batch`-Bundles wird nun mit `202 - Accepted` bestätigt und die Polling-URL über den `Content-Location`-Header (statt `Location`) mitgeteilt. Beispiele entsprechend angepasst (R2 zuvor fälschlich `200 - OK` als Erfolgsfall).
 * **Bulk-Abruf per Token ({{pagelink:AF_10271-Bulk}})**: Die Verarbeitung wurde von asynchron wieder auf **synchron** umgestellt – die Annahme erfolgt nicht mehr mit `202 - Accepted` und Polling über eine `Content-Location`-URL, sondern der FD gibt das `batch-response`-Bundle direkt mit `200 - OK` im Body zurück. Hintergrund: Der Fachdienst implementiert diese Schnittstelle aktuell ausschließlich synchron. Die gematik bittet die Clienthersteller um Feedback, ob eine synchrone oder eine asynchrone Ausgestaltung bevorzugt wird (siehe Hinweis auf der Szenario-Seite).
+
+#### Sonstige Änderungen
+
+* Umstellung auf artefakt-individuelle Versionierung: Die Version eines Conformance-Artefakts wird nur noch angehoben, wenn sich dessen Inhalt ändert, und kann daher unterhalb der Paketversion liegen. Details siehe "Hinweis zu Artefakt-Versionen".
 
 ### Version 1.0.7
 
