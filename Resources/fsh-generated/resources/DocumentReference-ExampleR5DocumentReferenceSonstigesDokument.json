@@ -6,6 +6,24 @@
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
     ]
   },
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/sid/dipag-token",
+      "value": "a1c4f7e2b9d6038c5e1a4b7d0f3c6e9a2d5b8c1e4f70a3d6b9c2e5f8a1d4b7c0"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "anhang",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+          }
+        ]
+      },
+      "system": "https://example.org/fhir/sid/anhangids",
+      "value": "987-654-321"
+    }
+  ],
   "status": "current",
   "content": [
     {
@@ -40,12 +58,14 @@
       }
     }
   ],
-  "identifier": [
-    {
-      "system": "https://example.org/fhir/sid/anhangids",
-      "value": "987-654-321"
-    }
-  ],
+  "context": {
+    "related": [
+      {
+        "type": "Patient",
+        "reference": "Patient/BeispielPatient3-FD"
+      }
+    ]
+  },
   "type": {
     "coding": [
       {
@@ -58,12 +78,5 @@
   "description": "Molekularpathologiebefund vom 31.12.21",
   "subject": {
     "display": "Max Mustermann"
-  },
-  "context": {
-    "related": [
-      {
-        "reference": "Patient/BeispielPatient3-FD"
-      }
-    ]
   }
 }

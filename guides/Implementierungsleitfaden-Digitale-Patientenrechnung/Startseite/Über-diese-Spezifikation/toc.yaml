@@ -2,6 +2,8 @@
   filename: Index.page.md
 - name: Zweckbestimmung
   filename: Zweckbestimmung.page.md
+- name: Hinweis zu Artefakt-Versionen
+  filename: HinweisZuVersionen.page.md
 - name: Use Cases
   filename: Use-Cases.page.md
 - name: Akteure und Interaktionen

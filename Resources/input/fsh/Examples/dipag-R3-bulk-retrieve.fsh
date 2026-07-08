@@ -31,7 +31,7 @@ InstanceOf: Parameters
 Instance: BeispielDocumentReferenceRechnungRetrieve2
 InstanceOf: DiPagDokumentenmetadatenIntern
 Description: "Der Einfachheit halber wurden hier nur die relevanten Felder dargestellt. Die Extensions sind als befüllt anzunehmen."
-* identifier
+* identifier[Token]
   * system = "https://gematik.de/fhir/sid/dipag-token"
   * value = "123-456-123"
 * status = #current

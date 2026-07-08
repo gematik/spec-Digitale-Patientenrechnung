@@ -5,6 +5,10 @@ topic: AF_10271-Bulk
 
 ## {{page-title}}
 
+| |  |
+|---------|---------------------|
+| <img src="https://raw.githubusercontent.com/gematik/spec-Digitale-Patientenrechnung/master/Material/piktogramme/Betriebskoordination_Gruen_gematik.svg" alt="gematik logo" width="75"/> | **Feedback erbeten:** Diese Bulk-Operation war in einer früheren Version als **asynchrone** Verarbeitung (``Prefer: respond-async``, Bestätigung mit ``202 - Accepted`` und Polling über eine ``Content-Location``-URL) beschrieben. Aktuell wird sie vom FD ausschließlich **synchron** implementiert und ist daher hier auch synchron beschrieben. Die gematik bittet die Clienthersteller um Rückmeldung, ob für diese Schnittstelle eine synchrone oder eine asynchrone Ausgestaltung bevorzugt wird. |
+
 Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das RE-PS als Client. Anwendungsfall AF_10271 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 17: Use Case Abfrage von angereicherten PDF/A per Token (Rechnungsersteller)" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
 
 |||
@@ -14,23 +18,20 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 
 Für die Ausführung der Operation gelten die gleichen Vorgaben wie aus {{pagelink:AF_10136}}. Die Operation `$retrieve` kann für innerhalb eines Batch-Bundles mehrfach, auch für unterschiedliche Dokumente aufgerufen werden. Es gelten die entsprechenden Vorgaben aus der [FHIR-Kernspezifikation](https://www.hl7.org/fhir/r4/http.html#transaction).
 
-### Asynchrone Verarbeitung
+### Synchrone Verarbeitung
 
-Diese Interaktion ist aufgrund potenziell großer Datenmengen asynchron vom FD auszuführen. 
-Dies MUSS der Client mittels eines ``Prefer: respond-async``-Headers nach [RFC7240](https://tools.ietf.org/html/rfc7240#section-4.1) dem FD signalisieren.
+Diese Interaktion wird vom FD synchron ausgeführt. Der FD verarbeitet das übermittelte ``batch``-Bundle unmittelbar und gibt das ``batch-response``-Bundle direkt im Body der Antwort mit dem HTTP-Status-Code ``200 - OK`` zurück.
 
 |API-Zustand|HTTP-Status-Code|
 |-|-|
-|Erfolgsfall|`202 - Accepted`|
+|Erfolgsfall|`200 - OK`|
 |Weitere Parameter in HTTP-Anfrage enthalten|`400 - Bad Request`|
 |Syntax für Parameter ist nicht korrekt oder Kardinalitäten werden nicht eingehalten|`400 - Bad Request`|
 |Kein valides Access-Token wird mitgesendet|`401 - Unauthorized`|
 |Autorisierter Benutzer verfügt über keine ausreichende Berechtigung die Interaktion auszuführen|`403 - Forbidden`|
 |Andere HTTP-Methode wird verwendet|`405 - Method Not Allowed`|
 
-In einem ``Location``-Header MUSS der FD dem RE-PS eine absolute URL mitteilen unter welcher das RE-PS per Polling prüfen kann, ob die Interaktion abgeschlossen wurde und entsprechende Rückgabewerte seitens der ``$retrieve``-Operation vorliegen. Der Aufbau der ``Location``-URL MUSS aus kryptografisch zufälligen Teilen bestehen, sodass der Aufbau nicht deterministisch ermittelt oder erraten werden kann. Der Server SOLLTE RE-PS-Clients mit einem HTTP-Status-Code ``429 Too Many Requests`` abweisen, falls nach dem Ermessen des FDs die ``Location``-URL zu häufig geprüft wird. Der FD SOLLTE einen [Retry-After](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After)-Header entsprechend den Vorgaben aus der [FHIR-Kernspezifikation](https://www.hl7.org/fhir/R4/async.html#3.1.6.4) verwenden.
-
-Nach der Verarbeitung des ``batch``-Bundles MUSS der FD das ``batch-response``-Bundle unter der ``Location``-URL bereitstellen, welches die Ergebnisse entsprechnd der Verarbeitung der einzelnen Dokumente nach AF_10271 enthält. Es ist zu beachten, dass der FD die Autorisierung für jedes Dokument gemäß den Vorgaben zu AF_10271 individuell prüfen MUSS. Der FD MUSS sicherstellen, dass das ``batch-response``-Bundle nur einem validen Access-Token abgerufen werden kann.
+Das ``batch-response``-Bundle enthält die Ergebnisse entsprechend der Verarbeitung der einzelnen Dokumente nach AF_10271. Es ist zu beachten, dass der FD die Autorisierung für jedes Dokument gemäß den Vorgaben zu AF_10271 individuell prüfen MUSS.
 
 ### Beispiel
 
@@ -53,7 +54,7 @@ HTTP POST [fachdienst-endpunkt]/
     </tab>
 </tabs>
 
-Antwort des Fachdienstes nach der Verarbeitung des ``batch``-Bundles:
+Antwort des Fachdienstes im Erfolgsfall:
 
 ```
 HTTP 200 OK

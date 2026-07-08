@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
   "url": "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -16,7 +16,7 @@
       ]
     }
   ],
-  "date": "2026-03-26",
+  "date": "2026-07-08",
   "name": "CapabilityStatementFD",
   "title": "CapabilityStatement Fachdienst E-Rechnnung",
   "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",
@@ -60,30 +60,10 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
               "code": "search-type"
             }
           ],
           "searchParam": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "name": "_id",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
-              "type": "token"
-            },
             {
               "extension": [
                 {
@@ -139,30 +119,10 @@
                   "valueCode": "SHALL"
                 }
               ],
-              "code": "read"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
               "code": "search-type"
             }
           ],
           "searchParam": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
-                  "valueCode": "SHALL"
-                }
-              ],
-              "name": "_id",
-              "definition": "http://hl7.org/fhir/SearchParameter/Resource-id",
-              "type": "token"
-            },
             {
               "extension": [
                 {

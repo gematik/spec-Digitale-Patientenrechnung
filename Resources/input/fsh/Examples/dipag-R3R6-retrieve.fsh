@@ -41,8 +41,8 @@ InstanceOf: DiPagDokumentenmetadatenIntern
   * extension[markierung]
     * extension[markierung].valueCoding = DiPagRechnungMarkierungCS#eingereicht-frontend "Eingereicht (per Frontend)"
     * extension[zeitpunkt].valueDateTime = "2024-01-15T10:00:00Z"
-* identifier
-  * system = "http://example.org/fhir/sid/rechnungsids"
+* identifier[Token]
+  * system = "https://gematik.de/fhir/sid/dipag-token"
   * value = "123-456-789"
 * status = #current
 * type = $kdl#AM010106 "Rechnung ambulante/stationäre Behandlung"
