@@ -1,6 +1,7 @@
 {
   "resourceType": "SearchParameter",
   "id": "dipag-docRef-subject-display",
+  "version": "1.0.7",
   "url": "https://gematik.de/fhir/dipag/SearchParameter/dipag-docRef-subject-display",
   "name": "DiPagDocRefSubjectDisplay",
   "status": "active",
