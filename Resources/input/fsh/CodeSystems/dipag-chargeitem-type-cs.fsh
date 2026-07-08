@@ -1,7 +1,7 @@
 CodeSystem: DiPagRechnungspositionTypeCS
 Id: dipag-chargeitem-type-cs
 Title: "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem"
-* insert Meta
+* insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * #GOÄ "Leistung nach Gebührenordnung GOÄ"

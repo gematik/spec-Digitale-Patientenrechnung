@@ -6,6 +6,12 @@
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
     ]
   },
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/sid/dipag-token",
+      "value": "123-456-123"
+    }
+  ],
   "status": "current",
   "content": [
     {
@@ -37,12 +43,6 @@
         "code": "angereichertesPDF",
         "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
       }
-    }
-  ],
-  "identifier": [
-    {
-      "system": "https://gematik.de/fhir/sid/dipag-token",
-      "value": "123-456-123"
     }
   ],
   "type": {

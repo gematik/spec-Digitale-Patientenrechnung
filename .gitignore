@@ -4,3 +4,9 @@ validation_results/**
 fhirpkg.lock.json
 DiPag-Fachdienst-dev-0.2.0-Parametrisierbar-schrittweise/**
 testclient/**
+
+Resources/input-cache/**
+Resources/output/**
+Resources/temp/**
+Resources/template/**
+Resources/Requirements-fromNarrative.json

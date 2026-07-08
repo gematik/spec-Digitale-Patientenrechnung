@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-documentreference-markierung",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "name": "DiPagDocumentReferenceMarkierung",
   "title": "Digitale Patientenrechnung DocumentReference Markierung",
   "status": "active",
   "experimental": false,
-  "date": "2026-03-26",
+  "date": "2026-07-08",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -41,13 +41,6 @@
         "id": "Extension",
         "path": "Extension",
         "constraint": [
-          {
-            "key": "DiPagDocumentReferenceMarkierung-2",
-            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
-            "severity": "error",
-            "human": "Details zum Gelesen-Status können nur angegeben werden wenn die Markierung vom Typ 'Gelesen' ist",
-            "expression": "extension.where(url = 'gelesen').value.exists() implies extension.where(url = 'markierung').valueCoding.where(code = 'gelesen').exists()"
-          },
           {
             "key": "DiPagDocumentReferenceMarkierung-1",
             "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
@@ -152,34 +145,8 @@
           {
             "code": "string"
           }
-        ]
-      },
-      {
-        "id": "Extension.extension:gelesen",
-        "path": "Extension.extension",
-        "sliceName": "gelesen",
-        "min": 0,
-        "max": "1"
-      },
-      {
-        "id": "Extension.extension:gelesen.extension",
-        "path": "Extension.extension.extension",
-        "max": "0"
-      },
-      {
-        "id": "Extension.extension:gelesen.url",
-        "path": "Extension.extension.url",
-        "fixedUri": "gelesen"
-      },
-      {
-        "id": "Extension.extension:gelesen.value[x]",
-        "path": "Extension.extension.value[x]",
-        "min": 1,
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
+        ],
+        "maxLength": 1024
       },
       {
         "id": "Extension.extension:artDerArchivierung",
@@ -237,6 +204,11 @@
             "code": "Reference"
           }
         ]
+      },
+      {
+        "id": "Extension.extension:kostentraeger.value[x].display",
+        "path": "Extension.extension.value[x].display",
+        "maxLength": 1024
       },
       {
         "id": "Extension.url",

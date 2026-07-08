@@ -2,6 +2,7 @@ Extension: DiPagTeilsumme
 Id: DiPagTeilsumme
 Title: "Digitale Patientenrechnung Teilsumme"
 Context: Invoice.totalPriceComponent
+* insert Meta(1.0.7)
 * extension contains
   type ..1 and
   summe ..1 and

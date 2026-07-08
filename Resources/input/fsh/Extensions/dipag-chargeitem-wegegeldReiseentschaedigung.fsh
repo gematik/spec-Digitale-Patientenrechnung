@@ -2,6 +2,7 @@ Extension: DiPagWegegeldReiseentschaedigung
 Id: dipag-wegegeld-reiseentschaedigung
 Title: "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension"
 Context: ChargeItem
+* insert Meta(1.0.7)
 * extension contains
   Wegegeld ..1 and
   Reiseentschaedigung ..1

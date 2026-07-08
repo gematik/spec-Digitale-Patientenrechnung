@@ -2,7 +2,7 @@ Profile: DiPagNutzungsprotokoll
 Parent: AuditEvent
 Title: "Digitale Patientenrechnung Nutzungsprotokoll"
 Id: dipag-nutzungsprotokoll
-* insert Meta
+* insert Meta(1.0.7)
 * type MS
   * ^comment = "Angabe ob es sich um eine zu protokollierende Nutzerinteraktion nach Abschnittt '5.5.9 Nutzerprotokolle' des Feature-Dokuments 'Digitale Patientenrechnung' handelt oder um eine durchgeführte REST-API-Interaktion durch den FD."
 * type from DiPagAuditEventTypeVS (required)
@@ -67,7 +67,7 @@ Id: dipag-nutzungsprotokoll
 CodeSystem: DiPagOperationenCS
 Id: dipag-operationen-cs
 Title: "Digitale Patientenrechnung Operationen"
-* insert Meta
+* insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * #invoice-submit "Digitale Patientenrechnung_Submit"
@@ -80,14 +80,14 @@ Title: "Digitale Patientenrechnung Operationen"
 ValueSet: DiPagAuditEventSubTypeVS
 Id: dipag-audit-event-sub-type-vs
 Title: "Digitale Patientenrechnung Audit Event Sub-Type"
-* insert Meta
+* insert Meta(1.0.7)
 * include codes from system $restful-interaction
 * include codes from system DiPagOperationenCS
 
 ValueSet: DiPagAuditEventTypeVS
 Id: dipag-audit-event-type-vs
 Title: "Digitale Patientenrechnung Audit Event Type"
-* insert Meta
+* insert Meta(1.0.7)
 * http://dicom.nema.org/resources/ontology/DCM#110100 "Application Activity"
 * $auditEventType#rest "RESTful Operation"
 
@@ -95,14 +95,14 @@ Title: "Digitale Patientenrechnung Audit Event Type"
 ValueSet: DiPagAuditEventAgentTypeVS
 Id: dipag-audit-event-agent-type-vs
 Title: "Digitale Patientenrechnung Audit Event Agent Type"
-* insert Meta
+* insert Meta(1.0.7)
 * $extraSecurityRoleType#humanuser "human user"
 * $extraSecurityRoleType#dataprocessor "data processor"
 
 CodeSystem: DiPagAuditEventDetailCS
 Id: dipag-audit-event-detail-cs
 Title: "Digitale Patientenrechnung Audit Event Detail"
-* insert Meta
+* insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * #Allgemein "Allgemeine Interaktion mit einem Objekt"
@@ -114,5 +114,5 @@ Title: "Digitale Patientenrechnung Audit Event Detail"
 ValueSet: DiPagAuditEventDetailVS
 Id: dipag-audit-event-detail-vs
 Title: "Digitale Patientenrechnung Audit Event Detail"
-* insert Meta
+* insert Meta(1.0.7)
 * include codes from system DiPagAuditEventDetailCS

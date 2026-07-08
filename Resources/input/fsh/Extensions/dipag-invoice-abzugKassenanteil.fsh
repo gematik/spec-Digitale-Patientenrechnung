@@ -2,7 +2,7 @@ Extension: DiPagAbzugKassenanteil
 Id: dipag-abzug-kassenanteil
 Title: "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent"
 Context: Invoice.totalPriceComponent
-* insert Meta
+* insert Meta(1.0.7)
 * value[x] only Quantity
 * valueQuantity 1..
   * unit 1.. MS

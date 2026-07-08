@@ -2,6 +2,7 @@ Extension: DiPagRechnungspositionGOAngaben
 Id: dipag-rechnungsposition-go-angaben
 Title: "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition"
 Context: ChargeItem
+* insert Meta(1.0.7)
 * extension contains
   Einfachsatz ..1 and
   Punktzahl ..1 and

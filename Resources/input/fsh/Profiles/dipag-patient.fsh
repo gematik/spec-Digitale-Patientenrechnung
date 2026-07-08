@@ -1,7 +1,7 @@
 Profile: DiPagPatient
 Parent: Patient
 Id: dipag-patient
-* insert Meta
+* insert Meta(1.0.7)
 * identifier MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"

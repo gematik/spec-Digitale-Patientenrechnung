@@ -2,7 +2,7 @@ Profile: DiPagRechnungsdiagnose
 Parent: Condition
 Title: "Digitale Patientenrechnung Rechnungsdiagnose"
 Id: dipag-rechnungsdiagnose
-* insert Meta
+* insert Meta(1.0.7)
 * code MS
 * code.coding MS
 * code.coding ^slicing.discriminator.type = #pattern

@@ -1,0 +1,7 @@
+# Deterministische Zeilenenden für die FHIR-Toolchain (Sushi).
+# Verhindert, dass Windows-Checkouts (CRLF) andere generierte Artefakte
+# erzeugen als die Linux-CI (LF) – wichtig für den JSON-basierten
+# Change-Diff der Versionierungs-Action.
+Resources/input/**/*.fsh          text eol=lf
+Resources/sushi-config.yaml       text eol=lf
+Resources/fsh-generated/**        text eol=lf
