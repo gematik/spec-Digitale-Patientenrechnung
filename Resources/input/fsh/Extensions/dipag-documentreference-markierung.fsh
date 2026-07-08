@@ -2,7 +2,8 @@ Extension: DiPagDocumentReferenceMarkierung
 Id: dipag-documentreference-markierung
 Title: "Digitale Patientenrechnung DocumentReference Markierung"
 Context: DocumentReference.meta, Parameters.parameter.value[x]
-* insert Meta(1.0.7)
+* insert Meta(1.0.8)
+* ^date = "2026-07-08"
 * extension contains markierung 1..1
 * extension contains zeitpunkt 0..1
 * extension contains details 0..1

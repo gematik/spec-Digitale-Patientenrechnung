@@ -1,7 +1,8 @@
 CodeSystem: DiPagRechnungIdentifierTypeCS
 Id: dipag-rechnung-identifier-type-cs
 Title: "Digitale Patientenrechnung Rechnung Identifier Type CS"
-* insert Meta(1.0.7)
+* insert Meta(1.0.8)
+* ^date = "2026-07-08"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * #invoice "Rechnungsnummer"

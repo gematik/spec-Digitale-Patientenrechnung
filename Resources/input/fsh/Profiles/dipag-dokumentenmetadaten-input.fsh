@@ -2,7 +2,8 @@ Profile: DiPagDokumentenmetadatenEingang
 Title: "Digitale Patientenrechnung Dokumentenmetadaten Eingang"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-eingang
-* insert Meta(1.0.7)
+* insert Meta(1.0.8)
+* ^date = "2026-07-08"
 * obeys RechnungOderAnhang and MarkierungNurFuerAnhang and AnhangIdentifierPflicht
 * meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
 * meta.extension[markierung]

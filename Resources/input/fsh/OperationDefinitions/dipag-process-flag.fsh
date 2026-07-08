@@ -9,9 +9,9 @@ Description: """Setzt die Markierungen eines Rechnungsdokuments (DocumentReferen
 Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können über diese Operation weder gesetzt noch entfernt werden und werden ignoriert, falls sie übermittelt werden. Sie bleiben sowohl von der Ersetzung als auch von der Löschung unberührt."""
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag"
 * status = #active
-* version = "1.0.7"
+* version = "1.0.8"
 * experimental = false
-* date = "2024-06-20"
+* date = "2026-07-08"
 * kind = #operation
 * name = "DiPagProcessFlag"
 * code = #process-flag
