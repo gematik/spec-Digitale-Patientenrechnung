@@ -1,11 +1,25 @@
 {
   "resourceType": "ValueSet",
-  "status": "draft",
+  "status": "active",
   "name": "DiPagVerkehrsmittel",
   "id": "DiPagVerkehrsmittel",
   "title": "Digitale PatientenrechnungVerkehrsmittel",
   "description": "Dieses ValueSet bietet eine Auswahl an Verkehrsmitteln, die im Rahmen einer Reisekostenentschädigung ausgewählt werden können.",
+  "version": "1.0.7",
   "url": "https://gematik.de/fhir/dipag/ValueSet/DiPagVerkehrsmittel",
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "compose": {
     "include": [
       {
