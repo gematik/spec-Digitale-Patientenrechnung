@@ -125,5 +125,5 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -m "chore: Artefakt-Versionen + Datum automatisch angehoben"
+          git commit -m "chore: automatically bump artifact versions and dates"
           git push origin "HEAD:${{ github.event.workflow_run.head_branch }}"
