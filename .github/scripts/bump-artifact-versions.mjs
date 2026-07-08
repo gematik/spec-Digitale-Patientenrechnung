@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // Hebt die Version einzelner FHIR-Artefakte an, wenn sich ihr Inhalt
-// gegenüber dem Basis-Branch (Standard: origin/master) geändert hat.
+// gegenüber dem Basis-Branch (Standard: origin/master) geändert hat, und
+// stempelt bei jedem Bump das aktuelle Datum in das Artefakt.
 //
 // Kernidee (idempotent, ohne Sushi):
 //   * Der Vergleich läuft IMMER gegen den Basis-Branch, nicht gegen den
@@ -13,19 +14,27 @@
 //   * "Geändert" wird über die committeten fsh-generated JSONs erkannt
 //     (Feld-Normalisierung: version/date/meta.lastUpdated + Zeilenenden).
 //     Dadurch egal, wie viele Artefakte in einer FSH-Datei stehen.
+//   * Datum: Gebumpte Artefakte erhalten als 'date' den Tag des Bumps
+//     (--today, sonst heute). Das Datum wird sowohl in der FSH (als
+//     ^date/date je nach Definition/Instanz) als auch im generierten JSON
+//     gesetzt, damit es einen erneuten Sushi-Lauf übersteht.
 //
-// Aufruf:  node bump-artifact-versions.mjs [--base origin/master] [--write] [--status]
-//   ohne --write: Dry-Run (nur Report, exit 0)
-//   --status: gibt nur ein Token auf stdout aus und beendet sich (exit 0):
+// Aufruf:  node bump-artifact-versions.mjs [--base origin/master] [--today YYYY-MM-DD]
+//                                          [--write | --status | --check-release]
+//   ohne Flag: Dry-Run (nur Report, exit 0)
+//   --write:   FSH + generiertes JSON schreiben (Version + Datum)
+//   --status:  gibt nur ein Token auf stdout aus und beendet sich (exit 0):
 //       bootstrap  = Basis-Branch hat noch keine globale Version
 //       unchanged  = globale Version identisch zu Basis (kein Bump nötig)
 //       patch|minor|major = ermitteltes Bump-Level (globale Version angehoben)
-//     Gedacht als Gate für die Pipeline (neutral abbrechen bei unchanged/bootstrap).
-//   Exit 0 = fertig; nichts zu tun, wenn globale Version unverändert.
+//     Gate für die Pipeline (neutral abbrechen bei unchanged/bootstrap).
+//   --check-release: prüft, ob zur Release-Vorbereitung auch die Guide-Version
+//     mitgezogen wurde (guide.yaml + Index.page.md angehoben, Index-Datum =
+//     heute). Schlägt bei Verstoß fehl (exit 1), damit der Bump gar nicht erst
+//     läuft. Nur relevant, wenn die globale Version angehoben wurde.
 
 import { execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync } from 'node:fs';
-import { readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
 const REPO_ROOT = execFileSync('git', ['rev-parse', '--show-toplevel'], { encoding: 'utf8' }).trim();
@@ -33,6 +42,11 @@ const RES_DIR = 'Resources';
 const GEN_DIR = `${RES_DIR}/fsh-generated/resources`;
 const FSH_DIR = `${RES_DIR}/input/fsh`;
 const SUSHI_CONFIG = `${RES_DIR}/sushi-config.yaml`;
+
+// Guide-Dateien, deren Version bei einem Release mitgezogen werden muss.
+const GUIDE_DIR = 'guides/Implementierungsleitfaden-Digitale-Patientenrechnung';
+const GUIDE_YAML = `${GUIDE_DIR}/guide.yaml`;
+const GUIDE_INDEX = `${GUIDE_DIR}/Startseite/Index.page.md`;
 
 // Nur diese resourceTypes sind versionierte Conformance-Artefakte.
 // Alles andere (Invoice, Patient, Bundle, AuditEvent ... = Beispiele) wird ignoriert.
@@ -49,6 +63,8 @@ const args = process.argv.slice(2);
 const BASE = argVal('--base') ?? 'origin/master';
 const WRITE = args.includes('--write');
 const STATUS = args.includes('--status');
+const CHECK_RELEASE = args.includes('--check-release');
+const TODAY = argVal('--today') || new Date().toISOString().slice(0, 10); // YYYY-MM-DD
 
 main();
 
@@ -60,20 +76,32 @@ function main() {
   if (!prVersion) {
     fail(`Konnte globale Version im PR nicht lesen (${SUSHI_CONFIG} enthält keine gültige 'version:').`);
   }
-  if (!baseVersion) {
-    // Bootstrap: Basis-Branch hat noch keine globale Version -> nur Anker etablieren, kein Bump.
-    if (STATUS) { log('bootstrap'); return; }
+  const level = baseVersion ? bumpLevel(baseVersion, prVersion) : null;
+  const state = !baseVersion ? 'bootstrap' : (level ?? 'unchanged');
+
+  if (STATUS) { log(state); return; }
+
+  if (CHECK_RELEASE) {
+    // Nur prüfen, wenn tatsächlich gebumpt wird; das Gate (unchanged/bootstrap)
+    // greift separat neutral in der Pipeline.
+    if (state === 'patch' || state === 'minor' || state === 'major') {
+      checkRelease();
+      log('Release-Checks bestanden (guide.yaml + Index-Version angehoben, Index-Datum aktuell).');
+    } else {
+      log(`Kein Bump (${state}) – keine Release-Checks nötig.`);
+    }
+    return;
+  }
+
+  if (state === 'bootstrap') {
     log(`Basis-Branch (${BASE}) hat keine globale Version. Baseline wird etabliert, kein Bump.`);
     return;
   }
-  const level = bumpLevel(baseVersion, prVersion);
-  if (!level) {
-    if (STATUS) { log('unchanged'); return; }
+  if (state === 'unchanged') {
     log(`Globale Version unverändert (${fmt(prVersion)}). Kein Bump nötig.`);
     return;
   }
-  if (STATUS) { log(level); return; }
-  log(`Globale Version: ${fmt(baseVersion)} -> ${fmt(prVersion)}  => Level: ${level}`);
+  log(`Globale Version: ${fmt(baseVersion)} -> ${fmt(prVersion)}  => Level: ${level}  (Datum: ${TODAY})`);
 
   // 2) FSH-Index: artefakt-id -> Versions-Deklaration im FSH
   const index = buildFshIndex();
@@ -113,42 +141,162 @@ function main() {
   }
 
   // 4) Anwenden – FSH-Deklaration UND das generierte JSON in einem Rutsch.
-  //    Ein Bump ändert im JSON ausschließlich das version-Feld, daher wird es
-  //    hier direkt gepatcht (byte-identisch zu dem, was Sushi erzeugen würde) –
-  //    kein erneuter Sushi-Lauf und kein CI-Re-Trigger nötig.
+  //    Ein Bump ändert im JSON nur version + date, daher werden diese direkt
+  //    gepatcht (byte-identisch zu dem, was Sushi erzeugen würde) – kein
+  //    erneuter Sushi-Lauf und kein CI-Re-Trigger nötig.
   report(changes, skipped);
   if (WRITE) {
-    for (const c of changes) {
-      rewriteVersion(c.entry, c.to);
-      patchGeneratedJson(join(REPO_ROOT, GEN_DIR, c.jsonFile), c.to);
-    }
-    log(`${changes.length} Artefakt-Version(en) geschrieben (FSH + generiertes JSON).`);
+    writeChanges(changes);
+    log(`${changes.length} Artefakt(e) angehoben (Version + Datum ${TODAY}) in FSH + generiertem JSON.`);
   } else if (changes.length) {
     log('(Dry-Run – mit --write würden obige Änderungen geschrieben.)');
   }
 }
 
-// Setzt das Wurzel-version-Feld im generierten JSON auf die Zielversion.
-// Ersetzt nur die erste "version"-Zeile (= Wurzelfeld, von Sushi früh platziert)
-// und lässt den Rest der Datei unangetastet.
-function patchGeneratedJson(absPath, target) {
-  const text = readFileSync(absPath, 'utf8');
-  const eol = text.includes('\r\n') ? '\r\n' : '\n';
-  const lines = text.split(/\r?\n/);
-  for (let i = 0; i < lines.length; i++) {
-    if (/^\s*"version"\s*:\s*"[^"]*"\s*,?\s*$/.test(lines[i])) {
-      lines[i] = lines[i].replace(/("version"\s*:\s*")[^"]*(")/, `$1${target}$2`);
-      writeFileSync(absPath, lines.join(eol));
+// ---------- Schreiben (Version + Datum) ----------
+
+function writeChanges(changes) {
+  // FSH pro Datei gebündelt und von unten nach oben editieren: Datums-Zeilen
+  // können eingefügt werden; bottom-to-top hält die Indizes der noch nicht
+  // bearbeiteten (weiter oben liegenden) Artefakte gültig.
+  const byFile = new Map();
+  for (const c of changes) {
+    const arr = byFile.get(c.entry.file) ?? [];
+    arr.push(c);
+    byFile.set(c.entry.file, arr);
+  }
+  for (const [file, cs] of byFile) {
+    const text = readFileSync(file, 'utf8');
+    const eol = text.includes('\r\n') ? '\r\n' : '\n';
+    const lines = text.split(/\r?\n/);
+    cs.sort((a, b) => b.entry.lineIdx - a.entry.lineIdx);
+    for (const c of cs) {
+      rewriteVersionLine(lines, c.entry, c.to);
+      setFshDate(lines, c.entry, TODAY);
+    }
+    writeFileSync(file, lines.join(eol));
+  }
+  // Generierte JSONs: genau eine Datei pro Artefakt.
+  for (const c of changes) {
+    patchGeneratedJson(join(REPO_ROOT, GEN_DIR, c.jsonFile), c.to, TODAY);
+  }
+}
+
+function rewriteVersionLine(lines, entry, target) {
+  const l = lines[entry.lineIdx];
+  let nl;
+  if (entry.form === 'insert') {
+    nl = l.replace(/(\binsert\s+Meta(?:Instance)?\s*\(\s*)[^)]*?(\s*\))/, `$1${target}$2`);
+  } else {
+    nl = l.replace(/(^\s*\*\s*\^?version\s*=\s*")[^"]*(")/, `$1${target}$2`);
+  }
+  if (nl === l) fail(`Version-Rewrite hat nichts geändert: ${entry.file}:${entry.lineIdx + 1}`);
+  lines[entry.lineIdx] = nl;
+}
+
+// Setzt das date im FSH-Block: vorhandene date-Zeile aktualisieren, sonst nach
+// der Versionszeile einfügen. Definitionen nutzen ^date, Instanzen date.
+function setFshDate(lines, entry, iso) {
+  const dateRe = /^(\s*\*\s*\^?date\s*=\s*")[^"]*(")/;
+  for (let i = entry.startLine; i < entry.endLine && i < lines.length; i++) {
+    if (dateRe.test(lines[i])) {
+      lines[i] = lines[i].replace(dateRe, `$1${iso}$2`);
       return;
     }
   }
-  fail(`Kein version-Feld im generierten JSON gefunden: ${absPath}`);
+  const caret = entry.kw === 'Instance' ? '' : '^';
+  lines.splice(entry.lineIdx + 1, 0, `* ${caret}date = "${iso}"`);
+}
+
+// Setzt version + date im generierten JSON. version wird immer ersetzt; date
+// wird ersetzt, falls vorhanden, sonst direkt nach der version-Zeile eingefügt
+// (z. B. SearchParameter haben von Haus aus kein date-Feld).
+function patchGeneratedJson(absPath, targetVersion, iso) {
+  const text = readFileSync(absPath, 'utf8');
+  const eol = text.includes('\r\n') ? '\r\n' : '\n';
+  const lines = text.split(/\r?\n/);
+
+  let versionIdx = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (/^\s*"version"\s*:\s*"[^"]*"\s*,?\s*$/.test(lines[i])) {
+      lines[i] = lines[i].replace(/("version"\s*:\s*")[^"]*(")/, `$1${targetVersion}$2`);
+      versionIdx = i;
+      break;
+    }
+  }
+  if (versionIdx < 0) fail(`Kein version-Feld im generierten JSON gefunden: ${absPath}`);
+
+  let dateIdx = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (/^\s*"date"\s*:\s*"[^"]*"\s*,?\s*$/.test(lines[i])) {
+      lines[i] = lines[i].replace(/("date"\s*:\s*")[^"]*(")/, `$1${iso}$2`);
+      dateIdx = i;
+      break;
+    }
+  }
+  if (dateIdx < 0) {
+    const indent = (lines[versionIdx].match(/^(\s*)/) || ['', ''])[1];
+    lines.splice(versionIdx + 1, 0, `${indent}"date": "${iso}",`);
+  }
+  writeFileSync(absPath, lines.join(eol));
+}
+
+// ---------- Release-Checks (Guide-Version mitgezogen?) ----------
+
+function checkRelease() {
+  const problems = [];
+  const todayDe = isoToGerman(TODAY);
+
+  // guide.yaml: Version gegenüber Basis angehoben?
+  const gyPr = parseVersion(readFileSync(join(REPO_ROOT, GUIDE_YAML), 'utf8'));
+  const gyBaseRaw = readBaseFile(GUIDE_YAML);
+  const gyBase = gyBaseRaw == null ? null : parseVersion(gyBaseRaw);
+  if (!gyPr) problems.push(`Keine gültige 'version:' in ${GUIDE_YAML}.`);
+  else if (gyBase && fmt(gyPr) === fmt(gyBase)) {
+    problems.push(`Version in ${GUIDE_YAML} wurde nicht angehoben (weiterhin ${fmt(gyPr)}).`);
+  }
+
+  // Index.page.md: Version angehoben + Datum = heute?
+  const idxRaw = readFileSync(join(REPO_ROOT, GUIDE_INDEX), 'utf8');
+  const idxBaseRaw = readBaseFile(GUIDE_INDEX);
+  const idxVer = indexVersion(idxRaw);
+  const idxBaseVer = idxBaseRaw == null ? null : indexVersion(idxBaseRaw);
+  if (!idxVer) problems.push(`Keine "Version:"-Zeile in ${GUIDE_INDEX}.`);
+  else if (idxBaseVer && idxVer === idxBaseVer) {
+    problems.push(`Version in ${GUIDE_INDEX} wurde nicht angehoben (weiterhin ${idxVer}).`);
+  }
+
+  const idxDate = indexDate(idxRaw);
+  if (!idxDate) problems.push(`Keine "Datum:"-Zeile in ${GUIDE_INDEX}.`);
+  else if (idxDate !== todayDe) {
+    problems.push(`Datum in ${GUIDE_INDEX} ist "${idxDate}", erwartet "${todayDe}" (heutiger Tag).`);
+  }
+
+  if (problems.length) {
+    fail('Release-Vorbereitung unvollständig – Bump wird nicht ausgeführt:\n  - ' + problems.join('\n  - '));
+  }
+}
+
+// "Version: 1.2.3" aus der Index-Seite (Status-Abschnitt).
+function indexVersion(text) {
+  const m = String(text).match(/^\s*Version:\s*(\d+\.\d+\.\d+)/mi);
+  return m ? m[1] : null;
+}
+// "Datum: TT.MM.JJJJ" aus der Index-Seite.
+function indexDate(text) {
+  const m = String(text).match(/^\s*Datum:\s*(\d{2}\.\d{2}\.\d{4})/mi);
+  return m ? m[1] : null;
+}
+// "2026-07-08" -> "08.07.2026"
+function isoToGerman(iso) {
+  const m = String(iso).match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
 }
 
 // ---------- FSH-Index ----------
 
 function buildFshIndex() {
-  const index = new Map(); // id -> { file, lineIdx, form, current, matchStart, matchEnd }
+  const index = new Map(); // id -> { file, kw, startLine, endLine, lineIdx, form, current }
   for (const file of walkFsh(join(REPO_ROOT, FSH_DIR))) {
     const text = readFileSync(file, 'utf8');
     const lines = text.split(/\n/);
@@ -158,7 +306,7 @@ function buildFshIndex() {
       const id = resolveId(block);
       if (!id) { block = null; return; }
       const vloc = findVersionLine(lines, block.startLine, endLine);
-      if (vloc) index.set(id, { file, ...vloc });
+      if (vloc) index.set(id, { file, kw: block.kw, startLine: block.startLine, endLine, ...vloc });
       block = null;
     };
     for (let i = 0; i < lines.length; i++) {
@@ -199,22 +347,6 @@ function findVersionLine(lines, start, end) {
     if (m) return { lineIdx: i, form: 'assign', current: m[1] };
   }
   return null;
-}
-
-function rewriteVersion(entry, target) {
-  const text = readFileSync(entry.file, 'utf8');
-  const eol = text.includes('\r\n') ? '\r\n' : '\n';
-  const lines = text.split(/\r?\n/);
-  const l = lines[entry.lineIdx];
-  let nl;
-  if (entry.form === 'insert') {
-    nl = l.replace(/(\binsert\s+Meta(?:Instance)?\s*\(\s*)[^)]*?(\s*\))/, `$1${target}$2`);
-  } else {
-    nl = l.replace(/(^\s*\*\s*\^?version\s*=\s*")[^"]*(")/, `$1${target}$2`);
-  }
-  if (nl === l) fail(`Version-Rewrite hat nichts geändert: ${entry.file}:${entry.lineIdx + 1}`);
-  lines[entry.lineIdx] = nl;
-  writeFileSync(entry.file, lines.join(eol));
 }
 
 // ---------- Versions-Helfer ----------
@@ -267,10 +399,6 @@ function sortNorm(x) {
 }
 
 // ---------- Git / IO ----------
-
-function execGit(a) {
-  return execFileSync('git', a, { cwd: REPO_ROOT, encoding: 'utf8' });
-}
 
 // Inhalt einer Datei im Basis-Branch; null wenn dort nicht vorhanden.
 function readBaseFile(relPath) {
