@@ -5,7 +5,7 @@ Profile: DiPagDokumentenmetadatenIntern
 Title: "Digitale Patientenrechnung Dokumentenmetadaten Intern"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-intern
-* insert Meta
+* insert Meta(1.0.7)
 * obeys SignaturVerpflichtendRechnung
 * id ^comment = "Die technische DocumentReference-id dient ausschließlich der serverinternen Adressierung. Der Abruf eines Dokuments erfolgt nicht über die id, sondern ausschließlich über das Rechnungs-Token (siehe identifier:Token) via Retrieve-Operation. Das Token darf NICHT aus der id ableitbar sein."
 * extension MS
@@ -206,7 +206,7 @@ Id: dipag-dokumentenmetadaten-intern
 ValueSet: DiPagRestrictedMimeTypesInBinaryVS
 Id: dipag-restricted-mime-types-in-binary-vs
 Title: "Digitale Patientenrechnung Restricted Mime Types in Binary"
-* insert Meta
+* insert Meta(1.0.7)
 
 * include urn:ietf:bcp:13#application/fhir+json
 * include urn:ietf:bcp:13#application/pdf
@@ -214,7 +214,7 @@ Title: "Digitale Patientenrechnung Restricted Mime Types in Binary"
 ValueSet: DiPagRechnungsstatusVS
 Id: dipag-rechnungsstatus-vs
 Title: "Digitale Patientenrechnung Rechnungsstatus"
-* insert Meta
+* insert Meta(1.0.7)
 * include codes from system DiPagARechnungsstatusCS
 
 // ------------- CodeSystem -------------
@@ -223,7 +223,7 @@ CodeSystem:  DiPagAttachmentFormatCS
 Id: dipag-attachment-format-cs
 Title: "Digitale Patientenrechnung Attachment Format CS"
 Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
-* insert Meta
+* insert Meta(1.0.7)
 * #originaleRechnung "Das originale PDF der Rechnung"
 * #angereichertesPDF "Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"
 * #rechnungsinhalt "Strukturierter Rechnungsinhalt"
@@ -233,7 +233,7 @@ CodeSystem: DiPagARechnungsstatusCS
 Id: dipag-rechnungsstatus-cs
 Title: "Digitale Patientenrechnung Rechnungsstatus CS"
 Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"
-* insert Meta
+* insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * #offen "Offen"
@@ -247,7 +247,7 @@ Id: dipag-docref-signature
 Title: "Digitale Patientenrechnung DocRef Signature"
 Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten"
 Context: DocumentReference, DocumentReference.content.attachment
-* insert Meta
+* insert Meta(1.0.7)
 * value[x] 1.. MS
 * value[x] only Signature
 
@@ -256,7 +256,7 @@ Id: dipag-docref-fachrichtung
 Title: "Digitale Patientenrechnung DocRef Fachrichtung"
 Description: "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows"
 Context: DocumentReference
-* insert Meta
+* insert Meta(1.0.7)
 
 * value[x] 1.. MS
 * value[x] only Coding

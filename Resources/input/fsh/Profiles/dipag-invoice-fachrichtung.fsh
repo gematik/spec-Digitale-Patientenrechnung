@@ -1,7 +1,7 @@
 Extension: DiPagFachrichtung
 Id: dipag-fachrichtung
 Title: "Digitale Patientenrechnung Extension Fachrichtung"
-* insert Meta
+* insert Meta(1.0.7)
 * ^context.type = #element
 * ^context.expression = "Invoice"
 * value[x] only Coding

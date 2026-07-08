@@ -2,7 +2,7 @@ CodeSystem:  DiPagRechnungMarkierungCS
 Id: dipag-rechnung-markierung-cs
 Title: "Digitale Patientenrechnung Rechnung Markierung CS"
 Description:  "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"
-* insert Meta
+* insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * #eingereicht-frontend "Eingereicht (per Frontend)" "Bei Einreichung durch Versicherten"
@@ -18,7 +18,7 @@ CodeSystem:  DiPagDokumentArtDerArchivierungCS
 Id: dipag-dokument-artderarchivierung-cs
 Title: "Digitale Patientenrechnung Dokument ArtDerArchivierung CS"
 Description:  "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"
-* insert Meta
+* insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * #epa "ePA"

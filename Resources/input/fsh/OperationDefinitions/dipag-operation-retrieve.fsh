@@ -6,7 +6,7 @@ Usage: #example
 Title: "Digitale Patientenrechnung Operation Retrieve"
 Description: "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten"
 * status = #active
-* version = "1.0.0-CC"
+* version = "1.0.7"
 * experimental = false
 * date = "2024-06-20"
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/Retrieve"

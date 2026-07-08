@@ -2,7 +2,7 @@ Profile: DiPagRechnungsprozedur
 Parent: Procedure
 Title: "Digitale Patientenrechnung Rechnungsprozedur"
 Id: dipag-rechnungsprozedur
-* insert Meta
+* insert Meta(1.0.7)
 * status MS
   * ^short = "Status der Prozedur"
   * ^comment = "Der Status der Prozedur MUSS vorhanden sein."

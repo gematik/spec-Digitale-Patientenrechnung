@@ -3,7 +3,7 @@ Id: dipag-person
 Parent: Practitioner
 Title: "Digitale Patientenrechnung Person"
 Description: "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet."
-* insert Meta
+* insert Meta(1.0.7)
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"

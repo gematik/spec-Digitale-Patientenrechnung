@@ -3,6 +3,7 @@ InstanceOf: SearchParameter
 Usage: #example
 Title: "Suchparameter DocumentReference.author.display"
 Description: "Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach dem Text in author.display ermöglicht."
+* version = "1.0.7"
 * url = Canonical(dipag-docRef-author-display)
 * name = "DiPagDocRefAuthorDisplay"
 * status = #active

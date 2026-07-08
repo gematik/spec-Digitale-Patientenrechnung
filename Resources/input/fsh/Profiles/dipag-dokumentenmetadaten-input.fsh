@@ -2,7 +2,7 @@ Profile: DiPagDokumentenmetadatenEingang
 Title: "Digitale Patientenrechnung Dokumentenmetadaten Eingang"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-eingang
-* insert Meta
+* insert Meta(1.0.7)
 * obeys RechnungOderAnhang and MarkierungNurFuerAnhang and AnhangIdentifierPflicht
 * meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
 * meta.extension[markierung]
