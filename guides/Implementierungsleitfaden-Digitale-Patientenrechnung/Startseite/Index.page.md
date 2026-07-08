@@ -21,7 +21,7 @@ Version: 1.0.7
 
 Realm: Deutschland
 
-Reifegrad: Draft (STU Ballot folgt)
+Reifegrad: Draft
 
 Datum: 01.06.2026
 
