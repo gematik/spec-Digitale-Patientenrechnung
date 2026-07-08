@@ -23,9 +23,6 @@ InstanceOf: Parameters
     * valueCoding
       * system = Canonical(DiPagRechnungMarkierungCS)
       * code = #gelesen
-  * part[+]
-    * name = "gelesen"
-    * valueBoolean = true
 
 
 Instance: BeispielParameterProcessFlagOutput
@@ -58,6 +55,3 @@ InstanceOf: Parameters
         * valueCoding
           * system = Canonical(DiPagRechnungMarkierungCS)
           * code = #gelesen
-      * extension[+]
-        * url = "gelesen"
-        * valueBoolean = true

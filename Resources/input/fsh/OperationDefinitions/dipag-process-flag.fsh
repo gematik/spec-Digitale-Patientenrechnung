@@ -52,13 +52,6 @@ Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können übe
     * documentation = "Optionale Details als Freitext zur Markierung"
     * type = #string
   * part[+]
-    * name = #gelesen
-    * use = #in
-    * min = 0
-    * max = "1"
-    * documentation = "Gelesen-Status falls Markierung vom Typ 'gelesen' ist. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'gelesen' ist."
-    * type = #boolean
-  * part[+]
     * name = #artDerArchivierung
     * use = #in
     * min = 0
