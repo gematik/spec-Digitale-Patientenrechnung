@@ -1,0 +1,63 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dipag-total-price-component-type-cs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-total-price-component-type-cs</b></p><a name=\"dipag-total-price-component-type-cs\"> </a><a name=\"hcdipag-total-price-component-type-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">SummeRechnungspositionen<a name=\"dipag-total-price-component-type-cs-SummeRechnungspositionen\"> </a></td><td>Summe aller Rechnungspositionen</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">Minderung7GOZ<a name=\"dipag-total-price-component-type-cs-Minderung7GOZ\"> </a></td><td>Minderungen nach §7 GOZ</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">Fremdlaborleistungen<a name=\"dipag-total-price-component-type-cs-Fremdlaborleistungen\"> </a></td><td>Fremdlaborleistungen</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">Abzug<a name=\"dipag-total-price-component-type-cs-Abzug\"> </a></td><td>Übergeordnete Abzug-Kategorie</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0FestzuschussKasse<a name=\"dipag-total-price-component-type-cs-FestzuschussKasse\"> </a></td><td>Festzuschuss Kasse</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0VorleistungKst<a name=\"dipag-total-price-component-type-cs-VorleistungKst\"> </a></td><td>Vorleistungen anderer Kostenträger</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">\u00a0\u00a0KostenBema13AtoD<a name=\"dipag-total-price-component-type-cs-KostenBema13AtoD\"> </a></td><td>Kosten gem. den BEMA-Pos. 13a - d</td></tr></table></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs",
+  "version" : "1.0.8",
+  "name" : "DiPagTotalPriceComponentTypeCS",
+  "title" : "Digitale Patientenrechnung Art der Rechnungssumme",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "count" : 7,
+  "concept" : [{
+    "code" : "SummeRechnungspositionen",
+    "display" : "Summe aller Rechnungspositionen"
+  },
+  {
+    "code" : "Minderung7GOZ",
+    "display" : "Minderungen nach §7 GOZ"
+  },
+  {
+    "code" : "Fremdlaborleistungen",
+    "display" : "Fremdlaborleistungen"
+  },
+  {
+    "code" : "Abzug",
+    "display" : "Übergeordnete Abzug-Kategorie",
+    "concept" : [{
+      "code" : "FestzuschussKasse",
+      "display" : "Festzuschuss Kasse"
+    },
+    {
+      "code" : "VorleistungKst",
+      "display" : "Vorleistungen anderer Kostenträger"
+    },
+    {
+      "code" : "KostenBema13AtoD",
+      "display" : "Kosten gem. den BEMA-Pos. 13a - d"
+    }]
+  }]
+}

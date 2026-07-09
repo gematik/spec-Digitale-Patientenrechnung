@@ -1,0 +1,36 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dipag-rechnungsposition-zusatz-VS",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dipag-rechnungsposition-zusatz-VS</b></p><a name=\"dipag-rechnungsposition-zusatz-VS\"> </a><a name=\"hcdipag-rechnungsposition-zusatz-VS\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-dipag-rechnungsposition-zusatz-cs.html\"><code>https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.8</span></li></ul></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-zusatz-VS",
+  "version" : "1.0.8",
+  "name" : "DiPagRechnungspositionZusatzVS",
+  "title" : "Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"
+    }]
+  }
+}

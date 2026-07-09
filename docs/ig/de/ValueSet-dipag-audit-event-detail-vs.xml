@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="dipag-audit-event-detail-vs"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet dipag-audit-event-detail-vs</b></p><a name="dipag-audit-event-detail-vs"> </a><a name="hcdipag-audit-event-detail-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-dipag-audit-event-detail-cs.html"><code>https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;1.0.8</span></li></ul></div>
+  </text>
+  <url value="https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-detail-vs"/>
+  <version value="1.0.8"/>
+  <name value="DiPagAuditEventDetailVS"/>
+  <title value="Digitale Patientenrechnung Audit Event Detail"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-26"/>
+  <publisher value="gematik GmbH"/>
+  <contact>
+    <name value="gematik GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gematik.de"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs"/>
+    </include>
+  </compose>
+</ValueSet>

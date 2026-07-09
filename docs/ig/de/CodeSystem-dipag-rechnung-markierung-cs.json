@@ -1,0 +1,76 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dipag-rechnung-markierung-cs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-rechnung-markierung-cs</b></p><a name=\"dipag-rechnung-markierung-cs\"> </a><a name=\"hcdipag-rechnung-markierung-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">eingereicht-frontend<a name=\"dipag-rechnung-markierung-cs-eingereicht-frontend\"> </a></td><td>Eingereicht (per Frontend)</td><td>Bei Einreichung durch Versicherten</td></tr><tr><td style=\"white-space:nowrap\">eingereicht-post<a name=\"dipag-rechnung-markierung-cs-eingereicht-post\"> </a></td><td>Eingereicht (per Post)</td><td>Bei Postversand durch Versicherten</td></tr><tr><td style=\"white-space:nowrap\">geteilt<a name=\"dipag-rechnung-markierung-cs-geteilt\"> </a></td><td>Geteilt</td><td>Bei Teilen durch den Versicherten</td></tr><tr><td style=\"white-space:nowrap\">abgerufen<a name=\"dipag-rechnung-markierung-cs-abgerufen\"> </a></td><td>Abgerufen durch Kostenträger</td><td>Bei Abruf eines Dokuments/einer Rechnung durch den Kostenträger, durch den Fachdienst</td></tr><tr><td style=\"white-space:nowrap\">gelesen<a name=\"dipag-rechnung-markierung-cs-gelesen\"> </a></td><td>Gelesen</td><td>Beim Einsehen von Rechnungen oder Dokumenten durch den Versicherten im DiPag FdV</td></tr><tr><td style=\"white-space:nowrap\">bezahlt<a name=\"dipag-rechnung-markierung-cs-bezahlt\"> </a></td><td>Bezahlt</td><td>Bei Zahlung durch den Versicherten</td></tr><tr><td style=\"white-space:nowrap\">archiviert<a name=\"dipag-rechnung-markierung-cs-archiviert\"> </a></td><td>Archiviert</td><td>Bei Archivierung durch den Versicherten</td></tr><tr><td style=\"white-space:nowrap\">persoenlich<a name=\"dipag-rechnung-markierung-cs-persoenlich\"> </a></td><td>Persönlich</td><td>Durch den Rechnungsersteller bei Versenden von Dokumenten, die ausschließlich nur persönlich an den Versicherten gerichtet sind.</td></tr></table></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs",
+  "version" : "1.0.8",
+  "name" : "DiPagRechnungMarkierungCS",
+  "title" : "Digitale Patientenrechnung Rechnung Markierung CS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "description" : "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "count" : 8,
+  "concept" : [{
+    "code" : "eingereicht-frontend",
+    "display" : "Eingereicht (per Frontend)",
+    "definition" : "Bei Einreichung durch Versicherten"
+  },
+  {
+    "code" : "eingereicht-post",
+    "display" : "Eingereicht (per Post)",
+    "definition" : "Bei Postversand durch Versicherten"
+  },
+  {
+    "code" : "geteilt",
+    "display" : "Geteilt",
+    "definition" : "Bei Teilen durch den Versicherten"
+  },
+  {
+    "code" : "abgerufen",
+    "display" : "Abgerufen durch Kostenträger",
+    "definition" : "Bei Abruf eines Dokuments/einer Rechnung durch den Kostenträger, durch den Fachdienst"
+  },
+  {
+    "code" : "gelesen",
+    "display" : "Gelesen",
+    "definition" : "Beim Einsehen von Rechnungen oder Dokumenten durch den Versicherten im DiPag FdV"
+  },
+  {
+    "code" : "bezahlt",
+    "display" : "Bezahlt",
+    "definition" : "Bei Zahlung durch den Versicherten"
+  },
+  {
+    "code" : "archiviert",
+    "display" : "Archiviert",
+    "definition" : "Bei Archivierung durch den Versicherten"
+  },
+  {
+    "code" : "persoenlich",
+    "display" : "Persönlich",
+    "definition" : "Durch den Rechnungsersteller bei Versenden von Dokumenten, die ausschließlich nur persönlich an den Versicherten gerichtet sind."
+  }]
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dipag-audit-event-type-vs",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dipag-audit-event-type-vs</b></p><a name=\"dipag-audit-event-type-vs\"> </a><a name=\"hcdipag-audit-event-type-vs\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include these codes as defined in <a href=\"http://dicom.nema.org/resources/ontology/DCM\"><code>http://dicom.nema.org/resources/ontology/DCM</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 01, the version found through the package references\"> version &#x1F4E6;01</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://hl7.org/fhir/R4/codesystem-dicom-dcim.html#dicom-dcim-110100\">110100</a></td><td>Application Activity</td><td>Audit event: Application Activity has taken place</td></tr></table></li><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-audit-event-type.html\"><code>http://terminology.hl7.org/CodeSystem/audit-event-type</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 1.0.0, the version found through the package references\"> version &#x1F4E6;1.0.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-audit-event-type.html#audit-event-type-rest\">rest</a></td><td>RESTful Operation</td><td>Audit Event: Execution of a RESTful operation as defined by FHIR.</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-type-vs",
+  "version" : "1.0.8",
+  "name" : "DiPagAuditEventTypeVS",
+  "title" : "Digitale Patientenrechnung Audit Event Type",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "concept" : [{
+        "code" : "110100",
+        "display" : "Application Activity"
+      }]
+    },
+    {
+      "system" : "http://terminology.hl7.org/CodeSystem/audit-event-type",
+      "concept" : [{
+        "code" : "rest",
+        "display" : "RESTful Operation"
+      }]
+    }]
+  }
+}

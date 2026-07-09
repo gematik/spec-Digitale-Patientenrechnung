@@ -1,0 +1,97 @@
+{
+  "resourceType" : "OperationDefinition",
+  "id" : "DiPagOperationProcessFlag",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition DiPagOperationProcessFlag</b></p><a name=\"DiPagOperationProcessFlag\"> </a><a name=\"hcDiPagOperationProcessFlag\"> </a><p>URL: [base]/DocumentReference/[id]/$process-flag</p><h3>Parameters</h3><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>markierung</td><td/><td>0..*</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Coding\">Coding</a></td><td/><td><div><p>Eine Markierung des Dokuments. Es gilt das Complete-Replacement-Prinzip; der gesamte übermittelte Markierungssatz ersetzt den bisherigen. Wird der Parameter nicht übergeben (0 Markierungen), werden alle änderbaren Markierungen entfernt (Löschen). Die Markierungen 'persönlich' und 'abgerufen durch KTR' bleiben hiervon ausgenommen.</p>\n</div></td></tr><tr><td>OUT</td><td>meta</td><td/><td>1..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#Meta\">Meta</a></td><td/><td><div><p>Vollständiges Meta-Element des Rechnungsdokuments / des Anhangs inkl. Extension (siehe DiPagDocumentReferenceMarkierung) zur Erfassung der Zusatzinformationen der Markierung</p>\n</div></td></tr></table></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag",
+  "version" : "1.0.8",
+  "name" : "DiPagProcessFlag",
+  "status" : "active",
+  "kind" : "operation",
+  "experimental" : false,
+  "date" : "2026-07-08",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "affectsState" : true,
+  "code" : "process-flag",
+  "resource" : ["DocumentReference"],
+  "system" : false,
+  "type" : false,
+  "instance" : true,
+  "parameter" : [{
+    "name" : "markierung",
+    "use" : "in",
+    "min" : 0,
+    "max" : "*",
+    "documentation" : "Eine Markierung des Dokuments. Es gilt das Complete-Replacement-Prinzip; der gesamte übermittelte Markierungssatz ersetzt den bisherigen. Wird der Parameter nicht übergeben (0 Markierungen), werden alle änderbaren Markierungen entfernt (Löschen). Die Markierungen 'persönlich' und 'abgerufen durch KTR' bleiben hiervon ausgenommen.",
+    "type" : "Coding",
+    "part" : [{
+      "name" : "markierung",
+      "use" : "in",
+      "min" : 1,
+      "max" : "1",
+      "documentation" : "Typ der Markierung, es können alle Markierungen mitgegeben werden, die Markierungen 'persönlich' und 'abgerufen durch KTR' werden aber wie oben beschrieben ignoriert.",
+      "type" : "Coding",
+      "binding" : {
+        "strength" : "required",
+        "valueSet" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-markierung-vs"
+      }
+    },
+    {
+      "name" : "zeitpunkt",
+      "use" : "in",
+      "min" : 0,
+      "max" : "1",
+      "documentation" : "Optionaler Zeitpunkt der Markierung",
+      "type" : "dateTime"
+    },
+    {
+      "name" : "details",
+      "use" : "in",
+      "min" : 0,
+      "max" : "1",
+      "documentation" : "Optionale Details als Freitext zur Markierung",
+      "type" : "string"
+    },
+    {
+      "name" : "artDerArchivierung",
+      "use" : "in",
+      "min" : 0,
+      "max" : "1",
+      "documentation" : "Details zur Art der Archivierung falls Markierung vom Typ 'archiviert' ist. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'archiviert' ist.",
+      "type" : "Coding"
+    },
+    {
+      "name" : "kostentraeger",
+      "use" : "in",
+      "min" : 0,
+      "max" : "1",
+      "documentation" : "Referenz auf den Kostenträger. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', 'eingereicht-post', 'geteilt' oder 'abgerufen' ist.",
+      "type" : "Reference"
+    }]
+  },
+  {
+    "name" : "meta",
+    "use" : "out",
+    "min" : 1,
+    "max" : "1",
+    "documentation" : "Vollständiges Meta-Element des Rechnungsdokuments / des Anhangs inkl. Extension (siehe DiPagDocumentReferenceMarkierung) zur Erfassung der Zusatzinformationen der Markierung",
+    "type" : "Meta"
+  }]
+}

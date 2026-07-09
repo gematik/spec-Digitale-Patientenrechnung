@@ -1,0 +1,45 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dipag-rechnung-submit-modus-cs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-rechnung-submit-modus-cs</b></p><a name=\"dipag-rechnung-submit-modus-cs\"> </a><a name=\"hcdipag-rechnung-submit-modus-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">test<a name=\"dipag-rechnung-submit-modus-cs-test\"> </a></td><td>Test</td><td>Digitale Patientenrechnung wird als Test eingereicht. Der Fachdienst validiert nur die Digitale Patientenrechnung und speichert diese nicht.</td></tr><tr><td style=\"white-space:nowrap\">normal<a name=\"dipag-rechnung-submit-modus-cs-normal\"> </a></td><td>Normal</td><td>Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind.</td></tr></table></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs",
+  "version" : "1.0.8",
+  "name" : "DiPagRechnungSubmitModusCS",
+  "title" : "Digitale Patientenrechnung Rechnung Submit Modus CS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "description" : "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "test",
+    "display" : "Test",
+    "definition" : "Digitale Patientenrechnung wird als Test eingereicht. Der Fachdienst validiert nur die Digitale Patientenrechnung und speichert diese nicht."
+  },
+  {
+    "code" : "normal",
+    "display" : "Normal",
+    "definition" : "Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
+  }]
+}

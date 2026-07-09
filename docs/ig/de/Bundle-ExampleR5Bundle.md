@@ -1,0 +1,207 @@
+# ExampleR5Bundle - Implementierungsleitfaden Digitale Patientenrechnung v1.0.8
+
+Implementierungsleitfaden Digitale Patientenrechnung
+
+Version 1.0.8 - ci-build 
+
+* [**Table of Contents**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **ExampleR5Bundle**
+
+## Beispiel Bundle: ExampleR5Bundle
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Bundle",
+  "id" : "ExampleR5Bundle",
+  "type" : "searchset",
+  "total" : 1,
+  "link" : [{
+    "relation" : "self",
+    "url" : "https://example.com/fhir/DocumentReference?type=AM010106"
+  }],
+  "entry" : [{
+    "fullUrl" : "https://example.com/fhir/DocumentReference/ExampleR5DocumentReference",
+    "resource" : {
+      "resourceType" : "DocumentReference",
+      "id" : "ExampleR5DocumentReference",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"],
+        "tag" : [{
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
+          "code" : "offen",
+          "display" : "Offen"
+        }]
+      },
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"DocumentReference_ExampleR5DocumentReference\"> </a><p class=\"res-header-id\"><b>Generated Narrative: DocumentReference ExampleR5DocumentReference</b></p><a name=\"ExampleR5DocumentReference\"> </a><a name=\"hcExampleR5DocumentReference\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-dokumentenmetadaten-intern.html\">Digitale Patientenrechnung Dokumentenmetadaten Intern</a></p><p style=\"margin-bottom: 0px\">Tag: <a href=\"CodeSystem-dipag-rechnungsstatus-cs.html\">Offen (Details: Digitale Patientenrechnung Rechnungsstatus CS code offen = 'Offen')</a></p></div><p><b>Digitale Patientenrechnung DocumentReference Rechnungsdatum</b>: 2023-09-28 13:00:00+0200</p><p><b>Digitale Patientenrechnung Zahlungsziel</b>: 2023-10-28</p><p><b>Digitale Patientenrechnung DocumentReference Gesamtbetrag</b>: <span title=\"Euro\">€16,20</span> (EUR)</p><p><b>Digitale Patientenrechnung DocRef Signature</b>: No display for Signature  (type: Review Signature (Signature Type Codes#1.2.840.10065.1.12.1.13); when: 2026-02-11 10:00:00+0100; who: id: OID:1.2.276.0.76.4.323; data: ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbXRwWkNJNkltVjRZVzUwSW4wLi4u)</p><p><b>identifier</b>: <code>https://gematik.de/fhir/sid/dipag-token</code>/d0ab9ed15c5eb41afde78b16a42e1f84d9b2818c1c48406233ac4e237e85e7f2, Rechnungsnummer/123456789</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:{http://dvmd.de/fhir/CodeSystem/kdl AM010106}\">Rechnung ambulante/stationäre Behandlung</span></p><p><b>subject</b>: Max Mustermann</p><p><b>author</b>: Dr. Hausarzt (Identifier: <code>https://gematik.de/fhir/sid/telematik-id</code>/987654321)</p><p><b>description</b>: Laborbefund vom 28.9.2023</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>application/pdf</td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/[FD-endpunkt]/Binary/id-der-originalen-Rechnung\">[FD-endpunkt]/Binary/id-der-originalen-Rechnung</a></td></tr></table><p><b>format</b>: <a href=\"CodeSystem-dipag-attachment-format-cs.html#dipag-attachment-format-cs-originaleRechnung\">Digitale Patientenrechnung Attachment Format CS: originaleRechnung</a> (Das originale PDF der Rechnung)</p></blockquote><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>application/pdf</td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/[FD-endpunkt]/Binary/id-des-angereicherten-PDFs\">[FD-endpunkt]/Binary/id-des-angereicherten-PDFs</a></td></tr></table><p><b>format</b>: <a href=\"CodeSystem-dipag-attachment-format-cs.html#dipag-attachment-format-cs-angereichertesPDF\">Digitale Patientenrechnung Attachment Format CS: angereichertesPDF</a> (Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt)</p></blockquote><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Extension</b></td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td/><td>application/fhir+json</td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts\">[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts</a></td></tr></table><p><b>format</b>: <a href=\"CodeSystem-dipag-attachment-format-cs.html#dipag-attachment-format-cs-rechnungsinhalt\">Digitale Patientenrechnung Attachment Format CS: rechnungsinhalt</a> (Strukturierter Rechnungsinhalt)</p></blockquote><blockquote><p><b>context</b></p><p><b>related</b>: </p><ul><li><a href=\"Patient-BeispielPatient3-FD.html\">Manfred Mustermann Male, DoB Unknown ( http://fhir.de/sid/gkv/kvid-10#NamingSystemKVID#A000000000)</a></li><li><a href=\"DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.html\">DocumentReference: identifier = https://gematik.de/fhir/sid/dipag-token#a1c4f7e2b9d6038c5e1a4b7d0f3c6e9a2d5b8c1e4f70a3d6b9c2e5f8a1d4b7c0,Anhangsidentifikator; status = current; type = Molekularpathologiebefund; description = Molekularpathologiebefund vom 31.12.21</a></li></ul></blockquote></div>"
+      },
+      "extension" : [{
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum",
+        "valueDateTime" : "2023-09-28T13:00:00.123+02:00"
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+        "valueDate" : "2023-10-28"
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag",
+        "valueMoney" : {
+          "value" : 16.2,
+          "currency" : "EUR"
+        }
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature",
+        "valueSignature" : {
+          "type" : [{
+            "system" : "urn:iso-astm:E1762-95:2013",
+            "code" : "1.2.840.10065.1.12.1.13"
+          }],
+          "when" : "2026-02-11T10:00:00+01:00",
+          "who" : {
+            "identifier" : {
+              "system" : "urn:ietf:rfc:3986",
+              "value" : "urn:oid:1.2.276.0.76.4.323"
+            }
+          },
+          "data" : "ZXlKaGJHY2lPaUpJVXpJMU5pSXNJbXRwWkNJNkltVjRZVzUwSW4wLi4u"
+        }
+      }],
+      "identifier" : [{
+        "system" : "https://gematik.de/fhir/sid/dipag-token",
+        "value" : "d0ab9ed15c5eb41afde78b16a42e1f84d9b2818c1c48406233ac4e237e85e7f2"
+      },
+      {
+        "type" : {
+          "coding" : [{
+            "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs",
+            "code" : "invoice"
+          }]
+        },
+        "system" : "http://example.com/fhir/identifiers",
+        "value" : "123456789"
+      }],
+      "status" : "current",
+      "type" : {
+        "coding" : [{
+          "system" : "http://dvmd.de/fhir/CodeSystem/kdl",
+          "code" : "AM010106",
+          "display" : "Rechnung ambulante/stationäre Behandlung"
+        }]
+      },
+      "subject" : {
+        "display" : "Max Mustermann"
+      },
+      "author" : [{
+        "identifier" : {
+          "system" : "https://gematik.de/fhir/sid/telematik-id",
+          "value" : "987654321"
+        },
+        "display" : "Dr. Hausarzt"
+      }],
+      "description" : "Laborbefund vom 28.9.2023",
+      "content" : [{
+        "attachment" : {
+          "extension" : [{
+            "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature",
+            "valueSignature" : {
+              "type" : [{
+                "system" : "urn:iso-astm:E1762-95:2013",
+                "code" : "1.2.840.10065.1.12.1.13"
+              }],
+              "when" : "2026-02-11T10:00:00+01:00",
+              "who" : {
+                "identifier" : {
+                  "system" : "urn:ietf:rfc:3986",
+                  "value" : "urn:oid:1.2.276.0.76.4.323"
+                }
+              },
+              "data" : "SGFzaE9yaWdpbmFsUkVjaG51bmdQREZBc2lnbmVkQnlGRDIwMjYwMjEx"
+            }
+          }],
+          "contentType" : "application/pdf",
+          "url" : "[FD-endpunkt]/Binary/id-der-originalen-Rechnung"
+        },
+        "format" : {
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs",
+          "code" : "originaleRechnung"
+        }
+      },
+      {
+        "attachment" : {
+          "extension" : [{
+            "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature",
+            "valueSignature" : {
+              "type" : [{
+                "system" : "urn:iso-astm:E1762-95:2013",
+                "code" : "1.2.840.10065.1.12.1.13"
+              }],
+              "when" : "2026-02-11T10:00:00+01:00",
+              "who" : {
+                "identifier" : {
+                  "system" : "urn:ietf:rfc:3986",
+                  "value" : "urn:oid:1.2.276.0.76.4.323"
+                }
+              },
+              "data" : "SGFzaEFuZ2VyZWljaGVydGVzUERGc2lnbmVkQnlGRDIwMjYwMjExQVA="
+            }
+          }],
+          "contentType" : "application/pdf",
+          "url" : "[FD-endpunkt]/Binary/id-des-angereicherten-PDFs"
+        },
+        "format" : {
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs",
+          "code" : "angereichertesPDF"
+        }
+      },
+      {
+        "attachment" : {
+          "extension" : [{
+            "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature",
+            "valueSignature" : {
+              "type" : [{
+                "system" : "urn:iso-astm:E1762-95:2013",
+                "code" : "1.2.840.10065.1.12.1.13"
+              }],
+              "when" : "2026-02-11T10:00:00+01:00",
+              "who" : {
+                "identifier" : {
+                  "system" : "urn:ietf:rfc:3986",
+                  "value" : "urn:oid:1.2.276.0.76.4.323"
+                }
+              },
+              "data" : "U3RydWt0dXJpZXJ0ZXJJbmhhbHRTaWduYXR1ckZEMjAyNjAyMTFmamg="
+            }
+          }],
+          "contentType" : "application/fhir+json",
+          "url" : "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
+        },
+        "format" : {
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs",
+          "code" : "rechnungsinhalt"
+        }
+      }],
+      "context" : {
+        "related" : [{
+          "reference" : "Patient/BeispielPatient3-FD",
+          "type" : "Patient"
+        },
+        {
+          "reference" : "DocumentReference/ExampleR5DocumentReferenceSonstigesDokument",
+          "type" : "DocumentReference"
+        }]
+      }
+    },
+    "search" : {
+      "mode" : "match"
+    }
+  }]
+}
+
+```

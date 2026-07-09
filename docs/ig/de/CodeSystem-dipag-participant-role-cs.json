@@ -1,0 +1,43 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dipag-participant-role-cs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-participant-role-cs</b></p><a name=\"dipag-participant-role-cs\"> </a><a name=\"hcdipag-participant-role-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">leistungserbringer<a name=\"dipag-participant-role-cs-leistungserbringer\"> </a></td><td>Leistungserbringer</td></tr><tr><td style=\"white-space:nowrap\">forderungsinhaber<a name=\"dipag-participant-role-cs-forderungsinhaber\"> </a></td><td>Forderungsinhaber</td></tr></table></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs",
+  "version" : "1.0.8",
+  "name" : "DiPagParticipantRoleCS",
+  "title" : "Digitale Patientenrechnung Teilnehmer Rolle",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "count" : 2,
+  "concept" : [{
+    "code" : "leistungserbringer",
+    "display" : "Leistungserbringer"
+  },
+  {
+    "code" : "forderungsinhaber",
+    "display" : "Forderungsinhaber"
+  }]
+}

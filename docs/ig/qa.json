@@ -1,0 +1,19 @@
+{
+  "url" : "https://gematik.de/fhir/dipag/ImplementationGuide/de.gematik.dipag",
+  "name" : "DigitalePatientenrechnung",
+  "title" : "Implementierungsleitfaden Digitale Patientenrechnung",
+  "description" : "Implementierungsleitfaden der TI-Anwendung Digitale Patientenrechnung (DiPag): FHIR-Spezifikation fuer den standardisierten Austausch von Rechnungen ueber nicht dem Sachleistungsprinzip unterliegende Leistungen zwischen Leistungserbringern, versicherten Personen und Kostentraegern (vgl. § 359a SGB V).",
+  "status" : "draft",
+  "package-id" : "de.gematik.dipag",
+  "ig-ver" : "1.0.8",
+  "date" : "Thu, 09 Jul, 2026 11:50:43 +0000",
+  "dateISO8601" : "2026-07-09T11:50:43+00:00",
+  "errs" : 133,
+  "warnings" : 466,
+  "hints" : 369,
+  "suppressed-hints" : 113,
+  "suppressed-warnings" : 0,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 2268148104
+}

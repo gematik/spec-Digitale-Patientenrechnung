@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dipag-operationen-cs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem dipag-operationen-cs</b></p><a name="dipag-operationen-cs"> </a><a name="hcdipag-operationen-cs"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs</code> defines the following codes in a Is-A hierarchy:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">invoice-submit<a name="dipag-operationen-cs-invoice-submit"> </a></td><td>Digitale Patientenrechnung_Submit</td></tr><tr><td style="white-space:nowrap">retrieve<a name="dipag-operationen-cs-retrieve"> </a></td><td>Digitale Patientenrechnung_Retrieve</td></tr><tr><td style="white-space:nowrap">change-status<a name="dipag-operationen-cs-change-status"> </a></td><td>Digitale Patientenrechnung_ChangeStatus</td></tr><tr><td style="white-space:nowrap">process-flag<a name="dipag-operationen-cs-process-flag"> </a></td><td>Digitale Patientenrechnung_ProcessFlag</td></tr><tr><td style="white-space:nowrap">erase<a name="dipag-operationen-cs-erase"> </a></td><td>Digitale Patientenrechnung_Erase</td></tr></table></div>
+  </text>
+  <url value="https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"/>
+  <version value="1.0.8"/>
+  <name value="DiPagOperationenCS"/>
+  <title value="Digitale Patientenrechnung Operationen"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-26"/>
+  <publisher value="gematik GmbH"/>
+  <contact>
+    <name value="gematik GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gematik.de"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <count value="5"/>
+  <concept>
+    <code value="invoice-submit"/>
+    <display value="Digitale Patientenrechnung_Submit"/>
+  </concept>
+  <concept>
+    <code value="retrieve"/>
+    <display value="Digitale Patientenrechnung_Retrieve"/>
+  </concept>
+  <concept>
+    <code value="change-status"/>
+    <display value="Digitale Patientenrechnung_ChangeStatus"/>
+  </concept>
+  <concept>
+    <code value="process-flag"/>
+    <display value="Digitale Patientenrechnung_ProcessFlag"/>
+  </concept>
+  <concept>
+    <code value="erase"/>
+    <display value="Digitale Patientenrechnung_Erase"/>
+  </concept>
+</CodeSystem>

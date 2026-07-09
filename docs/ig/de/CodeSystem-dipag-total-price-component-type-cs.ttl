@@ -1,0 +1,83 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "dipag-total-price-component-type-cs"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-total-price-component-type-cs</b></p><a name=\"dipag-total-price-component-type-cs\"> </a><a name=\"hcdipag-total-price-component-type-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1</td><td style=\"white-space:nowrap\">SummeRechnungspositionen<a name=\"dipag-total-price-component-type-cs-SummeRechnungspositionen\"> </a></td><td>Summe aller Rechnungspositionen</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">Minderung7GOZ<a name=\"dipag-total-price-component-type-cs-Minderung7GOZ\"> </a></td><td>Minderungen nach §7 GOZ</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">Fremdlaborleistungen<a name=\"dipag-total-price-component-type-cs-Fremdlaborleistungen\"> </a></td><td>Fremdlaborleistungen</td></tr><tr><td>1</td><td style=\"white-space:nowrap\">Abzug<a name=\"dipag-total-price-component-type-cs-Abzug\"> </a></td><td>Übergeordnete Abzug-Kategorie</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  FestzuschussKasse<a name=\"dipag-total-price-component-type-cs-FestzuschussKasse\"> </a></td><td>Festzuschuss Kasse</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  VorleistungKst<a name=\"dipag-total-price-component-type-cs-VorleistungKst\"> </a></td><td>Vorleistungen anderer Kostenträger</td></tr><tr><td>2</td><td style=\"white-space:nowrap\">  KostenBema13AtoD<a name=\"dipag-total-price-component-type-cs-KostenBema13AtoD\"> </a></td><td>Kosten gem. den BEMA-Pos. 13a - d</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs"] ;
+  fhir:CodeSystem.version [ fhir:value "1.0.8"] ;
+  fhir:CodeSystem.name [ fhir:value "DiPagTotalPriceComponentTypeCS"] ;
+  fhir:CodeSystem.title [ fhir:value "Digitale Patientenrechnung Art der Rechnungssumme"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-03-26"^^xsd:date] ;
+  fhir:CodeSystem.publisher [ fhir:value "gematik GmbH"] ;
+  fhir:CodeSystem.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "gematik GmbH" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
+     ]
+  ] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "DE" ] ;
+       fhir:Coding.display [ fhir:value "Germany" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "7"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SummeRechnungspositionen" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Summe aller Rechnungspositionen" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Minderung7GOZ" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Minderungen nach §7 GOZ" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Fremdlaborleistungen" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fremdlaborleistungen" ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Abzug" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Übergeordnete Abzug-Kategorie" ] ;
+     fhir:CodeSystem.concept.concept [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "FestzuschussKasse" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Festzuschuss Kasse" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "VorleistungKst" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Vorleistungen anderer Kostenträger" ]
+     ], [
+       fhir:index -1 ;
+       fhir:CodeSystem.concept.code [ fhir:value "KostenBema13AtoD" ] ;
+       fhir:CodeSystem.concept.display [ fhir:value "Kosten gem. den BEMA-Pos. 13a - d" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

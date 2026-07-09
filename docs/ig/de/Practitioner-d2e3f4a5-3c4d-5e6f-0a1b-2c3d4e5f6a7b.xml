@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b"/>
+  <meta>
+    <profile value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Practitioner d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b</b></p><a name="d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b"> </a><a name="hcd2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-dipag-person.html">Digitale Patientenrechnung Person</a></p></div><p><b>identifier</b>: Provider number/1-HBA-Testkarte-883110000123466</p><p><b>name</b>: Dr. Anna Mueller(Official)</p><p><b>telecom</b>: <a href="tel:+4930123457">+49 30 123457</a></p><p><b>address</b>: Praxisstraße 10 Berlin 10115 DE </p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen MZKH}">Zahnmedizin</span></td></tr></table></div>
+  </text>
+  <identifier>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="PRN"/>
+      </coding>
+    </type>
+    <system value="https://gematik.de/fhir/sid/telematik-id"/>
+    <value value="1-HBA-Testkarte-883110000123466"/>
+  </identifier>
+  <name>
+    <use value="official"/>
+    <text value="Dr. Anna Mueller"/>
+    <family value="Mueller"/>
+    <given value="Anna"/>
+    <prefix value="Dr.">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+        <valueCode value="AC"/>
+      </extension>
+    </prefix>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="+49 30 123457"/>
+  </telecom>
+  <address>
+    <type value="both"/>
+    <line value="Praxisstraße 10">
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+        <valueString value="Praxisstraße"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+        <valueString value="10"/>
+      </extension>
+    </line>
+    <city value="Berlin"/>
+    <postalCode value="10115"/>
+    <country value="DE"/>
+  </address>
+  <qualification>
+    <code>
+      <coding>
+        <system value="http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen"/>
+        <code value="MZKH"/>
+        <display value="Zahnmedizin"/>
+      </coding>
+    </code>
+  </qualification>
+</Practitioner>

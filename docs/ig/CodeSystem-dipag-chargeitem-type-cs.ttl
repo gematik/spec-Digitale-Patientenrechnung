@@ -1,0 +1,81 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "dipag-chargeitem-type-cs"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-chargeitem-type-cs</b></p><a name=\"dipag-chargeitem-type-cs\"> </a><a name=\"hcdipag-chargeitem-type-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">GOÄ<a name=\"dipag-chargeitem-type-cs-GO.196\"> </a></td><td>Leistung nach Gebührenordnung GOÄ</td></tr><tr><td style=\"white-space:nowrap\">GOZ<a name=\"dipag-chargeitem-type-cs-GOZ\"> </a></td><td>Leistung nach Gebührenordnung GOZ</td></tr><tr><td style=\"white-space:nowrap\">BEMA<a name=\"dipag-chargeitem-type-cs-BEMA\"> </a></td><td>BEMA-Leistung</td></tr><tr><td style=\"white-space:nowrap\">EigenlaborleistungMaterial<a name=\"dipag-chargeitem-type-cs-EigenlaborleistungMaterial\"> </a></td><td>Eigenlaborleistung/Material</td></tr><tr><td style=\"white-space:nowrap\">Fremdlaborleistung<a name=\"dipag-chargeitem-type-cs-Fremdlaborleistung\"> </a></td><td>Fremdlaborleistung</td></tr><tr><td style=\"white-space:nowrap\">SachkostenAuslagen<a name=\"dipag-chargeitem-type-cs-SachkostenAuslagen\"> </a></td><td>Sachkosten/Auslagen</td></tr><tr><td style=\"white-space:nowrap\">WegegeldReiseentschaedigung<a name=\"dipag-chargeitem-type-cs-WegegeldReiseentschaedigung\"> </a></td><td>Wegegeld/Reiseentschädigung</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"] ;
+  fhir:CodeSystem.version [ fhir:value "1.0.8"] ;
+  fhir:CodeSystem.name [ fhir:value "DiPagRechnungspositionTypeCS"] ;
+  fhir:CodeSystem.title [ fhir:value "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-03-26"^^xsd:date] ;
+  fhir:CodeSystem.publisher [ fhir:value "gematik GmbH"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "gematik GmbH" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
+     ]
+  ] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "DE" ] ;
+       fhir:Coding.display [ fhir:value "Germany" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "7"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "GOÄ" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Leistung nach Gebührenordnung GOÄ" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "GOZ" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Leistung nach Gebührenordnung GOZ" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "BEMA" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "BEMA-Leistung" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "EigenlaborleistungMaterial" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Eigenlaborleistung/Material" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Fremdlaborleistung" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Fremdlaborleistung" ]
+  ], [
+     fhir:index 5 ;
+     fhir:CodeSystem.concept.code [ fhir:value "SachkostenAuslagen" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Sachkosten/Auslagen" ]
+  ], [
+     fhir:index 6 ;
+     fhir:CodeSystem.concept.code [ fhir:value "WegegeldReiseentschaedigung" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Wegegeld/Reiseentschädigung" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

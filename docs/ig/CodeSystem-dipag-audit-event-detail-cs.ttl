@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "dipag-audit-event-detail-cs"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-audit-event-detail-cs</b></p><a name=\"dipag-audit-event-detail-cs\"> </a><a name=\"hcdipag-audit-event-detail-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">Allgemein<a name=\"dipag-audit-event-detail-cs-Allgemein\"> </a></td><td>Allgemeine Interaktion mit einem Objekt</td></tr><tr><td style=\"white-space:nowrap\">Rechnungsversand-Berechtigung<a name=\"dipag-audit-event-detail-cs-Rechnungsversand-Berechtigung\"> </a></td><td>Rechnungsversand-Berechtigung</td></tr><tr><td style=\"white-space:nowrap\">DocumentReference.meta.tag:dipag-rechnungsstatus<a name=\"dipag-audit-event-detail-cs-DocumentReference.46meta.46tag.58dipag-rechnungsstatus\"> </a></td><td>Rechnungsstatus</td></tr><tr><td style=\"white-space:nowrap\">DocumentReference.meta.extension:markierung<a name=\"dipag-audit-event-detail-cs-DocumentReference.46meta.46extension.58markierung\"> </a></td><td>Markierung</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs"] ;
+  fhir:CodeSystem.version [ fhir:value "1.0.8"] ;
+  fhir:CodeSystem.name [ fhir:value "DiPagAuditEventDetailCS"] ;
+  fhir:CodeSystem.title [ fhir:value "Digitale Patientenrechnung Audit Event Detail"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-03-26"^^xsd:date] ;
+  fhir:CodeSystem.publisher [ fhir:value "gematik GmbH"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "gematik GmbH" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
+     ]
+  ] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "DE" ] ;
+       fhir:Coding.display [ fhir:value "Germany" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "4"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Allgemein" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Allgemeine Interaktion mit einem Objekt" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "Rechnungsversand-Berechtigung" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rechnungsversand-Berechtigung" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DocumentReference.meta.tag:dipag-rechnungsstatus" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Rechnungsstatus" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "DocumentReference.meta.extension:markierung" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Markierung" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

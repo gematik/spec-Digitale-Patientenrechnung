@@ -1,0 +1,2849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="de.gematik.dipag"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide de.gematik.dipag</b></p><a name="de.gematik.dipag"> </a><a name="hcde.gematik.dipag"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: de</p></div><h2>DigitalePatientenrechnung</h2><p>The official URL for this implementation guide is: </p><pre>https://gematik.de/fhir/dipag/ImplementationGuide/de.gematik.dipag</pre><div><p>Implementierungsleitfaden der TI-Anwendung Digitale Patientenrechnung (DiPag): FHIR-Spezifikation fuer den standardisierten Austausch von Rechnungen ueber nicht dem Sachleistungsprinzip unterliegende Leistungen zwischen Leistungserbringern, versicherten Personen und Kostentraegern (vgl. § 359a SGB V).</p>
+</div></div>
+  </text>
+  <url value="https://gematik.de/fhir/dipag/ImplementationGuide/de.gematik.dipag"/>
+  <version value="1.0.8"/>
+  <name value="DigitalePatientenrechnung"/>
+  <title value="Implementierungsleitfaden Digitale Patientenrechnung"/>
+  <status value="draft"/>
+  <date value="2026-07-09T11:50:43+00:00"/>
+  <publisher value="gematik GmbH"/>
+  <contact>
+    <name value="gematik GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gematik.de"/>
+    </telecom>
+  </contact>
+  <description value="Implementierungsleitfaden der TI-Anwendung Digitale Patientenrechnung (DiPag): FHIR-Spezifikation fuer den standardisierten Austausch von Rechnungen ueber nicht dem Sachleistungsprinzip unterliegende Leistungen zwischen Leistungserbringern, versicherten Personen und Kostentraegern (vgl. § 359a SGB V)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="de.gematik.dipag"/>
+  <license value="Apache-2.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="7.2.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.3.0"/>
+  </dependsOn>
+  <dependsOn id="de_basisprofil_r4">
+    <uri value="http://fhir.org/packages/de.basisprofil.r4/ImplementationGuide/de.basisprofil.r4"/>
+    <packageId value="de.basisprofil.r4"/>
+    <version value="1.5.4"/>
+  </dependsOn>
+  <dependsOn id="dvmd_kdl_r4">
+    <uri value="http://fhir.org/packages/dvmd.kdl.r4/ImplementationGuide/dvmd.kdl.r4"/>
+    <packageId value="dvmd.kdl.r4"/>
+    <version value="2025.0.1"/>
+  </dependsOn>
+  <dependsOn id="de_ihe_d_terminology">
+    <uri value="http://fhir.de/packages/de.ihe-d.terminology"/>
+    <packageId value="de.ihe-d.terminology"/>
+    <version value="3.0.1"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2025+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="de"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://gematik.de/fhir/dipag/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools.r4#1.1.2"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2025+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="ci-build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="i18n-default-lang"/>
+      </extension>
+      <extension url="value">
+        <valueString value="de"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="https://gematik.de/fhir/dipag/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagAbrechnungsDiagnoseProzedur"/>
+      </reference>
+      <name value="Abrechnungsrelevanz von Diagnosen und Prozeduren"/>
+      <description value="Diese Extension erlaubt es einer Invoice Diagnosen oder Prozeduren, incl. Qualifier wie bspw: &quot;Primär-DRG&quot; zuzuordnen. Dies ermöglicht unter anderem das Zuordnen von Haupt- und Nebendiagnosen zu einem Account zum Zweck der DRG Erstellung."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext"/>
+      </reference>
+      <name value="Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b"/>
+      </reference>
+      <name value="Assistierender Arzt - Dr. Mueller"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Assistierender Zahnarzt"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BundleExample"/>
+      </reference>
+      <name value="Beispiel Bundle - Vollständige Rechnung"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Bundle mit allen Ressourcen der digitalen Patientenrechnung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"/>
+      </reference>
+      <name value="Beispiel Patient"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Ein Beispielpatient für die Rechnung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Binary"/>
+      </extension>
+      <reference>
+        <reference value="Binary/BeispielBinarySubmitOutput3-FD"/>
+      </reference>
+      <name value="BeispielBinarySubmitOutput3-FD"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/BeispielDocumentReferenceRechnung3-FD"/>
+      </reference>
+      <name value="BeispielDocumentReferenceRechnung3-FD"/>
+      <description value="Rechnung Reiseimpfung vom 10.01.2024"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/BeispielDocumentReferenceRechnung3-LE"/>
+      </reference>
+      <name value="BeispielDocumentReferenceRechnung3-LE"/>
+      <description value="Rechnung Reiseimpfung vom 10.01.2024"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/BeispielDocumentReferenceRechnung3.1-FD"/>
+      </reference>
+      <name value="BeispielDocumentReferenceRechnung3.1-FD"/>
+      <description value="Rechnung Reiseimpfung vom 10.01.2024"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/BeispielDocumentReferenceRechnung3.1-LE"/>
+      </reference>
+      <name value="BeispielDocumentReferenceRechnung3.1-LE"/>
+      <description value="Rechnung Reiseimpfung vom 10.01.2024"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/BeispielDocumentReferenceRechnungRetrieve"/>
+      </reference>
+      <name value="BeispielDocumentReferenceRechnungRetrieve"/>
+      <description value="Rechnung Reiseimpfung vom 10.01.2024"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/BeispielDocumentReferenceRechnungRetrieve2"/>
+      </reference>
+      <name value="BeispielDocumentReferenceRechnungRetrieve2"/>
+      <description value="Der Einfachheit halber wurden hier nur die relevanten Felder dargestellt. Die Extensions sind als befüllt anzunehmen."/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/BeispielDocumentReferenceSonstigesDokument3-FD"/>
+      </reference>
+      <name value="BeispielDocumentReferenceSonstigesDokument3-FD"/>
+      <description value="Molekularpathologiebefund vom 31.12.21"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"/>
+      </reference>
+      <name value="BeispielDocumentReferenceSonstigesDokument3-LE"/>
+      <description value="Molekularpathologiebefund vom 31.12.21"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/BeispielDocumentReferenceSonstigesDokument3.1-FD"/>
+      </reference>
+      <name value="BeispielDocumentReferenceSonstigesDokument3.1-FD"/>
+      <description value="Molekularpathologiebefund vom 31.12.21"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/BeispielDocumentReferenceSonstigesDokument3.1-LE"/>
+      </reference>
+      <name value="BeispielDocumentReferenceSonstigesDokument3.1-LE"/>
+      <description value="Molekularpathologiebefund vom 30.12.21"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokoll"/>
+      </reference>
+      <name value="BeispielNutzungsprotokoll"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollAutomatischLoeschen"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollAutomatischLoeschen"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollAutomatischMarkierung"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollAutomatischMarkierung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollAutomatischPapierkorb"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollAutomatischPapierkorb"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollBerechtigungAbfragen"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollBerechtigungAbfragen"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollBerechtigungAnlegen"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollBerechtigungAnlegen"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollBerechtigungBestaetigen"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollBerechtigungBestaetigen"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollChangeStatus"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollChangeStatus"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollEinreichenFrontend"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollEinreichenFrontend"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollErase"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollErase"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollNutzerkontoEinrichten"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollNutzerkontoEinrichten"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollProcessFlag"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollProcessFlag"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BeispielNutzungsprotokollResultBundle"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollResultBundle"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AuditEvent"/>
+      </extension>
+      <reference>
+        <reference value="AuditEvent/BeispielNutzungsprotokollRetrieve"/>
+      </reference>
+      <name value="BeispielNutzungsprotokollRetrieve"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationOutcome"/>
+      </extension>
+      <reference>
+        <reference value="OperationOutcome/BeispielOperationOutcomeRechnung3.1-FD"/>
+      </reference>
+      <name value="BeispielOperationOutcomeRechnung3.1-FD"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterChangeStatusInput"/>
+      </reference>
+      <name value="BeispielParameterChangeStatusInput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterChangeStatusInput2"/>
+      </reference>
+      <name value="BeispielParameterChangeStatusInput2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterChangeStatusOutput"/>
+      </reference>
+      <name value="BeispielParameterChangeStatusOutput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterChangeStatusOutput2"/>
+      </reference>
+      <name value="BeispielParameterChangeStatusOutput2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterProcessFlagInput"/>
+      </reference>
+      <name value="BeispielParameterProcessFlagInput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterProcessFlagOutput"/>
+      </reference>
+      <name value="BeispielParameterProcessFlagOutput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterRetrieveInput"/>
+      </reference>
+      <name value="BeispielParameterRetrieveInput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterRetrieveInput2"/>
+      </reference>
+      <name value="BeispielParameterRetrieveInput2"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterRetrieveOutput"/>
+      </reference>
+      <name value="BeispielParameterRetrieveOutput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterSubmitInput3-FD"/>
+      </reference>
+      <name value="BeispielParameterSubmitInput3-FD"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterSubmitInput3-LE"/>
+      </reference>
+      <name value="BeispielParameterSubmitInput3-LE"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterSubmitInput3.1-LE"/>
+      </reference>
+      <name value="BeispielParameterSubmitInput3.1-LE"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterSubmitOutput3-FD"/>
+      </reference>
+      <name value="BeispielParameterSubmitOutput3-FD"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Parameters"/>
+      </extension>
+      <reference>
+        <reference value="Parameters/BeispielParameterSubmitOutput3.1-FD"/>
+      </reference>
+      <name value="BeispielParameterSubmitOutput3.1-FD"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/BeispielPatient3-FD"/>
+      </reference>
+      <name value="BeispielPatient3-FD"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Invoice"/>
+      </extension>
+      <reference>
+        <reference value="Invoice/c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a"/>
+      </reference>
+      <name value="Beispielrechnung - Zahnärztliche Behandlung"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Komplettes Beispiel einer Digitalen Patientenrechnung mit GOÄ und GOZ"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BulkChangeStatusExampleInput"/>
+      </reference>
+      <name value="BulkChangeStatusExampleInput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BulkChangeStatusExampleOutput"/>
+      </reference>
+      <name value="BulkChangeStatusExampleOutput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BulkRetrieveExampleInput"/>
+      </reference>
+      <name value="BulkRetrieveExampleInput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BulkRetrieveExampleOutput"/>
+      </reference>
+      <name value="BulkRetrieveExampleOutput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BulkSubmitExample"/>
+      </reference>
+      <name value="BulkSubmitExample"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/BulkSubmitExampleOutput"/>
+      </reference>
+      <name value="BulkSubmitExampleOutput"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/DiPagCapabilityStatementFD"/>
+      </reference>
+      <name value="CapabilityStatement Fachdienst E-Rechnnung"/>
+      <description value="Dieses CapabilityStatement beschreibt alle Interaktionen, &#xA;  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d"/>
+      </reference>
+      <name value="Diagnose - Karies"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Zahnkaries als Hauptdiagnose für die Rechnung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e"/>
+      </reference>
+      <name value="Diagnose - Parodontitis"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Parodontitis als Nebendiagnose"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-rechnungsbundle"/>
+      </reference>
+      <name value="Digitale Patientenrechnung - Rechnungsinhalte Bundle"/>
+      <description value="Dieses Profil stellt das collection-Bundle dar, mit welchem die strukturierten Rechnungsinhalte zusammengefasst und als base64-kodiertes Binary in der DocumentReference referenziert werden."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-abrechnungs-diagnose-use-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-abrechnungs-diagnose-use-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Abrechnungsdiagnose Use ValueSet"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-rechnungsposition-go-angaben"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-total-price-component-type-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Art der Rechnungssumme"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-total-price-component-deduction-type-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-attachment-format-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Attachment Format CS"/>
+      <description value="CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-audit-event-agent-type-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Audit Event Agent Type"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-audit-event-detail-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Audit Event Detail"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-audit-event-detail-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Audit Event Detail"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-audit-event-sub-type-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Audit Event Sub-Type"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-audit-event-type-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Audit Event Type"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagInvoiceBasedOn"/>
+      </reference>
+      <name value="Digitale Patientenrechnung BasedOn Extension"/>
+      <description value="Fügt die Extension basedOn hinzu, die es in R4 bereits für Invoice gab (https://hl7.org/fhir/R4/extension-event-basedon.html) leider im aktuellen Extension Pack aber nicht mehr den Context Invoice hat."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-docref-fachrichtung"/>
+      </reference>
+      <name value="Digitale Patientenrechnung DocRef Fachrichtung"/>
+      <description value="Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-docref-signature"/>
+      </reference>
+      <name value="Digitale Patientenrechnung DocRef Signature"/>
+      <description value="Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-documentreference-gesamtbetrag"/>
+      </reference>
+      <name value="Digitale Patientenrechnung DocumentReference Gesamtbetrag"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-documentreference-markierung"/>
+      </reference>
+      <name value="Digitale Patientenrechnung DocumentReference Markierung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-documentreference-rechnungsdatum"/>
+      </reference>
+      <name value="Digitale Patientenrechnung DocumentReference Rechnungsdatum"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-dokument-artderarchivierung-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Dokument ArtDerArchivierung CS"/>
+      <description value="CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-dokument-artderarchivierung-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Dokument ArtDerArchivierung VS"/>
+      <description value="ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-dokumentenmetadaten-eingang"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Dokumentenmetadaten Eingang"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-dokumentenmetadaten-intern"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Dokumentenmetadaten Intern"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-abzug-kassenanteil"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-behandlungsart"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Extension Behandlungsart"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-fachrichtung"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Extension Fachrichtung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-institution"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Institution"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-nutzungsprotokoll"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Nutzungsprotokoll"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/DiPagOperationChangeStatus"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Operation ChangeStatus"/>
+      <description value="Änderung des Bearbeitungsstatus eines Dokumentes"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/DiPagOperationErase"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Operation Erase"/>
+      <description value="Permanente Löschung eines Dokumentes. &#xA;Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'AM010106' (Rechnungsdokument) gekennzeichnet sind. Es werden alle zugehörigen Anhang-Dokument (KDL-type != 'AM010106') mit gelöscht. Es erfolgt eine permanente Löschung der Ressourcen, d.h. die Ressourcen sind nach der Operation nicht mehr auffindbar und es werden keine Historie oder Versionen der Ressourcen angelegt."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/DiPagOperationSubmit"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Operation Invoice-Submit"/>
+      <description value="Rechnung einreichen durch die Leistungserbringer:in"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/DiPagOperationProcessFlag"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Operation ProcessFlag"/>
+      <description value="Setzt die Markierungen eines Rechnungsdokuments (DocumentReference) nach dem Complete-Replacement-Prinzip: Die übermittelten Markierungen ersetzen vollständig den bisherigen Markierungssatz des Dokuments. Markierungen, die nicht im Request enthalten sind, werden entfernt; Änderungen an bestehenden Markierungen erfolgen durch erneutes Übermitteln mit aktualisierten Werten. Der Request muss daher stets alle weiterhin gültigen Markierungen inklusive ihrer jeweiligen Zusatzinformationen vollständig enthalten. Wird kein 'markierung'-Parameter übergeben (leerer Markierungssatz), werden alle änderbaren Markierungen des Dokuments entfernt. Da dies der einzige Endpunkt zur Pflege der Markierungen ist, wird hierüber auch das vollständige Löschen der Markierungen unterstützt.&#xA;&#xA;Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können über diese Operation weder gesetzt noch entfernt werden und werden ignoriert, falls sie übermittelt werden. Sie bleiben sowohl von der Ersetzung als auch von der Löschung unberührt."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/DiPagOperationRetrieve"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Operation Retrieve"/>
+      <description value="Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-operationen-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Operationen"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-person"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Person"/>
+      <description value="Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-rechnung"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-rechnung-abrechnungsart-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnung Abrechnungsart CS"/>
+      <description value="CodeSystem für die verschiedenen Abrechnungsarten innerhalb einer E-Rechnnung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-rechnung-abrechnungsart-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnung Abrechnungsart VS"/>
+      <description value="ValueSet zur Klassifizierung von Abrechnungsarten"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-rechnung-behandlungsart-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnung Behandlungsart VS"/>
+      <description value="ValueSet zur Klassifizierung von Behandlungsarten"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-rechnung-identifier-type-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnung Identifier Type CS"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-rechnung-markierung-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnung Markierung CS"/>
+      <description value="CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-rechnung-markierung-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnung Markierung VS"/>
+      <description value="ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-rechnung-submit-modus-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnung Submit Modus CS"/>
+      <description value="CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-rechnung-type-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnung Type CS"/>
+      <description value="CodeSystem für die Differenzierung von verschiedenen Typen einer E-Rechnnung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-rechnung-submit-modus-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnung Type VS"/>
+      <description value="ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-rechnungsart-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsart CS"/>
+      <description value="CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-rechnungsart-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsart VS"/>
+      <description value="ValueSet zur Klassifizierung von Rechnungsarten"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-rechnungsdiagnose"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsdiagnose"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-rechnungsdokument"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsdokument"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-rechnungsposition"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsposition"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagRechnungspositionBehandlungsdatum"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsposition Behandlungsdatum"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-rechnungsposition-faktor-gruende-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-rechnungsposition-zusatz-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagRechnungspositionZusatz"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsposition Zusatz Extension"/>
+      <description value="In dieser Extension wird der Zusatz zu einer Rechnungsposition im Kontext der Digitalen Patientenrechnung abgebildet."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-rechnungsposition-zusatz-VS"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-rechnungsprozedur"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsprozedur"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-rechnungsstatus-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsstatus"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-rechnungsstatus-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Rechnungsstatus CS"/>
+      <description value="CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagInvoiceReplaces"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Replaces Extension"/>
+      <description value="Fügt die Extension replaces hinzu, die es in R4 bereits für Invoice gab (https://hl7.org/fhir/R4/extension-request-replaces.html) leider im aktuellen Extension Pack aber nicht mehr den Context Invoice hat."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-restricted-mime-types-in-binary-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Restricted Mime Types in Binary"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-sonstigesdokument-type-vs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Sonstiges Dokument Type VS"/>
+      <description value="ValueSet zur Klassifizierung von weiteren Dokumenten"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-task-requestedPerformer"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Task RequestedPerformer"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-participant-role-VS"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Teilnehmer Rolle"/>
+      <description value="Diese Codes enthalten Teilnehmer Rollen der Digitalen Patientenrechnung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-participant-role-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Teilnehmer Rolle"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagTeilsumme"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Teilsumme"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagTokenStornierteRechnung"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Token der stornierten Rechnung"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/dipag-chargeitem-type-cs"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-rechnungsposition-type"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Typ der Rechnungsposition Extension"/>
+      <description value="In dieser Extension wird der Typ einer Rechnungsposition im Kontext der Digitalen Patientenrechnung abgebildet."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/dipag-chargeitem-type-VS"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Typ der Rechnungsposition ValueSet"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-wegegeld-reiseentschaedigung"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-zahlungsziel"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Zahlungsziel"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-zahnregion"/>
+      </reference>
+      <name value="Digitale Patientenrechnung Zahn/Region Extension"/>
+      <description value="In dieser Extension wird die Angabe der Zahn/Region an einer Rechnungsposition der Digitalen Patientenrechnung abgebildet."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/DiPagVerkehrsmittel"/>
+      </reference>
+      <name value="Digitale PatientenrechnungVerkehrsmittel"/>
+      <description value="Dieses ValueSet bietet eine Auswahl an Verkehrsmitteln, die im Rahmen einer Reisekostenentschädigung ausgewählt werden können."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagBemaPunktsumme"/>
+      </reference>
+      <name value="DiPag BEMA Punktsumme"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagPaymentTo"/>
+      </reference>
+      <name value="DiPag PaymentTo Extension (MVP – basiert auf HL7 FM WG Draft)"/>
+      <description value="Diese Extension basiert auf dem **DRAFT** der HL7 Financial Management Working Group (FM WG) für die Standard-Extension *PaymentTo*.&#xA;&#xA;Die Struktur entspricht dem aktuellen Entwurf der FM WG:&#xA;&#xA;- **paymentType**: Art der Zahlungsverbindung (z. B. IBAN, SWIFT, Kontonummer)&#xA;- **account**: Kontonummer / IBAN&#xA;- **bank**: Name der Bank&#xA;- **branch**: Bankleitzahl / BIC&#xA;- **reference**: Verwendungszweck (typischerweise die Rechnungsnummer)&#xA;- **accountHolderName**: Name des Kontoinhabers (MVP-spezifische Ergänzung, im HL7-Draft noch nicht enthalten)&#xA;- **contact**: Kontaktdaten des Zahlungsempfängers&#xA;- **notes**: Weitere Hinweise zur Zahlung&#xA;&#xA;**Hinweis zur Nutzung:** Die HL7 FM WG wird diese Extension im offiziellen HL7 Extension Package veröffentlichen. Die Verwendung dieser Extension ist daher **ausschließlich im Rahmen dieses MVP** vorgesehen und wird sich mit der Fertigstellung der offiziellen HL7-Standard-Extension ändern."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/dipag-patient"/>
+      </reference>
+      <name value="DiPagPatient"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/ExampleR5DocumentReference"/>
+      </reference>
+      <name value="Example DiPag Document Reference"/>
+      <description value="Laborbefund vom 28.9.2023"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/ExampleR5Bundle"/>
+      </reference>
+      <name value="ExampleR5Bundle"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DocumentReference"/>
+      </extension>
+      <reference>
+        <reference value="DocumentReference/ExampleR5DocumentReferenceSonstigesDokument"/>
+      </reference>
+      <name value="ExampleR5DocumentReferenceSonstigesDokument"/>
+      <description value="Molekularpathologiebefund vom 31.12.21"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f"/>
+      </reference>
+      <name value="GOZ Position: Professionelle Zahnreinigung"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Zahnsteinentfernung und Politur nach GOZ"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e"/>
+      </reference>
+      <name value="GOÄ Position 1: Ärztliche Konsultation"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Eingehende Konsultation mit Befund nach GOÄ"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a"/>
+      </reference>
+      <name value="Hauptbehandler - Dr. Schulz"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Hauptbehandelnder Zahnarzt"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/InvoicePeriod"/>
+      </reference>
+      <name value="Invoice.period als Backport aus R5"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Invoice"/>
+      </extension>
+      <reference>
+        <reference value="Invoice/KfoMehrkosten3Rechnung"/>
+      </reference>
+      <name value="KFO-GKV-Abrechnung Q3/2024 – ARZ ZB GmbH"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Invoice"/>
+      </extension>
+      <reference>
+        <reference value="Invoice/KfoMehrkosten1Rechnung"/>
+      </reference>
+      <name value="KFO-Mehrkosten Rechnung Q3/2024"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Invoice"/>
+      </extension>
+      <reference>
+        <reference value="Invoice/KfoMehrkosten2Rechnung"/>
+      </reference>
+      <name value="KFO-Mehrkosten Rechnung Q3/2025 – Büdingen Dent"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Invoice"/>
+      </extension>
+      <reference>
+        <reference value="Invoice/KfoMehrkosten4Rechnung"/>
+      </reference>
+      <name value="KFO-Mehrkosten Rechnung Q3/2025 – KIG 3-5 Mehrkostenvereinbarung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten1-P1"/>
+      </reference>
+      <name value="KfoMehrkosten1 Rechnungsposition 1 – GOZ 6100 Klebebracket (01.07.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten1-P10"/>
+      </reference>
+      <name value="KfoMehrkosten1 Rechnungsposition 10 – BEMA 128a Abzug zu P9 (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten1-P2"/>
+      </reference>
+      <name value="KfoMehrkosten1 Rechnungsposition 2 – BEMA 126a Abzug zu P1 (01.07.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten1-P3"/>
+      </reference>
+      <name value="KfoMehrkosten1 Rechnungsposition 3 – GOZ 2000 Fissurenversiegelung (01.07.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten1-P4"/>
+      </reference>
+      <name value="KfoMehrkosten1 Rechnungsposition 4 – GOZ 6100 Klebebracket (20.08.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten1-P5"/>
+      </reference>
+      <name value="KfoMehrkosten1 Rechnungsposition 5 – BEMA 126a Abzug zu P4 (20.08.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten1-P6"/>
+      </reference>
+      <name value="KfoMehrkosten1 Rechnungsposition 6 – GOZ 6150 Bogen (20.08.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten1-P7"/>
+      </reference>
+      <name value="KfoMehrkosten1 Rechnungsposition 7 – BEMA 128a Abzug zu P6 (20.08.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten1-P8"/>
+      </reference>
+      <name value="KfoMehrkosten1 Rechnungsposition 8 – GOZ 2000 Fissurenversiegelung (20.08.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten1-P9"/>
+      </reference>
+      <name value="KfoMehrkosten1 Rechnungsposition 9 – GOZ 6150 Bogen (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten2-P1"/>
+      </reference>
+      <name value="KfoMehrkosten2 Rechnungsposition 1 – GOZ 2110A Minibracket (04.08.25)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten2-P2"/>
+      </reference>
+      <name value="KfoMehrkosten2 Rechnungsposition 2 – BEMA 126A Abzug zu P1 (04.08.25)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten2-P3"/>
+      </reference>
+      <name value="KfoMehrkosten2 Rechnungsposition 3 – GOZ 6150A Superelastischer Bogen (04.08.25)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten2-P4"/>
+      </reference>
+      <name value="KfoMehrkosten2 Rechnungsposition 4 – BEMA 128A Abzug zu P3 (04.08.25)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten2-P5"/>
+      </reference>
+      <name value="KfoMehrkosten2 Rechnungsposition 5 – GOZ 2000 Fissurenversiegelung (04.08.25)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten2-P6"/>
+      </reference>
+      <name value="KfoMehrkosten2 Rechnungsposition 6 – GOZ 2110A Minibracket (24.09.25)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten2-P7"/>
+      </reference>
+      <name value="KfoMehrkosten2 Rechnungsposition 7 – BEMA 126A Abzug zu P6 (24.09.25)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten2-P8"/>
+      </reference>
+      <name value="KfoMehrkosten2 Rechnungsposition 8 – GOZ 2000 Fissurenversiegelung (24.09.25)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/KfoMehrkosten3Behandler"/>
+      </reference>
+      <name value="KfoMehrkosten3 Behandler – ARZ ZB GmbH"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P1"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 1 – KONS 106 Beseitigen scharfer Zahnkanten (23.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P10"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 10 – Labor 710-0 Aufsatz (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P11"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 11 – Labor 732-0 Labialbogen intermaxillar (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P12"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 12 – Labor 734-0 Feder, geschlossen (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P13"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 13 – Labor 740-0 Verbindungselemente/inframaxillar (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P14"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 14 – Labor 711-0 Abschirmelement (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P15"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 15 – Labor 750-0 Einarmiges H-/A-Element (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P2"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 2 – BEMA 119d Umformung OK besonders schwierig (29.07.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P3"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 3 – BEMA 119d Umformung UK besonders schwierig (29.07.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P4"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 4 – BEMA 120d Einstellung B/B besonders schwierig (29.07.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P5"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 5 – Labor MAT Abdruckpauschale (29.07.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P6"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 6 – Labor 001-0 Modell (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P7"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 7 – Labor 011-1 Modellpaar trimmen (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P8"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 8 – Labor 020-2 Basis für Konstruktionsbiss (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten3-P9"/>
+      </reference>
+      <name value="KfoMehrkosten3 Rechnungsposition 9 – Labor 702-0 Basis bi/maxillares Gerät (16.09.24)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten4-P1"/>
+      </reference>
+      <name value="KfoMehrkosten4 Rechnungsposition 1 – GOZ 6100 Klebebracket 3,70-fach (23.07.25)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/KfoMehrkosten4-P2"/>
+      </reference>
+      <name value="KfoMehrkosten4 Rechnungsposition 2 – GOZ 6150 Ungeteilter Bogen 3,50-fach (23.07.25)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a"/>
+      </reference>
+      <name value="Laborleistung: Zahnersatz"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Anfertigung einer Teilprothese durch Fremdlabor"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"/>
+      </reference>
+      <name value="Musterrechnung - Dr. A. Arzt"/>
+      <description value="Behandelnder Arzt aus der Musterrechnung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"/>
+      </reference>
+      <name value="Musterrechnung - Patient B. Patient"/>
+      <description value="Patient aus der Musterrechnung Arztbehandlung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"/>
+      </reference>
+      <name value="Musterrechnung - Praxis Dr. A. Arzt"/>
+      <description value="Arztpraxis aus der Musterrechnung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Invoice"/>
+      </extension>
+      <reference>
+        <reference value="Invoice/a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d"/>
+      </reference>
+      <name value="Musterrechnung Arztbehandlung"/>
+      <description value="Rechnung Nr. 1425 vom 24.10.2018"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/MusterrechnungBundle"/>
+      </reference>
+      <name value="Musterrechnung Bundle"/>
+      <description value="Bundle mit allen Ressourcen der Musterrechnung Arztbehandlung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"/>
+      </reference>
+      <name value="Musterrechnung Position 1 - GOÄ Nr. 1 (04.10.18)"/>
+      <description value="Beratung, auch telefonisch"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b"/>
+      </reference>
+      <name value="Musterrechnung Position 2 - GOÄ Nr. 5 (04.10.18)"/>
+      <description value="Symptombezogene Untersuchung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c"/>
+      </reference>
+      <name value="Musterrechnung Position 3 - GOÄ Nr. 70 (04.10.18)"/>
+      <description value="Arbeitsunfähigkeitsbescheinigung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d"/>
+      </reference>
+      <name value="Musterrechnung Position 4 - GOÄ Nr. 1 (19.10.18)"/>
+      <description value="Beratung, auch telefonisch"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e"/>
+      </reference>
+      <name value="Musterrechnung Position 5 - GOÄ Nr. 5 (19.10.18)"/>
+      <description value="Symptombezogene Untersuchung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f"/>
+      </reference>
+      <name value="Musterrechnung Position 6 - GOÄ Nr. 3501 (19.10.18)"/>
+      <description value="Blutsenkung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a"/>
+      </reference>
+      <name value="Musterrechnung Position 7 - GOÄ Nr. 3597.H1 (19.10.18)"/>
+      <description value="Laktatdehydrogenase (LDH)"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/PatientenBundle"/>
+      </reference>
+      <name value="PatientenBundle"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/PatientVater"/>
+      </reference>
+      <name value="PatientVater"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f"/>
+      </reference>
+      <name value="Prozedur - Zahnimplantat"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Zahnimplantat-Einsetzung als Prozedur"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b"/>
+      </reference>
+      <name value="Sachkosten: Dentalmaterial"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Verbrauchsmaterial für Behandlung"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/dipag-auditEvent-agent-who-display"/>
+      </reference>
+      <name value="Suchparameter AuditEvent.agent.who.display"/>
+      <description value="Ein SearchParameter auf der Ressource AuditEvent, der die Suche nach dem Text in agent.who.display ermöglicht."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/dipag-markierung"/>
+      </reference>
+      <name value="Suchparameter DocumentReference dipag-markierung"/>
+      <description value="Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach einer manuellen Markierung ermöglicht."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/dipag-docRef-author-display"/>
+      </reference>
+      <name value="Suchparameter DocumentReference.author.display"/>
+      <description value="Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach dem Text in author.display ermöglicht."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/dipag-docRef-subject-display"/>
+      </reference>
+      <name value="Suchparameter DocumentReference.subject.display"/>
+      <description value="Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach dem Text in subject.display ermöglicht."/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ChargeItem"/>
+      </extension>
+      <reference>
+        <reference value="ChargeItem/e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c"/>
+      </reference>
+      <name value="Wegegeld/Reiseentschädigung: Hausbesuch"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Reiseentschädigung für Hausbesuch über 25 km"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"/>
+      </reference>
+      <name value="Zahnarztpraxis Dr. Schulz"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Die Praxis, die die Rechnung ausstellt"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d"/>
+      </reference>
+      <name value="Zahnlabor Müller"/>
+      <description value="**Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.&#xA;&#xA;Labor für Zahnersatz und Prothesen"/>
+      <exampleCanonical value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiPagZusatzinformationZurAbrechnungsart"/>
+      </reference>
+      <name value="Zusatzinformation zur Abrechnungsart"/>
+      <description value="Die Abrechnung nach §13 kann ergänzend zu den grundsätzlichen Ausrichtungen der Abrechnung aufgeführt werden. Diese Extension erlaubt es, die Ausrichtung der Rechnung entsprechend zu flaggen."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Einfuehrung"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="release-notes.html"/>
+        </extension>
+        <nameUrl value="release-notes.html"/>
+        <title value="Release Notes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="zweckbestimmung.html"/>
+        </extension>
+        <nameUrl value="zweckbestimmung.html"/>
+        <title value="Zweckbestimmung"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="hinweis-zu-versionen.html"/>
+        </extension>
+        <nameUrl value="hinweis-zu-versionen.html"/>
+        <title value="Hinweis zu Artefakt-Versionen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="use-cases.html"/>
+        </extension>
+        <nameUrl value="use-cases.html"/>
+        <title value="Use Cases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="akteure-und-interaktionen.html"/>
+        </extension>
+        <nameUrl value="akteure-und-interaktionen.html"/>
+        <title value="Akteure und Interaktionen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="informationsmodell.html"/>
+        </extension>
+        <nameUrl value="informationsmodell.html"/>
+        <title value="Informationsmodell"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="begriffsdefinitionen.html"/>
+        </extension>
+        <nameUrl value="begriffsdefinitionen.html"/>
+        <title value="Begriffsdefinitionen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="szenarien.html"/>
+        </extension>
+        <nameUrl value="szenarien.html"/>
+        <title value="Szenarien"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R0-rechnungsempfaenger-ermitteln.html"/>
+        </extension>
+        <nameUrl value="R0-rechnungsempfaenger-ermitteln.html"/>
+        <title value="R0: Abfrage des Rechnungsempfaengers und dessen Einwilligung zum Rechnungsversand"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R1-rechnung-versenden.html"/>
+        </extension>
+        <nameUrl value="R1-rechnung-versenden.html"/>
+        <title value="R1: Rechnung mit Dokumenten validieren und versenden"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R2-rechnung-einreichen-bulk.html"/>
+        </extension>
+        <nameUrl value="R2-rechnung-einreichen-bulk.html"/>
+        <title value="R2: Rechnung validieren/einreichen (Bulk)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R3-pdf-abruf-rechnungsersteller.html"/>
+        </extension>
+        <nameUrl value="R3-pdf-abruf-rechnungsersteller.html"/>
+        <title value="R3: Abfrage von angereicherten PDF/A per Token (Rechnungsersteller)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R4-pdf-abruf-rechnungsersteller-bulk.html"/>
+        </extension>
+        <nameUrl value="R4-pdf-abruf-rechnungsersteller-bulk.html"/>
+        <title value="R4: Abfrage von angereicherten PDF/A per Token (Rechnungsersteller, Bulk)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R5-rechnungsabruf-rechnungsempfaenger.html"/>
+        </extension>
+        <nameUrl value="R5-rechnungsabruf-rechnungsempfaenger.html"/>
+        <title value="R5: Abruf von Rechnungen (Rechnungsempfaenger)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R6-abfrage-token-rechnungsempfaenger.html"/>
+        </extension>
+        <nameUrl value="R6-abfrage-token-rechnungsempfaenger.html"/>
+        <title value="R6: Abfrage von Daten zu Rechnungen und Dokumenten per Token (Rechnungsempfaenger)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R7-status-aendern.html"/>
+        </extension>
+        <nameUrl value="R7-status-aendern.html"/>
+        <title value="R7: Manuelles Aendern des Bearbeitungsstatus von Rechnungen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R8-markieren.html"/>
+        </extension>
+        <nameUrl value="R8-markieren.html"/>
+        <title value="R8: Manuelles Markieren von Rechnungen und Dokumenten"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R9-loeschen.html"/>
+        </extension>
+        <nameUrl value="R9-loeschen.html"/>
+        <title value="R9: Loeschen eines Rechnungsvorganges"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R10-nutzungsprotokoll.html"/>
+        </extension>
+        <nameUrl value="R10-nutzungsprotokoll.html"/>
+        <title value="R10: Nutzerprotokoll einsehen"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="R11-abfrage-token-kostentraeger.html"/>
+        </extension>
+        <nameUrl value="R11-abfrage-token-kostentraeger.html"/>
+        <title value="R11: Abfrage von Daten zu Rechnungen und Dokumenten per Token (Kostentraeger)"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="rechnungsinhalt.html"/>
+        </extension>
+        <nameUrl value="rechnungsinhalt.html"/>
+        <title value="Rechnungsinhalt"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

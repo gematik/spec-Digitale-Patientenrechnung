@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="dipag-sonstigesdokument-type-vs"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet dipag-sonstigesdokument-type-vs</b></p><a name="dipag-sonstigesdokument-type-vs"> </a><a name="hcdipag-sonstigesdokument-type-vs"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href="https://simplifier.net/resolve?scope=dvmd.kdl.r4@2025.0.1&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl"><code>http://dvmd.de/fhir/CodeSystem/kdl</code></a><span title="Version is not explicitly stated, which means it is fixed to 2025, the version found through the package references"> version &#x1F4E6;2025</span></li></ul><p>This value set excludes codes based on the following rules:</p><ul><li>Exclude these codes as defined in <a href="https://simplifier.net/resolve?scope=dvmd.kdl.r4@2025.0.1&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl"><code>http://dvmd.de/fhir/CodeSystem/kdl</code></a><span title="Version is not explicitly stated, which means it is fixed to 2025, the version found through the package references"> version &#x1F4E6;2025</span><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href="https://simplifier.net/resolve?scope=dvmd.kdl.r4@2025.0.1&amp;canonical=http://dvmd.de/fhir/CodeSystem/kdl#kdl-cs-2025-AM010106">AM010106</a></td><td>Rechnung ambulante/stationäre Behandlung</td><td>Die Dokumentation beinhaltet eine individuelle Kostenerstellung der erbrachten Leistungen an den jeweiligen Kostenträger.</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://gematik.de/fhir/dipag/ValueSet/dipag-sonstigesdokument-type-vs"/>
+  <version value="1.0.8"/>
+  <name value="DiPagSonstigesDokumentTypeVS"/>
+  <title value="Digitale Patientenrechnung Sonstiges Dokument Type VS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-26"/>
+  <publisher value="gematik GmbH"/>
+  <contact>
+    <name value="gematik GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gematik.de"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet zur Klassifizierung von weiteren Dokumenten"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://dvmd.de/fhir/CodeSystem/kdl"/>
+    </include>
+    <exclude>
+      <system value="http://dvmd.de/fhir/CodeSystem/kdl"/>
+      <concept>
+        <code value="AM010106"/>
+        <display value="Rechnung ambulante/stationäre Behandlung"/>
+      </concept>
+    </exclude>
+  </compose>
+</ValueSet>

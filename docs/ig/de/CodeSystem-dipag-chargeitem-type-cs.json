@@ -1,0 +1,63 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dipag-chargeitem-type-cs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-chargeitem-type-cs</b></p><a name=\"dipag-chargeitem-type-cs\"> </a><a name=\"hcdipag-chargeitem-type-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">GOÄ<a name=\"dipag-chargeitem-type-cs-GO.196\"> </a></td><td>Leistung nach Gebührenordnung GOÄ</td></tr><tr><td style=\"white-space:nowrap\">GOZ<a name=\"dipag-chargeitem-type-cs-GOZ\"> </a></td><td>Leistung nach Gebührenordnung GOZ</td></tr><tr><td style=\"white-space:nowrap\">BEMA<a name=\"dipag-chargeitem-type-cs-BEMA\"> </a></td><td>BEMA-Leistung</td></tr><tr><td style=\"white-space:nowrap\">EigenlaborleistungMaterial<a name=\"dipag-chargeitem-type-cs-EigenlaborleistungMaterial\"> </a></td><td>Eigenlaborleistung/Material</td></tr><tr><td style=\"white-space:nowrap\">Fremdlaborleistung<a name=\"dipag-chargeitem-type-cs-Fremdlaborleistung\"> </a></td><td>Fremdlaborleistung</td></tr><tr><td style=\"white-space:nowrap\">SachkostenAuslagen<a name=\"dipag-chargeitem-type-cs-SachkostenAuslagen\"> </a></td><td>Sachkosten/Auslagen</td></tr><tr><td style=\"white-space:nowrap\">WegegeldReiseentschaedigung<a name=\"dipag-chargeitem-type-cs-WegegeldReiseentschaedigung\"> </a></td><td>Wegegeld/Reiseentschädigung</td></tr></table></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+  "version" : "1.0.8",
+  "name" : "DiPagRechnungspositionTypeCS",
+  "title" : "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "count" : 7,
+  "concept" : [{
+    "code" : "GOÄ",
+    "display" : "Leistung nach Gebührenordnung GOÄ"
+  },
+  {
+    "code" : "GOZ",
+    "display" : "Leistung nach Gebührenordnung GOZ"
+  },
+  {
+    "code" : "BEMA",
+    "display" : "BEMA-Leistung"
+  },
+  {
+    "code" : "EigenlaborleistungMaterial",
+    "display" : "Eigenlaborleistung/Material"
+  },
+  {
+    "code" : "Fremdlaborleistung",
+    "display" : "Fremdlaborleistung"
+  },
+  {
+    "code" : "SachkostenAuslagen",
+    "display" : "Sachkosten/Auslagen"
+  },
+  {
+    "code" : "WegegeldReiseentschaedigung",
+    "display" : "Wegegeld/Reiseentschädigung"
+  }]
+}

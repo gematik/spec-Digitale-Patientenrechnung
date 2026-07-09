@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ChargeItem xmlns="http://hl7.org/fhir">
+  <id value="b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f"/>
+  <meta>
+    <profile value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ChargeItem b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f</b></p><a name="b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f"> </a><a name="hcb6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-dipag-rechnungsposition.html">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href="CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GOZ">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOZ</a> (Leistung nach Gebührenordnung GOZ)</p><p><b>Digitale Patientenrechnung Rechnungsposition Zusatz Extension</b>: <a href="CodeSystem-dipag-rechnungsposition-zusatz-cs.html#dipag-rechnungsposition-zusatz-cs-V">Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem: V</a> (auf Verlangen erbrachte Leistung)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><blockquote><p><b>url</b></p><a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Einfachsatz">Einfachsatz</a></blockquote><p><b>value</b>: <span title="Euro">€60,00</span> (EUR)</p><blockquote><p><b>url</b></p><a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Punktzahl">Punktzahl</a></blockquote><p><b>value</b>: 28</p><p><b>Value</b>: 2</p><blockquote><p><b>url</b></p><a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2024-02-25</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bäk/gzä 1040}">Professionelle Zahnreinigung</span></p><p><b>subject</b>: <a href="Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2024-02-25 --&gt; 2024-02-25</p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="Practitioner-c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a.html">Practitioner Dr. Hans Schulz(official)</a></td></tr></table><p><b>bodysite</b>: <span title="Codes:"></span></p></div>
+  </text>
+  <extension url="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type">
+    <valueCoding>
+      <system value="https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"/>
+      <code value="GOZ"/>
+    </valueCoding>
+  </extension>
+  <extension url="https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz">
+    <valueCoding>
+      <system value="https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"/>
+      <code value="V"/>
+      <display value="auf Verlangen erbrachte Leistung"/>
+    </valueCoding>
+  </extension>
+  <extension url="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben">
+    <extension url="Einfachsatz">
+      <valueMoney>
+        <value value="60"/>
+        <currency value="EUR"/>
+      </valueMoney>
+    </extension>
+    <extension url="Punktzahl">
+      <valueDecimal value="28"/>
+    </extension>
+    <extension url="Faktor">
+      <extension url="Value">
+        <valueDecimal value="2"/>
+      </extension>
+    </extension>
+  </extension>
+  <extension url="https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum">
+    <valueDate value="2024-02-25"/>
+  </extension>
+  <status value="billable"/>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bäk/gzä"/>
+      <code value="1040"/>
+      <display value="Professionelle Zahnreinigung"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"/>
+  </subject>
+  <occurrencePeriod>
+    <start value="2024-02-25"/>
+    <end value="2024-02-25"/>
+  </occurrencePeriod>
+  <performer>
+    <actor>
+      <reference value="Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a"/>
+    </actor>
+  </performer>
+  <bodysite>
+    <extension url="https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion">
+      <valueString value="11-48"/>
+    </extension>
+  </bodysite>
+</ChargeItem>

@@ -1,0 +1,794 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "MusterrechnungBundle",
+  "meta" : {
+    "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle"]
+  },
+  "language" : "de",
+  "type" : "collection",
+  "timestamp" : "2018-10-24T12:00:00+01:00",
+  "entry" : [{
+    "fullUrl" : "urn:uuid:a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d",
+    "resource" : {
+      "resourceType" : "Invoice",
+      "id" : "a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Invoice_a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Invoice a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d</b></p><a name=\"a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d\"> </a><a name=\"hca0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnung.html\">Digitale Patientenrechnung Rechnung</a></p></div><p><b>Digitale Patientenrechnung Extension Behandlungsart</b>: <a href=\"http://terminology.hl7.org/7.2.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>Digitale Patientenrechnung Extension Fachrichtung</b>: <a href=\"https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&amp;canonical=http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen#AerztlicheFachrichtungen-INNE\">Aerztliche Fachrichtungen: INNE</a> (Innere Medizin)</p><p><b>Invoice.period als Backport aus R5</b>: 2018-10-04 --&gt; 2018-10-19</p><p><b>Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext</b>: Grippaler Infekt; Hepatopathie</p><p><b>identifier</b>: Rechnungsnummer/1425</p><p><b>status</b>: issued</p><p><b>type</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs GOÄ}\">Gebührenordnung für Ärzte</span></p><p><b>subject</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)</a></p><p><b>recipient</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">Herr B. Patient</a></p><p><b>date</b>: 2018-10-24</p><blockquote><p><b>participant</b></p><p><b>role</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs leistungserbringer}\">Leistungserbringer</span></p><p><b>actor</b>: <a href=\"Practitioner-2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e.html\">Practitioner Dr. A. Arzt(official)</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>role</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs forderungsinhaber}\">Forderungsinhaber</span></p><p><b>actor</b>: <a href=\"Organization-3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f.html\">Organization Praxis Dr. A. Arzt</a></p></blockquote><p><b>issuer</b>: <a href=\"Organization-3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f.html\">Organization Praxis Dr. A. Arzt</a></p><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 1</p><p><b>chargeItem</b>: <a href=\"ChargeItem-4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a.html\">ChargeItem 1</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>10.72</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 2</p><p><b>chargeItem</b>: <a href=\"ChargeItem-5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b.html\">ChargeItem 5</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>10.72</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 3</p><p><b>chargeItem</b>: <a href=\"ChargeItem-6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c.html\">ChargeItem 70</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>5.36</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 4</p><p><b>chargeItem</b>: <a href=\"ChargeItem-7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d.html\">ChargeItem 1</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>10.72</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 5</p><p><b>chargeItem</b>: <a href=\"ChargeItem-8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e.html\">ChargeItem 5</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>10.72</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 6</p><p><b>chargeItem</b>: <a href=\"ChargeItem-9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f.html\">ChargeItem 3501</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>4.02</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 7</p><p><b>chargeItem</b>: <a href=\"ChargeItem-0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a.html\">ChargeItem 3597.H1</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>2.68</td><td>Euro</td></tr></table></blockquote></blockquote><h3>TotalNets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>54.95</td><td>Euro</td></tr></table><h3>TotalGrosses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>54.95</td><td>Euro</td></tr></table><p><b>paymentTerms</b>: </p><div><p>Zahlbar bis zum 14.11.2018</p>\n</div><p><b>note</b>: </p><blockquote><div><p>Berechnet nach der Gebührenordnung für Ärzte / GOÄ (Stand 01.01.2002). Bitte überweisen Sie den Betrag unter Angabe der Rechnungsnummer und des Rechnungsdatums bis zum 14.11.2018 auf das unten angegebene Konto.</p>\n</div></blockquote></div>"
+      },
+      "extension" : [{
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart",
+        "valueCoding" : {
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code" : "AMB",
+          "display" : "ambulatory"
+        }
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung",
+        "valueCoding" : {
+          "system" : "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+          "code" : "INNE",
+          "display" : "Innere Medizin"
+        }
+      },
+      {
+        "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]",
+        "valuePeriod" : {
+          "start" : "2018-10-04",
+          "end" : "2018-10-19"
+        }
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext",
+        "valueString" : "Grippaler Infekt; Hepatopathie"
+      }],
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs",
+            "code" : "invoice"
+          }]
+        },
+        "system" : "https://praxis-dr-arzt.de/fhir/sid/rechnungsnummer",
+        "value" : "1425"
+      }],
+      "status" : "issued",
+      "type" : {
+        "coding" : [{
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs",
+          "code" : "GOÄ",
+          "display" : "Gebührenordnung für Ärzte"
+        }]
+      },
+      "subject" : {
+        "reference" : "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      },
+      "recipient" : {
+        "reference" : "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+        "identifier" : {
+          "type" : {
+            "coding" : [{
+              "system" : "http://fhir.de/CodeSystem/identifier-type-de-basis",
+              "code" : "KVZ10"
+            }]
+          },
+          "system" : "http://fhir.de/sid/gkv/kvid-10",
+          "value" : "B123456789"
+        },
+        "display" : "Herr B. Patient"
+      },
+      "date" : "2018-10-24",
+      "participant" : [{
+        "role" : {
+          "coding" : [{
+            "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs",
+            "code" : "leistungserbringer"
+          }]
+        },
+        "actor" : {
+          "reference" : "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+        }
+      },
+      {
+        "role" : {
+          "coding" : [{
+            "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs",
+            "code" : "forderungsinhaber"
+          }]
+        },
+        "actor" : {
+          "reference" : "Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
+        }
+      }],
+      "issuer" : {
+        "reference" : "Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
+      },
+      "lineItem" : [{
+        "sequence" : 1,
+        "chargeItemReference" : {
+          "reference" : "ChargeItem/4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
+        },
+        "priceComponent" : [{
+          "type" : "base",
+          "amount" : {
+            "value" : 10.72,
+            "currency" : "EUR"
+          }
+        }]
+      },
+      {
+        "sequence" : 2,
+        "chargeItemReference" : {
+          "reference" : "ChargeItem/5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b"
+        },
+        "priceComponent" : [{
+          "type" : "base",
+          "amount" : {
+            "value" : 10.72,
+            "currency" : "EUR"
+          }
+        }]
+      },
+      {
+        "sequence" : 3,
+        "chargeItemReference" : {
+          "reference" : "ChargeItem/6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c"
+        },
+        "priceComponent" : [{
+          "type" : "base",
+          "amount" : {
+            "value" : 5.36,
+            "currency" : "EUR"
+          }
+        }]
+      },
+      {
+        "sequence" : 4,
+        "chargeItemReference" : {
+          "reference" : "ChargeItem/7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d"
+        },
+        "priceComponent" : [{
+          "type" : "base",
+          "amount" : {
+            "value" : 10.72,
+            "currency" : "EUR"
+          }
+        }]
+      },
+      {
+        "sequence" : 5,
+        "chargeItemReference" : {
+          "reference" : "ChargeItem/8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e"
+        },
+        "priceComponent" : [{
+          "type" : "base",
+          "amount" : {
+            "value" : 10.72,
+            "currency" : "EUR"
+          }
+        }]
+      },
+      {
+        "sequence" : 6,
+        "chargeItemReference" : {
+          "reference" : "ChargeItem/9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f"
+        },
+        "priceComponent" : [{
+          "type" : "base",
+          "amount" : {
+            "value" : 4.02,
+            "currency" : "EUR"
+          }
+        }]
+      },
+      {
+        "sequence" : 7,
+        "chargeItemReference" : {
+          "reference" : "ChargeItem/0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a"
+        },
+        "priceComponent" : [{
+          "type" : "base",
+          "amount" : {
+            "value" : 2.68,
+            "currency" : "EUR"
+          }
+        }]
+      }],
+      "totalNet" : {
+        "value" : 54.95,
+        "currency" : "EUR"
+      },
+      "totalGross" : {
+        "value" : 54.95,
+        "currency" : "EUR"
+      },
+      "paymentTerms" : "Zahlbar bis zum 14.11.2018",
+      "_paymentTerms" : {
+        "extension" : [{
+          "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+          "valueDate" : "2018-11-14"
+        }]
+      },
+      "note" : [{
+        "text" : "Berechnet nach der Gebührenordnung für Ärzte / GOÄ (Stand 01.01.2002). Bitte überweisen Sie den Betrag unter Angabe der Rechnungsnummer und des Rechnungsdatums bis zum 14.11.2018 auf das unten angegebene Konto."
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+    "resource" : {
+      "resourceType" : "Patient",
+      "id" : "1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d</b></p><a name=\"1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d\"> </a><a name=\"hc1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-patient.html\">DiPagPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">Patientenweg 30 Musterstadt 12345 DE (home)</td></tr></table></div>"
+      },
+      "identifier" : [{
+        "type" : {
+          "coding" : [{
+            "system" : "http://fhir.de/CodeSystem/identifier-type-de-basis",
+            "code" : "KVZ10"
+          }]
+        },
+        "system" : "http://fhir.de/sid/gkv/kvid-10",
+        "value" : "B123456789"
+      }],
+      "name" : [{
+        "use" : "official",
+        "text" : "B. Patient",
+        "family" : "Patient",
+        "given" : ["B."]
+      }],
+      "gender" : "male",
+      "birthDate" : "1969-10-10",
+      "address" : [{
+        "use" : "home",
+        "type" : "both",
+        "line" : ["Patientenweg 30"],
+        "_line" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+            "valueString" : "Patientenweg"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+            "valueString" : "30"
+          }]
+        }],
+        "city" : "Musterstadt",
+        "postalCode" : "12345",
+        "country" : "DE"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+    "resource" : {
+      "resourceType" : "Practitioner",
+      "id" : "2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-person"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e</b></p><a name=\"2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e\"> </a><a name=\"hc2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-person.html\">Digitale Patientenrechnung Person</a></p></div><p><b>name</b>: Dr. A. Arzt(Official)</p><p><b>address</b>: Docstrasse 25 Musterstadt 12345 DE </p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen INNE}\">Innere Medizin</span></td></tr></table></div>"
+      },
+      "name" : [{
+        "use" : "official",
+        "text" : "Dr. A. Arzt",
+        "family" : "Arzt",
+        "given" : ["A."],
+        "prefix" : ["Dr."],
+        "_prefix" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+            "valueCode" : "AC"
+          }]
+        }]
+      }],
+      "address" : [{
+        "type" : "both",
+        "line" : ["Docstrasse 25"],
+        "_line" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+            "valueString" : "Docstrasse"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+            "valueString" : "25"
+          }]
+        }],
+        "city" : "Musterstadt",
+        "postalCode" : "12345",
+        "country" : "DE"
+      }],
+      "qualification" : [{
+        "code" : {
+          "coding" : [{
+            "system" : "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+            "code" : "INNE",
+            "display" : "Innere Medizin"
+          }]
+        }
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+    "resource" : {
+      "resourceType" : "Organization",
+      "id" : "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f</b></p><a name=\"3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f\"> </a><a name=\"hc3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-institution.html\">Digitale Patientenrechnung Institution</a></p></div><p><b>name</b>: Praxis Dr. A. Arzt</p><p><b>address</b>: Docstrasse 25 Musterstadt 12345 DE </p></div>"
+      },
+      "name" : "Praxis Dr. A. Arzt",
+      "address" : [{
+        "type" : "both",
+        "line" : ["Docstrasse 25"],
+        "_line" : [{
+          "extension" : [{
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+            "valueString" : "Docstrasse"
+          },
+          {
+            "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+            "valueString" : "25"
+          }]
+        }],
+        "city" : "Musterstadt",
+        "postalCode" : "12345",
+        "country" : "DE"
+      }]
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+    "resource" : {
+      "resourceType" : "ChargeItem",
+      "id" : "4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem 4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a</b></p><a name=\"4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a\"> </a><a name=\"hc4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GO.196\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOÄ</a> (Leistung nach Gebührenordnung GOÄ)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><p><b>Value</b>: 2.3</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2018-10-04</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/goä 1}\">Beratung, auch telefonisch</span></p><p><b>subject</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2018-10-04 --&gt; 2018-10-04</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e.html\">Practitioner Dr. A. Arzt(official)</a></td></tr></table><p><b>quantity</b>: 1 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p></div>"
+      },
+      "extension" : [{
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+        "valueCoding" : {
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+          "code" : "GOÄ"
+        }
+      },
+      {
+        "extension" : [{
+          "extension" : [{
+            "url" : "Value",
+            "valueDecimal" : 2.3
+          }],
+          "url" : "Faktor"
+        }],
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+        "valueDate" : "2018-10-04"
+      }],
+      "status" : "billable",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bäk/goä",
+          "code" : "1"
+        }],
+        "text" : "Beratung, auch telefonisch"
+      },
+      "subject" : {
+        "reference" : "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      },
+      "occurrencePeriod" : {
+        "start" : "2018-10-04",
+        "end" : "2018-10-04"
+      },
+      "performer" : [{
+        "actor" : {
+          "reference" : "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+        }
+      }],
+      "quantity" : {
+        "value" : 1,
+        "unit" : "Anzahl",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{count}"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+    "resource" : {
+      "resourceType" : "ChargeItem",
+      "id" : "5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem 5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b</b></p><a name=\"5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b\"> </a><a name=\"hc5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GO.196\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOÄ</a> (Leistung nach Gebührenordnung GOÄ)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><p><b>Value</b>: 2.3</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2018-10-04</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/goä 5}\">Symptombezogene Untersuchung</span></p><p><b>subject</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2018-10-04 --&gt; 2018-10-04</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e.html\">Practitioner Dr. A. Arzt(official)</a></td></tr></table><p><b>quantity</b>: 1 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p></div>"
+      },
+      "extension" : [{
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+        "valueCoding" : {
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+          "code" : "GOÄ"
+        }
+      },
+      {
+        "extension" : [{
+          "extension" : [{
+            "url" : "Value",
+            "valueDecimal" : 2.3
+          }],
+          "url" : "Faktor"
+        }],
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+        "valueDate" : "2018-10-04"
+      }],
+      "status" : "billable",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bäk/goä",
+          "code" : "5"
+        }],
+        "text" : "Symptombezogene Untersuchung"
+      },
+      "subject" : {
+        "reference" : "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      },
+      "occurrencePeriod" : {
+        "start" : "2018-10-04",
+        "end" : "2018-10-04"
+      },
+      "performer" : [{
+        "actor" : {
+          "reference" : "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+        }
+      }],
+      "quantity" : {
+        "value" : 1,
+        "unit" : "Anzahl",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{count}"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
+    "resource" : {
+      "resourceType" : "ChargeItem",
+      "id" : "6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem 6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c</b></p><a name=\"6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c\"> </a><a name=\"hc6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GO.196\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOÄ</a> (Leistung nach Gebührenordnung GOÄ)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><p><b>Value</b>: 2.3</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2018-10-04</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/goä 70}\">Arbeitsunfähigkeitsbescheinigung</span></p><p><b>subject</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2018-10-04 --&gt; 2018-10-04</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e.html\">Practitioner Dr. A. Arzt(official)</a></td></tr></table><p><b>quantity</b>: 1 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p></div>"
+      },
+      "extension" : [{
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+        "valueCoding" : {
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+          "code" : "GOÄ"
+        }
+      },
+      {
+        "extension" : [{
+          "extension" : [{
+            "url" : "Value",
+            "valueDecimal" : 2.3
+          }],
+          "url" : "Faktor"
+        }],
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+        "valueDate" : "2018-10-04"
+      }],
+      "status" : "billable",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bäk/goä",
+          "code" : "70"
+        }],
+        "text" : "Arbeitsunfähigkeitsbescheinigung"
+      },
+      "subject" : {
+        "reference" : "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      },
+      "occurrencePeriod" : {
+        "start" : "2018-10-04",
+        "end" : "2018-10-04"
+      },
+      "performer" : [{
+        "actor" : {
+          "reference" : "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+        }
+      }],
+      "quantity" : {
+        "value" : 1,
+        "unit" : "Anzahl",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{count}"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+    "resource" : {
+      "resourceType" : "ChargeItem",
+      "id" : "7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem 7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d</b></p><a name=\"7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d\"> </a><a name=\"hc7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GO.196\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOÄ</a> (Leistung nach Gebührenordnung GOÄ)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><p><b>Value</b>: 2.3</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2018-10-19</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/goä 1}\">Beratung, auch telefonisch</span></p><p><b>subject</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2018-10-19 --&gt; 2018-10-19</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e.html\">Practitioner Dr. A. Arzt(official)</a></td></tr></table><p><b>quantity</b>: 1 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p></div>"
+      },
+      "extension" : [{
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+        "valueCoding" : {
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+          "code" : "GOÄ"
+        }
+      },
+      {
+        "extension" : [{
+          "extension" : [{
+            "url" : "Value",
+            "valueDecimal" : 2.3
+          }],
+          "url" : "Faktor"
+        }],
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+        "valueDate" : "2018-10-19"
+      }],
+      "status" : "billable",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bäk/goä",
+          "code" : "1"
+        }],
+        "text" : "Beratung, auch telefonisch"
+      },
+      "subject" : {
+        "reference" : "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      },
+      "occurrencePeriod" : {
+        "start" : "2018-10-19",
+        "end" : "2018-10-19"
+      },
+      "performer" : [{
+        "actor" : {
+          "reference" : "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+        }
+      }],
+      "quantity" : {
+        "value" : 1,
+        "unit" : "Anzahl",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{count}"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+    "resource" : {
+      "resourceType" : "ChargeItem",
+      "id" : "8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem 8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e</b></p><a name=\"8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e\"> </a><a name=\"hc8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GO.196\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOÄ</a> (Leistung nach Gebührenordnung GOÄ)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><p><b>Value</b>: 2.3</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2018-10-19</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/goä 5}\">Symptombezogene Untersuchung</span></p><p><b>subject</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2018-10-19 --&gt; 2018-10-19</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e.html\">Practitioner Dr. A. Arzt(official)</a></td></tr></table><p><b>quantity</b>: 1 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p></div>"
+      },
+      "extension" : [{
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+        "valueCoding" : {
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+          "code" : "GOÄ"
+        }
+      },
+      {
+        "extension" : [{
+          "extension" : [{
+            "url" : "Value",
+            "valueDecimal" : 2.3
+          }],
+          "url" : "Faktor"
+        }],
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+        "valueDate" : "2018-10-19"
+      }],
+      "status" : "billable",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bäk/goä",
+          "code" : "5"
+        }],
+        "text" : "Symptombezogene Untersuchung"
+      },
+      "subject" : {
+        "reference" : "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      },
+      "occurrencePeriod" : {
+        "start" : "2018-10-19",
+        "end" : "2018-10-19"
+      },
+      "performer" : [{
+        "actor" : {
+          "reference" : "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+        }
+      }],
+      "quantity" : {
+        "value" : 1,
+        "unit" : "Anzahl",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{count}"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
+    "resource" : {
+      "resourceType" : "ChargeItem",
+      "id" : "9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem 9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f</b></p><a name=\"9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f\"> </a><a name=\"hc9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GO.196\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOÄ</a> (Leistung nach Gebührenordnung GOÄ)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><p><b>Value</b>: 1.15</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2018-10-19</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/goä 3501}\">Blutsenkung</span></p><p><b>subject</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2018-10-19 --&gt; 2018-10-19</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e.html\">Practitioner Dr. A. Arzt(official)</a></td></tr></table><p><b>quantity</b>: 1 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p></div>"
+      },
+      "extension" : [{
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+        "valueCoding" : {
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+          "code" : "GOÄ"
+        }
+      },
+      {
+        "extension" : [{
+          "extension" : [{
+            "url" : "Value",
+            "valueDecimal" : 1.15
+          }],
+          "url" : "Faktor"
+        }],
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+        "valueDate" : "2018-10-19"
+      }],
+      "status" : "billable",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bäk/goä",
+          "code" : "3501"
+        }],
+        "text" : "Blutsenkung"
+      },
+      "subject" : {
+        "reference" : "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      },
+      "occurrencePeriod" : {
+        "start" : "2018-10-19",
+        "end" : "2018-10-19"
+      },
+      "performer" : [{
+        "actor" : {
+          "reference" : "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+        }
+      }],
+      "quantity" : {
+        "value" : 1,
+        "unit" : "Anzahl",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{count}"
+      }
+    }
+  },
+  {
+    "fullUrl" : "urn:uuid:0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+    "resource" : {
+      "resourceType" : "ChargeItem",
+      "id" : "0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a",
+      "meta" : {
+        "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"]
+      },
+      "language" : "de",
+      "text" : {
+        "status" : "extensions",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem 0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a</b></p><a name=\"0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a\"> </a><a name=\"hc0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GO.196\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOÄ</a> (Leistung nach Gebührenordnung GOÄ)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><p><b>Value</b>: 1.15</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2018-10-19</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/goä 3597.H1}\">Laktatdehydrogenase (LDH)</span></p><p><b>subject</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2018-10-19 --&gt; 2018-10-19</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e.html\">Practitioner Dr. A. Arzt(official)</a></td></tr></table><p><b>quantity</b>: 1 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p></div>"
+      },
+      "extension" : [{
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+        "valueCoding" : {
+          "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+          "code" : "GOÄ"
+        }
+      },
+      {
+        "extension" : [{
+          "extension" : [{
+            "url" : "Value",
+            "valueDecimal" : 1.15
+          }],
+          "url" : "Faktor"
+        }],
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+      },
+      {
+        "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+        "valueDate" : "2018-10-19"
+      }],
+      "status" : "billable",
+      "code" : {
+        "coding" : [{
+          "system" : "http://fhir.de/CodeSystem/bäk/goä",
+          "code" : "3597.H1"
+        }],
+        "text" : "Laktatdehydrogenase (LDH)"
+      },
+      "subject" : {
+        "reference" : "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
+      },
+      "occurrencePeriod" : {
+        "start" : "2018-10-19",
+        "end" : "2018-10-19"
+      },
+      "performer" : [{
+        "actor" : {
+          "reference" : "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
+        }
+      }],
+      "quantity" : {
+        "value" : 1,
+        "unit" : "Anzahl",
+        "system" : "http://unitsofmeasure.org",
+        "code" : "{count}"
+      }
+    }
+  }]
+}

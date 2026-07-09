@@ -1,0 +1,1319 @@
+{
+  "codeSystems" : [{
+    "url" : "http://fhir.de/ValueSet/identifier-type-de-basis",
+    "version" : "1.5.4",
+    "status" : "active",
+    "name" : "IdentifierTypeDeBasisVS",
+    "title" : "Identifier Type DeBasis ValueSet",
+    "description" : "ValueSet zur Codierung des Identifier-Typs",
+    "systems" : ["http://fhir.de/CodeSystem/identifier-type-de-basis",
+    "http://terminology.hl7.org/CodeSystem/v2-0203"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+  },
+  {
+    "url" : "http://fhir.de/ValueSet/iso/bundeslaender",
+    "version" : "1.5.4",
+    "status" : "active",
+    "name" : "ValueSetISO31662DE",
+    "title" : "ISO-3166-2:de-Laendercodes",
+    "description" : "Enthaelt die ISO-3166-2:DE Codes für die deutschen Bundeslaender.",
+    "systems" : ["urn:iso:std:iso:3166-2:de"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/address-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AddressType",
+    "title" : "AddressType",
+    "description" : "The type of an address (physical / postal).",
+    "systems" : ["http://hl7.org/fhir/address-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.69"],
+    "sources" : ["2.16.840.1.113883.4.642.3.69"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/address-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AddressUse",
+    "title" : "AddressUse",
+    "description" : "The use of an address.",
+    "systems" : ["http://hl7.org/fhir/address-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.67"],
+    "sources" : ["2.16.840.1.113883.4.642.3.67"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AdministrativeGender",
+    "title" : "AdministrativeGender",
+    "description" : "The gender of a person used for administrative purposes.",
+    "systems" : ["http://hl7.org/fhir/administrative-gender"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/audit-entity-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AuditEventEntityType",
+    "title" : "Audit event entity type",
+    "description" : "Code for the entity type involved in the audit event.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/audit-entity-type",
+    "http://hl7.org/fhir/resource-types"],
+    "oids" : ["2.16.840.1.113883.4.642.3.458"],
+    "sources" : ["2.16.840.1.113883.4.642.3.458"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/audit-event-action",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AuditEventAction",
+    "title" : "AuditEventAction",
+    "description" : "Indicator for type of action performed during the event that generated the event.",
+    "systems" : ["http://hl7.org/fhir/audit-event-action"],
+    "oids" : ["2.16.840.1.113883.4.642.3.452"],
+    "sources" : ["2.16.840.1.113883.4.642.3.452"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/audit-event-outcome",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AuditEventOutcome",
+    "title" : "AuditEventOutcome",
+    "description" : "Indicates whether the event succeeded or failed.",
+    "systems" : ["http://hl7.org/fhir/audit-event-outcome"],
+    "oids" : ["2.16.840.1.113883.4.642.3.454"],
+    "sources" : ["2.16.840.1.113883.4.642.3.454"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/audit-source-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "AuditEventSourceType",
+    "title" : "Audit Event Source Type",
+    "description" : "The type of process where the audit event originated from.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/security-source-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.466"],
+    "sources" : ["2.16.840.1.113883.4.642.3.466"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/body-site",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SNOMEDCTBodyStructures",
+    "title" : "SNOMED CT Body Structures",
+    "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.141"],
+    "sources" : ["2.16.840.1.113883.4.642.3.141"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose",
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "BundleType",
+    "title" : "BundleType",
+    "description" : "Indicates the purpose of a bundle - how it is intended to be used.",
+    "systems" : ["http://hl7.org/fhir/bundle-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.620"],
+    "sources" : ["2.16.840.1.113883.4.642.3.620"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsbundle.html" : "Digitale Patientenrechnung - Rechnungsinhalte Bundle"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/c80-doc-typecodes",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DocumentTypeValueSet",
+    "title" : "Document Type Value Set",
+    "description" : "This is the code specifying the precise type of document (e.g. Pulmonary History and  Physical, Discharge Summary, Ultrasound Report, etc.). The Document Type value set includes all LOINC  values listed in HITSP C80 Table 2-144 Document Class Value Set Definition above used for Document Class,  and all LOINC values whose SCALE is DOC in the LOINC database.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.3.88.12.80.47"],
+    "sources" : ["2.16.840.1.113883.3.88.12.80.47"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/c80-facilitycodes",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "FacilityTypeCodeValueSet",
+    "title" : "Facility Type Code Value Set",
+    "description" : "This is the code representing the type of organizational setting where the clinical encounter, service, interaction, or treatment occurred. The value set used for Healthcare Facility Type has been defined by HITSP to be the value set reproduced from HITSP C80 Table 2-147.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.3.88.12.80.67"],
+    "sources" : ["2.16.840.1.113883.3.88.12.80.67"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/c80-practice-codes",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "PracticeSettingCodeValueSet",
+    "title" : "Practice Setting Code Value Set",
+    "description" : "This is the code representing the clinical specialty of the clinician or provider who interacted with, treated, or provided a service to/for the patient. The value set used for clinical specialty has been limited by HITSP to the value set reproduced from HITSP C80 Table 2-149 Clinical Specialty Value Set Definition.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.3.88.12.80.72"],
+    "sources" : ["2.16.840.1.113883.3.88.12.80.72"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/chargeitem-billingcodes",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ChargeItemCode",
+    "title" : "ChargeItemCode",
+    "description" : "Example set of codes that can be used for billing purposes.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/chargeitem-billingcodes"],
+    "oids" : ["2.16.840.1.113883.4.642.3.848"],
+    "sources" : ["2.16.840.1.113883.4.642.3.848"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/chargeitem-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ChargeItemStatus",
+    "title" : "ChargeItemStatus",
+    "description" : "Codes identifying the lifecycle stage of a ChargeItem.",
+    "systems" : ["http://hl7.org/fhir/chargeitem-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.846"],
+    "sources" : ["2.16.840.1.113883.4.642.3.846"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/common-tags",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CommonTags",
+    "title" : "Common Tags",
+    "description" : "Common Tag Codes defined by FHIR project",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/common-tags"],
+    "oids" : ["2.16.840.1.113883.4.642.3.79"],
+    "sources" : ["2.16.840.1.113883.4.642.3.79"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/composition-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CompositionStatus",
+    "title" : "CompositionStatus",
+    "description" : "The workflow/clinical status of the composition.",
+    "systems" : ["http://hl7.org/fhir/composition-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.241"],
+    "sources" : ["2.16.840.1.113883.4.642.3.241"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionCategoryCodes",
+    "title" : "Condition Category Codes",
+    "description" : "Preferred value set for Condition Categories.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category"],
+    "oids" : ["2.16.840.1.113883.4.642.3.162"],
+    "sources" : ["2.16.840.1.113883.4.642.3.162"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionClinicalStatusCodes",
+    "title" : "Condition Clinical Status Codes",
+    "description" : "Preferred value set for Condition Clinical Status.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
+    "oids" : ["2.16.840.1.113883.4.642.3.164"],
+    "sources" : ["2.16.840.1.113883.4.642.3.164"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Condition/Problem/DiagnosisCodes",
+    "title" : "Condition/Problem/Diagnosis Codes",
+    "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.161"],
+    "sources" : ["2.16.840.1.113883.4.642.3.161"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose",
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "Condition/DiagnosisSeverity",
+    "title" : "Condition/Diagnosis Severity",
+    "description" : "Preferred value set for Condition/Diagnosis severity grading.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.168"],
+    "sources" : ["2.16.840.1.113883.4.642.3.168"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-stage",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionStage",
+    "title" : "Condition Stage",
+    "description" : "Example value set for stages of cancer and other conditions.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.170"],
+    "sources" : ["2.16.840.1.113883.4.642.3.170"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-stage-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionStageType",
+    "title" : "Condition Stage Type",
+    "description" : "Example value set for the type of stages of cancer and other conditions",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.171"],
+    "sources" : ["2.16.840.1.113883.4.642.3.171"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/condition-ver-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ConditionVerificationStatus",
+    "title" : "ConditionVerificationStatus",
+    "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/condition-ver-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.166"],
+    "sources" : ["2.16.840.1.113883.4.642.3.166"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/contact-point-system",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ContactPointSystem",
+    "title" : "ContactPointSystem",
+    "description" : "Telecommunications form for contact point.",
+    "systems" : ["http://hl7.org/fhir/contact-point-system"],
+    "oids" : ["2.16.840.1.113883.4.642.3.71"],
+    "sources" : ["2.16.840.1.113883.4.642.3.71"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/contact-point-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ContactPointUse",
+    "title" : "ContactPointUse",
+    "description" : "Use of contact point.",
+    "systems" : ["http://hl7.org/fhir/contact-point-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.73"],
+    "sources" : ["2.16.840.1.113883.4.642.3.73"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/contactentity-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ContactEntityType",
+    "title" : "Contact entity type",
+    "description" : "This example value set defines a set of codes that can be used to indicate the purpose for which you would contact a contact party.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/contactentity-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.416"],
+    "sources" : ["2.16.840.1.113883.4.642.3.416"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/currencies",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Currencies",
+    "title" : "CurrencyCode",
+    "description" : "Currency codes from ISO 4217 (see https://www.iso.org/iso-4217-currency-codes.html)",
+    "systems" : ["urn:iso:std:iso:4217"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1025"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1025"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
+    "StructureDefinition-dipag-wegegeld-reiseentschaedigung.html" : "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension",
+    "StructureDefinition-DiPagTeilsumme.html" : "Digitale Patientenrechnung Teilsumme",
+    "StructureDefinition-dipag-rechnungsposition-go-angaben.html" : "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/device-action",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureDeviceActionCodes",
+    "title" : "Procedure Device Action Codes",
+    "description" : "Example codes indicating the change that happened to the device during the procedure.  Note that these are in no way complete and might not even be appropriate for some uses.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.425"],
+    "sources" : ["2.16.840.1.113883.4.642.3.425"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/device-kind",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "FHIRDeviceTypes",
+    "title" : "FHIR Device Types",
+    "description" : "Codes used to identify medical devices. Includes concepts from SNOMED CT (http://www.snomed.org/) where concept is-a 49062001 (Device)  and is provided as a suggestive example.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.208"],
+    "sources" : ["2.16.840.1.113883.4.642.3.208"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/dicm-405-mediatype",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "MediaTypeCode",
+    "title" : "Media Type Code",
+    "description" : "Media Type Code",
+    "systems" : ["http://dicom.nema.org/resources/ontology/DCM"],
+    "oids" : ["1.2.840.10008.6.​1.​908"],
+    "sources" : ["1.2.840.10008.6.​1.​908"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/document-classcodes",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DocumentClassValueSet",
+    "title" : "Document Class Value Set",
+    "description" : "This is the code specifying the high-level kind of document (e.g. Prescription, Discharge Summary, Report, etc.). Note: Class code for documents comes from LOINC, and is based upon one of the following:The type of service described by the document. It is described at a very high level in Section 7.3 of the LOINC Manual. The type study performed. It was determined by identifying modalities for study reports. The section of the chart where the document is placed. It was determined from the SETs created for Claims Attachment requests.",
+    "systems" : ["http://loinc.org"],
+    "oids" : ["2.16.840.1.113883.3.88.12.80.46"],
+    "sources" : ["2.16.840.1.113883.3.88.12.80.46"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/document-reference-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DocumentReferenceStatus",
+    "title" : "DocumentReferenceStatus",
+    "description" : "The status of the document reference.",
+    "systems" : ["http://hl7.org/fhir/document-reference-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.7"],
+    "sources" : ["2.16.840.1.113883.4.642.3.7"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/document-relationship-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "DocumentRelationshipType",
+    "title" : "DocumentRelationshipType",
+    "description" : "The type of relationship between documents.",
+    "systems" : ["http://hl7.org/fhir/document-relationship-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.244"],
+    "sources" : ["2.16.840.1.113883.4.642.3.244"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/event-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "EventStatus",
+    "title" : "EventStatus",
+    "description" : "Codes identifying the lifecycle stage of an event.",
+    "systems" : ["http://hl7.org/fhir/event-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.109"],
+    "sources" : ["2.16.840.1.113883.4.642.3.109"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/formatcodes",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "DocumentReferenceFormatCodeSet",
+    "title" : "DocumentReference Format Code Set",
+    "description" : "The value set is defined to be the set of format codes defined by the IHE Technical Framework, and also including additional format codes defined by the    HL7. The value set is listed in HITSP C80 Table 2-153 Format Code Value Set Definition,    with additions published later by IHE as published    at http://wiki.ihe.net/index.php?title=IHE_Format_Codes   and with additions published later by HL7 as published at https://confluence.hl7.org/display/SD/Format+Codes+for+IHE+XDS.   This is the code specifying the technical format of the document. Along with the typeCode,    it should provide sufficient information to allow any potential document consumer to know    if it will be able to process the document. The code shall be sufficiently specific to    ensure processing/display by identifying a document encoding, structure and template. The actual list of codes here is incomplete",
+    "systems" : ["http://ihe.net/fhir/ValueSet/IHE.FormatCode.codesystem"],
+    "oids" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+    "sources" : ["1.3.6.1.4.1.19376.1.2.7.1"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/http-verb",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "HTTPVerb",
+    "title" : "HTTPVerb",
+    "description" : "HTTP verbs (in the HTTP command line). See [HTTP rfc](https://tools.ietf.org/html/rfc7231) for details.",
+    "systems" : ["http://hl7.org/fhir/http-verb"],
+    "oids" : ["2.16.840.1.113883.4.642.3.624"],
+    "sources" : ["2.16.840.1.113883.4.642.3.624"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsbundle.html" : "Digitale Patientenrechnung - Rechnungsinhalte Bundle"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/icd-10",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ICD-10Codes",
+    "title" : "ICD-10 Codes",
+    "description" : "This value set includes sample ICD-10 codes.",
+    "systems" : ["http://hl7.org/fhir/sid/icd-10"],
+    "oids" : ["2.16.840.1.113883.4.642.3.531"],
+    "sources" : ["2.16.840.1.113883.4.642.3.531"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/identifier-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Identifier Type Codes",
+    "title" : "IdentifierType",
+    "description" : "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0203"],
+    "oids" : ["2.16.840.1.113883.4.642.3.45"],
+    "sources" : ["2.16.840.1.113883.4.642.3.45"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
+    "StructureDefinition-DiPagTokenStornierteRechnung.html" : "Digitale Patientenrechnung Token der stornierten Rechnung"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "IdentifierUse",
+    "title" : "IdentifierUse",
+    "description" : "Identifies the purpose for this identifier, if known .",
+    "systems" : ["http://hl7.org/fhir/identifier-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.57"],
+    "sources" : ["2.16.840.1.113883.4.642.3.57"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
+    "StructureDefinition-DiPagTokenStornierteRechnung.html" : "Digitale Patientenrechnung Token der stornierten Rechnung"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/invoice-priceComponentType",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "InvoicePriceComponentType",
+    "title" : "InvoicePriceComponentType",
+    "description" : "Codes indicating the kind of the price component.",
+    "systems" : ["http://hl7.org/fhir/invoice-priceComponentType"],
+    "oids" : ["2.16.840.1.113883.4.642.3.868"],
+    "sources" : ["2.16.840.1.113883.4.642.3.868"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/invoice-status",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "InvoiceStatus",
+    "title" : "InvoiceStatus",
+    "description" : "Codes identifying the lifecycle stage of an Invoice.",
+    "systems" : ["http://hl7.org/fhir/invoice-status"],
+    "oids" : ["2.16.840.1.113883.4.642.3.866"],
+    "sources" : ["2.16.840.1.113883.4.642.3.866"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/iso3166-1-2",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Iso3166-1-2",
+    "title" : "Iso 3166 Part 1: 2 Letter Codes",
+    "description" : "This value set defines the ISO 3166 Part 1 2-letter codes",
+    "systems" : ["urn:iso:std:iso:3166"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/languages",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "CommonLanguages",
+    "title" : "Common Languages",
+    "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+    "systems" : ["urn:ietf:bcp:47"],
+    "oids" : ["2.16.840.1.113883.4.642.3.20"],
+    "sources" : ["2.16.840.1.113883.4.642.3.20"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-rechnungsbundle.html" : "Digitale Patientenrechnung - Rechnungsinhalte Bundle",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose",
+    "StructureDefinition-dipag-rechnungsdokument.html" : "Digitale Patientenrechnung Rechnungsdokument",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll",
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/link-type",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "LinkType",
+    "title" : "LinkType",
+    "description" : "The type of link between this patient resource and another patient resource.",
+    "systems" : ["http://hl7.org/fhir/link-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.423"],
+    "sources" : ["2.16.840.1.113883.4.642.3.423"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/manifestation-or-symptom",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ManifestationAndSymptomCodes",
+    "title" : "Manifestation and Symptom Codes",
+    "description" : "Example value set for Manifestation and Symptom codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.169"],
+    "sources" : ["2.16.840.1.113883.4.642.3.169"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/marital-status",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Marital Status Codes",
+    "title" : "MaritalStatus",
+    "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+    "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"],
+    "oids" : ["2.16.840.1.113883.4.642.3.29"],
+    "sources" : ["2.16.840.1.113883.4.642.3.29"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/mimetypes",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "Mime Types",
+    "title" : "MimeType",
+    "description" : "This value set includes all possible codes from BCP-13 (http://tools.ietf.org/html/bcp13)",
+    "systems" : ["urn:ietf:bcp:13"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1024"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1024"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/name-use",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "NameUse",
+    "title" : "NameUse",
+    "description" : "The use of a human name.",
+    "systems" : ["http://hl7.org/fhir/name-use"],
+    "oids" : ["2.16.840.1.113883.4.642.3.65"],
+    "sources" : ["2.16.840.1.113883.4.642.3.65"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/network-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AuditEventAgentNetworkType",
+    "title" : "AuditEventAgentNetworkType",
+    "description" : "The type of network access point of this agent in the audit event.",
+    "systems" : ["http://hl7.org/fhir/network-type"],
+    "oids" : ["2.16.840.1.113883.4.642.3.456"],
+    "sources" : ["2.16.840.1.113883.4.642.3.456"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/object-lifecycle-events",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ObjectLifecycleEvents",
+    "title" : null,
+    "description" : "This example FHIR value set is comprised of lifecycle event codes. The FHIR Actor value set is based on    DICOM Audit Message, ParticipantObjectDataLifeCycle;   ISO Standard, TS 21089-2017;",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/dicom-audit-lifecycle",
+    "http://terminology.hl7.org/CodeSystem/iso-21089-lifecycle"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/object-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "AuditEventEntityRole",
+    "title" : "AuditEventEntityRole",
+    "description" : "Code representing the role the entity played in the audit event.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/object-role"],
+    "oids" : ["2.16.840.1.113883.4.642.3.460"],
+    "sources" : ["2.16.840.1.113883.4.642.3.460"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "PatientContactRelationship",
+    "title" : "Patient Contact Relationship ",
+    "description" : "The nature of the relationship between the patient and the contact person.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
+    "oids" : ["2.16.840.1.113883.4.642.3.1130"],
+    "sources" : ["2.16.840.1.113883.4.642.3.1130"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/performer-role",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedurePerformerRoleCodes",
+    "title" : "Procedure Performer Role Codes",
+    "description" : "This example value set defines the set of codes that can be used to indicate a role of a procedure performer.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.433"],
+    "sources" : ["2.16.840.1.113883.4.642.3.433"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-category",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureCategoryCodes(SNOMEDCT)",
+    "title" : "Procedure Category Codes (SNOMED CT)",
+    "description" : "Procedure Category code: A selection of relevant SNOMED CT codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.430"],
+    "sources" : ["2.16.840.1.113883.4.642.3.430"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-code",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureCodes(SNOMEDCT)",
+    "title" : "Procedure Codes (SNOMED CT)",
+    "description" : "Procedure Code: All SNOMED CT procedure codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.427"],
+    "sources" : ["2.16.840.1.113883.4.642.3.427"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-followup",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureFollowUpCodes(SNOMEDCT)",
+    "title" : "Procedure Follow up Codes (SNOMED CT)",
+    "description" : "Procedure follow up codes: A selection of SNOMED CT codes relevant to procedure follow up.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.429"],
+    "sources" : ["2.16.840.1.113883.4.642.3.429"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-not-performed-reason",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ProcedureNotPerformedReason(SNOMED-CT)",
+    "title" : "Procedure Not Performed Reason (SNOMED-CT)",
+    "description" : "Situation codes describing the reason that a procedure, which might otherwise be expected, was not performed, or a procedure that was started and was not completed. Consists of SNOMED CT codes, children of procedure contraindicated (183932001), procedure discontinued (416406003), procedure not done (416237000), procedure not indicated (428119001), procedure not offered (416064006), procedure not wanted (416432009), procedure refused (183944003), and procedure stopped (394908001).",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.431"],
+    "sources" : ["2.16.840.1.113883.4.642.3.431"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-outcome",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureOutcomeCodes(SNOMEDCT)",
+    "title" : "Procedure Outcome Codes (SNOMED CT)",
+    "description" : "Procedure Outcome code: A selection of relevant SNOMED CT codes.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.428"],
+    "sources" : ["2.16.840.1.113883.4.642.3.428"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/procedure-reason",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "ProcedureReasonCodes",
+    "title" : "Procedure Reason Codes",
+    "description" : "This example value set defines the set of codes that can be used to indicate a reason for a procedure.",
+    "systems" : ["http://snomed.info/sct"],
+    "oids" : ["2.16.840.1.113883.4.642.3.432"],
+    "sources" : ["2.16.840.1.113883.4.642.3.432"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "QuantityComparator",
+    "title" : "QuantityComparator",
+    "description" : "How the Quantity should be understood and represented.",
+    "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+    "oids" : ["2.16.840.1.113883.4.642.3.59"],
+    "sources" : ["2.16.840.1.113883.4.642.3.59"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-abzug-kassenanteil.html" : "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent",
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
+    "StructureDefinition-dipag-wegegeld-reiseentschaedigung.html" : "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension",
+    "StructureDefinition-dipag-rechnungsposition-go-angaben.html" : "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/resource-types",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "ResourceType",
+    "title" : "ResourceType",
+    "description" : "One of the resource types defined as part of this version of FHIR.",
+    "systems" : ["http://hl7.org/fhir/resource-types"],
+    "oids" : ["2.16.840.1.113883.4.642.3.27"],
+    "sources" : ["2.16.840.1.113883.4.642.3.27"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-documentreference-markierung.html" : "Digitale Patientenrechnung DocumentReference Markierung",
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
+    "StructureDefinition-dipag-patient.html" : "DiPagPatient",
+    "StructureDefinition-dipag-task-requestedPerformer.html" : "Digitale Patientenrechnung Task RequestedPerformer",
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll",
+    "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "SearchEntryMode",
+    "title" : "SearchEntryMode",
+    "description" : "Why an entry is in the result set - whether it's included as a match or because of an _include requirement, or to convey information or warning information about the search process.",
+    "systems" : ["http://hl7.org/fhir/search-entry-mode"],
+    "oids" : ["2.16.840.1.113883.4.642.3.622"],
+    "sources" : ["2.16.840.1.113883.4.642.3.622"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsbundle.html" : "Digitale Patientenrechnung - Rechnungsinhalte Bundle"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/security-labels",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "All Security Labels",
+    "title" : "SecurityLabels",
+    "description" : "A single value set for all security labels defined by FHIR.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason",
+    "http://terminology.hl7.org/CodeSystem/v3-ActUSPrivacyLaw",
+    "http://terminology.hl7.org/CodeSystem/v3-ObservationValue",
+    "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+    "oids" : ["2.16.840.1.113883.4.642.3.47"],
+    "sources" : ["2.16.840.1.113883.4.642.3.47"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/security-role-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SecurityRoleType",
+    "title" : "SecurityRoleType",
+    "description" : "This example FHIR value set is comprised of example Actor Type codes, which can be used to value FHIR agents, actors, and other role         elements such as those specified in financial transactions. The FHIR Actor value set is based on    DICOM Audit Message, C402;   ASTM Standard, E1762-95 [2013]; selected codes and          derived actor roles from HL7 RoleClass OID 2.16.840.1.113883.5.110;    HL7 Role Code 2.16.840.1.113883.5.111, including AgentRoleType;          HL7 ParticipationType OID: 2.16.840.1.113883.5.90; and    HL7 ParticipationFunction codes OID: 2.16.840.1.113883.5.88.           This value set includes, by reference, role codes from external code systems: NUCC Health Care Provider Taxonomy OID: 2.16.840.1.113883.6.101;          North American Industry Classification System [NAICS]OID: 2.16.840.1.113883.6.85; IndustryClassificationSystem 2.16.840.1.113883.1.11.16039;          and US Census Occupation Code OID: 2.16.840.1.113883.6.243 for relevant recipient or custodian codes not included in this value set.            If no source is indicated in the definition comments, then these are example FHIR codes.          It can be extended with appropriate roles described by SNOMED as well as those described in the HL7 Role Based Access Control Catalog and the          HL7 Healthcare (Security and Privacy) Access Control Catalog.            In Role-Based Access Control (RBAC), permissions are operations on an object that a user wishes to access. Permissions are grouped into roles.          A role characterizes the functions a user is allowed to perform. Roles are assigned to users. If the user's role has the appropriate permissions          to access an object, then that user is granted access to the object. FHIR readily enables RBAC, as FHIR Resources are object types and the CRUDE          events (the FHIR equivalent to permissions in the RBAC scheme) are operations on those objects.          In Attribute-Based Access Control (ABAC), a user requests to perform operations on objects. That user's access request is granted or denied          based on a set of access control policies that are specified in terms of attributes and conditions. FHIR readily enables ABAC, as instances of          a Resource in FHIR (again, Resources are object types) can have attributes associated with them. These attributes include security tags,          environment conditions, and a host of user and object characteristics, which are the same attributes as those used in ABAC. Attributes help          define the access control policies that determine the operations a user may perform on a Resource (in FHIR) or object (in ABAC). For example,          a tag (or attribute) may specify that the identified Resource (object) is not to be further disclosed without explicit consent from the patient.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+    "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+    "http://terminology.hl7.org/CodeSystem/v3-RoleClass",
+    "http://terminology.hl7.org/CodeSystem/v3-ParticipationFunction",
+    "http://terminology.hl7.org/CodeSystem/contractsignertypecodes",
+    "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+    "http://dicom.nema.org/resources/ontology/DCM"],
+    "oids" : ["2.16.840.1.113883.4.642.3.978"],
+    "sources" : ["2.16.840.1.113883.4.642.3.978"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "http://hl7.org/fhir/ValueSet/signature-type",
+    "version" : "4.0.1",
+    "status" : "draft",
+    "name" : "SignatureTypeCodes",
+    "title" : "Signature Type Codes",
+    "description" : "The Digital Signature Purposes, an indication of the reason an entity signs a document. This is included in the signed information and can be used when determining accountability for various actions concerning the document. Examples include: author, transcriptionist/recorder, and witness.",
+    "systems" : ["urn:iso-astm:E1762-95:2013"],
+    "oids" : ["1.2.840.10065.1.12"],
+    "sources" : ["1.2.840.10065.1.12"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode",
+    "version" : "2019-05-17T13:46:31",
+    "status" : "active",
+    "name" : "IHEXDSpracticeSettingCode",
+    "title" : "IHE XDS practiceSettingCode",
+    "description" : "**practiceSettingCode (XDSDocumentEntry)**\r\nThe code for an XDS Document that specifies the clinical specialty where the act that resulted in the document was performed (e.g., Family Practice, Laboratory, Radiology).",
+    "systems" : ["http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+    "http://ihe-d.de/CodeSystems/NichtaerztlicheFachrichtungen"],
+    "oids" : ["1.2.276.0.76.11.37"],
+    "sources" : ["1.2.276.0.76.11.37"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-fachrichtung.html" : "Digitale Patientenrechnung Extension Fachrichtung",
+    "StructureDefinition-dipag-docref-fachrichtung.html" : "Digitale Patientenrechnung DocRef Fachrichtung",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
+    "version" : "3.0.0",
+    "status" : "active",
+    "name" : "ActCode",
+    "title" : "v3 Code System ActCode",
+    "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.  Constraints:\r\nThe kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems.  The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "http://terminology.hl7.org/ValueSet/v3-PurposeOfUse",
+    "version" : "3.1.0",
+    "status" : "active",
+    "name" : "PurposeOfUse",
+    "title" : "PurposeOfUse",
+    "description" : "Supports communication of purpose of use at a general level.",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActReason"],
+    "oids" : ["2.16.840.1.113883.1.11.20448"],
+    "sources" : ["2.16.840.1.113883.1.11.20448"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/DiPagVerkehrsmittel",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagVerkehrsmittel",
+    "title" : "Digitale PatientenrechnungVerkehrsmittel",
+    "description" : "Dieses ValueSet bietet eine Auswahl an Verkehrsmitteln, die im Rahmen einer Reisekostenentschädigung ausgewählt werden können.",
+    "systems" : ["http://snomed.info/sct"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-wegegeld-reiseentschaedigung.html" : "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-abrechnungs-diagnose-use-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagAbrechnungsDiagnoseUseVS",
+    "title" : "Digitale Patientenrechnung Abrechnungsdiagnose Use ValueSet",
+    "description" : "",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-DiPagAbrechnungsDiagnoseProzedur.html" : "Abrechnungsrelevanz von Diagnosen und Prozeduren",
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-agent-type-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagAuditEventAgentTypeVS",
+    "title" : "Digitale Patientenrechnung Audit Event Agent Type",
+    "description" : "",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/extra-security-role-type"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-detail-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagAuditEventDetailVS",
+    "title" : "Digitale Patientenrechnung Audit Event Detail",
+    "description" : "",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-sub-type-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagAuditEventSubTypeVS",
+    "title" : "Digitale Patientenrechnung Audit Event Sub-Type",
+    "description" : "",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs",
+    "http://hl7.org/fhir/restful-interaction"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-type-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagAuditEventTypeVS",
+    "title" : "Digitale Patientenrechnung Audit Event Type",
+    "description" : "",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/audit-event-type",
+    "http://dicom.nema.org/resources/ontology/DCM"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-chargeitem-type-VS",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagRechnungspositionTypeVS",
+    "title" : "Digitale Patientenrechnung Typ der Rechnungsposition ValueSet",
+    "description" : "",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsposition-type.html" : "Digitale Patientenrechnung Typ der Rechnungsposition Extension",
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
+    "StructureDefinition-DiPagTeilsumme.html" : "Digitale Patientenrechnung Teilsumme",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-dokument-artderarchivierung-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagDokumentArtDerArchivierungVS",
+    "title" : "Digitale Patientenrechnung Dokument ArtDerArchivierung VS",
+    "description" : "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-dokument-artderarchivierung-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-documentreference-markierung.html" : "Digitale Patientenrechnung DocumentReference Markierung",
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-participant-role-VS",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagParticipantRoleVS",
+    "title" : "Digitale Patientenrechnung Teilnehmer Rolle",
+    "description" : "Diese Codes enthalten Teilnehmer Rollen der Digitalen Patientenrechnung",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-abrechnungsart-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagRechnungAbrechnungsartVS",
+    "title" : "Digitale Patientenrechnung Rechnung Abrechnungsart VS",
+    "description" : "ValueSet zur Klassifizierung von Abrechnungsarten",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-behandlungsart-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagRechnungBehandlungsartVS",
+    "title" : "Digitale Patientenrechnung Rechnung Behandlungsart VS",
+    "description" : "ValueSet zur Klassifizierung von Behandlungsarten",
+    "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-behandlungsart.html" : "Digitale Patientenrechnung Extension Behandlungsart",
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-markierung-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagRechnungMarkierungVS",
+    "title" : "Digitale Patientenrechnung Rechnung Markierung VS",
+    "description" : "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-documentreference-markierung.html" : "Digitale Patientenrechnung DocumentReference Markierung",
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-submit-modus-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagRechnungSubmitModusVS",
+    "title" : "Digitale Patientenrechnung Rechnung Type VS",
+    "description" : "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs"],
+    "uses" : {
+    },
+    "OperationDefinition-DiPagOperationSubmit.html" : "DiPagSubmit"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsart-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagRechnungsartVS",
+    "title" : "Digitale Patientenrechnung Rechnungsart VS",
+    "description" : "ValueSet zur Klassifizierung von Rechnungsarten",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagRechnungspositionFaktorGruendeVS",
+    "title" : "Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet",
+    "description" : "",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnungsposition-go-angaben.html" : "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-zusatz-VS",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagRechnungspositionZusatzVS",
+    "title" : "Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet",
+    "description" : "",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-DiPagRechnungspositionZusatz.html" : "Digitale Patientenrechnung Rechnungsposition Zusatz Extension",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsstatus-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagRechnungsstatusVS",
+    "title" : "Digitale Patientenrechnung Rechnungsstatus",
+    "description" : "",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-in-binary-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagRestrictedMimeTypesInBinaryVS",
+    "title" : "Digitale Patientenrechnung Restricted Mime Types in Binary",
+    "description" : "",
+    "systems" : ["urn:ietf:bcp:13"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
+    "StructureDefinition-dipag-rechnungsdokument.html" : "Digitale Patientenrechnung Rechnungsdokument"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-sonstigesdokument-type-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagSonstigesDokumentTypeVS",
+    "title" : "Digitale Patientenrechnung Sonstiges Dokument Type VS",
+    "description" : "ValueSet zur Klassifizierung von weiteren Dokumenten",
+    "systems" : ["http://dvmd.de/fhir/CodeSystem/kdl"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-total-price-component-deduction-type-vs",
+    "version" : "1.0.8",
+    "status" : "active",
+    "name" : "DiPagTotalPriceComponentDeductionTypeVS",
+    "title" : "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen",
+    "description" : "",
+    "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs"],
+    "uses" : {
+    },
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung"
+  }]
+}

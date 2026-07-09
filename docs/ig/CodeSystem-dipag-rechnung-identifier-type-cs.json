@@ -1,0 +1,51 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dipag-rechnung-identifier-type-cs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-rechnung-identifier-type-cs</b></p><a name=\"dipag-rechnung-identifier-type-cs\"> </a><a name=\"hcdipag-rechnung-identifier-type-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">invoice<a name=\"dipag-rechnung-identifier-type-cs-invoice\"> </a></td><td>Rechnungsnummer</td><td/></tr><tr><td style=\"white-space:nowrap\">antragsreferenz<a name=\"dipag-rechnung-identifier-type-cs-antragsreferenz\"> </a></td><td>Antragsreferenz</td><td/></tr><tr><td style=\"white-space:nowrap\">anhang<a name=\"dipag-rechnung-identifier-type-cs-anhang\"> </a></td><td>Anhangsidentifikator</td><td/></tr><tr><td style=\"white-space:nowrap\">ustid<a name=\"dipag-rechnung-identifier-type-cs-ustid\"> </a></td><td>Umsatzsteuer-ID Nummer (USt-ID-Nr)</td><td><div><p>Hinweis: Es gibt keinen passenden offiziellen Type-Code für die Umsatzsteuer-ID Nummer (USt-ID-Nr). Daher wurde dieser Code mit einem allgemeinen Namen versehen. Es ist zu beachten, dass der System-Teil des Identifier bei Verwendung dieses Codes nicht befüllt werden soll, da es kein offizielles FHIR-NamingSystem für die USt-ID gibt.\nHier kann es in Zukunft zu Anpassungen kommen.</p>\n</div></td></tr></table></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs",
+  "version" : "1.0.8",
+  "name" : "DiPagRechnungIdentifierTypeCS",
+  "title" : "Digitale Patientenrechnung Rechnung Identifier Type CS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-07-08",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "invoice",
+    "display" : "Rechnungsnummer"
+  },
+  {
+    "code" : "antragsreferenz",
+    "display" : "Antragsreferenz"
+  },
+  {
+    "code" : "anhang",
+    "display" : "Anhangsidentifikator"
+  },
+  {
+    "code" : "ustid",
+    "display" : "Umsatzsteuer-ID Nummer (USt-ID-Nr)",
+    "definition" : "Hinweis: Es gibt keinen passenden offiziellen Type-Code für die Umsatzsteuer-ID Nummer (USt-ID-Nr). Daher wurde dieser Code mit einem allgemeinen Namen versehen. Es ist zu beachten, dass der System-Teil des Identifier bei Verwendung dieses Codes nicht befüllt werden soll, da es kein offizielles FHIR-NamingSystem für die USt-ID gibt.\nHier kann es in Zukunft zu Anpassungen kommen."
+  }]
+}

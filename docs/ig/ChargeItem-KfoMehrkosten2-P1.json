@@ -1,0 +1,61 @@
+{
+  "resourceType" : "ChargeItem",
+  "id" : "KfoMehrkosten2-P1",
+  "meta" : {
+    "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem KfoMehrkosten2-P1</b></p><a name=\"KfoMehrkosten2-P1\"> </a><a name=\"hcKfoMehrkosten2-P1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GOZ\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOZ</a> (Leistung nach Gebührenordnung GOZ)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><p><b>Value</b>: 2.9</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Zusatz Extension</b>: <a href=\"CodeSystem-dipag-rechnungsposition-zusatz-cs.html#dipag-rechnungsposition-zusatz-cs-A\">Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem: A</a> (analoge Leistung)</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/gzä 2110}\">Präparieren einer Kavität und Restauration mit plastischem Füllungsmaterial einschließlich Unterfüllung, Anlegen einer Matrize oder Benutzen anderer Hilfsmittel zur Formung der Füllung, mehr als dreiflächig</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/KfoMehrkosten2Patient\">Patient/KfoMehrkosten2Patient</a></p><p><b>occurrence</b>: 2025-08-04</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Organization/KfoMehrkosten2Behandler\">Organization/KfoMehrkosten2Behandler</a></td></tr></table><p><b>quantity</b>: 2 {#}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{#} = '{#}')</span></p><p><b>reason</b>: <span title=\"Codes:\">Minibracket gemäß § 6 Abs. 1 der GOZ entsprechend GOZ 2110, Incl. Materialkosten Damonbracket</span></p></div>"
+  },
+  "extension" : [{
+    "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+    "valueCoding" : {
+      "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+      "code" : "GOZ"
+    }
+  },
+  {
+    "extension" : [{
+      "extension" : [{
+        "url" : "Value",
+        "valueDecimal" : 2.9
+      }],
+      "url" : "Faktor"
+    }],
+    "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
+    "valueCoding" : {
+      "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs",
+      "code" : "A"
+    }
+  }],
+  "status" : "billable",
+  "code" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/bäk/gzä",
+      "code" : "2110",
+      "display" : "Präparieren einer Kavität und Restauration mit plastischem Füllungsmaterial einschließlich Unterfüllung, Anlegen einer Matrize oder Benutzen anderer Hilfsmittel zur Formung der Füllung, mehr als dreiflächig"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/KfoMehrkosten2Patient"
+  },
+  "occurrenceDateTime" : "2025-08-04",
+  "performer" : [{
+    "actor" : {
+      "reference" : "Organization/KfoMehrkosten2Behandler"
+    }
+  }],
+  "quantity" : {
+    "value" : 2,
+    "unit" : "{#}",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "{#}"
+  },
+  "reason" : [{
+    "text" : "Minibracket gemäß § 6 Abs. 1 der GOZ entsprechend GOZ 2110, Incl. Materialkosten Damonbracket"
+  }]
+}

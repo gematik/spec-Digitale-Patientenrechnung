@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dipag-attachment-format-cs"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem dipag-attachment-format-cs</b></p><a name="dipag-attachment-format-cs"> </a><a name="hcdipag-attachment-format-cs"> </a><p>This  code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">originaleRechnung<a name="dipag-attachment-format-cs-originaleRechnung"> </a></td><td>Das originale PDF der Rechnung</td></tr><tr><td style="white-space:nowrap">angereichertesPDF<a name="dipag-attachment-format-cs-angereichertesPDF"> </a></td><td>Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt</td></tr><tr><td style="white-space:nowrap">rechnungsinhalt<a name="dipag-attachment-format-cs-rechnungsinhalt"> </a></td><td>Strukturierter Rechnungsinhalt</td></tr><tr><td style="white-space:nowrap">rechnungsanhang<a name="dipag-attachment-format-cs-rechnungsanhang"> </a></td><td>Rechnungsanhang</td></tr></table></div>
+  </text>
+  <url value="https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"/>
+  <version value="1.0.8"/>
+  <name value="DiPagAttachmentFormatCS"/>
+  <title value="Digitale Patientenrechnung Attachment Format CS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-26"/>
+  <publisher value="gematik GmbH"/>
+  <contact>
+    <name value="gematik GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gematik.de"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="originaleRechnung"/>
+    <display value="Das originale PDF der Rechnung"/>
+  </concept>
+  <concept>
+    <code value="angereichertesPDF"/>
+    <display value="Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"/>
+  </concept>
+  <concept>
+    <code value="rechnungsinhalt"/>
+    <display value="Strukturierter Rechnungsinhalt"/>
+  </concept>
+  <concept>
+    <code value="rechnungsanhang"/>
+    <display value="Rechnungsanhang"/>
+  </concept>
+</CodeSystem>

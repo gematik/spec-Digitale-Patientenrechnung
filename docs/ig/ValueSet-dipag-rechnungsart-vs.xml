@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="dipag-rechnungsart-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet dipag-rechnungsart-vs</b></p><a name="dipag-rechnungsart-vs"> </a><a name="hcdipag-rechnungsart-vs"> </a><ul><li>Include all codes defined in <a href="CodeSystem-dipag-rechnungsart-cs.html"><code>https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs</code></a><span title="Version is not explicitly stated, which means it is fixed to the version provided in this specification"> version &#x1F4E6;1.0.8</span></li></ul></div>
+  </text>
+  <url value="https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsart-vs"/>
+  <version value="1.0.8"/>
+  <name value="DiPagRechnungsartVS"/>
+  <title value="Digitale Patientenrechnung Rechnungsart VS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-26"/>
+  <publisher value="gematik GmbH"/>
+  <contact>
+    <name value="gematik GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gematik.de"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet zur Klassifizierung von Rechnungsarten"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs"/>
+    </include>
+  </compose>
+</ValueSet>

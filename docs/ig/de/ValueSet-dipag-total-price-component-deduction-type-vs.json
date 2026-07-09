@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dipag-total-price-component-deduction-type-vs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dipag-total-price-component-deduction-type-vs</b></p><a name=\"dipag-total-price-component-deduction-type-vs\"> </a><a name=\"hcdipag-total-price-component-deduction-type-vs\"> </a><ul><li>Include these codes as defined in <a href=\"CodeSystem-dipag-total-price-component-type-cs.html\"><code>https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version &#x1F4E6;1.0.8</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-dipag-total-price-component-type-cs.html#dipag-total-price-component-type-cs-FestzuschussKasse\">FestzuschussKasse</a></td><td>Festzuschuss Kasse</td></tr><tr><td><a href=\"CodeSystem-dipag-total-price-component-type-cs.html#dipag-total-price-component-type-cs-VorleistungKst\">VorleistungKst</a></td><td>Vorleistungen anderer Kostenträger</td></tr><tr><td><a href=\"CodeSystem-dipag-total-price-component-type-cs.html#dipag-total-price-component-type-cs-KostenBema13AtoD\">KostenBema13AtoD</a></td><td>Kosten gem. den BEMA-Pos. 13a - d</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-total-price-component-deduction-type-vs",
+  "version" : "1.0.8",
+  "name" : "DiPagTotalPriceComponentDeductionTypeVS",
+  "title" : "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs",
+      "concept" : [{
+        "code" : "FestzuschussKasse",
+        "display" : "Festzuschuss Kasse"
+      },
+      {
+        "code" : "VorleistungKst",
+        "display" : "Vorleistungen anderer Kostenträger"
+      },
+      {
+        "code" : "KostenBema13AtoD",
+        "display" : "Kosten gem. den BEMA-Pos. 13a - d"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,102 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient" ;
+       fhir:index 0 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient 8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c</b></p><a name=\"8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c\"> </a><a name=\"hc8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-patient.html\">DiPagPatient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>Musterstraße 42 Berlin 10115 DE (home)</li><li>Postfach 123456 Berlin 10115 DE </li></ul></td></tr></table></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0 ;
+         fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/identifier-type-de-basis" ] ;
+         fhir:Coding.code [ fhir:value "KVZ10" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://fhir.de/sid/gkv/kvid-10" ] ;
+     fhir:Identifier.value [ fhir:value "K123456789" ] ;
+     fhir:Identifier.assigner [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index 0 ;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+             fhir:Coding.code [ fhir:value "XX" ]
+           ]
+         ] ;
+         fhir:Identifier.system [ fhir:value "http://fhir.de/sid/arge-ik/iknr" ] ;
+         fhir:Identifier.value [ fhir:value "109500969" ]
+       ]
+     ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index 0 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.text [ fhir:value "Max Mustermann" ] ;
+     fhir:HumanName.family [ fhir:value "Mustermann" ] ;
+     fhir:HumanName.given [
+       fhir:value "Max" ;
+       fhir:index 0
+     ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1980-05-15"^^xsd:date] ;
+  fhir:Patient.address [
+     fhir:index 0 ;
+     fhir:Address.use [ fhir:value "home" ] ;
+     fhir:Address.type [ fhir:value "both" ] ;
+     fhir:Address.line [
+       fhir:value "Musterstraße 42" ;
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" ] ;
+         fhir:Extension.valueString [ fhir:value "Musterstraße" ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" ] ;
+         fhir:Extension.valueString [ fhir:value "42" ]
+       ]
+     ] ;
+     fhir:Address.city [ fhir:value "Berlin" ] ;
+     fhir:Address.postalCode [ fhir:value "10115" ] ;
+     fhir:Address.country [ fhir:value "DE" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Address.type [ fhir:value "postal" ] ;
+     fhir:Address.line [
+       fhir:value "Postfach 123456" ;
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" ] ;
+         fhir:Extension.valueString [ fhir:value "123456" ]
+       ]
+     ] ;
+     fhir:Address.city [ fhir:value "Berlin" ] ;
+     fhir:Address.postalCode [ fhir:value "10115" ] ;
+     fhir:Address.country [ fhir:value "DE" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
