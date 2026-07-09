@@ -39,4 +39,5 @@ HTTP 200 OK
 ### Verarbeitungsschritte im FD
 
 * Der FD MUSS die DocumentReference-Ressource und alle dazugehörigen Binary-Ressourcen permanent und unverzüglich löschen. Die entsprechenden Dokumententokens verlieren permanent ihre Gültigkeit. Das gilt auch für alle zugehörigen Anhänge.
+* Ein permanentes Löschen über die `$erase`-Operation ist ausschließlich aus dem Bearbeitungsstatus 'Papierkorb' heraus möglich. Wird die Operation auf einer DocumentReference-Ressource aufgerufen, die sich nicht im Bearbeitungsstatus 'Papierkorb' befindet, MUSS der FD die Anfrage mit dem HTTP-Status-Code `412 - Precondition Failed` ablehnen.
 

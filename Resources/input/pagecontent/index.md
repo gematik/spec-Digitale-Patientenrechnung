@@ -12,13 +12,13 @@ Weitere Informationen siehe [§359a SGB V](https://www.gesetze-im-internet.de/sg
 
 ### Status
 
-Version: 1.0.7
+Version: 1.0.8
 
 Realm: Deutschland
 
-Reifegrad: Draft (STU Ballot folgt)
+Reifegrad: Draft
 
-Datum: 01.06.2026
+Datum: 08.07.2026
 
 ### Herausgeber
 
