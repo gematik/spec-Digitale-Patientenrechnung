@@ -10,3 +10,19 @@
 # Referenzen, code-invalid AM010106, Slice-MatchMultiple etc.) werden bereits in
 # der Firely-CI (validator/advisor.json) gefiltert und sind hier bewusst noch
 # NICHT unterdrückt -> siehe Resources/todo.md (QA-Stabilisierung).
+
+# It's OK that references to examples of other modules cannot be resolved
+%cannot be resolved
+%nicht auffindbar
+
+# Java Validator Bug
+%AM010106%befindet sich nicht im ValueSet%
+%Element stimmt mit mehr als einem Slice überein - DokumentenKlassifizierung, Rechnungstyp
+%Der angegebene Code 'https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-CS#main-diagnosis: 'Hauptdiagnose'' befindet sich nicht im ValueSet%
+
+# Backport Extension - so valid mismatch
+%the canonical URL (https://gematik.de/fhir/dipag/StructureDefinition/InvoicePeriod) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]). Use the special-url parameter if you really mean for it not to match
+%the canonical URL (https://gematik.de/fhir/dipag/StructureDefinition/dipag-task-requestedPerformer) does not match the URL (http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer). Use the special-url parameter if you really mean for it not to match
+%When HL7 is publishing a resource, the owning committee must be stated using the http://hl7.org/fhir/StructureDefinition/structuredefinition-wg extension
+URL Mismatch https://gematik.de/fhir/dipag/StructureDefinition/InvoicePeriod vs http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]
+URL Mismatch https://gematik.de/fhir/dipag/StructureDefinition/dipag-task-requestedPerformer vs http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer

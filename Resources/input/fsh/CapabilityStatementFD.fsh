@@ -1,4 +1,4 @@
-Instance: CapabilityStatementFD
+Instance: DiPagCapabilityStatementFD
 InstanceOf: CapabilityStatement
 Usage: #definition
 * insert MetaInstance(1.0.8)

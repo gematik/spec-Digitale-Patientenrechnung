@@ -24,6 +24,8 @@ dependencies:
 pages:
   index.md:
     title: Einfuehrung
+  release-notes.md:
+    title: Release Notes
   zweckbestimmung.md:
     title: Zweckbestimmung
   hinweis-zu-versionen.md:
@@ -64,11 +66,10 @@ pages:
     title: "R11: Abfrage von Daten zu Rechnungen und Dokumenten per Token (Kostentraeger)"
   rechnungsinhalt.md:
     title: Rechnungsinhalt
-  release-notes.md:
-    title: Release Notes
 
 menu:
   Einführung: index.html
+  Release Notes: release-notes.html
   Über diese Spezifikation:
     Zweckbestimmung: zweckbestimmung.html
     Hinweis zu Artefakt-Versionen: hinweis-zu-versionen.html
@@ -92,7 +93,6 @@ menu:
     "R11: Abfrage per Token (Kostentraeger)": R11-abfrage-token-kostentraeger.html
   Rechnungsinhalt: rechnungsinhalt.html
   FHIR-Artefakte: artifacts.html
-  Release Notes: release-notes.html
 
 parameters:
   i18n-default-lang: de
