@@ -90,3 +90,6 @@ menu:
   Rechnungsinhalt: rechnungsinhalt.html
   FHIR-Artefakte: artifacts.html
   Release Notes: release-notes.html
+
+parameters:
+  i18n-default-lang: de
