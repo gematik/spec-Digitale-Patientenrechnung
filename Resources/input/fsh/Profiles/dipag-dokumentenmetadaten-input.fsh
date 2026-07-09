@@ -2,7 +2,8 @@ Profile: DiPagDokumentenmetadatenEingang
 Title: "Digitale Patientenrechnung Dokumentenmetadaten Eingang"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-eingang
-* insert Meta
+* insert Meta(1.0.8)
+* ^date = "2026-07-08"
 * obeys RechnungOderAnhang and MarkierungNurFuerAnhang and AnhangIdentifierPflicht
 * meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
 * meta.extension[markierung]
@@ -46,7 +47,8 @@ Id: dipag-dokumentenmetadaten-eingang
   * system 1.. MS
   * code 1.. MS
   * display 1.. MS
-* type.coding[Rechnungstyp] 
+    * ^maxLength = 1024
+* type.coding[Rechnungstyp]
   * ^patternCoding.system = "http://dvmd.de/fhir/CodeSystem/kdl"
   * ^patternCoding.code = #AM010106
 * description 1..1 MS

@@ -2,9 +2,23 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-wegegeld-reiseentschaedigung",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-wegegeld-reiseentschaedigung",
+  "version": "1.0.7",
   "name": "DiPagWegegeldReiseentschaedigung",
   "title": "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension",
-  "status": "draft",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.1",
   "kind": "complex-type",
   "abstract": false,

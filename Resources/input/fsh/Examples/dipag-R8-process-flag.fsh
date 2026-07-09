@@ -1,16 +1,28 @@
 Instance: BeispielParameterProcessFlagInput
 InstanceOf: Parameters
+// Complete-Replacement-Prinzip: Der Request enthaelt den vollstaendigen, weiterhin gueltigen Markierungssatz.
+// Hier zwei Markierungen ('bezahlt' und 'gelesen'); alle nicht enthaltenen Markierungen wuerden entfernt.
+// Jede Markierung ist ein mehrteiliger Parameter (Tuple) mit der Markierung selbst und ihren Zusatzinformationen als 'part'.
 * parameter[+]
   * name = "markierung"
-  * valueCoding
-    * system = Canonical(DiPagRechnungMarkierungCS)
-    * code = #bezahlt
+  * part[+]
+    * name = "markierung"
+    * valueCoding
+      * system = Canonical(DiPagRechnungMarkierungCS)
+      * code = #bezahlt
+  * part[+]
+    * name = "zeitpunkt"
+    * valueDateTime = "2024-05-30T13:00:00.001+02:00"
+  * part[+]
+    * name = "details"
+    * valueString = "Bezahlt mit falschem Betreff"
 * parameter[+]
-  * name = "zeitpunkt"
-  * valueDateTime = "2024-05-30T13:00:00.001+02:00"
-* parameter[+]
-  * name = "details"
-  * valueString = "Bezahlt mit falschem Betreff"
+  * name = "markierung"
+  * part[+]
+    * name = "markierung"
+    * valueCoding
+      * system = Canonical(DiPagRechnungMarkierungCS)
+      * code = #gelesen
 
 
 Instance: BeispielParameterProcessFlagOutput
@@ -36,3 +48,10 @@ InstanceOf: Parameters
       * extension[+]
         * url = "details"
         * valueString = "Bezahlt mit falschem Betreff"
+    * extension[+]
+      * url = Canonical(DiPagDocumentReferenceMarkierung)
+      * extension[+]
+        * url = "markierung"
+        * valueCoding
+          * system = Canonical(DiPagRechnungMarkierungCS)
+          * code = #gelesen

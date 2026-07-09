@@ -3,7 +3,7 @@ Id: DiPagAbrechnungsDiagnoseProzedur
 Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren"
 Description: """Diese Extension erlaubt es einer Invoice Diagnosen oder Prozeduren, incl. Qualifier wie bspw: "Primär-DRG" zuzuordnen. Dies ermöglicht unter anderem das Zuordnen von Haupt- und Nebendiagnosen zu einem Account zum Zweck der DRG Erstellung."""
 Context: Invoice
-* insert Meta
+* insert Meta(1.0.7)
 * . ^short = "Abrechnungsrelevanz von Diagnosen und Prozeduren"
 * extension contains
     Use 0..1 and
@@ -17,6 +17,6 @@ Extension: DiPagAbrechnungsDiagnoseProzedurFreitext
 Id: DiPagAbrechnungsDiagnoseProzedurFreitext
 Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"
 Context: Invoice
-* insert Meta
+* insert Meta(1.0.7)
 * . ^short = "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"
 * value[x] only string

@@ -7,7 +7,7 @@ Title: "Digitale Patientenrechnung Operation ChangeStatus"
 Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus"
 * status = #active
-* version = "1.0.0-CC"
+* version = "1.0.7"
 * experimental = false
 * date = "2024-06-20"
 * kind = #operation

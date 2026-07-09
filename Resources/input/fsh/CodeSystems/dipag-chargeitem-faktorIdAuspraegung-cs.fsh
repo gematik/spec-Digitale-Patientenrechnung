@@ -1,7 +1,7 @@
 CodeSystem: DiPagRechnungspositionFaktorGruendeCS
 Id: dipag-rechnungsposition-faktor-gruende-cs
 Title: "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem"
-* insert Meta
+* insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * #HV "Honorarvereinbarung" "Die HV ist der Rechnung beizulegen."

@@ -1,0 +1,129 @@
+name: Artefakt-Versionierung
+
+# Läuft NACH der Validierungs-Pipeline ("CI (FHIR Validation)") und hebt die
+# Version einzelner Artefakte an, wenn sich ihr Inhalt gegenüber master geändert
+# hat. Dabei wird das aktuelle Datum als 'date' in die gebumpten Artefakte
+# gestempelt. Führt selbst KEIN Sushi aus: Der Vergleich läuft über die von der
+# CI frisch committeten fsh-generated JSONs, und version + date im JSON werden
+# direkt mitgepatcht. Dadurch ein einziger, konsistenter Commit ohne erneuten
+# CI-Durchlauf.
+#
+# Gate: Solange die globale Version in sushi-config gegenüber master NICHT
+# angehoben wurde (oder master noch keine Baseline hat), bricht die Pipeline
+# NEUTRAL ab (grauer Check "Bedingung noch nicht erfüllt") – weder Fehler (rot)
+# noch Erfolg (grün). Erst wenn die globale Version angehoben wird, bumpt sie.
+#
+# Release-Check: Wurde die globale Version angehoben, MUSS auch die Guide-Version
+# mitgezogen worden sein (guide.yaml + Startseite/Index.page.md angehoben, Datum
+# in Index.page.md = heutiger Tag). Ist das nicht der Fall, schlägt der Check
+# fehl (rot) und der Bump läuft gar nicht erst.
+on:
+  workflow_run:
+    workflows: ["CI (FHIR Validation)"]
+    types: [completed]
+
+# Nur ein Bump-Lauf pro Branch gleichzeitig.
+concurrency:
+  group: version-bump-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  checks: write
+
+jobs:
+  bump:
+    # Nur für Pull Requests und nur, wenn die Validierung erfolgreich war.
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR-Branch
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+          fetch-depth: 0
+
+      - name: Basis-Branch (master) holen
+        run: git fetch origin master:refs/remotes/origin/master
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      # Ermittelt das Bump-Level (bootstrap | unchanged | patch | minor | major),
+      # ohne etwas zu schreiben.
+      - name: Bump-Level ermitteln
+        id: detect
+        run: |
+          status=$(node .github/scripts/bump-artifact-versions.mjs --base origin/master --status)
+          echo "Ermittelter Status: $status"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          echo "today=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+
+      # Gate: globale Version nicht angehoben -> neutral (grau), kein Bump.
+      # Setzt einen Check-Run auf den PR-Commit, damit die Bedingung am PR
+      # sichtbar ist – weder rot noch grün.
+      - name: Bedingung noch nicht erfüllt (neutral)
+        if: steps.detect.outputs.status == 'unchanged' || steps.detect.outputs.status == 'bootstrap'
+        uses: actions/github-script@v7
+        env:
+          BUMP_STATUS: ${{ steps.detect.outputs.status }}
+        with:
+          script: |
+            const status = process.env.BUMP_STATUS;
+            const summary = status === 'bootstrap'
+              ? 'Auf master ist noch keine globale Version gesetzt. Die Versionierungs-Baseline muss zuerst auf master etabliert werden, bevor Artefakte gebumpt werden können.'
+              : 'Die globale Version in Resources/sushi-config.yaml ist identisch zu master. Es wird kein Artefakt-Bump durchgeführt. Bitte die globale Version anheben, sobald die Änderungen dieses PRs released werden sollen.';
+            await github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'Artefakt-Versionierung',
+              head_sha: context.payload.workflow_run.head_sha,
+              status: 'completed',
+              conclusion: 'neutral',
+              output: {
+                title: 'Bedingung noch nicht erfüllt: globale Version nicht angehoben',
+                summary,
+              },
+            });
+
+      # Release-Check: globale Version angehoben, aber Guide-Version nicht
+      # mitgezogen (guide.yaml / Index.page.md) oder Index-Datum nicht heute?
+      # -> rot, und der Bump-Schritt läuft dadurch gar nicht erst.
+      - name: Release-Checks (guide.yaml + Index-Version/Datum)
+        if: >
+          steps.detect.outputs.status == 'patch' ||
+          steps.detect.outputs.status == 'minor' ||
+          steps.detect.outputs.status == 'major'
+        run: >
+          node .github/scripts/bump-artifact-versions.mjs
+          --base origin/master --check-release --today "${{ steps.detect.outputs.today }}"
+
+      # Globale Version angehoben -> nur die inhaltlich geänderten Artefakte
+      # bumpen und mit dem heutigen Datum stempeln.
+      - name: Artefakt-Versionen anheben (FSH + generiertes JSON)
+        if: >
+          steps.detect.outputs.status == 'patch' ||
+          steps.detect.outputs.status == 'minor' ||
+          steps.detect.outputs.status == 'major'
+        run: >
+          node .github/scripts/bump-artifact-versions.mjs
+          --base origin/master --write --today "${{ steps.detect.outputs.today }}"
+
+      - name: Änderungen committen & pushen
+        if: >
+          steps.detect.outputs.status == 'patch' ||
+          steps.detect.outputs.status == 'minor' ||
+          steps.detect.outputs.status == 'major'
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Keine Versionsänderungen – nichts zu committen."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "chore: automatically bump artifact versions and dates"
+          git push origin "HEAD:${{ github.event.workflow_run.head_branch }}"

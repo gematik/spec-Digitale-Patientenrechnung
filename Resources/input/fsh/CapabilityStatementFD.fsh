@@ -1,7 +1,8 @@
 Instance: CapabilityStatementFD
 InstanceOf: CapabilityStatement
 Usage: #definition
-* insert MetaInstance
+* insert MetaInstance(1.0.8)
+* date = "2026-07-08"
 * url = "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD"
 * name = "CapabilityStatementFD"
 * title = "CapabilityStatement Fachdienst E-Rechnnung"
@@ -22,15 +23,7 @@ Usage: #definition
     * supportedProfile = Canonical(DiPagPatient)
     * interaction[+]
       * insert Expectation (#SHALL)
-      * code = #read
-    * interaction[+]
-      * insert Expectation (#SHALL)
       * code = #search-type
-    * searchParam[+]
-      * insert Expectation (#SHALL)
-      * name = "_id"
-      * definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
-      * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
       * name = "identifier"
@@ -51,15 +44,7 @@ Usage: #definition
     * supportedProfile = Canonical(DiPagDokumentenmetadatenIntern)
     * interaction[+]
       * insert Expectation (#SHALL)
-      * code = #read
-    * interaction[+]
-      * insert Expectation (#SHALL)
       * code = #search-type
-    * searchParam[+]
-      * insert Expectation (#SHALL)
-      * name = "_id"
-      * definition = "http://hl7.org/fhir/SearchParameter/Resource-id"
-      * type = #token
     * searchParam[+]
       * insert Expectation (#SHALL)
       * name = "_tag"

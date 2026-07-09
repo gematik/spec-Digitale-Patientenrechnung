@@ -6,9 +6,9 @@ Usage: #example
 Title: "Digitale Patientenrechnung Operation Retrieve"
 Description: "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten"
 * status = #active
-* version = "1.0.0-CC"
+* version = "1.0.8"
 * experimental = false
-* date = "2024-06-20"
+* date = "2026-07-08"
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/Retrieve"
 * kind = #operation
 * name = "DiPagRetrieve"
@@ -23,7 +23,7 @@ Description: "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnung
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Dokumenttoken zur Identifikation des Dokuments, welches abgerufen werden soll. Im Default wird nur die DocumentReference Ressource zurückgegeben. Durch die Angabe weiterer Parameter können zusätzlich das angereicherte PDF (bzw. der Anhang), die strukturierten Rechnungsinhalte und/oder die originale Rechnung mit Signatur zurückgegeben werden."
+  * documentation = "Dokumenttoken zur Identifikation des Dokuments, welches abgerufen werden soll. Das Token entspricht dem Identifier der DocumentReference mit dem System 'https://gematik.de/fhir/sid/dipag-token' (siehe Slice 'Token' im Profil DiPagDokumentenmetadatenIntern) und ist NICHT mit der technischen DocumentReference-id identisch. Im Default wird nur die DocumentReference Ressource zurückgegeben. Durch die Angabe weiterer Parameter können zusätzlich das angereicherte PDF (bzw. der Anhang), die strukturierten Rechnungsinhalte und/oder die originale Rechnung mit Signatur zurückgegeben werden."
   * type = #string
 * parameter[+]
   * name = #pdf

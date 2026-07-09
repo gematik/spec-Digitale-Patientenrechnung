@@ -20,8 +20,11 @@ Title: "Example DiPag Document Reference"
 * meta.tag[0] = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#offen
 * meta.tag[0].display = "Offen"
 * status = http://hl7.org/fhir/document-reference-status#current
-* identifier.system = "http://example.com/fhir/identifiers"
-* identifier.value = "123456789"
+* identifier[Token].system = "https://gematik.de/fhir/sid/dipag-token"
+* identifier[Token].value = "d0ab9ed15c5eb41afde78b16a42e1f84d9b2818c1c48406233ac4e237e85e7f2"
+* identifier[Rechnungsnummer].type = DiPagRechnungIdentifierTypeCS#invoice
+* identifier[Rechnungsnummer].system = "http://example.com/fhir/identifiers"
+* identifier[Rechnungsnummer].value = "123456789"
 * type.coding[Rechnungstyp] = http://dvmd.de/fhir/CodeSystem/kdl#AM010106
 * type.coding[Rechnungstyp].display = "Rechnung ambulante/stationäre Behandlung"
 * description = "Laborbefund vom 28.9.2023"
@@ -60,11 +63,17 @@ Title: "Example DiPag Document Reference"
       * value = "urn:oid:1.2.276.0.76.4.323"
   * data = "U3RydWt0dXJpZXJ0ZXJJbmhhbHRTaWduYXR1ckZEMjAyNjAyMTFmamg="
 * context.related[patient] = Reference(BeispielPatient3-FD)
+* context.related[patient].type = "Patient"
 * context.related[anhaenge] = Reference(ExampleR5DocumentReferenceSonstigesDokument)
+* context.related[anhaenge].type = "DocumentReference"
 
 Instance: ExampleR5DocumentReferenceSonstigesDokument
 InstanceOf: DiPagDokumentenmetadatenIntern
-* identifier
+* identifier[Token]
+  * system = "https://gematik.de/fhir/sid/dipag-token"
+  * value = "a1c4f7e2b9d6038c5e1a4b7d0f3c6e9a2d5b8c1e4f70a3d6b9c2e5f8a1d4b7c0"
+* identifier[AnhangIdentifier]
+  * type = DiPagRechnungIdentifierTypeCS#anhang
   * system = "https://example.org/fhir/sid/anhangids"
   * value = "987-654-321"
 * type.coding[DokumentenKlassifizierung] = $kdl#PT130102 "Molekularpathologiebefund"
@@ -82,6 +91,7 @@ InstanceOf: DiPagDokumentenmetadatenIntern
         * value = "urn:oid:1.2.276.0.76.4.323"
     * data = "QW5oYW5nRG9rdW1lbnRTaWduYXR1ckZEMjAyNjAyMTFkbHBxcnN0dXY="
 * context.related[patient] = Reference(BeispielPatient3-FD)
+* context.related[patient].type = "Patient"
 
 
 

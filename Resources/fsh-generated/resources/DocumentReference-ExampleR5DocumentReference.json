@@ -13,6 +13,24 @@
       "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
     ]
   },
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/sid/dipag-token",
+      "value": "d0ab9ed15c5eb41afde78b16a42e1f84d9b2818c1c48406233ac4e237e85e7f2"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "invoice",
+            "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+          }
+        ]
+      },
+      "system": "http://example.com/fhir/identifiers",
+      "value": "123456789"
+    }
+  ],
   "status": "current",
   "type": {
     "coding": [
@@ -163,24 +181,20 @@
       }
     }
   ],
-  "identifier": [
-    {
-      "system": "http://example.com/fhir/identifiers",
-      "value": "123456789"
-    }
-  ],
-  "description": "Laborbefund vom 28.9.2023",
-  "subject": {
-    "display": "Max Mustermann"
-  },
   "context": {
     "related": [
       {
+        "type": "Patient",
         "reference": "Patient/BeispielPatient3-FD"
       },
       {
+        "type": "DocumentReference",
         "reference": "DocumentReference/ExampleR5DocumentReferenceSonstigesDokument"
       }
     ]
+  },
+  "description": "Laborbefund vom 28.9.2023",
+  "subject": {
+    "display": "Max Mustermann"
   }
 }
