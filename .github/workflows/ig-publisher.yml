@@ -1,0 +1,129 @@
+name: Build and Publish IG
+
+# Baut den Implementation Guide (HL7 IG Publisher) aus Resources/ und
+# veröffentlicht den fertigen Output auf dem github-pages-Branch unter docs/ig/:
+#   https://gematik.github.io/spec-Digitale-Patientenrechnung/ig/
+# Der Viewer unter https://gematik.github.io/spec-Digitale-Patientenrechnung/
+# wird separat von .github/workflows/pages.yml deployed und bleibt unberührt.
+#
+# Angelehnt an spec-ISiK-Basismodul/.github/workflows/ig-publisher.yml, aber
+# vereinfacht: hier gibt es genau einen IG (kein Matrix-Build, keine
+# CapabilityStatement-Expansion, keine Change-Detection-Skripte).
+
+on:
+  # Pull Requests: nur bauen, kein Publish
+  pull_request:
+    paths:
+      - 'Resources/**'
+      - '.github/workflows/ig-publisher.yml'
+      - '.github/scripts/publish-ig.sh'
+
+  # Push auf den Publish-Branch: bauen und veröffentlichen
+  # TODO(switch-to-master): 'bema-on-ig-publisher' durch 'master' ersetzen,
+  # sobald das IG-Publishing auf master umgestellt wird (dann auch die
+  # if-Bedingung am publish-Job unten anpassen).
+  push:
+    branches:
+      - bema-on-ig-publisher
+    paths:
+      - 'Resources/**'
+      - '.github/workflows/ig-publisher.yml'
+      - '.github/scripts/publish-ig.sh'
+
+  # Manuelles Auslösen (Build; Publish optional per Input)
+  workflow_dispatch:
+    inputs:
+      run_publish:
+        description: 'Output nach github-pages (docs/ig) veröffentlichen (nur auf dem Publish-Branch)'
+        required: false
+        type: boolean
+        default: false
+
+# Pro Branch nur ein Lauf gleichzeitig; neue Läufe brechen laufende ab
+concurrency:
+  group: ig-publisher-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/gefyra/ig-publisher-with-snapshot-support:latest
+    env:
+      SUSHI_INPUT_DIR: Resources
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      # FHIR-Paketabhängigkeiten aus der sushi-config in den Paket-Cache laden
+      - name: Download Dependencies
+        run: |
+          fhir-pkg-tool --sushi-deps-file ${{ env.SUSHI_INPUT_DIR }}/sushi-config.yaml
+
+      # Cache an den vom IG Publisher erwarteten Ort spiegeln
+      - name: Setup Package Cache for IG Publisher
+        run: |
+          mkdir -p /root/.fhir/packages
+          cp -r /github/home/.fhir/packages/* /root/.fhir/packages/
+
+      # FSH-Quellen zu FHIR-Ressourcen konvertieren
+      - name: Run SUSHI
+        run: |
+          sushi ${{ env.SUSHI_INPUT_DIR }}
+
+      # IG Publisher ausführen (Output landet in Resources/output)
+      - name: Build IG
+        run: |
+          igpublisher -ig ${{ env.SUSHI_INPUT_DIR }}/ig.ini
+
+      # Übergroßes Gesamt-ZIP vor dem Artifact-Upload entfernen
+      - name: Remove full-ig.zip from build output
+        run: |
+          rm -f ${{ env.SUSHI_INPUT_DIR }}/output/full-ig.zip
+
+      # Build-Ergebnis für den publish-Job (und zur PR-Inspektion) bereitstellen
+      - name: Upload IG Build Results
+        uses: actions/upload-artifact@v7
+        with:
+          name: fhir-ig
+          path: ${{ env.SUSHI_INPUT_DIR }}/output
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    # TODO(switch-to-master): 'refs/heads/bema-on-ig-publisher' durch
+    # 'refs/heads/master' ersetzen, sobald das IG-Publishing auf master umzieht.
+    if: >-
+      github.ref == 'refs/heads/bema-on-ig-publisher' &&
+      (github.event_name == 'push' ||
+       (github.event_name == 'workflow_dispatch' && github.event.inputs.run_publish == 'true'))
+    # Gemeinsame Concurrency-Gruppe mit dem Viewer-Deploy (pages.yml), damit
+    # nie zwei Workflows gleichzeitig auf den github-pages-Branch pushen.
+    concurrency:
+      group: github-pages-branch
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Download IG Build Results
+        uses: actions/download-artifact@v8
+        with:
+          name: fhir-ig
+          path: ig-output
+
+      - name: Publish IG to GitHub Pages branch
+        shell: bash
+        env:
+          REPO: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_AUTHOR_NAME: github-actions[bot]
+          GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
+          IG_OUTPUT_DIR: ig-output
+          PAGES_BRANCH: github-pages
+        run: bash .github/scripts/publish-ig.sh
