@@ -451,6 +451,7 @@
       "description": "Operation $invoice-submit on an instance of Patient",
       "post": {
         "summary": "$invoice-submit on Patient instance",
+        "description": "Rechnung einreichen durch die Leistungserbringer:in",
         "operationId": "op-invoice-submit-Patient-instance",
         "parameters": [
           {
@@ -512,6 +513,7 @@
       "description": "Operation $retrieve on type DocumentReference",
       "get": {
         "summary": "$retrieve on type DocumentReference",
+        "description": "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten",
         "operationId": "op-retrieve-DocumentReference",
         "responses": {
           "default": {
@@ -552,6 +554,7 @@
       "description": "Operation $change-status on an instance of DocumentReference",
       "post": {
         "summary": "$change-status on DocumentReference instance",
+        "description": "Änderung des Bearbeitungsstatus eines Dokumentes",
         "operationId": "op-change-status-DocumentReference-instance",
         "parameters": [
           {
@@ -613,6 +616,7 @@
       "description": "Operation $process-flag on an instance of DocumentReference",
       "post": {
         "summary": "$process-flag on DocumentReference instance",
+        "description": "Setzt die Markierungen eines Rechnungsdokuments (DocumentReference) nach dem Complete-Replacement-Prinzip: Die übermittelten Markierungen ersetzen vollständig den bisherigen Markierungssatz des Dokuments. Markierungen, die nicht im Request enthalten sind, werden entfernt; Änderungen an bestehenden Markierungen erfolgen durch erneutes Übermitteln mit aktualisierten Werten. Der Request muss daher stets alle weiterhin gültigen Markierungen inklusive ihrer jeweiligen Zusatzinformationen vollständig enthalten. Wird kein \u0027markierung\u0027-Parameter übergeben (leerer Markierungssatz), werden alle änderbaren Markierungen des Dokuments entfernt. Da dies der einzige Endpunkt zur Pflege der Markierungen ist, wird hierüber auch das vollständige Löschen der Markierungen unterstützt.\n\nAusnahmen: Die Markierungen \u0027persönlich\u0027 und \u0027abgerufen durch KTR\u0027 können über diese Operation weder gesetzt noch entfernt werden und werden ignoriert, falls sie übermittelt werden. Sie bleiben sowohl von der Ersetzung als auch von der Löschung unberührt.",
         "operationId": "op-process-flag-DocumentReference-instance",
         "parameters": [
           {
@@ -674,6 +678,7 @@
       "description": "Operation $erase on an instance of DocumentReference",
       "post": {
         "summary": "$erase on DocumentReference instance",
+        "description": "Permanente Löschung eines Dokumentes. \nGelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type \u003d \u0027AM010106\u0027 (Rechnungsdokument) gekennzeichnet sind. Es werden alle zugehörigen Anhang-Dokument (KDL-type !\u003d \u0027AM010106\u0027) mit gelöscht. Es erfolgt eine permanente Löschung der Ressourcen, d.h. die Ressourcen sind nach der Operation nicht mehr auffindbar und es werden keine Historie oder Versionen der Ressourcen angelegt.",
         "operationId": "op-erase-DocumentReference-instance",
         "parameters": [
           {

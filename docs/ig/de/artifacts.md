@@ -19,6 +19,18 @@ Die folgenden Artefakte definieren die spezifischen Fähigkeiten, die verschiede
 | :--- | :--- |
 | [ CapabilityStatement Fachdienst E-Rechnnung  ](CapabilityStatement-DiPagCapabilityStatementFD.md) | Dieses CapabilityStatement beschreibt alle Interaktionen, die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN. |
 
+### Verhalten: OperationDefinitions 
+
+Dies sind benutzerdefinierte Operationen, die von Systemen unterstützt und/oder aufgerufen werden können, die mit dem Implementierungsleitfaden konform sind.
+
+| | |
+| :--- | :--- |
+| [ Digitale Patientenrechnung Operation ChangeStatus  ](OperationDefinition-ChangeStatus.md) | Änderung des Bearbeitungsstatus eines Dokumentes |
+| [ Digitale Patientenrechnung Operation Erase  ](OperationDefinition-Erase.md) | Permanente Löschung eines Dokumentes. Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'AM010106' (Rechnungsdokument) gekennzeichnet sind. Es werden alle zugehörigen Anhang-Dokument (KDL-type != 'AM010106') mit gelöscht. Es erfolgt eine permanente Löschung der Ressourcen, d.h. die Ressourcen sind nach der Operation nicht mehr auffindbar und es werden keine Historie oder Versionen der Ressourcen angelegt. |
+| [ Digitale Patientenrechnung Operation Invoice-Submit  ](OperationDefinition-Submit.md) | Rechnung einreichen durch die Leistungserbringer:in |
+| [ Digitale Patientenrechnung Operation ProcessFlag  ](OperationDefinition-ProcessFlag.md) | Setzt die Markierungen eines Rechnungsdokuments (DocumentReference) nach dem Complete-Replacement-Prinzip: Die übermittelten Markierungen ersetzen vollständig den bisherigen Markierungssatz des Dokuments. Markierungen, die nicht im Request enthalten sind, werden entfernt; Änderungen an bestehenden Markierungen erfolgen durch erneutes Übermitteln mit aktualisierten Werten. Der Request muss daher stets alle weiterhin gültigen Markierungen inklusive ihrer jeweiligen Zusatzinformationen vollständig enthalten. Wird kein 'markierung'-Parameter übergeben (leerer Markierungssatz), werden alle änderbaren Markierungen des Dokuments entfernt. Da dies der einzige Endpunkt zur Pflege der Markierungen ist, wird hierüber auch das vollständige Löschen der Markierungen unterstützt.Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können über diese Operation weder gesetzt noch entfernt werden und werden ignoriert, falls sie übermittelt werden. Sie bleiben sowohl von der Ersetzung als auch von der Löschung unberührt. |
+| [ Digitale Patientenrechnung Operation Retrieve  ](OperationDefinition-Retrieve.md) | Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten |
+
 ### Strukturen: Ressourcenprofile 
 
 Diese definieren Einschränkungen für FHIR-Ressourcen für Systeme, die mit dem Implementierungsleitfaden konform sind.
@@ -189,11 +201,6 @@ Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Sy
 | [ BulkSubmitExampleOutput  ](Bundle-BulkSubmitExampleOutput.md) |  |
 | [ Diagnose - Karies  ](Condition-f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d.md) | **Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.Zahnkaries als Hauptdiagnose für die Rechnung |
 | [ Diagnose - Parodontitis  ](Condition-a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e.md) | **Hinweis:** Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.Parodontitis als Nebendiagnose |
-| [ Digitale Patientenrechnung Operation ChangeStatus  ](OperationDefinition-DiPagOperationChangeStatus.md) | Änderung des Bearbeitungsstatus eines Dokumentes |
-| [ Digitale Patientenrechnung Operation Erase  ](OperationDefinition-DiPagOperationErase.md) | Permanente Löschung eines Dokumentes. Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'AM010106' (Rechnungsdokument) gekennzeichnet sind. Es werden alle zugehörigen Anhang-Dokument (KDL-type != 'AM010106') mit gelöscht. Es erfolgt eine permanente Löschung der Ressourcen, d.h. die Ressourcen sind nach der Operation nicht mehr auffindbar und es werden keine Historie oder Versionen der Ressourcen angelegt. |
-| [ Digitale Patientenrechnung Operation Invoice-Submit  ](OperationDefinition-DiPagOperationSubmit.md) | Rechnung einreichen durch die Leistungserbringer:in |
-| [ Digitale Patientenrechnung Operation ProcessFlag  ](OperationDefinition-DiPagOperationProcessFlag.md) | Setzt die Markierungen eines Rechnungsdokuments (DocumentReference) nach dem Complete-Replacement-Prinzip: Die übermittelten Markierungen ersetzen vollständig den bisherigen Markierungssatz des Dokuments. Markierungen, die nicht im Request enthalten sind, werden entfernt; Änderungen an bestehenden Markierungen erfolgen durch erneutes Übermitteln mit aktualisierten Werten. Der Request muss daher stets alle weiterhin gültigen Markierungen inklusive ihrer jeweiligen Zusatzinformationen vollständig enthalten. Wird kein 'markierung'-Parameter übergeben (leerer Markierungssatz), werden alle änderbaren Markierungen des Dokuments entfernt. Da dies der einzige Endpunkt zur Pflege der Markierungen ist, wird hierüber auch das vollständige Löschen der Markierungen unterstützt.Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können über diese Operation weder gesetzt noch entfernt werden und werden ignoriert, falls sie übermittelt werden. Sie bleiben sowohl von der Ersetzung als auch von der Löschung unberührt. |
-| [ Digitale Patientenrechnung Operation Retrieve  ](OperationDefinition-DiPagOperationRetrieve.md) | Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten |
 | [ Example DiPag Document Reference  ](DocumentReference-ExampleR5DocumentReference.md) | Laborbefund vom 28.9.2023 |
 | [ ExampleR5Bundle  ](Bundle-ExampleR5Bundle.md) |  |
 | [ ExampleR5DocumentReferenceSonstigesDokument  ](DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.md) | Molekularpathologiebefund vom 31.12.21 |

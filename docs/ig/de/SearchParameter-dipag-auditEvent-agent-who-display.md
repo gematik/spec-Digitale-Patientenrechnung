@@ -30,7 +30,7 @@ Ein SearchParameter auf der Ressource AuditEvent, der die Suche nach dem Text in
   "version" : "1.0.8",
   "name" : "DiPagAuditEventAgentWhoDisplay",
   "status" : "active",
-  "date" : "2026-07-09T11:50:43+00:00",
+  "date" : "2026-07-09T12:53:25+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",

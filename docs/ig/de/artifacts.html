@@ -256,19 +256,22 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <a href="#1">Verhalten: CapabilityStatements</a>
       </li>
       <li>
-         <a href="#2">Strukturen: Ressourcenprofile</a>
+         <a href="#2">Verhalten: OperationDefinitions</a>
       </li>
       <li>
-         <a href="#3">Strukturen: Extension-Definitionen</a>
+         <a href="#3">Strukturen: Ressourcenprofile</a>
       </li>
       <li>
-         <a href="#4">Terminologie: ValueSets</a>
+         <a href="#4">Strukturen: Extension-Definitionen</a>
       </li>
       <li>
-         <a href="#5">Terminologie: CodeSysteme</a>
+         <a href="#5">Terminologie: ValueSets</a>
       </li>
       <li>
-         <a href="#6">Beispiel: Beispielinstanzen</a>
+         <a href="#6">Terminologie: CodeSysteme</a>
+      </li>
+      <li>
+         <a href="#7">Beispiel: Beispielinstanzen</a>
       </li>
    </ul>
 </div>
@@ -298,6 +301,76 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
       </tbody>
    </table>
    <a name="2"> </a>
+   <h3>Verhalten: OperationDefinitions </h3>
+    <p>Dies sind benutzerdefinierte Operationen, die von Systemen unterstützt und/oder aufgerufen werden können, die mit dem Implementierungsleitfaden konform sind.</p>
+<table class="grid">
+      <col style="width:20%"/>
+      <tbody>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationDefinition-ChangeStatus.html"
+                  title="OperationDefinition/ChangeStatus">
+                  <span title="OperationDefinition/ChangeStatus">Digitale Patientenrechnung Operation ChangeStatus
+</span>
+               </a>
+            </td>
+            <td>
+<p>Änderung des Bearbeitungsstatus eines Dokumentes</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationDefinition-Erase.html" title="OperationDefinition/Erase">
+                  <span title="OperationDefinition/Erase">Digitale Patientenrechnung Operation Erase
+</span>
+               </a>
+            </td>
+            <td>
+<p>Permanente Löschung eines Dokumentes. 
+Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'AM010106' (Rechnungsdokument) gekennzeichnet sind. Es werden alle zugehörigen Anhang-Dokument (KDL-type != 'AM010106') mit gelöscht. Es erfolgt eine permanente Löschung der Ressourcen, d.h. die Ressourcen sind nach der Operation nicht mehr auffindbar und es werden keine Historie oder Versionen der Ressourcen angelegt.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationDefinition-Submit.html"
+                  title="OperationDefinition/Submit">
+                  <span title="OperationDefinition/Submit">Digitale Patientenrechnung Operation Invoice-Submit
+</span>
+               </a>
+            </td>
+            <td>
+<p>Rechnung einreichen durch die Leistungserbringer:in</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationDefinition-ProcessFlag.html"
+                  title="OperationDefinition/ProcessFlag">
+                  <span title="OperationDefinition/ProcessFlag">Digitale Patientenrechnung Operation ProcessFlag
+</span>
+               </a>
+            </td>
+            <td>
+<p>Setzt die Markierungen eines Rechnungsdokuments (DocumentReference) nach dem Complete-Replacement-Prinzip: Die übermittelten Markierungen ersetzen vollständig den bisherigen Markierungssatz des Dokuments. Markierungen, die nicht im Request enthalten sind, werden entfernt; Änderungen an bestehenden Markierungen erfolgen durch erneutes Übermitteln mit aktualisierten Werten. Der Request muss daher stets alle weiterhin gültigen Markierungen inklusive ihrer jeweiligen Zusatzinformationen vollständig enthalten. Wird kein 'markierung'-Parameter übergeben (leerer Markierungssatz), werden alle änderbaren Markierungen des Dokuments entfernt. Da dies der einzige Endpunkt zur Pflege der Markierungen ist, wird hierüber auch das vollständige Löschen der Markierungen unterstützt.</p>
+
+<p>Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können über diese Operation weder gesetzt noch entfernt werden und werden ignoriert, falls sie übermittelt werden. Sie bleiben sowohl von der Ersetzung als auch von der Löschung unberührt.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="OperationDefinition-Retrieve.html"
+                  title="OperationDefinition/Retrieve">
+                  <span title="OperationDefinition/Retrieve">Digitale Patientenrechnung Operation Retrieve
+</span>
+               </a>
+            </td>
+            <td>
+<p>Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten</p>
+</td>
+         </tr>
+      </tbody>
+   </table>
+   <a name="3"> </a>
    <h3>Strukturen: Ressourcenprofile </h3>
     <p>Diese definieren Einschränkungen für FHIR-Ressourcen für Systeme, die mit dem Implementierungsleitfaden konform sind.</p>
 <table class="grid">
@@ -449,7 +522,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="3"> </a>
+   <a name="4"> </a>
    <h3>Strukturen: Extension-Definitionen </h3>
     <p>Diese definieren Einschränkungen für FHIR-Datentypen für Systeme, die mit diesem Implementierungsleitfaden konform sind.</p>
 <table class="grid">
@@ -784,7 +857,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="4"> </a>
+   <a name="5"> </a>
    <h3>Terminologie: ValueSets </h3>
     <p>Diese definieren Wertemengen, die von Systemen verwendet werden, die mit dem Implementierungsleitfaden konform sind.</p>
 <table class="grid">
@@ -1032,7 +1105,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="5"> </a>
+   <a name="6"> </a>
    <h3>Terminologie: CodeSysteme </h3>
     <p>Diese definieren neue CodeSysteme, die von Systemen verwendet werden, die mit diesem Implementierungsleitfaden konform sind.</p>
 <table class="grid">
@@ -1244,7 +1317,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          </tr>
       </tbody>
    </table>
-   <a name="6"> </a>
+   <a name="7"> </a>
    <h3>Beispiel: Beispielinstanzen </h3>
     <p>Dies sind Beispielinstanzen, die zeigen, wie Daten aussehen könnten, die von Systemen produziert und konsumiert werden, die mit diesem Implementierungsleitfaden konform sind.</p>
 <table class="grid">
@@ -1894,69 +1967,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 <p><strong>Hinweis:</strong> Alle Daten in diesem Beispiel sind fiktiv und dienen ausschließlich zu Demonstrations- und Testzwecken.</p>
 
 <p>Parodontitis als Nebendiagnose</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="OperationDefinition-DiPagOperationChangeStatus.html"
-                  title="OperationDefinition/DiPagOperationChangeStatus">
-                  <span title="OperationDefinition/DiPagOperationChangeStatus">Digitale Patientenrechnung Operation ChangeStatus
-</span>
-               </a>
-            </td>
-            <td>
-<p>Änderung des Bearbeitungsstatus eines Dokumentes</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="OperationDefinition-DiPagOperationErase.html"
-                  title="OperationDefinition/DiPagOperationErase">
-                  <span title="OperationDefinition/DiPagOperationErase">Digitale Patientenrechnung Operation Erase
-</span>
-               </a>
-            </td>
-            <td>
-<p>Permanente Löschung eines Dokumentes. 
-Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'AM010106' (Rechnungsdokument) gekennzeichnet sind. Es werden alle zugehörigen Anhang-Dokument (KDL-type != 'AM010106') mit gelöscht. Es erfolgt eine permanente Löschung der Ressourcen, d.h. die Ressourcen sind nach der Operation nicht mehr auffindbar und es werden keine Historie oder Versionen der Ressourcen angelegt.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="OperationDefinition-DiPagOperationSubmit.html"
-                  title="OperationDefinition/DiPagOperationSubmit">
-                  <span title="OperationDefinition/DiPagOperationSubmit">Digitale Patientenrechnung Operation Invoice-Submit
-</span>
-               </a>
-            </td>
-            <td>
-<p>Rechnung einreichen durch die Leistungserbringer:in</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="OperationDefinition-DiPagOperationProcessFlag.html"
-                  title="OperationDefinition/DiPagOperationProcessFlag">
-                  <span title="OperationDefinition/DiPagOperationProcessFlag">Digitale Patientenrechnung Operation ProcessFlag
-</span>
-               </a>
-            </td>
-            <td>
-<p>Setzt die Markierungen eines Rechnungsdokuments (DocumentReference) nach dem Complete-Replacement-Prinzip: Die übermittelten Markierungen ersetzen vollständig den bisherigen Markierungssatz des Dokuments. Markierungen, die nicht im Request enthalten sind, werden entfernt; Änderungen an bestehenden Markierungen erfolgen durch erneutes Übermitteln mit aktualisierten Werten. Der Request muss daher stets alle weiterhin gültigen Markierungen inklusive ihrer jeweiligen Zusatzinformationen vollständig enthalten. Wird kein 'markierung'-Parameter übergeben (leerer Markierungssatz), werden alle änderbaren Markierungen des Dokuments entfernt. Da dies der einzige Endpunkt zur Pflege der Markierungen ist, wird hierüber auch das vollständige Löschen der Markierungen unterstützt.</p>
-
-<p>Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können über diese Operation weder gesetzt noch entfernt werden und werden ignoriert, falls sie übermittelt werden. Sie bleiben sowohl von der Ersetzung als auch von der Löschung unberührt.</p>
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
-               <a href="OperationDefinition-DiPagOperationRetrieve.html"
-                  title="OperationDefinition/DiPagOperationRetrieve">
-                  <span title="OperationDefinition/DiPagOperationRetrieve">Digitale Patientenrechnung Operation Retrieve
-</span>
-               </a>
-            </td>
-            <td>
-<p>Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten</p>
 </td>
          </tr>
          <tr>
@@ -2840,7 +2850,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
 
           IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gematik.de">gematik GmbH</a>.  
           Package de.gematik.dipag#1.0.8 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Jul 9, 2026 11:50+0000">2026-07-09</span>
+          Erstellt <span title="Thu, Jul 9, 2026 12:53+0000">2026-07-09</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |

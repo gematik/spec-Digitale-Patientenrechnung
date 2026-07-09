@@ -12,10 +12,10 @@
     "sources" : ["1.2.276.0.76.11.37"],
     "uses" : {
     },
-    "StructureDefinition-dipag-fachrichtung.html" : "Digitale Patientenrechnung Extension Fachrichtung",
     "StructureDefinition-dipag-docref-fachrichtung.html" : "Digitale Patientenrechnung DocRef Fachrichtung",
-    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
-    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
+    "StructureDefinition-dipag-fachrichtung.html" : "Digitale Patientenrechnung Extension Fachrichtung",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/ValueSet/DiPagVerkehrsmittel",
@@ -174,7 +174,7 @@
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs"],
     "uses" : {
     },
-    "OperationDefinition-DiPagOperationSubmit.html" : "DiPagSubmit"
+    "OperationDefinition-Submit.html" : "Digitale Patientenrechnung Operation Invoice-Submit"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsart-vs",
@@ -247,8 +247,8 @@
     "systems" : ["http://dvmd.de/fhir/CodeSystem/kdl"],
     "uses" : {
     },
-    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
-    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-total-price-component-deduction-type-vs",

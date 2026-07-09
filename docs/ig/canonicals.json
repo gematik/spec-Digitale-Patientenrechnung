@@ -146,35 +146,35 @@
   "name" : "DigitalePatientenrechnung"
 },
 {
-  "id" : "DiPagOperationChangeStatus",
+  "id" : "ChangeStatus",
   "type" : "OperationDefinition",
   "url" : "https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus",
   "version" : "1.0.8",
   "name" : "DiPagChangeStatus"
 },
 {
-  "id" : "DiPagOperationErase",
+  "id" : "Erase",
   "type" : "OperationDefinition",
   "url" : "https://gematik.de/fhir/dipag/OperationDefinition/Erase",
   "version" : "1.0.8",
   "name" : "DiPagErase"
 },
 {
-  "id" : "DiPagOperationProcessFlag",
+  "id" : "ProcessFlag",
   "type" : "OperationDefinition",
   "url" : "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag",
   "version" : "1.0.8",
   "name" : "DiPagProcessFlag"
 },
 {
-  "id" : "DiPagOperationRetrieve",
+  "id" : "Retrieve",
   "type" : "OperationDefinition",
   "url" : "https://gematik.de/fhir/dipag/OperationDefinition/Retrieve",
   "version" : "1.0.8",
   "name" : "DiPagRetrieve"
 },
 {
-  "id" : "DiPagOperationSubmit",
+  "id" : "Submit",
   "type" : "OperationDefinition",
   "url" : "https://gematik.de/fhir/dipag/OperationDefinition/Submit",
   "version" : "1.0.8",

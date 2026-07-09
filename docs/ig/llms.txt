@@ -123,6 +123,14 @@
 
 * [Implementierungsleitfaden Digitale Patientenrechnung](de/ImplementationGuide-de.gematik.dipag.md)
 
+### OperationDefinitions
+
+* [Digitale Patientenrechnung Operation ChangeStatus](de/OperationDefinition-ChangeStatus.md)
+* [Digitale Patientenrechnung Operation Erase](de/OperationDefinition-Erase.md)
+* [Digitale Patientenrechnung Operation ProcessFlag](de/OperationDefinition-ProcessFlag.md)
+* [Digitale Patientenrechnung Operation Retrieve](de/OperationDefinition-Retrieve.md)
+* [Digitale Patientenrechnung Operation Invoice-Submit](de/OperationDefinition-Submit.md)
+
 ### Examples
 
 * [BeispielNutzungsprotokoll (AuditEvent)](de/AuditEvent-BeispielNutzungsprotokoll.md)
@@ -217,11 +225,6 @@
 * [KfoMehrkosten4Rechnung (Invoice)](de/Invoice-KfoMehrkosten4Rechnung.md)
 * [a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d (Invoice)](de/Invoice-a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d.md)
 * [c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a (Invoice)](de/Invoice-c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a.md)
-* [DiPagChangeStatus (OperationDefinition)](de/OperationDefinition-DiPagOperationChangeStatus.md)
-* [DiPagErase (OperationDefinition)](de/OperationDefinition-DiPagOperationErase.md)
-* [DiPagProcessFlag (OperationDefinition)](de/OperationDefinition-DiPagOperationProcessFlag.md)
-* [DiPagRetrieve (OperationDefinition)](de/OperationDefinition-DiPagOperationRetrieve.md)
-* [DiPagSubmit (OperationDefinition)](de/OperationDefinition-DiPagOperationSubmit.md)
 * [BeispielOperationOutcomeRechnung3.1-FD (OperationOutcome)](de/OperationOutcome-BeispielOperationOutcomeRechnung3.1-FD.md)
 * [Praxis Dr. A. Arzt (Organization)](de/Organization-3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f.md)
 * [ARZ ZB GmbH (Organization)](de/Organization-KfoMehrkosten3Behandler.md)

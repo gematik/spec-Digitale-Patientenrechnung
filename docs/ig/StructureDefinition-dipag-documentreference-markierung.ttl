@@ -112,7 +112,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "DiPagDocumentReferenceMarkierung-1" ] ;
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
          fhir:ElementDefinition.constraint.human [ fhir:value "Details zur Art der Archivierung können nur angegeben werden wenn die Markierung vom Typ 'Archiviert' ist" ] ;
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').valueCoding.where(code = 'archiviert').exists()" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').value.ofType(Coding).where(code = 'archiviert').exists()" ] ;
          fhir:ElementDefinition.constraint.source [
            fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung" ;
            fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung>
@@ -122,7 +122,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "DiPagDocumentReferenceMarkierung-3" ] ;
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
          fhir:ElementDefinition.constraint.human [ fhir:value "Details zu Status mit Kostenträger-Referenz können nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', eingereicht-post, 'geteilt' oder 'abgerufen' ist" ] ;
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.where(url = 'kostentraeger').value.exists() implies (extension.where(url = 'markierung').valueCoding.where(code = 'eingereicht-frontend').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'eingereicht-post').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'geteilt').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'abgerufen').exists())" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.where(url = 'kostentraeger').value.exists() implies (extension.where(url = 'markierung').value.ofType(Coding).where(code = 'eingereicht-frontend').exists() or extension.where(url = 'markierung').value.ofType(Coding).where(code = 'eingereicht-post').exists() or extension.where(url = 'markierung').value.ofType(Coding).where(code = 'geteilt').exists() or extension.where(url = 'markierung').value.ofType(Coding).where(code = 'abgerufen').exists())" ] ;
          fhir:ElementDefinition.constraint.source [
            fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung" ;
            fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung>
@@ -1716,7 +1716,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "DiPagDocumentReferenceMarkierung-1" ] ;
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
          fhir:ElementDefinition.constraint.human [ fhir:value "Details zur Art der Archivierung können nur angegeben werden wenn die Markierung vom Typ 'Archiviert' ist" ] ;
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').valueCoding.where(code = 'archiviert').exists()" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').value.ofType(Coding).where(code = 'archiviert').exists()" ] ;
          fhir:ElementDefinition.constraint.source [
            fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung" ;
            fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung>
@@ -1726,7 +1726,7 @@
          fhir:ElementDefinition.constraint.key [ fhir:value "DiPagDocumentReferenceMarkierung-3" ] ;
          fhir:ElementDefinition.constraint.severity [ fhir:value "error" ] ;
          fhir:ElementDefinition.constraint.human [ fhir:value "Details zu Status mit Kostenträger-Referenz können nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', eingereicht-post, 'geteilt' oder 'abgerufen' ist" ] ;
-         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.where(url = 'kostentraeger').value.exists() implies (extension.where(url = 'markierung').valueCoding.where(code = 'eingereicht-frontend').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'eingereicht-post').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'geteilt').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'abgerufen').exists())" ] ;
+         fhir:ElementDefinition.constraint.expression [ fhir:value "extension.where(url = 'kostentraeger').value.exists() implies (extension.where(url = 'markierung').value.ofType(Coding).where(code = 'eingereicht-frontend').exists() or extension.where(url = 'markierung').value.ofType(Coding).where(code = 'eingereicht-post').exists() or extension.where(url = 'markierung').value.ofType(Coding).where(code = 'geteilt').exists() or extension.where(url = 'markierung').value.ofType(Coding).where(code = 'abgerufen').exists())" ] ;
          fhir:ElementDefinition.constraint.source [
            fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung" ;
            fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung>

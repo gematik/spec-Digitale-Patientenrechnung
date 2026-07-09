@@ -20,7 +20,7 @@ Profile: [Digitale Patientenrechnung Rechnung](StructureDefinition-dipag-rechnun
 
 > **Abrechnungsrelevanz von Diagnosen und Prozeduren**
 * Referenz: [Condition Zahnkaries, nicht näher bezeichnet](Condition-f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d.md)
-* Use: dipag-abrechnungs-diagnose-use-CS: main-diagnosis (Hauptdiagnose)
+* Use: [Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem: main-diagnosis](CodeSystem-dipag-abrechnungs-diagnose-use-cs.md#dipag-abrechnungs-diagnose-use-cs-main-diagnosis) (Hauptdiagnose)
 
 > **Abrechnungsrelevanz von Diagnosen und Prozeduren**
 * Referenz: [Condition Chronische Parodontitis](Condition-a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e.md)
@@ -257,7 +257,7 @@ Gemäß §1 Abs. 2 GOÄ werden diese Leistungen nach dieser Gebührenordnung fü
     {
       "url" : "Use",
       "valueCoding" : {
-        "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-CS",
+        "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-cs",
         "code" : "main-diagnosis",
         "display" : "Hauptdiagnose"
       }
