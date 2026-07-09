@@ -19,7 +19,11 @@ publisher:
 dependencies:
   de.basisprofil.r4: 1.5.4
   dvmd.kdl.r4: 2025.0.1
-  de.ihe-d.terminology: 3.0.1
+  de.ihe-d.terminology:
+    version: 3.0.1
+    # Das Paket enthaelt keine ImplementationGuide-Ressource; explizite URI mit
+    # /ImplementationGuide/-Segment, damit der IG Publisher dependsOn akzeptiert.
+    uri: http://fhir.de/packages/de.ihe-d.terminology/ImplementationGuide/de.ihe-d.terminology
 
 pages:
   index.md:
@@ -96,3 +100,6 @@ menu:
 
 parameters:
   i18n-default-lang: de
+  special-url:
+    - http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]
+    - http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer

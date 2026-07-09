@@ -556,10 +556,7 @@ Usage: #example
     * display = "Zahnmedizin"
 * extension[AbrechnungsDiagnoseProzedur][+]
   * extension[Use]
-    * valueCoding
-      * system = "https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-CS"
-      * code = #main-diagnosis
-      * display = "Hauptdiagnose"
+    * valueCoding = DiPagAbrechnungsDiagnoseUseCS#main-diagnosis "Hauptdiagnose"
   * extension[Referenz][+]
     * valueReference = Reference(DiagnoseExample)
 * extension[AbrechnungsDiagnoseProzedur][+]

@@ -1,8 +1,8 @@
 // ------------- OperationDefinition -------------
 
-Instance: DiPagOperationChangeStatus
+Instance: ChangeStatus
 InstanceOf: OperationDefinition
-Usage: #example
+Usage: #definition
 Title: "Digitale Patientenrechnung Operation ChangeStatus"
 Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus"

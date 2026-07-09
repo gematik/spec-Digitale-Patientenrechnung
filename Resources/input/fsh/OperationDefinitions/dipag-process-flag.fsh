@@ -1,8 +1,8 @@
 // ------------- OperationDefinition -------------
 
-Instance: DiPagOperationProcessFlag
+Instance: ProcessFlag
 InstanceOf: OperationDefinition
-Usage: #example
+Usage: #definition
 Title: "Digitale Patientenrechnung Operation ProcessFlag"
 Description: """Setzt die Markierungen eines Rechnungsdokuments (DocumentReference) nach dem Complete-Replacement-Prinzip: Die übermittelten Markierungen ersetzen vollständig den bisherigen Markierungssatz des Dokuments. Markierungen, die nicht im Request enthalten sind, werden entfernt; Änderungen an bestehenden Markierungen erfolgen durch erneutes Übermitteln mit aktualisierten Werten. Der Request muss daher stets alle weiterhin gültigen Markierungen inklusive ihrer jeweiligen Zusatzinformationen vollständig enthalten. Wird kein 'markierung'-Parameter übergeben (leerer Markierungssatz), werden alle änderbaren Markierungen des Dokuments entfernt. Da dies der einzige Endpunkt zur Pflege der Markierungen ist, wird hierüber auch das vollständige Löschen der Markierungen unterstützt.
 

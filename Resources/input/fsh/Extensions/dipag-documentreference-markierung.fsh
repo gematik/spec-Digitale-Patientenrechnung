@@ -35,10 +35,10 @@ Invariant: artDerArchivierung
 * key = "DiPagDocumentReferenceMarkierung-1"
 * severity = #error
 * human = "Details zur Art der Archivierung können nur angegeben werden wenn die Markierung vom Typ 'Archiviert' ist"
-* expression = "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').valueCoding.where(code = 'archiviert').exists()"
+* expression = "extension.where(url = 'artDerArchivierung').value.exists() implies extension.where(url = 'markierung').value.ofType(Coding).where(code = 'archiviert').exists()"
 
 Invariant: kostentraeger
 * key = "DiPagDocumentReferenceMarkierung-3"
 * severity = #error
 * human = "Details zu Status mit Kostenträger-Referenz können nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', eingereicht-post, 'geteilt' oder 'abgerufen' ist"
-* expression = "extension.where(url = 'kostentraeger').value.exists() implies (extension.where(url = 'markierung').valueCoding.where(code = 'eingereicht-frontend').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'eingereicht-post').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'geteilt').exists() or extension.where(url = 'markierung').valueCoding.where(code = 'abgerufen').exists())"
+* expression = "extension.where(url = 'kostentraeger').value.exists() implies (extension.where(url = 'markierung').value.ofType(Coding).where(code = 'eingereicht-frontend').exists() or extension.where(url = 'markierung').value.ofType(Coding).where(code = 'eingereicht-post').exists() or extension.where(url = 'markierung').value.ofType(Coding).where(code = 'geteilt').exists() or extension.where(url = 'markierung').value.ofType(Coding).where(code = 'abgerufen').exists())"

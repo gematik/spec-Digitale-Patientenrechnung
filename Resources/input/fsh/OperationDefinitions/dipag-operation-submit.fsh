@@ -1,8 +1,8 @@
 // ------------- OperationDefinition -------------
 
-Instance: DiPagOperationSubmit
+Instance: Submit
 InstanceOf: OperationDefinition
-Usage: #example
+Usage: #definition
 Title: "Digitale Patientenrechnung Operation Invoice-Submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
