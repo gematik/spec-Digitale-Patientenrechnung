@@ -2,6 +2,7 @@ Profile: DiPagRechnungsdiagnose
 Parent: Condition
 Title: "Digitale Patientenrechnung Rechnungsdiagnose"
 Id: dipag-rechnungsdiagnose
+Description: "Dieses Profil bildet eine abrechnungsrelevante Diagnose nach ICD-10-GM ab, die einer Digitalen Patientenrechnung zugeordnet werden kann."
 * insert Meta(1.0.7)
 * code MS
 * code.coding MS

@@ -1,7 +1,7 @@
 CodeSystem: DiPagRechnungAbrechnungsartCS
 Id: dipag-rechnung-abrechnungsart-cs
 Title: "Digitale Patientenrechnung Rechnung Abrechnungsart CS"
-Description:  "CodeSystem für die verschiedenen Abrechnungsarten innerhalb einer E-Rechnnung"
+Description:  "CodeSystem für die verschiedenen Abrechnungsarten (BEMA, GOÄ, GOZ) innerhalb einer Digitalen Patientenrechnung"
 * insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a

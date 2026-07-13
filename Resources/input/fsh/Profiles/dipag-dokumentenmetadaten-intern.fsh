@@ -5,6 +5,7 @@ Profile: DiPagDokumentenmetadatenIntern
 Title: "Digitale Patientenrechnung Dokumentenmetadaten Intern"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-intern
+Description: "Dieses Profil beschreibt die Dokumentenmetadaten, wie sie im Fachdienst gehalten und an abrufende Akteure ausgeliefert werden. Es ergänzt die eingereichten Metadaten u. a. um das Rechnungs-Token, den Rechnungsstatus, Markierungen sowie die aus den strukturierten Rechnungsinhalten extrahierten Angaben (z. B. Rechnungsdatum, Gesamtbetrag, Zahlungsziel)."
 * insert Meta(1.0.8)
 * ^date = "2026-07-08"
 * obeys SignaturVerpflichtendRechnung
@@ -205,6 +206,7 @@ Id: dipag-dokumentenmetadaten-intern
 ValueSet: DiPagRestrictedMimeTypesInBinaryVS
 Id: dipag-restricted-mime-types-in-binary-vs
 Title: "Digitale Patientenrechnung Restricted Mime Types in Binary"
+Description: "ValueSet der zulässigen MIME-Types für Dokumente der Digitalen Patientenrechnung (PDF und FHIR-JSON)"
 * insert Meta(1.0.7)
 
 * include urn:ietf:bcp:13#application/fhir+json
@@ -213,6 +215,7 @@ Title: "Digitale Patientenrechnung Restricted Mime Types in Binary"
 ValueSet: DiPagRechnungsstatusVS
 Id: dipag-rechnungsstatus-vs
 Title: "Digitale Patientenrechnung Rechnungsstatus"
+Description: "ValueSet für den Bearbeitungsstatus eines Rechnungsdokuments (offen, erledigt, papierkorb)"
 * insert Meta(1.0.7)
 * include codes from system DiPagARechnungsstatusCS
 
@@ -221,7 +224,7 @@ Title: "Digitale Patientenrechnung Rechnungsstatus"
 CodeSystem:  DiPagAttachmentFormatCS
 Id: dipag-attachment-format-cs
 Title: "Digitale Patientenrechnung Attachment Format CS"
-Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
+Description:  "CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments"
 * insert Meta(1.0.7)
 * #originaleRechnung "Das originale PDF der Rechnung"
 * #angereichertesPDF "Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"
@@ -231,7 +234,7 @@ Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eine
 CodeSystem: DiPagARechnungsstatusCS
 Id: dipag-rechnungsstatus-cs
 Title: "Digitale Patientenrechnung Rechnungsstatus CS"
-Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"
+Description:  "CodeSystem für die Abbildung der verschiedenen Bearbeitungsstatus eines Rechnungsdokuments"
 * insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a

@@ -2,6 +2,7 @@ Profile: DiPagRechnungsprozedur
 Parent: Procedure
 Title: "Digitale Patientenrechnung Rechnungsprozedur"
 Id: dipag-rechnungsprozedur
+Description: "Dieses Profil bildet eine abrechnungsrelevante Prozedur nach OPS ab, die einer Digitalen Patientenrechnung zugeordnet werden kann."
 * insert Meta(1.0.7)
 * status MS
   * ^short = "Status der Prozedur"

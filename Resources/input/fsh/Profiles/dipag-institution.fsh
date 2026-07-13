@@ -2,6 +2,7 @@ Profile: DiPagInstitution
 Parent: Organization
 Title: "Digitale Patientenrechnung Institution"
 Id: dipag-institution
+Description: "Das Profil DiPagInstitution bildet eine Institution (z. B. Praxis, MVZ oder Krankenhaus) in den Rollen 'Rechnungsersteller' oder 'Abweichender Forderungsinhaber' ab."
 * insert Meta(1.0.7)
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern

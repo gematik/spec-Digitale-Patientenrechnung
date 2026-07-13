@@ -1,6 +1,7 @@
 Extension: DiPagWegegeldReiseentschaedigung
 Id: dipag-wegegeld-reiseentschaedigung
 Title: "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension"
+Description: "In dieser Extension werden Wegegeld (bis 25 km) und Reiseentschädigung (ab 25 km) zu einer Rechnungsposition abgebildet, inklusive Entfernung, Abwesenheit, Übernachtungskosten und Verkehrsmittel."
 Context: ChargeItem
 * insert Meta(1.0.7)
 * extension contains

@@ -67,6 +67,7 @@ Context: Invoice.paymentTerms
 Extension: DiPagZahlungsziel
 Id: dipag-zahlungsziel
 Title: "Digitale Patientenrechnung Zahlungsziel"
+Description: "In dieser Extension wird das Zahlungsziel (Datum) einer Rechnung abgebildet."
 Context: Invoice.paymentTerms, DocumentReference
 * insert Meta(1.0.7)
 * value[x] only date

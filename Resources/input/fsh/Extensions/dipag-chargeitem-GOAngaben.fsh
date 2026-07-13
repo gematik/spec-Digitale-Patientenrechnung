@@ -1,6 +1,7 @@
 Extension: DiPagRechnungspositionGOAngaben
 Id: dipag-rechnungsposition-go-angaben
 Title: "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition"
+Description: "In dieser Extension werden gebührenordnungsspezifische Angaben einer Rechnungsposition abgebildet: Einfachsatz, Punktzahl, Steigerungsfaktor mit Begründung sowie eine prozentuale Minderung nach GOÄ."
 Context: ChargeItem
 * insert Meta(1.0.7)
 * extension contains

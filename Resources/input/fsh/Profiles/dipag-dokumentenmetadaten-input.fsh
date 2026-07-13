@@ -2,6 +2,7 @@ Profile: DiPagDokumentenmetadatenEingang
 Title: "Digitale Patientenrechnung Dokumentenmetadaten Eingang"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-eingang
+Description: "Dieses Profil beschreibt die Dokumentenmetadaten, wie sie beim Einreichen von Rechnungen und Anhängen durch das Primärsystem der Leistungserbringer:in (RE-PS) an den Fachdienst übermittelt werden."
 * insert Meta(1.0.8)
 * ^date = "2026-07-08"
 * obeys RechnungOderAnhang and MarkierungNurFuerAnhang and AnhangIdentifierPflicht

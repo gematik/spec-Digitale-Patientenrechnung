@@ -1,6 +1,8 @@
 Profile: DiPagPatient
 Parent: Patient
+Title: "Digitale Patientenrechnung Patient"
 Id: dipag-patient
+Description: "Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab."
 * insert Meta(1.0.7)
 * identifier MS
   * ^slicing.discriminator.type = #pattern

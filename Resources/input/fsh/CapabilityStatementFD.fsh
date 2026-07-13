@@ -5,7 +5,7 @@ Usage: #definition
 * date = "2026-07-08"
 * url = "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD"
 * name = "CapabilityStatementFD"
-* title = "CapabilityStatement Fachdienst E-Rechnnung"
+* title = "CapabilityStatement Fachdienst E-Rechnung"
 * description = 
   "Dieses CapabilityStatement beschreibt alle Interaktionen, 
   die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.

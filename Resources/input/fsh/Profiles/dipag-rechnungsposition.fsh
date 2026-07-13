@@ -2,6 +2,7 @@ Profile: DiPagRechnungsposition
 Title: "Digitale Patientenrechnung Rechnungsposition"
 Parent: ChargeItem
 Id: dipag-rechnungsposition
+Description: "Dieses Profil bildet eine einzelne Rechnungsposition einer Digitalen Patientenrechnung ab, z. B. Leistungen nach GOÄ, GOZ oder BEMA sowie Laborleistungen, Sachkosten/Auslagen und Wegegeld/Reiseentschädigung."
 * insert Meta(1.0.7)
 * extension contains
   DiPagRechnungspositionType named Rechnungspositionstyp 1..1 MS and

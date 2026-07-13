@@ -17,7 +17,7 @@ Description:  "CodeSystem für die Differenzierung von verschiedenen Arten von M
 CodeSystem:  DiPagDokumentArtDerArchivierungCS
 Id: dipag-dokument-artderarchivierung-cs
 Title: "Digitale Patientenrechnung Dokument ArtDerArchivierung CS"
-Description:  "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"
+Description:  "CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)"
 * insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a

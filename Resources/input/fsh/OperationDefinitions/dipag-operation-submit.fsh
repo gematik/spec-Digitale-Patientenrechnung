@@ -91,7 +91,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 CodeSystem:  DiPagRechnungSubmitModusCS
 Id: dipag-rechnung-submit-modus-cs
 Title: "Digitale Patientenrechnung Rechnung Submit Modus CS"
-Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
+Description:  "CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit"
 * insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
@@ -100,7 +100,7 @@ Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi fü
 
 ValueSet:  DiPagRechnungSubmitModusVS
 Id: dipag-rechnung-submit-modus-vs
-Title: "Digitale Patientenrechnung Rechnung Type VS"
-Description:  "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
+Title: "Digitale Patientenrechnung Rechnung Submit Modus VS"
+Description:  "ValueSet für die Differenzierung der Verarbeitungsmodi für $invoice-submit"
 * insert Meta(1.0.7)
 * include codes from system https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs

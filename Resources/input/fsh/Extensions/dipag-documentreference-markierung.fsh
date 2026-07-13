@@ -1,6 +1,7 @@
 Extension: DiPagDocumentReferenceMarkierung
 Id: dipag-documentreference-markierung
 Title: "Digitale Patientenrechnung DocumentReference Markierung"
+Description: "In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz."
 Context: DocumentReference.meta, Parameters.parameter.value[x]
 * insert Meta(1.0.8)
 * ^date = "2026-07-08"

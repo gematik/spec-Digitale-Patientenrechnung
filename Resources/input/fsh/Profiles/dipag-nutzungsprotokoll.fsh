@@ -2,6 +2,7 @@ Profile: DiPagNutzungsprotokoll
 Parent: AuditEvent
 Title: "Digitale Patientenrechnung Nutzungsprotokoll"
 Id: dipag-nutzungsprotokoll
+Description: "Dieses Profil bildet einen Eintrag des Nutzungsprotokolls ab, mit dem Zugriffe und Interaktionen auf Rechnungen und Dokumente im Fachdienst protokolliert werden."
 * insert Meta(1.0.7)
 * type MS
   * ^comment = "Angabe ob es sich um eine zu protokollierende Nutzerinteraktion nach Abschnittt '5.5.9 Nutzerprotokolle' des Feature-Dokuments 'Digitale Patientenrechnung' handelt oder um eine durchgeführte REST-API-Interaktion durch den FD."
@@ -67,6 +68,7 @@ Id: dipag-nutzungsprotokoll
 CodeSystem: DiPagOperationenCS
 Id: dipag-operationen-cs
 Title: "Digitale Patientenrechnung Operationen"
+Description: "CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll"
 * insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
@@ -80,6 +82,7 @@ Title: "Digitale Patientenrechnung Operationen"
 ValueSet: DiPagAuditEventSubTypeVS
 Id: dipag-audit-event-sub-type-vs
 Title: "Digitale Patientenrechnung Audit Event Sub-Type"
+Description: "ValueSet zur Kodierung der protokollierten Interaktion: RESTful-Interaktionen sowie die Operationen der Digitalen Patientenrechnung"
 * insert Meta(1.0.7)
 * include codes from system $restful-interaction
 * include codes from system DiPagOperationenCS
@@ -87,6 +90,7 @@ Title: "Digitale Patientenrechnung Audit Event Sub-Type"
 ValueSet: DiPagAuditEventTypeVS
 Id: dipag-audit-event-type-vs
 Title: "Digitale Patientenrechnung Audit Event Type"
+Description: "ValueSet zur Unterscheidung, ob ein Protokolleintrag eine Applikationsaktivität oder eine REST-API-Interaktion protokolliert"
 * insert Meta(1.0.7)
 * http://dicom.nema.org/resources/ontology/DCM#110100 "Application Activity"
 * $auditEventType#rest "RESTful Operation"
@@ -95,6 +99,7 @@ Title: "Digitale Patientenrechnung Audit Event Type"
 ValueSet: DiPagAuditEventAgentTypeVS
 Id: dipag-audit-event-agent-type-vs
 Title: "Digitale Patientenrechnung Audit Event Agent Type"
+Description: "ValueSet zur Unterscheidung, ob ein Zugriff durch einen menschlichen Nutzer oder automatisiert durch den Fachdienst erfolgt ist"
 * insert Meta(1.0.7)
 * $extraSecurityRoleType#humanuser "human user"
 * $extraSecurityRoleType#dataprocessor "data processor"
@@ -102,6 +107,7 @@ Title: "Digitale Patientenrechnung Audit Event Agent Type"
 CodeSystem: DiPagAuditEventDetailCS
 Id: dipag-audit-event-detail-cs
 Title: "Digitale Patientenrechnung Audit Event Detail"
+Description: "CodeSystem für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll, z. B. Änderungen an Rechnungsstatus oder Markierung"
 * insert Meta(1.0.7)
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
@@ -114,5 +120,6 @@ Title: "Digitale Patientenrechnung Audit Event Detail"
 ValueSet: DiPagAuditEventDetailVS
 Id: dipag-audit-event-detail-vs
 Title: "Digitale Patientenrechnung Audit Event Detail"
+Description: "ValueSet für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll"
 * insert Meta(1.0.7)
 * include codes from system DiPagAuditEventDetailCS

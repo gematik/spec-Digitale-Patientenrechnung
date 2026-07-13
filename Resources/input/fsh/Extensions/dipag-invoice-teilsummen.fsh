@@ -1,6 +1,7 @@
 Extension: DiPagTeilsumme
 Id: DiPagTeilsumme
 Title: "Digitale Patientenrechnung Teilsumme"
+Description: "In dieser Extension wird eine Teilsumme der Rechnung je Rechnungspositionstyp abgebildet, inklusive Umsatzsteuersatz und Umsatzsteuerbetrag."
 Context: Invoice.totalPriceComponent
 * insert Meta(1.0.7)
 * extension contains

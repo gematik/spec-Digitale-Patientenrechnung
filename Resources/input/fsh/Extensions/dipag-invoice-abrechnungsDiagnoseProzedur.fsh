@@ -16,6 +16,7 @@ Context: Invoice
 Extension: DiPagAbrechnungsDiagnoseProzedurFreitext
 Id: DiPagAbrechnungsDiagnoseProzedurFreitext
 Title: "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"
+Description: "Diese Extension erlaubt die Angabe von abrechnungsrelevanten Diagnosen und Prozeduren als Freitext an einer Invoice."
 Context: Invoice
 * insert Meta(1.0.7)
 * . ^short = "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext"

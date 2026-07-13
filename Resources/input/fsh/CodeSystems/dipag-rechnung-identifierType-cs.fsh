@@ -1,6 +1,7 @@
 CodeSystem: DiPagRechnungIdentifierTypeCS
 Id: dipag-rechnung-identifier-type-cs
 Title: "Digitale Patientenrechnung Rechnung Identifier Type CS"
+Description: "CodeSystem für die verschiedenen Identifier-Typen der Digitalen Patientenrechnung (Rechnungsnummer, Antragsreferenz, Anhangsidentifikator, USt-ID-Nr)"
 * insert Meta(1.0.8)
 * ^date = "2026-07-08"
 * ^caseSensitive = true

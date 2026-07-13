@@ -2,6 +2,7 @@ Profile: DiPagRechnung
 Title: "Digitale Patientenrechnung Rechnung"
 Parent: Invoice
 Id: dipag-rechnung
+Description: "Dieses Profil bildet die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung ab, inklusive Angaben zu Behandlungszeitraum, Diagnosen und Prozeduren, Behandlungsart, Fachrichtung, Rechnungspositionen und Zusammensetzung des Rechnungsbetrags."
 * insert Meta(1.0.7)
 * extension contains 
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
