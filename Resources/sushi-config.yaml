@@ -103,3 +103,29 @@ parameters:
   special-url:
     - http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]
     - http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer
+
+# Gruppierung der Profile auf der Artefakt-Seite (artifacts.html).
+# Jede Gruppe wird als eigene Sektion mit Ueberschrift (name) und Beschreibung (description) gerendert.
+# Hinweis: Sobald die Profile gruppiert werden, MUESSEN alle Profile einer Gruppe zugeordnet sein,
+# sonst erscheinen die uebrigen in einer zusaetzlichen Default-Sektion "Ressourcen-Profile".
+groups:
+  Rechnungsinhalt:
+    name: "Rechnungsinhalt-Profile"
+    description: "Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen."
+    resources:
+      - StructureDefinition/dipag-rechnung
+      - StructureDefinition/dipag-rechnungsposition
+      - StructureDefinition/dipag-rechnungsdiagnose
+      - StructureDefinition/dipag-rechnungsprozedur
+      - StructureDefinition/dipag-rechnungsbundle
+      - StructureDefinition/dipag-rechnungsdokument
+      - StructureDefinition/dipag-patient
+      - StructureDefinition/dipag-person
+      - StructureDefinition/dipag-institution
+  Metadaten:
+    name: "Metadaten- & Protokoll-Profile"
+    description: "Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent)."
+    resources:
+      - StructureDefinition/dipag-dokumentenmetadaten-eingang
+      - StructureDefinition/dipag-dokumentenmetadaten-intern
+      - StructureDefinition/dipag-nutzungsprotokoll
