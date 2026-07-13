@@ -145,8 +145,8 @@
     "uses" : {
     },
     "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur",
-    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition",
-    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose"
+    "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/bundle-type",
@@ -421,10 +421,10 @@
     "uses" : {
     },
     "StructureDefinition-dipag-rechnungsposition-go-angaben.html" : "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition",
+    "StructureDefinition-DiPagTeilsumme.html" : "Digitale Patientenrechnung Teilsumme",
     "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
-    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition",
     "StructureDefinition-dipag-wegegeld-reiseentschaedigung.html" : "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension",
-    "StructureDefinition-DiPagTeilsumme.html" : "Digitale Patientenrechnung Teilsumme"
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/device-action",
@@ -583,12 +583,12 @@
     "sources" : ["2.16.840.1.113883.4.642.3.45"],
     "uses" : {
     },
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
     "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
     "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
-    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
     "StructureDefinition-DiPagTokenStornierteRechnung.html" : "Digitale Patientenrechnung Token der stornierten Rechnung",
-    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
-    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/identifier-use",
@@ -602,12 +602,12 @@
     "sources" : ["2.16.840.1.113883.4.642.3.57"],
     "uses" : {
     },
+    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
     "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
     "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
-    "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
     "StructureDefinition-DiPagTokenStornierteRechnung.html" : "Digitale Patientenrechnung Token der stornierten Rechnung",
     "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
-    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
     "StructureDefinition-dipag-patient.html" : "Digitale Patientenrechnung Patient"
   },
   {
@@ -664,18 +664,18 @@
     "sources" : ["2.16.840.1.113883.4.642.3.20"],
     "uses" : {
     },
-    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
     "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur",
-    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
-    "StructureDefinition-dipag-rechnungsbundle.html" : "Digitale Patientenrechnung - Rechnungsinhalte Bundle",
-    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll",
     "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
-    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition",
     "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose",
-    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-rechnungsbundle.html" : "Digitale Patientenrechnung - Rechnungsinhalte Bundle",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
+    "StructureDefinition-dipag-rechnungsdokument.html" : "Digitale Patientenrechnung Rechnungsdokument",
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll",
     "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
     "StructureDefinition-dipag-patient.html" : "Digitale Patientenrechnung Patient",
-    "StructureDefinition-dipag-rechnungsdokument.html" : "Digitale Patientenrechnung Rechnungsdokument"
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/link-type",
@@ -916,11 +916,11 @@
     "sources" : ["2.16.840.1.113883.4.642.3.59"],
     "uses" : {
     },
-    "StructureDefinition-dipag-abzug-kassenanteil.html" : "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent",
     "StructureDefinition-dipag-rechnungsposition-go-angaben.html" : "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition",
     "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
-    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition",
-    "StructureDefinition-dipag-wegegeld-reiseentschaedigung.html" : "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension"
+    "StructureDefinition-dipag-wegegeld-reiseentschaedigung.html" : "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension",
+    "StructureDefinition-dipag-abzug-kassenanteil.html" : "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/resource-types",
@@ -935,16 +935,16 @@
     "uses" : {
     },
     "StructureDefinition-dipag-rechnungsprozedur.html" : "Digitale Patientenrechnung Rechnungsprozedur",
-    "StructureDefinition-dipag-task-requestedPerformer.html" : "Digitale Patientenrechnung Task RequestedPerformer",
-    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
-    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll",
     "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
-    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition",
     "StructureDefinition-dipag-rechnungsdiagnose.html" : "Digitale Patientenrechnung Rechnungsdiagnose",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
     "StructureDefinition-dipag-documentreference-markierung.html" : "Digitale Patientenrechnung DocumentReference Markierung",
-    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-nutzungsprotokoll.html" : "Digitale Patientenrechnung Nutzungsprotokoll",
     "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
-    "StructureDefinition-dipag-patient.html" : "Digitale Patientenrechnung Patient"
+    "StructureDefinition-dipag-dokumentenmetadaten-eingang.html" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+    "StructureDefinition-dipag-patient.html" : "Digitale Patientenrechnung Patient",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition",
+    "StructureDefinition-dipag-task-requestedPerformer.html" : "Digitale Patientenrechnung Task RequestedPerformer"
   },
   {
     "url" : "http://hl7.org/fhir/ValueSet/search-entry-mode",
@@ -1027,10 +1027,10 @@
     "sources" : ["1.2.276.0.76.11.37"],
     "uses" : {
     },
-    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
     "StructureDefinition-dipag-docref-fachrichtung.html" : "Digitale Patientenrechnung DocRef Fachrichtung",
     "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
     "StructureDefinition-dipag-fachrichtung.html" : "Digitale Patientenrechnung Extension Fachrichtung",
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
     "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
   },
   {
@@ -1070,8 +1070,8 @@
     "systems" : ["http://snomed.info/sct"],
     "uses" : {
     },
-    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition",
-    "StructureDefinition-dipag-wegegeld-reiseentschaedigung.html" : "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension"
+    "StructureDefinition-dipag-wegegeld-reiseentschaedigung.html" : "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-abrechnungs-diagnose-use-vs",
@@ -1147,9 +1147,9 @@
     "uses" : {
     },
     "StructureDefinition-dipag-rechnungsposition-type.html" : "Digitale Patientenrechnung Typ der Rechnungsposition Extension",
+    "StructureDefinition-DiPagTeilsumme.html" : "Digitale Patientenrechnung Teilsumme",
     "StructureDefinition-dipag-rechnung.html" : "Digitale Patientenrechnung Rechnung",
-    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition",
-    "StructureDefinition-DiPagTeilsumme.html" : "Digitale Patientenrechnung Teilsumme"
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-dokument-artderarchivierung-vs",
@@ -1263,8 +1263,8 @@
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"],
     "uses" : {
     },
-    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition",
-    "StructureDefinition-DiPagRechnungspositionZusatz.html" : "Digitale Patientenrechnung Rechnungsposition Zusatz Extension"
+    "StructureDefinition-DiPagRechnungspositionZusatz.html" : "Digitale Patientenrechnung Rechnungsposition Zusatz Extension",
+    "StructureDefinition-dipag-rechnungsposition.html" : "Digitale Patientenrechnung Rechnungsposition"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsstatus-vs",

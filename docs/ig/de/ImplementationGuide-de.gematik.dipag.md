@@ -14,7 +14,7 @@
   "name" : "DigitalePatientenrechnung",
   "title" : "Implementierungsleitfaden Digitale Patientenrechnung",
   "status" : "draft",
-  "date" : "2026-07-13T08:57:15+00:00",
+  "date" : "2026-07-13T09:47:32+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",
@@ -103,6 +103,17 @@
       {
         "url" : "value",
         "valueString" : "de"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
+        "valueString" : "translation-sources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/translations/de"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -421,6 +432,17 @@
     {
       "extension" : [{
         "url" : "code",
+        "valueCode" : "translation-sources"
+      },
+      {
+        "url" : "value",
+        "valueString" : "input/translations/de"
+      }],
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    },
+    {
+      "extension" : [{
+        "url" : "code",
         "valueCode" : "special-url"
       },
       {
@@ -696,12 +718,64 @@
     "grouping" : [{
       "id" : "Rechnungsinhalt",
       "name" : "Rechnungsinhalt-Profile",
-      "description" : "Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen."
+      "_name" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Rechnungsinhalt-Profile"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "description" : "Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen.",
+      "_description" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     },
     {
       "id" : "Metadaten",
       "name" : "Metadaten- & Protokoll-Profile",
-      "description" : "Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent)."
+      "_name" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Metadaten- & Protokoll-Profile"
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      },
+      "description" : "Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent).",
+      "_description" : {
+        "extension" : [{
+          "extension" : [{
+            "url" : "lang",
+            "valueCode" : "de"
+          },
+          {
+            "url" : "content",
+            "valueString" : "Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent)."
+          }],
+          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
+        }]
+      }
     }],
     "resource" : [{
       "extension" : [{

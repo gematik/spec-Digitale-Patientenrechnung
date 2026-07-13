@@ -3,7 +3,7 @@ DigitalePatientenrechnung : Validation Results
 
 err = 118, warn = 396, info = 371
 IG Publisher Version: 2.2.10
-Generated Mon Jul 13 09:01:47 UTC 2026. FHIR version 4.0.1 for de.gematik.dipag#1.0.8 (canonical = https://gematik.de/fhir/dipag)
+Generated Mon Jul 13 09:51:27 UTC 2026. FHIR version 4.0.1 for de.gematik.dipag#1.0.8 (canonical = https://gematik.de/fhir/dipag)
  Build Errors : 0 / 88 / 1
  /__w/spec-Digitale-Patientenrechnung/spec-Digitale-Patientenrechnung/Resources/fsh-generated/resources/AuditEvent-BeispielNutzungsprotokoll : 4 / 1 / 2
  /__w/spec-Digitale-Patientenrechnung/spec-Digitale-Patientenrechnung/Resources/fsh-generated/resources/AuditEvent-BeispielNutzungsprotokollAutomatischLoeschen : 1 / 0 / 6
