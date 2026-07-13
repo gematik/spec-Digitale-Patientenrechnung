@@ -21,6 +21,7 @@
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Backport des Elements Invoice.period[x] aus FHIR R5 zur Angabe des Behandlungsdatums bzw. -zeitraums einer Rechnung.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

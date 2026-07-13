@@ -30,6 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:StructureDefinition.description [ fhir:value "In dieser Extension wird der Gesamtbetrag der Rechnung an den Dokumentenmetadaten abgebildet. Er wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert."] ;
   fhir:StructureDefinition.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [

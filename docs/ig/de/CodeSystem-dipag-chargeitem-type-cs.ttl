@@ -30,6 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem für die verschiedenen Typen einer Rechnungsposition (z. B. GOÄ-, GOZ- oder BEMA-Leistung, Laborleistung, Sachkosten/Auslagen, Wegegeld/Reiseentschädigung)"] ;
   fhir:CodeSystem.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [

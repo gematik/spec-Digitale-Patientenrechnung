@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagOperationenCS |
 
+ 
+CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll 
+
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [DiPagAuditEventSubTypeVS](ValueSet-dipag-audit-event-sub-type-vs.md)
@@ -46,6 +49,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

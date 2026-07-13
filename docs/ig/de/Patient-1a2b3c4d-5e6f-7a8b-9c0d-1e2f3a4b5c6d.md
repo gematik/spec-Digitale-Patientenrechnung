@@ -10,7 +10,7 @@ Version 1.0.8 - ci-build
 
 ## Beispiel Patient: Musterrechnung - Patient B. Patient
 
-Profile: [DiPagPatient](StructureDefinition-dipag-patient.md)
+Profile: [Digitale Patientenrechnung Patient](StructureDefinition-dipag-patient.md)
 
 B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)
 

@@ -10,7 +10,7 @@
   "name" : "DiPagBemaPunktsumme",
   "title" : "DiPag BEMA Punktsumme",
   "status" : "draft",
-  "date" : "2026-07-09T12:53:25+00:00",
+  "date" : "2026-07-13T08:15:48+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",
@@ -19,6 +19,7 @@
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "In dieser Extension werden die Summe der Punktzahlen und der Punktwert der BEMA-Leistungen einer Rechnung abgebildet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

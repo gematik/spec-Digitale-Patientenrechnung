@@ -13,7 +13,9 @@ Version 1.0.8 - ci-build
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/DiPagBemaPunktsumme | *Version*:1.0.8 |
-| Draft Stand: 2026-07-09 | *Maschinenlesbarer Name*:DiPagBemaPunktsumme |
+| Draft Stand: 2026-07-13 | *Maschinenlesbarer Name*:DiPagBemaPunktsumme |
+
+In dieser Extension werden die Summe der Punktzahlen und der Punktwert der BEMA-Leistungen einer Rechnung abgebildet.
 
 **Context of Use**
 
@@ -42,7 +44,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Complex Extension: 
+Complex Extension: In dieser Extension werden die Summe der Punktzahlen und der Punktwert der BEMA-Leistungen einer Rechnung abgebildet.
 
  **Differential-AnsichtDifferential View** 
 
@@ -56,7 +58,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Complex Extension: 
+Complex Extension: In dieser Extension werden die Summe der Punktzahlen und der Punktwert der BEMA-Leistungen einer Rechnung abgebildet.
 
  
 
@@ -75,7 +77,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-DiPagBemaPun
   "name" : "DiPagBemaPunktsumme",
   "title" : "DiPag BEMA Punktsumme",
   "status" : "draft",
-  "date" : "2026-07-09T12:53:25+00:00",
+  "date" : "2026-07-13T08:15:48+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",
@@ -84,6 +86,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-DiPagBemaPun
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "In dieser Extension werden die Summe der Punktzahlen und der Punktwert der BEMA-Leistungen einer Rechnung abgebildet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

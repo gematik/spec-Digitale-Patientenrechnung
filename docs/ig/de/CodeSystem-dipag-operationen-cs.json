@@ -21,6 +21,7 @@
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

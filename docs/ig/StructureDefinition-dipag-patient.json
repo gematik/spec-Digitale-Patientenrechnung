@@ -8,6 +8,7 @@
   "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
   "version" : "1.0.8",
   "name" : "DiPagPatient",
+  "title" : "Digitale Patientenrechnung Patient",
   "status" : "active",
   "experimental" : false,
   "date" : "2026-03-26",
@@ -19,6 +20,7 @@
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

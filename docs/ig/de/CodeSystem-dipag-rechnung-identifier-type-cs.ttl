@@ -30,6 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem für die verschiedenen Identifier-Typen der Digitalen Patientenrechnung (Rechnungsnummer, Antragsreferenz, Anhangsidentifikator, USt-ID-Nr)"] ;
   fhir:CodeSystem.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [

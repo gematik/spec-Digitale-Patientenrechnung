@@ -24,6 +24,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="Diese Extension erlaubt die Angabe von abrechnungsrelevanten Diagnosen und Prozeduren als Freitext an einer Invoice."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

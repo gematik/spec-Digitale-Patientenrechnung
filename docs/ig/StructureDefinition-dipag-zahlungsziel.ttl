@@ -29,6 +29,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:StructureDefinition.description [ fhir:value "In dieser Extension wird das Zahlungsziel (Datum) einer Rechnung abgebildet."] ;
   fhir:StructureDefinition.jurisdiction [
      fhir:index 0 ;
      fhir:CodeableConcept.coding [

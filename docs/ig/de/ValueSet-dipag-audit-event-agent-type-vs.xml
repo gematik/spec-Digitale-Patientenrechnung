@@ -21,6 +21,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="ValueSet zur Unterscheidung, ob ein Zugriff durch einen menschlichen Nutzer oder automatisiert durch den Fachdienst erfolgt ist"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

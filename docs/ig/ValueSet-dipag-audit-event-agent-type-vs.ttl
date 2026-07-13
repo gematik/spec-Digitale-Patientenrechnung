@@ -29,6 +29,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:ValueSet.description [ fhir:value "ValueSet zur Unterscheidung, ob ein Zugriff durch einen menschlichen Nutzer oder automatisiert durch den Fachdienst erfolgt ist"] ;
   fhir:ValueSet.jurisdiction [
      fhir:index 0 ;
      fhir:CodeableConcept.coding [

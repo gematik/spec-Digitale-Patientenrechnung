@@ -14,7 +14,7 @@
   "name" : "DigitalePatientenrechnung",
   "title" : "Implementierungsleitfaden Digitale Patientenrechnung",
   "status" : "draft",
-  "date" : "2026-07-09T12:53:25+00:00",
+  "date" : "2026-07-13T08:15:48+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",
@@ -714,6 +714,7 @@
         "reference" : "StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext"
       },
       "name" : "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext",
+      "description" : "Diese Extension erlaubt die Angabe von abrechnungsrelevanten Diagnosen und Prozeduren als Freitext an einer Invoice.",
       "exampleBoolean" : false
     },
     {
@@ -1299,7 +1300,7 @@
       "reference" : {
         "reference" : "CapabilityStatement/DiPagCapabilityStatementFD"
       },
-      "name" : "CapabilityStatement Fachdienst E-Rechnnung",
+      "name" : "CapabilityStatement Fachdienst E-Rechnung",
       "description" : "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.",
       "exampleBoolean" : false
     },
@@ -1348,6 +1349,7 @@
         "reference" : "CodeSystem/dipag-abrechnungs-diagnose-use-cs"
       },
       "name" : "Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem",
+      "description" : "CodeSystem für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose",
       "exampleBoolean" : false
     },
     {
@@ -1359,6 +1361,7 @@
         "reference" : "ValueSet/dipag-abrechnungs-diagnose-use-vs"
       },
       "name" : "Digitale Patientenrechnung Abrechnungsdiagnose Use ValueSet",
+      "description" : "ValueSet für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose",
       "exampleBoolean" : false
     },
     {
@@ -1370,6 +1373,7 @@
         "reference" : "StructureDefinition/dipag-rechnungsposition-go-angaben"
       },
       "name" : "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition",
+      "description" : "In dieser Extension werden gebührenordnungsspezifische Angaben einer Rechnungsposition abgebildet: Einfachsatz, Punktzahl, Steigerungsfaktor mit Begründung sowie eine prozentuale Minderung nach GOÄ.",
       "exampleBoolean" : false
     },
     {
@@ -1381,6 +1385,7 @@
         "reference" : "CodeSystem/dipag-total-price-component-type-cs"
       },
       "name" : "Digitale Patientenrechnung Art der Rechnungssumme",
+      "description" : "CodeSystem für die Arten von Summenbestandteilen einer Rechnung, z. B. Summe der Rechnungspositionen, Minderungen nach §7 GOZ oder Abzüge wie der Festzuschuss der Kasse",
       "exampleBoolean" : false
     },
     {
@@ -1392,6 +1397,7 @@
         "reference" : "ValueSet/dipag-total-price-component-deduction-type-vs"
       },
       "name" : "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen",
+      "description" : "ValueSet für die Arten von Abzügen von der Summe der Rechnungspositionen (Festzuschuss Kasse, Vorleistungen anderer Kostenträger, Kosten gem. den BEMA-Pos. 13a - d)",
       "exampleBoolean" : false
     },
     {
@@ -1403,7 +1409,7 @@
         "reference" : "CodeSystem/dipag-attachment-format-cs"
       },
       "name" : "Digitale Patientenrechnung Attachment Format CS",
-      "description" : "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments",
+      "description" : "CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments",
       "exampleBoolean" : false
     },
     {
@@ -1415,6 +1421,7 @@
         "reference" : "ValueSet/dipag-audit-event-agent-type-vs"
       },
       "name" : "Digitale Patientenrechnung Audit Event Agent Type",
+      "description" : "ValueSet zur Unterscheidung, ob ein Zugriff durch einen menschlichen Nutzer oder automatisiert durch den Fachdienst erfolgt ist",
       "exampleBoolean" : false
     },
     {
@@ -1426,6 +1433,7 @@
         "reference" : "ValueSet/dipag-audit-event-detail-vs"
       },
       "name" : "Digitale Patientenrechnung Audit Event Detail",
+      "description" : "ValueSet für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll",
       "exampleBoolean" : false
     },
     {
@@ -1437,6 +1445,7 @@
         "reference" : "CodeSystem/dipag-audit-event-detail-cs"
       },
       "name" : "Digitale Patientenrechnung Audit Event Detail",
+      "description" : "CodeSystem für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll, z. B. Änderungen an Rechnungsstatus oder Markierung",
       "exampleBoolean" : false
     },
     {
@@ -1448,6 +1457,7 @@
         "reference" : "ValueSet/dipag-audit-event-sub-type-vs"
       },
       "name" : "Digitale Patientenrechnung Audit Event Sub-Type",
+      "description" : "ValueSet zur Kodierung der protokollierten Interaktion: RESTful-Interaktionen sowie die Operationen der Digitalen Patientenrechnung",
       "exampleBoolean" : false
     },
     {
@@ -1459,6 +1469,7 @@
         "reference" : "ValueSet/dipag-audit-event-type-vs"
       },
       "name" : "Digitale Patientenrechnung Audit Event Type",
+      "description" : "ValueSet zur Unterscheidung, ob ein Protokolleintrag eine Applikationsaktivität oder eine REST-API-Interaktion protokolliert",
       "exampleBoolean" : false
     },
     {
@@ -1506,6 +1517,7 @@
         "reference" : "StructureDefinition/dipag-documentreference-gesamtbetrag"
       },
       "name" : "Digitale Patientenrechnung DocumentReference Gesamtbetrag",
+      "description" : "In dieser Extension wird der Gesamtbetrag der Rechnung an den Dokumentenmetadaten abgebildet. Er wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert.",
       "exampleBoolean" : false
     },
     {
@@ -1517,6 +1529,7 @@
         "reference" : "StructureDefinition/dipag-documentreference-markierung"
       },
       "name" : "Digitale Patientenrechnung DocumentReference Markierung",
+      "description" : "In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz.",
       "exampleBoolean" : false
     },
     {
@@ -1528,6 +1541,7 @@
         "reference" : "StructureDefinition/dipag-documentreference-rechnungsdatum"
       },
       "name" : "Digitale Patientenrechnung DocumentReference Rechnungsdatum",
+      "description" : "In dieser Extension wird das Rechnungsdatum an den Dokumentenmetadaten abgebildet. Es wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert.",
       "exampleBoolean" : false
     },
     {
@@ -1539,7 +1553,7 @@
         "reference" : "CodeSystem/dipag-dokument-artderarchivierung-cs"
       },
       "name" : "Digitale Patientenrechnung Dokument ArtDerArchivierung CS",
-      "description" : "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+      "description" : "CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)",
       "exampleBoolean" : false
     },
     {
@@ -1551,7 +1565,7 @@
         "reference" : "ValueSet/dipag-dokument-artderarchivierung-vs"
       },
       "name" : "Digitale Patientenrechnung Dokument ArtDerArchivierung VS",
-      "description" : "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+      "description" : "ValueSet für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)",
       "exampleBoolean" : false
     },
     {
@@ -1563,6 +1577,7 @@
         "reference" : "StructureDefinition/dipag-dokumentenmetadaten-eingang"
       },
       "name" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+      "description" : "Dieses Profil beschreibt die Dokumentenmetadaten, wie sie beim Einreichen von Rechnungen und Anhängen durch das Primärsystem der Leistungserbringer:in (RE-PS) an den Fachdienst übermittelt werden.",
       "exampleBoolean" : false
     },
     {
@@ -1574,6 +1589,7 @@
         "reference" : "StructureDefinition/dipag-dokumentenmetadaten-intern"
       },
       "name" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
+      "description" : "Dieses Profil beschreibt die Dokumentenmetadaten, wie sie im Fachdienst gehalten und an abrufende Akteure ausgeliefert werden. Es ergänzt die eingereichten Metadaten u. a. um das Rechnungs-Token, den Rechnungsstatus, Markierungen sowie die aus den strukturierten Rechnungsinhalten extrahierten Angaben (z. B. Rechnungsdatum, Gesamtbetrag, Zahlungsziel).",
       "exampleBoolean" : false
     },
     {
@@ -1585,6 +1601,7 @@
         "reference" : "StructureDefinition/dipag-abzug-kassenanteil"
       },
       "name" : "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent",
+      "description" : "In dieser Extension wird der prozentuale Abzug des Kassenanteils an einem Summenbestandteil der Rechnung abgebildet.",
       "exampleBoolean" : false
     },
     {
@@ -1596,6 +1613,7 @@
         "reference" : "StructureDefinition/dipag-behandlungsart"
       },
       "name" : "Digitale Patientenrechnung Extension Behandlungsart",
+      "description" : "In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant.",
       "exampleBoolean" : false
     },
     {
@@ -1607,6 +1625,7 @@
         "reference" : "StructureDefinition/dipag-fachrichtung"
       },
       "name" : "Digitale Patientenrechnung Extension Fachrichtung",
+      "description" : "In dieser Extension wird die Fachrichtung der Leistungserbringer:in an der Rechnung abgebildet, u. a. zur Steuerung des Abrechnungsworkflows.",
       "exampleBoolean" : false
     },
     {
@@ -1618,6 +1637,7 @@
         "reference" : "StructureDefinition/dipag-institution"
       },
       "name" : "Digitale Patientenrechnung Institution",
+      "description" : "Das Profil DiPagInstitution bildet eine Institution (z. B. Praxis, MVZ oder Krankenhaus) in den Rollen 'Rechnungsersteller' oder 'Abweichender Forderungsinhaber' ab.",
       "exampleBoolean" : false
     },
     {
@@ -1629,6 +1649,7 @@
         "reference" : "StructureDefinition/dipag-nutzungsprotokoll"
       },
       "name" : "Digitale Patientenrechnung Nutzungsprotokoll",
+      "description" : "Dieses Profil bildet einen Eintrag des Nutzungsprotokolls ab, mit dem Zugriffe und Interaktionen auf Rechnungen und Dokumente im Fachdienst protokolliert werden.",
       "exampleBoolean" : false
     },
     {
@@ -1700,6 +1721,19 @@
         "reference" : "CodeSystem/dipag-operationen-cs"
       },
       "name" : "Digitale Patientenrechnung Operationen",
+      "description" : "CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/dipag-patient"
+      },
+      "name" : "Digitale Patientenrechnung Patient",
+      "description" : "Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab.",
       "exampleBoolean" : false
     },
     {
@@ -1723,6 +1757,7 @@
         "reference" : "StructureDefinition/dipag-rechnung"
       },
       "name" : "Digitale Patientenrechnung Rechnung",
+      "description" : "Dieses Profil bildet die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung ab, inklusive Angaben zu Behandlungszeitraum, Diagnosen und Prozeduren, Behandlungsart, Fachrichtung, Rechnungspositionen und Zusammensetzung des Rechnungsbetrags.",
       "exampleBoolean" : false
     },
     {
@@ -1734,7 +1769,7 @@
         "reference" : "CodeSystem/dipag-rechnung-abrechnungsart-cs"
       },
       "name" : "Digitale Patientenrechnung Rechnung Abrechnungsart CS",
-      "description" : "CodeSystem für die verschiedenen Abrechnungsarten innerhalb einer E-Rechnnung",
+      "description" : "CodeSystem für die verschiedenen Abrechnungsarten (BEMA, GOÄ, GOZ) innerhalb einer Digitalen Patientenrechnung",
       "exampleBoolean" : false
     },
     {
@@ -1770,6 +1805,7 @@
         "reference" : "CodeSystem/dipag-rechnung-identifier-type-cs"
       },
       "name" : "Digitale Patientenrechnung Rechnung Identifier Type CS",
+      "description" : "CodeSystem für die verschiedenen Identifier-Typen der Digitalen Patientenrechnung (Rechnungsnummer, Antragsreferenz, Anhangsidentifikator, USt-ID-Nr)",
       "exampleBoolean" : false
     },
     {
@@ -1805,7 +1841,19 @@
         "reference" : "CodeSystem/dipag-rechnung-submit-modus-cs"
       },
       "name" : "Digitale Patientenrechnung Rechnung Submit Modus CS",
-      "description" : "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
+      "description" : "CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/dipag-rechnung-submit-modus-vs"
+      },
+      "name" : "Digitale Patientenrechnung Rechnung Submit Modus VS",
+      "description" : "ValueSet für die Differenzierung der Verarbeitungsmodi für $invoice-submit",
       "exampleBoolean" : false
     },
     {
@@ -1817,19 +1865,7 @@
         "reference" : "CodeSystem/dipag-rechnung-type-cs"
       },
       "name" : "Digitale Patientenrechnung Rechnung Type CS",
-      "description" : "CodeSystem für die Differenzierung von verschiedenen Typen einer E-Rechnnung",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "ValueSet"
-      }],
-      "reference" : {
-        "reference" : "ValueSet/dipag-rechnung-submit-modus-vs"
-      },
-      "name" : "Digitale Patientenrechnung Rechnung Type VS",
-      "description" : "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
+      "description" : "CodeSystem für die Differenzierung von verschiedenen Typen einer Digitalen Patientenrechnung",
       "exampleBoolean" : false
     },
     {
@@ -1841,7 +1877,7 @@
         "reference" : "CodeSystem/dipag-rechnungsart-cs"
       },
       "name" : "Digitale Patientenrechnung Rechnungsart CS",
-      "description" : "CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung",
+      "description" : "CodeSystem für die verschiedenen Rechnungsarten (Abschluss- und Teilrechnung) innerhalb einer Digitalen Patientenrechnung",
       "exampleBoolean" : false
     },
     {
@@ -1865,6 +1901,7 @@
         "reference" : "StructureDefinition/dipag-rechnungsdiagnose"
       },
       "name" : "Digitale Patientenrechnung Rechnungsdiagnose",
+      "description" : "Dieses Profil bildet eine abrechnungsrelevante Diagnose nach ICD-10-GM ab, die einer Digitalen Patientenrechnung zugeordnet werden kann.",
       "exampleBoolean" : false
     },
     {
@@ -1876,6 +1913,7 @@
         "reference" : "StructureDefinition/dipag-rechnungsdokument"
       },
       "name" : "Digitale Patientenrechnung Rechnungsdokument",
+      "description" : "Dieses Profil bildet die Binärdaten eines Dokumentes der Digitalen Patientenrechnung ab: das PDF der Rechnung bzw. eines Anhangs oder die strukturierten Rechnungsinhalte, jeweils als base64-kodierte Daten.",
       "exampleBoolean" : false
     },
     {
@@ -1887,6 +1925,7 @@
         "reference" : "StructureDefinition/dipag-rechnungsposition"
       },
       "name" : "Digitale Patientenrechnung Rechnungsposition",
+      "description" : "Dieses Profil bildet eine einzelne Rechnungsposition einer Digitalen Patientenrechnung ab, z. B. Leistungen nach GOÄ, GOZ oder BEMA sowie Laborleistungen, Sachkosten/Auslagen und Wegegeld/Reiseentschädigung.",
       "exampleBoolean" : false
     },
     {
@@ -1898,6 +1937,7 @@
         "reference" : "StructureDefinition/DiPagRechnungspositionBehandlungsdatum"
       },
       "name" : "Digitale Patientenrechnung Rechnungsposition Behandlungsdatum",
+      "description" : "In dieser Extension wird das Behandlungsdatum einer Rechnungsposition der Digitalen Patientenrechnung abgebildet.",
       "exampleBoolean" : false
     },
     {
@@ -1909,6 +1949,7 @@
         "reference" : "CodeSystem/dipag-rechnungsposition-faktor-gruende-cs"
       },
       "name" : "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem",
+      "description" : "CodeSystem für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition (z. B. Honorarvereinbarung oder Basistarif)",
       "exampleBoolean" : false
     },
     {
@@ -1920,6 +1961,7 @@
         "reference" : "ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS"
       },
       "name" : "Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet",
+      "description" : "ValueSet für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition",
       "exampleBoolean" : false
     },
     {
@@ -1931,6 +1973,7 @@
         "reference" : "CodeSystem/dipag-rechnungsposition-zusatz-cs"
       },
       "name" : "Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem",
+      "description" : "CodeSystem für die Zusatzkennzeichen einer Rechnungsposition: auf Verlangen erbrachte Leistung, Leistung zur Früherkennung und analoge Leistung",
       "exampleBoolean" : false
     },
     {
@@ -1954,6 +1997,7 @@
         "reference" : "ValueSet/dipag-rechnungsposition-zusatz-VS"
       },
       "name" : "Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet",
+      "description" : "ValueSet für die Zusatzkennzeichen einer Rechnungsposition",
       "exampleBoolean" : false
     },
     {
@@ -1965,6 +2009,7 @@
         "reference" : "StructureDefinition/dipag-rechnungsprozedur"
       },
       "name" : "Digitale Patientenrechnung Rechnungsprozedur",
+      "description" : "Dieses Profil bildet eine abrechnungsrelevante Prozedur nach OPS ab, die einer Digitalen Patientenrechnung zugeordnet werden kann.",
       "exampleBoolean" : false
     },
     {
@@ -1976,6 +2021,7 @@
         "reference" : "ValueSet/dipag-rechnungsstatus-vs"
       },
       "name" : "Digitale Patientenrechnung Rechnungsstatus",
+      "description" : "ValueSet für den Bearbeitungsstatus eines Rechnungsdokuments (offen, erledigt, papierkorb)",
       "exampleBoolean" : false
     },
     {
@@ -1987,7 +2033,7 @@
         "reference" : "CodeSystem/dipag-rechnungsstatus-cs"
       },
       "name" : "Digitale Patientenrechnung Rechnungsstatus CS",
-      "description" : "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments",
+      "description" : "CodeSystem für die Abbildung der verschiedenen Bearbeitungsstatus eines Rechnungsdokuments",
       "exampleBoolean" : false
     },
     {
@@ -2011,6 +2057,7 @@
         "reference" : "ValueSet/dipag-restricted-mime-types-in-binary-vs"
       },
       "name" : "Digitale Patientenrechnung Restricted Mime Types in Binary",
+      "description" : "ValueSet der zulässigen MIME-Types für Dokumente der Digitalen Patientenrechnung (PDF und FHIR-JSON)",
       "exampleBoolean" : false
     },
     {
@@ -2034,6 +2081,7 @@
         "reference" : "StructureDefinition/dipag-task-requestedPerformer"
       },
       "name" : "Digitale Patientenrechnung Task RequestedPerformer",
+      "description" : "Backport des Elements Task.requestedPerformer aus FHIR R5. Referenziert die versicherte Person (per KVNR), an die sich der Task richtet.",
       "exampleBoolean" : false
     },
     {
@@ -2057,6 +2105,7 @@
         "reference" : "CodeSystem/dipag-participant-role-cs"
       },
       "name" : "Digitale Patientenrechnung Teilnehmer Rolle",
+      "description" : "CodeSystem für die Rollen von Beteiligten an einer Digitalen Patientenrechnung (Leistungserbringer, Forderungsinhaber)",
       "exampleBoolean" : false
     },
     {
@@ -2068,6 +2117,7 @@
         "reference" : "StructureDefinition/DiPagTeilsumme"
       },
       "name" : "Digitale Patientenrechnung Teilsumme",
+      "description" : "In dieser Extension wird eine Teilsumme der Rechnung je Rechnungspositionstyp abgebildet, inklusive Umsatzsteuersatz und Umsatzsteuerbetrag.",
       "exampleBoolean" : false
     },
     {
@@ -2079,6 +2129,7 @@
         "reference" : "StructureDefinition/DiPagTokenStornierteRechnung"
       },
       "name" : "Digitale Patientenrechnung Token der stornierten Rechnung",
+      "description" : "In dieser Extension wird bei einer Korrekturrechnung das Rechnungs-Token der stornierten bzw. ersetzten Rechnung abgebildet.",
       "exampleBoolean" : false
     },
     {
@@ -2090,6 +2141,7 @@
         "reference" : "CodeSystem/dipag-chargeitem-type-cs"
       },
       "name" : "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem",
+      "description" : "CodeSystem für die verschiedenen Typen einer Rechnungsposition (z. B. GOÄ-, GOZ- oder BEMA-Leistung, Laborleistung, Sachkosten/Auslagen, Wegegeld/Reiseentschädigung)",
       "exampleBoolean" : false
     },
     {
@@ -2113,6 +2165,7 @@
         "reference" : "ValueSet/dipag-chargeitem-type-VS"
       },
       "name" : "Digitale Patientenrechnung Typ der Rechnungsposition ValueSet",
+      "description" : "ValueSet für die verschiedenen Typen einer Rechnungsposition",
       "exampleBoolean" : false
     },
     {
@@ -2124,6 +2177,7 @@
         "reference" : "StructureDefinition/dipag-wegegeld-reiseentschaedigung"
       },
       "name" : "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension",
+      "description" : "In dieser Extension werden Wegegeld (bis 25 km) und Reiseentschädigung (ab 25 km) zu einer Rechnungsposition abgebildet, inklusive Entfernung, Abwesenheit, Übernachtungskosten und Verkehrsmittel.",
       "exampleBoolean" : false
     },
     {
@@ -2135,6 +2189,7 @@
         "reference" : "StructureDefinition/dipag-zahlungsziel"
       },
       "name" : "Digitale Patientenrechnung Zahlungsziel",
+      "description" : "In dieser Extension wird das Zahlungsziel (Datum) einer Rechnung abgebildet.",
       "exampleBoolean" : false
     },
     {
@@ -2170,6 +2225,7 @@
         "reference" : "StructureDefinition/DiPagBemaPunktsumme"
       },
       "name" : "DiPag BEMA Punktsumme",
+      "description" : "In dieser Extension werden die Summe der Punktzahlen und der Punktwert der BEMA-Leistungen einer Rechnung abgebildet.",
       "exampleBoolean" : false
     },
     {
@@ -2182,17 +2238,6 @@
       },
       "name" : "DiPag PaymentTo Extension (MVP – basiert auf HL7 FM WG Draft)",
       "description" : "Diese Extension basiert auf dem **DRAFT** der HL7 Financial Management Working Group (FM WG) für die Standard-Extension *PaymentTo*.\n\nDie Struktur entspricht dem aktuellen Entwurf der FM WG:\n\n- **paymentType**: Art der Zahlungsverbindung (z. B. IBAN, SWIFT, Kontonummer)\n- **account**: Kontonummer / IBAN\n- **bank**: Name der Bank\n- **branch**: Bankleitzahl / BIC\n- **reference**: Verwendungszweck (typischerweise die Rechnungsnummer)\n- **accountHolderName**: Name des Kontoinhabers (MVP-spezifische Ergänzung, im HL7-Draft noch nicht enthalten)\n- **contact**: Kontaktdaten des Zahlungsempfängers\n- **notes**: Weitere Hinweise zur Zahlung\n\n**Hinweis zur Nutzung:** Die HL7 FM WG wird diese Extension im offiziellen HL7 Extension Package veröffentlichen. Die Verwendung dieser Extension ist daher **ausschließlich im Rahmen dieses MVP** vorgesehen und wird sich mit der Fertigstellung der offiziellen HL7-Standard-Extension ändern.",
-      "exampleBoolean" : false
-    },
-    {
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-        "valueString" : "StructureDefinition:resource"
-      }],
-      "reference" : {
-        "reference" : "StructureDefinition/dipag-patient"
-      },
-      "name" : "DiPagPatient",
       "exampleBoolean" : false
     },
     {
@@ -2275,6 +2320,7 @@
         "reference" : "StructureDefinition/InvoicePeriod"
       },
       "name" : "Invoice.period als Backport aus R5",
+      "description" : "Backport des Elements Invoice.period[x] aus FHIR R5 zur Angabe des Behandlungsdatums bzw. -zeitraums einer Rechnung.",
       "exampleBoolean" : false
     },
     {

@@ -15,6 +15,8 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung | *Version*:1.0.8 |
 | Active Stand: 2026-07-08 | *Maschinenlesbarer Name*:DiPagDocumentReferenceMarkierung |
 
+In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz.
+
 **Context of Use**
 
 **Usage info**
@@ -49,7 +51,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Complex Extension: 
+Complex Extension: In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz.
 
  **Differential-AnsichtDifferential View** 
 
@@ -69,7 +71,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Complex Extension: 
+Complex Extension: In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz.
 
  
 
@@ -98,6 +100,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-docume
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

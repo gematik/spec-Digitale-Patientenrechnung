@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagTotalPriceComponentTypeCS |
 
+ 
+CodeSystem für die Arten von Summenbestandteilen einer Rechnung, z. B. Summe der Rechnungspositionen, Minderungen nach §7 GOZ oder Abzüge wie der Festzuschuss der Kasse 
+
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [DiPagTotalPriceComponentDeductionTypeVS](ValueSet-dipag-total-price-component-deduction-type-vs.md)
@@ -46,6 +49,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "CodeSystem für die Arten von Summenbestandteilen einer Rechnung, z. B. Summe der Rechnungspositionen, Minderungen nach §7 GOZ oder Abzüge wie der Festzuschuss der Kasse",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

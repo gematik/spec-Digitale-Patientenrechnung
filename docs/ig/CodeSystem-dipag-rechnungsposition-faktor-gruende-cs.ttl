@@ -29,6 +29,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition (z. B. Honorarvereinbarung oder Basistarif)"] ;
   fhir:CodeSystem.jurisdiction [
      fhir:index 0 ;
      fhir:CodeableConcept.coding [

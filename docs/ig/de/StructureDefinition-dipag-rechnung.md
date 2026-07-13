@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagRechnung |
 
+ 
+Dieses Profil bildet die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung ab, inklusive Angaben zu Behandlungszeitraum, Diagnosen und Prozeduren, Behandlungsart, Fachrichtung, Rechnungspositionen und Zusammensetzung des Rechnungsbetrags. 
+
 **Usages:**
 
 * Use this Profile: [Digitale Patientenrechnung - Rechnungsinhalte Bundle](StructureDefinition-dipag-rechnungsbundle.md)
@@ -183,7 +186,7 @@ Mandatory: 27 elements(38 nested mandatory elements)
 This structure refers to these other structures:
 
 * [Digitale Patientenrechnung Rechnung (https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung)](StructureDefinition-dipag-rechnung.md)
-* [DiPagPatient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
 * [Identifier-Profil für die 10-stellige Krankenversichertennummer (http://fhir.de/StructureDefinition/identifier-kvid-10)](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/StructureDefinition/identifier-kvid-10)
 * [Digitale Patientenrechnung Person (https://gematik.de/fhir/dipag/StructureDefinition/dipag-person)](StructureDefinition-dipag-person.md)
 * [Digitale Patientenrechnung Institution (https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution)](StructureDefinition-dipag-institution.md)
@@ -250,7 +253,7 @@ Mandatory: 27 elements(38 nested mandatory elements)
 This structure refers to these other structures:
 
 * [Digitale Patientenrechnung Rechnung (https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung)](StructureDefinition-dipag-rechnung.md)
-* [DiPagPatient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
 * [Identifier-Profil für die 10-stellige Krankenversichertennummer (http://fhir.de/StructureDefinition/identifier-kvid-10)](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/StructureDefinition/identifier-kvid-10)
 * [Digitale Patientenrechnung Person (https://gematik.de/fhir/dipag/StructureDefinition/dipag-person)](StructureDefinition-dipag-person.md)
 * [Digitale Patientenrechnung Institution (https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution)](StructureDefinition-dipag-institution.md)
@@ -313,6 +316,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-rechnu
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Dieses Profil bildet die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung ab, inklusive Angaben zu Behandlungszeitraum, Diagnosen und Prozeduren, Behandlungsart, Fachrichtung, Rechnungspositionen und Zusammensetzung des Rechnungsbetrags.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

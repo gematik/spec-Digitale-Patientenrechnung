@@ -15,6 +15,8 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagRechnungspositionBehandlungsdatum |
 
+In dieser Extension wird das Behandlungsdatum einer Rechnungsposition der Digitalen Patientenrechnung abgebildet.
+
 **Context of Use**
 
 **Usage info**
@@ -43,7 +45,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type date: 
+Simple Extension with the type date: In dieser Extension wird das Behandlungsdatum einer Rechnungsposition der Digitalen Patientenrechnung abgebildet.
 
  **Differential-AnsichtDifferential View** 
 
@@ -57,7 +59,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type date: 
+Simple Extension with the type date: In dieser Extension wird das Behandlungsdatum einer Rechnungsposition der Digitalen Patientenrechnung abgebildet.
 
  
 
@@ -86,6 +88,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-DiPagRechnun
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "In dieser Extension wird das Behandlungsdatum einer Rechnungsposition der Digitalen Patientenrechnung abgebildet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

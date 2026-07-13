@@ -12,10 +12,10 @@
     "sources" : ["1.2.276.0.76.11.37"],
     "uses" : {
     },
-    "StructureDefinition-dipag-docref-fachrichtung.html" : "Digitale Patientenrechnung DocRef Fachrichtung",
-    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
     "StructureDefinition-dipag-fachrichtung.html" : "Digitale Patientenrechnung Extension Fachrichtung",
-    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person"
+    "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
+    "StructureDefinition-dipag-docref-fachrichtung.html" : "Digitale Patientenrechnung DocRef Fachrichtung"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/ValueSet/DiPagVerkehrsmittel",
@@ -35,7 +35,7 @@
     "status" : "active",
     "name" : "DiPagAbrechnungsDiagnoseUseVS",
     "title" : "Digitale Patientenrechnung Abrechnungsdiagnose Use ValueSet",
-    "description" : "",
+    "description" : "ValueSet für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose",
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-cs"],
     "uses" : {
     },
@@ -47,7 +47,7 @@
     "status" : "active",
     "name" : "DiPagAuditEventAgentTypeVS",
     "title" : "Digitale Patientenrechnung Audit Event Agent Type",
-    "description" : "",
+    "description" : "ValueSet zur Unterscheidung, ob ein Zugriff durch einen menschlichen Nutzer oder automatisiert durch den Fachdienst erfolgt ist",
     "systems" : ["http://terminology.hl7.org/CodeSystem/extra-security-role-type"],
     "uses" : {
     },
@@ -59,7 +59,7 @@
     "status" : "active",
     "name" : "DiPagAuditEventDetailVS",
     "title" : "Digitale Patientenrechnung Audit Event Detail",
-    "description" : "",
+    "description" : "ValueSet für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll",
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs"],
     "uses" : {
     },
@@ -71,7 +71,7 @@
     "status" : "active",
     "name" : "DiPagAuditEventSubTypeVS",
     "title" : "Digitale Patientenrechnung Audit Event Sub-Type",
-    "description" : "",
+    "description" : "ValueSet zur Kodierung der protokollierten Interaktion: RESTful-Interaktionen sowie die Operationen der Digitalen Patientenrechnung",
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs",
     "http://hl7.org/fhir/restful-interaction"],
     "uses" : {
@@ -84,7 +84,7 @@
     "status" : "active",
     "name" : "DiPagAuditEventTypeVS",
     "title" : "Digitale Patientenrechnung Audit Event Type",
-    "description" : "",
+    "description" : "ValueSet zur Unterscheidung, ob ein Protokolleintrag eine Applikationsaktivität oder eine REST-API-Interaktion protokolliert",
     "systems" : ["http://terminology.hl7.org/CodeSystem/audit-event-type",
     "http://dicom.nema.org/resources/ontology/DCM"],
     "uses" : {
@@ -97,7 +97,7 @@
     "status" : "active",
     "name" : "DiPagRechnungspositionTypeVS",
     "title" : "Digitale Patientenrechnung Typ der Rechnungsposition ValueSet",
-    "description" : "",
+    "description" : "ValueSet für die verschiedenen Typen einer Rechnungsposition",
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"],
     "uses" : {
     },
@@ -110,7 +110,7 @@
     "status" : "active",
     "name" : "DiPagDokumentArtDerArchivierungVS",
     "title" : "Digitale Patientenrechnung Dokument ArtDerArchivierung VS",
-    "description" : "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+    "description" : "ValueSet für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)",
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-dokument-artderarchivierung-cs"],
     "uses" : {
     },
@@ -169,8 +169,8 @@
     "version" : "1.0.8",
     "status" : "active",
     "name" : "DiPagRechnungSubmitModusVS",
-    "title" : "Digitale Patientenrechnung Rechnung Type VS",
-    "description" : "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
+    "title" : "Digitale Patientenrechnung Rechnung Submit Modus VS",
+    "description" : "ValueSet für die Differenzierung der Verarbeitungsmodi für $invoice-submit",
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs"],
     "uses" : {
     },
@@ -194,7 +194,7 @@
     "status" : "active",
     "name" : "DiPagRechnungspositionFaktorGruendeVS",
     "title" : "Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet",
-    "description" : "",
+    "description" : "ValueSet für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition",
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs"],
     "uses" : {
     },
@@ -206,7 +206,7 @@
     "status" : "active",
     "name" : "DiPagRechnungspositionZusatzVS",
     "title" : "Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet",
-    "description" : "",
+    "description" : "ValueSet für die Zusatzkennzeichen einer Rechnungsposition",
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"],
     "uses" : {
     },
@@ -218,7 +218,7 @@
     "status" : "active",
     "name" : "DiPagRechnungsstatusVS",
     "title" : "Digitale Patientenrechnung Rechnungsstatus",
-    "description" : "",
+    "description" : "ValueSet für den Bearbeitungsstatus eines Rechnungsdokuments (offen, erledigt, papierkorb)",
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs"],
     "uses" : {
     },
@@ -230,12 +230,12 @@
     "status" : "active",
     "name" : "DiPagRestrictedMimeTypesInBinaryVS",
     "title" : "Digitale Patientenrechnung Restricted Mime Types in Binary",
-    "description" : "",
+    "description" : "ValueSet der zulässigen MIME-Types für Dokumente der Digitalen Patientenrechnung (PDF und FHIR-JSON)",
     "systems" : ["urn:ietf:bcp:13"],
     "uses" : {
     },
-    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
-    "StructureDefinition-dipag-rechnungsdokument.html" : "Digitale Patientenrechnung Rechnungsdokument"
+    "StructureDefinition-dipag-rechnungsdokument.html" : "Digitale Patientenrechnung Rechnungsdokument",
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-sonstigesdokument-type-vs",
@@ -256,7 +256,7 @@
     "status" : "active",
     "name" : "DiPagTotalPriceComponentDeductionTypeVS",
     "title" : "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen",
-    "description" : "",
+    "description" : "ValueSet für die Arten von Abzügen von der Summe der Rechnungspositionen (Festzuschuss Kasse, Vorleistungen anderer Kostenträger, Kosten gem. den BEMA-Pos. 13a - d)",
     "systems" : ["https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs"],
     "uses" : {
     },

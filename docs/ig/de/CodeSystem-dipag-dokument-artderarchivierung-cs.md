@@ -16,7 +16,7 @@ Version 1.0.8 - ci-build
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagDokumentArtDerArchivierungCS |
 
  
-CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes 
+CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage) 
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
@@ -49,7 +49,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.gematik.de"
     }]
   }],
-  "description" : "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+  "description" : "CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

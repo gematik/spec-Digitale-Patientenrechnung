@@ -15,6 +15,8 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagTeilsumme |
 
+In dieser Extension wird eine Teilsumme der Rechnung je Rechnungspositionstyp abgebildet, inklusive Umsatzsteuersatz und Umsatzsteuerbetrag.
+
 **Context of Use**
 
 **Usage info**
@@ -46,7 +48,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Complex Extension: 
+Complex Extension: In dieser Extension wird eine Teilsumme der Rechnung je Rechnungspositionstyp abgebildet, inklusive Umsatzsteuersatz und Umsatzsteuerbetrag.
 
  **Differential-AnsichtDifferential View** 
 
@@ -64,7 +66,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Complex Extension: 
+Complex Extension: In dieser Extension wird eine Teilsumme der Rechnung je Rechnungspositionstyp abgebildet, inklusive Umsatzsteuersatz und Umsatzsteuerbetrag.
 
  
 
@@ -93,6 +95,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-DiPagTeilsum
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "In dieser Extension wird eine Teilsumme der Rechnung je Rechnungspositionstyp abgebildet, inklusive Umsatzsteuersatz und Umsatzsteuerbetrag.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "DigitalePatientenrechnung"] ;
   fhir:ImplementationGuide.title [ fhir:value "Implementierungsleitfaden Digitale Patientenrechnung"] ;
   fhir:ImplementationGuide.status [ fhir:value "draft"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-07-09T12:53:25+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-07-13T08:15:48+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "gematik GmbH"] ;
   fhir:ImplementationGuide.contact [
      fhir:index 0 ;
@@ -805,6 +805,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Diese Extension erlaubt die Angabe von abrechnungsrelevanten Diagnosen und Prozeduren als Freitext an einer Invoice." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 2 ;
@@ -1575,7 +1576,7 @@
          fhir:link <https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD> ;
          fhir:Reference.reference [ fhir:value "CapabilityStatement/DiPagCapabilityStatementFD" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CapabilityStatement Fachdienst E-Rechnnung" ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "CapabilityStatement Fachdienst E-Rechnung" ] ;
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
@@ -1638,6 +1639,7 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-abrechnungs-diagnose-use-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 58 ;
@@ -1651,6 +1653,7 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-abrechnungs-diagnose-use-vs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Abrechnungsdiagnose Use ValueSet" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 59 ;
@@ -1664,6 +1667,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-rechnungsposition-go-angaben" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension werden gebührenordnungsspezifische Angaben einer Rechnungsposition abgebildet: Einfachsatz, Punktzahl, Steigerungsfaktor mit Begründung sowie eine prozentuale Minderung nach GOÄ." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 60 ;
@@ -1677,6 +1681,7 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-total-price-component-type-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Art der Rechnungssumme" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Arten von Summenbestandteilen einer Rechnung, z. B. Summe der Rechnungspositionen, Minderungen nach §7 GOZ oder Abzüge wie der Festzuschuss der Kasse" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 61 ;
@@ -1690,6 +1695,7 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-total-price-component-deduction-type-vs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die Arten von Abzügen von der Summe der Rechnungspositionen (Festzuschuss Kasse, Vorleistungen anderer Kostenträger, Kosten gem. den BEMA-Pos. 13a - d)" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 62 ;
@@ -1703,7 +1709,7 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-attachment-format-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Attachment Format CS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 63 ;
@@ -1717,6 +1723,7 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-audit-event-agent-type-vs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Audit Event Agent Type" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet zur Unterscheidung, ob ein Zugriff durch einen menschlichen Nutzer oder automatisiert durch den Fachdienst erfolgt ist" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 64 ;
@@ -1730,6 +1737,7 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-audit-event-detail-vs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Audit Event Detail" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 65 ;
@@ -1743,6 +1751,7 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-audit-event-detail-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Audit Event Detail" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll, z. B. Änderungen an Rechnungsstatus oder Markierung" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 66 ;
@@ -1756,6 +1765,7 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-audit-event-sub-type-vs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Audit Event Sub-Type" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet zur Kodierung der protokollierten Interaktion: RESTful-Interaktionen sowie die Operationen der Digitalen Patientenrechnung" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 67 ;
@@ -1769,6 +1779,7 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-audit-event-type-vs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Audit Event Type" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet zur Unterscheidung, ob ein Protokolleintrag eine Applikationsaktivität oder eine REST-API-Interaktion protokolliert" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 68 ;
@@ -1824,6 +1835,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-documentreference-gesamtbetrag" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung DocumentReference Gesamtbetrag" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird der Gesamtbetrag der Rechnung an den Dokumentenmetadaten abgebildet. Er wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 72 ;
@@ -1837,6 +1849,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-documentreference-markierung" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung DocumentReference Markierung" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 73 ;
@@ -1850,6 +1863,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-documentreference-rechnungsdatum" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung DocumentReference Rechnungsdatum" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird das Rechnungsdatum an den Dokumentenmetadaten abgebildet. Es wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 74 ;
@@ -1863,7 +1877,7 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-dokument-artderarchivierung-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Dokument ArtDerArchivierung CS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 75 ;
@@ -1877,7 +1891,7 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-dokument-artderarchivierung-vs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Dokument ArtDerArchivierung VS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 76 ;
@@ -1891,6 +1905,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-dokumentenmetadaten-eingang" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Dokumentenmetadaten Eingang" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dieses Profil beschreibt die Dokumentenmetadaten, wie sie beim Einreichen von Rechnungen und Anhängen durch das Primärsystem der Leistungserbringer:in (RE-PS) an den Fachdienst übermittelt werden." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 77 ;
@@ -1904,6 +1919,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-dokumentenmetadaten-intern" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Dokumentenmetadaten Intern" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dieses Profil beschreibt die Dokumentenmetadaten, wie sie im Fachdienst gehalten und an abrufende Akteure ausgeliefert werden. Es ergänzt die eingereichten Metadaten u. a. um das Rechnungs-Token, den Rechnungsstatus, Markierungen sowie die aus den strukturierten Rechnungsinhalten extrahierten Angaben (z. B. Rechnungsdatum, Gesamtbetrag, Zahlungsziel)." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 78 ;
@@ -1917,6 +1933,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-abzug-kassenanteil" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird der prozentuale Abzug des Kassenanteils an einem Summenbestandteil der Rechnung abgebildet." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 79 ;
@@ -1930,6 +1947,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-behandlungsart" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Extension Behandlungsart" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 80 ;
@@ -1943,6 +1961,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-fachrichtung" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Extension Fachrichtung" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird die Fachrichtung der Leistungserbringer:in an der Rechnung abgebildet, u. a. zur Steuerung des Abrechnungsworkflows." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 81 ;
@@ -1956,6 +1975,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-institution" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Institution" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Das Profil DiPagInstitution bildet eine Institution (z. B. Praxis, MVZ oder Krankenhaus) in den Rollen 'Rechnungsersteller' oder 'Abweichender Forderungsinhaber' ab." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 82 ;
@@ -1969,6 +1989,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-nutzungsprotokoll" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Nutzungsprotokoll" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dieses Profil bildet einen Eintrag des Nutzungsprotokolls ab, mit dem Zugriffe und Interaktionen auf Rechnungen und Dokumente im Fachdienst protokolliert werden." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 83 ;
@@ -2052,9 +2073,24 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-operationen-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Operationen" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 89 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient> ;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-patient" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Patient" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab." ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 90 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2068,7 +2104,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 90 ;
+       fhir:index 91 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2079,9 +2115,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-rechnung" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnung" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dieses Profil bildet die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung ab, inklusive Angaben zu Behandlungszeitraum, Diagnosen und Prozeduren, Behandlungsart, Fachrichtung, Rechnungspositionen und Zusammensetzung des Rechnungsbetrags." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 91 ;
+       fhir:index 92 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2092,10 +2129,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-rechnung-abrechnungsart-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnung Abrechnungsart CS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die verschiedenen Abrechnungsarten innerhalb einer E-Rechnnung" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die verschiedenen Abrechnungsarten (BEMA, GOÄ, GOZ) innerhalb einer Digitalen Patientenrechnung" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 92 ;
+       fhir:index 93 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2109,7 +2146,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet zur Klassifizierung von Abrechnungsarten" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 93 ;
+       fhir:index 94 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2123,7 +2160,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet zur Klassifizierung von Behandlungsarten" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 94 ;
+       fhir:index 95 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2134,9 +2171,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-rechnung-identifier-type-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnung Identifier Type CS" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die verschiedenen Identifier-Typen der Digitalen Patientenrechnung (Rechnungsnummer, Antragsreferenz, Anhangsidentifikator, USt-ID-Nr)" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 95 ;
+       fhir:index 96 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2150,7 +2188,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 96 ;
+       fhir:index 97 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2164,7 +2202,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 97 ;
+       fhir:index 98 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2175,21 +2213,7 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-rechnung-submit-modus-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnung Submit Modus CS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit" ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 98 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-type-cs> ;
-         fhir:Reference.reference [ fhir:value "CodeSystem/dipag-rechnung-type-cs" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnung Type CS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Differenzierung von verschiedenen Typen einer E-Rechnnung" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 99 ;
@@ -2202,11 +2226,25 @@
          fhir:link <https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-submit-modus-vs> ;
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-rechnung-submit-modus-vs" ]
        ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnung Type VS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit" ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnung Submit Modus VS" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die Differenzierung der Verarbeitungsmodi für $invoice-submit" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 100 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-type-cs> ;
+         fhir:Reference.reference [ fhir:value "CodeSystem/dipag-rechnung-type-cs" ]
+       ] ;
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnung Type CS" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Differenzierung von verschiedenen Typen einer Digitalen Patientenrechnung" ] ;
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 101 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2217,10 +2255,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-rechnungsart-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsart CS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die verschiedenen Rechnungsarten (Abschluss- und Teilrechnung) innerhalb einer Digitalen Patientenrechnung" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 101 ;
+       fhir:index 102 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2234,7 +2272,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet zur Klassifizierung von Rechnungsarten" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 102 ;
+       fhir:index 103 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2245,9 +2283,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-rechnungsdiagnose" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsdiagnose" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dieses Profil bildet eine abrechnungsrelevante Diagnose nach ICD-10-GM ab, die einer Digitalen Patientenrechnung zugeordnet werden kann." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 103 ;
+       fhir:index 104 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2258,9 +2297,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-rechnungsdokument" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsdokument" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dieses Profil bildet die Binärdaten eines Dokumentes der Digitalen Patientenrechnung ab: das PDF der Rechnung bzw. eines Anhangs oder die strukturierten Rechnungsinhalte, jeweils als base64-kodierte Daten." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 104 ;
+       fhir:index 105 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2271,9 +2311,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-rechnungsposition" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsposition" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dieses Profil bildet eine einzelne Rechnungsposition einer Digitalen Patientenrechnung ab, z. B. Leistungen nach GOÄ, GOZ oder BEMA sowie Laborleistungen, Sachkosten/Auslagen und Wegegeld/Reiseentschädigung." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 105 ;
+       fhir:index 106 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2284,9 +2325,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/DiPagRechnungspositionBehandlungsdatum" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsposition Behandlungsdatum" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird das Behandlungsdatum einer Rechnungsposition der Digitalen Patientenrechnung abgebildet." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 106 ;
+       fhir:index 107 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2297,9 +2339,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-rechnungsposition-faktor-gruende-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition (z. B. Honorarvereinbarung oder Basistarif)" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 107 ;
+       fhir:index 108 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2310,9 +2353,10 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 108 ;
+       fhir:index 109 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2323,9 +2367,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-rechnungsposition-zusatz-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Zusatzkennzeichen einer Rechnungsposition: auf Verlangen erbrachte Leistung, Leistung zur Früherkennung und analoge Leistung" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 109 ;
+       fhir:index 110 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2339,7 +2384,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird der Zusatz zu einer Rechnungsposition im Kontext der Digitalen Patientenrechnung abgebildet." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 110 ;
+       fhir:index 111 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2350,9 +2395,10 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-rechnungsposition-zusatz-VS" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die Zusatzkennzeichen einer Rechnungsposition" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 111 ;
+       fhir:index 112 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2363,9 +2409,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-rechnungsprozedur" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsprozedur" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dieses Profil bildet eine abrechnungsrelevante Prozedur nach OPS ab, die einer Digitalen Patientenrechnung zugeordnet werden kann." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 112 ;
+       fhir:index 113 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2376,9 +2423,10 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-rechnungsstatus-vs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsstatus" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für den Bearbeitungsstatus eines Rechnungsdokuments (offen, erledigt, papierkorb)" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 113 ;
+       fhir:index 114 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2389,10 +2437,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-rechnungsstatus-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Rechnungsstatus CS" ] ;
-       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Abbildung der verschiedenen Bearbeitungsstatus eines Rechnungsdokuments" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 114 ;
+       fhir:index 115 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2406,7 +2454,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Fügt die Extension replaces hinzu, die es in R4 bereits für Invoice gab (https://hl7.org/fhir/R4/extension-request-replaces.html) leider im aktuellen Extension Pack aber nicht mehr den Context Invoice hat." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 115 ;
+       fhir:index 116 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2417,9 +2465,10 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-restricted-mime-types-in-binary-vs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Restricted Mime Types in Binary" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet der zulässigen MIME-Types für Dokumente der Digitalen Patientenrechnung (PDF und FHIR-JSON)" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 116 ;
+       fhir:index 117 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2433,7 +2482,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet zur Klassifizierung von weiteren Dokumenten" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 117 ;
+       fhir:index 118 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2444,9 +2493,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-task-requestedPerformer" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Task RequestedPerformer" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Backport des Elements Task.requestedPerformer aus FHIR R5. Referenziert die versicherte Person (per KVNR), an die sich der Task richtet." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 118 ;
+       fhir:index 119 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2460,7 +2510,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Diese Codes enthalten Teilnehmer Rollen der Digitalen Patientenrechnung" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 119 ;
+       fhir:index 120 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2471,9 +2521,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-participant-role-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Teilnehmer Rolle" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die Rollen von Beteiligten an einer Digitalen Patientenrechnung (Leistungserbringer, Forderungsinhaber)" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 120 ;
+       fhir:index 121 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2484,9 +2535,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/DiPagTeilsumme" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Teilsumme" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird eine Teilsumme der Rechnung je Rechnungspositionstyp abgebildet, inklusive Umsatzsteuersatz und Umsatzsteuerbetrag." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 121 ;
+       fhir:index 122 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2497,9 +2549,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/DiPagTokenStornierteRechnung" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Token der stornierten Rechnung" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird bei einer Korrekturrechnung das Rechnungs-Token der stornierten bzw. ersetzten Rechnung abgebildet." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 122 ;
+       fhir:index 123 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2510,9 +2563,10 @@
          fhir:Reference.reference [ fhir:value "CodeSystem/dipag-chargeitem-type-cs" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem für die verschiedenen Typen einer Rechnungsposition (z. B. GOÄ-, GOZ- oder BEMA-Leistung, Laborleistung, Sachkosten/Auslagen, Wegegeld/Reiseentschädigung)" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 123 ;
+       fhir:index 124 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2526,7 +2580,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird der Typ einer Rechnungsposition im Kontext der Digitalen Patientenrechnung abgebildet." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 124 ;
+       fhir:index 125 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2537,9 +2591,10 @@
          fhir:Reference.reference [ fhir:value "ValueSet/dipag-chargeitem-type-VS" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Typ der Rechnungsposition ValueSet" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "ValueSet für die verschiedenen Typen einer Rechnungsposition" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 125 ;
+       fhir:index 126 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2550,9 +2605,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-wegegeld-reiseentschaedigung" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension werden Wegegeld (bis 25 km) und Reiseentschädigung (ab 25 km) zu einer Rechnungsposition abgebildet, inklusive Entfernung, Abwesenheit, Übernachtungskosten und Verkehrsmittel." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 126 ;
+       fhir:index 127 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2563,9 +2619,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-zahlungsziel" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Digitale Patientenrechnung Zahlungsziel" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird das Zahlungsziel (Datum) einer Rechnung abgebildet." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 127 ;
+       fhir:index 128 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2579,7 +2636,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension wird die Angabe der Zahn/Region an einer Rechnungsposition der Digitalen Patientenrechnung abgebildet." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 128 ;
+       fhir:index 129 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2593,7 +2650,7 @@
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dieses ValueSet bietet eine Auswahl an Verkehrsmitteln, die im Rahmen einer Reisekostenentschädigung ausgewählt werden können." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 129 ;
+       fhir:index 130 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2604,9 +2661,10 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/DiPagBemaPunktsumme" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "DiPag BEMA Punktsumme" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "In dieser Extension werden die Summe der Punktzahlen und der Punktwert der BEMA-Leistungen einer Rechnung abgebildet." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
-       fhir:index 130 ;
+       fhir:index 131 ;
        fhir:Element.extension [
          fhir:index 0 ;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
@@ -2618,19 +2676,6 @@
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "DiPag PaymentTo Extension (MVP – basiert auf HL7 FM WG Draft)" ] ;
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Diese Extension basiert auf dem **DRAFT** der HL7 Financial Management Working Group (FM WG) für die Standard-Extension *PaymentTo*.\n\nDie Struktur entspricht dem aktuellen Entwurf der FM WG:\n\n- **paymentType**: Art der Zahlungsverbindung (z. B. IBAN, SWIFT, Kontonummer)\n- **account**: Kontonummer / IBAN\n- **bank**: Name der Bank\n- **branch**: Bankleitzahl / BIC\n- **reference**: Verwendungszweck (typischerweise die Rechnungsnummer)\n- **accountHolderName**: Name des Kontoinhabers (MVP-spezifische Ergänzung, im HL7-Draft noch nicht enthalten)\n- **contact**: Kontaktdaten des Zahlungsempfängers\n- **notes**: Weitere Hinweise zur Zahlung\n\n**Hinweis zur Nutzung:** Die HL7 FM WG wird diese Extension im offiziellen HL7 Extension Package veröffentlichen. Die Verwendung dieser Extension ist daher **ausschließlich im Rahmen dieses MVP** vorgesehen und wird sich mit der Fertigstellung der offiziellen HL7-Standard-Extension ändern." ] ;
-       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
-     ], [
-       fhir:index 131 ;
-       fhir:Element.extension [
-         fhir:index 0 ;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ] ;
-         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient> ;
-         fhir:Reference.reference [ fhir:value "StructureDefinition/dipag-patient" ]
-       ] ;
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "DiPagPatient" ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 132 ;
@@ -2742,6 +2787,7 @@
          fhir:Reference.reference [ fhir:value "StructureDefinition/InvoicePeriod" ]
        ] ;
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "Invoice.period als Backport aus R5" ] ;
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Backport des Elements Invoice.period[x] aus FHIR R5 zur Angabe des Behandlungsdatums bzw. -zeitraums einer Rechnung." ] ;
        fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
      ], [
        fhir:index 139 ;

@@ -289,7 +289,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             <td style="column-width:30%">
                <a href="CapabilityStatement-DiPagCapabilityStatementFD.html"
                   title="CapabilityStatement/DiPagCapabilityStatementFD">
-                  <span title="CapabilityStatement/DiPagCapabilityStatementFD">CapabilityStatement Fachdienst E-Rechnnung
+                  <span title="CapabilityStatement/DiPagCapabilityStatementFD">CapabilityStatement Fachdienst E-Rechnung
 </span>
                </a>
             </td>
@@ -378,18 +378,6 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
       <tbody>
          <tr>
             <td style="column-width:30%">
-               <a href="StructureDefinition-dipag-patient.html"
-                  title="StructureDefinition/dipag-patient">
-                  <span title="StructureDefinition/dipag-patient">DiPagPatient
-</span>
-               </a>
-            </td>
-            <td>
-
-</td>
-         </tr>
-         <tr>
-            <td style="column-width:30%">
                <a href="StructureDefinition-dipag-rechnungsbundle.html"
                   title="StructureDefinition/dipag-rechnungsbundle">
                   <span title="StructureDefinition/dipag-rechnungsbundle">Digitale Patientenrechnung - Rechnungsinhalte Bundle
@@ -409,7 +397,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Dieses Profil beschreibt die Dokumentenmetadaten, wie sie beim Einreichen von Rechnungen und Anhängen durch das Primärsystem der Leistungserbringer:in (RE-PS) an den Fachdienst übermittelt werden.</p>
 </td>
          </tr>
          <tr>
@@ -421,7 +409,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Dieses Profil beschreibt die Dokumentenmetadaten, wie sie im Fachdienst gehalten und an abrufende Akteure ausgeliefert werden. Es ergänzt die eingereichten Metadaten u. a. um das Rechnungs-Token, den Rechnungsstatus, Markierungen sowie die aus den strukturierten Rechnungsinhalten extrahierten Angaben (z. B. Rechnungsdatum, Gesamtbetrag, Zahlungsziel).</p>
 </td>
          </tr>
          <tr>
@@ -433,7 +421,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Das Profil DiPagInstitution bildet eine Institution (z. B. Praxis, MVZ oder Krankenhaus) in den Rollen 'Rechnungsersteller' oder 'Abweichender Forderungsinhaber' ab.</p>
 </td>
          </tr>
          <tr>
@@ -445,7 +433,19 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Dieses Profil bildet einen Eintrag des Nutzungsprotokolls ab, mit dem Zugriffe und Interaktionen auf Rechnungen und Dokumente im Fachdienst protokolliert werden.</p>
+</td>
+         </tr>
+         <tr>
+            <td style="column-width:30%">
+               <a href="StructureDefinition-dipag-patient.html"
+                  title="StructureDefinition/dipag-patient">
+                  <span title="StructureDefinition/dipag-patient">Digitale Patientenrechnung Patient
+</span>
+               </a>
+            </td>
+            <td>
+<p>Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab.</p>
 </td>
          </tr>
          <tr>
@@ -469,7 +469,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Dieses Profil bildet die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung ab, inklusive Angaben zu Behandlungszeitraum, Diagnosen und Prozeduren, Behandlungsart, Fachrichtung, Rechnungspositionen und Zusammensetzung des Rechnungsbetrags.</p>
 </td>
          </tr>
          <tr>
@@ -481,7 +481,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Dieses Profil bildet eine abrechnungsrelevante Diagnose nach ICD-10-GM ab, die einer Digitalen Patientenrechnung zugeordnet werden kann.</p>
 </td>
          </tr>
          <tr>
@@ -493,7 +493,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Dieses Profil bildet die Binärdaten eines Dokumentes der Digitalen Patientenrechnung ab: das PDF der Rechnung bzw. eines Anhangs oder die strukturierten Rechnungsinhalte, jeweils als base64-kodierte Daten.</p>
 </td>
          </tr>
          <tr>
@@ -505,7 +505,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Dieses Profil bildet eine einzelne Rechnungsposition einer Digitalen Patientenrechnung ab, z. B. Leistungen nach GOÄ, GOZ oder BEMA sowie Laborleistungen, Sachkosten/Auslagen und Wegegeld/Reiseentschädigung.</p>
 </td>
          </tr>
          <tr>
@@ -517,7 +517,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Dieses Profil bildet eine abrechnungsrelevante Prozedur nach OPS ab, die einer Digitalen Patientenrechnung zugeordnet werden kann.</p>
 </td>
          </tr>
       </tbody>
@@ -549,7 +549,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Diese Extension erlaubt die Angabe von abrechnungsrelevanten Diagnosen und Prozeduren als Freitext an einer Invoice.</p>
 </td>
          </tr>
          <tr>
@@ -561,7 +561,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension werden die Summe der Punktzahlen und der Punktwert der BEMA-Leistungen einer Rechnung abgebildet.</p>
 </td>
          </tr>
          <tr>
@@ -600,7 +600,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension werden gebührenordnungsspezifische Angaben einer Rechnungsposition abgebildet: Einfachsatz, Punktzahl, Steigerungsfaktor mit Begründung sowie eine prozentuale Minderung nach GOÄ.</p>
 </td>
          </tr>
          <tr>
@@ -648,7 +648,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension wird der Gesamtbetrag der Rechnung an den Dokumentenmetadaten abgebildet. Er wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert.</p>
 </td>
          </tr>
          <tr>
@@ -660,7 +660,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz.</p>
 </td>
          </tr>
          <tr>
@@ -672,7 +672,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension wird das Rechnungsdatum an den Dokumentenmetadaten abgebildet. Es wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert.</p>
 </td>
          </tr>
          <tr>
@@ -684,7 +684,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension wird der prozentuale Abzug des Kassenanteils an einem Summenbestandteil der Rechnung abgebildet.</p>
 </td>
          </tr>
          <tr>
@@ -696,7 +696,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant.</p>
 </td>
          </tr>
          <tr>
@@ -708,7 +708,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension wird die Fachrichtung der Leistungserbringer:in an der Rechnung abgebildet, u. a. zur Steuerung des Abrechnungsworkflows.</p>
 </td>
          </tr>
          <tr>
@@ -720,7 +720,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension wird das Behandlungsdatum einer Rechnungsposition der Digitalen Patientenrechnung abgebildet.</p>
 </td>
          </tr>
          <tr>
@@ -756,7 +756,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Backport des Elements Task.requestedPerformer aus FHIR R5. Referenziert die versicherte Person (per KVNR), an die sich der Task richtet.</p>
 </td>
          </tr>
          <tr>
@@ -768,7 +768,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension wird eine Teilsumme der Rechnung je Rechnungspositionstyp abgebildet, inklusive Umsatzsteuersatz und Umsatzsteuerbetrag.</p>
 </td>
          </tr>
          <tr>
@@ -780,7 +780,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension wird bei einer Korrekturrechnung das Rechnungs-Token der stornierten bzw. ersetzten Rechnung abgebildet.</p>
 </td>
          </tr>
          <tr>
@@ -804,7 +804,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension werden Wegegeld (bis 25 km) und Reiseentschädigung (ab 25 km) zu einer Rechnungsposition abgebildet, inklusive Entfernung, Abwesenheit, Übernachtungskosten und Verkehrsmittel.</p>
 </td>
          </tr>
          <tr>
@@ -816,7 +816,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>In dieser Extension wird das Zahlungsziel (Datum) einer Rechnung abgebildet.</p>
 </td>
          </tr>
          <tr>
@@ -840,7 +840,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>Backport des Elements Invoice.period[x] aus FHIR R5 zur Angabe des Behandlungsdatums bzw. -zeitraums einer Rechnung.</p>
 </td>
          </tr>
          <tr>
@@ -872,7 +872,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose</p>
 </td>
          </tr>
          <tr>
@@ -884,7 +884,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet für die Arten von Abzügen von der Summe der Rechnungspositionen (Festzuschuss Kasse, Vorleistungen anderer Kostenträger, Kosten gem. den BEMA-Pos. 13a - d)</p>
 </td>
          </tr>
          <tr>
@@ -896,7 +896,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet zur Unterscheidung, ob ein Zugriff durch einen menschlichen Nutzer oder automatisiert durch den Fachdienst erfolgt ist</p>
 </td>
          </tr>
          <tr>
@@ -908,7 +908,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll</p>
 </td>
          </tr>
          <tr>
@@ -920,7 +920,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet zur Kodierung der protokollierten Interaktion: RESTful-Interaktionen sowie die Operationen der Digitalen Patientenrechnung</p>
 </td>
          </tr>
          <tr>
@@ -932,7 +932,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet zur Unterscheidung, ob ein Protokolleintrag eine Applikationsaktivität oder eine REST-API-Interaktion protokolliert</p>
 </td>
          </tr>
          <tr>
@@ -944,7 +944,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-<p>ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes</p>
+<p>ValueSet für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)</p>
 </td>
          </tr>
          <tr>
@@ -987,12 +987,12 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
             <td style="column-width:30%">
                <a href="ValueSet-dipag-rechnung-submit-modus-vs.html"
                   title="ValueSet/dipag-rechnung-submit-modus-vs">
-                  <span title="ValueSet/dipag-rechnung-submit-modus-vs">Digitale Patientenrechnung Rechnung Type VS
+                  <span title="ValueSet/dipag-rechnung-submit-modus-vs">Digitale Patientenrechnung Rechnung Submit Modus VS
 </span>
                </a>
             </td>
             <td>
-<p>ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit</p>
+<p>ValueSet für die Differenzierung der Verarbeitungsmodi für $invoice-submit</p>
 </td>
          </tr>
          <tr>
@@ -1016,7 +1016,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition</p>
 </td>
          </tr>
          <tr>
@@ -1028,7 +1028,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet für die Zusatzkennzeichen einer Rechnungsposition</p>
 </td>
          </tr>
          <tr>
@@ -1040,7 +1040,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet für den Bearbeitungsstatus eines Rechnungsdokuments (offen, erledigt, papierkorb)</p>
 </td>
          </tr>
          <tr>
@@ -1052,7 +1052,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet der zulässigen MIME-Types für Dokumente der Digitalen Patientenrechnung (PDF und FHIR-JSON)</p>
 </td>
          </tr>
          <tr>
@@ -1088,7 +1088,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>ValueSet für die verschiedenen Typen einer Rechnungsposition</p>
 </td>
          </tr>
          <tr>
@@ -1120,7 +1120,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>CodeSystem für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose</p>
 </td>
          </tr>
          <tr>
@@ -1132,7 +1132,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>CodeSystem für die Arten von Summenbestandteilen einer Rechnung, z. B. Summe der Rechnungspositionen, Minderungen nach §7 GOZ oder Abzüge wie der Festzuschuss der Kasse</p>
 </td>
          </tr>
          <tr>
@@ -1144,7 +1144,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-<p>CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments</p>
+<p>CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments</p>
 </td>
          </tr>
          <tr>
@@ -1156,7 +1156,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>CodeSystem für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll, z. B. Änderungen an Rechnungsstatus oder Markierung</p>
 </td>
          </tr>
          <tr>
@@ -1168,7 +1168,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-<p>CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes</p>
+<p>CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)</p>
 </td>
          </tr>
          <tr>
@@ -1180,7 +1180,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll</p>
 </td>
          </tr>
          <tr>
@@ -1192,7 +1192,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-<p>CodeSystem für die verschiedenen Abrechnungsarten innerhalb einer E-Rechnnung</p>
+<p>CodeSystem für die verschiedenen Abrechnungsarten (BEMA, GOÄ, GOZ) innerhalb einer Digitalen Patientenrechnung</p>
 </td>
          </tr>
          <tr>
@@ -1204,7 +1204,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>CodeSystem für die verschiedenen Identifier-Typen der Digitalen Patientenrechnung (Rechnungsnummer, Antragsreferenz, Anhangsidentifikator, USt-ID-Nr)</p>
 </td>
          </tr>
          <tr>
@@ -1228,7 +1228,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-<p>CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit</p>
+<p>CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit</p>
 </td>
          </tr>
          <tr>
@@ -1240,7 +1240,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-<p>CodeSystem für die Differenzierung von verschiedenen Typen einer E-Rechnnung</p>
+<p>CodeSystem für die Differenzierung von verschiedenen Typen einer Digitalen Patientenrechnung</p>
 </td>
          </tr>
          <tr>
@@ -1252,7 +1252,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-<p>CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung</p>
+<p>CodeSystem für die verschiedenen Rechnungsarten (Abschluss- und Teilrechnung) innerhalb einer Digitalen Patientenrechnung</p>
 </td>
          </tr>
          <tr>
@@ -1264,7 +1264,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>CodeSystem für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition (z. B. Honorarvereinbarung oder Basistarif)</p>
 </td>
          </tr>
          <tr>
@@ -1276,7 +1276,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>CodeSystem für die Zusatzkennzeichen einer Rechnungsposition: auf Verlangen erbrachte Leistung, Leistung zur Früherkennung und analoge Leistung</p>
 </td>
          </tr>
          <tr>
@@ -1288,7 +1288,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-<p>CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments</p>
+<p>CodeSystem für die Abbildung der verschiedenen Bearbeitungsstatus eines Rechnungsdokuments</p>
 </td>
          </tr>
          <tr>
@@ -1300,7 +1300,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>CodeSystem für die Rollen von Beteiligten an einer Digitalen Patientenrechnung (Leistungserbringer, Forderungsinhaber)</p>
 </td>
          </tr>
          <tr>
@@ -1312,7 +1312,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
                </a>
             </td>
             <td>
-
+<p>CodeSystem für die verschiedenen Typen einer Rechnungsposition (z. B. GOÄ-, GOZ- oder BEMA-Leistung, Laborleistung, Sachkosten/Auslagen, Wegegeld/Reiseentschädigung)</p>
 </td>
          </tr>
       </tbody>
@@ -2850,7 +2850,7 @@ Gelöscht werden können nur DocumentReference-Ressourcen, die als KDL-type = 'A
 
           IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gematik.de">gematik GmbH</a>.  
           Package de.gematik.dipag#1.0.8 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Jul 9, 2026 12:53+0000">2026-07-09</span>
+          Erstellt <span title="Mon, Jul 13, 2026 08:15+0000">2026-07-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |

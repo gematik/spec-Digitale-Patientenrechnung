@@ -860,7 +860,7 @@
     "Patient": [
       {
         "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
-        "title": "DiPagPatient"
+        "title": "Digitale Patientenrechnung Patient"
       }
     ],
     "Practitioner": [

@@ -342,6 +342,9 @@ Implementierungsleitfaden Digitale Patientenrechnung
 
   </table>
 
+<p>In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant.</p>
+
+
 
   <p><b>Context of Use</b></p>
   <ul>
@@ -438,7 +441,7 @@ Element ID:     <code>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Value of extension</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-dipag-rechnung-behandlungsart-vs.html" title="https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-behandlungsart-vs" class="binding">Digitale Patientenrechnung Rechnung Behandlungsart VS</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-behandlungsartD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-behandlungsartD'), 'binding', document.getElementById('cbdipag-behandlungsartD-binding').checked, document.getElementById('ppdipag-behandlungsartD'));
 document.getElementById('cbdipag-behandlungsartD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -526,7 +529,7 @@ filterDesc(document.getElementById('dipag-behandlungsartD'), 'obligation', docum
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value of extension<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-dipag-rechnung-behandlungsart-vs.html" title="https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-behandlungsart-vs" class="binding">Digitale Patientenrechnung Rechnung Behandlungsart VS</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-behandlungsartS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-behandlungsartS'), 'binding', document.getElementById('cbdipag-behandlungsartS-binding').checked, document.getElementById('ppdipag-behandlungsartS'));
 document.getElementById('cbdipag-behandlungsartS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -679,7 +682,7 @@ filterDesc(document.getElementById('dipag-behandlungsartS'), 'obligation', docum
 <p><b>
 Summary
 </b></p>
-<p>Simple Extension with the type Coding: </p>
+<p>Simple Extension with the type Coding: In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant.</p>
         </div>
       </div>
     </div>
@@ -714,7 +717,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Value of extension</span><br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-dipag-rechnung-behandlungsart-vs.html" title="https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-behandlungsart-vs" class="binding">Digitale Patientenrechnung Rechnung Behandlungsart VS</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-behandlungsartDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-behandlungsartDA'), 'binding', document.getElementById('cbdipag-behandlungsartDA-binding').checked, document.getElementById('ppdipag-behandlungsartDA'));
 document.getElementById('cbdipag-behandlungsartDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -798,7 +801,7 @@ filterDesc(document.getElementById('dipag-behandlungsartDA'), 'obligation', docu
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Value of extension<br class="binding"/><span style="font-weight:bold" title="null" class="binding">Binding: </span><a href="ValueSet-dipag-rechnung-behandlungsart-vs.html" title="https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-behandlungsart-vs" class="binding">Digitale Patientenrechnung Rechnung Behandlungsart VS</a><span title="null" class="binding"> (</span><a href="http://hl7.org/fhir/R4/terminologies.html#required" title="To be conformant, the concept in this element SHALL be from the specified value set." class="binding">required</a><span title="null" class="binding">)</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-behandlungsartSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-behandlungsartSA'), 'binding', document.getElementById('cbdipag-behandlungsartSA-binding').checked, document.getElementById('ppdipag-behandlungsartSA'));
 document.getElementById('cbdipag-behandlungsartSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -946,7 +949,7 @@ filterDesc(document.getElementById('dipag-behandlungsartSA'), 'obligation', docu
 <p><b>
 Summary
 </b></p>
-<p>Simple Extension with the type Coding: </p>
+<p>Simple Extension with the type Coding: In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant.</p>
         </div>
       </div>
     </div>
@@ -985,7 +988,7 @@ Summary
 
           IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gematik.de">gematik GmbH</a>.  
           Package de.gematik.dipag#1.0.8 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Jul 9, 2026 12:53+0000">2026-07-09</span>
+          Erstellt <span title="Mon, Jul 13, 2026 08:15+0000">2026-07-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |

@@ -20,7 +20,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
-  <description value="CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung"/>
+  <description value="CodeSystem für die verschiedenen Rechnungsarten (Abschluss- und Teilrechnung) innerhalb einer Digitalen Patientenrechnung"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

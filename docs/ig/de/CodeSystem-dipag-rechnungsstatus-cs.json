@@ -21,7 +21,7 @@
       "value" : "https://www.gematik.de"
     }]
   }],
-  "description" : "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments",
+  "description" : "CodeSystem für die Abbildung der verschiedenen Bearbeitungsstatus eines Rechnungsdokuments",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

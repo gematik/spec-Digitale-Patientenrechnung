@@ -29,6 +29,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:ValueSet.description [ fhir:value "ValueSet für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose"] ;
   fhir:ValueSet.jurisdiction [
      fhir:index 0 ;
      fhir:CodeableConcept.coding [

@@ -29,6 +29,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:ValueSet.description [ fhir:value "ValueSet der zulässigen MIME-Types für Dokumente der Digitalen Patientenrechnung (PDF und FHIR-JSON)"] ;
   fhir:ValueSet.jurisdiction [
      fhir:index 0 ;
      fhir:CodeableConcept.coding [

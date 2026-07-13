@@ -15,6 +15,8 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:InvoicePeriod |
 
+Backport des Elements Invoice.period[x] aus FHIR R5 zur Angabe des Behandlungsdatums bzw. -zeitraums einer Rechnung.
+
 **Context of Use**
 
 **Usage info**
@@ -43,7 +45,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type date, Period: 
+Simple Extension with the type date, Period: Backport des Elements Invoice.period[x] aus FHIR R5 zur Angabe des Behandlungsdatums bzw. -zeitraums einer Rechnung.
 
  **Differential-AnsichtDifferential View** 
 
@@ -57,7 +59,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type date, Period: 
+Simple Extension with the type date, Period: Backport des Elements Invoice.period[x] aus FHIR R5 zur Angabe des Behandlungsdatums bzw. -zeitraums einer Rechnung.
 
  
 
@@ -86,6 +88,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-InvoicePerio
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Backport des Elements Invoice.period[x] aus FHIR R5 zur Angabe des Behandlungsdatums bzw. -zeitraums einer Rechnung.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

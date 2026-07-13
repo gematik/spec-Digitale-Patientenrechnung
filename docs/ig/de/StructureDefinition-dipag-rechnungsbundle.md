@@ -66,7 +66,7 @@ Mandatory: 2 elements
 This structure refers to these other structures:
 
 * [Digitale Patientenrechnung Rechnung (https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung)](StructureDefinition-dipag-rechnung.md)
-* [DiPagPatient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
 
 **Slices**
 
@@ -102,7 +102,7 @@ Mandatory: 2 elements
 This structure refers to these other structures:
 
 * [Digitale Patientenrechnung Rechnung (https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung)](StructureDefinition-dipag-rechnung.md)
-* [DiPagPatient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
 
 **Slices**
 

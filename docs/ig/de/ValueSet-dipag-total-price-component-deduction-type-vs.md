@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/ValueSet/dipag-total-price-component-deduction-type-vs | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagTotalPriceComponentDeductionTypeVS |
 
+ 
+ValueSet für die Arten von Abzügen von der Summe der Rechnungspositionen (Festzuschuss Kasse, Vorleistungen anderer Kostenträger, Kosten gem. den BEMA-Pos. 13a - d) 
+
  **References** 
 
 * [Digitale Patientenrechnung Rechnung](StructureDefinition-dipag-rechnung.md)
@@ -52,6 +55,7 @@ Version 1.0.8 - ci-build
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "ValueSet für die Arten von Abzügen von der Summe der Rechnungspositionen (Festzuschuss Kasse, Vorleistungen anderer Kostenträger, Kosten gem. den BEMA-Pos. 13a - d)",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

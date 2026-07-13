@@ -26,6 +26,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="Backport des Elements Invoice.period[x] aus FHIR R5 zur Angabe des Behandlungsdatums bzw. -zeitraums einer Rechnung."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

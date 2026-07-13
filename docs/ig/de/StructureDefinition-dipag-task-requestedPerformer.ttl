@@ -30,6 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:StructureDefinition.description [ fhir:value "Backport des Elements Task.requestedPerformer aus FHIR R5. Referenziert die versicherte Person (per KVNR), an die sich der Task richtet."] ;
   fhir:StructureDefinition.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [

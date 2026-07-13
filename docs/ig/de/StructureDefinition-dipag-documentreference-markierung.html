@@ -342,6 +342,9 @@ Implementierungsleitfaden Digitale Patientenrechnung
 
   </table>
 
+<p>In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz.</p>
+
+
 
   <p><b>Context of Use</b></p>
   <ul>
@@ -548,7 +551,7 @@ Element ID:     <code>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">Value of extension</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-documentreference-markierungD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-documentreference-markierungD'), 'binding', document.getElementById('cbdipag-documentreference-markierungD-binding').checked, document.getElementById('ppdipag-documentreference-markierungD'));
 document.getElementById('cbdipag-documentreference-markierungD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -843,7 +846,7 @@ The type is the Canonical URL of Resource Definition that is the type this refer
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung"</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-documentreference-markierungS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-documentreference-markierungS'), 'binding', document.getElementById('cbdipag-documentreference-markierungS-binding').checked, document.getElementById('ppdipag-documentreference-markierungS'));
 document.getElementById('cbdipag-documentreference-markierungS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1072,7 +1075,7 @@ The type is the Canonical URL of Resource Definition that is the type this refer
 <p><b>
 Summary
 </b></p>
-<p>Complex Extension: </p><ul data-fhir="generated-heirarchy"><li>markierung: Coding: An Extension</li>
+<p>Complex Extension: In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz.</p><ul data-fhir="generated-heirarchy"><li>markierung: Coding: An Extension</li>
 <li>zeitpunkt: dateTime: An Extension</li>
 <li>details: string: An Extension</li>
 <li>artDerArchivierung: Coding: An Extension</li>
@@ -1222,7 +1225,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">Value of extension</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-documentreference-markierungDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-documentreference-markierungDA'), 'binding', document.getElementById('cbdipag-documentreference-markierungDA-binding').checked, document.getElementById('ppdipag-documentreference-markierungDA'));
 document.getElementById('cbdipag-documentreference-markierungDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1513,7 +1516,7 @@ The type is the Canonical URL of Resource Definition that is the type this refer
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung"</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-documentreference-markierungSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-documentreference-markierungSA'), 'binding', document.getElementById('cbdipag-documentreference-markierungSA-binding').checked, document.getElementById('ppdipag-documentreference-markierungSA'));
 document.getElementById('cbdipag-documentreference-markierungSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1737,7 +1740,7 @@ The type is the Canonical URL of Resource Definition that is the type this refer
 <p><b>
 Summary
 </b></p>
-<p>Complex Extension: </p><ul data-fhir="generated-heirarchy"><li>markierung: Coding: An Extension</li>
+<p>Complex Extension: In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz.</p><ul data-fhir="generated-heirarchy"><li>markierung: Coding: An Extension</li>
 <li>zeitpunkt: dateTime: An Extension</li>
 <li>details: string: An Extension</li>
 <li>artDerArchivierung: Coding: An Extension</li>
@@ -1781,7 +1784,7 @@ Summary
 
           IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gematik.de">gematik GmbH</a>.  
           Package de.gematik.dipag#1.0.8 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Jul 9, 2026 12:53+0000">2026-07-09</span>
+          Erstellt <span title="Mon, Jul 13, 2026 08:15+0000">2026-07-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |

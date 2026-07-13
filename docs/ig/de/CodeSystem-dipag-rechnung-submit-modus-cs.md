@@ -16,7 +16,7 @@ Version 1.0.8 - ci-build
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagRechnungSubmitModusCS |
 
  
-CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit 
+CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit 
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
@@ -49,7 +49,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.gematik.de"
     }]
   }],
-  "description" : "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
+  "description" : "CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang | *Version*:1.0.8 |
 | Active Stand: 2026-07-08 | *Maschinenlesbarer Name*:DiPagDokumentenmetadatenEingang |
 
+ 
+Dieses Profil beschreibt die Dokumentenmetadaten, wie sie beim Einreichen von Rechnungen und Anhängen durch das Primärsystem der Leistungserbringer:in (RE-PS) an den Fachdienst übermittelt werden. 
+
 **Usages:**
 
 * Examples for this Profile: [DocumentReference/BeispielDocumentReferenceRechnung3-FD](DocumentReference-BeispielDocumentReferenceRechnung3-FD.md), [DocumentReference/BeispielDocumentReferenceRechnung3-LE](DocumentReference-BeispielDocumentReferenceRechnung3-LE.md), [DocumentReference/BeispielDocumentReferenceRechnung3.1-FD](DocumentReference-BeispielDocumentReferenceRechnung3.1-FD.md), [DocumentReference/BeispielDocumentReferenceRechnung3.1-LE](DocumentReference-BeispielDocumentReferenceRechnung3.1-LE.md)... Show 4 more, [DocumentReference/BeispielDocumentReferenceSonstigesDokument3-FD](DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.md), [DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE](DocumentReference-BeispielDocumentReferenceSonstigesDokument3-LE.md), [DocumentReference/BeispielDocumentReferenceSonstigesDokument3.1-FD](DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-FD.md) and [DocumentReference/BeispielDocumentReferenceSonstigesDokument3.1-LE](DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.md)
@@ -174,6 +177,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-dokume
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Dieses Profil beschreibt die Dokumentenmetadaten, wie sie beim Einreichen von Rechnungen und Anhängen durch das Primärsystem der Leistungserbringer:in (RE-PS) an den Fachdienst übermittelt werden.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

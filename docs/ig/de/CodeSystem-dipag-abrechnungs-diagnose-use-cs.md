@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-cs | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagAbrechnungsDiagnoseUseCS |
 
+ 
+CodeSystem für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose 
+
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
 * [DiPagAbrechnungsDiagnoseUseVS](ValueSet-dipag-abrechnungs-diagnose-use-vs.md)
@@ -46,6 +49,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "CodeSystem für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

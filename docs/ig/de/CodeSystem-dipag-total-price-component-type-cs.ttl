@@ -30,6 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem für die Arten von Summenbestandteilen einer Rechnung, z. B. Summe der Rechnungspositionen, Minderungen nach §7 GOZ oder Abzüge wie der Festzuschuss der Kasse"] ;
   fhir:CodeSystem.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [

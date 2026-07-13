@@ -29,7 +29,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
-  fhir:CodeSystem.description [ fhir:value "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments"] ;
   fhir:CodeSystem.jurisdiction [
      fhir:index 0 ;
      fhir:CodeableConcept.coding [

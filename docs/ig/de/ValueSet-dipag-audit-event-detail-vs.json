@@ -21,6 +21,7 @@
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "ValueSet für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

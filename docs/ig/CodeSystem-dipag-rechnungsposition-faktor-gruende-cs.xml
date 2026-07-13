@@ -20,6 +20,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="CodeSystem für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition (z. B. Honorarvereinbarung oder Basistarif)"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

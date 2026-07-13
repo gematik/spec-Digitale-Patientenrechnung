@@ -47,6 +47,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-detail-vs | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagAuditEventDetailVS |
 
+ 
+ValueSet für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll 
+
  **References** 
 
 * [Digitale Patientenrechnung Nutzungsprotokoll](StructureDefinition-dipag-nutzungsprotokoll.md)
@@ -52,6 +55,7 @@ Version 1.0.8 - ci-build
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "ValueSet für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

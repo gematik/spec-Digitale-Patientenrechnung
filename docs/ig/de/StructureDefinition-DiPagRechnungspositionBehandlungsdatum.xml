@@ -25,6 +25,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="In dieser Extension wird das Behandlungsdatum einer Rechnungsposition der Digitalen Patientenrechnung abgebildet."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

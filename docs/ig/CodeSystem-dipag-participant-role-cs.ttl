@@ -29,6 +29,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem für die Rollen von Beteiligten an einer Digitalen Patientenrechnung (Leistungserbringer, Forderungsinhaber)"] ;
   fhir:CodeSystem.jurisdiction [
      fhir:index 0 ;
      fhir:CodeableConcept.coding [

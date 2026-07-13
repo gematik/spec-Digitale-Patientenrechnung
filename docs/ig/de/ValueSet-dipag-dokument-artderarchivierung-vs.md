@@ -16,7 +16,7 @@ Version 1.0.8 - ci-build
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagDokumentArtDerArchivierungVS |
 
  
-ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes 
+ValueSet für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage) 
 
  **References** 
 
@@ -55,7 +55,7 @@ ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines
       "value" : "https://www.gematik.de"
     }]
   }],
-  "description" : "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+  "description" : "ValueSet für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

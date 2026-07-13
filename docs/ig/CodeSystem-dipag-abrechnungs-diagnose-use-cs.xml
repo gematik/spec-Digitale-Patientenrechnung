@@ -20,6 +20,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="CodeSystem für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

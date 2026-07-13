@@ -17,7 +17,7 @@ Die folgenden Artefakte definieren die spezifischen Fähigkeiten, die verschiede
 
 | | |
 | :--- | :--- |
-| [ CapabilityStatement Fachdienst E-Rechnnung  ](CapabilityStatement-DiPagCapabilityStatementFD.md) | Dieses CapabilityStatement beschreibt alle Interaktionen, die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN. |
+| [ CapabilityStatement Fachdienst E-Rechnung  ](CapabilityStatement-DiPagCapabilityStatementFD.md) | Dieses CapabilityStatement beschreibt alle Interaktionen, die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN. |
 
 ### Verhalten: OperationDefinitions 
 
@@ -37,18 +37,18 @@ Diese definieren Einschränkungen für FHIR-Ressourcen für Systeme, die mit dem
 
 | | |
 | :--- | :--- |
-| [ DiPagPatient  ](StructureDefinition-dipag-patient.md) |  |
 | [ Digitale Patientenrechnung - Rechnungsinhalte Bundle  ](StructureDefinition-dipag-rechnungsbundle.md) | Dieses Profil stellt das collection-Bundle dar, mit welchem die strukturierten Rechnungsinhalte zusammengefasst und als base64-kodiertes Binary in der DocumentReference referenziert werden. |
-| [ Digitale Patientenrechnung Dokumentenmetadaten Eingang  ](StructureDefinition-dipag-dokumentenmetadaten-eingang.md) |  |
-| [ Digitale Patientenrechnung Dokumentenmetadaten Intern  ](StructureDefinition-dipag-dokumentenmetadaten-intern.md) |  |
-| [ Digitale Patientenrechnung Institution  ](StructureDefinition-dipag-institution.md) |  |
-| [ Digitale Patientenrechnung Nutzungsprotokoll  ](StructureDefinition-dipag-nutzungsprotokoll.md) |  |
+| [ Digitale Patientenrechnung Dokumentenmetadaten Eingang  ](StructureDefinition-dipag-dokumentenmetadaten-eingang.md) | Dieses Profil beschreibt die Dokumentenmetadaten, wie sie beim Einreichen von Rechnungen und Anhängen durch das Primärsystem der Leistungserbringer:in (RE-PS) an den Fachdienst übermittelt werden. |
+| [ Digitale Patientenrechnung Dokumentenmetadaten Intern  ](StructureDefinition-dipag-dokumentenmetadaten-intern.md) | Dieses Profil beschreibt die Dokumentenmetadaten, wie sie im Fachdienst gehalten und an abrufende Akteure ausgeliefert werden. Es ergänzt die eingereichten Metadaten u. a. um das Rechnungs-Token, den Rechnungsstatus, Markierungen sowie die aus den strukturierten Rechnungsinhalten extrahierten Angaben (z. B. Rechnungsdatum, Gesamtbetrag, Zahlungsziel). |
+| [ Digitale Patientenrechnung Institution  ](StructureDefinition-dipag-institution.md) | Das Profil DiPagInstitution bildet eine Institution (z. B. Praxis, MVZ oder Krankenhaus) in den Rollen 'Rechnungsersteller' oder 'Abweichender Forderungsinhaber' ab. |
+| [ Digitale Patientenrechnung Nutzungsprotokoll  ](StructureDefinition-dipag-nutzungsprotokoll.md) | Dieses Profil bildet einen Eintrag des Nutzungsprotokolls ab, mit dem Zugriffe und Interaktionen auf Rechnungen und Dokumente im Fachdienst protokolliert werden. |
+| [ Digitale Patientenrechnung Patient  ](StructureDefinition-dipag-patient.md) | Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab. |
 | [ Digitale Patientenrechnung Person  ](StructureDefinition-dipag-person.md) | Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet. |
-| [ Digitale Patientenrechnung Rechnung  ](StructureDefinition-dipag-rechnung.md) |  |
-| [ Digitale Patientenrechnung Rechnungsdiagnose  ](StructureDefinition-dipag-rechnungsdiagnose.md) |  |
-| [ Digitale Patientenrechnung Rechnungsdokument  ](StructureDefinition-dipag-rechnungsdokument.md) |  |
-| [ Digitale Patientenrechnung Rechnungsposition  ](StructureDefinition-dipag-rechnungsposition.md) |  |
-| [ Digitale Patientenrechnung Rechnungsprozedur  ](StructureDefinition-dipag-rechnungsprozedur.md) |  |
+| [ Digitale Patientenrechnung Rechnung  ](StructureDefinition-dipag-rechnung.md) | Dieses Profil bildet die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung ab, inklusive Angaben zu Behandlungszeitraum, Diagnosen und Prozeduren, Behandlungsart, Fachrichtung, Rechnungspositionen und Zusammensetzung des Rechnungsbetrags. |
+| [ Digitale Patientenrechnung Rechnungsdiagnose  ](StructureDefinition-dipag-rechnungsdiagnose.md) | Dieses Profil bildet eine abrechnungsrelevante Diagnose nach ICD-10-GM ab, die einer Digitalen Patientenrechnung zugeordnet werden kann. |
+| [ Digitale Patientenrechnung Rechnungsdokument  ](StructureDefinition-dipag-rechnungsdokument.md) | Dieses Profil bildet die Binärdaten eines Dokumentes der Digitalen Patientenrechnung ab: das PDF der Rechnung bzw. eines Anhangs oder die strukturierten Rechnungsinhalte, jeweils als base64-kodierte Daten. |
+| [ Digitale Patientenrechnung Rechnungsposition  ](StructureDefinition-dipag-rechnungsposition.md) | Dieses Profil bildet eine einzelne Rechnungsposition einer Digitalen Patientenrechnung ab, z. B. Leistungen nach GOÄ, GOZ oder BEMA sowie Laborleistungen, Sachkosten/Auslagen und Wegegeld/Reiseentschädigung. |
+| [ Digitale Patientenrechnung Rechnungsprozedur  ](StructureDefinition-dipag-rechnungsprozedur.md) | Dieses Profil bildet eine abrechnungsrelevante Prozedur nach OPS ab, die einer Digitalen Patientenrechnung zugeordnet werden kann. |
 
 ### Strukturen: Extension-Definitionen 
 
@@ -57,8 +57,8 @@ Diese definieren Einschränkungen für FHIR-Datentypen für Systeme, die mit die
 | | |
 | :--- | :--- |
 | [ Abrechnungsrelevanz von Diagnosen und Prozeduren  ](StructureDefinition-DiPagAbrechnungsDiagnoseProzedur.md) | Diese Extension erlaubt es einer Invoice Diagnosen oder Prozeduren, incl. Qualifier wie bspw: "Primär-DRG" zuzuordnen. Dies ermöglicht unter anderem das Zuordnen von Haupt- und Nebendiagnosen zu einem Account zum Zweck der DRG Erstellung. |
-| [ Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext  ](StructureDefinition-DiPagAbrechnungsDiagnoseProzedurFreitext.md) |  |
-| [ DiPag BEMA Punktsumme  ](StructureDefinition-DiPagBemaPunktsumme.md) |  |
+| [ Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext  ](StructureDefinition-DiPagAbrechnungsDiagnoseProzedurFreitext.md) | Diese Extension erlaubt die Angabe von abrechnungsrelevanten Diagnosen und Prozeduren als Freitext an einer Invoice. |
+| [ DiPag BEMA Punktsumme  ](StructureDefinition-DiPagBemaPunktsumme.md) | In dieser Extension werden die Summe der Punktzahlen und der Punktwert der BEMA-Leistungen einer Rechnung abgebildet. |
 | [ DiPag PaymentTo Extension (MVP – basiert auf HL7 FM WG Draft)  ](StructureDefinition-DiPagPaymentTo.md) | Diese Extension basiert auf dem **DRAFT** der HL7 Financial Management Working Group (FM WG) für die Standard-Extension **PaymentTo**.Die Struktur entspricht dem aktuellen Entwurf der FM WG:* **paymentType**: Art der Zahlungsverbindung (z. B. IBAN, SWIFT, Kontonummer)
 * **account**: Kontonummer / IBAN
 * **bank**: Name der Bank
@@ -68,27 +68,27 @@ Diese definieren Einschränkungen für FHIR-Datentypen für Systeme, die mit die
 * **contact**: Kontaktdaten des Zahlungsempfängers
 * **notes**: Weitere Hinweise zur Zahlung
 **Hinweis zur Nutzung:** Die HL7 FM WG wird diese Extension im offiziellen HL7 Extension Package veröffentlichen. Die Verwendung dieser Extension ist daher **ausschließlich im Rahmen dieses MVP** vorgesehen und wird sich mit der Fertigstellung der offiziellen HL7-Standard-Extension ändern. |
-| [ Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition  ](StructureDefinition-dipag-rechnungsposition-go-angaben.md) |  |
+| [ Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition  ](StructureDefinition-dipag-rechnungsposition-go-angaben.md) | In dieser Extension werden gebührenordnungsspezifische Angaben einer Rechnungsposition abgebildet: Einfachsatz, Punktzahl, Steigerungsfaktor mit Begründung sowie eine prozentuale Minderung nach GOÄ. |
 | [ Digitale Patientenrechnung BasedOn Extension  ](StructureDefinition-DiPagInvoiceBasedOn.md) | Fügt die Extension basedOn hinzu, die es in R4 bereits für Invoice gab (https://hl7.org/fhir/R4/extension-event-basedon.html) leider im aktuellen Extension Pack aber nicht mehr den Context Invoice hat. |
 | [ Digitale Patientenrechnung DocRef Fachrichtung  ](StructureDefinition-dipag-docref-fachrichtung.md) | Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows |
 | [ Digitale Patientenrechnung DocRef Signature  ](StructureDefinition-dipag-docref-signature.md) | Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten |
-| [ Digitale Patientenrechnung DocumentReference Gesamtbetrag  ](StructureDefinition-dipag-documentreference-gesamtbetrag.md) |  |
-| [ Digitale Patientenrechnung DocumentReference Markierung  ](StructureDefinition-dipag-documentreference-markierung.md) |  |
-| [ Digitale Patientenrechnung DocumentReference Rechnungsdatum  ](StructureDefinition-dipag-documentreference-rechnungsdatum.md) |  |
-| [ Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent  ](StructureDefinition-dipag-abzug-kassenanteil.md) |  |
-| [ Digitale Patientenrechnung Extension Behandlungsart  ](StructureDefinition-dipag-behandlungsart.md) |  |
-| [ Digitale Patientenrechnung Extension Fachrichtung  ](StructureDefinition-dipag-fachrichtung.md) |  |
-| [ Digitale Patientenrechnung Rechnungsposition Behandlungsdatum  ](StructureDefinition-DiPagRechnungspositionBehandlungsdatum.md) |  |
+| [ Digitale Patientenrechnung DocumentReference Gesamtbetrag  ](StructureDefinition-dipag-documentreference-gesamtbetrag.md) | In dieser Extension wird der Gesamtbetrag der Rechnung an den Dokumentenmetadaten abgebildet. Er wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert. |
+| [ Digitale Patientenrechnung DocumentReference Markierung  ](StructureDefinition-dipag-documentreference-markierung.md) | In dieser Extension wird eine Markierung eines Dokumentes abgebildet (z. B. 'Eingereicht', 'Bezahlt' oder 'Archiviert'), inklusive Zeitpunkt, optionalem Freitext sowie ggf. Art der Archivierung und Kostenträger-Referenz. |
+| [ Digitale Patientenrechnung DocumentReference Rechnungsdatum  ](StructureDefinition-dipag-documentreference-rechnungsdatum.md) | In dieser Extension wird das Rechnungsdatum an den Dokumentenmetadaten abgebildet. Es wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert. |
+| [ Digitale Patientenrechnung Extension Abzug Kassenanteil in Prozent  ](StructureDefinition-dipag-abzug-kassenanteil.md) | In dieser Extension wird der prozentuale Abzug des Kassenanteils an einem Summenbestandteil der Rechnung abgebildet. |
+| [ Digitale Patientenrechnung Extension Behandlungsart  ](StructureDefinition-dipag-behandlungsart.md) | In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant. |
+| [ Digitale Patientenrechnung Extension Fachrichtung  ](StructureDefinition-dipag-fachrichtung.md) | In dieser Extension wird die Fachrichtung der Leistungserbringer:in an der Rechnung abgebildet, u. a. zur Steuerung des Abrechnungsworkflows. |
+| [ Digitale Patientenrechnung Rechnungsposition Behandlungsdatum  ](StructureDefinition-DiPagRechnungspositionBehandlungsdatum.md) | In dieser Extension wird das Behandlungsdatum einer Rechnungsposition der Digitalen Patientenrechnung abgebildet. |
 | [ Digitale Patientenrechnung Rechnungsposition Zusatz Extension  ](StructureDefinition-DiPagRechnungspositionZusatz.md) | In dieser Extension wird der Zusatz zu einer Rechnungsposition im Kontext der Digitalen Patientenrechnung abgebildet. |
 | [ Digitale Patientenrechnung Replaces Extension  ](StructureDefinition-DiPagInvoiceReplaces.md) | Fügt die Extension replaces hinzu, die es in R4 bereits für Invoice gab (https://hl7.org/fhir/R4/extension-request-replaces.html) leider im aktuellen Extension Pack aber nicht mehr den Context Invoice hat. |
-| [ Digitale Patientenrechnung Task RequestedPerformer  ](StructureDefinition-dipag-task-requestedPerformer.md) |  |
-| [ Digitale Patientenrechnung Teilsumme  ](StructureDefinition-DiPagTeilsumme.md) |  |
-| [ Digitale Patientenrechnung Token der stornierten Rechnung  ](StructureDefinition-DiPagTokenStornierteRechnung.md) |  |
+| [ Digitale Patientenrechnung Task RequestedPerformer  ](StructureDefinition-dipag-task-requestedPerformer.md) | Backport des Elements Task.requestedPerformer aus FHIR R5. Referenziert die versicherte Person (per KVNR), an die sich der Task richtet. |
+| [ Digitale Patientenrechnung Teilsumme  ](StructureDefinition-DiPagTeilsumme.md) | In dieser Extension wird eine Teilsumme der Rechnung je Rechnungspositionstyp abgebildet, inklusive Umsatzsteuersatz und Umsatzsteuerbetrag. |
+| [ Digitale Patientenrechnung Token der stornierten Rechnung  ](StructureDefinition-DiPagTokenStornierteRechnung.md) | In dieser Extension wird bei einer Korrekturrechnung das Rechnungs-Token der stornierten bzw. ersetzten Rechnung abgebildet. |
 | [ Digitale Patientenrechnung Typ der Rechnungsposition Extension  ](StructureDefinition-dipag-rechnungsposition-type.md) | In dieser Extension wird der Typ einer Rechnungsposition im Kontext der Digitalen Patientenrechnung abgebildet. |
-| [ Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension  ](StructureDefinition-dipag-wegegeld-reiseentschaedigung.md) |  |
-| [ Digitale Patientenrechnung Zahlungsziel  ](StructureDefinition-dipag-zahlungsziel.md) |  |
+| [ Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension  ](StructureDefinition-dipag-wegegeld-reiseentschaedigung.md) | In dieser Extension werden Wegegeld (bis 25 km) und Reiseentschädigung (ab 25 km) zu einer Rechnungsposition abgebildet, inklusive Entfernung, Abwesenheit, Übernachtungskosten und Verkehrsmittel. |
+| [ Digitale Patientenrechnung Zahlungsziel  ](StructureDefinition-dipag-zahlungsziel.md) | In dieser Extension wird das Zahlungsziel (Datum) einer Rechnung abgebildet. |
 | [ Digitale Patientenrechnung Zahn/Region Extension  ](StructureDefinition-dipag-zahnregion.md) | In dieser Extension wird die Angabe der Zahn/Region an einer Rechnungsposition der Digitalen Patientenrechnung abgebildet. |
-| [ Invoice.period als Backport aus R5  ](StructureDefinition-InvoicePeriod.md) |  |
+| [ Invoice.period als Backport aus R5  ](StructureDefinition-InvoicePeriod.md) | Backport des Elements Invoice.period[x] aus FHIR R5 zur Angabe des Behandlungsdatums bzw. -zeitraums einer Rechnung. |
 | [ Zusatzinformation zur Abrechnungsart  ](StructureDefinition-DiPagZusatzinformationZurAbrechnungsart.md) | Die Abrechnung nach §13 kann ergänzend zu den grundsätzlichen Ausrichtungen der Abrechnung aufgeführt werden. Diese Extension erlaubt es, die Ausrichtung der Rechnung entsprechend zu flaggen. |
 
 ### Terminologie: ValueSets 
@@ -97,25 +97,25 @@ Diese definieren Wertemengen, die von Systemen verwendet werden, die mit dem Imp
 
 | | |
 | :--- | :--- |
-| [ Digitale Patientenrechnung Abrechnungsdiagnose Use ValueSet  ](ValueSet-dipag-abrechnungs-diagnose-use-vs.md) |  |
-| [ Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen  ](ValueSet-dipag-total-price-component-deduction-type-vs.md) |  |
-| [ Digitale Patientenrechnung Audit Event Agent Type  ](ValueSet-dipag-audit-event-agent-type-vs.md) |  |
-| [ Digitale Patientenrechnung Audit Event Detail  ](ValueSet-dipag-audit-event-detail-vs.md) |  |
-| [ Digitale Patientenrechnung Audit Event Sub-Type  ](ValueSet-dipag-audit-event-sub-type-vs.md) |  |
-| [ Digitale Patientenrechnung Audit Event Type  ](ValueSet-dipag-audit-event-type-vs.md) |  |
-| [ Digitale Patientenrechnung Dokument ArtDerArchivierung VS  ](ValueSet-dipag-dokument-artderarchivierung-vs.md) | ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes |
+| [ Digitale Patientenrechnung Abrechnungsdiagnose Use ValueSet  ](ValueSet-dipag-abrechnungs-diagnose-use-vs.md) | ValueSet für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose |
+| [ Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen  ](ValueSet-dipag-total-price-component-deduction-type-vs.md) | ValueSet für die Arten von Abzügen von der Summe der Rechnungspositionen (Festzuschuss Kasse, Vorleistungen anderer Kostenträger, Kosten gem. den BEMA-Pos. 13a - d) |
+| [ Digitale Patientenrechnung Audit Event Agent Type  ](ValueSet-dipag-audit-event-agent-type-vs.md) | ValueSet zur Unterscheidung, ob ein Zugriff durch einen menschlichen Nutzer oder automatisiert durch den Fachdienst erfolgt ist |
+| [ Digitale Patientenrechnung Audit Event Detail  ](ValueSet-dipag-audit-event-detail-vs.md) | ValueSet für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll |
+| [ Digitale Patientenrechnung Audit Event Sub-Type  ](ValueSet-dipag-audit-event-sub-type-vs.md) | ValueSet zur Kodierung der protokollierten Interaktion: RESTful-Interaktionen sowie die Operationen der Digitalen Patientenrechnung |
+| [ Digitale Patientenrechnung Audit Event Type  ](ValueSet-dipag-audit-event-type-vs.md) | ValueSet zur Unterscheidung, ob ein Protokolleintrag eine Applikationsaktivität oder eine REST-API-Interaktion protokolliert |
+| [ Digitale Patientenrechnung Dokument ArtDerArchivierung VS  ](ValueSet-dipag-dokument-artderarchivierung-vs.md) | ValueSet für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage) |
 | [ Digitale Patientenrechnung Rechnung Abrechnungsart VS  ](ValueSet-dipag-rechnung-abrechnungsart-vs.md) | ValueSet zur Klassifizierung von Abrechnungsarten |
 | [ Digitale Patientenrechnung Rechnung Behandlungsart VS  ](ValueSet-dipag-rechnung-behandlungsart-vs.md) | ValueSet zur Klassifizierung von Behandlungsarten |
 | [ Digitale Patientenrechnung Rechnung Markierung VS  ](ValueSet-dipag-rechnung-markierung-vs.md) | ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes |
-| [ Digitale Patientenrechnung Rechnung Type VS  ](ValueSet-dipag-rechnung-submit-modus-vs.md) | ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit |
+| [ Digitale Patientenrechnung Rechnung Submit Modus VS  ](ValueSet-dipag-rechnung-submit-modus-vs.md) | ValueSet für die Differenzierung der Verarbeitungsmodi für $invoice-submit |
 | [ Digitale Patientenrechnung Rechnungsart VS  ](ValueSet-dipag-rechnungsart-vs.md) | ValueSet zur Klassifizierung von Rechnungsarten |
-| [ Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet  ](ValueSet-dipag-rechnungsposition-faktor-gruende-auspraegungen-VS.md) |  |
-| [ Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet  ](ValueSet-dipag-rechnungsposition-zusatz-VS.md) |  |
-| [ Digitale Patientenrechnung Rechnungsstatus  ](ValueSet-dipag-rechnungsstatus-vs.md) |  |
-| [ Digitale Patientenrechnung Restricted Mime Types in Binary  ](ValueSet-dipag-restricted-mime-types-in-binary-vs.md) |  |
+| [ Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet  ](ValueSet-dipag-rechnungsposition-faktor-gruende-auspraegungen-VS.md) | ValueSet für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition |
+| [ Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet  ](ValueSet-dipag-rechnungsposition-zusatz-VS.md) | ValueSet für die Zusatzkennzeichen einer Rechnungsposition |
+| [ Digitale Patientenrechnung Rechnungsstatus  ](ValueSet-dipag-rechnungsstatus-vs.md) | ValueSet für den Bearbeitungsstatus eines Rechnungsdokuments (offen, erledigt, papierkorb) |
+| [ Digitale Patientenrechnung Restricted Mime Types in Binary  ](ValueSet-dipag-restricted-mime-types-in-binary-vs.md) | ValueSet der zulässigen MIME-Types für Dokumente der Digitalen Patientenrechnung (PDF und FHIR-JSON) |
 | [ Digitale Patientenrechnung Sonstiges Dokument Type VS  ](ValueSet-dipag-sonstigesdokument-type-vs.md) | ValueSet zur Klassifizierung von weiteren Dokumenten |
 | [ Digitale Patientenrechnung Teilnehmer Rolle  ](ValueSet-dipag-participant-role-VS.md) | Diese Codes enthalten Teilnehmer Rollen der Digitalen Patientenrechnung |
-| [ Digitale Patientenrechnung Typ der Rechnungsposition ValueSet  ](ValueSet-dipag-chargeitem-type-VS.md) |  |
+| [ Digitale Patientenrechnung Typ der Rechnungsposition ValueSet  ](ValueSet-dipag-chargeitem-type-VS.md) | ValueSet für die verschiedenen Typen einer Rechnungsposition |
 | [ Digitale PatientenrechnungVerkehrsmittel  ](ValueSet-DiPagVerkehrsmittel.md) | Dieses ValueSet bietet eine Auswahl an Verkehrsmitteln, die im Rahmen einer Reisekostenentschädigung ausgewählt werden können. |
 
 ### Terminologie: CodeSysteme 
@@ -124,23 +124,23 @@ Diese definieren neue CodeSysteme, die von Systemen verwendet werden, die mit di
 
 | | |
 | :--- | :--- |
-| [ Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem  ](CodeSystem-dipag-abrechnungs-diagnose-use-cs.md) |  |
-| [ Digitale Patientenrechnung Art der Rechnungssumme  ](CodeSystem-dipag-total-price-component-type-cs.md) |  |
-| [ Digitale Patientenrechnung Attachment Format CS  ](CodeSystem-dipag-attachment-format-cs.md) | CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments |
-| [ Digitale Patientenrechnung Audit Event Detail  ](CodeSystem-dipag-audit-event-detail-cs.md) |  |
-| [ Digitale Patientenrechnung Dokument ArtDerArchivierung CS  ](CodeSystem-dipag-dokument-artderarchivierung-cs.md) | CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes |
-| [ Digitale Patientenrechnung Operationen  ](CodeSystem-dipag-operationen-cs.md) |  |
-| [ Digitale Patientenrechnung Rechnung Abrechnungsart CS  ](CodeSystem-dipag-rechnung-abrechnungsart-cs.md) | CodeSystem für die verschiedenen Abrechnungsarten innerhalb einer E-Rechnnung |
-| [ Digitale Patientenrechnung Rechnung Identifier Type CS  ](CodeSystem-dipag-rechnung-identifier-type-cs.md) |  |
+| [ Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem  ](CodeSystem-dipag-abrechnungs-diagnose-use-cs.md) | CodeSystem für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose |
+| [ Digitale Patientenrechnung Art der Rechnungssumme  ](CodeSystem-dipag-total-price-component-type-cs.md) | CodeSystem für die Arten von Summenbestandteilen einer Rechnung, z. B. Summe der Rechnungspositionen, Minderungen nach §7 GOZ oder Abzüge wie der Festzuschuss der Kasse |
+| [ Digitale Patientenrechnung Attachment Format CS  ](CodeSystem-dipag-attachment-format-cs.md) | CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments |
+| [ Digitale Patientenrechnung Audit Event Detail  ](CodeSystem-dipag-audit-event-detail-cs.md) | CodeSystem für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll, z. B. Änderungen an Rechnungsstatus oder Markierung |
+| [ Digitale Patientenrechnung Dokument ArtDerArchivierung CS  ](CodeSystem-dipag-dokument-artderarchivierung-cs.md) | CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage) |
+| [ Digitale Patientenrechnung Operationen  ](CodeSystem-dipag-operationen-cs.md) | CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll |
+| [ Digitale Patientenrechnung Rechnung Abrechnungsart CS  ](CodeSystem-dipag-rechnung-abrechnungsart-cs.md) | CodeSystem für die verschiedenen Abrechnungsarten (BEMA, GOÄ, GOZ) innerhalb einer Digitalen Patientenrechnung |
+| [ Digitale Patientenrechnung Rechnung Identifier Type CS  ](CodeSystem-dipag-rechnung-identifier-type-cs.md) | CodeSystem für die verschiedenen Identifier-Typen der Digitalen Patientenrechnung (Rechnungsnummer, Antragsreferenz, Anhangsidentifikator, USt-ID-Nr) |
 | [ Digitale Patientenrechnung Rechnung Markierung CS  ](CodeSystem-dipag-rechnung-markierung-cs.md) | CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes |
-| [ Digitale Patientenrechnung Rechnung Submit Modus CS  ](CodeSystem-dipag-rechnung-submit-modus-cs.md) | CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit |
-| [ Digitale Patientenrechnung Rechnung Type CS  ](CodeSystem-dipag-rechnung-type-cs.md) | CodeSystem für die Differenzierung von verschiedenen Typen einer E-Rechnnung |
-| [ Digitale Patientenrechnung Rechnungsart CS  ](CodeSystem-dipag-rechnungsart-cs.md) | CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung |
-| [ Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem  ](CodeSystem-dipag-rechnungsposition-faktor-gruende-cs.md) |  |
-| [ Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem  ](CodeSystem-dipag-rechnungsposition-zusatz-cs.md) |  |
-| [ Digitale Patientenrechnung Rechnungsstatus CS  ](CodeSystem-dipag-rechnungsstatus-cs.md) | CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments |
-| [ Digitale Patientenrechnung Teilnehmer Rolle  ](CodeSystem-dipag-participant-role-cs.md) |  |
-| [ Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem  ](CodeSystem-dipag-chargeitem-type-cs.md) |  |
+| [ Digitale Patientenrechnung Rechnung Submit Modus CS  ](CodeSystem-dipag-rechnung-submit-modus-cs.md) | CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit |
+| [ Digitale Patientenrechnung Rechnung Type CS  ](CodeSystem-dipag-rechnung-type-cs.md) | CodeSystem für die Differenzierung von verschiedenen Typen einer Digitalen Patientenrechnung |
+| [ Digitale Patientenrechnung Rechnungsart CS  ](CodeSystem-dipag-rechnungsart-cs.md) | CodeSystem für die verschiedenen Rechnungsarten (Abschluss- und Teilrechnung) innerhalb einer Digitalen Patientenrechnung |
+| [ Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem  ](CodeSystem-dipag-rechnungsposition-faktor-gruende-cs.md) | CodeSystem für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition (z. B. Honorarvereinbarung oder Basistarif) |
+| [ Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem  ](CodeSystem-dipag-rechnungsposition-zusatz-cs.md) | CodeSystem für die Zusatzkennzeichen einer Rechnungsposition: auf Verlangen erbrachte Leistung, Leistung zur Früherkennung und analoge Leistung |
+| [ Digitale Patientenrechnung Rechnungsstatus CS  ](CodeSystem-dipag-rechnungsstatus-cs.md) | CodeSystem für die Abbildung der verschiedenen Bearbeitungsstatus eines Rechnungsdokuments |
+| [ Digitale Patientenrechnung Teilnehmer Rolle  ](CodeSystem-dipag-participant-role-cs.md) | CodeSystem für die Rollen von Beteiligten an einer Digitalen Patientenrechnung (Leistungserbringer, Forderungsinhaber) |
+| [ Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem  ](CodeSystem-dipag-chargeitem-type-cs.md) | CodeSystem für die verschiedenen Typen einer Rechnungsposition (z. B. GOÄ-, GOZ- oder BEMA-Leistung, Laborleistung, Sachkosten/Auslagen, Wegegeld/Reiseentschädigung) |
 
 ### Beispiel: Beispielinstanzen 
 

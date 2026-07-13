@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/ValueSet/dipag-abrechnungs-diagnose-use-vs | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagAbrechnungsDiagnoseUseVS |
 
+ 
+ValueSet für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose 
+
  **References** 
 
 * [Abrechnungsrelevanz von Diagnosen und Prozeduren](StructureDefinition-DiPagAbrechnungsDiagnoseProzedur.md)
@@ -52,6 +55,7 @@ Version 1.0.8 - ci-build
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "ValueSet für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -9,7 +9,7 @@
   <url value="https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-submit-modus-vs"/>
   <version value="1.0.8"/>
   <name value="DiPagRechnungSubmitModusVS"/>
-  <title value="Digitale Patientenrechnung Rechnung Type VS"/>
+  <title value="Digitale Patientenrechnung Rechnung Submit Modus VS"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2026-03-26"/>
@@ -21,7 +21,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
-  <description value="ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"/>
+  <description value="ValueSet für die Differenzierung der Verarbeitungsmodi für $invoice-submit"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

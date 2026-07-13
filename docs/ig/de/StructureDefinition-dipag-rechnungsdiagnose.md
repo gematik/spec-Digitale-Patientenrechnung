@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagRechnungsdiagnose |
 
+ 
+Dieses Profil bildet eine abrechnungsrelevante Diagnose nach ICD-10-GM ab, die einer Digitalen Patientenrechnung zugeordnet werden kann. 
+
 **Usages:**
 
 * Examples for this Profile: [Condition/a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e](Condition-a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e.md) and [Condition/f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d](Condition-f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d.md)
@@ -70,7 +73,7 @@ Mandatory: 1 element
 This structure refers to these other structures:
 
 * [Coding-Profil für ICD-10-GM (http://fhir.de/StructureDefinition/CodingICD10GM)](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/StructureDefinition/CodingICD10GM)
-* [DiPagPatient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
 
 **Slices**
 
@@ -106,7 +109,7 @@ Mandatory: 1 element
 This structure refers to these other structures:
 
 * [Coding-Profil für ICD-10-GM (http://fhir.de/StructureDefinition/CodingICD10GM)](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/StructureDefinition/CodingICD10GM)
-* [DiPagPatient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
 
 **Slices**
 
@@ -141,6 +144,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-rechnu
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Dieses Profil bildet eine abrechnungsrelevante Diagnose nach ICD-10-GM ab, die einer Digitalen Patientenrechnung zugeordnet werden kann.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

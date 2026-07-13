@@ -16,7 +16,7 @@ Version 1.0.8 - ci-build
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagAttachmentFormatCS |
 
  
-CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments 
+CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments 
 
 Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
 
@@ -49,7 +49,7 @@ Dieses CodeSystem wird in der Definition der folgenden ValueSets referenziert:
       "value" : "https://www.gematik.de"
     }]
   }],
-  "description" : "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments",
+  "description" : "CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -62,7 +62,7 @@
 * [Digitale Patientenrechnung Rechnung Abrechnungsart VS](de/ValueSet-dipag-rechnung-abrechnungsart-vs.md)
 * [Digitale Patientenrechnung Rechnung Behandlungsart VS](de/ValueSet-dipag-rechnung-behandlungsart-vs.md)
 * [Digitale Patientenrechnung Rechnung Markierung VS](de/ValueSet-dipag-rechnung-markierung-vs.md)
-* [Digitale Patientenrechnung Rechnung Type VS](de/ValueSet-dipag-rechnung-submit-modus-vs.md)
+* [Digitale Patientenrechnung Rechnung Submit Modus VS](de/ValueSet-dipag-rechnung-submit-modus-vs.md)
 * [Digitale Patientenrechnung Rechnungsart VS](de/ValueSet-dipag-rechnungsart-vs.md)
 * [Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet](de/ValueSet-dipag-rechnungsposition-faktor-gruende-auspraegungen-VS.md)
 * [Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet](de/ValueSet-dipag-rechnungsposition-zusatz-VS.md)
@@ -77,7 +77,7 @@
 * [Digitale Patientenrechnung Dokumentenmetadaten Intern](de/StructureDefinition-dipag-dokumentenmetadaten-intern.md)
 * [Digitale Patientenrechnung Institution](de/StructureDefinition-dipag-institution.md)
 * [Digitale Patientenrechnung Nutzungsprotokoll](de/StructureDefinition-dipag-nutzungsprotokoll.md)
-* [DiPagPatient](de/StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient](de/StructureDefinition-dipag-patient.md)
 * [Digitale Patientenrechnung Person](de/StructureDefinition-dipag-person.md)
 * [Digitale Patientenrechnung Rechnung](de/StructureDefinition-dipag-rechnung.md)
 * [Digitale Patientenrechnung - Rechnungsinhalte Bundle](de/StructureDefinition-dipag-rechnungsbundle.md)
@@ -117,7 +117,7 @@
 
 ### CapabilityStatements
 
-* [CapabilityStatement Fachdienst E-Rechnnung](de/CapabilityStatement-DiPagCapabilityStatementFD.md)
+* [CapabilityStatement Fachdienst E-Rechnung](de/CapabilityStatement-DiPagCapabilityStatementFD.md)
 
 ### ImplementationGuides
 

@@ -54,6 +54,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="In dieser Extension werden gebührenordnungsspezifische Angaben einer Rechnungsposition abgebildet: Einfachsatz, Punktzahl, Steigerungsfaktor mit Begründung sowie eine prozentuale Minderung nach GOÄ."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

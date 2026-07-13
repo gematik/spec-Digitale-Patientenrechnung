@@ -15,6 +15,8 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-abzug-kassenanteil | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagAbzugKassenanteil |
 
+In dieser Extension wird der prozentuale Abzug des Kassenanteils an einem Summenbestandteil der Rechnung abgebildet.
+
 **Context of Use**
 
 **Usage info**
@@ -44,7 +46,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type Quantity: 
+Simple Extension with the type Quantity: In dieser Extension wird der prozentuale Abzug des Kassenanteils an einem Summenbestandteil der Rechnung abgebildet.
 
  **Differential-AnsichtDifferential View** 
 
@@ -60,7 +62,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type Quantity: 
+Simple Extension with the type Quantity: In dieser Extension wird der prozentuale Abzug des Kassenanteils an einem Summenbestandteil der Rechnung abgebildet.
 
  
 
@@ -89,6 +91,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-abzug-
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "In dieser Extension wird der prozentuale Abzug des Kassenanteils an einem Summenbestandteil der Rechnung abgebildet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

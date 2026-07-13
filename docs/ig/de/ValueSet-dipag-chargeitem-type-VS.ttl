@@ -30,6 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
+  fhir:ValueSet.description [ fhir:value "ValueSet für die verschiedenen Typen einer Rechnungsposition"] ;
   fhir:ValueSet.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [

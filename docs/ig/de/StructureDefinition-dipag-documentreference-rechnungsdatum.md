@@ -15,6 +15,8 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagDocumentReferenceRechnungsdatum |
 
+In dieser Extension wird das Rechnungsdatum an den Dokumentenmetadaten abgebildet. Es wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert.
+
 **Context of Use**
 
 **Usage info**
@@ -43,7 +45,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type dateTime: 
+Simple Extension with the type dateTime: In dieser Extension wird das Rechnungsdatum an den Dokumentenmetadaten abgebildet. Es wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert.
 
  **Differential-AnsichtDifferential View** 
 
@@ -57,7 +59,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type dateTime: 
+Simple Extension with the type dateTime: In dieser Extension wird das Rechnungsdatum an den Dokumentenmetadaten abgebildet. Es wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert.
 
  
 
@@ -86,6 +88,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-docume
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "In dieser Extension wird das Rechnungsdatum an den Dokumentenmetadaten abgebildet. Es wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

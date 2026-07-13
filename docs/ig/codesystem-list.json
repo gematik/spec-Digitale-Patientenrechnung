@@ -5,7 +5,7 @@
     "status" : "active",
     "name" : "DiPagAbrechnungsDiagnoseUseCS",
     "title" : "Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem",
-    "description" : ""
+    "description" : "CodeSystem für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs",
@@ -13,7 +13,7 @@
     "status" : "active",
     "name" : "DiPagAttachmentFormatCS",
     "title" : "Digitale Patientenrechnung Attachment Format CS",
-    "description" : "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
+    "description" : "CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs",
@@ -21,7 +21,7 @@
     "status" : "active",
     "name" : "DiPagAuditEventDetailCS",
     "title" : "Digitale Patientenrechnung Audit Event Detail",
-    "description" : ""
+    "description" : "CodeSystem für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll, z. B. Änderungen an Rechnungsstatus oder Markierung"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
@@ -29,7 +29,7 @@
     "status" : "active",
     "name" : "DiPagRechnungspositionTypeCS",
     "title" : "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem",
-    "description" : ""
+    "description" : "CodeSystem für die verschiedenen Typen einer Rechnungsposition (z. B. GOÄ-, GOZ- oder BEMA-Leistung, Laborleistung, Sachkosten/Auslagen, Wegegeld/Reiseentschädigung)"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-dokument-artderarchivierung-cs",
@@ -37,7 +37,7 @@
     "status" : "active",
     "name" : "DiPagDokumentArtDerArchivierungCS",
     "title" : "Digitale Patientenrechnung Dokument ArtDerArchivierung CS",
-    "description" : "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"
+    "description" : "CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs",
@@ -45,7 +45,7 @@
     "status" : "active",
     "name" : "DiPagOperationenCS",
     "title" : "Digitale Patientenrechnung Operationen",
-    "description" : ""
+    "description" : "CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs",
@@ -53,7 +53,7 @@
     "status" : "active",
     "name" : "DiPagParticipantRoleCS",
     "title" : "Digitale Patientenrechnung Teilnehmer Rolle",
-    "description" : ""
+    "description" : "CodeSystem für die Rollen von Beteiligten an einer Digitalen Patientenrechnung (Leistungserbringer, Forderungsinhaber)"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs",
@@ -61,7 +61,7 @@
     "status" : "active",
     "name" : "DiPagRechnungAbrechnungsartCS",
     "title" : "Digitale Patientenrechnung Rechnung Abrechnungsart CS",
-    "description" : "CodeSystem für die verschiedenen Abrechnungsarten innerhalb einer E-Rechnnung"
+    "description" : "CodeSystem für die verschiedenen Abrechnungsarten (BEMA, GOÄ, GOZ) innerhalb einer Digitalen Patientenrechnung"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs",
@@ -69,7 +69,7 @@
     "status" : "active",
     "name" : "DiPagRechnungIdentifierTypeCS",
     "title" : "Digitale Patientenrechnung Rechnung Identifier Type CS",
-    "description" : ""
+    "description" : "CodeSystem für die verschiedenen Identifier-Typen der Digitalen Patientenrechnung (Rechnungsnummer, Antragsreferenz, Anhangsidentifikator, USt-ID-Nr)"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs",
@@ -85,7 +85,7 @@
     "status" : "active",
     "name" : "DiPagRechnungSubmitModusCS",
     "title" : "Digitale Patientenrechnung Rechnung Submit Modus CS",
-    "description" : "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
+    "description" : "CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-type-cs",
@@ -93,7 +93,7 @@
     "status" : "active",
     "name" : "DiPagRechnungTypeCS",
     "title" : "Digitale Patientenrechnung Rechnung Type CS",
-    "description" : "CodeSystem für die Differenzierung von verschiedenen Typen einer E-Rechnnung"
+    "description" : "CodeSystem für die Differenzierung von verschiedenen Typen einer Digitalen Patientenrechnung"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs",
@@ -101,7 +101,7 @@
     "status" : "active",
     "name" : "DiPagRechnungsartCS",
     "title" : "Digitale Patientenrechnung Rechnungsart CS",
-    "description" : "CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung"
+    "description" : "CodeSystem für die verschiedenen Rechnungsarten (Abschluss- und Teilrechnung) innerhalb einer Digitalen Patientenrechnung"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs",
@@ -109,7 +109,7 @@
     "status" : "active",
     "name" : "DiPagRechnungspositionFaktorGruendeCS",
     "title" : "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem",
-    "description" : ""
+    "description" : "CodeSystem für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition (z. B. Honorarvereinbarung oder Basistarif)"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs",
@@ -117,7 +117,7 @@
     "status" : "active",
     "name" : "DiPagRechnungspositionZusatzCS",
     "title" : "Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem",
-    "description" : ""
+    "description" : "CodeSystem für die Zusatzkennzeichen einer Rechnungsposition: auf Verlangen erbrachte Leistung, Leistung zur Früherkennung und analoge Leistung"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
@@ -125,7 +125,7 @@
     "status" : "active",
     "name" : "DiPagARechnungsstatusCS",
     "title" : "Digitale Patientenrechnung Rechnungsstatus CS",
-    "description" : "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"
+    "description" : "CodeSystem für die Abbildung der verschiedenen Bearbeitungsstatus eines Rechnungsdokuments"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs",
@@ -133,6 +133,6 @@
     "status" : "active",
     "name" : "DiPagTotalPriceComponentTypeCS",
     "title" : "Digitale Patientenrechnung Art der Rechnungssumme",
-    "description" : ""
+    "description" : "CodeSystem für die Arten von Summenbestandteilen einer Rechnung, z. B. Summe der Rechnungspositionen, Minderungen nach §7 GOZ oder Abzüge wie der Festzuschuss der Kasse"
   }]
 }

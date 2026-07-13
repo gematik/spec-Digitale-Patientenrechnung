@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-zusatz-VS | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagRechnungspositionZusatzVS |
 
+ 
+ValueSet für die Zusatzkennzeichen einer Rechnungsposition 
+
  **References** 
 
 * [Digitale Patientenrechnung Rechnungsposition Zusatz Extension](StructureDefinition-DiPagRechnungspositionZusatz.md)
@@ -52,6 +55,7 @@ Version 1.0.8 - ci-build
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "ValueSet für die Zusatzkennzeichen einer Rechnungsposition",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

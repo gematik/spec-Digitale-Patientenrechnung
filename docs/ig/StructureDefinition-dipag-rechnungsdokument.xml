@@ -23,6 +23,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="Dieses Profil bildet die Binärdaten eines Dokumentes der Digitalen Patientenrechnung ab: das PDF der Rechnung bzw. eines Anhangs oder die strukturierten Rechnungsinhalte, jeweils als base64-kodierte Daten."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

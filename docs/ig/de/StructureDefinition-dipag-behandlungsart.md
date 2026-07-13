@@ -15,6 +15,8 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagBehandlungsart |
 
+In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant.
+
 **Context of Use**
 
 **Usage info**
@@ -47,7 +49,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type Coding: 
+Simple Extension with the type Coding: In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant.
 
  **Differential-AnsichtDifferential View** 
 
@@ -65,7 +67,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type Coding: 
+Simple Extension with the type Coding: In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant.
 
  
 
@@ -94,6 +96,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-behand
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -21,6 +21,7 @@
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "In dieser Extension wird das Zahlungsziel (Datum) einer Rechnung abgebildet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

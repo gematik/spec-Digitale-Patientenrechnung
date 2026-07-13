@@ -21,6 +21,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="ValueSet für die Zusatzkennzeichen einer Rechnungsposition"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

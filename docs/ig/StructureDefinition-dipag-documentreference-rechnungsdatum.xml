@@ -24,6 +24,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="In dieser Extension wird das Rechnungsdatum an den Dokumentenmetadaten abgebildet. Es wird durch den Fachdienst aus den strukturierten Rechnungsinhalten extrahiert."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

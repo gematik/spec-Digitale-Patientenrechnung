@@ -13,7 +13,7 @@ Version 1.0.8 - ci-build
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://gematik.de/fhir/dipag/SearchParameter/dipag-docRef-author-display | *Version*:1.0.8 |
-| Active Stand: 2026-07-09 | *Maschinenlesbarer Name*:DiPagDocRefAuthorDisplay |
+| Active Stand: 2026-07-13 | *Maschinenlesbarer Name*:DiPagDocRefAuthorDisplay |
 
  
 Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach dem Text in author.display ermöglicht. Die Länge des Suchstrings ist auf 200 Zeichen begrenzt. 
@@ -30,7 +30,7 @@ Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach dem 
   "version" : "1.0.8",
   "name" : "DiPagDocRefAuthorDisplay",
   "status" : "active",
-  "date" : "2026-07-09T12:53:25+00:00",
+  "date" : "2026-07-13T08:15:48+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",

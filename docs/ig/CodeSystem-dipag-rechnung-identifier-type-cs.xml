@@ -22,6 +22,7 @@ Hier kann es in Zukunft zu Anpassungen kommen.</p>
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="CodeSystem für die verschiedenen Identifier-Typen der Digitalen Patientenrechnung (Rechnungsnummer, Antragsreferenz, Anhangsidentifikator, USt-ID-Nr)"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

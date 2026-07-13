@@ -21,6 +21,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="ValueSet der zulässigen MIME-Types für Dokumente der Digitalen Patientenrechnung (PDF und FHIR-JSON)"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

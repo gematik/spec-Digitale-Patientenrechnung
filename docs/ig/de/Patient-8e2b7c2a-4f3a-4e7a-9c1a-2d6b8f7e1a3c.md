@@ -10,7 +10,7 @@ Version 1.0.8 - ci-build
 
 ## Beispiel Patient: Beispiel Patient
 
-Profile: [DiPagPatient](StructureDefinition-dipag-patient.md)
+Profile: [Digitale Patientenrechnung Patient](StructureDefinition-dipag-patient.md)
 
 Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)
 

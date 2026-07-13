@@ -10,8 +10,8 @@
     "uses" : {
     },
     "http://hl7.org/fhir/R4/valueset-dicm-405-mediatype.html" : "Media Type Code",
-    "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType",
-    "ValueSet-dipag-audit-event-type-vs.html" : "Digitale Patientenrechnung Audit Event Type"
+    "ValueSet-dipag-audit-event-type-vs.html" : "Digitale Patientenrechnung Audit Event Type",
+    "http://hl7.org/fhir/R4/valueset-security-role-type.html" : "SecurityRoleType"
   },
   {
     "url" : "http://dvmd.de/fhir/CodeSystem/kdl",
@@ -332,8 +332,8 @@
     "description" : "This is a place holder for the code system which is fully supported through internal means (not by this code system)",
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set",
-    "http://hl7.org/fhir/R4/valueset-c80-doc-typecodes.html" : "Document Type Value Set"
+    "http://hl7.org/fhir/R4/valueset-c80-doc-typecodes.html" : "Document Type Value Set",
+    "http://hl7.org/fhir/R4/valueset-document-classcodes.html" : "Document Class Value Set"
   },
   {
     "url" : "http://snomed.info/sct",
@@ -345,24 +345,24 @@
     "oids" : ["2.16.840.1.113883.6.96"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-procedure-followup.html" : "Procedure Follow up Codes (SNOMED CT)",
-    "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
-    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
     "http://hl7.org/fhir/R4/valueset-body-site.html" : "SNOMED CT Body Structures",
-    "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
-    "http://hl7.org/fhir/R4/valueset-device-action.html" : "Procedure Device Action Codes",
-    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
-    "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
-    "http://hl7.org/fhir/R4/valueset-procedure-outcome.html" : "Procedure Outcome Codes (SNOMED CT)",
-    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
-    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
-    "http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html" : "Procedure Not Performed Reason (SNOMED-CT)",
-    "http://hl7.org/fhir/R4/valueset-procedure-category.html" : "Procedure Category Codes (SNOMED CT)",
     "http://hl7.org/fhir/R4/valueset-procedure-code.html" : "Procedure Codes (SNOMED CT)",
-    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
     "http://hl7.org/fhir/R4/valueset-c80-facilitycodes.html" : "Facility Type Code Value Set",
+    "http://hl7.org/fhir/R4/valueset-condition-stage-type.html" : "Condition Stage Type",
+    "http://hl7.org/fhir/R4/valueset-procedure-reason.html" : "Procedure Reason Codes",
+    "http://hl7.org/fhir/R4/valueset-device-action.html" : "Procedure Device Action Codes",
+    "http://hl7.org/fhir/R4/valueset-condition-stage.html" : "Condition Stage",
+    "http://hl7.org/fhir/R4/valueset-procedure-not-performed-reason.html" : "Procedure Not Performed Reason (SNOMED-CT)",
     "ValueSet-DiPagVerkehrsmittel.html" : "Digitale PatientenrechnungVerkehrsmittel",
-    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity"
+    "http://hl7.org/fhir/R4/valueset-c80-practice-codes.html" : "Practice Setting Code Value Set",
+    "http://hl7.org/fhir/R4/valueset-procedure-outcome.html" : "Procedure Outcome Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-manifestation-or-symptom.html" : "Manifestation and Symptom Codes",
+    "http://hl7.org/fhir/R4/valueset-device-kind.html" : "FHIR Device Types",
+    "http://hl7.org/fhir/R4/valueset-condition-severity.html" : "Condition/Diagnosis Severity",
+    "http://hl7.org/fhir/R4/valueset-condition-code.html" : "Condition/Problem/Diagnosis Codes",
+    "http://hl7.org/fhir/R4/valueset-performer-role.html" : "Procedure Performer Role Codes",
+    "http://hl7.org/fhir/R4/valueset-procedure-category.html" : "Procedure Category Codes (SNOMED CT)",
+    "http://hl7.org/fhir/R4/valueset-procedure-followup.html" : "Procedure Follow up Codes (SNOMED CT)"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/audit-entity-type",
@@ -552,8 +552,8 @@
     "oids" : ["2.16.840.1.113883.18.108"],
     "uses" : {
     },
-    "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType",
-    "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/identifier-type-de-basis" : "Identifier Type DeBasis ValueSet"
+    "https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/ValueSet/identifier-type-de-basis" : "Identifier Type DeBasis ValueSet",
+    "http://hl7.org/fhir/R4/valueset-identifier-type.html" : "IdentifierType"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
@@ -565,8 +565,8 @@
     "oids" : ["2.16.840.1.113883.5.4"],
     "uses" : {
     },
-    "ValueSet-dipag-rechnung-behandlungsart-vs.html" : "Digitale Patientenrechnung Rechnung Behandlungsart VS",
-    "http://terminology.hl7.org/7.2.0/ValueSet-v3-ActCode.html" : "v3 Code System ActCode"
+    "http://terminology.hl7.org/7.2.0/ValueSet-v3-ActCode.html" : "v3 Code System ActCode",
+    "ValueSet-dipag-rechnung-behandlungsart-vs.html" : "Digitale Patientenrechnung Rechnung Behandlungsart VS"
   },
   {
     "url" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
@@ -658,7 +658,7 @@
     "status" : "active",
     "name" : "DiPagAbrechnungsDiagnoseUseCS",
     "title" : "Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem",
-    "description" : "",
+    "description" : "CodeSystem für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose",
     "uses" : {
     },
     "ValueSet-dipag-abrechnungs-diagnose-use-vs.html" : "Digitale Patientenrechnung Abrechnungsdiagnose Use ValueSet"
@@ -669,7 +669,7 @@
     "status" : "active",
     "name" : "DiPagAuditEventDetailCS",
     "title" : "Digitale Patientenrechnung Audit Event Detail",
-    "description" : "",
+    "description" : "CodeSystem für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll, z. B. Änderungen an Rechnungsstatus oder Markierung",
     "uses" : {
     },
     "ValueSet-dipag-audit-event-detail-vs.html" : "Digitale Patientenrechnung Audit Event Detail"
@@ -680,7 +680,7 @@
     "status" : "active",
     "name" : "DiPagRechnungspositionTypeCS",
     "title" : "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem",
-    "description" : "",
+    "description" : "CodeSystem für die verschiedenen Typen einer Rechnungsposition (z. B. GOÄ-, GOZ- oder BEMA-Leistung, Laborleistung, Sachkosten/Auslagen, Wegegeld/Reiseentschädigung)",
     "uses" : {
     },
     "ValueSet-dipag-chargeitem-type-VS.html" : "Digitale Patientenrechnung Typ der Rechnungsposition ValueSet"
@@ -691,7 +691,7 @@
     "status" : "active",
     "name" : "DiPagDokumentArtDerArchivierungCS",
     "title" : "Digitale Patientenrechnung Dokument ArtDerArchivierung CS",
-    "description" : "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+    "description" : "CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)",
     "uses" : {
     },
     "ValueSet-dipag-dokument-artderarchivierung-vs.html" : "Digitale Patientenrechnung Dokument ArtDerArchivierung VS"
@@ -702,7 +702,7 @@
     "status" : "active",
     "name" : "DiPagOperationenCS",
     "title" : "Digitale Patientenrechnung Operationen",
-    "description" : "",
+    "description" : "CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll",
     "uses" : {
     },
     "ValueSet-dipag-audit-event-sub-type-vs.html" : "Digitale Patientenrechnung Audit Event Sub-Type"
@@ -713,7 +713,7 @@
     "status" : "active",
     "name" : "DiPagParticipantRoleCS",
     "title" : "Digitale Patientenrechnung Teilnehmer Rolle",
-    "description" : "",
+    "description" : "CodeSystem für die Rollen von Beteiligten an einer Digitalen Patientenrechnung (Leistungserbringer, Forderungsinhaber)",
     "uses" : {
     },
     "ValueSet-dipag-participant-role-VS.html" : "Digitale Patientenrechnung Teilnehmer Rolle"
@@ -724,7 +724,7 @@
     "status" : "active",
     "name" : "DiPagRechnungAbrechnungsartCS",
     "title" : "Digitale Patientenrechnung Rechnung Abrechnungsart CS",
-    "description" : "CodeSystem für die verschiedenen Abrechnungsarten innerhalb einer E-Rechnnung",
+    "description" : "CodeSystem für die verschiedenen Abrechnungsarten (BEMA, GOÄ, GOZ) innerhalb einer Digitalen Patientenrechnung",
     "uses" : {
     },
     "ValueSet-dipag-rechnung-abrechnungsart-vs.html" : "Digitale Patientenrechnung Rechnung Abrechnungsart VS"
@@ -746,10 +746,10 @@
     "status" : "active",
     "name" : "DiPagRechnungSubmitModusCS",
     "title" : "Digitale Patientenrechnung Rechnung Submit Modus CS",
-    "description" : "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit",
+    "description" : "CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit",
     "uses" : {
     },
-    "ValueSet-dipag-rechnung-submit-modus-vs.html" : "Digitale Patientenrechnung Rechnung Type VS"
+    "ValueSet-dipag-rechnung-submit-modus-vs.html" : "Digitale Patientenrechnung Rechnung Submit Modus VS"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs",
@@ -757,7 +757,7 @@
     "status" : "active",
     "name" : "DiPagRechnungsartCS",
     "title" : "Digitale Patientenrechnung Rechnungsart CS",
-    "description" : "CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung",
+    "description" : "CodeSystem für die verschiedenen Rechnungsarten (Abschluss- und Teilrechnung) innerhalb einer Digitalen Patientenrechnung",
     "uses" : {
     },
     "ValueSet-dipag-rechnungsart-vs.html" : "Digitale Patientenrechnung Rechnungsart VS"
@@ -768,7 +768,7 @@
     "status" : "active",
     "name" : "DiPagRechnungspositionFaktorGruendeCS",
     "title" : "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem",
-    "description" : "",
+    "description" : "CodeSystem für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition (z. B. Honorarvereinbarung oder Basistarif)",
     "uses" : {
     },
     "ValueSet-dipag-rechnungsposition-faktor-gruende-auspraegungen-VS.html" : "Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet"
@@ -779,7 +779,7 @@
     "status" : "active",
     "name" : "DiPagRechnungspositionZusatzCS",
     "title" : "Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem",
-    "description" : "",
+    "description" : "CodeSystem für die Zusatzkennzeichen einer Rechnungsposition: auf Verlangen erbrachte Leistung, Leistung zur Früherkennung und analoge Leistung",
     "uses" : {
     },
     "ValueSet-dipag-rechnungsposition-zusatz-VS.html" : "Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet"
@@ -790,7 +790,7 @@
     "status" : "active",
     "name" : "DiPagARechnungsstatusCS",
     "title" : "Digitale Patientenrechnung Rechnungsstatus CS",
-    "description" : "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments",
+    "description" : "CodeSystem für die Abbildung der verschiedenen Bearbeitungsstatus eines Rechnungsdokuments",
     "uses" : {
     },
     "ValueSet-dipag-rechnungsstatus-vs.html" : "Digitale Patientenrechnung Rechnungsstatus"
@@ -801,7 +801,7 @@
     "status" : "active",
     "name" : "DiPagTotalPriceComponentTypeCS",
     "title" : "Digitale Patientenrechnung Art der Rechnungssumme",
-    "description" : "",
+    "description" : "CodeSystem für die Arten von Summenbestandteilen einer Rechnung, z. B. Summe der Rechnungspositionen, Minderungen nach §7 GOZ oder Abzüge wie der Festzuschuss der Kasse",
     "uses" : {
     },
     "ValueSet-dipag-total-price-component-deduction-type-vs.html" : "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen"

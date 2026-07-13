@@ -1,4 +1,4 @@
-# CapabilityStatement Fachdienst E-Rechnnung - Implementierungsleitfaden Digitale Patientenrechnung v1.0.8
+# CapabilityStatement Fachdienst E-Rechnung - Implementierungsleitfaden Digitale Patientenrechnung v1.0.8
 
 Implementierungsleitfaden Digitale Patientenrechnung
 
@@ -6,9 +6,9 @@ Version 1.0.8 - ci-build
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **CapabilityStatement Fachdienst E-Rechnnung**
+* **CapabilityStatement Fachdienst E-Rechnung**
 
-## CapabilityStatement: CapabilityStatement Fachdienst E-Rechnnung 
+## CapabilityStatement: CapabilityStatement Fachdienst E-Rechnung 
 
 | | |
 | :--- | :--- |
@@ -29,7 +29,7 @@ Dieses CapabilityStatement beschreibt alle Interaktionen, die ein DiPag-konforme
   "url" : "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
   "version" : "1.0.8",
   "name" : "CapabilityStatementFD",
-  "title" : "CapabilityStatement Fachdienst E-Rechnnung",
+  "title" : "CapabilityStatement Fachdienst E-Rechnung",
   "status" : "active",
   "experimental" : false,
   "date" : "2026-07-08",

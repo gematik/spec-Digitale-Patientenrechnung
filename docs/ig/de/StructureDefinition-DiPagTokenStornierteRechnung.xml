@@ -26,6 +26,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="In dieser Extension wird bei einer Korrekturrechnung das Rechnungs-Token der stornierten bzw. ersetzten Rechnung abgebildet."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

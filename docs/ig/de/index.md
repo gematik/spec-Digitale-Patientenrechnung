@@ -12,7 +12,7 @@ Version 1.0.8 - ci-build
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://gematik.de/fhir/dipag/ImplementationGuide/de.gematik.dipag | *Version*:1.0.8 |
-| Draft Stand: 2026-07-09 | *Maschinenlesbarer Name*:DigitalePatientenrechnung |
+| Draft Stand: 2026-07-13 | *Maschinenlesbarer Name*:DigitalePatientenrechnung |
 
 # Digitale Patientenrechnung
 

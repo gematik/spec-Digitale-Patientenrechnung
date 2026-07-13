@@ -20,7 +20,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
-  <description value="CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"/>
+  <description value="CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

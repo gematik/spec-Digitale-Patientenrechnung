@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/ValueSet/dipag-chargeitem-type-VS | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagRechnungspositionTypeVS |
 
+ 
+ValueSet für die verschiedenen Typen einer Rechnungsposition 
+
  **References** 
 
 * [Digitale Patientenrechnung Teilsumme](StructureDefinition-DiPagTeilsumme.md)
@@ -53,6 +56,7 @@ Version 1.0.8 - ci-build
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "ValueSet für die verschiedenen Typen einer Rechnungsposition",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

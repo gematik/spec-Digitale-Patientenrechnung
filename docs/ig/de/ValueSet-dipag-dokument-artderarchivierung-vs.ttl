@@ -30,7 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
-  fhir:ValueSet.description [ fhir:value "ValueSet für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"] ;
+  fhir:ValueSet.description [ fhir:value "ValueSet für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)"] ;
   fhir:ValueSet.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [

@@ -20,6 +20,7 @@
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Backport des Elements Task.requestedPerformer aus FHIR R5. Referenziert die versicherte Person (per KVNR), an die sich der Task richtet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

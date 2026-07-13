@@ -24,6 +24,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="In dieser Extension wird die Fachrichtung der Leistungserbringer:in an der Rechnung abgebildet, u. a. zur Steuerung des Abrechnungsworkflows."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

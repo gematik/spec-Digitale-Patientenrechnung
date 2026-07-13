@@ -342,6 +342,9 @@ Implementierungsleitfaden Digitale Patientenrechnung
 
   </table>
 
+<p>In dieser Extension werden gebührenordnungsspezifische Angaben einer Rechnungsposition abgebildet: Einfachsatz, Punktzahl, Steigerungsfaktor mit Begründung sowie eine prozentuale Minderung nach GOÄ.</p>
+
+
 
   <p><b>Context of Use</b></p>
   <ul>
@@ -584,7 +587,7 @@ Element ID:     <code>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">Value of extension</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-rechnungsposition-go-angabenD-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-rechnungsposition-go-angabenD'), 'binding', document.getElementById('cbdipag-rechnungsposition-go-angabenD-binding').checked, document.getElementById('ppdipag-rechnungsposition-go-angabenD'));
 document.getElementById('cbdipag-rechnungsposition-go-angabenD-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1147,7 +1150,7 @@ filterDesc(document.getElementById('dipag-rechnungsposition-go-angabenD'), 'obli
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-rechnungsposition-go-angabenS-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-rechnungsposition-go-angabenS'), 'binding', document.getElementById('cbdipag-rechnungsposition-go-angabenS-binding').checked, document.getElementById('ppdipag-rechnungsposition-go-angabenS'));
 document.getElementById('cbdipag-rechnungsposition-go-angabenS-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -1414,7 +1417,7 @@ Not handled yet: complex extension 'Not handled yet: complex extension null'
 <p><b>
 Summary
 </b></p>
-<p>Complex Extension: </p><ul data-fhir="generated-heirarchy"><li>Einfachsatz: Money: An Extension</li>
+<p>Complex Extension: In dieser Extension werden gebührenordnungsspezifische Angaben einer Rechnungsposition abgebildet: Einfachsatz, Punktzahl, Steigerungsfaktor mit Begründung sowie eine prozentuale Minderung nach GOÄ.</p><ul data-fhir="generated-heirarchy"><li>Einfachsatz: Money: An Extension</li>
 <li>Punktzahl: decimal: An Extension</li>
 <li>Value: decimal: An Extension</li>
 <li>FaktorGrund: Coding: An Extension</li>
@@ -1605,7 +1608,7 @@ Summary
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="text-decoration:line-through"></span><span style="text-decoration:line-through">0</span><span style="text-decoration:line-through">..</span><span style="text-decoration:line-through">0</span></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="font-style: italic">Value of extension</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-rechnungsposition-go-angabenDA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-rechnungsposition-go-angabenDA'), 'binding', document.getElementById('cbdipag-rechnungsposition-go-angabenDA-binding').checked, document.getElementById('ppdipag-rechnungsposition-go-angabenDA'));
 document.getElementById('cbdipag-rechnungsposition-go-angabenDA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2164,7 +2167,7 @@ filterDesc(document.getElementById('dipag-rechnungsposition-go-angabenDA'), 'obl
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/datatypes.html#uri">uri</a></td>
 <td style="vertical-align: top; text-align : var(--ig-left,left); background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="color: darkgreen">"https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"</span></td></tr>
-<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // 75260e59-f081-4849-8925-0e71171b0c06
+<tr fhir="generated-heirarchy" data-fhir="generated-heirarchy"><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="https://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr><script type="text/javascript">  // b4682be9-fa4a-4972-9a88-03e581370a8e
 document.getElementById('cbdipag-rechnungsposition-go-angabenSA-binding').checked = 'false' != localStorage.getItem('ht-table-states-binding');
 filterDesc(document.getElementById('dipag-rechnungsposition-go-angabenSA'), 'binding', document.getElementById('cbdipag-rechnungsposition-go-angabenSA-binding').checked, document.getElementById('ppdipag-rechnungsposition-go-angabenSA'));
 document.getElementById('cbdipag-rechnungsposition-go-angabenSA-constraint').checked = 'false' != localStorage.getItem('ht-table-states-constraint');
@@ -2426,7 +2429,7 @@ Not handled yet: complex extension 'Not handled yet: complex extension null'
 <p><b>
 Summary
 </b></p>
-<p>Complex Extension: </p><ul data-fhir="generated-heirarchy"><li>Einfachsatz: Money: An Extension</li>
+<p>Complex Extension: In dieser Extension werden gebührenordnungsspezifische Angaben einer Rechnungsposition abgebildet: Einfachsatz, Punktzahl, Steigerungsfaktor mit Begründung sowie eine prozentuale Minderung nach GOÄ.</p><ul data-fhir="generated-heirarchy"><li>Einfachsatz: Money: An Extension</li>
 <li>Punktzahl: decimal: An Extension</li>
 <li>Value: decimal: An Extension</li>
 <li>FaktorGrund: Coding: An Extension</li>
@@ -2471,7 +2474,7 @@ Summary
 
           IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gematik.de">gematik GmbH</a>.  
           Package de.gematik.dipag#1.0.8 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
-          Erstellt <span title="Thu, Jul 9, 2026 12:53+0000">2026-07-09</span>
+          Erstellt <span title="Mon, Jul 13, 2026 08:15+0000">2026-07-13</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |

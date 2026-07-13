@@ -20,6 +20,7 @@
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "In dieser Extension wird die Behandlungsart einer Rechnung abgebildet, z. B. ambulant.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

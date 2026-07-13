@@ -13,7 +13,7 @@ Version 1.0.8 - ci-build
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://gematik.de/fhir/dipag/SearchParameter/dipag-auditEvent-agent-who-display | *Version*:1.0.8 |
-| Active Stand: 2026-07-09 | *Maschinenlesbarer Name*:DiPagAuditEventAgentWhoDisplay |
+| Active Stand: 2026-07-13 | *Maschinenlesbarer Name*:DiPagAuditEventAgentWhoDisplay |
 
  
 Ein SearchParameter auf der Ressource AuditEvent, der die Suche nach dem Text in agent.who.display ermöglicht. Die Länge des Suchstrings ist auf 200 Zeichen begrenzt. 
@@ -30,7 +30,7 @@ Ein SearchParameter auf der Ressource AuditEvent, der die Suche nach dem Text in
   "version" : "1.0.8",
   "name" : "DiPagAuditEventAgentWhoDisplay",
   "status" : "active",
-  "date" : "2026-07-09T12:53:25+00:00",
+  "date" : "2026-07-13T08:15:48+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",

@@ -20,6 +20,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

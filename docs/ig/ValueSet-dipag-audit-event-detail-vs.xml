@@ -20,6 +20,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="ValueSet für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

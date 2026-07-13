@@ -15,10 +15,13 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern | *Version*:1.0.8 |
 | Active Stand: 2026-07-08 | *Maschinenlesbarer Name*:DiPagDokumentenmetadatenIntern |
 
+ 
+Dieses Profil beschreibt die Dokumentenmetadaten, wie sie im Fachdienst gehalten und an abrufende Akteure ausgeliefert werden. Es ergänzt die eingereichten Metadaten u. a. um das Rechnungs-Token, den Rechnungsstatus, Markierungen sowie die aus den strukturierten Rechnungsinhalten extrahierten Angaben (z. B. Rechnungsdatum, Gesamtbetrag, Zahlungsziel). 
+
 **Usages:**
 
 * Examples for this Profile: [DocumentReference/BeispielDocumentReferenceRechnungRetrieve](DocumentReference-BeispielDocumentReferenceRechnungRetrieve.md), [DocumentReference/BeispielDocumentReferenceRechnungRetrieve2](DocumentReference-BeispielDocumentReferenceRechnungRetrieve2.md), [DocumentReference/ExampleR5DocumentReference](DocumentReference-ExampleR5DocumentReference.md) and [DocumentReference/ExampleR5DocumentReferenceSonstigesDokument](DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.md)
-* CapabilityStatements using this Profile: [CapabilityStatement Fachdienst E-Rechnnung](CapabilityStatement-DiPagCapabilityStatementFD.md)
+* CapabilityStatements using this Profile: [CapabilityStatement Fachdienst E-Rechnung](CapabilityStatement-DiPagCapabilityStatementFD.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.gematik.dipag|current/StructureDefinition/StructureDefinition-dipag-dokumentenmetadaten-intern.json)
 
@@ -295,6 +298,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-dokume
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Dieses Profil beschreibt die Dokumentenmetadaten, wie sie im Fachdienst gehalten und an abrufende Akteure ausgeliefert werden. Es ergänzt die eingereichten Metadaten u. a. um das Rechnungs-Token, den Rechnungsstatus, Markierungen sowie die aus den strukturierten Rechnungsinhalten extrahierten Angaben (z. B. Rechnungsdatum, Gesamtbetrag, Zahlungsziel).",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

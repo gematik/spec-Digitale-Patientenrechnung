@@ -1,7 +1,7 @@
 ﻿{
   "openapi": "3.0.2",
   "info": {
-    "title": "CapabilityStatement Fachdienst E-Rechnnung",
+    "title": "CapabilityStatement Fachdienst E-Rechnung",
     "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",
     "license": {
       "name": "Apache License 2.0",

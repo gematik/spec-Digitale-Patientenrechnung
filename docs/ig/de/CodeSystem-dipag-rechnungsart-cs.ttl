@@ -30,7 +30,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
-  fhir:CodeSystem.description [ fhir:value "CodeSystem für die verschiedenen Rechnungsarten innerhalb einer E-Rechnnung"] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem für die verschiedenen Rechnungsarten (Abschluss- und Teilrechnung) innerhalb einer Digitalen Patientenrechnung"] ;
   fhir:CodeSystem.jurisdiction [
      fhir:index -1 ;
      fhir:CodeableConcept.coding [

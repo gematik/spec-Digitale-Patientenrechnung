@@ -15,6 +15,8 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagTaskRequestedPerformer |
 
+Backport des Elements Task.requestedPerformer aus FHIR R5. Referenziert die versicherte Person (per KVNR), an die sich der Task richtet.
+
 **Context of Use**
 
 **Usage info**
@@ -44,7 +46,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type Reference: 
+Simple Extension with the type Reference: Backport des Elements Task.requestedPerformer aus FHIR R5. Referenziert die versicherte Person (per KVNR), an die sich der Task richtet.
 
  **Differential-AnsichtDifferential View** 
 
@@ -60,7 +62,7 @@ Diese Struktur ist abgeleitet von [Extension](http://hl7.org/fhir/R4/extensibili
 
 ** Summary **
 
-Simple Extension with the type Reference: 
+Simple Extension with the type Reference: Backport des Elements Task.requestedPerformer aus FHIR R5. Referenziert die versicherte Person (per KVNR), an die sich der Task richtet.
 
  
 
@@ -89,6 +91,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-task-r
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Backport des Elements Task.requestedPerformer aus FHIR R5. Referenziert die versicherte Person (per KVNR), an die sich der Task richtet.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

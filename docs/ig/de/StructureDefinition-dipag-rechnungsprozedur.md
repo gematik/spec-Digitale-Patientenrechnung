@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagRechnungsprozedur |
 
+ 
+Dieses Profil bildet eine abrechnungsrelevante Prozedur nach OPS ab, die einer Digitalen Patientenrechnung zugeordnet werden kann. 
+
 **Usages:**
 
 * Examples for this Profile: [Procedure/b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f](Procedure-b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f.md)
@@ -69,7 +72,7 @@ Mandatory: 1 element
 This structure refers to these other structures:
 
 * [Coding-Profil für OPS (http://fhir.de/StructureDefinition/CodingOPS)](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/StructureDefinition/CodingOPS)
-* [DiPagPatient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
 
 **Slices**
 
@@ -106,7 +109,7 @@ Mandatory: 1 element
 This structure refers to these other structures:
 
 * [Coding-Profil für OPS (http://fhir.de/StructureDefinition/CodingOPS)](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/StructureDefinition/CodingOPS)
-* [DiPagPatient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
 
 **Slices**
 
@@ -142,6 +145,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-rechnu
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Dieses Profil bildet eine abrechnungsrelevante Prozedur nach OPS ab, die einer Digitalen Patientenrechnung zugeordnet werden kann.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

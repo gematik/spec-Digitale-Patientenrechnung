@@ -28,6 +28,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
+  <description value="In dieser Extension wird der prozentuale Abzug des Kassenanteils an einem Summenbestandteil der Rechnung abgebildet."/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagRechnungsposition |
 
+ 
+Dieses Profil bildet eine einzelne Rechnungsposition einer Digitalen Patientenrechnung ab, z. B. Leistungen nach GOÄ, GOZ oder BEMA sowie Laborleistungen, Sachkosten/Auslagen und Wegegeld/Reiseentschädigung. 
+
 **Usages:**
 
 * Refer to this Profile: [Digitale Patientenrechnung Rechnung](StructureDefinition-dipag-rechnung.md)
@@ -152,7 +155,7 @@ Mandatory: 6 elements(28 nested mandatory elements)
 
 This structure refers to these other structures:
 
-* [DiPagPatient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
 * [Digitale Patientenrechnung Person (https://gematik.de/fhir/dipag/StructureDefinition/dipag-person)](StructureDefinition-dipag-person.md)
 * [Digitale Patientenrechnung Institution (https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution)](StructureDefinition-dipag-institution.md)
 * [Coding-Profil für PZN (http://fhir.de/StructureDefinition/CodingPZN)](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/StructureDefinition/CodingPZN)
@@ -203,7 +206,7 @@ Mandatory: 6 elements(28 nested mandatory elements)
 
 This structure refers to these other structures:
 
-* [DiPagPatient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
+* [Digitale Patientenrechnung Patient (https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient)](StructureDefinition-dipag-patient.md)
 * [Digitale Patientenrechnung Person (https://gematik.de/fhir/dipag/StructureDefinition/dipag-person)](StructureDefinition-dipag-person.md)
 * [Digitale Patientenrechnung Institution (https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution)](StructureDefinition-dipag-institution.md)
 * [Coding-Profil für PZN (http://fhir.de/StructureDefinition/CodingPZN)](https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&canonical=http://fhir.de/StructureDefinition/CodingPZN)
@@ -254,6 +257,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-rechnu
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Dieses Profil bildet eine einzelne Rechnungsposition einer Digitalen Patientenrechnung ab, z. B. Leistungen nach GOÄ, GOZ oder BEMA sowie Laborleistungen, Sachkosten/Auslagen und Wegegeld/Reiseentschädigung.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

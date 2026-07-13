@@ -21,7 +21,7 @@
       <value value="https://www.gematik.de"/>
     </telecom>
   </contact>
-  <description value="CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"/>
+  <description value="CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments"/>
   <jurisdiction>
     <coding>
       <system value="urn:iso:std:iso:3166"/>

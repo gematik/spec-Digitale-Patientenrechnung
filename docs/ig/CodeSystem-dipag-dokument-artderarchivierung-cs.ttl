@@ -29,7 +29,7 @@
        fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
      ]
   ] ;
-  fhir:CodeSystem.description [ fhir:value "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)"] ;
   fhir:CodeSystem.jurisdiction [
      fhir:index 0 ;
      fhir:CodeableConcept.coding [

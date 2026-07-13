@@ -15,6 +15,9 @@ Version 1.0.8 - ci-build
 | *Offizielle URL*:https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagRechnungspositionFaktorGruendeVS |
 
+ 
+ValueSet für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition 
+
  **References** 
 
 * [Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition](StructureDefinition-dipag-rechnungsposition-go-angaben.md)
@@ -52,6 +55,7 @@ Version 1.0.8 - ci-build
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "ValueSet für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

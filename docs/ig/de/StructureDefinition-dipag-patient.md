@@ -1,4 +1,4 @@
-# DiPagPatient - Implementierungsleitfaden Digitale Patientenrechnung v1.0.8
+# Digitale Patientenrechnung Patient - Implementierungsleitfaden Digitale Patientenrechnung v1.0.8
 
 Implementierungsleitfaden Digitale Patientenrechnung
 
@@ -6,21 +6,24 @@ Version 1.0.8 - ci-build
 
 * [**Table of Contents**](toc.md)
 * [**Artefaktübersicht**](artifacts.md)
-* **DiPagPatient**
+* **Digitale Patientenrechnung Patient**
 
-## Ressourcenprofil: DiPagPatient 
+## Ressourcenprofil: Digitale Patientenrechnung Patient 
 
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient | *Version*:1.0.8 |
 | Active Stand: 2026-03-26 | *Maschinenlesbarer Name*:DiPagPatient |
 
+ 
+Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab. 
+
 **Usages:**
 
 * Use this Profile: [Digitale Patientenrechnung - Rechnungsinhalte Bundle](StructureDefinition-dipag-rechnungsbundle.md)
 * Refer to this Profile: [Digitale Patientenrechnung Rechnung](StructureDefinition-dipag-rechnung.md), [Digitale Patientenrechnung Rechnungsdiagnose](StructureDefinition-dipag-rechnungsdiagnose.md), [Digitale Patientenrechnung Rechnungsposition](StructureDefinition-dipag-rechnungsposition.md) and [Digitale Patientenrechnung Rechnungsprozedur](StructureDefinition-dipag-rechnungsprozedur.md)
 * Examples for this Profile: [Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d](Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.md) and [Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c](Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.md)
-* CapabilityStatements using this Profile: [CapabilityStatement Fachdienst E-Rechnnung](CapabilityStatement-DiPagCapabilityStatementFD.md)
+* CapabilityStatements using this Profile: [CapabilityStatement Fachdienst E-Rechnung](CapabilityStatement-DiPagCapabilityStatementFD.md)
 
 You can also check for [usages in the FHIR IG Statistics](https://packages2.fhir.org/xig/resource/de.gematik.dipag|current/StructureDefinition/StructureDefinition-dipag-patient.json)
 
@@ -169,6 +172,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-patien
   "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
   "version" : "1.0.8",
   "name" : "DiPagPatient",
+  "title" : "Digitale Patientenrechnung Patient",
   "status" : "active",
   "experimental" : false,
   "date" : "2026-03-26",
@@ -180,6 +184,7 @@ Weitere Repräsentationen des Profils: [CSV](../StructureDefinition-dipag-patien
       "value" : "https://www.gematik.de"
     }]
   }],
+  "description" : "Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab.",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

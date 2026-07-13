@@ -78,25 +78,25 @@ Die folgende Tabelle ordnet – je Profil des strukturierten Rechnungsinhalts �
 | Digitale Patientenrechnung Person | Voller Name inkl. Anrede | `Practitioner.name.text` | Die Anrede SOLLEN vorhanden sein. |
 | Digitale Patientenrechnung Person | Telefon | `Practitioner.telecom:Telefon` | Die Angabe einer Telefonnummer KANN vorhanden sein. Sie KANN vorkommen, wenn eine Person die Rolle eines 'Abweichender Forderungsinhaber' inne hat. |
 | Digitale Patientenrechnung Person | Telefonnummer | `Practitioner.telecom:Telefon.value` |  |
-| DiPagPatient | Postfach | `Patient.address:Postfach` | Das Postfach SOLL vorhanden sein. |
-| DiPagPatient | Ort | `Patient.address:Postfach.city` | Der Ort SOLL vorhanden sein. |
-| DiPagPatient | Länderkennzeichen | `Patient.address:Postfach.country` | Das Länderkennzeichen KANN vorhanden sein. |
-| DiPagPatient | Postfach-Angabe | `Patient.address:Postfach.line` | Die Postfach-Angabe SOLL angegeben werden, die Extensions zur strukurierten Erfassung KANN vorhanden sein. |
-| DiPagPatient | Strassenanschrift | `Patient.address:Strassenanschrift` | Die Strassenanschrift SOLL vorhanden sein. |
-| DiPagPatient | Ort | `Patient.address:Strassenanschrift.city` | Der Ort SOLL vorhanden sein. |
-| DiPagPatient | Länderkennzeichen | `Patient.address:Strassenanschrift.country` | Das Länderkennzeichen KANN vorhanden sein. |
-| DiPagPatient | Straße und Hausnummer | `Patient.address:Strassenanschrift.line` | Straße und Hausnummer SOLLEN angegeben werden, die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein. |
-| DiPagPatient | Geburtsdatum | `Patient.birthDate` | Das Geburtsdatum SOLL vorhanden sein. |
-| DiPagPatient | KVNR (Krankenversichertennummer) | `Patient.identifier:KVNR` | Die KVNR MUSS vorkommen, wenn eine Person die Rolle des 'Rechnungsempfänger' inne hat. |
-| DiPagPatient | IK-Nummer der Krankenkasse | `Patient.identifier:KVNR.assigner.identifier` | Bei GKV-Versicherten Personen SOLL die IK-Nummer der Krankenkasse angegeben werden. |
-| DiPagPatient | System der IK-Nummer | `Patient.identifier:KVNR.assigner.identifier.system` | Das System der IK-Nummer MUSS vorhanden sein. |
-| DiPagPatient | IK-Nummer der Krankenkasse | `Patient.identifier:KVNR.assigner.identifier.value` |  |
-| DiPagPatient | System des KVZ10 Code | `Patient.identifier:KVNR.system` | Das System des KVZ10 Code MUSS vorhanden sein. |
-| DiPagPatient | KVNR (Krankenversichertennummer) | `Patient.identifier:KVNR.value` |  |
-| DiPagPatient | Name | `Patient.name` | Der Name SOLL vorhanden sein. |
-| DiPagPatient | Nachname | `Patient.name.family` | Der Nachname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein. Der Nachname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein. Die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein. |
-| DiPagPatient | Titel | `Patient.name.prefix` | Der Titel SOLL vorhanden sein, die Extension zur Qualifizierung KANN vorhanden sein. |
-| DiPagPatient | Voller Name inkl. Anrede | `Patient.name.text` | Die Anrede SOLLEN vorhanden sein. |
+| Digitale Patientenrechnung Patient | Postfach | `Patient.address:Postfach` | Das Postfach SOLL vorhanden sein. |
+| Digitale Patientenrechnung Patient | Ort | `Patient.address:Postfach.city` | Der Ort SOLL vorhanden sein. |
+| Digitale Patientenrechnung Patient | Länderkennzeichen | `Patient.address:Postfach.country` | Das Länderkennzeichen KANN vorhanden sein. |
+| Digitale Patientenrechnung Patient | Postfach-Angabe | `Patient.address:Postfach.line` | Die Postfach-Angabe SOLL angegeben werden, die Extensions zur strukurierten Erfassung KANN vorhanden sein. |
+| Digitale Patientenrechnung Patient | Strassenanschrift | `Patient.address:Strassenanschrift` | Die Strassenanschrift SOLL vorhanden sein. |
+| Digitale Patientenrechnung Patient | Ort | `Patient.address:Strassenanschrift.city` | Der Ort SOLL vorhanden sein. |
+| Digitale Patientenrechnung Patient | Länderkennzeichen | `Patient.address:Strassenanschrift.country` | Das Länderkennzeichen KANN vorhanden sein. |
+| Digitale Patientenrechnung Patient | Straße und Hausnummer | `Patient.address:Strassenanschrift.line` | Straße und Hausnummer SOLLEN angegeben werden, die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein. |
+| Digitale Patientenrechnung Patient | Geburtsdatum | `Patient.birthDate` | Das Geburtsdatum SOLL vorhanden sein. |
+| Digitale Patientenrechnung Patient | KVNR (Krankenversichertennummer) | `Patient.identifier:KVNR` | Die KVNR MUSS vorkommen, wenn eine Person die Rolle des 'Rechnungsempfänger' inne hat. |
+| Digitale Patientenrechnung Patient | IK-Nummer der Krankenkasse | `Patient.identifier:KVNR.assigner.identifier` | Bei GKV-Versicherten Personen SOLL die IK-Nummer der Krankenkasse angegeben werden. |
+| Digitale Patientenrechnung Patient | System der IK-Nummer | `Patient.identifier:KVNR.assigner.identifier.system` | Das System der IK-Nummer MUSS vorhanden sein. |
+| Digitale Patientenrechnung Patient | IK-Nummer der Krankenkasse | `Patient.identifier:KVNR.assigner.identifier.value` |  |
+| Digitale Patientenrechnung Patient | System des KVZ10 Code | `Patient.identifier:KVNR.system` | Das System des KVZ10 Code MUSS vorhanden sein. |
+| Digitale Patientenrechnung Patient | KVNR (Krankenversichertennummer) | `Patient.identifier:KVNR.value` |  |
+| Digitale Patientenrechnung Patient | Name | `Patient.name` | Der Name SOLL vorhanden sein. |
+| Digitale Patientenrechnung Patient | Nachname | `Patient.name.family` | Der Nachname MUSS in der Rolle einer 'Behandelte Person' vorhanden sein. Der Nachname SOLL in der Rolle eines 'Rechnungsempfänger' vorhanden sein. Die Extensions zur strukurierten Erfassung KÖNNEN vorhanden sein. |
+| Digitale Patientenrechnung Patient | Titel | `Patient.name.prefix` | Der Titel SOLL vorhanden sein, die Extension zur Qualifizierung KANN vorhanden sein. |
+| Digitale Patientenrechnung Patient | Voller Name inkl. Anrede | `Patient.name.text` | Die Anrede SOLLEN vorhanden sein. |
 | Digitale Patientenrechnung Rechnung | Rechnungsdatum | `Invoice.date` | Das Rechnungsdatum MUSS vorhanden sein. |
 | Digitale Patientenrechnung Rechnung | Diagnose | `Invoice.extension:AbrechnungsDiagnoseProzedur` | Im Falle einer GOÄ oder GOÄ-neu Rechnung, SOLLEN Diagnosen und Prozeduren vorhanden sein. Im Falle einer GOZ oder BEMA Rechnung werden keine Diagnosen oder Prozedur gefordert. |
 | Digitale Patientenrechnung Rechnung | Zuordnung von Diagnosen oder Prozeduren zur Rechnung | `Invoice.extension:AbrechnungsDiagnoseProzedur.extension:Referenz.value[x]` | Diagnosen und Prozeduren SOLLEN zur Rechnung zugeordnet sein. |
