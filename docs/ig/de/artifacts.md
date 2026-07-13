@@ -11,6 +11,28 @@ Version 1.0.8 - ci-build
 
 Diese Seite bietet eine Liste der FHIR-Artefakte, die in diesem Implementierungsleitfaden definiert sind.
 
+###  
+
+| | |
+| :--- | :--- |
+| [ Digitale Patientenrechnung - Rechnungsinhalte Bundle  ](StructureDefinition-dipag-rechnungsbundle.md) | Dieses Profil stellt das collection-Bundle dar, mit welchem die strukturierten Rechnungsinhalte zusammengefasst und als base64-kodiertes Binary in der DocumentReference referenziert werden. |
+| [ Digitale Patientenrechnung Institution  ](StructureDefinition-dipag-institution.md) | Das Profil DiPagInstitution bildet eine Institution (z. B. Praxis, MVZ oder Krankenhaus) in den Rollen 'Rechnungsersteller' oder 'Abweichender Forderungsinhaber' ab. |
+| [ Digitale Patientenrechnung Patient  ](StructureDefinition-dipag-patient.md) | Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab. |
+| [ Digitale Patientenrechnung Person  ](StructureDefinition-dipag-person.md) | Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet. |
+| [ Digitale Patientenrechnung Rechnung  ](StructureDefinition-dipag-rechnung.md) | Dieses Profil bildet die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung ab, inklusive Angaben zu Behandlungszeitraum, Diagnosen und Prozeduren, Behandlungsart, Fachrichtung, Rechnungspositionen und Zusammensetzung des Rechnungsbetrags. |
+| [ Digitale Patientenrechnung Rechnungsdiagnose  ](StructureDefinition-dipag-rechnungsdiagnose.md) | Dieses Profil bildet eine abrechnungsrelevante Diagnose nach ICD-10-GM ab, die einer Digitalen Patientenrechnung zugeordnet werden kann. |
+| [ Digitale Patientenrechnung Rechnungsdokument  ](StructureDefinition-dipag-rechnungsdokument.md) | Dieses Profil bildet die Binärdaten eines Dokumentes der Digitalen Patientenrechnung ab: das PDF der Rechnung bzw. eines Anhangs oder die strukturierten Rechnungsinhalte, jeweils als base64-kodierte Daten. |
+| [ Digitale Patientenrechnung Rechnungsposition  ](StructureDefinition-dipag-rechnungsposition.md) | Dieses Profil bildet eine einzelne Rechnungsposition einer Digitalen Patientenrechnung ab, z. B. Leistungen nach GOÄ, GOZ oder BEMA sowie Laborleistungen, Sachkosten/Auslagen und Wegegeld/Reiseentschädigung. |
+| [ Digitale Patientenrechnung Rechnungsprozedur  ](StructureDefinition-dipag-rechnungsprozedur.md) | Dieses Profil bildet eine abrechnungsrelevante Prozedur nach OPS ab, die einer Digitalen Patientenrechnung zugeordnet werden kann. |
+
+###  
+
+| | |
+| :--- | :--- |
+| [ Digitale Patientenrechnung Dokumentenmetadaten Eingang  ](StructureDefinition-dipag-dokumentenmetadaten-eingang.md) | Dieses Profil beschreibt die Dokumentenmetadaten, wie sie beim Einreichen von Rechnungen und Anhängen durch das Primärsystem der Leistungserbringer:in (RE-PS) an den Fachdienst übermittelt werden. |
+| [ Digitale Patientenrechnung Dokumentenmetadaten Intern  ](StructureDefinition-dipag-dokumentenmetadaten-intern.md) | Dieses Profil beschreibt die Dokumentenmetadaten, wie sie im Fachdienst gehalten und an abrufende Akteure ausgeliefert werden. Es ergänzt die eingereichten Metadaten u. a. um das Rechnungs-Token, den Rechnungsstatus, Markierungen sowie die aus den strukturierten Rechnungsinhalten extrahierten Angaben (z. B. Rechnungsdatum, Gesamtbetrag, Zahlungsziel). |
+| [ Digitale Patientenrechnung Nutzungsprotokoll  ](StructureDefinition-dipag-nutzungsprotokoll.md) | Dieses Profil bildet einen Eintrag des Nutzungsprotokolls ab, mit dem Zugriffe und Interaktionen auf Rechnungen und Dokumente im Fachdienst protokolliert werden. |
+
 ### Verhalten: CapabilityStatements 
 
 Die folgenden Artefakte definieren die spezifischen Fähigkeiten, die verschiedene Systemtypen haben müssen, um diesem Implementierungsleitfaden zu entsprechen. Von Systemen, die mit dem Implementierungsleitfaden konform sind, wird erwartet, dass sie die Konformität mit einem oder mehreren der folgenden Capability Statements deklarieren.
@@ -30,25 +52,6 @@ Dies sind benutzerdefinierte Operationen, die von Systemen unterstützt und/oder
 | [ Digitale Patientenrechnung Operation Invoice-Submit  ](OperationDefinition-Submit.md) | Rechnung einreichen durch die Leistungserbringer:in |
 | [ Digitale Patientenrechnung Operation ProcessFlag  ](OperationDefinition-ProcessFlag.md) | Setzt die Markierungen eines Rechnungsdokuments (DocumentReference) nach dem Complete-Replacement-Prinzip: Die übermittelten Markierungen ersetzen vollständig den bisherigen Markierungssatz des Dokuments. Markierungen, die nicht im Request enthalten sind, werden entfernt; Änderungen an bestehenden Markierungen erfolgen durch erneutes Übermitteln mit aktualisierten Werten. Der Request muss daher stets alle weiterhin gültigen Markierungen inklusive ihrer jeweiligen Zusatzinformationen vollständig enthalten. Wird kein 'markierung'-Parameter übergeben (leerer Markierungssatz), werden alle änderbaren Markierungen des Dokuments entfernt. Da dies der einzige Endpunkt zur Pflege der Markierungen ist, wird hierüber auch das vollständige Löschen der Markierungen unterstützt.Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können über diese Operation weder gesetzt noch entfernt werden und werden ignoriert, falls sie übermittelt werden. Sie bleiben sowohl von der Ersetzung als auch von der Löschung unberührt. |
 | [ Digitale Patientenrechnung Operation Retrieve  ](OperationDefinition-Retrieve.md) | Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten |
-
-### Strukturen: Ressourcenprofile 
-
-Diese definieren Einschränkungen für FHIR-Ressourcen für Systeme, die mit dem Implementierungsleitfaden konform sind.
-
-| | |
-| :--- | :--- |
-| [ Digitale Patientenrechnung - Rechnungsinhalte Bundle  ](StructureDefinition-dipag-rechnungsbundle.md) | Dieses Profil stellt das collection-Bundle dar, mit welchem die strukturierten Rechnungsinhalte zusammengefasst und als base64-kodiertes Binary in der DocumentReference referenziert werden. |
-| [ Digitale Patientenrechnung Dokumentenmetadaten Eingang  ](StructureDefinition-dipag-dokumentenmetadaten-eingang.md) | Dieses Profil beschreibt die Dokumentenmetadaten, wie sie beim Einreichen von Rechnungen und Anhängen durch das Primärsystem der Leistungserbringer:in (RE-PS) an den Fachdienst übermittelt werden. |
-| [ Digitale Patientenrechnung Dokumentenmetadaten Intern  ](StructureDefinition-dipag-dokumentenmetadaten-intern.md) | Dieses Profil beschreibt die Dokumentenmetadaten, wie sie im Fachdienst gehalten und an abrufende Akteure ausgeliefert werden. Es ergänzt die eingereichten Metadaten u. a. um das Rechnungs-Token, den Rechnungsstatus, Markierungen sowie die aus den strukturierten Rechnungsinhalten extrahierten Angaben (z. B. Rechnungsdatum, Gesamtbetrag, Zahlungsziel). |
-| [ Digitale Patientenrechnung Institution  ](StructureDefinition-dipag-institution.md) | Das Profil DiPagInstitution bildet eine Institution (z. B. Praxis, MVZ oder Krankenhaus) in den Rollen 'Rechnungsersteller' oder 'Abweichender Forderungsinhaber' ab. |
-| [ Digitale Patientenrechnung Nutzungsprotokoll  ](StructureDefinition-dipag-nutzungsprotokoll.md) | Dieses Profil bildet einen Eintrag des Nutzungsprotokolls ab, mit dem Zugriffe und Interaktionen auf Rechnungen und Dokumente im Fachdienst protokolliert werden. |
-| [ Digitale Patientenrechnung Patient  ](StructureDefinition-dipag-patient.md) | Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab. |
-| [ Digitale Patientenrechnung Person  ](StructureDefinition-dipag-person.md) | Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet. |
-| [ Digitale Patientenrechnung Rechnung  ](StructureDefinition-dipag-rechnung.md) | Dieses Profil bildet die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung ab, inklusive Angaben zu Behandlungszeitraum, Diagnosen und Prozeduren, Behandlungsart, Fachrichtung, Rechnungspositionen und Zusammensetzung des Rechnungsbetrags. |
-| [ Digitale Patientenrechnung Rechnungsdiagnose  ](StructureDefinition-dipag-rechnungsdiagnose.md) | Dieses Profil bildet eine abrechnungsrelevante Diagnose nach ICD-10-GM ab, die einer Digitalen Patientenrechnung zugeordnet werden kann. |
-| [ Digitale Patientenrechnung Rechnungsdokument  ](StructureDefinition-dipag-rechnungsdokument.md) | Dieses Profil bildet die Binärdaten eines Dokumentes der Digitalen Patientenrechnung ab: das PDF der Rechnung bzw. eines Anhangs oder die strukturierten Rechnungsinhalte, jeweils als base64-kodierte Daten. |
-| [ Digitale Patientenrechnung Rechnungsposition  ](StructureDefinition-dipag-rechnungsposition.md) | Dieses Profil bildet eine einzelne Rechnungsposition einer Digitalen Patientenrechnung ab, z. B. Leistungen nach GOÄ, GOZ oder BEMA sowie Laborleistungen, Sachkosten/Auslagen und Wegegeld/Reiseentschädigung. |
-| [ Digitale Patientenrechnung Rechnungsprozedur  ](StructureDefinition-dipag-rechnungsprozedur.md) | Dieses Profil bildet eine abrechnungsrelevante Prozedur nach OPS ab, die einer Digitalen Patientenrechnung zugeordnet werden kann. |
 
 ### Strukturen: Extension-Definitionen 
 

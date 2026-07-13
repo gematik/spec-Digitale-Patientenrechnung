@@ -14,7 +14,7 @@
   "name" : "DigitalePatientenrechnung",
   "title" : "Implementierungsleitfaden Digitale Patientenrechnung",
   "status" : "draft",
-  "date" : "2026-07-13T08:15:48+00:00",
+  "date" : "2026-07-13T08:57:15+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",
@@ -693,6 +693,16 @@
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     }],
+    "grouping" : [{
+      "id" : "Rechnungsinhalt",
+      "name" : "Rechnungsinhalt-Profile",
+      "description" : "Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen."
+    },
+    {
+      "id" : "Metadaten",
+      "name" : "Metadaten- & Protokoll-Profile",
+      "description" : "Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent)."
+    }],
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
@@ -1338,7 +1348,8 @@
       },
       "name" : "Digitale Patientenrechnung - Rechnungsinhalte Bundle",
       "description" : "Dieses Profil stellt das collection-Bundle dar, mit welchem die strukturierten Rechnungsinhalte zusammengefasst und als base64-kodiertes Binary in der DocumentReference referenziert werden.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Rechnungsinhalt"
     },
     {
       "extension" : [{
@@ -1578,7 +1589,8 @@
       },
       "name" : "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
       "description" : "Dieses Profil beschreibt die Dokumentenmetadaten, wie sie beim Einreichen von Rechnungen und Anhängen durch das Primärsystem der Leistungserbringer:in (RE-PS) an den Fachdienst übermittelt werden.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Metadaten"
     },
     {
       "extension" : [{
@@ -1590,7 +1602,8 @@
       },
       "name" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
       "description" : "Dieses Profil beschreibt die Dokumentenmetadaten, wie sie im Fachdienst gehalten und an abrufende Akteure ausgeliefert werden. Es ergänzt die eingereichten Metadaten u. a. um das Rechnungs-Token, den Rechnungsstatus, Markierungen sowie die aus den strukturierten Rechnungsinhalten extrahierten Angaben (z. B. Rechnungsdatum, Gesamtbetrag, Zahlungsziel).",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Metadaten"
     },
     {
       "extension" : [{
@@ -1638,7 +1651,8 @@
       },
       "name" : "Digitale Patientenrechnung Institution",
       "description" : "Das Profil DiPagInstitution bildet eine Institution (z. B. Praxis, MVZ oder Krankenhaus) in den Rollen 'Rechnungsersteller' oder 'Abweichender Forderungsinhaber' ab.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Rechnungsinhalt"
     },
     {
       "extension" : [{
@@ -1650,7 +1664,8 @@
       },
       "name" : "Digitale Patientenrechnung Nutzungsprotokoll",
       "description" : "Dieses Profil bildet einen Eintrag des Nutzungsprotokolls ab, mit dem Zugriffe und Interaktionen auf Rechnungen und Dokumente im Fachdienst protokolliert werden.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Metadaten"
     },
     {
       "extension" : [{
@@ -1734,7 +1749,8 @@
       },
       "name" : "Digitale Patientenrechnung Patient",
       "description" : "Das Profil DiPagPatient bildet eine versicherte Person in den Rollen 'Behandelte Person' oder 'Rechnungsempfänger' ab.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Rechnungsinhalt"
     },
     {
       "extension" : [{
@@ -1746,7 +1762,8 @@
       },
       "name" : "Digitale Patientenrechnung Person",
       "description" : "Das Profil DiPagPerson wird in für die Rolle 'Behandelnder Leistungserbringer' oder 'Abweichender Forderungsinhaber' verwendet.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Rechnungsinhalt"
     },
     {
       "extension" : [{
@@ -1758,7 +1775,8 @@
       },
       "name" : "Digitale Patientenrechnung Rechnung",
       "description" : "Dieses Profil bildet die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung ab, inklusive Angaben zu Behandlungszeitraum, Diagnosen und Prozeduren, Behandlungsart, Fachrichtung, Rechnungspositionen und Zusammensetzung des Rechnungsbetrags.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Rechnungsinhalt"
     },
     {
       "extension" : [{
@@ -1902,7 +1920,8 @@
       },
       "name" : "Digitale Patientenrechnung Rechnungsdiagnose",
       "description" : "Dieses Profil bildet eine abrechnungsrelevante Diagnose nach ICD-10-GM ab, die einer Digitalen Patientenrechnung zugeordnet werden kann.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Rechnungsinhalt"
     },
     {
       "extension" : [{
@@ -1914,7 +1933,8 @@
       },
       "name" : "Digitale Patientenrechnung Rechnungsdokument",
       "description" : "Dieses Profil bildet die Binärdaten eines Dokumentes der Digitalen Patientenrechnung ab: das PDF der Rechnung bzw. eines Anhangs oder die strukturierten Rechnungsinhalte, jeweils als base64-kodierte Daten.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Rechnungsinhalt"
     },
     {
       "extension" : [{
@@ -1926,7 +1946,8 @@
       },
       "name" : "Digitale Patientenrechnung Rechnungsposition",
       "description" : "Dieses Profil bildet eine einzelne Rechnungsposition einer Digitalen Patientenrechnung ab, z. B. Leistungen nach GOÄ, GOZ oder BEMA sowie Laborleistungen, Sachkosten/Auslagen und Wegegeld/Reiseentschädigung.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Rechnungsinhalt"
     },
     {
       "extension" : [{
@@ -2010,7 +2031,8 @@
       },
       "name" : "Digitale Patientenrechnung Rechnungsprozedur",
       "description" : "Dieses Profil bildet eine abrechnungsrelevante Prozedur nach OPS ab, die einer Digitalen Patientenrechnung zugeordnet werden kann.",
-      "exampleBoolean" : false
+      "exampleBoolean" : false,
+      "groupingId" : "Rechnungsinhalt"
     },
     {
       "extension" : [{

@@ -12,10 +12,10 @@
     "sources" : ["1.2.276.0.76.11.37"],
     "uses" : {
     },
-    "StructureDefinition-dipag-fachrichtung.html" : "Digitale Patientenrechnung Extension Fachrichtung",
     "StructureDefinition-dipag-person.html" : "Digitale Patientenrechnung Person",
-    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution",
-    "StructureDefinition-dipag-docref-fachrichtung.html" : "Digitale Patientenrechnung DocRef Fachrichtung"
+    "StructureDefinition-dipag-docref-fachrichtung.html" : "Digitale Patientenrechnung DocRef Fachrichtung",
+    "StructureDefinition-dipag-fachrichtung.html" : "Digitale Patientenrechnung Extension Fachrichtung",
+    "StructureDefinition-dipag-institution.html" : "Digitale Patientenrechnung Institution"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/ValueSet/DiPagVerkehrsmittel",
@@ -234,8 +234,8 @@
     "systems" : ["urn:ietf:bcp:13"],
     "uses" : {
     },
-    "StructureDefinition-dipag-rechnungsdokument.html" : "Digitale Patientenrechnung Rechnungsdokument",
-    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern"
+    "StructureDefinition-dipag-dokumentenmetadaten-intern.html" : "Digitale Patientenrechnung Dokumentenmetadaten Intern",
+    "StructureDefinition-dipag-rechnungsdokument.html" : "Digitale Patientenrechnung Rechnungsdokument"
   },
   {
     "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-sonstigesdokument-type-vs",

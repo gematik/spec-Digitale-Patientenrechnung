@@ -30,7 +30,7 @@ Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach eine
   "version" : "1.0.8",
   "name" : "DiPagMakierung",
   "status" : "active",
-  "date" : "2026-07-13T08:15:48+00:00",
+  "date" : "2026-07-13T08:57:15+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",
