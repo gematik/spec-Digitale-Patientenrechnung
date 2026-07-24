@@ -3,6 +3,7 @@ Parent: Organization
 Title: "Digitale Patientenrechnung Institution"
 Id: dipag-institution
 * insert Meta(1.0.7)
+* insert CompliesWith($ti-organization)
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
