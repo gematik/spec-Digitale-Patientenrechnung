@@ -12,7 +12,7 @@
   <name value="DigitalePatientenrechnung"/>
   <title value="Implementierungsleitfaden Digitale Patientenrechnung"/>
   <status value="draft"/>
-  <date value="2026-07-13T09:47:32+00:00"/>
+  <date value="2026-07-24T07:36:38+00:00"/>
   <publisher value="gematik GmbH"/>
   <contact>
     <name value="gematik GmbH"/>
@@ -86,14 +86,6 @@
       </extension>
       <extension url="value">
         <valueString value="de"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="translation-sources"/>
-      </extension>
-      <extension url="value">
-        <valueString value="input/translations/de"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -325,14 +317,6 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="translation-sources"/>
-      </extension>
-      <extension url="value">
-        <valueString value="input/translations/de"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
         <valueCode value="special-url"/>
       </extension>
       <extension url="value">
@@ -532,48 +516,12 @@
       </extension>
     </extension>
     <grouping id="Rechnungsinhalt">
-      <name value="Rechnungsinhalt-Profile">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="de"/>
-          </extension>
-          <extension url="content">
-            <valueString value="Rechnungsinhalt-Profile"/>
-          </extension>
-        </extension>
-      </name>
-      <description value="Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen.">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="de"/>
-          </extension>
-          <extension url="content">
-            <valueString value="Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen."/>
-          </extension>
-        </extension>
-      </description>
+      <name value="Rechnungsinhalt-Profile"/>
+      <description value="Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen."/>
     </grouping>
     <grouping id="Metadaten">
-      <name value="Metadaten- &amp; Protokoll-Profile">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="de"/>
-          </extension>
-          <extension url="content">
-            <valueString value="Metadaten- &amp; Protokoll-Profile"/>
-          </extension>
-        </extension>
-      </name>
-      <description value="Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent).">
-        <extension url="http://hl7.org/fhir/StructureDefinition/translation">
-          <extension url="lang">
-            <valueCode value="de"/>
-          </extension>
-          <extension url="content">
-            <valueString value="Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent)."/>
-          </extension>
-        </extension>
-      </description>
+      <name value="Metadaten- &amp; Protokoll-Profile"/>
+      <description value="Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent)."/>
     </grouping>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

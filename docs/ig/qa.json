@@ -6,8 +6,8 @@
   "status" : "draft",
   "package-id" : "de.gematik.dipag",
   "ig-ver" : "1.0.8",
-  "date" : "Mon, 13 Jul, 2026 09:47:32 +0000",
-  "dateISO8601" : "2026-07-13T09:47:32+00:00",
+  "date" : "Fri, 24 Jul, 2026 07:36:38 +0000",
+  "dateISO8601" : "2026-07-24T07:36:38+00:00",
   "errs" : 118,
   "warnings" : 396,
   "hints" : 371,
@@ -15,5 +15,5 @@
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 1908015112
+  "maxMemory" : 2033814128
 }

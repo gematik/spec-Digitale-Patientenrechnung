@@ -14,7 +14,7 @@
   "name" : "DigitalePatientenrechnung",
   "title" : "Implementierungsleitfaden Digitale Patientenrechnung",
   "status" : "draft",
-  "date" : "2026-07-13T09:47:32+00:00",
+  "date" : "2026-07-24T07:36:38+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",
@@ -103,17 +103,6 @@
       {
         "url" : "value",
         "valueString" : "de"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
-        "valueString" : "translation-sources"
-      },
-      {
-        "url" : "value",
-        "valueString" : "input/translations/de"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -432,17 +421,6 @@
     {
       "extension" : [{
         "url" : "code",
-        "valueCode" : "translation-sources"
-      },
-      {
-        "url" : "value",
-        "valueString" : "input/translations/de"
-      }],
-      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-    },
-    {
-      "extension" : [{
-        "url" : "code",
         "valueCode" : "special-url"
       },
       {
@@ -718,69 +696,21 @@
     "grouping" : [{
       "id" : "Rechnungsinhalt",
       "name" : "Rechnungsinhalt-Profile",
-      "_name" : {
-        "extension" : [{
-          "extension" : [{
-            "url" : "lang",
-            "valueCode" : "de"
-          },
-          {
-            "url" : "content",
-            "valueString" : "Rechnungsinhalt-Profile"
-          }],
-          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-        }]
-      },
-      "description" : "Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen.",
-      "_description" : {
-        "extension" : [{
-          "extension" : [{
-            "url" : "lang",
-            "valueCode" : "de"
-          },
-          {
-            "url" : "content",
-            "valueString" : "Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen."
-          }],
-          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-        }]
-      }
+      "description" : "Profile fuer die strukturierten Rechnungsinhalte einer Digitalen Patientenrechnung: die Rechnung mit ihren Positionen, Diagnosen und Prozeduren, das zusammenfassende Bundle und das Rechnungsdokument sowie die an der Rechnung beteiligten Personen und Institutionen."
     },
     {
       "id" : "Metadaten",
       "name" : "Metadaten- & Protokoll-Profile",
-      "_name" : {
-        "extension" : [{
-          "extension" : [{
-            "url" : "lang",
-            "valueCode" : "de"
-          },
-          {
-            "url" : "content",
-            "valueString" : "Metadaten- & Protokoll-Profile"
-          }],
-          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-        }]
-      },
-      "description" : "Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent).",
-      "_description" : {
-        "extension" : [{
-          "extension" : [{
-            "url" : "lang",
-            "valueCode" : "de"
-          },
-          {
-            "url" : "content",
-            "valueString" : "Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent)."
-          }],
-          "url" : "http://hl7.org/fhir/StructureDefinition/translation"
-        }]
-      }
+      "description" : "Profile fuer die Dokumentenmetadaten (DocumentReference) beim Einreichen durch die Leistungserbringer:in und im Fachdienst sowie fuer das Nutzungsprotokoll (AuditEvent)."
     }],
     "resource" : [{
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagAbrechnungsDiagnoseProzedur.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagAbrechnungsDiagnoseProzedur"
@@ -793,6 +723,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagAbrechnungsDiagnoseProzedurFreitext.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext"
@@ -805,6 +739,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b.html"
       }],
       "reference" : {
         "reference" : "Practitioner/d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b"
@@ -817,6 +755,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-BundleExample.html"
       }],
       "reference" : {
         "reference" : "Bundle/BundleExample"
@@ -829,6 +771,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html"
       }],
       "reference" : {
         "reference" : "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
@@ -841,6 +787,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Binary"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Binary-BeispielBinarySubmitOutput3-FD.html"
       }],
       "reference" : {
         "reference" : "Binary/BeispielBinarySubmitOutput3-FD"
@@ -852,6 +802,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-BeispielDocumentReferenceRechnung3-FD.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/BeispielDocumentReferenceRechnung3-FD"
@@ -864,6 +818,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-BeispielDocumentReferenceRechnung3-LE.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/BeispielDocumentReferenceRechnung3-LE"
@@ -876,6 +834,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-BeispielDocumentReferenceRechnung3.1-FD.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/BeispielDocumentReferenceRechnung3.1-FD"
@@ -888,6 +850,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-BeispielDocumentReferenceRechnung3.1-LE.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/BeispielDocumentReferenceRechnung3.1-LE"
@@ -900,6 +866,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-BeispielDocumentReferenceRechnungRetrieve.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/BeispielDocumentReferenceRechnungRetrieve"
@@ -912,6 +882,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-BeispielDocumentReferenceRechnungRetrieve2.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/BeispielDocumentReferenceRechnungRetrieve2"
@@ -924,6 +898,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-FD.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-FD"
@@ -936,6 +914,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-BeispielDocumentReferenceSonstigesDokument3-LE.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/BeispielDocumentReferenceSonstigesDokument3-LE"
@@ -948,6 +930,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-FD.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/BeispielDocumentReferenceSonstigesDokument3.1-FD"
@@ -960,6 +946,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-BeispielDocumentReferenceSonstigesDokument3.1-LE.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/BeispielDocumentReferenceSonstigesDokument3.1-LE"
@@ -972,6 +962,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokoll.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokoll"
@@ -983,6 +977,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollAutomatischLoeschen.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollAutomatischLoeschen"
@@ -994,6 +992,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollAutomatischMarkierung.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollAutomatischMarkierung"
@@ -1005,6 +1007,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollAutomatischPapierkorb.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollAutomatischPapierkorb"
@@ -1016,6 +1022,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollBerechtigungAbfragen.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollBerechtigungAbfragen"
@@ -1027,6 +1037,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollBerechtigungAnlegen.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollBerechtigungAnlegen"
@@ -1038,6 +1052,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollBerechtigungBestaetigen.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollBerechtigungBestaetigen"
@@ -1049,6 +1067,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollChangeStatus.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollChangeStatus"
@@ -1060,6 +1082,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollEinreichenFrontend.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollEinreichenFrontend"
@@ -1071,6 +1097,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollErase.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollErase"
@@ -1082,6 +1112,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollNutzerkontoEinrichten.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollNutzerkontoEinrichten"
@@ -1093,6 +1127,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollProcessFlag.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollProcessFlag"
@@ -1104,6 +1142,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-BeispielNutzungsprotokollResultBundle.html"
       }],
       "reference" : {
         "reference" : "Bundle/BeispielNutzungsprotokollResultBundle"
@@ -1115,6 +1157,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "AuditEvent"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "AuditEvent-BeispielNutzungsprotokollRetrieve.html"
       }],
       "reference" : {
         "reference" : "AuditEvent/BeispielNutzungsprotokollRetrieve"
@@ -1126,6 +1172,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationOutcome"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "OperationOutcome-BeispielOperationOutcomeRechnung3.1-FD.html"
       }],
       "reference" : {
         "reference" : "OperationOutcome/BeispielOperationOutcomeRechnung3.1-FD"
@@ -1137,6 +1187,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterChangeStatusInput.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterChangeStatusInput"
@@ -1148,6 +1202,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterChangeStatusInput2.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterChangeStatusInput2"
@@ -1159,6 +1217,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterChangeStatusOutput.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterChangeStatusOutput"
@@ -1170,6 +1232,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterChangeStatusOutput2.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterChangeStatusOutput2"
@@ -1181,6 +1247,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterProcessFlagInput.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterProcessFlagInput"
@@ -1192,6 +1262,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterProcessFlagOutput.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterProcessFlagOutput"
@@ -1203,6 +1277,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterRetrieveInput.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterRetrieveInput"
@@ -1214,6 +1292,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterRetrieveInput2.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterRetrieveInput2"
@@ -1225,6 +1307,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterRetrieveOutput.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterRetrieveOutput"
@@ -1236,6 +1322,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterSubmitInput3-FD.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterSubmitInput3-FD"
@@ -1247,6 +1337,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterSubmitInput3-LE.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterSubmitInput3-LE"
@@ -1258,6 +1352,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterSubmitInput3.1-LE.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterSubmitInput3.1-LE"
@@ -1269,6 +1367,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterSubmitOutput3-FD.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterSubmitOutput3-FD"
@@ -1280,6 +1382,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Parameters"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Parameters-BeispielParameterSubmitOutput3.1-FD.html"
       }],
       "reference" : {
         "reference" : "Parameters/BeispielParameterSubmitOutput3.1-FD"
@@ -1291,6 +1397,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-BeispielPatient3-FD.html"
       }],
       "reference" : {
         "reference" : "Patient/BeispielPatient3-FD"
@@ -1302,6 +1412,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Invoice"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Invoice-c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a.html"
       }],
       "reference" : {
         "reference" : "Invoice/c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a"
@@ -1314,6 +1428,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-BulkChangeStatusExampleInput.html"
       }],
       "reference" : {
         "reference" : "Bundle/BulkChangeStatusExampleInput"
@@ -1325,6 +1443,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-BulkChangeStatusExampleOutput.html"
       }],
       "reference" : {
         "reference" : "Bundle/BulkChangeStatusExampleOutput"
@@ -1336,6 +1458,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-BulkRetrieveExampleInput.html"
       }],
       "reference" : {
         "reference" : "Bundle/BulkRetrieveExampleInput"
@@ -1347,6 +1473,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-BulkRetrieveExampleOutput.html"
       }],
       "reference" : {
         "reference" : "Bundle/BulkRetrieveExampleOutput"
@@ -1358,6 +1488,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-BulkSubmitExample.html"
       }],
       "reference" : {
         "reference" : "Bundle/BulkSubmitExample"
@@ -1369,6 +1503,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-BulkSubmitExampleOutput.html"
       }],
       "reference" : {
         "reference" : "Bundle/BulkSubmitExampleOutput"
@@ -1380,6 +1518,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CapabilityStatement"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CapabilityStatement-DiPagCapabilityStatementFD.html"
       }],
       "reference" : {
         "reference" : "CapabilityStatement/DiPagCapabilityStatementFD"
@@ -1392,6 +1534,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Condition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Condition-f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d.html"
       }],
       "reference" : {
         "reference" : "Condition/f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d"
@@ -1404,6 +1550,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Condition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Condition-a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e.html"
       }],
       "reference" : {
         "reference" : "Condition/a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e"
@@ -1416,6 +1566,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-rechnungsbundle.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-rechnungsbundle"
@@ -1429,6 +1583,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-abrechnungs-diagnose-use-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-abrechnungs-diagnose-use-cs"
@@ -1441,6 +1599,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-abrechnungs-diagnose-use-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-abrechnungs-diagnose-use-vs"
@@ -1453,6 +1615,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-rechnungsposition-go-angaben.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-rechnungsposition-go-angaben"
@@ -1465,6 +1631,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-total-price-component-type-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-total-price-component-type-cs"
@@ -1477,6 +1647,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-total-price-component-deduction-type-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-total-price-component-deduction-type-vs"
@@ -1489,6 +1663,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-attachment-format-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-attachment-format-cs"
@@ -1501,6 +1679,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-audit-event-agent-type-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-audit-event-agent-type-vs"
@@ -1513,6 +1695,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-audit-event-detail-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-audit-event-detail-vs"
@@ -1525,6 +1711,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-audit-event-detail-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-audit-event-detail-cs"
@@ -1537,6 +1727,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-audit-event-sub-type-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-audit-event-sub-type-vs"
@@ -1549,6 +1743,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-audit-event-type-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-audit-event-type-vs"
@@ -1561,6 +1759,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagInvoiceBasedOn.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagInvoiceBasedOn"
@@ -1573,6 +1775,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-docref-fachrichtung.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-docref-fachrichtung"
@@ -1585,6 +1791,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-docref-signature.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-docref-signature"
@@ -1597,6 +1807,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-documentreference-gesamtbetrag.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-documentreference-gesamtbetrag"
@@ -1609,6 +1823,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-documentreference-markierung.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-documentreference-markierung"
@@ -1621,6 +1839,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-documentreference-rechnungsdatum.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-documentreference-rechnungsdatum"
@@ -1633,6 +1855,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-dokument-artderarchivierung-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-dokument-artderarchivierung-cs"
@@ -1645,6 +1871,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-dokument-artderarchivierung-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-dokument-artderarchivierung-vs"
@@ -1657,6 +1887,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-dokumentenmetadaten-eingang.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-dokumentenmetadaten-eingang"
@@ -1670,6 +1904,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-dokumentenmetadaten-intern.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-dokumentenmetadaten-intern"
@@ -1683,6 +1921,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-abzug-kassenanteil.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-abzug-kassenanteil"
@@ -1695,6 +1937,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-behandlungsart.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-behandlungsart"
@@ -1707,6 +1953,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-fachrichtung.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-fachrichtung"
@@ -1719,6 +1969,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-institution.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-institution"
@@ -1732,6 +1986,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-nutzungsprotokoll.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-nutzungsprotokoll"
@@ -1745,6 +2003,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationDefinition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "OperationDefinition-ChangeStatus.html"
       }],
       "reference" : {
         "reference" : "OperationDefinition/ChangeStatus"
@@ -1757,6 +2019,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationDefinition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "OperationDefinition-Erase.html"
       }],
       "reference" : {
         "reference" : "OperationDefinition/Erase"
@@ -1769,6 +2035,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationDefinition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "OperationDefinition-Submit.html"
       }],
       "reference" : {
         "reference" : "OperationDefinition/Submit"
@@ -1781,6 +2051,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationDefinition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "OperationDefinition-ProcessFlag.html"
       }],
       "reference" : {
         "reference" : "OperationDefinition/ProcessFlag"
@@ -1793,6 +2067,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "OperationDefinition"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "OperationDefinition-Retrieve.html"
       }],
       "reference" : {
         "reference" : "OperationDefinition/Retrieve"
@@ -1805,6 +2083,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-operationen-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-operationen-cs"
@@ -1817,6 +2099,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-patient.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-patient"
@@ -1830,6 +2116,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-person.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-person"
@@ -1843,6 +2133,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-rechnung.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-rechnung"
@@ -1856,6 +2150,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-rechnung-abrechnungsart-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-rechnung-abrechnungsart-cs"
@@ -1868,6 +2166,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-rechnung-abrechnungsart-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-rechnung-abrechnungsart-vs"
@@ -1880,6 +2182,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-rechnung-behandlungsart-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-rechnung-behandlungsart-vs"
@@ -1892,6 +2198,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-rechnung-identifier-type-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-rechnung-identifier-type-cs"
@@ -1904,6 +2214,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-rechnung-markierung-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-rechnung-markierung-cs"
@@ -1916,6 +2230,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-rechnung-markierung-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-rechnung-markierung-vs"
@@ -1928,6 +2246,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-rechnung-submit-modus-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-rechnung-submit-modus-cs"
@@ -1940,6 +2262,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-rechnung-submit-modus-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-rechnung-submit-modus-vs"
@@ -1952,6 +2278,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-rechnung-type-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-rechnung-type-cs"
@@ -1964,6 +2294,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-rechnungsart-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-rechnungsart-cs"
@@ -1976,6 +2310,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-rechnungsart-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-rechnungsart-vs"
@@ -1988,6 +2326,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-rechnungsdiagnose.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-rechnungsdiagnose"
@@ -2001,6 +2343,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-rechnungsdokument.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-rechnungsdokument"
@@ -2014,6 +2360,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-rechnungsposition.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-rechnungsposition"
@@ -2027,6 +2377,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagRechnungspositionBehandlungsdatum.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagRechnungspositionBehandlungsdatum"
@@ -2039,6 +2393,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-rechnungsposition-faktor-gruende-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-rechnungsposition-faktor-gruende-cs"
@@ -2051,6 +2409,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-rechnungsposition-faktor-gruende-auspraegungen-VS.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS"
@@ -2063,6 +2425,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-rechnungsposition-zusatz-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-rechnungsposition-zusatz-cs"
@@ -2075,6 +2441,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagRechnungspositionZusatz.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagRechnungspositionZusatz"
@@ -2087,6 +2457,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-rechnungsposition-zusatz-VS.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-rechnungsposition-zusatz-VS"
@@ -2099,6 +2473,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:resource"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-rechnungsprozedur.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-rechnungsprozedur"
@@ -2112,6 +2490,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-rechnungsstatus-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-rechnungsstatus-vs"
@@ -2124,6 +2506,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-rechnungsstatus-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-rechnungsstatus-cs"
@@ -2136,6 +2522,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagInvoiceReplaces.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagInvoiceReplaces"
@@ -2148,6 +2538,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-restricted-mime-types-in-binary-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-restricted-mime-types-in-binary-vs"
@@ -2160,6 +2554,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-sonstigesdokument-type-vs.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-sonstigesdokument-type-vs"
@@ -2172,6 +2570,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-task-requestedPerformer.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-task-requestedPerformer"
@@ -2184,6 +2586,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-participant-role-VS.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-participant-role-VS"
@@ -2196,6 +2602,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-participant-role-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-participant-role-cs"
@@ -2208,6 +2618,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagTeilsumme.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagTeilsumme"
@@ -2220,6 +2634,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagTokenStornierteRechnung.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagTokenStornierteRechnung"
@@ -2232,6 +2650,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "CodeSystem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "CodeSystem-dipag-chargeitem-type-cs.html"
       }],
       "reference" : {
         "reference" : "CodeSystem/dipag-chargeitem-type-cs"
@@ -2244,6 +2666,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-rechnungsposition-type.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-rechnungsposition-type"
@@ -2256,6 +2682,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-dipag-chargeitem-type-VS.html"
       }],
       "reference" : {
         "reference" : "ValueSet/dipag-chargeitem-type-VS"
@@ -2268,6 +2698,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-wegegeld-reiseentschaedigung.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-wegegeld-reiseentschaedigung"
@@ -2280,6 +2714,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-zahlungsziel.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-zahlungsziel"
@@ -2292,6 +2730,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-dipag-zahnregion.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/dipag-zahnregion"
@@ -2304,6 +2746,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ValueSet"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ValueSet-DiPagVerkehrsmittel.html"
       }],
       "reference" : {
         "reference" : "ValueSet/DiPagVerkehrsmittel"
@@ -2316,6 +2762,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagBemaPunktsumme.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagBemaPunktsumme"
@@ -2328,6 +2778,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagPaymentTo.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagPaymentTo"
@@ -2340,6 +2794,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-ExampleR5DocumentReference.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/ExampleR5DocumentReference"
@@ -2352,6 +2810,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-ExampleR5Bundle.html"
       }],
       "reference" : {
         "reference" : "Bundle/ExampleR5Bundle"
@@ -2363,6 +2825,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "DocumentReference"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "DocumentReference-ExampleR5DocumentReferenceSonstigesDokument.html"
       }],
       "reference" : {
         "reference" : "DocumentReference/ExampleR5DocumentReferenceSonstigesDokument"
@@ -2375,6 +2841,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f"
@@ -2387,6 +2857,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e"
@@ -2399,6 +2873,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a.html"
       }],
       "reference" : {
         "reference" : "Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a"
@@ -2411,6 +2889,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-InvoicePeriod.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/InvoicePeriod"
@@ -2423,6 +2905,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Invoice"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Invoice-KfoMehrkosten3Rechnung.html"
       }],
       "reference" : {
         "reference" : "Invoice/KfoMehrkosten3Rechnung"
@@ -2434,6 +2920,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Invoice"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Invoice-KfoMehrkosten1Rechnung.html"
       }],
       "reference" : {
         "reference" : "Invoice/KfoMehrkosten1Rechnung"
@@ -2445,6 +2935,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Invoice"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Invoice-KfoMehrkosten2Rechnung.html"
       }],
       "reference" : {
         "reference" : "Invoice/KfoMehrkosten2Rechnung"
@@ -2456,6 +2950,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Invoice"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Invoice-KfoMehrkosten4Rechnung.html"
       }],
       "reference" : {
         "reference" : "Invoice/KfoMehrkosten4Rechnung"
@@ -2467,6 +2965,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten1-P1.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten1-P1"
@@ -2478,6 +2980,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten1-P10.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten1-P10"
@@ -2489,6 +2995,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten1-P2.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten1-P2"
@@ -2500,6 +3010,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten1-P3.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten1-P3"
@@ -2511,6 +3025,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten1-P4.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten1-P4"
@@ -2522,6 +3040,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten1-P5.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten1-P5"
@@ -2533,6 +3055,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten1-P6.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten1-P6"
@@ -2544,6 +3070,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten1-P7.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten1-P7"
@@ -2555,6 +3085,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten1-P8.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten1-P8"
@@ -2566,6 +3100,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten1-P9.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten1-P9"
@@ -2577,6 +3115,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten2-P1.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten2-P1"
@@ -2588,6 +3130,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten2-P2.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten2-P2"
@@ -2599,6 +3145,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten2-P3.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten2-P3"
@@ -2610,6 +3160,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten2-P4.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten2-P4"
@@ -2621,6 +3175,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten2-P5.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten2-P5"
@@ -2632,6 +3190,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten2-P6.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten2-P6"
@@ -2643,6 +3205,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten2-P7.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten2-P7"
@@ -2654,6 +3220,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten2-P8.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten2-P8"
@@ -2665,6 +3235,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-KfoMehrkosten3Behandler.html"
       }],
       "reference" : {
         "reference" : "Organization/KfoMehrkosten3Behandler"
@@ -2676,6 +3250,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P1.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P1"
@@ -2687,6 +3265,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P10.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P10"
@@ -2698,6 +3280,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P11.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P11"
@@ -2709,6 +3295,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P12.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P12"
@@ -2720,6 +3310,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P13.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P13"
@@ -2731,6 +3325,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P14.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P14"
@@ -2742,6 +3340,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P15.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P15"
@@ -2753,6 +3355,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P2.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P2"
@@ -2764,6 +3370,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P3.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P3"
@@ -2775,6 +3385,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P4.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P4"
@@ -2786,6 +3400,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P5.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P5"
@@ -2797,6 +3415,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P6.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P6"
@@ -2808,6 +3430,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P7.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P7"
@@ -2819,6 +3445,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P8.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P8"
@@ -2830,6 +3460,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten3-P9.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten3-P9"
@@ -2841,6 +3475,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten4-P1.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten4-P1"
@@ -2852,6 +3490,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-KfoMehrkosten4-P2.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/KfoMehrkosten4-P2"
@@ -2863,6 +3505,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a"
@@ -2875,6 +3521,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Practitioner"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Practitioner-2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e.html"
       }],
       "reference" : {
         "reference" : "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e"
@@ -2887,6 +3537,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html"
       }],
       "reference" : {
         "reference" : "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d"
@@ -2899,6 +3553,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f.html"
       }],
       "reference" : {
         "reference" : "Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f"
@@ -2911,6 +3569,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Invoice"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Invoice-a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d.html"
       }],
       "reference" : {
         "reference" : "Invoice/a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d"
@@ -2923,6 +3585,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-MusterrechnungBundle.html"
       }],
       "reference" : {
         "reference" : "Bundle/MusterrechnungBundle"
@@ -2935,6 +3601,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a"
@@ -2947,6 +3617,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b"
@@ -2959,6 +3633,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c"
@@ -2971,6 +3649,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d"
@@ -2983,6 +3665,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e"
@@ -2995,6 +3681,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f"
@@ -3007,6 +3697,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a"
@@ -3019,6 +3713,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Bundle"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Bundle-PatientenBundle.html"
       }],
       "reference" : {
         "reference" : "Bundle/PatientenBundle"
@@ -3030,6 +3728,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Patient"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Patient-PatientVater.html"
       }],
       "reference" : {
         "reference" : "Patient/PatientVater"
@@ -3041,6 +3743,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Procedure"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Procedure-b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f.html"
       }],
       "reference" : {
         "reference" : "Procedure/b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f"
@@ -3053,6 +3759,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b"
@@ -3065,6 +3775,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-dipag-auditEvent-agent-who-display.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/dipag-auditEvent-agent-who-display"
@@ -3077,6 +3791,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-dipag-markierung.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/dipag-markierung"
@@ -3089,6 +3807,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-dipag-docRef-author-display.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/dipag-docRef-author-display"
@@ -3101,6 +3823,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "SearchParameter"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "SearchParameter-dipag-docRef-subject-display.html"
       }],
       "reference" : {
         "reference" : "SearchParameter/dipag-docRef-subject-display"
@@ -3113,6 +3839,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "ChargeItem"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "ChargeItem-e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c.html"
       }],
       "reference" : {
         "reference" : "ChargeItem/e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c"
@@ -3125,6 +3855,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c.html"
       }],
       "reference" : {
         "reference" : "Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"
@@ -3137,6 +3871,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "Organization"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "Organization-f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d.html"
       }],
       "reference" : {
         "reference" : "Organization/f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d"
@@ -3149,6 +3887,10 @@
       "extension" : [{
         "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
         "valueString" : "StructureDefinition:extension"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/implementationguide-page",
+        "valueUri" : "StructureDefinition-DiPagZusatzinformationZurAbrechnungsart.html"
       }],
       "reference" : {
         "reference" : "StructureDefinition/DiPagZusatzinformationZurAbrechnungsart"

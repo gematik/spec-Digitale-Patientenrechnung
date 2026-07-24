@@ -892,4 +892,4 @@ Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not
 /__w/spec-Digitale-Patientenrechnung/spec-Digitale-Patientenrechnung/Resources/fsh-generated/resources/ValueSet-dipag-total-price-component-deduction-type-vs.json: line 0, col 0, Warning - The resource ValueSet/dipag-total-price-component-deduction-type-vs should have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root) (BUSINESSRULE)
 
 err = 118, warn = 396, info = 371
-IG Publisher Version: 2.2.10
+IG Publisher Version: 2.2.11

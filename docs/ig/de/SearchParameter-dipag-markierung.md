@@ -13,7 +13,7 @@ Version 1.0.8 - ci-build
 | | |
 | :--- | :--- |
 | *Offizielle URL*:https://gematik.de/fhir/dipag/SearchParameter/dipag-markierung | *Version*:1.0.8 |
-| Active Stand: 2026-07-13 | *Maschinenlesbarer Name*:DiPagMakierung |
+| Active Stand: 2026-07-24 | *Maschinenlesbarer Name*:DiPagMakierung |
 
  
 Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach einer manuellen Markierung ermöglicht. 
@@ -30,7 +30,7 @@ Ein SearchParameter auf der Ressource DocumentReference, der die Suche nach eine
   "version" : "1.0.8",
   "name" : "DiPagMakierung",
   "status" : "active",
-  "date" : "2026-07-13T09:47:32+00:00",
+  "date" : "2026-07-24T07:36:38+00:00",
   "publisher" : "gematik GmbH",
   "contact" : [{
     "name" : "gematik GmbH",
