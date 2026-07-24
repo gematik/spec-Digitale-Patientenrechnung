@@ -100,11 +100,6 @@ menu:
 
 parameters:
   i18n-default-lang: de
-  # Laedt Uebersetzungs-Supplements (.po) fuer den de-Build. Wird gebraucht, damit die
-  # custom Gruppen-Ueberschriften der Artefakt-Seite nicht leer bleiben (siehe
-  # input/translations/de/ImplementationGuide-de.gematik.dipag.po).
-  translation-sources:
-    - input/translations/de
   special-url:
     - http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]
     - http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer
