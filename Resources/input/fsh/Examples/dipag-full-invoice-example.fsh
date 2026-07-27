@@ -18,7 +18,7 @@ Usage: #example
       * type = $v2-0203#XX
       * system = $iknr
       * value = "109500969"
-* name
+* name[Name]
   * use = #official
   * text = "Max Mustermann"
   * family = "Mustermann"

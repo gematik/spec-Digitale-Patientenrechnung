@@ -16,7 +16,7 @@ Usage: #example
   * type = $identifier-kvnr-type#KVZ10
   * system = $kvid
   * value = "B123456789"
-* name
+* name[Name]
   * use = #official
   * text = "B. Patient"
   * family = "Patient"

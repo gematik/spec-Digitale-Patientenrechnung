@@ -30,11 +30,18 @@ Id: dipag-patient
         * ^short = "IK-Nummer der Krankenkasse"
       * ^short = "IK-Nummer der Krankenkasse"
       * ^comment = "Bei GKV-Versicherten Personen SOLL die IK-Nummer der Krankenkasse angegeben werden."
-* birthDate MS
+* birthDate 1.. MS
   * ^short = "Geburtsdatum"
   * ^comment = "Das Geburtsdatum SOLL vorhanden sein."
-* name only $humanname-de
 * name MS
+* name ^slicing.discriminator.type = #value
+* name ^slicing.discriminator.path = "$this"
+* name ^slicing.rules = #open
+* name contains
+    Name 1..1 MS and
+    Geburtsname 0..1
+* name[Name] only $humanname-de
+  * ^patternHumanName.use = #official
   * ^short = "Name"
   * ^comment = "Der Name SOLL vorhanden sein."
   * use MS
@@ -61,6 +68,9 @@ Id: dipag-patient
     * ^comment = "Der Titel SOLL vorhanden sein, die Extension zur Qualifizierung KANN vorhanden sein."
   * prefix.extension[prefix-qualifier] MS
     * ^comment = "Die Extension zur Qualifizierung des Titeks KANN vorhanden sein."
+* name[Geburtsname] only $humanname-de
+  * ^patternHumanName.use = #maiden
+  * ^short = "Geburtsname"
 * address MS
 * address ^slicing.discriminator.type = #pattern
 * address ^slicing.discriminator.path = "$this"
