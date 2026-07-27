@@ -10,7 +10,7 @@ Id: dipag-patient
 * identifier contains
     KVNR ..1 MS
 * identifier[KVNR] only $identifier-kvnr
-  * ^patternIdentifier.type = $identifier-kvnr-type#KVZ10
+  * ^patternIdentifier.system = "http://fhir.de/sid/gkv/kvid-10"
   * type 1.. MS
   * system MS
     * ^short = "System des KVZ10 Code"
