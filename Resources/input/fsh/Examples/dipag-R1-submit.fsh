@@ -3,10 +3,22 @@ InstanceOf: Parameters
 Usage: #example
 * parameter[+]
   * name = "rechnung"
-  * resource = BeispielDocumentReferenceRechnung3-FD
+  * part[+]
+    * name = "dokument"
+    * resource = BeispielDocumentReferenceRechnung3-FD
+  * part[+]
+    * name = "qrPosition"
+    * part[+]
+      * name = "x"
+      * valueDecimal = 450
+    * part[+]
+      * name = "y"
+      * valueDecimal = 720
 * parameter[+]
   * name = "anhang"
-  * resource = BeispielDocumentReferenceSonstigesDokument3-FD
+  * part[+]
+    * name = "dokument"
+    * resource = BeispielDocumentReferenceSonstigesDokument3-FD
 * parameter[+]
   * name = "angereichertesPDF"
   * valueBoolean = true
