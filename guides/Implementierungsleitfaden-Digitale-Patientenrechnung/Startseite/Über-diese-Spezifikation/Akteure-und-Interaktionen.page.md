@@ -76,7 +76,7 @@ Siehe Abschnitt "6.4 Verwaltung von empfangenen Rechnungen" des Feature-Dokument
 
 #### Löschen eines Rechnungsvorganges
 
-Die technische Spezifikation hierzu findet sich unter {{pagelink:OD-erase}}.
+Siehe Abschnitt "6.4 Verwaltung von empfangenen Rechnungen" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter {{pagelink:OD-erase}}.
 
 #### Use Case AF_10203 - Nutzerprotokoll einsehen
 
