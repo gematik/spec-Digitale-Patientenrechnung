@@ -76,7 +76,7 @@ Die Parameter `rechnung` und `anhang` bestehen jeweils aus mehreren Parts: dem P
 
 ### Position des Datamatrix-Codes
 
-Der FD bringt auf jedem verarbeiteten Dokument einen Datamatrix-Code (Token-Barcode) an einer Default-Position an. Für jede Rechnung und jeden Anhang KANN diese Position über den Part `qrPosition` übersteuert werden. Dieser enthält die beiden Sub-Parts `x` und `y`, die die gewünschten Koordinaten als `decimal` in der Einheit `pt` (typografischer Punkt) tragen. Wird `qrPosition` angegeben, MÜSSEN `x` und `y` gemeinsam übermittelt werden; andernfalls verwendet der FD die Default-Position.
+Der FD bringt auf jedem verarbeiteten Dokument einen Datamatrix-Code (Token-Barcode) an einer Default-Position an. Für jede Rechnung und jeden Anhang KANN diese Position über den Part `qrPosition` übersteuert werden. Er enthält die Sub-Parts `x` und `y` mit den Zielkoordinaten als `decimal` in `pt` (typografischer Punkt). Wird `qrPosition` angegeben, MÜSSEN `x` und `y` gemeinsam übermittelt werden. Ohne `qrPosition` gilt die Default-Position.
 
 <fql output="table" headers="true">
 from
