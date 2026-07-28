@@ -23,7 +23,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständige Digitale Patientenrechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur. Besteht aus dem Dokument selbst sowie optional der übersteuernden Position des Datamatrix-Codes (qrPosition in pt)."
+  * documentation = "Vollständige Digitale Patientenrechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur. Besteht aus dem Dokument selbst sowie optional der übersteuernden Position des Datamatrix-Codes (barcodePosition in pt)."
   * part[+]
     * name = #dokument
     * use = #in
@@ -33,7 +33,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * type = #DocumentReference
     * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
   * part[+]
-    * name = #qrPosition
+    * name = #barcodePosition
     * use = #in
     * min = 0
     * max = "1"
@@ -57,7 +57,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Weitere Anhänge zur Digitalen Patientenrechnung als PDF. Besteht aus dem Dokument selbst sowie optional der übersteuernden Position des Datamatrix-Codes (qrPosition in pt)."
+  * documentation = "Weitere Anhänge zur Digitalen Patientenrechnung als PDF. Besteht aus dem Dokument selbst sowie optional der übersteuernden Position des Datamatrix-Codes (barcodePosition in pt)."
   * part[+]
     * name = #dokument
     * use = #in
@@ -67,7 +67,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * type = #DocumentReference
     * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
   * part[+]
-    * name = #qrPosition
+    * name = #barcodePosition
     * use = #in
     * min = 0
     * max = "1"

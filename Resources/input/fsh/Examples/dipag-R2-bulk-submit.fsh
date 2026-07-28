@@ -19,7 +19,7 @@ InstanceOf: Parameters
     * name = "dokument"
     * resource = BeispielDocumentReferenceRechnung3-LE
   * part[+]
-    * name = "qrPosition"
+    * name = "barcodePosition"
     * part[+]
       * name = "x"
       * valueDecimal = 450

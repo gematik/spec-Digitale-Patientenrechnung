@@ -7,7 +7,7 @@ Usage: #example
     * name = "dokument"
     * resource = BeispielDocumentReferenceRechnung3-FD
   * part[+]
-    * name = "qrPosition"
+    * name = "barcodePosition"
     * part[+]
       * name = "x"
       * valueDecimal = 450

@@ -72,11 +72,11 @@ Weitere Details zur Signatur, siehe [gemSpec_DiPag_FD - Abschnitt 6.5 Signatur](
 
 ### Rechnungsrepräsentation
 
-Die Parameter `rechnung` und `anhang` bestehen jeweils aus mehreren Parts: dem Part `dokument`, welcher die eigentliche DocumentReference enthält, sowie optional dem Part `qrPosition`. Die DocumentReference-Ressource im Part `dokument` MUSS dem Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang` entsprechen.
+Die Parameter `rechnung` und `anhang` bestehen jeweils aus mehreren Parts: dem Part `dokument`, welcher die eigentliche DocumentReference enthält, sowie optional dem Part `barcodePosition`. Die DocumentReference-Ressource im Part `dokument` MUSS dem Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang` entsprechen.
 
 ### Position des Datamatrix-Codes
 
-Der FD bringt auf jedem verarbeiteten Dokument einen Datamatrix-Code (Token-Barcode) an einer Default-Position an. Für jede Rechnung und jeden Anhang KANN diese Position über den Part `qrPosition` übersteuert werden. Dieser enthält die beiden Sub-Parts `x` und `y`, die die gewünschten Koordinaten als `decimal` in der Einheit `pt` (typografischer Punkt) tragen. Wird `qrPosition` angegeben, MÜSSEN `x` und `y` gemeinsam übermittelt werden; andernfalls verwendet der FD die Default-Position.
+Der FD bringt auf jedem verarbeiteten Dokument einen Datamatrix-Code (Token-Barcode) an einer Default-Position an. Für jede Rechnung und jeden Anhang KANN diese Position über den Part `barcodePosition` übersteuert werden. Dieser enthält die beiden Sub-Parts `x` und `y`, die die gewünschten Koordinaten als `decimal` in der Einheit `pt` (typografischer Punkt) tragen. Wird `barcodePosition` angegeben, MÜSSEN `x` und `y` gemeinsam übermittelt werden; andernfalls verwendet der FD die Default-Position.
 
 <fql output="table" headers="true">
 from
