@@ -15,10 +15,22 @@ Instance: BeispielParameterSubmitInput3-LE
 InstanceOf: Parameters
 * parameter[+]
   * name = "rechnung"
-  * resource = BeispielDocumentReferenceRechnung3-LE
+  * part[+]
+    * name = "dokument"
+    * resource = BeispielDocumentReferenceRechnung3-LE
+  * part[+]
+    * name = "barcodePosition"
+    * part[+]
+      * name = "x"
+      * valueDecimal = 450
+    * part[+]
+      * name = "y"
+      * valueDecimal = 720
 * parameter[+]
   * name = "anhang"
-  * resource = BeispielDocumentReferenceSonstigesDokument3-LE
+  * part[+]
+    * name = "dokument"
+    * resource = BeispielDocumentReferenceSonstigesDokument3-LE
 * parameter[+]
   * name = "angereichertesPDF"
   * valueBoolean = true
@@ -55,10 +67,14 @@ Instance: BeispielParameterSubmitInput3.1-LE
 InstanceOf: Parameters
 * parameter[+]
   * name = "rechnung"
-  * resource = BeispielDocumentReferenceRechnung3.1-LE
+  * part[+]
+    * name = "dokument"
+    * resource = BeispielDocumentReferenceRechnung3.1-LE
 * parameter[+]
   * name = "anhang"
-  * resource = BeispielDocumentReferenceSonstigesDokument3.1-LE
+  * part[+]
+    * name = "dokument"
+    * resource = BeispielDocumentReferenceSonstigesDokument3.1-LE
 
 Instance: BeispielDocumentReferenceRechnung3.1-LE
 InstanceOf: DiPagDokumentenmetadatenEingang
