@@ -7,9 +7,9 @@ Title: "Digitale Patientenrechnung Operation Invoice-Submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
 * status = #active
-* version = "1.0.8"
+* version = "1.1.0"
 * experimental = false
-* date = "2026-07-08"
+* date = "2026-07-29"
 * kind = #operation
 * name = "DiPagSubmit"
 * code = #invoice-submit
