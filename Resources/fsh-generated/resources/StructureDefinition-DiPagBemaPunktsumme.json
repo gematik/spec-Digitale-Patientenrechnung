@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "id": "DiPagBemaPunktsumme",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/DiPagBemaPunktsumme",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "name": "DiPagBemaPunktsumme",
   "title": "DiPag BEMA Punktsumme",
   "status": "draft",
