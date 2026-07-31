@@ -1,0 +1,238 @@
+{
+  "codeSystems" : [{
+    "url" : "http://dicom.nema.org/resources/ontology/DCM",
+    "version" : "01",
+    "status" : "active",
+    "name" : "DICOM Controlled Terminology Definitions",
+    "title" : null,
+    "description" : "DICOM Code Definitions (Coding Scheme Designator \"DCM\" Coding Scheme Version \"01\")",
+    "oids" : ["1.2.840.10008.2.16.4"],
+    "uses" : {
+    },
+    "ValueSet-dipag-audit-event-type-vs.html" : "Digitale Patientenrechnung Audit Event Type"
+  },
+  {
+    "url" : "http://dvmd.de/fhir/CodeSystem/kdl",
+    "version" : "2025",
+    "status" : "active",
+    "name" : "CodeSystemKDL",
+    "title" : "CodeSystem Klinische Dokumentenklassen-Liste (Version 2025)",
+    "description" : "Diese CodeSystem-Ressource definiert alle in der Klinischen Dokumentenklassen-Liste aktuell gültigen Codes.",
+    "oids" : ["1.2.276.0.76.5.553"],
+    "uses" : {
+    },
+    "ValueSet-dipag-sonstigesdokument-type-vs.html" : "Digitale Patientenrechnung Sonstiges Dokument Type VS"
+  },
+  {
+    "url" : "http://hl7.org/fhir/restful-interaction",
+    "version" : "4.0.1",
+    "status" : "active",
+    "name" : "FHIR Restful Interactions",
+    "title" : null,
+    "description" : "The set of interactions defined by the RESTful part of the FHIR specification.",
+    "uses" : {
+    },
+    "ValueSet-dipag-audit-event-sub-type-vs.html" : "Digitale Patientenrechnung Audit Event Sub-Type"
+  },
+  {
+    "url" : "http://snomed.info/sct",
+    "version" : null,
+    "status" : "active",
+    "name" : "SNOMED_CT",
+    "title" : "SNOMED CT (all versions)",
+    "description" : "SNOMED CT is the most comprehensive and precise clinical health terminology product in the world, owned and distributed around the world by The International Health Terminology Standards Development Organisation (IHTSDO).",
+    "oids" : ["2.16.840.1.113883.6.96"],
+    "uses" : {
+    },
+    "ValueSet-DiPagVerkehrsmittel.html" : "Digitale PatientenrechnungVerkehrsmittel"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/audit-event-type",
+    "version" : "1.0.0",
+    "status" : "active",
+    "name" : "AuditEventID",
+    "title" : "Audit Event ID",
+    "description" : "Event Types for Audit Events - defined by DICOM with some FHIR specific additions.",
+    "oids" : ["2.16.840.1.113883.4.642.1.1136"],
+    "uses" : {
+    },
+    "ValueSet-dipag-audit-event-type-vs.html" : "Digitale Patientenrechnung Audit Event Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/extra-security-role-type",
+    "version" : "1.0.1",
+    "status" : "active",
+    "name" : "SecurityRoleType",
+    "title" : "Security Role Type",
+    "description" : "This CodeSystem contains Additional FHIR-defined Security Role types not defined elsewhere",
+    "uses" : {
+    },
+    "ValueSet-dipag-audit-event-agent-type-vs.html" : "Digitale Patientenrechnung Audit Event Agent Type"
+  },
+  {
+    "url" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "version" : "11.0.0",
+    "status" : "active",
+    "name" : "ActCode",
+    "title" : "ActCode",
+    "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.\r\n\r\n*Constraints:* The kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems. The coding system will depend on the class of Act, such as LOINC for observations, etc.\r\n\r\nConceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure.\r\n\r\nAct.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+    "oids" : ["2.16.840.1.113883.5.4"],
+    "uses" : {
+    },
+    "ValueSet-dipag-rechnung-behandlungsart-vs.html" : "Digitale Patientenrechnung Rechnung Behandlungsart VS"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagAbrechnungsDiagnoseUseCS",
+    "title" : "Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem",
+    "description" : "CodeSystem für die Qualifizierung von abrechnungsrelevanten Diagnosen, z. B. als Hauptdiagnose",
+    "uses" : {
+    },
+    "ValueSet-dipag-abrechnungs-diagnose-use-vs.html" : "Digitale Patientenrechnung Abrechnungsdiagnose Use ValueSet"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagAuditEventDetailCS",
+    "title" : "Digitale Patientenrechnung Audit Event Detail",
+    "description" : "CodeSystem für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll, z. B. Änderungen an Rechnungsstatus oder Markierung",
+    "uses" : {
+    },
+    "ValueSet-dipag-audit-event-detail-vs.html" : "Digitale Patientenrechnung Audit Event Detail"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagRechnungspositionTypeCS",
+    "title" : "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem",
+    "description" : "CodeSystem für die verschiedenen Typen einer Rechnungsposition (z. B. GOÄ-, GOZ- oder BEMA-Leistung, Laborleistung, Sachkosten/Auslagen, Wegegeld/Reiseentschädigung)",
+    "uses" : {
+    },
+    "ValueSet-dipag-chargeitem-type-VS.html" : "Digitale Patientenrechnung Typ der Rechnungsposition ValueSet"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-dokument-artderarchivierung-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagDokumentArtDerArchivierungCS",
+    "title" : "Digitale Patientenrechnung Dokument ArtDerArchivierung CS",
+    "description" : "CodeSystem für die Angabe der Art der Archivierung eines Dokumentes (ePA oder persönliche Ablage)",
+    "uses" : {
+    },
+    "ValueSet-dipag-dokument-artderarchivierung-vs.html" : "Digitale Patientenrechnung Dokument ArtDerArchivierung VS"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagOperationenCS",
+    "title" : "Digitale Patientenrechnung Operationen",
+    "description" : "CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll",
+    "uses" : {
+    },
+    "ValueSet-dipag-audit-event-sub-type-vs.html" : "Digitale Patientenrechnung Audit Event Sub-Type"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagParticipantRoleCS",
+    "title" : "Digitale Patientenrechnung Teilnehmer Rolle",
+    "description" : "CodeSystem für die Rollen von Beteiligten an einer Digitalen Patientenrechnung (Leistungserbringer, Forderungsinhaber)",
+    "uses" : {
+    },
+    "ValueSet-dipag-participant-role-VS.html" : "Digitale Patientenrechnung Teilnehmer Rolle"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagRechnungAbrechnungsartCS",
+    "title" : "Digitale Patientenrechnung Rechnung Abrechnungsart CS",
+    "description" : "CodeSystem für die verschiedenen Abrechnungsarten (BEMA, GOÄ, GOZ) innerhalb einer Digitalen Patientenrechnung",
+    "uses" : {
+    },
+    "ValueSet-dipag-rechnung-abrechnungsart-vs.html" : "Digitale Patientenrechnung Rechnung Abrechnungsart VS"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagRechnungMarkierungCS",
+    "title" : "Digitale Patientenrechnung Rechnung Markierung CS",
+    "description" : "CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes",
+    "uses" : {
+    },
+    "ValueSet-dipag-rechnung-markierung-vs.html" : "Digitale Patientenrechnung Rechnung Markierung VS"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagRechnungSubmitModusCS",
+    "title" : "Digitale Patientenrechnung Rechnung Submit Modus CS",
+    "description" : "CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit",
+    "uses" : {
+    },
+    "ValueSet-dipag-rechnung-submit-modus-vs.html" : "Digitale Patientenrechnung Rechnung Submit Modus VS"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagRechnungsartCS",
+    "title" : "Digitale Patientenrechnung Rechnungsart CS",
+    "description" : "CodeSystem für die verschiedenen Rechnungsarten (Abschluss- und Teilrechnung) innerhalb einer Digitalen Patientenrechnung",
+    "uses" : {
+    },
+    "ValueSet-dipag-rechnungsart-vs.html" : "Digitale Patientenrechnung Rechnungsart VS"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagRechnungspositionFaktorGruendeCS",
+    "title" : "Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem",
+    "description" : "CodeSystem für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition (z. B. Honorarvereinbarung oder Basistarif)",
+    "uses" : {
+    },
+    "ValueSet-dipag-rechnungsposition-faktor-gruende-auspraegungen-VS.html" : "Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagRechnungspositionZusatzCS",
+    "title" : "Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem",
+    "description" : "CodeSystem für die Zusatzkennzeichen einer Rechnungsposition: auf Verlangen erbrachte Leistung, Leistung zur Früherkennung und analoge Leistung",
+    "uses" : {
+    },
+    "ValueSet-dipag-rechnungsposition-zusatz-VS.html" : "Digitale Patientenrechnung Rechnungsposition Zusatz ValueSet"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagARechnungsstatusCS",
+    "title" : "Digitale Patientenrechnung Rechnungsstatus CS",
+    "description" : "CodeSystem für die Abbildung der verschiedenen Bearbeitungsstatus eines Rechnungsdokuments",
+    "uses" : {
+    },
+    "ValueSet-dipag-rechnungsstatus-vs.html" : "Digitale Patientenrechnung Rechnungsstatus"
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs",
+    "version" : "1.1.0",
+    "status" : "active",
+    "name" : "DiPagTotalPriceComponentTypeCS",
+    "title" : "Digitale Patientenrechnung Art der Rechnungssumme",
+    "description" : "CodeSystem für die Arten von Summenbestandteilen einer Rechnung, z. B. Summe der Rechnungspositionen, Minderungen nach §7 GOZ oder Abzüge wie der Festzuschuss der Kasse",
+    "uses" : {
+    },
+    "ValueSet-dipag-total-price-component-deduction-type-vs.html" : "Digitale Patientenrechnung Art des Abzugs von der Summe der gesamten Rechnungspositionen"
+  }]
+}

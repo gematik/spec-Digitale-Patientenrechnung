@@ -1,0 +1,257 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Invoice/a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d> a fhir:Invoice ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Invoice a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d</b></p><a name=\"a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d\"> </a><a name=\"hca0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnung.html\">Digitale Patientenrechnung Rechnung</a></p></div><p><b>Digitale Patientenrechnung Extension Behandlungsart</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>Digitale Patientenrechnung Extension Fachrichtung</b>: <a href=\"https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&amp;canonical=http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen#AerztlicheFachrichtungen-INNE\">Aerztliche Fachrichtungen: INNE</a> (Innere Medizin)</p><p><b>Invoice.period als Backport aus R5</b>: 2018-10-04 --&gt; 2018-10-19</p><p><b>Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext</b>: Grippaler Infekt; Hepatopathie</p><p><b>identifier</b>: Rechnungsnummer/1425</p><p><b>status</b>: issued</p><p><b>type</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs GOÄ}\">Gebührenordnung für Ärzte</span></p><p><b>subject</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">B. Patient(official) Male, DoB: 1969-10-10 ( Krankenversichertennummer)</a></p><p><b>recipient</b>: <a href=\"Patient-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d.html\">Herr B. Patient</a></p><p><b>date</b>: 2018-10-24</p><blockquote><p><b>participant</b></p><p><b>role</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs leistungserbringer}\">Leistungserbringer</span></p><p><b>actor</b>: <a href=\"Practitioner-2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e.html\">Practitioner Dr. A. Arzt(official)</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>role</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs forderungsinhaber}\">Forderungsinhaber</span></p><p><b>actor</b>: <a href=\"Organization-3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f.html\">Organization Praxis Dr. A. Arzt</a></p></blockquote><p><b>issuer</b>: <a href=\"Organization-3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f.html\">Organization Praxis Dr. A. Arzt</a></p><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 1</p><p><b>chargeItem</b>: <a href=\"ChargeItem-4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a.html\">ChargeItem 1</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>10.72</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 2</p><p><b>chargeItem</b>: <a href=\"ChargeItem-5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b.html\">ChargeItem 5</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>10.72</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 3</p><p><b>chargeItem</b>: <a href=\"ChargeItem-6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c.html\">ChargeItem 70</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>5.36</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 4</p><p><b>chargeItem</b>: <a href=\"ChargeItem-7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d.html\">ChargeItem 1</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>10.72</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 5</p><p><b>chargeItem</b>: <a href=\"ChargeItem-8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e.html\">ChargeItem 5</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>10.72</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 6</p><p><b>chargeItem</b>: <a href=\"ChargeItem-9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f.html\">ChargeItem 3501</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>4.02</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 7</p><p><b>chargeItem</b>: <a href=\"ChargeItem-0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a.html\">ChargeItem 3597.H1</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>2.68</td><td>Euro</td></tr></table></blockquote></blockquote><h3>TotalNets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>54.95</td><td>Euro</td></tr></table><h3>TotalGrosses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>54.95</td><td>Euro</td></tr></table><p><b>paymentTerms</b>: </p><div><p>Zahlbar bis zum 14.11.2018</p>\n</div><p><b>note</b>: </p><blockquote><div><p>Berechnet nach der Gebührenordnung für Ärzte / GOÄ (Stand 01.01.2002). Bitte überweisen Sie den Betrag unter Angabe der Rechnungsnummer und des Rechnungsdatums bis zum 14.11.2018 auf das unten angegebene Konto.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "AMB" ] ;
+       fhir:Coding.display [ fhir:value "ambulatory" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen" ] ;
+       fhir:Coding.code [ fhir:value "INNE" ] ;
+       fhir:Coding.display [ fhir:value "Innere Medizin" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]" ] ;
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2018-10-04"^^xsd:date ] ;
+       fhir:Period.end [ fhir:value "2018-10-19"^^xsd:date ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext" ] ;
+     fhir:Extension.valueString [ fhir:value "Grippaler Infekt; Hepatopathie" ]
+  ] ;
+  fhir:Invoice.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs" ] ;
+         fhir:Coding.code [ fhir:value "invoice" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://praxis-dr-arzt.de/fhir/sid/rechnungsnummer" ] ;
+     fhir:Identifier.value [ fhir:value "1425" ]
+  ] ;
+  fhir:Invoice.status [ fhir:value "issued"] ;
+  fhir:Invoice.type [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs" ] ;
+       fhir:Coding.code [ fhir:value "GOÄ" ] ;
+       fhir:Coding.display [ fhir:value "Gebührenordnung für Ärzte" ]
+     ]
+  ] ;
+  fhir:Invoice.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d> ;
+     fhir:Reference.reference [ fhir:value "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d" ]
+  ] ;
+  fhir:Invoice.recipient [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d> ;
+     fhir:Reference.reference [ fhir:value "Patient/1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d" ] ;
+     fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index -1 ;
+           fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/identifier-type-de-basis" ] ;
+           fhir:Coding.code [ fhir:value "KVZ10" ]
+         ]
+       ] ;
+       fhir:Identifier.system [ fhir:value "http://fhir.de/sid/gkv/kvid-10" ] ;
+       fhir:Identifier.value [ fhir:value "B123456789" ]
+     ] ;
+     fhir:Reference.display [ fhir:value "Herr B. Patient" ]
+  ] ;
+  fhir:Invoice.date [ fhir:value "2018-10-24"^^xsd:date] ;
+  fhir:Invoice.participant [
+     fhir:index -1 ;
+     fhir:Invoice.participant.role [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs" ] ;
+         fhir:Coding.code [ fhir:value "leistungserbringer" ]
+       ]
+     ] ;
+     fhir:Invoice.participant.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.participant.role [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs" ] ;
+         fhir:Coding.code [ fhir:value "forderungsinhaber" ]
+       ]
+     ] ;
+     fhir:Invoice.participant.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f> ;
+       fhir:Reference.reference [ fhir:value "Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f" ]
+     ]
+  ] ;
+  fhir:Invoice.issuer [
+     fhir:link <https://gematik.de/fhir/dipag/Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f> ;
+     fhir:Reference.reference [ fhir:value "Organization/3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f" ]
+  ] ;
+  fhir:Invoice.lineItem [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/4d5e6f7a-8b9c-0d1e-2f3a-4b5c6d7e8f9a" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "10.72"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "2"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/5e6f7a8b-9c0d-1e2f-3a4b-5c6d7e8f9a0b" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "10.72"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "3"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/6f7a8b9c-0d1e-2f3a-4b5c-6d7e8f9a0b1c" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "5.36"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "4"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/7a8b9c0d-1e2f-3a4b-5c6d-7e8f9a0b1c2d" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "10.72"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "5"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/8b9c0d1e-2f3a-4b5c-6d7e-8f9a0b1c2d3e" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "10.72"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "6"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/9c0d1e2f-3a4b-5c6d-7e8f-9a0b1c2d3e4f" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "4.02"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "7"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/0d1e2f3a-4b5c-6d7e-8f9a-0b1c2d3e4f5a" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "2.68"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ] ;
+  fhir:Invoice.totalNet [
+     fhir:Money.value [ fhir:value "54.95"^^xsd:decimal ] ;
+     fhir:Money.currency [ fhir:value "EUR" ]
+  ] ;
+  fhir:Invoice.totalGross [
+     fhir:Money.value [ fhir:value "54.95"^^xsd:decimal ] ;
+     fhir:Money.currency [ fhir:value "EUR" ]
+  ] ;
+  fhir:Invoice.paymentTerms [
+     fhir:value "Zahlbar bis zum 14.11.2018" ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel" ] ;
+       fhir:Extension.valueDate [ fhir:value "2018-11-14"^^xsd:date ]
+     ]
+  ] ;
+  fhir:Invoice.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Berechnet nach der Gebührenordnung für Ärzte / GOÄ (Stand 01.01.2002). Bitte überweisen Sie den Betrag unter Angabe der Rechnungsnummer und des Rechnungsdatums bis zum 14.11.2018 auf das unten angegebene Konto." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Invoice/a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

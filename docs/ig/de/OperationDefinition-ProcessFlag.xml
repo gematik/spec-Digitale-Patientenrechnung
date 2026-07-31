@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="ProcessFlag"/>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: OperationDefinition ProcessFlag</b></p><a name="ProcessFlag"> </a><a name="hcProcessFlag"> </a><p>URL: [base]/DocumentReference/[id]/$process-flag</p><h3>Parameters</h3><table class="grid"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>markierung</td><td/><td>0..*</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a></td><td/><td><div><p>Eine Markierung des Dokuments. Es gilt das Complete-Replacement-Prinzip; der gesamte übermittelte Markierungssatz ersetzt den bisherigen. Wird der Parameter nicht übergeben (0 Markierungen), werden alle änderbaren Markierungen entfernt (Löschen). Die Markierungen 'persönlich' und 'abgerufen durch KTR' bleiben hiervon ausgenommen.</p>
+</div></td></tr><tr><td>OUT</td><td>meta</td><td/><td>1..1</td><td><a href="http://hl7.org/fhir/R4/datatypes.html#Meta">Meta</a></td><td/><td><div><p>Vollständiges Meta-Element des Rechnungsdokuments / des Anhangs inkl. Extension (siehe DiPagDocumentReferenceMarkierung) zur Erfassung der Zusatzinformationen der Markierung</p>
+</div></td></tr></table></div>
+  </text>
+  <url value="https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag"/>
+  <version value="1.1.0"/>
+  <name value="DiPagProcessFlag"/>
+  <title value="Digitale Patientenrechnung Operation ProcessFlag"/>
+  <status value="active"/>
+  <kind value="operation"/>
+  <experimental value="false"/>
+  <date value="2026-07-08"/>
+  <publisher value="gematik GmbH"/>
+  <contact>
+    <name value="gematik GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gematik.de"/>
+    </telecom>
+  </contact>
+  <description value="Setzt die Markierungen eines Rechnungsdokuments (DocumentReference) nach dem Complete-Replacement-Prinzip: Die übermittelten Markierungen ersetzen vollständig den bisherigen Markierungssatz des Dokuments. Markierungen, die nicht im Request enthalten sind, werden entfernt; Änderungen an bestehenden Markierungen erfolgen durch erneutes Übermitteln mit aktualisierten Werten. Der Request muss daher stets alle weiterhin gültigen Markierungen inklusive ihrer jeweiligen Zusatzinformationen vollständig enthalten. Wird kein 'markierung'-Parameter übergeben (leerer Markierungssatz), werden alle änderbaren Markierungen des Dokuments entfernt. Da dies der einzige Endpunkt zur Pflege der Markierungen ist, wird hierüber auch das vollständige Löschen der Markierungen unterstützt.&#xA;&#xA;Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können über diese Operation weder gesetzt noch entfernt werden und werden ignoriert, falls sie übermittelt werden. Sie bleiben sowohl von der Ersetzung als auch von der Löschung unberührt."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <affectsState value="true"/>
+  <code value="process-flag"/>
+  <resource value="DocumentReference"/>
+  <system value="false"/>
+  <type value="false"/>
+  <instance value="true"/>
+  <parameter>
+    <name value="markierung"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="*"/>
+    <documentation value="Eine Markierung des Dokuments. Es gilt das Complete-Replacement-Prinzip; der gesamte übermittelte Markierungssatz ersetzt den bisherigen. Wird der Parameter nicht übergeben (0 Markierungen), werden alle änderbaren Markierungen entfernt (Löschen). Die Markierungen 'persönlich' und 'abgerufen durch KTR' bleiben hiervon ausgenommen."/>
+    <type value="Coding"/>
+    <part>
+      <name value="markierung"/>
+      <use value="in"/>
+      <min value="1"/>
+      <max value="1"/>
+      <documentation value="Typ der Markierung, es können alle Markierungen mitgegeben werden, die Markierungen 'persönlich' und 'abgerufen durch KTR' werden aber wie oben beschrieben ignoriert."/>
+      <type value="Coding"/>
+      <binding>
+        <strength value="required"/>
+        <valueSet value="https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-markierung-vs"/>
+      </binding>
+    </part>
+    <part>
+      <name value="zeitpunkt"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="1"/>
+      <documentation value="Optionaler Zeitpunkt der Markierung"/>
+      <type value="dateTime"/>
+    </part>
+    <part>
+      <name value="details"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="1"/>
+      <documentation value="Optionale Details als Freitext zur Markierung"/>
+      <type value="string"/>
+    </part>
+    <part>
+      <name value="artDerArchivierung"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="1"/>
+      <documentation value="Details zur Art der Archivierung falls Markierung vom Typ 'archiviert' ist. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'archiviert' ist."/>
+      <type value="Coding"/>
+    </part>
+    <part>
+      <name value="kostentraeger"/>
+      <use value="in"/>
+      <min value="0"/>
+      <max value="1"/>
+      <documentation value="Referenz auf den Kostenträger. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', 'eingereicht-post', 'geteilt' oder 'abgerufen' ist."/>
+      <type value="Reference"/>
+    </part>
+  </parameter>
+  <parameter>
+    <name value="meta"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="Vollständiges Meta-Element des Rechnungsdokuments / des Anhangs inkl. Extension (siehe DiPagDocumentReferenceMarkierung) zur Erfassung der Zusatzinformationen der Markierung"/>
+    <type value="Meta"/>
+  </parameter>
+</OperationDefinition>

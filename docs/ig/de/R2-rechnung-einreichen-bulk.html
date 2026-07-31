@@ -1,0 +1,432 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+<html xml:lang="de" xmlns="http://www.w3.org/1999/xhtml" lang="de" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>R2: Rechnung validieren/einreichen (Bulk) - Implementierungsleitfaden Digitale Patientenrechnung v1.1.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="assets/css/cqf.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/ig.gematik.css" rel="stylesheet" />
+<script type="text/javascript" src="assets/js/ig.gematik.min.js"> </script>
+<link href="assets/css/edge-dark.min.css" rel="stylesheet" />
+<script type="text/javascript" src="assets/js/ig.api.doc.gematik.min.js"> </script>
+<link href="assets/css/ig.req.gematik.css" rel="stylesheet" />
+<script type="text/javascript" src="assets/js/ig.req.gematik.min.js"> </script>
+
+<script type="text/javascript" src="assets/js/ig.bibliography.gematik.js"> </script>
+
+<style>
+    .gem-ig-headline-container {
+        -webkit-background-size: 100% auto;
+        -moz-background-size: 100% auto;
+        -o-background-size: 100% auto;
+        background-size: 100% auto;
+        background: url('assets/images/gem-headline.png') no-repeat;
+        background-position: 90% -136px;
+    }
+</style>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"12"}
+    h3,h4,h5,h6{--heading-prefix:"12"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <!-- Placeholder for child template header declarations -->
+
+<div id="hl7-nav">
+    <a id="gem-ig-logo" no-external="true" href="./index.html">
+        <img height="50" alt="Home" src="assets/images/gem-logo.png"/>
+    </a>
+</div>
+
+
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Einführung</a>
+  </li>
+  <li>
+    <a href="release-notes.html">Release Notes</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Über diese Spezifikation
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="zweckbestimmung.html">Zweckbestimmung</a>
+      </li>
+      <li>
+        <a href="hinweis-zu-versionen.html">Hinweis zu Artefakt-Versionen</a>
+      </li>
+      <li>
+        <a href="use-cases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="akteure-und-interaktionen.html">Akteure und Interaktionen</a>
+      </li>
+      <li>
+        <a href="informationsmodell.html">Informationsmodell</a>
+      </li>
+      <li>
+        <a href="begriffsdefinitionen.html">Begriffsdefinitionen</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Szenarien
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="szenarien.html">Übersicht</a>
+      </li>
+      <li>
+        <a href="R0-rechnungsempfaenger-ermitteln.html">R0: Rechnungsempfaenger ermitteln</a>
+      </li>
+      <li>
+        <a href="R1-rechnung-versenden.html">R1: Rechnung versenden</a>
+      </li>
+      <li>
+        <a href="R2-rechnung-einreichen-bulk.html">R2: Rechnung einreichen (Bulk)</a>
+      </li>
+      <li>
+        <a href="R3-pdf-abruf-rechnungsersteller.html">R3: PDF/A-Abruf (Ersteller)</a>
+      </li>
+      <li>
+        <a href="R4-pdf-abruf-rechnungsersteller-bulk.html">R4: PDF/A-Abruf (Ersteller, Bulk)</a>
+      </li>
+      <li>
+        <a href="R5-rechnungsabruf-rechnungsempfaenger.html">R5: Rechnungsabruf (Empfaenger)</a>
+      </li>
+      <li>
+        <a href="R6-abfrage-token-rechnungsempfaenger.html">R6: Abfrage per Token (Empfaenger)</a>
+      </li>
+      <li>
+        <a href="R7-status-aendern.html">R7: Status aendern</a>
+      </li>
+      <li>
+        <a href="R8-markieren.html">R8: Markieren</a>
+      </li>
+      <li>
+        <a href="R9-loeschen.html">R9: Loeschen</a>
+      </li>
+      <li>
+        <a href="R10-nutzungsprotokoll.html">R10: Nutzerprotokoll</a>
+      </li>
+      <li>
+        <a href="R11-abfrage-token-kostentraeger.html">R11: Abfrage per Token (Kostentraeger)</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="rechnungsinhalt.html">Rechnungsinhalt</a>
+  </li>
+  <li>
+    <a href="artifacts.html">FHIR-Artefakte</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <div class="segment"> 
+      <div class="container">
+        
+
+<div class="gem-ig-headline-container"> 
+    <div id="gem-ig-headline" class="col-lg-10 col-md-12">
+        <div class="gem-ig-headline-title">
+            
+Implementierungsleitfaden Digitale Patientenrechnung
+        </div>
+        <div id="ig-status" class="gem-ig-headline-subtitle">
+            <span style="display:inline-block;">Version 1.1.0 - ci-build
+                
+                
+            </span>
+            
+
+        </div>
+    </div>
+</div>
+      </div>
+    </div>
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>R2: Rechnung validieren/einreichen (Bulk)</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  
+  <h2>R2: Rechnung validieren/einreichen (Bulk)</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+  <p>Seiteninhalt:</p>
+
+<ul id="markdown-toc">
+  <li><a href="#r2-rechnung-validiereneinreichen-bulk" id="markdown-toc-r2-rechnung-validiereneinreichen-bulk">R2: Rechnung validieren/einreichen (Bulk)</a>    <ul>
+      <li><a href="#asynchrone-verarbeitung" id="markdown-toc-asynchrone-verarbeitung">Asynchrone Verarbeitung</a></li>
+      <li><a href="#beispiel" id="markdown-toc-beispiel">Beispiel</a></li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+<h1 id="r2-rechnung-validiereneinreichen-bulk">R2: Rechnung validieren/einreichen (Bulk)</h1>
+
+<p>Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das RE-PS als Client. Anwendungsfall AF_10136 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 15: Use Case Rechnung mit Dokumenten validieren und versenden" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTTP-Methode</td>
+      <td>POST</td>
+    </tr>
+    <tr>
+      <td>Endpunkt</td>
+      <td>/ (Root-Endpunkt)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Für die Ausführung der Operation gelten die gleichen Vorgaben wie aus <a href="R1-rechnung-versenden.html">R1: Rechnung versenden</a>. Die Operation <code class="language-plaintext highlighter-rouge">$invoice-submit</code> kann für innerhalb eines Batch-Bundles mehrfach, auch für unterschiedliche Dokumente aufgerufen werden. Es gelten die entsprechenden Vorgaben aus der <a href="https://www.hl7.org/fhir/r4/http.html#transaction">FHIR-Kernspezifikation</a>.</p>
+
+<h3 id="asynchrone-verarbeitung">Asynchrone Verarbeitung</h3>
+
+<p>Diese Interaktion ist aufgrund potenziell großer Datenmengen asynchron vom FD auszuführen.
+Dies MUSS der Client mittels eines <code class="language-plaintext highlighter-rouge">Prefer: respond-async</code>-Headers nach <a href="https://tools.ietf.org/html/rfc7240#section-4.1">RFC7240</a> dem FD signalisieren.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>API-Zustand</th>
+      <th>HTTP-Status-Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Erfolgsfall - <code class="language-plaintext highlighter-rouge">batch</code>-Bundle zur asynchronen Verarbeitung angenommen</td>
+      <td><code class="language-plaintext highlighter-rouge">202 - Accepted</code></td>
+    </tr>
+    <tr>
+      <td>Eine DocumentReferenz mit dem selben Hash existiert bereits</td>
+      <td><code class="language-plaintext highlighter-rouge">409 - Conflict</code> Im OperationOutcome enthalten ist der Zeitpunkt, zu dem die Rechnung schon mal übertragen wurde sowie eine Referenz auf die ursprüngliche Response mit Rechnungstoken.</td>
+    </tr>
+    <tr>
+      <td>Weitere Parameter in HTTP-Anfrage enthalten</td>
+      <td><code class="language-plaintext highlighter-rouge">400 - Bad Request</code></td>
+    </tr>
+    <tr>
+      <td>Syntax für Parameter ist nicht korrekt oder Kardinalitäten werden nicht eingehalten</td>
+      <td><code class="language-plaintext highlighter-rouge">400 - Bad Request</code></td>
+    </tr>
+    <tr>
+      <td>Gravierende Fehler treten während der Validierung auf - Modus = 'normal'</td>
+      <td><code class="language-plaintext highlighter-rouge">400 - Bad Request</code></td>
+    </tr>
+    <tr>
+      <td>Kein valides Access-Token wird mitgesendet</td>
+      <td><code class="language-plaintext highlighter-rouge">401 - Unauthorized</code></td>
+    </tr>
+    <tr>
+      <td>Autorisierter Benutzer verfügt über keine ausreichende Berechtigung die Interaktion auszuführen</td>
+      <td><code class="language-plaintext highlighter-rouge">403 - Forbidden</code></td>
+    </tr>
+    <tr>
+      <td>Fehlende Berechtigung für den Leistungserbringer das Postfach zu verwenden</td>
+      <td><code class="language-plaintext highlighter-rouge">404 - Not Found</code> In diesem Fall: OperationOutcome mit Hinweis, dass Einwilligung nicht vorliegt oder Benutzer nicht vorhanden ist</td>
+    </tr>
+    <tr>
+      <td>Andere HTTP-Methode wird verwendet</td>
+      <td><code class="language-plaintext highlighter-rouge">405 - Method Not Allowed</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Der FD MUSS die Annahme des <code class="language-plaintext highlighter-rouge">batch</code>-Bundles entsprechend den Vorgaben aus der <a href="https://www.hl7.org/fhir/R4/async.html">FHIR-Kernspezifikation zum asynchronen Request Pattern</a> mit dem HTTP-Status-Code <code class="language-plaintext highlighter-rouge">202 - Accepted</code> bestätigen. In einem <code class="language-plaintext highlighter-rouge">Content-Location</code>-Header MUSS der FD dem RE-PS eine absolute URL mitteilen unter welcher das RE-PS per Polling prüfen kann, ob die Interaktion abgeschlossen wurde und entsprechende Rückgabewerte seitens der <code class="language-plaintext highlighter-rouge">$invoice-submit</code>-Operation vorliegen. Der Aufbau der <code class="language-plaintext highlighter-rouge">Content-Location</code>-URL MUSS aus kryptografisch zufälligen Teilen bestehen, sodass der Aufbau nicht deterministisch ermittelt oder erraten werden kann. Solange die Verarbeitung andauert, antwortet der FD beim Polling mit <code class="language-plaintext highlighter-rouge">202 - Accepted</code>; nach Abschluss der Verarbeitung mit <code class="language-plaintext highlighter-rouge">200 - OK</code> und dem <code class="language-plaintext highlighter-rouge">batch-response</code>-Bundle im Body. Der Server SOLLTE RE-PS-Clients mit einem HTTP-Status-Code <code class="language-plaintext highlighter-rouge">429 Too Many Requests</code> abweisen, falls nach dem Ermessen des FDs die <code class="language-plaintext highlighter-rouge">Content-Location</code>-URL zu häufig geprüft wird. Der FD SOLLTE einen <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After">Retry-After</a>-Header entsprechend den Vorgaben aus der <a href="https://www.hl7.org/fhir/R4/async.html#3.1.6.4">FHIR-Kernspezifikation</a> verwenden.</p>
+
+<p>Nach der Verarbeitung des <code class="language-plaintext highlighter-rouge">batch</code>-Bundles MUSS der FD das <code class="language-plaintext highlighter-rouge">batch-response</code>-Bundle unter der <code class="language-plaintext highlighter-rouge">Content-Location</code>-URL bereitstellen, welches die Ergebnisse entsprechnd der Verarbeitung der einzelnen Dokumente nach AF_10271 enthält. Es ist zu beachten, dass der FD die Autorisierung für jedes Dokument gemäß den Vorgaben zu AF_10271 individuell prüfen MUSS. Der FD MUSS sicherstellen, dass das <code class="language-plaintext highlighter-rouge">batch-response</code>-Bundle nur einem validen Access-Token abgerufen werden kann.</p>
+
+<p>Sollte die <code class="language-plaintext highlighter-rouge">Content-Location</code>-URL unvorhergesehen nicht durch den RE-PS abfragbar sein (Systemausfall oder andere Fehler), kann das <code class="language-plaintext highlighter-rouge">batch</code>-Bundles erneut versendet werden. Bereits beim ersten Versand erfolgreich verarbeitete Daten werden in dem Fall mit <code class="language-plaintext highlighter-rouge">200 - OK</code> bestätigt und die ursprüngliche Response wird zurückgegeben. Das Handling von Dubletten erfolgt äquivalent zu R1.</p>
+
+<h3 id="beispiel">Beispiel</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP POST [fachdienst-endpunkt]/
+</code></pre></div></div>
+
+<p><a href="Bundle-BulkSubmitExample.html">Bundle-BulkSubmitExample</a></p>
+
+<p>Unmittelbare Antwort des Fachdienstes auf die Annahme des <code class="language-plaintext highlighter-rouge">batch</code>-Bundles:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP 202 Accepted
+Content-Location: [fachdienst-endpunkt]/[kryptografisch-zufällige-id]
+</code></pre></div></div>
+
+<p>Nach Abschluss der Verarbeitung stellt der FD unter der <code class="language-plaintext highlighter-rouge">Content-Location</code>-URL das <code class="language-plaintext highlighter-rouge">batch-response</code>-Bundle bereit:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HTTP 200 OK
+</code></pre></div></div>
+<p>mit Body:</p>
+
+<p><a href="Bundle-BulkSubmitExampleOutput.html">Bundle-BulkSubmitExampleOutput</a></p>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2025+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.gematik.de">gematik GmbH</a>.  
+          Package de.gematik.dipag#1.1.0 basiert auf <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Erstellt <span title="Fri, Jul 31, 2026 08:25+0000">2026-07-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Inhaltsverzeichnis</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-Bericht</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

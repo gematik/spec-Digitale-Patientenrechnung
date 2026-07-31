@@ -1,0 +1,61 @@
+{
+  "resourceType" : "Organization",
+  "id" : "f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d",
+  "meta" : {
+    "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d</b></p><a name=\"f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d\"> </a><a name=\"hcf4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-institution.html\">Digitale Patientenrechnung Institution</a></p></div><p><b>identifier</b>: Provider number/1-SMC-B-Testkarte-883110000987654, Organisations-ID/109876543</p><p><b>type</b>: <span title=\"Codes:{http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen MZKH}\">Zahnmedizin</span></p><p><b>name</b>: Zahnlabor Müller GmbH</p><p><b>telecom</b>: <a href=\"tel:+4930987654\">+49 30 987654</a></p><p><b>address</b>: Laborstraße 5 Berlin 10116 DE </p></div>"
+  },
+  "identifier" : [{
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "PRN"
+      }]
+    },
+    "system" : "https://gematik.de/fhir/sid/telematik-id",
+    "value" : "1-SMC-B-Testkarte-883110000987654"
+  },
+  {
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "XX"
+      }]
+    },
+    "system" : "http://fhir.de/sid/arge-ik/iknr",
+    "value" : "109876543"
+  }],
+  "type" : [{
+    "coding" : [{
+      "system" : "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen",
+      "code" : "MZKH",
+      "display" : "Zahnmedizin"
+    }]
+  }],
+  "name" : "Zahnlabor Müller GmbH",
+  "telecom" : [{
+    "system" : "phone",
+    "value" : "+49 30 987654"
+  }],
+  "address" : [{
+    "type" : "both",
+    "line" : ["Laborstraße 5"],
+    "_line" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+        "valueString" : "Laborstraße"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+        "valueString" : "5"
+      }]
+    }],
+    "city" : "Berlin",
+    "postalCode" : "10116",
+    "country" : "DE"
+  }]
+}

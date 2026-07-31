@@ -1,0 +1,39 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dipag-rechnung-behandlungsart-vs",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dipag-rechnung-behandlungsart-vs</b></p><a name=\"dipag-rechnung-behandlungsart-vs\"> </a><a name=\"hcdipag-rechnung-behandlungsart-vs\"> </a><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html\"><code>http://terminology.hl7.org/CodeSystem/v3-ActCode</code></a><span title=\"Version is not explicitly stated, which means it is fixed to 11.0.0, the version found through the package references\"> version &#x1F4E6;11.0.0</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">AMB</a></td><td style=\"color: #cccccc\">ambulatory</td><td>A comprehensive term for health care provided in a healthcare facility (e.g. a practitioneraTMs office, clinic setting, or hospital) on a nonresident basis. The term ambulatory usually implies that the patient has come to the location and is not assigned to a bed. Sometimes referred to as an outpatient encounter.</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-behandlungsart-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungBehandlungsartVS",
+  "title" : "Digitale Patientenrechnung Rechnung Behandlungsart VS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "description" : "ValueSet zur Klassifizierung von Behandlungsarten",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+      "concept" : [{
+        "code" : "AMB"
+      }]
+    }]
+  }
+}

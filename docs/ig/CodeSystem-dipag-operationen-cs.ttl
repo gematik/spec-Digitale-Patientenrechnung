@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "dipag-operationen-cs"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-operationen-cs</b></p><a name=\"dipag-operationen-cs\"> </a><a name=\"hcdipag-operationen-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">invoice-submit<a name=\"dipag-operationen-cs-invoice-submit\"> </a></td><td>Digitale Patientenrechnung_Submit</td></tr><tr><td style=\"white-space:nowrap\">retrieve<a name=\"dipag-operationen-cs-retrieve\"> </a></td><td>Digitale Patientenrechnung_Retrieve</td></tr><tr><td style=\"white-space:nowrap\">change-status<a name=\"dipag-operationen-cs-change-status\"> </a></td><td>Digitale Patientenrechnung_ChangeStatus</td></tr><tr><td style=\"white-space:nowrap\">process-flag<a name=\"dipag-operationen-cs-process-flag\"> </a></td><td>Digitale Patientenrechnung_ProcessFlag</td></tr><tr><td style=\"white-space:nowrap\">erase<a name=\"dipag-operationen-cs-erase\"> </a></td><td>Digitale Patientenrechnung_Erase</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs"] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "DiPagOperationenCS"] ;
+  fhir:CodeSystem.title [ fhir:value "Digitale Patientenrechnung Operationen"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-03-26"^^xsd:date] ;
+  fhir:CodeSystem.publisher [ fhir:value "gematik GmbH"] ;
+  fhir:CodeSystem.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "gematik GmbH" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem für die Operationen der Digitalen Patientenrechnung zur Kodierung von Interaktionen im Nutzungsprotokoll"] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "DE" ] ;
+       fhir:Coding.display [ fhir:value "Germany" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "5"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index 0 ;
+     fhir:CodeSystem.concept.code [ fhir:value "invoice-submit" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Digitale Patientenrechnung_Submit" ]
+  ], [
+     fhir:index 1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "retrieve" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Digitale Patientenrechnung_Retrieve" ]
+  ], [
+     fhir:index 2 ;
+     fhir:CodeSystem.concept.code [ fhir:value "change-status" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Digitale Patientenrechnung_ChangeStatus" ]
+  ], [
+     fhir:index 3 ;
+     fhir:CodeSystem.concept.code [ fhir:value "process-flag" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Digitale Patientenrechnung_ProcessFlag" ]
+  ], [
+     fhir:index 4 ;
+     fhir:CodeSystem.concept.code [ fhir:value "erase" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Digitale Patientenrechnung_Erase" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

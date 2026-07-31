@@ -1,0 +1,9 @@
+{
+  "resourceType" : "Parameters",
+  "id" : "BeispielParameterChangeStatusInput",
+  "language" : "de",
+  "parameter" : [{
+    "name" : "tag",
+    "valueCode" : "erledigt"
+  }]
+}

@@ -1,0 +1,52 @@
+{
+  "resourceType" : "ChargeItem",
+  "id" : "d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b",
+  "meta" : {
+    "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b</b></p><a name=\"d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b\"> </a><a name=\"hcd8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-SachkostenAuslagen\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: SachkostenAuslagen</a> (Sachkosten/Auslagen)</p><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2024-02-20</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:\">Dentalmaterial</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2024-02-20 --&gt; 2024-02-20</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c.html\">Organization Zahnarztpraxis Dr. Schulz</a></td></tr></table><p><b>quantity</b>: 2 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>product</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/ifa/pzn 12345678}\">Komposit-Füllungsmaterial</span></p></div>"
+  },
+  "extension" : [{
+    "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+    "valueCoding" : {
+      "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+      "code" : "SachkostenAuslagen"
+    }
+  },
+  {
+    "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+    "valueDate" : "2024-02-20"
+  }],
+  "status" : "billable",
+  "code" : {
+    "text" : "Dentalmaterial"
+  },
+  "subject" : {
+    "reference" : "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"
+  },
+  "occurrencePeriod" : {
+    "start" : "2024-02-20",
+    "end" : "2024-02-20"
+  },
+  "performer" : [{
+    "actor" : {
+      "reference" : "Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"
+    }
+  }],
+  "quantity" : {
+    "value" : 2,
+    "unit" : "Anzahl",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "{count}"
+  },
+  "productCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://fhir.de/CodeSystem/ifa/pzn",
+      "code" : "12345678",
+      "display" : "Komposit XYZ"
+    }],
+    "text" : "Komposit-Füllungsmaterial"
+  }
+}

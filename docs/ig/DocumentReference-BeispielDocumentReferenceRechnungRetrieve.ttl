@@ -1,0 +1,132 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/DocumentReference/BeispielDocumentReferenceRechnungRetrieve> a fhir:DocumentReference ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BeispielDocumentReferenceRechnungRetrieve"] ;
+  fhir:Resource.meta [
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "markierung" ] ;
+         fhir:Extension.valueCoding [
+           fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs" ] ;
+           fhir:Coding.code [ fhir:value "eingereicht-frontend" ] ;
+           fhir:Coding.display [ fhir:value "Eingereicht (per Frontend)" ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "zeitpunkt" ] ;
+         fhir:Extension.valueDateTime [ fhir:value "2024-01-15T10:00:00Z"^^xsd:dateTime ]
+       ] ;
+       fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung" ]
+     ] ;
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern" ;
+       fhir:index 0 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern>
+     ] ;
+     fhir:Meta.tag [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs" ] ;
+       fhir:Coding.code [ fhir:value "offen" ] ;
+       fhir:Coding.display [ fhir:value "Offen" ]
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DocumentReference BeispielDocumentReferenceRechnungRetrieve</b></p><a name=\"BeispielDocumentReferenceRechnungRetrieve\"> </a><a name=\"hcBeispielDocumentReferenceRechnungRetrieve\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-dokumentenmetadaten-intern.html\">Digitale Patientenrechnung Dokumentenmetadaten Intern</a></p><p style=\"margin-bottom: 0px\">Tag: <a href=\"CodeSystem-dipag-rechnungsstatus-cs.html\">Offen (Details: Digitale Patientenrechnung Rechnungsstatus CS code offen = 'Offen')</a></p></div><p><b>Digitale Patientenrechnung DocumentReference Rechnungsdatum</b>: 2024-01-10</p><p><b>Digitale Patientenrechnung Zahlungsziel</b>: 2024-02-10</p><p><b>Digitale Patientenrechnung DocumentReference Gesamtbetrag</b>: <span title=\"Euro\">€120,00</span> (EUR)</p><p><b>Digitale Patientenrechnung DocRef Fachrichtung</b>: <a href=\"https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&amp;canonical=http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen#AerztlicheFachrichtungen-ALLG\">Aerztliche Fachrichtungen: ALLG</a> (Allgemeinmedizin)</p><p><b>Digitale Patientenrechnung Extension Behandlungsart</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>identifier</b>: <code>https://gematik.de/fhir/sid/dipag-token</code>/123-456-789</p><p><b>status</b>: Current</p><p><b>type</b>: <span title=\"Codes:{http://dvmd.de/fhir/CodeSystem/kdl AM010106}\">Rechnung ambulante/stationäre Behandlung</span></p><p><b>subject</b>: Max Mustermann</p><p><b>description</b>: Rechnung Reiseimpfung vom 10.01.2024</p><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/[FD-endpunkt]/Binary/id-der-originalen-rechnung\">[FD-endpunkt]/Binary/id-der-originalen-rechnung</a></td></tr></table><p><b>format</b>: <a href=\"CodeSystem-dipag-attachment-format-cs.html#dipag-attachment-format-cs-originaleRechnung\">Digitale Patientenrechnung Attachment Format CS: originaleRechnung</a> (Das originale PDF der Rechnung)</p></blockquote><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>application/pdf</td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/[FD-endpunkt]/Binary/id-der-angereicherten-rechnung\">[FD-endpunkt]/Binary/id-der-angereicherten-rechnung</a></td></tr></table><p><b>format</b>: <a href=\"CodeSystem-dipag-attachment-format-cs.html#dipag-attachment-format-cs-angereichertesPDF\">Digitale Patientenrechnung Attachment Format CS: angereichertesPDF</a> (Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt)</p></blockquote><blockquote><p><b>content</b></p><h3>Attachments</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ContentType</b></td><td><b>Url</b></td></tr><tr><td style=\"display: none\">*</td><td>application/fhir+json</td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts\">[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts</a></td></tr></table><p><b>format</b>: <a href=\"CodeSystem-dipag-attachment-format-cs.html#dipag-attachment-format-cs-rechnungsinhalt\">Digitale Patientenrechnung Attachment Format CS: rechnungsinhalt</a> (Strukturierter Rechnungsinhalt)</p></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum" ] ;
+     fhir:Extension.valueDateTime [ fhir:value "2024-01-10"^^xsd:date ]
+  ], [
+     fhir:index 1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel" ] ;
+     fhir:Extension.valueDate [ fhir:value "2024-02-10"^^xsd:date ]
+  ], [
+     fhir:index 2 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag" ] ;
+     fhir:Extension.valueMoney [
+       fhir:Money.value [ fhir:value "120"^^xsd:decimal ] ;
+       fhir:Money.currency [ fhir:value "EUR" ]
+     ]
+  ], [
+     fhir:index 3 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-fachrichtung" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen" ] ;
+       fhir:Coding.code [ fhir:value "ALLG" ] ;
+       fhir:Coding.display [ fhir:value "Allgemeinmedizin" ]
+     ]
+  ], [
+     fhir:index 4 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "AMB" ]
+     ]
+  ] ;
+  fhir:DocumentReference.identifier [
+     fhir:index 0 ;
+     fhir:Identifier.system [ fhir:value "https://gematik.de/fhir/sid/dipag-token" ] ;
+     fhir:Identifier.value [ fhir:value "123-456-789" ]
+  ] ;
+  fhir:DocumentReference.status [ fhir:value "current"] ;
+  fhir:DocumentReference.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "http://dvmd.de/fhir/CodeSystem/kdl" ] ;
+       fhir:Coding.code [ fhir:value "AM010106" ] ;
+       fhir:Coding.display [ fhir:value "Rechnung ambulante/stationäre Behandlung" ]
+     ]
+  ] ;
+  fhir:DocumentReference.subject [
+     fhir:Reference.display [ fhir:value "Max Mustermann" ]
+  ] ;
+  fhir:DocumentReference.description [ fhir:value "Rechnung Reiseimpfung vom 10.01.2024"] ;
+  fhir:DocumentReference.content [
+     fhir:index 0 ;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.contentType [ fhir:value "application/pdf" ] ;
+       fhir:Attachment.url [ fhir:value "[FD-endpunkt]/Binary/id-der-originalen-rechnung" ]
+     ] ;
+     fhir:DocumentReference.content.format [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs" ] ;
+       fhir:Coding.code [ fhir:value "originaleRechnung" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.contentType [ fhir:value "application/pdf" ] ;
+       fhir:Attachment.url [ fhir:value "[FD-endpunkt]/Binary/id-der-angereicherten-rechnung" ]
+     ] ;
+     fhir:DocumentReference.content.format [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs" ] ;
+       fhir:Coding.code [ fhir:value "angereichertesPDF" ]
+     ]
+  ], [
+     fhir:index 2 ;
+     fhir:DocumentReference.content.attachment [
+       fhir:Attachment.contentType [ fhir:value "application/fhir+json" ] ;
+       fhir:Attachment.url [ fhir:value "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts" ]
+     ] ;
+     fhir:DocumentReference.content.format [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs" ] ;
+       fhir:Coding.code [ fhir:value "rechnungsinhalt" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/DocumentReference/BeispielDocumentReferenceRechnungRetrieve.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

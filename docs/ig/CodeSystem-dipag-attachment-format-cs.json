@@ -1,0 +1,49 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dipag-attachment-format-cs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-attachment-format-cs</b></p><a name=\"dipag-attachment-format-cs\"> </a><a name=\"hcdipag-attachment-format-cs\"> </a><p>This  code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">originaleRechnung<a name=\"dipag-attachment-format-cs-originaleRechnung\"> </a></td><td>Das originale PDF der Rechnung</td></tr><tr><td style=\"white-space:nowrap\">angereichertesPDF<a name=\"dipag-attachment-format-cs-angereichertesPDF\"> </a></td><td>Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt</td></tr><tr><td style=\"white-space:nowrap\">rechnungsinhalt<a name=\"dipag-attachment-format-cs-rechnungsinhalt\"> </a></td><td>Strukturierter Rechnungsinhalt</td></tr><tr><td style=\"white-space:nowrap\">rechnungsanhang<a name=\"dipag-attachment-format-cs-rechnungsanhang\"> </a></td><td>Rechnungsanhang</td></tr></table></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagAttachmentFormatCS",
+  "title" : "Digitale Patientenrechnung Attachment Format CS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "description" : "CodeSystem für die Abbildung von verschiedenen Formatinhalten eines Dokuments",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "originaleRechnung",
+    "display" : "Das originale PDF der Rechnung"
+  },
+  {
+    "code" : "angereichertesPDF",
+    "display" : "Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"
+  },
+  {
+    "code" : "rechnungsinhalt",
+    "display" : "Strukturierter Rechnungsinhalt"
+  },
+  {
+    "code" : "rechnungsanhang",
+    "display" : "Rechnungsanhang"
+  }]
+}

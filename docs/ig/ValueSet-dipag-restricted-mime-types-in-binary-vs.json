@@ -1,0 +1,42 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "dipag-restricted-mime-types-in-binary-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dipag-restricted-mime-types-in-binary-vs</b></p><a name=\"dipag-restricted-mime-types-in-binary-vs\"> </a><a name=\"hcdipag-restricted-mime-types-in-binary-vs\"> </a><ul><li>Include these codes as defined in <code>urn:ietf:bcp:13</code><span title=\"Version is not explicitly stated. No matching Code System found\"> version Not Stated (use latest from terminology server)</span><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>application/fhir+json</td><td/></tr><tr><td>application/pdf</td><td/></tr></table></li></ul></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-in-binary-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagRestrictedMimeTypesInBinaryVS",
+  "title" : "Digitale Patientenrechnung Restricted Mime Types in Binary",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "description" : "ValueSet der zulässigen MIME-Types für Dokumente der Digitalen Patientenrechnung (PDF und FHIR-JSON)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13",
+      "concept" : [{
+        "code" : "application/fhir+json"
+      },
+      {
+        "code" : "application/pdf"
+      }]
+    }]
+  }
+}

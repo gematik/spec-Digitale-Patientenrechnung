@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/ChargeItem/KfoMehrkosten1-P9> a fhir:ChargeItem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "KfoMehrkosten1-P9"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem KfoMehrkosten1-P9</b></p><a name=\"KfoMehrkosten1-P9\"> </a><a name=\"hcKfoMehrkosten1-P9\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GOZ\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOZ</a> (Leistung nach Gebührenordnung GOZ)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><p><b>Value</b>: 3.6</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Zusatz Extension</b>: <a href=\"CodeSystem-dipag-rechnungsposition-zusatz-cs.html#dipag-rechnungsposition-zusatz-cs-A\">Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem: A</a> (analoge Leistung)</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/gzä 6150}\">Eingliederung eines ungeteilten Bogens, alle Zahngruppen umfassend, je Kiefer</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/KfoMehrkosten1Patient\">Patient/KfoMehrkosten1Patient</a></p><p><b>occurrence</b>: 2024-09-16</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Organization/KfoMehrkosten1Behandler\">Organization/KfoMehrkosten1Behandler</a></td></tr></table><p><b>quantity</b>: 1 {#}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{#} = '{#}')</span></p><p><b>reason</b>: <span title=\"Codes:\">superrealistische, thermoaktive Bögen bei selbstligierten Brackets</span></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs" ] ;
+       fhir:Coding.code [ fhir:value "GOZ" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "Value" ] ;
+         fhir:Extension.valueDecimal [ fhir:value "3.6"^^xsd:decimal ]
+       ] ;
+       fhir:Extension.url [ fhir:value "Faktor" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs" ] ;
+       fhir:Coding.code [ fhir:value "A" ]
+     ]
+  ] ;
+  fhir:ChargeItem.status [ fhir:value "billable"] ;
+  fhir:ChargeItem.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bäk/gzä" ] ;
+       fhir:Coding.code [ fhir:value "6150" ] ;
+       fhir:Coding.display [ fhir:value "Eingliederung eines ungeteilten Bogens, alle Zahngruppen umfassend, je Kiefer" ]
+     ]
+  ] ;
+  fhir:ChargeItem.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/KfoMehrkosten1Patient> ;
+     fhir:Reference.reference [ fhir:value "Patient/KfoMehrkosten1Patient" ]
+  ] ;
+  fhir:ChargeItem.occurrenceDateTime [ fhir:value "2024-09-16"^^xsd:date] ;
+  fhir:ChargeItem.performer [
+     fhir:index -1 ;
+     fhir:ChargeItem.performer.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Organization/KfoMehrkosten1Behandler> ;
+       fhir:Reference.reference [ fhir:value "Organization/KfoMehrkosten1Behandler" ]
+     ]
+  ] ;
+  fhir:ChargeItem.quantity [
+     fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "{#}" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "{#}" ]
+  ] ;
+  fhir:ChargeItem.reason [
+     fhir:index -1 ;
+     fhir:CodeableConcept.text [ fhir:value "superrealistische, thermoaktive Bögen bei selbstligierten Brackets" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/ChargeItem/KfoMehrkosten1-P9.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,1384 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Bundle/BundleExample> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BundleExample"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:Bundle.type [ fhir:value "collection"] ;
+  fhir:Bundle.timestamp [ fhir:value "2024-03-15T14:30:00+01:00"^^xsd:dateTime] ;
+  fhir:Bundle.entry [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e>
+  ], [
+     fhir:index -1 ;
+     fhir:Bundle.entry.fullUrl [ fhir:value "urn:uuid:b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f" ] ;
+     fhir:Bundle.entry.resource <urn:uuid:b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f>
+  ] .
+
+<urn:uuid:c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a> a fhir:Invoice ;
+  fhir:Resource.id [ fhir:value "c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Invoice_c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Invoice c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a</b></p><a name=\"c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a\"> </a><a name=\"hcc3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnung.html\">Digitale Patientenrechnung Rechnung</a></p></div><p><b>Digitale Patientenrechnung Extension Behandlungsart</b>: <a href=\"http://terminology.hl7.org/7.3.0/CodeSystem-v3-ActCode.html#v3-ActCode-AMB\">ActCode: AMB</a> (ambulatory)</p><p><b>Digitale Patientenrechnung Extension Fachrichtung</b>: <a href=\"https://simplifier.net/resolve?scope=de.ihe-d.terminology@3.0.1&amp;canonical=http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen#AerztlicheFachrichtungen-MZKH\">Aerztliche Fachrichtungen: MZKH</a> (Zahnmedizin)</p><p><b>Invoice.period als Backport aus R5</b>: 2024-01-15 --&gt; 2024-03-10</p><blockquote><p><b>Abrechnungsrelevanz von Diagnosen und Prozeduren</b></p><ul><li>Referenz: <a href=\"Condition-f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d.html\">Condition Zahnkaries, nicht näher bezeichnet</a></li><li>Use: <a href=\"CodeSystem-dipag-abrechnungs-diagnose-use-cs.html#dipag-abrechnungs-diagnose-use-cs-main-diagnosis\">Digitale Patientenrechnung Abrechnungsdiagnose Use CodeSystem: main-diagnosis</a> (Hauptdiagnose)</li></ul></blockquote><blockquote><p><b>Abrechnungsrelevanz von Diagnosen und Prozeduren</b></p><ul><li>Referenz: <a href=\"Condition-a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e.html\">Condition Chronische Parodontitis</a></li><li>Referenz: <a href=\"Procedure-b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f.html\">Procedure Implantation alloplastisches Material, Zahn</a></li></ul></blockquote><p><b>Abrechnungsrelevanz von Diagnosen und Prozeduren als Freitext</b>: Behandlung von Karies und Parodontitis mit Implantation</p><p><b>Digitale Patientenrechnung BasedOn Extension</b>: Antragsreferenz/HKP-2024-001-123456</p><p><b>identifier</b>: Rechnungsnummer/RG-2024-001234</p><p><b>status</b>: issued</p><p><b>type</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs GOÄ}, {https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs ABSCHLUSS}\">Gebührenordnung für Ärzte</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>recipient</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann</a></p><p><b>date</b>: 2024-03-15</p><blockquote><p><b>participant</b></p><p><b>role</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs leistungserbringer}\">Leistungserbringer</span></p><p><b>actor</b>: <a href=\"Practitioner-d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b.html\">Practitioner Dr. Anna Mueller(official)</a></p></blockquote><blockquote><p><b>participant</b></p><p><b>role</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs forderungsinhaber}\">Forderungsinhaber</span></p><p><b>actor</b>: <a href=\"Organization-e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c.html\">Organization Zahnarztpraxis Dr. Schulz</a></p></blockquote><p><b>issuer</b>: <a href=\"Organization-e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c.html\">Organization Zahnarztpraxis Dr. Schulz</a></p><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 1</p><p><b>chargeItem</b>: <a href=\"ChargeItem-a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e.html\">ChargeItem Beratung</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>29.35</td><td>Euro</td></tr></table></blockquote><blockquote><p><b>priceComponent</b></p><p><b>type</b>: tax</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>4.69</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 3</p><p><b>chargeItem</b>: <a href=\"ChargeItem-b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f.html\">ChargeItem Professionelle Zahnreinigung</a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>142.8</td><td>Euro</td></tr></table></blockquote><blockquote><p><b>priceComponent</b></p><p><b>type</b>: tax</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>22.8</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 4</p><p><b>chargeItem</b>: <a href=\"ChargeItem-c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a.html\">ChargeItem </a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>952</td><td>Euro</td></tr></table></blockquote><blockquote><p><b>priceComponent</b></p><p><b>type</b>: tax</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>152</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 5</p><p><b>chargeItem</b>: <a href=\"ChargeItem-d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b.html\">ChargeItem </a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>53.55</td><td>Euro</td></tr></table></blockquote><blockquote><p><b>priceComponent</b></p><p><b>type</b>: tax</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>8.55</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>lineItem</b></p><p><b>sequence</b>: 6</p><p><b>chargeItem</b>: <a href=\"ChargeItem-e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c.html\">ChargeItem </a></p><blockquote><p><b>priceComponent</b></p><p><b>type</b>: base price</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>238</td><td>Euro</td></tr></table></blockquote><blockquote><p><b>priceComponent</b></p><p><b>type</b>: tax</p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>45.22</td><td>Euro</td></tr></table></blockquote></blockquote><blockquote><p><b>totalPriceComponent</b></p><p><b>type</b>: base price</p><p><b>code</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs SummeRechnungspositionen}\">Summe aller Rechnungspositionen</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>1415.7</td><td>Euro</td></tr></table></blockquote><blockquote><p><b>totalPriceComponent</b></p><p><b>type</b>: base price</p><p><b>code</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs Fremdlaborleistungen}\">Fremdlaborleistungen</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>800</td><td>Euro</td></tr></table></blockquote><blockquote><p><b>totalPriceComponent</b></p><p><b>type</b>: deduction</p><p><b>code</b>: <span title=\"Codes:{https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs FestzuschussKasse}\">Festzuschuss Kasse</span></p><h3>Amounts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>-250</td><td>Euro</td></tr></table></blockquote><h3>TotalNets</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>1415.7</td><td>Euro</td></tr></table><h3>TotalGrosses</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Currency</b></td></tr><tr><td style=\"display: none\">*</td><td>1648.96</td><td>Euro</td></tr></table><p><b>paymentTerms</b>: </p><div><p>Bitte überweisen Sie den Rechnungsbetrag bis zum 30.04.2024 auf folgendes Konto.</p>\n</div><p><b>note</b>: </p><blockquote><div><p>Gemäß §1 Abs. 2 GOÄ werden diese Leistungen nach dieser Gebührenordnung für Ärzte berechnet. Bitte überweisen Sie den Betrag innerhalb von 14 Tagen.</p>\n</div></blockquote></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ] ;
+       fhir:Coding.code [ fhir:value "AMB" ] ;
+       fhir:Coding.display [ fhir:value "ambulatory" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen" ] ;
+       fhir:Coding.code [ fhir:value "MZKH" ] ;
+       fhir:Coding.display [ fhir:value "Zahnmedizin" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]" ] ;
+     fhir:Extension.valuePeriod [
+       fhir:Period.start [ fhir:value "2024-01-15"^^xsd:date ] ;
+       fhir:Period.end [ fhir:value "2024-03-10"^^xsd:date ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "Referenz" ] ;
+       fhir:Extension.valueReference [
+         fhir:link <https://gematik.de/fhir/dipag/Condition/f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d> ;
+         fhir:Reference.reference [ fhir:value "Condition/f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "Use" ] ;
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-cs" ] ;
+         fhir:Coding.code [ fhir:value "main-diagnosis" ] ;
+         fhir:Coding.display [ fhir:value "Hauptdiagnose" ]
+       ]
+     ] ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "Referenz" ] ;
+       fhir:Extension.valueReference [
+         fhir:link <https://gematik.de/fhir/dipag/Condition/a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e> ;
+         fhir:Reference.reference [ fhir:value "Condition/a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "Referenz" ] ;
+       fhir:Extension.valueReference [
+         fhir:link <https://gematik.de/fhir/dipag/Procedure/b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f> ;
+         fhir:Reference.reference [ fhir:value "Procedure/b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f" ]
+       ]
+     ] ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext" ] ;
+     fhir:Extension.valueString [ fhir:value "Behandlung von Karies und Parodontitis mit Implantation" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagInvoiceBasedOn" ] ;
+     fhir:Extension.valueIdentifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index -1 ;
+           fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs" ] ;
+           fhir:Coding.code [ fhir:value "antragsreferenz" ]
+         ]
+       ] ;
+       fhir:Identifier.system [ fhir:value "https://example.org/fhir/sid/kostenplan" ] ;
+       fhir:Identifier.value [ fhir:value "HKP-2024-001-123456" ]
+     ]
+  ] ;
+  fhir:Invoice.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs" ] ;
+         fhir:Coding.code [ fhir:value "invoice" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://zahnarzt-schulz.de/fhir/sid/rechnungsnummer" ] ;
+     fhir:Identifier.value [ fhir:value "RG-2024-001234" ]
+  ] ;
+  fhir:Invoice.status [ fhir:value "issued"] ;
+  fhir:Invoice.type [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs" ] ;
+       fhir:Coding.code [ fhir:value "GOÄ" ] ;
+       fhir:Coding.display [ fhir:value "Gebührenordnung für Ärzte" ]
+     ], [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs" ] ;
+       fhir:Coding.code [ fhir:value "ABSCHLUSS" ] ;
+       fhir:Coding.display [ fhir:value "Abschlussrechnung" ]
+     ]
+  ] ;
+  fhir:Invoice.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ]
+  ] ;
+  fhir:Invoice.recipient [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ] ;
+     fhir:Reference.identifier [
+       fhir:Identifier.type [
+         fhir:CodeableConcept.coding [
+           fhir:index -1 ;
+           fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/identifier-type-de-basis" ] ;
+           fhir:Coding.code [ fhir:value "KVZ10" ]
+         ]
+       ] ;
+       fhir:Identifier.system [ fhir:value "http://fhir.de/sid/gkv/kvid-10" ] ;
+       fhir:Identifier.value [ fhir:value "K123456789" ]
+     ] ;
+     fhir:Reference.display [ fhir:value "Max Mustermann" ]
+  ] ;
+  fhir:Invoice.date [ fhir:value "2024-03-15"^^xsd:date] ;
+  fhir:Invoice.participant [
+     fhir:index -1 ;
+     fhir:Invoice.participant.role [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs" ] ;
+         fhir:Coding.code [ fhir:value "leistungserbringer" ]
+       ]
+     ] ;
+     fhir:Invoice.participant.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Practitioner/d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.participant.role [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs" ] ;
+         fhir:Coding.code [ fhir:value "forderungsinhaber" ]
+       ]
+     ] ;
+     fhir:Invoice.participant.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c> ;
+       fhir:Reference.reference [ fhir:value "Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c" ]
+     ]
+  ] ;
+  fhir:Invoice.issuer [
+     fhir:link <https://gematik.de/fhir/dipag/Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c> ;
+     fhir:Reference.reference [ fhir:value "Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c" ]
+  ] ;
+  fhir:Invoice.lineItem [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "1"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "29.35"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "tax" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "4.69"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "3"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "142.8"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "tax" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "22.8"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "4"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "952"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "tax" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "152"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "5"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "53.55"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "tax" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "8.55"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.sequence [ fhir:value "6"^^xsd:positiveInteger ] ;
+     fhir:Invoice.lineItem.chargeItemReference [
+       fhir:link <https://gematik.de/fhir/dipag/ChargeItem/e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c> ;
+       fhir:Reference.reference [ fhir:value "ChargeItem/e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c" ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "238"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Invoice.lineItem.priceComponent.type [ fhir:value "tax" ] ;
+       fhir:Invoice.lineItem.priceComponent.amount [
+         fhir:Money.value [ fhir:value "45.22"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ]
+  ] ;
+  fhir:Invoice.totalPriceComponent [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+     fhir:Invoice.lineItem.priceComponent.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs" ] ;
+         fhir:Coding.code [ fhir:value "SummeRechnungspositionen" ] ;
+         fhir:Coding.display [ fhir:value "Summe aller Rechnungspositionen" ]
+       ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent.amount [
+       fhir:Money.value [ fhir:value "1415.7"^^xsd:decimal ] ;
+       fhir:Money.currency [ fhir:value "EUR" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.priceComponent.type [ fhir:value "base" ] ;
+     fhir:Invoice.lineItem.priceComponent.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs" ] ;
+         fhir:Coding.code [ fhir:value "Fremdlaborleistungen" ] ;
+         fhir:Coding.display [ fhir:value "Fremdlaborleistungen" ]
+       ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent.amount [
+       fhir:Money.value [ fhir:value "800"^^xsd:decimal ] ;
+       fhir:Money.currency [ fhir:value "EUR" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Invoice.lineItem.priceComponent.type [ fhir:value "deduction" ] ;
+     fhir:Invoice.lineItem.priceComponent.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs" ] ;
+         fhir:Coding.code [ fhir:value "FestzuschussKasse" ] ;
+         fhir:Coding.display [ fhir:value "Festzuschuss Kasse" ]
+       ]
+     ] ;
+     fhir:Invoice.lineItem.priceComponent.amount [
+       fhir:Money.value [ fhir:value "-250"^^xsd:decimal ] ;
+       fhir:Money.currency [ fhir:value "EUR" ]
+     ]
+  ] ;
+  fhir:Invoice.totalNet [
+     fhir:Money.value [ fhir:value "1415.7"^^xsd:decimal ] ;
+     fhir:Money.currency [ fhir:value "EUR" ]
+  ] ;
+  fhir:Invoice.totalGross [
+     fhir:Money.value [ fhir:value "1648.96"^^xsd:decimal ] ;
+     fhir:Money.currency [ fhir:value "EUR" ]
+  ] ;
+  fhir:Invoice.paymentTerms [
+     fhir:value "Bitte überweisen Sie den Rechnungsbetrag bis zum 30.04.2024 auf folgendes Konto." ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel" ] ;
+       fhir:Extension.valueDate [ fhir:value "2024-04-30"^^xsd:date ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "paymentType" ] ;
+         fhir:Extension.valueCodeableConcept [
+           fhir:CodeableConcept.text [ fhir:value "IBAN" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "account" ] ;
+         fhir:Extension.valueString [ fhir:value "DE89370400440532013000" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "bank" ] ;
+         fhir:Extension.valueString [ fhir:value "Commerzbank AG" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "branch" ] ;
+         fhir:Extension.valueString [ fhir:value "COBADEFFXXX" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "accountHolderName" ] ;
+         fhir:Extension.valueString [ fhir:value "Zahnarztpraxis Dr. Schulz" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "reference" ] ;
+         fhir:Extension.valueString [ fhir:value "RG-2024-001234" ]
+       ] ;
+       fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagPaymentTo" ]
+     ]
+  ] ;
+  fhir:Invoice.note [
+     fhir:index -1 ;
+     fhir:Annotation.text [ fhir:value "Gemäß §1 Abs. 2 GOÄ werden diese Leistungen nach dieser Gebührenordnung für Ärzte berechnet. Bitte überweisen Sie den Betrag innerhalb von 14 Tagen." ]
+  ] .
+
+<urn:uuid:8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> a fhir:Patient ;
+  fhir:Resource.id [ fhir:value "8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Patient_8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Patient 8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c</b></p><a name=\"8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c\"> </a><a name=\"hc8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-patient.html\">Digitale Patientenrechnung Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\"><ul><li>Musterstraße 42 Berlin 10115 DE (home)</li><li>Postfach 123456 Berlin 10115 DE </li></ul></td></tr></table></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/identifier-type-de-basis" ] ;
+         fhir:Coding.code [ fhir:value "KVZ10" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://fhir.de/sid/gkv/kvid-10" ] ;
+     fhir:Identifier.value [ fhir:value "K123456789" ] ;
+     fhir:Identifier.assigner [
+       fhir:Reference.identifier [
+         fhir:Identifier.type [
+           fhir:CodeableConcept.coding [
+             fhir:index -1 ;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+             fhir:Coding.code [ fhir:value "XX" ]
+           ]
+         ] ;
+         fhir:Identifier.system [ fhir:value "http://fhir.de/sid/arge-ik/iknr" ] ;
+         fhir:Identifier.value [ fhir:value "109500969" ]
+       ]
+     ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index -1 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.text [ fhir:value "Max Mustermann" ] ;
+     fhir:HumanName.family [ fhir:value "Mustermann" ] ;
+     fhir:HumanName.given [
+       fhir:value "Max" ;
+       fhir:index -1
+     ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.birthDate [ fhir:value "1980-05-15"^^xsd:date] ;
+  fhir:Patient.address [
+     fhir:index -1 ;
+     fhir:Address.use [ fhir:value "home" ] ;
+     fhir:Address.type [ fhir:value "both" ] ;
+     fhir:Address.line [
+       fhir:value "Musterstraße 42" ;
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" ] ;
+         fhir:Extension.valueString [ fhir:value "Musterstraße" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" ] ;
+         fhir:Extension.valueString [ fhir:value "42" ]
+       ]
+     ] ;
+     fhir:Address.city [ fhir:value "Berlin" ] ;
+     fhir:Address.postalCode [ fhir:value "10115" ] ;
+     fhir:Address.country [ fhir:value "DE" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Address.type [ fhir:value "postal" ] ;
+     fhir:Address.line [
+       fhir:value "Postfach 123456" ;
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" ] ;
+         fhir:Extension.valueString [ fhir:value "123456" ]
+       ]
+     ] ;
+     fhir:Address.city [ fhir:value "Berlin" ] ;
+     fhir:Address.postalCode [ fhir:value "10115" ] ;
+     fhir:Address.country [ fhir:value "DE" ]
+  ] .
+
+<urn:uuid:c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a> a fhir:Practitioner ;
+  fhir:Resource.id [ fhir:value "c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-person>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a</b></p><a name=\"c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a\"> </a><a name=\"hcc1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-person.html\">Digitale Patientenrechnung Person</a></p></div><p><b>identifier</b>: Provider number/1-HBA-Testkarte-883110000123465</p><p><b>name</b>: Dr. Hans Schulz(Official)</p><p><b>telecom</b>: <a href=\"tel:+4930123456\">+49 30 123456</a></p><p><b>address</b>: Praxisstraße 10 Berlin 10115 DE </p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen MZKH}\">Zahnmedizin</span></td></tr></table></div>"
+  ] ;
+  fhir:Practitioner.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "PRN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://gematik.de/fhir/sid/telematik-id" ] ;
+     fhir:Identifier.value [ fhir:value "1-HBA-Testkarte-883110000123465" ]
+  ] ;
+  fhir:Practitioner.name [
+     fhir:index -1 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.text [ fhir:value "Dr. Hans Schulz" ] ;
+     fhir:HumanName.family [ fhir:value "Schulz" ] ;
+     fhir:HumanName.given [
+       fhir:value "Hans" ;
+       fhir:index -1
+     ] ;
+     fhir:HumanName.prefix [
+       fhir:value "Dr." ;
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" ] ;
+         fhir:Extension.valueCode [ fhir:value "AC" ]
+       ]
+     ]
+  ] ;
+  fhir:Practitioner.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+49 30 123456" ]
+  ] ;
+  fhir:Practitioner.address [
+     fhir:index -1 ;
+     fhir:Address.type [ fhir:value "both" ] ;
+     fhir:Address.line [
+       fhir:value "Praxisstraße 10" ;
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" ] ;
+         fhir:Extension.valueString [ fhir:value "Praxisstraße" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" ] ;
+         fhir:Extension.valueString [ fhir:value "10" ]
+       ]
+     ] ;
+     fhir:Address.city [ fhir:value "Berlin" ] ;
+     fhir:Address.postalCode [ fhir:value "10115" ] ;
+     fhir:Address.country [ fhir:value "DE" ]
+  ] ;
+  fhir:Practitioner.qualification [
+     fhir:index -1 ;
+     fhir:Practitioner.qualification.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen" ] ;
+         fhir:Coding.code [ fhir:value "MZKH" ] ;
+         fhir:Coding.display [ fhir:value "Zahnmedizin" ]
+       ]
+     ]
+  ] .
+
+<urn:uuid:d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b> a fhir:Practitioner ;
+  fhir:Resource.id [ fhir:value "d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-person>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Practitioner_d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Practitioner d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b</b></p><a name=\"d2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b\"> </a><a name=\"hcd2e3f4a5-3c4d-5e6f-0a1b-2c3d4e5f6a7b\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-person.html\">Digitale Patientenrechnung Person</a></p></div><p><b>identifier</b>: Provider number/1-HBA-Testkarte-883110000123466</p><p><b>name</b>: Dr. Anna Mueller(Official)</p><p><b>telecom</b>: <a href=\"tel:+4930123457\">+49 30 123457</a></p><p><b>address</b>: Praxisstraße 10 Berlin 10115 DE </p><h3>Qualifications</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen MZKH}\">Zahnmedizin</span></td></tr></table></div>"
+  ] ;
+  fhir:Practitioner.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "PRN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://gematik.de/fhir/sid/telematik-id" ] ;
+     fhir:Identifier.value [ fhir:value "1-HBA-Testkarte-883110000123466" ]
+  ] ;
+  fhir:Practitioner.name [
+     fhir:index -1 ;
+     fhir:HumanName.use [ fhir:value "official" ] ;
+     fhir:HumanName.text [ fhir:value "Dr. Anna Mueller" ] ;
+     fhir:HumanName.family [ fhir:value "Mueller" ] ;
+     fhir:HumanName.given [
+       fhir:value "Anna" ;
+       fhir:index -1
+     ] ;
+     fhir:HumanName.prefix [
+       fhir:value "Dr." ;
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" ] ;
+         fhir:Extension.valueCode [ fhir:value "AC" ]
+       ]
+     ]
+  ] ;
+  fhir:Practitioner.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+49 30 123457" ]
+  ] ;
+  fhir:Practitioner.address [
+     fhir:index -1 ;
+     fhir:Address.type [ fhir:value "both" ] ;
+     fhir:Address.line [
+       fhir:value "Praxisstraße 10" ;
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" ] ;
+         fhir:Extension.valueString [ fhir:value "Praxisstraße" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" ] ;
+         fhir:Extension.valueString [ fhir:value "10" ]
+       ]
+     ] ;
+     fhir:Address.city [ fhir:value "Berlin" ] ;
+     fhir:Address.postalCode [ fhir:value "10115" ] ;
+     fhir:Address.country [ fhir:value "DE" ]
+  ] ;
+  fhir:Practitioner.qualification [
+     fhir:index -1 ;
+     fhir:Practitioner.qualification.code [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen" ] ;
+         fhir:Coding.code [ fhir:value "MZKH" ] ;
+         fhir:Coding.display [ fhir:value "Zahnmedizin" ]
+       ]
+     ]
+  ] .
+
+<urn:uuid:e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c> a fhir:Organization ;
+  fhir:Resource.id [ fhir:value "e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c</b></p><a name=\"e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c\"> </a><a name=\"hce3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-institution.html\">Digitale Patientenrechnung Institution</a></p></div><p><b>identifier</b>: Provider number/1-SMC-B-Testkarte-883110000123465, Primary physician office number/123456789, KZVAbrechnungsnummer/987654321, Umsatzsteuer-ID Nummer (USt-ID-Nr)/DE123456789</p><p><b>type</b>: <span title=\"Codes:{http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen MZKH}\">Zahnmedizin</span></p><p><b>name</b>: Zahnarztpraxis Dr. Schulz</p><p><b>telecom</b>: <a href=\"tel:+4930123456\">+49 30 123456</a></p><p><b>address</b>: Praxisstraße 10 Berlin 10115 DE </p></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "PRN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://gematik.de/fhir/sid/telematik-id" ] ;
+     fhir:Identifier.value [ fhir:value "1-SMC-B-Testkarte-883110000123465" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "BSNR" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR" ] ;
+     fhir:Identifier.value [ fhir:value "123456789" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/identifier-type-de-basis" ] ;
+         fhir:Coding.code [ fhir:value "KZVA" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://fhir.de/sid/kzbv/kzvabrechnungsnummer" ] ;
+     fhir:Identifier.value [ fhir:value "987654321" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs" ] ;
+         fhir:Coding.code [ fhir:value "ustid" ]
+       ]
+     ] ;
+     fhir:Identifier.value [ fhir:value "DE123456789" ]
+  ] ;
+  fhir:Organization.type [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen" ] ;
+       fhir:Coding.code [ fhir:value "MZKH" ] ;
+       fhir:Coding.display [ fhir:value "Zahnmedizin" ]
+     ]
+  ] ;
+  fhir:Organization.name [ fhir:value "Zahnarztpraxis Dr. Schulz"] ;
+  fhir:Organization.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+49 30 123456" ]
+  ] ;
+  fhir:Organization.address [
+     fhir:index -1 ;
+     fhir:Address.type [ fhir:value "both" ] ;
+     fhir:Address.line [
+       fhir:value "Praxisstraße 10" ;
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" ] ;
+         fhir:Extension.valueString [ fhir:value "Praxisstraße" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" ] ;
+         fhir:Extension.valueString [ fhir:value "10" ]
+       ]
+     ] ;
+     fhir:Address.city [ fhir:value "Berlin" ] ;
+     fhir:Address.postalCode [ fhir:value "10115" ] ;
+     fhir:Address.country [ fhir:value "DE" ]
+  ] .
+
+<urn:uuid:f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d> a fhir:Organization ;
+  fhir:Resource.id [ fhir:value "f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Organization_f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Organization f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d</b></p><a name=\"f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d\"> </a><a name=\"hcf4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-institution.html\">Digitale Patientenrechnung Institution</a></p></div><p><b>identifier</b>: Provider number/1-SMC-B-Testkarte-883110000987654, Organisations-ID/109876543</p><p><b>type</b>: <span title=\"Codes:{http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen MZKH}\">Zahnmedizin</span></p><p><b>name</b>: Zahnlabor Müller GmbH</p><p><b>telecom</b>: <a href=\"tel:+4930987654\">+49 30 987654</a></p><p><b>address</b>: Laborstraße 5 Berlin 10116 DE </p></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "PRN" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "https://gematik.de/fhir/sid/telematik-id" ] ;
+     fhir:Identifier.value [ fhir:value "1-SMC-B-Testkarte-883110000987654" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ] ;
+         fhir:Coding.code [ fhir:value "XX" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://fhir.de/sid/arge-ik/iknr" ] ;
+     fhir:Identifier.value [ fhir:value "109876543" ]
+  ] ;
+  fhir:Organization.type [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen" ] ;
+       fhir:Coding.code [ fhir:value "MZKH" ] ;
+       fhir:Coding.display [ fhir:value "Zahnmedizin" ]
+     ]
+  ] ;
+  fhir:Organization.name [ fhir:value "Zahnlabor Müller GmbH"] ;
+  fhir:Organization.telecom [
+     fhir:index -1 ;
+     fhir:ContactPoint.system [ fhir:value "phone" ] ;
+     fhir:ContactPoint.value [ fhir:value "+49 30 987654" ]
+  ] ;
+  fhir:Organization.address [
+     fhir:index -1 ;
+     fhir:Address.type [ fhir:value "both" ] ;
+     fhir:Address.line [
+       fhir:value "Laborstraße 5" ;
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" ] ;
+         fhir:Extension.valueString [ fhir:value "Laborstraße" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" ] ;
+         fhir:Extension.valueString [ fhir:value "5" ]
+       ]
+     ] ;
+     fhir:Address.city [ fhir:value "Berlin" ] ;
+     fhir:Address.postalCode [ fhir:value "10116" ] ;
+     fhir:Address.country [ fhir:value "DE" ]
+  ] .
+
+<urn:uuid:a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e> a fhir:ChargeItem ;
+  fhir:Resource.id [ fhir:value "a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e</b></p><a name=\"a5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e\"> </a><a name=\"hca5b6c7d8-6f7a-8b9c-3d4e-5f6a7b8c9d0e\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GO.196\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOÄ</a> (Leistung nach Gebührenordnung GOÄ)</p><p><b>Digitale Patientenrechnung Rechnungsposition Zusatz Extension</b>: <a href=\"CodeSystem-dipag-rechnungsposition-zusatz-cs.html#dipag-rechnungsposition-zusatz-cs-V\">Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem: V</a> (auf Verlangen erbrachte Leistung)</p><blockquote><p><b>Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension</b></p><p><b>Entfernung</b>: 15 km<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekm = 'km')</span></p><p><b>Nacht</b>: false</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Wegegeld\">Wegegeld</a></blockquote></blockquote><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Einfachsatz\">Einfachsatz</a></blockquote><p><b>value</b>: <span title=\"Euro\">€10,72</span> (EUR)</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Punktzahl\">Punktzahl</a></blockquote><p><b>value</b>: 100</p><p><b>Value</b>: 2.3</p><p><b>FaktorGrund</b>: <a href=\"CodeSystem-dipag-rechnungsposition-faktor-gruende-cs.html#dipag-rechnungsposition-faktor-gruende-cs-AB\">Digitale Patientenrechnung Rechnungsposition Faktor Gründe CodeSystem: AB</a> (Allgemeine Bestimmung)</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2024-01-15</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/goä 1}\">Beratung</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2024-01-15 --&gt; 2024-01-15</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a.html\">Practitioner Dr. Hans Schulz(official)</a></td></tr></table><p><b>quantity</b>: 1 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>reason</b>: <span title=\"Codes:\">Beispiel für Begründung bei Beratung mit Faktorerhöhung: Erheblicher zusätzlicher Zeitaufwand aufgrund komplexer Fragestellung und ausführlicher Erläuterung der Behandlungsmöglichkeiten.</span></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs" ] ;
+       fhir:Coding.code [ fhir:value "GOÄ" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs" ] ;
+       fhir:Coding.code [ fhir:value "V" ] ;
+       fhir:Coding.display [ fhir:value "auf Verlangen erbrachte Leistung" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "Entfernung" ] ;
+         fhir:Extension.valueQuantity [
+           fhir:Quantity.value [ fhir:value "15"^^xsd:decimal ] ;
+           fhir:Quantity.unit [ fhir:value "km" ] ;
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+           fhir:Quantity.code [ fhir:value "km" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "Nacht" ] ;
+         fhir:Extension.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+       ] ;
+       fhir:Extension.url [ fhir:value "Wegegeld" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-wegegeld-reiseentschaedigung" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "Einfachsatz" ] ;
+       fhir:Extension.valueMoney [
+         fhir:Money.value [ fhir:value "10.72"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "Punktzahl" ] ;
+       fhir:Extension.valueDecimal [ fhir:value "100"^^xsd:decimal ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "Value" ] ;
+         fhir:Extension.valueDecimal [ fhir:value "2.3"^^xsd:decimal ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "FaktorGrund" ] ;
+         fhir:Extension.valueCoding [
+           fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs" ] ;
+           fhir:Coding.code [ fhir:value "AB" ] ;
+           fhir:Coding.display [ fhir:value "Allgemeine Bestimmung" ]
+         ]
+       ] ;
+       fhir:Extension.url [ fhir:value "Faktor" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum" ] ;
+     fhir:Extension.valueDate [ fhir:value "2024-01-15"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.status [ fhir:value "billable"] ;
+  fhir:ChargeItem.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bäk/goä" ] ;
+       fhir:Coding.code [ fhir:value "1" ] ;
+       fhir:Coding.display [ fhir:value "Beratung" ]
+     ]
+  ] ;
+  fhir:ChargeItem.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ]
+  ] ;
+  fhir:ChargeItem.occurrencePeriod [
+     fhir:Period.start [ fhir:value "2024-01-15"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2024-01-15"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.performer [
+     fhir:index -1 ;
+     fhir:ChargeItem.performer.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a" ]
+     ]
+  ] ;
+  fhir:ChargeItem.quantity [
+     fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "Anzahl" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "{count}" ]
+  ] ;
+  fhir:ChargeItem.reason [
+     fhir:index -1 ;
+     fhir:CodeableConcept.text [ fhir:value "Beispiel für Begründung bei Beratung mit Faktorerhöhung: Erheblicher zusätzlicher Zeitaufwand aufgrund komplexer Fragestellung und ausführlicher Erläuterung der Behandlungsmöglichkeiten." ]
+  ] .
+
+<urn:uuid:b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f> a fhir:ChargeItem ;
+  fhir:Resource.id [ fhir:value "b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f</b></p><a name=\"b6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f\"> </a><a name=\"hcb6c7d8e9-7a8b-9c0d-4e5f-6a7b8c9d0e1f\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GOZ\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOZ</a> (Leistung nach Gebührenordnung GOZ)</p><p><b>Digitale Patientenrechnung Rechnungsposition Zusatz Extension</b>: <a href=\"CodeSystem-dipag-rechnungsposition-zusatz-cs.html#dipag-rechnungsposition-zusatz-cs-V\">Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem: V</a> (auf Verlangen erbrachte Leistung)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Einfachsatz\">Einfachsatz</a></blockquote><p><b>value</b>: <span title=\"Euro\">€60,00</span> (EUR)</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Punktzahl\">Punktzahl</a></blockquote><p><b>value</b>: 28</p><p><b>Value</b>: 2</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor\">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2024-02-25</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bäk/gzä 1040}\">Professionelle Zahnreinigung</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2024-02-25 --&gt; 2024-02-25</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a.html\">Practitioner Dr. Hans Schulz(official)</a></td></tr></table><p><b>bodysite</b>: <span title=\"Codes:\"></span></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs" ] ;
+       fhir:Coding.code [ fhir:value "GOZ" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs" ] ;
+       fhir:Coding.code [ fhir:value "V" ] ;
+       fhir:Coding.display [ fhir:value "auf Verlangen erbrachte Leistung" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "Einfachsatz" ] ;
+       fhir:Extension.valueMoney [
+         fhir:Money.value [ fhir:value "60"^^xsd:decimal ] ;
+         fhir:Money.currency [ fhir:value "EUR" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "Punktzahl" ] ;
+       fhir:Extension.valueDecimal [ fhir:value "28"^^xsd:decimal ]
+     ], [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "Value" ] ;
+         fhir:Extension.valueDecimal [ fhir:value "2"^^xsd:decimal ]
+       ] ;
+       fhir:Extension.url [ fhir:value "Faktor" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum" ] ;
+     fhir:Extension.valueDate [ fhir:value "2024-02-25"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.status [ fhir:value "billable"] ;
+  fhir:ChargeItem.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bäk/gzä" ] ;
+       fhir:Coding.code [ fhir:value "1040" ] ;
+       fhir:Coding.display [ fhir:value "Professionelle Zahnreinigung" ]
+     ]
+  ] ;
+  fhir:ChargeItem.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ]
+  ] ;
+  fhir:ChargeItem.occurrencePeriod [
+     fhir:Period.start [ fhir:value "2024-02-25"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2024-02-25"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.performer [
+     fhir:index -1 ;
+     fhir:ChargeItem.performer.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a" ]
+     ]
+  ] ;
+  fhir:ChargeItem.bodysite [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion" ] ;
+       fhir:Extension.valueString [ fhir:value "11-48" ]
+     ]
+  ] .
+
+<urn:uuid:c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a> a fhir:ChargeItem ;
+  fhir:Resource.id [ fhir:value "c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a</b></p><a name=\"c7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a\"> </a><a name=\"hcc7d8e9f0-8b9c-0d1e-5f6a-7b8c9d0e1f2a\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-Fremdlaborleistung\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: Fremdlaborleistung</a> (Fremdlaborleistung)</p><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2024-03-01</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:\">Teilprothese Oberkiefer</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2024-03-01 --&gt; 2024-03-10</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d.html\">Organization Zahnlabor Müller GmbH</a></td></tr></table><p><b>quantity</b>: 1 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs" ] ;
+       fhir:Coding.code [ fhir:value "Fremdlaborleistung" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum" ] ;
+     fhir:Extension.valueDate [ fhir:value "2024-03-01"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.status [ fhir:value "billable"] ;
+  fhir:ChargeItem.code [
+     fhir:CodeableConcept.text [ fhir:value "Teilprothese Oberkiefer" ]
+  ] ;
+  fhir:ChargeItem.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ]
+  ] ;
+  fhir:ChargeItem.occurrencePeriod [
+     fhir:Period.start [ fhir:value "2024-03-01"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2024-03-10"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.performer [
+     fhir:index -1 ;
+     fhir:ChargeItem.performer.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Organization/f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d> ;
+       fhir:Reference.reference [ fhir:value "Organization/f4a5b6c7-5e6f-7a8b-2c3d-4e5f6a7b8c9d" ]
+     ]
+  ] ;
+  fhir:ChargeItem.quantity [
+     fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "Anzahl" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "{count}" ]
+  ] .
+
+<urn:uuid:d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b> a fhir:ChargeItem ;
+  fhir:Resource.id [ fhir:value "d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b</b></p><a name=\"d8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b\"> </a><a name=\"hcd8e9f0a1-9c0d-1e2f-6a7b-8c9d0e1f2a3b\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-SachkostenAuslagen\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: SachkostenAuslagen</a> (Sachkosten/Auslagen)</p><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2024-02-20</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:\">Dentalmaterial</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2024-02-20 --&gt; 2024-02-20</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c.html\">Organization Zahnarztpraxis Dr. Schulz</a></td></tr></table><p><b>quantity</b>: 2 Anzahl<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{count} = '{count}')</span></p><p><b>product</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/ifa/pzn 12345678}\">Komposit-Füllungsmaterial</span></p></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs" ] ;
+       fhir:Coding.code [ fhir:value "SachkostenAuslagen" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum" ] ;
+     fhir:Extension.valueDate [ fhir:value "2024-02-20"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.status [ fhir:value "billable"] ;
+  fhir:ChargeItem.code [
+     fhir:CodeableConcept.text [ fhir:value "Dentalmaterial" ]
+  ] ;
+  fhir:ChargeItem.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ]
+  ] ;
+  fhir:ChargeItem.occurrencePeriod [
+     fhir:Period.start [ fhir:value "2024-02-20"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2024-02-20"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.performer [
+     fhir:index -1 ;
+     fhir:ChargeItem.performer.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c> ;
+       fhir:Reference.reference [ fhir:value "Organization/e3f4a5b6-4d5e-6f7a-1b2c-3d4e5f6a7b8c" ]
+     ]
+  ] ;
+  fhir:ChargeItem.quantity [
+     fhir:Quantity.value [ fhir:value "2"^^xsd:decimal ] ;
+     fhir:Quantity.unit [ fhir:value "Anzahl" ] ;
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+     fhir:Quantity.code [ fhir:value "{count}" ]
+  ] ;
+  fhir:ChargeItem.productCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/ifa/pzn" ] ;
+       fhir:Coding.code [ fhir:value "12345678" ] ;
+       fhir:Coding.display [ fhir:value "Komposit XYZ" ]
+     ] ;
+     fhir:CodeableConcept.text [ fhir:value "Komposit-Füllungsmaterial" ]
+  ] .
+
+<urn:uuid:e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c> a fhir:ChargeItem ;
+  fhir:Resource.id [ fhir:value "e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"ChargeItem_e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c\"> </a><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c</b></p><a name=\"e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c\"> </a><a name=\"hce9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-WegegeldReiseentschaedigung\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: WegegeldReiseentschaedigung</a> (Wegegeld/Reiseentschädigung)</p><blockquote><p><b>Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension</b></p><p><b>Abwesenheit</b>: 3 h<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeh = 'h')</span></p><p><b>Entfernung</b>: 50 km<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekm = 'km')</span></p><p><b>Uebernachtung</b>: <span title=\"Euro\">€80,00</span> (EUR)</p><p><b>Verkehrsmittel</b>: <a href=\"http://snomed.info/id/46160005\">SNOMED CT: 46160005</a> (Motor vehicle)</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Reiseentschaedigung\">Reiseentschaedigung</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2024-03-05</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:\">Reiseentschädigung für Hausbesuch</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2024-03-05 --&gt; 2024-03-05</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a.html\">Practitioner Dr. Hans Schulz(official)</a></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs" ] ;
+       fhir:Coding.code [ fhir:value "WegegeldReiseentschaedigung" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Element.extension [
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "Abwesenheit" ] ;
+         fhir:Extension.valueQuantity [
+           fhir:Quantity.value [ fhir:value "3"^^xsd:decimal ] ;
+           fhir:Quantity.unit [ fhir:value "h" ] ;
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+           fhir:Quantity.code [ fhir:value "h" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "Entfernung" ] ;
+         fhir:Extension.valueQuantity [
+           fhir:Quantity.value [ fhir:value "50"^^xsd:decimal ] ;
+           fhir:Quantity.unit [ fhir:value "km" ] ;
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+           fhir:Quantity.code [ fhir:value "km" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "Uebernachtung" ] ;
+         fhir:Extension.valueMoney [
+           fhir:Money.value [ fhir:value "80"^^xsd:decimal ] ;
+           fhir:Money.currency [ fhir:value "EUR" ]
+         ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "Verkehrsmittel" ] ;
+         fhir:Extension.valueCoding [
+           a sct:46160005 ;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+           fhir:Coding.code [ fhir:value "46160005" ] ;
+           fhir:Coding.display [ fhir:value "Motor vehicle" ]
+         ]
+       ] ;
+       fhir:Extension.url [ fhir:value "Reiseentschaedigung" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-wegegeld-reiseentschaedigung" ]
+  ], [
+     fhir:index -1 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum" ] ;
+     fhir:Extension.valueDate [ fhir:value "2024-03-05"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.status [ fhir:value "billable"] ;
+  fhir:ChargeItem.code [
+     fhir:CodeableConcept.text [ fhir:value "Reiseentschädigung für Hausbesuch" ]
+  ] ;
+  fhir:ChargeItem.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ]
+  ] ;
+  fhir:ChargeItem.occurrencePeriod [
+     fhir:Period.start [ fhir:value "2024-03-05"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2024-03-05"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.performer [
+     fhir:index -1 ;
+     fhir:ChargeItem.performer.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a" ]
+     ]
+  ] .
+
+<urn:uuid:f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d</b></p><a name=\"f0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d\"> </a><a name=\"hcf0a1b2c3-1e2f-3a4b-8c9d-0e1f2a3b4c5d\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsdiagnose.html\">Digitale Patientenrechnung Rechnungsdiagnose</a></p></div><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm K02.9}\">Zahnkaries, nicht näher bezeichnet</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>onset</b>: 2024-01-15</p></div>"
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/icd-10-gm" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "K02.9" ] ;
+       fhir:Coding.display [ fhir:value "Zahnkaries, nicht näher bezeichnet" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ]
+  ] ;
+  fhir:Condition.onsetDateTime [ fhir:value "2024-01-15"^^xsd:date] .
+
+<urn:uuid:a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e> a fhir:Condition ;
+  fhir:Resource.id [ fhir:value "a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Condition_a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Condition a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e</b></p><a name=\"a1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e\"> </a><a name=\"hca1b2c3d4-2f3a-4b5c-9d0e-1f2a3b4c5d6e\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsdiagnose.html\">Digitale Patientenrechnung Rechnungsdiagnose</a></p></div><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/icd-10-gm K05.3}\">Chronische Parodontitis</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>onset</b>: 2024-01-15</p></div>"
+  ] ;
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/icd-10-gm" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "K05.3" ] ;
+       fhir:Coding.display [ fhir:value "Chronische Parodontitis" ]
+     ]
+  ] ;
+  fhir:Condition.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ]
+  ] ;
+  fhir:Condition.onsetDateTime [ fhir:value "2024-01-15"^^xsd:date] .
+
+<urn:uuid:b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f> a fhir:Procedure ;
+  fhir:Resource.id [ fhir:value "b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><a name=\"Procedure_b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f\"> </a><p class=\"res-header-id\"><b>Generated Narrative: Procedure b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f</b></p><a name=\"b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f\"> </a><a name=\"hcb2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsprozedur.html\">Digitale Patientenrechnung Rechnungsprozedur</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-232.00}\">Implantation alloplastisches Material, Zahn</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>performed</b>: 2024-02-20</p></div>"
+  ] ;
+  fhir:Procedure.status [ fhir:value "completed"] ;
+  fhir:Procedure.code [
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/bfarm/ops" ] ;
+       fhir:Coding.version [ fhir:value "2024" ] ;
+       fhir:Coding.code [ fhir:value "5-232.00" ] ;
+       fhir:Coding.display [ fhir:value "Implantation alloplastisches Material, Zahn" ]
+     ]
+  ] ;
+  fhir:Procedure.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ]
+  ] ;
+  fhir:Procedure.performedDateTime [ fhir:value "2024-02-20"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Bundle/BundleExample.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

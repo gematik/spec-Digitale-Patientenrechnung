@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="BeispielParameterProcessFlagOutput"/>
+  <parameter>
+    <name value="meta"/>
+    <valueMeta>
+      <extension url="https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung">
+        <extension url="markierung">
+          <valueCoding>
+            <system value="https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs"/>
+            <code value="bezahlt"/>
+          </valueCoding>
+        </extension>
+        <extension url="zeitpunkt">
+          <valueDateTime value="2024-05-30T13:00:00.123+02:00"/>
+        </extension>
+        <extension url="details">
+          <valueString value="Bezahlt mit falschem Betreff"/>
+        </extension>
+      </extension>
+      <extension url="https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung">
+        <extension url="markierung">
+          <valueCoding>
+            <system value="https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs"/>
+            <code value="gelesen"/>
+          </valueCoding>
+        </extension>
+      </extension>
+      <versionId value="2"/>
+      <lastUpdated value="2024-05-31T13:00:00.123+02:00"/>
+      <tag>
+        <system value="https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs"/>
+        <code value="erledigt"/>
+      </tag>
+    </valueMeta>
+  </parameter>
+</Parameters>

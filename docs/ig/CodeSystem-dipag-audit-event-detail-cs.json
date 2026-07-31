@@ -1,0 +1,51 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dipag-audit-event-detail-cs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-audit-event-detail-cs</b></p><a name=\"dipag-audit-event-detail-cs\"> </a><a name=\"hcdipag-audit-event-detail-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">Allgemein<a name=\"dipag-audit-event-detail-cs-Allgemein\"> </a></td><td>Allgemeine Interaktion mit einem Objekt</td></tr><tr><td style=\"white-space:nowrap\">Rechnungsversand-Berechtigung<a name=\"dipag-audit-event-detail-cs-Rechnungsversand-Berechtigung\"> </a></td><td>Rechnungsversand-Berechtigung</td></tr><tr><td style=\"white-space:nowrap\">DocumentReference.meta.tag:dipag-rechnungsstatus<a name=\"dipag-audit-event-detail-cs-DocumentReference.46meta.46tag.58dipag-rechnungsstatus\"> </a></td><td>Rechnungsstatus</td></tr><tr><td style=\"white-space:nowrap\">DocumentReference.meta.extension:markierung<a name=\"dipag-audit-event-detail-cs-DocumentReference.46meta.46extension.58markierung\"> </a></td><td>Markierung</td></tr></table></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagAuditEventDetailCS",
+  "title" : "Digitale Patientenrechnung Audit Event Detail",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "description" : "CodeSystem für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll, z. B. Änderungen an Rechnungsstatus oder Markierung",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "Allgemein",
+    "display" : "Allgemeine Interaktion mit einem Objekt"
+  },
+  {
+    "code" : "Rechnungsversand-Berechtigung",
+    "display" : "Rechnungsversand-Berechtigung"
+  },
+  {
+    "code" : "DocumentReference.meta.tag:dipag-rechnungsstatus",
+    "display" : "Rechnungsstatus"
+  },
+  {
+    "code" : "DocumentReference.meta.extension:markierung",
+    "display" : "Markierung"
+  }]
+}
