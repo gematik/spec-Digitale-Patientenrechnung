@@ -1,11 +1,11 @@
 ---
 expand: 2
-topic: AF_10245
+topic: OD-erase
 ---
 
 ## {{page-title}}
 
-Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das DiPag FdV als Client. Anwendungsfall AF_10245 MUSS durch den FD über die spezifizierte API umgesetzt werden. Die Vorgaben aus "Tabelle 27: Use Case Automatisches endgültiges Löschen von Rechnungen" des Feature-Dokumentes MÜSSEN eingehalten werden durch den FD.
+Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das DiPag FdV als Client. Diese Interaktion MUSS durch den FD über die spezifizierte API umgesetzt werden.
 
 
 |||

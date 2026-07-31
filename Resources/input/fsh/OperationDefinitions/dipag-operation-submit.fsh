@@ -7,9 +7,9 @@ Title: "Digitale Patientenrechnung Operation Invoice-Submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
 * status = #active
-* version = "1.0.8"
+* version = "1.1.0"
 * experimental = false
-* date = "2026-07-08"
+* date = "2026-07-29"
 * kind = #operation
 * name = "DiPagSubmit"
 * code = #invoice-submit
@@ -23,17 +23,69 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * use = #in
   * min = 1
   * max = "1"
-  * documentation = "Vollständige Digitale Patientenrechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
-  * type = #DocumentReference
-  * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
+  * documentation = "Vollständige Digitale Patientenrechnung mit verschiedenen Attachments: 1) Rechnungs-PDF 2) Strukturierte Daten OHNE Signatur. Besteht aus dem Dokument selbst sowie optional der übersteuernden Position des Datamatrix-Codes (barcodePosition in pt)."
+  * part[+]
+    * name = #dokument
+    * use = #in
+    * min = 1
+    * max = "1"
+    * documentation = "Die Digitale Patientenrechnung als DocumentReference. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
+    * type = #DocumentReference
+    * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
+  * part[+]
+    * name = #barcodePosition
+    * use = #in
+    * min = 0
+    * max = "1"
+    * documentation = "Optionale Übersteuerung der Position des Datamatrix-Codes auf dem Dokument. Übersteuert die Default-Position des Fachdienstes. Besteht aus den Sub-Parts x und y (jeweils Quantity in der Einheit pt / typografischer Punkt)."
+    * part[+]
+      * name = #x
+      * use = #in
+      * min = 1
+      * max = "1"
+      * documentation = "X-Position des Datamatrix-Codes in pt (typografischer Punkt)."
+      * type = #decimal
+    * part[+]
+      * name = #y
+      * use = #in
+      * min = 1
+      * max = "1"
+      * documentation = "Y-Position des Datamatrix-Codes in pt (typografischer Punkt)."
+      * type = #decimal
 * parameter[+]
   * name = #anhang
   * use = #in
   * min = 0
   * max = "*"
-  * documentation = "Weitere Anhänge zur Digitalen Patientenrechnung als PDF. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
-  * type = #DocumentReference
-  * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
+  * documentation = "Weitere Anhänge zur Digitalen Patientenrechnung als PDF. Besteht aus dem Dokument selbst sowie optional der übersteuernden Position des Datamatrix-Codes (barcodePosition in pt)."
+  * part[+]
+    * name = #dokument
+    * use = #in
+    * min = 1
+    * max = "1"
+    * documentation = "Der Anhang als DocumentReference. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
+    * type = #DocumentReference
+    * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
+  * part[+]
+    * name = #barcodePosition
+    * use = #in
+    * min = 0
+    * max = "1"
+    * documentation = "Optionale Übersteuerung der Position des Datamatrix-Codes auf dem Anhang. Übersteuert die Default-Position des Fachdienstes. Besteht aus den Sub-Parts x und y (jeweils Quantity in der Einheit pt / typografischer Punkt)."
+    * part[+]
+      * name = #x
+      * use = #in
+      * min = 1
+      * max = "1"
+      * documentation = "X-Position des Datamatrix-Codes in pt (typografischer Punkt)."
+      * type = #decimal
+    * part[+]
+      * name = #y
+      * use = #in
+      * min = 1
+      * max = "1"
+      * documentation = "Y-Position des Datamatrix-Codes in pt (typografischer Punkt)."
+      * type = #decimal
 * parameter[+]
   * name = #modus
   * use = #in

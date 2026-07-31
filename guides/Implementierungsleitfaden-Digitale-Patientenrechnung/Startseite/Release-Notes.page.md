@@ -10,6 +10,22 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.1.0
+
+Diese Version enthält eine nicht rückwärtskompatible Änderung an der `$invoice-submit`-Schnittstelle (Struktur der Eingabeparameter `rechnung` und `anhang`), daher der Sprung auf 1.1.0.
+
+#### OperationDefinitions
+
+* **DiPagOperationSubmit** (`invoice-submit`): Die Eingabeparameter `rechnung` und `anhang` sind nun keine direkten Ressourcen-Parameter mehr, sondern in Parts strukturiert (**Breaking Change**):
+  * Part `dokument` (1..1, `DocumentReference` mit `targetProfile` **DiPagDokumentenmetadatenEingang**) enthält die eigentliche Rechnung bzw. den Anhang. Die strikte Validierung (Ablehnung nicht profilierter Extensions) gilt unverändert für diesen Part.
+  * Neuer Part `barcodePosition` (0..1) zur optionalen Übersteuerung der Position des Datamatrix-Codes (Token-Barcode) auf dem jeweiligen Dokument. Er besteht aus den Sub-Parts `x` und `y` (jeweils 1..1, Typ `decimal`) mit den Zielkoordinaten in `pt` (typografischer Punkt), ausgehend von der unteren linken Ecke der PDF. Wird `barcodePosition` angegeben, MÜSSEN `x` und `y` gemeinsam übermittelt werden; ohne Angabe gilt die Default-Position des Fachdienstes.
+  * Szenariobeschreibung ({{pagelink:AF_10136}}) um den Abschnitt "Position des Datamatrix-Codes" ergänzt sowie alle Submit-Eingabebeispiele (R1 und R2-Bulk) an die neue Parameterstruktur angepasst.
+
+#### Redaktionelle Änderungen
+
+* **Löschen eines Rechnungsvorganges ({{pagelink:OD-erase}})**: Die Interaktion ist nicht länger dem Use Case AF_10245 zugeordnet (dieser umfasst ausschließlich das manuelle Ändern des Bearbeitungsstatus) und wird nun unter dem eigenen Topic `OD-erase` geführt; der Verweis auf "Tabelle 27: Use Case Automatisches endgültiges Löschen von Rechnungen" des Feature-Dokumentes wurde entfernt.
+* Doppelten Eintrag zum Use Case AF_10262 auf der Seite "Akteure und Interaktionen" entfernt und Schreibfehler ("Kostentraäger") in {{pagelink:UseCases}} korrigiert.
+
 ### Version 1.0.8
 
 #### Profile und Extensions
