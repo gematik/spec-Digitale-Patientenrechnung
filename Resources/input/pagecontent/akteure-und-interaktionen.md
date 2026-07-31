@@ -62,10 +62,6 @@ Siehe Abschnitt "6.2.4 Validierung und Versand von Rechnungen und Dokumenten" de
 
 Siehe Abschnitt "6.3.1 Abruf von Rechnungen und Dokumenten" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter [R6: Abfrage per Token (Rechnungsempfänger)](R6-abfrage-token-rechnungsempfaenger.html).
 
-#### Use Case AF_10262 - Abfrage von Daten zu Rechnungen und Dokumenten per Token (Rechnungsempfänger)
-
-Siehe Abschnitt "6.3.1 Abruf von Rechnungen und Dokumenten" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter [R6: Abfrage per Token (Rechnungsempfänger)](R6-abfrage-token-rechnungsempfaenger.html).
-
 #### Use Case AF_10245 - Manuelles Ändern des Bearbeitungsstatus von Rechnungen
 
 Siehe Abschnitt "6.4 Verwaltung von empfangenen Rechnungen" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter [R7: Bearbeitungsstatus ändern](R7-status-aendern.html).
@@ -74,7 +70,7 @@ Siehe Abschnitt "6.4 Verwaltung von empfangenen Rechnungen" des Feature-Dokument
 
 Siehe Abschnitt "6.4 Verwaltung von empfangenen Rechnungen" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter [R8: Markieren](R8-markieren.html).
 
-#### Use Case AF_10245 - Löschen eines Rechnungsvorganges
+#### Löschen eines Rechnungsvorganges
 
 Siehe Abschnitt "6.4 Verwaltung von empfangenen Rechnungen" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter [R9: Löschen eines Rechnungsvorganges](R9-loeschen.html).
 

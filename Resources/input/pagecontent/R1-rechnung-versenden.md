@@ -66,13 +66,17 @@ Weitere Details zur Signatur, siehe [gemSpec_DiPag_FD - Abschnitt 6.5 Signatur](
 
 ### Rechnungsrepräsentation
 
-Die DocumentReference-Ressourcen welche über die Parameter `rechnung` und `anhang` übermittelt werden MÜSSEN dem Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang` entsprechen.
+Die Parameter `rechnung` und `anhang` bestehen jeweils aus mehreren Parts: dem Part `dokument`, welcher die eigentliche DocumentReference enthält, sowie optional dem Part `barcodePosition`. Die DocumentReference-Ressource im Part `dokument` MUSS dem Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang` entsprechen.
 
 <br>
 
 [Profil StructureDefinition-dipag-dokumentenmetadaten-eingang](StructureDefinition-dipag-dokumentenmetadaten-eingang.html)
 
 Implementierungshinweise zu den einzelnen Feldern (Spalte „Kommentar") finden sich auf der oben verlinkten Profilseite.
+
+### Position des Datamatrix-Codes
+
+Der FD bringt auf jedem verarbeiteten Dokument einen Datamatrix-Code (Token-Barcode) an einer Default-Position an. Für jede Rechnung und jeden Anhang KANN diese Position über den Part `barcodePosition` übersteuert werden. Er enthält die Sub-Parts `x` und `y` mit den Zielkoordinaten als `decimal` in `pt` (typografischer Punkt) ausgehend von der unteren, linken Ecke der PDF. Wird `barcodePosition` angegeben, MÜSSEN `x` und `y` gemeinsam übermittelt werden. Ohne `barcodePosition` gilt die Default-Position.
 
 ### Beispiele
 

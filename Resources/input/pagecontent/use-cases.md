@@ -14,7 +14,7 @@ Für Hersteller von Frontends der Versicherten werden Schnittstellen bereitgeste
 * Einreichung von Rechnungen
 * Einrichtung und Verwaltung von Nutzerkonten
 
-Für Hersteller von IT-Systemen für Kostentraäger werden Schnittstellen bereitgestellt für die  User Stories zu den Prozessteilen:
+Für Hersteller von IT-Systemen für Kostenträger werden Schnittstellen bereitgestellt für die  User Stories zu den Prozessteilen:
 
 * Einreichung von Rechnungen
 * Verwaltung von Nutzerkonten
