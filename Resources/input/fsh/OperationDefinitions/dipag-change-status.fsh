@@ -5,6 +5,10 @@ InstanceOf: OperationDefinition
 Usage: #example
 Title: "Digitale Patientenrechnung Operation ChangeStatus"
 Description: "Änderung des Bearbeitungsstatus eines Dokumentes"
+* meta.profile = "https://gematik.de/fhir/ti/StructureDefinition/ti-operationdefinition"
+* extension[+]
+  * url = $ti-http-method
+  * valueCode = #POST
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus"
 * status = #active
 * version = "1.0.7"

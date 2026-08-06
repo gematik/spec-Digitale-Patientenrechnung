@@ -34,3 +34,4 @@ Alias: $compliesWithProfile = http://hl7.org/fhir/StructureDefinition/structured
 Alias: $ti-patient = https://gematik.de/fhir/ti/StructureDefinition/ti-patient
 Alias: $ti-practitioner = https://gematik.de/fhir/ti/StructureDefinition/ti-practitioner
 Alias: $ti-organization = https://gematik.de/fhir/ti/StructureDefinition/ti-organization
+Alias: $ti-http-method = https://gematik.de/fhir/ti/StructureDefinition/extension-http-method
