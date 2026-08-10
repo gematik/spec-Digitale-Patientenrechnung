@@ -206,6 +206,18 @@
         ]
       },
       {
+        "id": "Extension.extension:kostentraeger.value[x].identifier",
+        "path": "Extension.extension.value[x].identifier",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Extension.extension:kostentraeger.value[x].display",
         "path": "Extension.extension.value[x].display",
         "maxLength": 1024
