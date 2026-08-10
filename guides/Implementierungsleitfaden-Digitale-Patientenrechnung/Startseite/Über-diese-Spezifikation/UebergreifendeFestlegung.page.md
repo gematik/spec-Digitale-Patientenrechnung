@@ -34,32 +34,113 @@ Die folgenden Tabellen führen die Beschränkungen übersichtlich auf. Für sie 
 
 | Element | Typ | Max. Länge | Herkunft |
 |-|-|-|-|
-| `DocumentReference.content.attachment.title` | string | 1024 | FD-Default |
-| `DocumentReference.content.attachment.url` | url | 1024 | FD-Default |
-| `DocumentReference.content.format.display` | string | 1024 | FD-Default |
-| `DocumentReference.content.format.version` | string | 1024 | FD-Default |
-| `DocumentReference.description` | string | 5000 | `maxLength` im Profil |
-| `DocumentReference.identifier.system` | uri | 1024 | FD-Default |
-| `DocumentReference.identifier.type.coding.display` | string | 1024 | FD-Default |
-| `DocumentReference.identifier.type.coding.version` | string | 1024 | FD-Default |
-| `DocumentReference.identifier.type.text` | string | 1024 | FD-Default |
-| `DocumentReference.identifier.value` | string | 1024 | FD-Default |
-| `DocumentReference.identifier:AnhangIdentifier.value` | string | 200 | `maxLength` im Profil |
-| `DocumentReference.meta.extension:markierung.extension:artDerArchivierung.valueCoding.display` | string | 1024 | FD-Default |
-| `DocumentReference.meta.extension:markierung.extension:artDerArchivierung.valueCoding.version` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:markierung.valueCoding.version` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:markierung.valueCoding.display` | string | 1024 | FD-Default |
 | `DocumentReference.meta.extension:markierung.extension:details.valueString` | string | 1024 | `maxLength` im Profil |
-| `DocumentReference.meta.extension:markierung.extension:kostentraeger.valueReference.display` | string | 1024 | `maxLength` im Profil |
+| `DocumentReference.meta.extension:markierung.extension:artDerArchivierung.valueCoding.version` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:artDerArchivierung.valueCoding.display` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:kostentraeger.valueReference.reference` | string | 1024 | FD-Default |
 | `DocumentReference.meta.extension:markierung.extension:kostentraeger.valueReference.identifier.system` | uri | 1024 | FD-Default |
 | `DocumentReference.meta.extension:markierung.extension:kostentraeger.valueReference.identifier.value` | string | 1024 | FD-Default |
-| `DocumentReference.meta.extension:markierung.extension:kostentraeger.valueReference.reference` | string | 1024 | FD-Default |
-| `DocumentReference.meta.extension:markierung.extension:markierung.valueCoding.display` | string | 1024 | FD-Default |
-| `DocumentReference.meta.extension:markierung.extension:markierung.valueCoding.version` | string | 1024 | FD-Default |
-| `DocumentReference.type.coding.display` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:kostentraeger.valueReference.display` | string | 1024 | `maxLength` im Profil |
+| `DocumentReference.identifier.type.coding.version` | string | 1024 | FD-Default |
+| `DocumentReference.identifier.type.coding.display` | string | 1024 | FD-Default |
+| `DocumentReference.identifier.type.text` | string | 1024 | FD-Default |
+| `DocumentReference.identifier.system` | uri | 1024 | FD-Default |
+| `DocumentReference.identifier.value` | string | 1024 | FD-Default |
+| `DocumentReference.identifier:AnhangIdentifier.value` | string | 200 | `maxLength` im Profil |
 | `DocumentReference.type.coding.version` | string | 1024 | FD-Default |
+| `DocumentReference.type.coding.display` | string | 1024 | FD-Default |
+| `DocumentReference.type.text` | string | 1024 | FD-Default |
 | `DocumentReference.type.coding:DokumentenKlassifizierung.display` | string | 1024 | `maxLength` im Profil |
 | `DocumentReference.type.coding:Rechnungstyp.display` | string | 1024 | FD-Default |
-| `DocumentReference.type.text` | string | 1024 | FD-Default |
+| `DocumentReference.description` | string | 5000 | `maxLength` im Profil |
+| `DocumentReference.content.attachment.url` | url | 1024 | FD-Default |
+| `DocumentReference.content.attachment.title` | string | 1024 | FD-Default |
+| `DocumentReference.content.format.version` | string | 1024 | FD-Default |
+| `DocumentReference.content.format.display` | string | 1024 | FD-Default |
 
+#### Dokumentenmetadaten im Fachdienst (`DiPagDokumentenmetadatenIntern`)
+
+| Element | Typ | Max. Länge | Herkunft |
+|-|-|-|-|
+| `DocumentReference.meta.extension:markierung.extension:markierung.valueCoding.version` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:markierung.valueCoding.display` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:details.valueString` | string | 1024 | `maxLength` im Profil |
+| `DocumentReference.meta.extension:markierung.extension:artDerArchivierung.valueCoding.version` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:artDerArchivierung.valueCoding.display` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:kostentraeger.valueReference.reference` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:kostentraeger.valueReference.identifier.system` | uri | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:kostentraeger.valueReference.identifier.value` | string | 1024 | FD-Default |
+| `DocumentReference.meta.extension:markierung.extension:kostentraeger.valueReference.display` | string | 1024 | `maxLength` im Profil |
+| `DocumentReference.meta.tag.version` | string | 1024 | FD-Default |
+| `DocumentReference.meta.tag.display` | string | 1024 | FD-Default |
+| `DocumentReference.extension:docRef-signature.valueSignature.type.version` | string | 1024 | FD-Default |
+| `DocumentReference.extension:docRef-signature.valueSignature.type.display` | string | 1024 | FD-Default |
+| `DocumentReference.extension:docRef-signature.valueSignature.who.reference` | string | 1024 | FD-Default |
+| `DocumentReference.extension:docRef-signature.valueSignature.who.display` | string | 1024 | FD-Default |
+| `DocumentReference.extension:docRef-signature.valueSignature.onBehalfOf.reference` | string | 1024 | FD-Default |
+| `DocumentReference.extension:docRef-signature.valueSignature.onBehalfOf.display` | string | 1024 | FD-Default |
+| `DocumentReference.identifier.type.coding.version` | string | 1024 | FD-Default |
+| `DocumentReference.identifier.type.coding.display` | string | 1024 | FD-Default |
+| `DocumentReference.identifier.type.text` | string | 1024 | FD-Default |
+| `DocumentReference.identifier.system` | uri | 1024 | FD-Default |
+| `DocumentReference.identifier.value` | string | 1024 | FD-Default |
+| `DocumentReference.type.coding.version` | string | 1024 | FD-Default |
+| `DocumentReference.type.coding.display` | string | 1024 | FD-Default |
+| `DocumentReference.type.text` | string | 1024 | FD-Default |
+| `DocumentReference.type.coding:DokumentenKlassifizierung.display` | string | 1024 | `maxLength` im Profil |
+| `DocumentReference.type.coding:Rechnungstyp.display` | string | 1024 | FD-Default |
+| `DocumentReference.subject.reference` | string | 1024 | FD-Default |
+| `DocumentReference.subject.identifier.type.text` | string | 1024 | FD-Default |
+| `DocumentReference.subject.identifier.system` | uri | 1024 | FD-Default |
+| `DocumentReference.subject.identifier.value` | string | 1024 | FD-Default |
+| `DocumentReference.subject.display` | string | 1024 | `maxLength` im Profil |
+| `DocumentReference.author.reference` | string | 1024 | FD-Default |
+| `DocumentReference.author.identifier.type.text` | string | 1024 | FD-Default |
+| `DocumentReference.author.identifier.value` | string | 1024 | FD-Default |
+| `DocumentReference.author.display` | string | 1024 | `maxLength` im Profil |
+| `DocumentReference.author.identifier.type.coding.version` | string | 1024 | FD-Default |
+| `DocumentReference.author.identifier.type.coding.display` | string | 1024 | FD-Default |
+| `DocumentReference.description` | string | 1024 | FD-Default |
+| `DocumentReference.content.attachment.url` | url | 1024 | FD-Default |
+| `DocumentReference.content.attachment.title` | string | 1024 | FD-Default |
+| `DocumentReference.content.attachment.extension:signature.valueSignature.type.version` | string | 1024 | FD-Default |
+| `DocumentReference.content.attachment.extension:signature.valueSignature.type.display` | string | 1024 | FD-Default |
+| `DocumentReference.content.attachment.extension:signature.valueSignature.who.reference` | string | 1024 | FD-Default |
+| `DocumentReference.content.attachment.extension:signature.valueSignature.who.display` | string | 1024 | FD-Default |
+| `DocumentReference.content.attachment.extension:signature.valueSignature.onBehalfOf.reference` | string | 1024 | FD-Default |
+| `DocumentReference.content.attachment.extension:signature.valueSignature.onBehalfOf.display` | string | 1024 | FD-Default |
+| `DocumentReference.content.format.version` | string | 1024 | FD-Default |
+| `DocumentReference.content.format.display` | string | 1024 | FD-Default |
+| `DocumentReference.context.encounter.reference` | string | 1024 | FD-Default |
+| `DocumentReference.context.encounter.identifier.type.text` | string | 1024 | FD-Default |
+| `DocumentReference.context.encounter.identifier.system` | uri | 1024 | FD-Default |
+| `DocumentReference.context.encounter.identifier.value` | string | 1024 | FD-Default |
+| `DocumentReference.context.encounter.display` | string | 1024 | FD-Default |
+| `DocumentReference.context.event.coding.version` | string | 1024 | FD-Default |
+| `DocumentReference.context.event.coding.display` | string | 1024 | FD-Default |
+| `DocumentReference.context.event.text` | string | 1024 | FD-Default |
+| `DocumentReference.context.facilityType.coding.version` | string | 1024 | FD-Default |
+| `DocumentReference.context.facilityType.coding.display` | string | 1024 | FD-Default |
+| `DocumentReference.context.facilityType.text` | string | 1024 | FD-Default |
+| `DocumentReference.context.practiceSetting.coding.version` | string | 1024 | FD-Default |
+| `DocumentReference.context.practiceSetting.coding.display` | string | 1024 | FD-Default |
+| `DocumentReference.context.practiceSetting.text` | string | 1024 | FD-Default |
+| `DocumentReference.context.sourcePatientInfo.reference` | string | 1024 | FD-Default |
+| `DocumentReference.context.sourcePatientInfo.identifier.type.text` | string | 1024 | FD-Default |
+| `DocumentReference.context.sourcePatientInfo.identifier.system` | uri | 1024 | FD-Default |
+| `DocumentReference.context.sourcePatientInfo.identifier.value` | string | 1024 | FD-Default |
+| `DocumentReference.context.sourcePatientInfo.display` | string | 1024 | FD-Default |
+| `DocumentReference.context.related.reference` | string | 1024 | FD-Default |
+| `DocumentReference.context.related.identifier.type.text` | string | 1024 | FD-Default |
+| `DocumentReference.context.related.identifier.system` | uri | 1024 | FD-Default |
+| `DocumentReference.context.related.identifier.value` | string | 1024 | FD-Default |
+| `DocumentReference.context.related.display` | string | 1024 | FD-Default |
+| `DocumentReference.extension:fachrichtung.valueCoding.version` | string | 1024 | FD-Default |
+| `DocumentReference.extension:fachrichtung.valueCoding.display` | string | 1024 | FD-Default |
+| `DocumentReference.extension:behandlungsart.valueCoding.version` | string | 1024 | FD-Default |
+| `DocumentReference.extension:behandlungsart.valueCoding.display` | string | 1024 | FD-Default |
 #### Elemente in den strukturierten Rechnungsdaten
 
 Innerhalb der strukturierten Rechnungsdaten gilt eine Zeichenbeschränkung ausschließlich für die folgenden Elemente:
