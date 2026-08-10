@@ -2,13 +2,13 @@
   filename: Index.page.md
 - name: Zweckbestimmung
   filename: Zweckbestimmung.page.md
+- name: Übergreifende Festlegung
+  filename: UebergreifendeFestlegung.page.md
 - name: Hinweis zu Artefakt-Versionen
   filename: HinweisZuVersionen.page.md
 - name: Use Cases
   filename: Use-Cases.page.md
 - name: Akteure und Interaktionen
   filename: Akteure-und-Interaktionen.page.md
-- name: Begriffsdefinitionen
-  filename: Begriffsdefinitionen.page.md
 - name: Informationsmodell
   filename: Informationsmodell.page.md
