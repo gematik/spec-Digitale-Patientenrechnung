@@ -10,6 +10,21 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.1.1
+
+#### Profile und Extensions
+
+* **DiPagDocumentReferenceMarkierung**: Der Identifier der Kostenträger-Referenz (`kostentraeger.valueReference.identifier`) ist auf das Profil `IdentifierTelematikId` (`http://fhir.de/StructureDefinition/identifier-telematik-id`) eingeschränkt. Damit ist das System auf `https://gematik.de/fhir/sid/telematik-id` festgelegt und `value` verpflichtend, sobald ein Identifier angegeben wird. Die Angabe des Identifiers selbst bleibt optional: Beim automatischen Setzen der Markierung "abgerufen durch KTR" setzt der Fachdienst die Telematik-ID des abrufenden Kostenträgers, bei der durch Versicherte gesetzten Markierung "eingereicht bei KTR" bleibt sie leer. **Hinweis:** Kostenträger-Referenzen mit einem Identifier aus einem anderen Namensraum werden ab dieser Version bei der Validierung abgelehnt.
+
+#### OperationDefinitions
+
+* **DiPagOperationProcessFlag** (`process-flag`): Die Dokumentation des Eingabeparameters `kostentraeger` weist nun darauf hin, dass der Identifier der Referenz optional ist, im Fall einer Angabe aber die Telematik-ID des Kostenträgers sein MUSS, und dass der Fachdienst beim automatischen Setzen der Markierung "abgerufen" die Telematik-ID des abrufenden Kostenträgers einträgt.
+
+#### Redaktionelle Änderungen
+
+* Die Seite "Begriffsdefinitionen" wurde in "Übergreifende Festlegung" umbenannt und im Inhaltsverzeichnis direkt hinter "Zweckbestimmung" einsortiert. Die bisherigen Inhalte (Schlüsselworte, Bedeutung der Must-Support-Flags, Begriffe und Abkürzungen) sind unverändert enthalten.
+* Die Seite wurde um den Abschnitt "Größenbeschränkungen" erweitert: Er benennt die vom Fachdienst durchgesetzten Zeichenbeschränkungen der Dokumentenmetadaten (`DocumentReference`) einschließlich der Standardbeschränkung von 1024 Zeichen für Elemente ohne `maxLength` im Profil, führt die drei Elemente der strukturierten Rechnungsdaten auf, für die ebenfalls eine Zeichenbeschränkung gilt (`Invoice.identifier:Rechnungsnummer.system` und `.value` sowie `Patient.name.text`), und stellt klar, dass für alle übrigen strukturierten Rechnungsdaten ausschließlich das 512kb-Limit über den gesamten Datensatz gilt.
+
 ### Version 1.1.0
 
 Diese Version enthält eine nicht rückwärtskompatible Änderung an der `$invoice-submit`-Schnittstelle (Struktur der Eingabeparameter `rechnung` und `anhang`), daher der Sprung auf 1.1.0.
