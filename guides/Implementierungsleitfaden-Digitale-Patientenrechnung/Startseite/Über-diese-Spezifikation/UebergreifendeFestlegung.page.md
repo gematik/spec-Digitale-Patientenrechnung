@@ -36,8 +36,8 @@ Die folgenden Tabellen führen die Beschränkungen übersichtlich auf. Für sie 
 |-|-|-|-|
 | `DocumentReference.meta.extension:markierung.extension:details.valueString` | string | 1024 | `maxLength` im Profil |
 | `DocumentReference.identifier:AnhangIdentifier.value` | string | 200 | `maxLength` im Profil |
-| `DocumentReference.type.coding:DokumentenKlassifizierung.display` | string | 1024 | `maxLength` im Profil |
-| `DocumentReference.type.coding:DokumentenKlassifizierung.version` | string | 1024 | FD-Default |
+| `DocumentReference.type.coding.display` | string | 1024 | `maxLength` im Profil |
+| `DocumentReference.type.coding.version` | string | 1024 | FD-Default |
 | `DocumentReference.description` | string | 5000 | `maxLength` im Profil |
 
 #### Elemente in den strukturierten Rechnungsdaten
