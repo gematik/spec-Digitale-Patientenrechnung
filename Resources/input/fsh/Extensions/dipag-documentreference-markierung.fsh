@@ -28,6 +28,7 @@ Context: DocumentReference.meta, Parameters.parameter.value[x]
 * obeys kostentraeger
 * extension[kostentraeger].value[x] only Reference
 * extension[kostentraeger].value[x] 1..1
+* extension[kostentraeger].valueReference.identifier only IdentifierTelematikId
 * extension[kostentraeger].valueReference.display ^maxLength = 1024
 
 

@@ -63,7 +63,7 @@ Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können übe
     * use = #in
     * min = 0
     * max = "1"
-    * documentation = "Referenz auf den Kostenträger. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', 'eingereicht-post', 'geteilt' oder 'abgerufen' ist."
+    * documentation = "Referenz auf den Kostenträger. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', 'eingereicht-post', 'geteilt' oder 'abgerufen' ist. Der Identifier der Referenz ist optional; wird er angegeben, MUSS es sich um die Telematik-ID des Kostenträgers handeln (siehe DiPagDocumentReferenceMarkierung). Beim automatischen Setzen der Markierung 'abgerufen' durch den Fachdienst wird die Telematik-ID des abrufenden Kostenträgers gesetzt."
     * type = #Reference
 * parameter[+]
   * name = #meta
