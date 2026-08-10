@@ -9,9 +9,9 @@ Description: """Setzt die Markierungen eines Rechnungsdokuments (DocumentReferen
 Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können über diese Operation weder gesetzt noch entfernt werden und werden ignoriert, falls sie übermittelt werden. Sie bleiben sowohl von der Ersetzung als auch von der Löschung unberührt."""
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag"
 * status = #active
-* version = "1.0.8"
+* version = "1.0.9"
 * experimental = false
-* date = "2026-07-08"
+* date = "2026-08-10"
 * kind = #operation
 * name = "DiPagProcessFlag"
 * code = #process-flag
@@ -63,7 +63,7 @@ Ausnahmen: Die Markierungen 'persönlich' und 'abgerufen durch KTR' können übe
     * use = #in
     * min = 0
     * max = "1"
-    * documentation = "Referenz auf den Kostenträger. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', 'eingereicht-post', 'geteilt' oder 'abgerufen' ist."
+    * documentation = "Referenz auf den Kostenträger. Constraint: Darf nur angegeben werden wenn die Markierung vom Typ 'eingereicht-frontend', 'eingereicht-post', 'geteilt' oder 'abgerufen' ist. Der Identifier der Referenz ist optional; wird er angegeben, MUSS es sich um die Telematik-ID des Kostenträgers handeln (siehe DiPagDocumentReferenceMarkierung). Beim automatischen Setzen der Markierung 'abgerufen' durch den Fachdienst wird die Telematik-ID des abrufenden Kostenträgers gesetzt."
     * type = #Reference
 * parameter[+]
   * name = #meta
