@@ -5,6 +5,10 @@ InstanceOf: OperationDefinition
 Usage: #example
 Title: "Digitale Patientenrechnung Operation Invoice-Submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in"
+* meta.profile = "https://gematik.de/fhir/ti/StructureDefinition/ti-operationdefinition"
+* extension[+]
+  * url = $ti-http-method
+  * valueCode = #POST
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
 * status = #active
 * version = "1.1.0"

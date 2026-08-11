@@ -1,6 +1,7 @@
 Instance: CapabilityStatementFD
 InstanceOf: CapabilityStatement
 Usage: #definition
+* meta.profile = "https://gematik.de/fhir/ti/StructureDefinition/ti-capability-statement"
 * insert MetaInstance(1.0.8)
 * date = "2026-07-08"
 * url = "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD"

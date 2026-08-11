@@ -3,6 +3,7 @@ Parent: Organization
 Title: "Digitale Patientenrechnung Institution"
 Id: dipag-institution
 * insert Meta(1.0.7)
+* insert CompliesWith($ti-organization)
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
@@ -61,7 +62,11 @@ Id: dipag-institution
   * ^short = "Umsatzsteuer-Identifikationsnummer"
   * ^comment = "Die Umsatzsteuer-Identifikationsnummer KANN vorhanden sein.
   Sie KANN vorkommen, wenn eine Institution die Rolle eines 'Abweichender Forderungsinhaber', sowie des 'Rechnungsersteller' inne hat."
-* type from $ihe-practiceSettingCode (required)
+* type ^slicing.discriminator.type = #pattern
+* type ^slicing.discriminator.path = "$this"
+* type ^slicing.rules = #open
+* type contains practiceSettingCode ..1 MS
+* type[practiceSettingCode] from $ihe-practiceSettingCode (required)
   * ^short = "Fachrichtung"
   * ^comment = "Die Fachrichtung SOLL vorhanden sein. Das Element ist wiederholbar."
   * coding.system 1.. MS

@@ -5,6 +5,10 @@ InstanceOf: OperationDefinition
 Usage: #example
 Title: "Digitale Patientenrechnung Operation Retrieve"
 Description: "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten"
+* meta.profile = "https://gematik.de/fhir/ti/StructureDefinition/ti-operationdefinition"
+* extension[+]
+  * url = $ti-http-method
+  * valueCode = #POST
 * status = #active
 * version = "1.0.8"
 * experimental = false
