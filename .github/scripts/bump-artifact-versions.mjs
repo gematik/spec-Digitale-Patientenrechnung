@@ -27,11 +27,26 @@
 //       bootstrap  = base branch has no global version yet
 //       unchanged  = global version identical to base (no bump needed)
 //       patch|minor|major = detected bump level (global version raised)
+//       suffix     = numeric version unchanged, only the prerelease suffix
+//                    differs (e.g. 1.2.0-beta -> 1.2.0)
 //     Gate for the pipeline (abort neutrally on unchanged/bootstrap).
 //   --check-release: verifies that the guide version was raised alongside the
 //     release (guide.yaml + Index.page.md raised, Index date = today). Fails
 //     (exit 1) on violation so the bump never runs. Only relevant when the
 //     global version was raised.
+//
+// Prereleases: if the global version carries a prerelease suffix (e.g.
+// "1.2.0-beta"), the release checks are skipped entirely - the guide may stay
+// on its current version for a beta package release. Artifacts bumped during a
+// prerelease carry the suffix too (e.g. 1.1.0-beta). On every bump run, any
+// artifact whose prerelease suffix differs from the global one is re-stamped
+// (numeric version kept, suffix replaced) - so when the -beta is removed,
+// beta artifacts are finalized (1.1.0-beta -> 1.1.0) instead of being left
+// behind on their beta state.
+//
+// CapabilityStatement: always set to the exact global version from
+// sushi-config (including any prerelease suffix) on every bump run, regardless
+// of whether its content changed and independent of prereleases.
 
 import { execFileSync } from 'node:child_process';
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
@@ -77,18 +92,26 @@ function main() {
     fail(`Could not read global version in PR (${SUSHI_CONFIG} has no valid 'version:').`);
   }
   const level = baseVersion ? bumpLevel(baseVersion, prVersion) : null;
-  const state = !baseVersion ? 'bootstrap' : (level ?? 'unchanged');
+  const prerelease = prVersion.suffix !== '';
+  let state;
+  if (!baseVersion) state = 'bootstrap';
+  else if (level) state = level;
+  else if (fmtFull(baseVersion) !== fmtFull(prVersion)) state = 'suffix';
+  else state = 'unchanged';
 
   if (STATUS) { log(state); return; }
 
   if (CHECK_RELEASE) {
     // Only check when an actual bump happens; the gate (unchanged/bootstrap) is
-    // handled separately (neutral) in the pipeline.
-    if (state === 'patch' || state === 'minor' || state === 'major') {
+    // handled separately (neutral) in the pipeline. Prereleases (-beta etc.)
+    // are exempt: the guide may stay on its current version.
+    if (state === 'unchanged' || state === 'bootstrap') {
+      log(`No bump (${state}) - no release checks needed.`);
+    } else if (prerelease) {
+      log(`Prerelease ${fmtFull(prVersion)} - release checks skipped (guide may stay on its current version).`);
+    } else {
       checkRelease();
       log('Release checks passed (guide.yaml + Index version raised, Index date current).');
-    } else {
-      log(`No bump (${state}) - no release checks needed.`);
     }
     return;
   }
@@ -98,10 +121,14 @@ function main() {
     return;
   }
   if (state === 'unchanged') {
-    log(`Global version unchanged (${fmt(prVersion)}). No bump needed.`);
+    log(`Global version unchanged (${fmtFull(prVersion)}). No bump needed.`);
     return;
   }
-  log(`Global version: ${fmt(baseVersion)} -> ${fmt(prVersion)}  => level: ${level}  (date: ${TODAY})`);
+  if (state === 'suffix') {
+    log(`Global version: ${fmtFull(baseVersion)} -> ${fmtFull(prVersion)}  => suffix-only change, syncing artifact suffixes + CapabilityStatement version  (date: ${TODAY})`);
+  } else {
+    log(`Global version: ${fmtFull(baseVersion)} -> ${fmtFull(prVersion)}  => level: ${level}  (date: ${TODAY})`);
+  }
 
   // 2) FSH index: artifact id -> version declaration in the FSH
   const index = buildFshIndex();
@@ -118,24 +145,48 @@ function main() {
 
     const baseRaw = readBaseFile(`${GEN_DIR}/${file}`);
     const isNew = baseRaw == null;
-    if (!isNew && canonical(baseRaw) === canonical(prRaw)) continue; // content unchanged
+    // The CapabilityStatement always follows the exact global version from
+    // sushi-config (including any prerelease suffix), even when its content
+    // is unchanged.
+    const isCapability = prJson.resourceType === 'CapabilityStatement';
+    const contentChanged = isNew || canonical(baseRaw) !== canonical(prRaw);
 
     const id = prJson.id;
     const entry = index.get(id);
+    // Prerelease suffix of the artifact's current FSH version. An artifact
+    // whose suffix differs from the global one is re-stamped even when its
+    // content is unchanged (e.g. finalizing 1.1.0-beta -> 1.1.0 once the
+    // global -beta is removed).
+    const cur = entry ? splitSuffix(entry.current) : null;
+    const needsSuffixSync = cur != null && cur.suffix !== '' && cur.suffix !== prVersion.suffix;
+    if (!isCapability && !contentChanged && !needsSuffixSync) continue;
+
     if (!entry) {
       skipped.push(`${prJson.resourceType}/${id}: no FSH version line found`);
       continue;
     }
 
-    let baseArtVersion;
-    if (isNew) {
-      baseArtVersion = prVersion; // new artifact starts at the global target version
-    } else {
+    let targetStr;
+    if (isCapability) {
+      targetStr = fmtFull(prVersion);
+    } else if (isNew) {
+      targetStr = fmtFull(prVersion); // new artifact starts at the global target version (incl. suffix)
+    } else if (contentChanged && level) {
       const bv = parseVersion(`version: ${JSON.parse(baseRaw).version ?? ''}`);
-      baseArtVersion = bv ?? baseVersion;
+      targetStr = fmt(applyBump(bv ?? baseVersion, level)) + prVersion.suffix;
+    } else if (contentChanged) {
+      // suffix-only change: there is no bump level to apply to changed content.
+      // A prerelease artifact still gets finalized - its version was already
+      // raised during the prerelease bump.
+      if (!needsSuffixSync) {
+        skipped.push(`${prJson.resourceType}/${id}: content changed, but suffix-only release has no bump level`);
+        continue;
+      }
+      targetStr = cur.numeric + prVersion.suffix;
+    } else {
+      // content unchanged, suffix sync only
+      targetStr = cur.numeric + prVersion.suffix;
     }
-    const target = isNew ? baseArtVersion : applyBump(baseArtVersion, level);
-    const targetStr = fmt(target);
     if (entry.current.trim() === targetStr) continue; // already at target (idempotency)
     changes.push({ id, type: prJson.resourceType, from: entry.current, to: targetStr, entry, isNew, jsonFile: file });
   }
@@ -150,8 +201,9 @@ function main() {
     // (guide.yaml + Index.page.md, Index date = today). The check deliberately
     // also lives here in the script (not only as a separate workflow step),
     // because workflow_run always uses the workflow file from the default
-    // branch, which can lag behind the script.
-    checkRelease();
+    // branch, which can lag behind the script. Prereleases (-beta etc.) are
+    // exempt: the guide may stay on its current version.
+    if (!prerelease) checkRelease();
     writeChanges(changes);
     log(`${changes.length} artifact(s) bumped (version + date ${TODAY}) in FSH + generated JSON.`);
   } else if (changes.length) {
@@ -357,15 +409,28 @@ function findVersionLine(lines, start, end) {
 
 // ---------- Version helpers ----------
 
-// Parses "version: 1.2.3-beta" -> {major,minor,patch}; suffixes are ignored.
+// Parses "version: 1.2.3-beta" -> {major,minor,patch,suffix} with suffix
+// including the leading dash ("-beta") or '' if absent.
 function parseVersion(fileOrLine) {
-  const m = String(fileOrLine).match(/^version\s*:\s*["']?\s*(\d+)\.(\d+)\.(\d+)/m);
+  const m = String(fileOrLine).match(/^version\s*:\s*["']?\s*(\d+)\.(\d+)\.(\d+)((?:-[0-9A-Za-z.]+)?)/m);
   if (!m) return null;
-  return { major: +m[1], minor: +m[2], patch: +m[3] };
+  return { major: +m[1], minor: +m[2], patch: +m[3], suffix: m[4] || '' };
 }
 
 function fmt(v) {
   return `${v.major}.${v.minor}.${v.patch}`;
+}
+
+// Numeric version including the prerelease suffix, e.g. "1.2.0-beta".
+function fmtFull(v) {
+  return fmt(v) + (v.suffix || '');
+}
+
+// Splits a version string like "1.1.0-beta" into numeric part and suffix
+// (with leading dash); null if it is not a plain semver string.
+function splitSuffix(vstr) {
+  const m = String(vstr).trim().match(/^(\d+\.\d+\.\d+)((?:-[0-9A-Za-z.]+)?)$/);
+  return m ? { numeric: m[1], suffix: m[2] } : null;
 }
 
 // The highest changed position determines the level; null if equal.
