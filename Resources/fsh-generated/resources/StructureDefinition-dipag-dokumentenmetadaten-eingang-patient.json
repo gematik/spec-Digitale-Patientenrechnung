@@ -19,7 +19,7 @@
       ]
     }
   ],
-  "description": "Profil für die Einreichung von Rechnungsdokumenten und Anhängen an Versicherte (Rechnungsempfänger:innen). Ergänzt das Basisprofil um die Markierung 'Persönlich' für Anhänge.",
+  "description": "Profil für die Einreichung von Rechnungsdokumenten und Anhängen an Versicherte (Rechnungsempfänger). Ergänzt das Basisprofil um die Markierung 'Persönlich' für Anhänge.",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
