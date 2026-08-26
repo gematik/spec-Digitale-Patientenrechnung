@@ -4,7 +4,7 @@ Profile: DiPagDokumentenmetadatenIntern
 Title: "Digitale Patientenrechnung Dokumentenmetadaten Intern"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-intern
-Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes. Das Profil deckt sowohl Rechnungen an Versicherte (Rechnungsempfänger:innen) als auch Rechnungen an Kostenträger-Organisationen ab. Die Mindestkardinalitäten der kontextspezifischen Elemente (Markierungen, Rechnungsempfänger-Referenz) sind entsprechend gelockert; welche Elemente im jeweiligen Kontext vorhanden sind, ist in den Kommentaren und den Szenariobeschreibungen festgelegt."
+Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes. Das Profil deckt sowohl Rechnungen an Versicherte (Rechnungsempfänger) als auch Rechnungen an Kostenträger-Organisationen ab. Die Mindestkardinalitäten der kontextspezifischen Elemente (Markierungen, Rechnungsempfänger-Referenz) sind entsprechend gelockert; welche Elemente im jeweiligen Kontext vorhanden sind, ist in den Kommentaren und den Szenariobeschreibungen festgelegt."
 * insert Meta(1.1.0-beta)
 * ^date = "2026-08-26"
 * obeys SignaturVerpflichtendRechnung
