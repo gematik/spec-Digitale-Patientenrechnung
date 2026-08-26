@@ -39,6 +39,17 @@ Usage: #definition
       * name = "invoice-submit"
       * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
   * resource[+]
+    * type = #Organization
+    * insert Expectation (#SHALL)
+    * supportedProfile = Canonical(DiPagOrganisationRechnungsempfaenger)
+    * interaction[+]
+      * insert Expectation (#SHALL)
+      * code = #search-type
+    * operation[+]
+      * insert Expectation (#SHALL)
+      * name = "invoice-submit"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
+  * resource[+]
     * type = #DocumentReference
     * insert Expectation (#SHALL)
     * supportedProfile = Canonical(DiPagDokumentenmetadatenIntern)

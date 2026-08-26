@@ -57,7 +57,7 @@ Usage: #example
 * insert base64
 
 Instance: BeispielDocumentReferenceRechnung3-FD
-InstanceOf: DiPagDokumentenmetadatenEingang
+InstanceOf: DiPagDokumentenmetadatenEingangPatient
 Usage: #example
 * identifier
   * system = "https://example.org/fhir/sid/rechnungsids"
@@ -73,7 +73,7 @@ Usage: #example
   * insert base64
 
 Instance: BeispielDocumentReferenceSonstigesDokument3-FD
-InstanceOf: DiPagDokumentenmetadatenEingang
+InstanceOf: DiPagDokumentenmetadatenEingangPatient
 Usage: #example
 * identifier[AnhangIdentifier]
   * type = DiPagRechnungIdentifierTypeCS#anhang

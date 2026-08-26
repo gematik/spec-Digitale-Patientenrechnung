@@ -4,7 +4,7 @@ Instance: DiPagOperationSubmit
 InstanceOf: OperationDefinition
 Usage: #example
 Title: "Digitale Patientenrechnung Operation Invoice-Submit"
-Description: "Rechnung einreichen durch die Leistungserbringer:in"
+Description: "Rechnung einreichen durch die Leistungserbringer:in. Die Operation wird auf dem Patient-Endpunkt (Versand an Versicherte) oder auf dem Organization-Endpunkt (Versand an eine Kostenträger-Organisation) aufgerufen. Beim Versand an eine Organisation setzt der FD den Rechnungsstatus nach erfolgreichem Submit automatisch auf 'Übermittelt'."
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
 * status = #active
 * version = "1.1.0"
@@ -13,7 +13,8 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
 * kind = #operation
 * name = "DiPagSubmit"
 * code = #invoice-submit
-* resource = #Patient
+* resource[0] = #Patient
+* resource[+] = #Organization
 * system = false
 * type = false
 * instance = true
@@ -29,9 +30,10 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * use = #in
     * min = 1
     * max = "1"
-    * documentation = "Die Digitale Patientenrechnung als DocumentReference. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
+    * documentation = "Die Digitale Patientenrechnung als DocumentReference. Beim Aufruf auf dem Patient-Endpunkt MUSS die Ressource dem Profil DiPagDokumentenmetadatenEingangPatient entsprechen, beim Aufruf auf dem Organization-Endpunkt dem Profil DiPagDokumentenmetadatenEingangOrganisation. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
     * type = #DocumentReference
-    * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
+    * targetProfile[0] = Canonical(DiPagDokumentenmetadatenEingangPatient)
+    * targetProfile[+] = Canonical(DiPagDokumentenmetadatenEingangOrganisation)
   * part[+]
     * name = #barcodePosition
     * use = #in
@@ -63,9 +65,10 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * use = #in
     * min = 1
     * max = "1"
-    * documentation = "Der Anhang als DocumentReference. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
+    * documentation = "Der Anhang als DocumentReference. Beim Aufruf auf dem Patient-Endpunkt MUSS die Ressource dem Profil DiPagDokumentenmetadatenEingangPatient entsprechen, beim Aufruf auf dem Organization-Endpunkt dem Profil DiPagDokumentenmetadatenEingangOrganisation. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
     * type = #DocumentReference
-    * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
+    * targetProfile[0] = Canonical(DiPagDokumentenmetadatenEingangPatient)
+    * targetProfile[+] = Canonical(DiPagDokumentenmetadatenEingangOrganisation)
   * part[+]
     * name = #barcodePosition
     * use = #in
