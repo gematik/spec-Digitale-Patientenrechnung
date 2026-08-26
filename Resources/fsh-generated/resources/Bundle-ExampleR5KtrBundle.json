@@ -1,20 +1,20 @@
 {
   "resourceType": "Bundle",
-  "id": "KtrWorkflowSearchBundle",
+  "id": "ExampleR5KtrBundle",
   "type": "searchset",
   "total": 1,
   "link": [
     {
       "relation": "self",
-      "url": "https://example.com/fhir/DocumentReference?_tag=uebermittelt&_count=50"
+      "url": "https://example.com/fhir/DocumentReference"
     }
   ],
   "entry": [
     {
-      "fullUrl": "https://example.com/fhir/DocumentReference/BeispielDocumentReferenceRechnungOrganisation-FD",
+      "fullUrl": "https://example.com/fhir/DocumentReference/ExampleR5KtrDocumentReference",
       "resource": {
         "resourceType": "DocumentReference",
-        "id": "BeispielDocumentReferenceRechnungOrganisation-FD",
+        "id": "ExampleR5KtrDocumentReference",
         "meta": {
           "tag": [
             {
@@ -55,6 +55,23 @@
             }
           ]
         },
+        "extension": [
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum",
+            "valueDateTime": "2024-01-10T09:30:00+01:00"
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+            "valueDate": "2024-02-10"
+          },
+          {
+            "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag",
+            "valueMoney": {
+              "value": 84.5,
+              "currency": "EUR"
+            }
+          }
+        ],
         "author": [
           {
             "identifier": {
