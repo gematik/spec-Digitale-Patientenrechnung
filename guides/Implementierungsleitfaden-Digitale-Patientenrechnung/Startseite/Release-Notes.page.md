@@ -10,6 +10,33 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.3.0-beta
+
+Diese Version führt den direkten Rechnungsversand an Kostenträger-Organisationen ein. Sie enthält eine nicht rückwärtskompatible Änderung: Das Eingang-Profil `dipag-dokumentenmetadaten-eingang` wurde in `dipag-dokumentenmetadaten-eingang-patient` umbenannt (**Breaking Change**, neue Canonical-URL).
+
+#### Profile und Extensions
+
+* **DiPagOrganisationRechnungsempfaenger** (neu): Organization-Profil für die im FD konfigurierten Kostenträger-Organisationen, die am direkten Rechnungsversand teilnehmen (Telematik-ID verpflichtend). Die Liste kann durch das RE-PS per `GET /Organization` ohne Suchparameter abgefragt werden ({{pagelink:AF_TBD_R12}}).
+* **DiPagDokumentenmetadatenEingangBase** (neu): Die kontextübergreifenden Festlegungen des Eingang-Profils wurden in ein Basisprofil ausgelagert. **DiPagDokumentenmetadatenEingangPatient** (bisher `DiPagDokumentenmetadatenEingang`; **Breaking Change**: neue Canonical-URL `.../dipag-dokumentenmetadaten-eingang-patient`) leitet von diesem ab und ergänzt ausschließlich die Markierung 'Persönlich' für Anhänge. **DiPagDokumentenmetadatenEingangOrganisation** (neu) ist die Variante für die Einreichung an Kostenträger-Organisationen; Markierungen werden in diesem Kontext nicht unterstützt und sind daher nicht profiliert.
+* **DiPagDokumentenmetadatenIntern**: Das interne Profil deckt nun beide Kontexte ab (Rechnungen an Versicherte und an Kostenträger-Organisationen). Hierfür wurden die Mindestkardinalitäten der kontextspezifischen Elemente gelockert (`context.related:patient` nun 0..1) und der neue Slice `context.related:empfaenger` (0..1, Referenz auf die empfangende Organization) ergänzt. Markierungen und die Statuswerte des Versicherten-Workflows werden nur im Versicherten-Kontext verwendet; die Festlegungen je Kontext sind in den Kommentaren des Profils und den Szenariobeschreibungen dokumentiert.
+
+#### Terminologie
+
+* **DiPagARechnungsstatusCS**: Neue Codes `uebermittelt` ("Übermittelt") und `abgerufen` ("Abgerufen") für den Rechnungsworkflow bei Kostenträger-Organisationen. Das ValueSet `DiPagRechnungsstatusVS` umfasst weiterhin alle Codes des CodeSystems; welche Statuswerte im jeweiligen Kontext gültig sind, ist im Profil `DiPagDokumentenmetadatenIntern` und den Szenariobeschreibungen festgelegt.
+
+#### OperationDefinitions
+
+* **DiPagOperationSubmit** (`invoice-submit`): Kann nun zusätzlich auf dem Organization-Endpunkt aufgerufen werden (`/Organization/[id]/$invoice-submit`, {{pagelink:AF_TBD_R13}}). Die `targetProfile` der `dokument`-Parts verweisen auf `DiPagDokumentenmetadatenEingangPatient` bzw. `DiPagDokumentenmetadatenEingangOrganisation`. Nach erfolgreichem Submit an eine Organisation setzt der FD den Rechnungsstatus automatisch auf "Übermittelt".
+* **DiPagOperationRetrieve** (`retrieve`): Bei Rechnungen an Kostenträger-Organisationen setzt der FD nach dem erfolgreichen Abruf den Rechnungsstatus automatisch auf "Abgerufen" ({{pagelink:AF_TBD_R15}}).
+
+#### CapabilityStatement und Search Parameter
+
+* Neue Resource `Organization` mit `search-type`-Interaktion (ohne Suchparameter) und der Operation `invoice-submit`.
+
+#### Szenarien
+
+* Neue Szenarien {{pagelink:AF_TBD_R12}} und {{pagelink:AF_TBD_R13}} (RE-PS als Akteur) sowie {{pagelink:AF_TBD_R14}} und {{pagelink:AF_TBD_R15}} (ITSys-KTR als Akteur). Diese enthalten die Festlegungen zum automatischen Löschen der an Organisationen übermittelten Rechnungen (3 Monate nach "Übermittelt" bzw. 72 Stunden nach "Abgerufen"; Fristen im FD global konfigurierbar, endgültige Abstimmung ausstehend) sowie die im MVP nicht unterstützten Funktionen (Markierungen, `$change-status`, `$process-flag`, `$erase`, Versichertenprotokoll). Die AF-Nummern des Feature-Dokumentes werden nachgetragen, sobald sie vorliegen.
+
 ### Version 1.2.0
 
 Diese Version enthält eine nicht rückwärtskompatible Änderung am Profil **DiPagPatient** (Geburtsdatum verpflichtend), daher der Sprung auf 1.2.0.

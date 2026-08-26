@@ -72,7 +72,7 @@ Weitere Details zur Signatur, siehe [gemSpec_DiPag_FD - Abschnitt 6.5 Signatur](
 
 ### Rechnungsrepräsentation
 
-Die Parameter `rechnung` und `anhang` bestehen jeweils aus mehreren Parts: dem Part `dokument`, welcher die eigentliche DocumentReference enthält, sowie optional dem Part `barcodePosition`. Die DocumentReference-Ressource im Part `dokument` MUSS dem Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang` entsprechen.
+Die Parameter `rechnung` und `anhang` bestehen jeweils aus mehreren Parts: dem Part `dokument`, welcher die eigentliche DocumentReference enthält, sowie optional dem Part `barcodePosition`. Die DocumentReference-Ressource im Part `dokument` MUSS dem Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient` entsprechen.
 
 ### Position des Datamatrix-Codes
 
@@ -82,19 +82,23 @@ Der FD bringt auf jedem verarbeiteten Dokument einen Datamatrix-Code (Token-Barc
 from
 	StructureDefinition
 where
-	url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang'
+	url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient'
 select
 	Canonical: url, Status: status, Version: version, Basis: baseDefinition
 </fql>
 
 <br>
 
-{{tree:https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang, buttons}}
+{{tree:https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient, buttons}}
 
-Folgende Implementierungshinweise sind zu beachten:
+Folgende Implementierungshinweise sind zu beachten (aus dem Basisprofil `DiPagDokumentenmetadatenEingangBase` sowie dem Profil `DiPagDokumentenmetadatenEingangPatient`):
 
 <fql output="table" headers="false">
-from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang' for differential.element where comment.exists() select id, comment
+from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-base' for differential.element where comment.exists() select id, comment
+</fql>
+
+<fql output="table" headers="false">
+from StructureDefinition where url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient' for differential.element where comment.exists() select id, comment
 </fql>
 
 ### Beispiele

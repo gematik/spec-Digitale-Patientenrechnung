@@ -10,3 +10,7 @@
   filename: R3-Abfrage-von-angereicherten-PDF-A-per-Token-Rechnungsersteller.page.md
 - name: 'R4: Abfrage von angereicherten PDF/A per Token (Rechnungsersteller) (Bulk)'
   filename: R4-Abfrage-von-angereicherten-PDF-A-per-Token-Rechnungsersteller-Bulk.page.md
+- name: 'R12: Abfrage der Kostenträger-Organisationen'
+  filename: R12-Abfrage-der-Kostenträger-Organisationen.page.md
+- name: 'R13: Rechnung an Kostenträger-Organisation versenden'
+  filename: R13-Rechnung-an-Kostenträger-Organisation-versenden.page.md

@@ -4,8 +4,12 @@
   filename: CapabilityStatements
 - name: DiPagDokumentenmetadaten Intern (DocumentReference)
   filename: Datenobjekt_dokumentenmetadaten-intern
-- name: DiPagDokumentenmetadaten Eingang (DocumentReference)
-  filename: Datenobjekt_dokumentenmetadaten-eingang
+- name: DiPagDokumentenmetadaten Eingang Patient (DocumentReference)
+  filename: Datenobjekt_dokumentenmetadaten-eingang-patient
+- name: DiPagDokumentenmetadaten Eingang Organisation (DocumentReference)
+  filename: Datenobjekt_dokumentenmetadaten-eingang-organisation
+- name: DiPagOrganisationRechnungsempfaenger (Organization)
+  filename: Datenobjekt_organisation-rechnungsempfaenger
 - name: DiPagNutzungsprotokoll (AuditEvent)
   filename: Datenobjekt_nutzungsprotokoll
 - name: DiPagRechnungsdokument (Binary)
