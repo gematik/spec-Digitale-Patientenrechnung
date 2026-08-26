@@ -1,0 +1,101 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "dipag-organisation-rechnungsempfaenger",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-organisation-rechnungsempfaenger",
+  "version": "1.1.1",
+  "name": "DiPagOrganisationRechnungsempfaenger",
+  "title": "Digitale Patientenrechnung Organisation Rechnungsempfänger",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-03-26",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "description": "Kostenträger-Organisation, die im Fachdienst als Empfänger für den direkten Rechnungsversand konfiguriert ist. Die Liste der Organisationen wird durch den Fachdienst-Betreiber gepflegt und kann durch das RE-PS abgefragt werden.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Organization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Organization.identifier",
+        "path": "Organization.identifier",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID",
+        "path": "Organization.identifier",
+        "sliceName": "Telematik-ID",
+        "short": "Telematik-ID",
+        "comment": "Die Telematik-ID MUSS vorhanden sein.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier",
+            "profile": [
+              "http://fhir.de/StructureDefinition/identifier-telematik-id"
+            ]
+          }
+        ],
+        "patternIdentifier": {
+          "type": {
+            "coding": [
+              {
+                "code": "PRN",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+              }
+            ]
+          }
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.type",
+        "path": "Organization.identifier.type",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.system",
+        "path": "Organization.identifier.system",
+        "short": "System der Telematik-ID",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.identifier:Telematik-ID.value",
+        "path": "Organization.identifier.value",
+        "short": "Telematik-ID",
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.name",
+        "path": "Organization.name",
+        "short": "Name der Organisation",
+        "comment": "Der Name der Organisation SOLL vorhanden sein.",
+        "mustSupport": true
+      }
+    ]
+  }
+}

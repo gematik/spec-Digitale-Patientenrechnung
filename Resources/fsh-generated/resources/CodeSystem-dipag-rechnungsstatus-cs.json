@@ -20,6 +20,14 @@
     {
       "code": "papierkorb",
       "display": "Papierkorb"
+    },
+    {
+      "code": "uebermittelt",
+      "display": "Übermittelt"
+    },
+    {
+      "code": "abgerufen",
+      "display": "Abgerufen"
     }
   ],
   "experimental": false,
@@ -37,5 +45,5 @@
   ],
   "caseSensitive": true,
   "hierarchyMeaning": "is-a",
-  "count": 3
+  "count": 5
 }

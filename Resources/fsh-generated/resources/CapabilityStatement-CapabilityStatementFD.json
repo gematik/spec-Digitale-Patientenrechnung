@@ -101,6 +101,41 @@
           ]
         },
         {
+          "type": "Organization",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "supportedProfile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-organisation-rechnungsempfaenger"
+          ],
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ],
+          "operation": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "invoice-submit",
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
+            }
+          ]
+        },
+        {
           "type": "DocumentReference",
           "extension": [
             {

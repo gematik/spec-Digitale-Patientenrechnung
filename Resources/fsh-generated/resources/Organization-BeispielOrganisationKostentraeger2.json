@@ -1,0 +1,24 @@
+{
+  "resourceType": "Organization",
+  "id": "BeispielOrganisationKostentraeger2",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-organisation-rechnungsempfaenger"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "PRN",
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+          }
+        ]
+      },
+      "system": "https://gematik.de/fhir/sid/telematik-id",
+      "value": "8-01-0000000002"
+    }
+  ],
+  "name": "Musterkasse Versicherung VVaG"
+}

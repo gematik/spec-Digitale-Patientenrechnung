@@ -1,0 +1,107 @@
+{
+  "resourceType": "Bundle",
+  "id": "KtrWorkflowSearchBundle",
+  "type": "searchset",
+  "total": 1,
+  "link": [
+    {
+      "relation": "self",
+      "url": "https://example.com/fhir/DocumentReference?_tag=uebermittelt&_count=50"
+    }
+  ],
+  "entry": [
+    {
+      "fullUrl": "https://example.com/fhir/DocumentReference/BeispielDocumentReferenceRechnungOrganisation-FD",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "BeispielDocumentReferenceRechnungOrganisation-FD",
+        "meta": {
+          "tag": [
+            {
+              "code": "uebermittelt",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
+              "display": "Übermittelt"
+            }
+          ],
+          "profile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://gematik.de/fhir/sid/dipag-token",
+            "value": "b7e2a95c4f81d30e6a2c9f5b1d84e703a6c2f9e5b1d8470c3a6e2f9b5c1d84e7"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "invoice",
+                  "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs"
+                }
+              ]
+            },
+            "system": "https://example.org/fhir/sid/rechnungsids",
+            "value": "123-456-789"
+          }
+        ],
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+              "code": "AM010106",
+              "display": "Rechnung ambulante/stationäre Behandlung"
+            }
+          ]
+        },
+        "author": [
+          {
+            "identifier": {
+              "system": "https://gematik.de/fhir/sid/telematik-id",
+              "value": "987654321"
+            },
+            "display": "Dr. Hausarzt"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "[FD-endpunkt]/Binary/id-des-angereicherten-PDFs"
+            },
+            "format": {
+              "code": "angereichertesPDF",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
+            }
+          },
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "url": "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
+            },
+            "format": {
+              "code": "rechnungsinhalt",
+              "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
+            }
+          }
+        ],
+        "context": {
+          "related": [
+            {
+              "type": "Organization",
+              "reference": "Organization/BeispielOrganisationKostentraeger"
+            }
+          ]
+        },
+        "description": "Rechnung Reiseimpfung vom 10.01.2024",
+        "subject": {
+          "display": "Max Mustermann"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }
+  ]
+}

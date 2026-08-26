@@ -1,13 +1,13 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "dipag-dokumentenmetadaten-eingang",
-  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang",
-  "version": "1.0.8",
-  "name": "DiPagDokumentenmetadatenEingang",
-  "title": "Digitale Patientenrechnung Dokumentenmetadaten Eingang",
+  "id": "dipag-dokumentenmetadaten-eingang-base",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-base",
+  "version": "1.1.1",
+  "name": "DiPagDokumentenmetadatenEingangBase",
+  "title": "Digitale Patientenrechnung Dokumentenmetadaten Eingang Base",
   "status": "active",
   "experimental": false,
-  "date": "2026-07-08",
+  "date": "2026-03-26",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -19,6 +19,7 @@
       ]
     }
   ],
+  "description": "Basisprofil für die Einreichung von Rechnungsdokumenten und Anhängen. Es enthält alle kontextübergreifenden Festlegungen. Kontextspezifische Festlegungen erfolgen in den abgeleiteten Profilen für den Versand an Versicherte (DiPagDokumentenmetadatenEingangPatient) und an Kostenträger-Organisationen (DiPagDokumentenmetadatenEingangOrganisation).",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -36,65 +37,16 @@
             "severity": "error",
             "human": "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten.",
             "expression": "content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())",
-            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
-          },
-          {
-            "key": "MarkierungNurFuerAnhang",
-            "severity": "error",
-            "human": "Die Markierung darf nur gesetzt sein, wenn das Dokument kein Rechnungsdokument (AM010106) ist.",
-            "expression": "meta.extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung').exists() implies type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not()",
-            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-base"
           },
           {
             "key": "AnhangIdentifierPflicht",
             "severity": "error",
             "human": "Ein identifier:AnhangIdentifier MUSS angegeben werden, wenn das Dokument kein Rechnungsdokument (AM010106) ist.",
             "expression": "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not() implies identifier.where(type.coding.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs' and code = 'anhang').exists()).exists()",
-            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-base"
           }
         ]
-      },
-      {
-        "id": "DocumentReference.meta.extension:markierung",
-        "path": "DocumentReference.meta.extension",
-        "sliceName": "markierung",
-        "comment": "Beim Submit eines Anhang darf nur die Markierung 'Persönlich' gesetzt werden. Alle anderen Markierungen sind ausschließlich im Fachdienst zu setzen.\n  Ein optionaler Freitext mit Details zur Markierung kann über die Extension 'details' angegeben werden.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.meta.extension:markierung.extension:markierung",
-        "path": "DocumentReference.meta.extension.extension",
-        "sliceName": "markierung",
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.meta.extension:markierung.extension:markierung.value[x]",
-        "path": "DocumentReference.meta.extension.extension.value[x]",
-        "patternCoding": {
-          "code": "persoenlich"
-        },
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.meta.extension:markierung.extension:details",
-        "path": "DocumentReference.meta.extension.extension",
-        "sliceName": "details",
-        "mustSupport": true
-      },
-      {
-        "id": "DocumentReference.meta.extension:markierung.extension:details.value[x]",
-        "path": "DocumentReference.meta.extension.extension.value[x]",
-        "mustSupport": true
       },
       {
         "id": "DocumentReference.identifier",
