@@ -5,7 +5,7 @@ topic: AF_TBD_R13
 
 ## {{page-title}}
 
-Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das RE-PS als Client. Der zugehörige Use Case des Feature-Dokumentes wird ergänzt, sobald die AF-Nummer vorliegt.
+Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das RE-PS als Client.
 
 |||
 |-|-|

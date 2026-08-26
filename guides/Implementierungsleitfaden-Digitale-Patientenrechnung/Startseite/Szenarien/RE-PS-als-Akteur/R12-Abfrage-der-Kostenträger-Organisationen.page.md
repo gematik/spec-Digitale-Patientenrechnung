@@ -5,9 +5,9 @@ topic: AF_TBD_R12
 
 ## {{page-title}}
 
-Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das RE-PS als Client. Der zugehörige Use Case des Feature-Dokumentes wird ergänzt, sobald die AF-Nummer vorliegt.
+Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das RE-PS als Client.
 
-Der FD stellt eine Liste von Kostenträger-Organisationen bereit, die am direkten Rechnungsversand teilnehmen. Die Pflege dieser Liste (Anbindung neuer Kostenträger, Zuordnung der Telematik-ID zum Rechnungsworkflow) erfolgt über einen Konfigurationsprozess des FD-Betreibers und ist nicht Teil dieses Leitfadens. Zum Zeitpunkt der Veröffentlichung wird nur ein Rechnungsworkflow unterstützt.
+Der FD stellt eine Liste von Kostenträger-Organisationen bereit, die am direkten Rechnungsversand teilnehmen. Die Pflege dieser Liste (Anbindung neuer Kostenträger, Zuordnung der Telematik-ID zum Rechnungsworkflow) erfolgt über einen Konfigurationsprozess des FD-Betreibers und ist nicht Teil dieses Leitfadens.
 
 ### Abfrage der Organisationen
 
