@@ -82,4 +82,29 @@ mit Body:
 
 * Der FD MUSS unter DocumentReference.context.related:anhaenge Referenzen auf alle Anhänge zurückgeben die im Kontext der initialen Einreichung (vgl. {{pagelink:AF_10136}}) übergeben wurden an den FD. Die Anhänge MÜSSEN als DocumentReference-Ressourcen im SearchResult-Bundle zurückgegeben werden mit einem Hinweis, dass diese zusätzlich inkludiert wurden (Bundle.entry.search.mode = include).
 
+### Suche durch Kostenträger-Organisationen (ITSys-KTR)
+
+Dieselbe Interaktion wird durch das ITSys-KTR verwendet, um die per {{pagelink:AF_TBD_R13}} an die Kostenträger-Organisation übermittelten Rechnungen zu suchen. Abweichend gilt:
+
+* Der User-Kontext ist nicht die KVNR, sondern die Telematik-ID der Organisation. Diese ist aus dem Claim `idNummer` des mitzusendenden Access-Token zu extrahieren. Der FD MUSS die Suche auf DocumentReference-Ressourcen begrenzen, die unter `DocumentReference.context.related:empfaenger` auf die Organization mit dieser Telematik-ID verweisen.
+* Markierungen existieren im Kontext der an Organisationen übermittelten Rechnungen nicht; der Suchparameter `dipag-markierung` liefert in diesem Kontext daher keine Treffer.
+* Das Suchergebnis enthält die Rechnungs-Tokens (`identifier:Token`); der Abruf der eigentlichen Dokumente erfolgt ausschließlich über die `$retrieve`-Operation (vgl. {{pagelink:AF_TBD_R14}}).
+
+Antwort des Endpunktes im Erfolgsfall:
+
+<tabs>
+    <tab title="Bundle">      
+        {{render:Resources/fsh-generated/resources/Bundle-ExampleR5KtrBundle.json}}
+    </tab>
+    <tab title="XML">      
+        {{xml:Resources/fsh-generated/resources/Bundle-ExampleR5KtrBundle.json}}
+    </tab>
+    <tab title="JSON">
+        {{json:Resources/fsh-generated/resources/Bundle-ExampleR5KtrBundle.json}}
+    </tab>
+    <tab title="Link">
+        {{link:Resources/fsh-generated/resources/Bundle-ExampleR5KtrBundle.json}}
+    </tab>
+</tabs>
+
 ----

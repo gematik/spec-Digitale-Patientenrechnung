@@ -27,7 +27,7 @@ Diese Version führt den direkten Rechnungsversand an Kostenträger-Organisation
 #### OperationDefinitions
 
 * **DiPagOperationSubmit** (`invoice-submit`): Kann nun zusätzlich auf dem Organization-Endpunkt aufgerufen werden (`/Organization/[id]/$invoice-submit`, {{pagelink:AF_TBD_R13}}). Die `targetProfile` der `dokument`-Parts verweisen auf `DiPagDokumentenmetadatenEingangPatient` bzw. `DiPagDokumentenmetadatenEingangOrganisation`. Nach erfolgreichem Submit an eine Organisation setzt der FD den Rechnungsstatus automatisch auf "Übermittelt".
-* **DiPagOperationRetrieve** (`retrieve`): Bei Rechnungen an Kostenträger-Organisationen setzt der FD nach dem erfolgreichen Abruf den Rechnungsstatus automatisch auf "Abgerufen" ({{pagelink:AF_TBD_R15}}).
+* **DiPagOperationRetrieve** (`retrieve`): Bei Rechnungen an Kostenträger-Organisationen setzt der FD nach dem erfolgreichen Abruf den Rechnungsstatus automatisch auf "Abgerufen" ({{pagelink:AF_TBD_R14}}).
 
 #### CapabilityStatement und Search Parameter
 
@@ -35,7 +35,8 @@ Diese Version führt den direkten Rechnungsversand an Kostenträger-Organisation
 
 #### Szenarien
 
-* Neue Szenarien {{pagelink:AF_TBD_R12}} und {{pagelink:AF_TBD_R13}} (RE-PS als Akteur) sowie {{pagelink:AF_TBD_R14}} und {{pagelink:AF_TBD_R15}} (ITSys-KTR als Akteur). Diese enthalten die Festlegungen zum automatischen Löschen der an Organisationen übermittelten Rechnungen (3 Monate nach "Übermittelt" bzw. 72 Stunden nach "Abgerufen"; Fristen im FD global konfigurierbar, endgültige Abstimmung ausstehend) sowie die im MVP nicht unterstützten Funktionen (Markierungen, `$change-status`, `$process-flag`, `$erase`, Versichertenprotokoll). Die AF-Nummern des Feature-Dokumentes werden nachgetragen, sobald sie vorliegen.
+* Neue Szenarien {{pagelink:AF_TBD_R12}} und {{pagelink:AF_TBD_R13}} (RE-PS als Akteur) sowie {{pagelink:AF_TBD_R14}} (Abruf von übermittelten Rechnungen, ITSys-KTR als Akteur). Das Abruf-Szenario enthält die Festlegungen zum automatischen Löschen der an Organisationen übermittelten Rechnungen (3 Monate nach "Übermittelt" bzw. 72 Stunden nach "Abgerufen"; Fristen im FD global konfigurierbar, endgültige Abstimmung ausstehend) sowie die im MVP nicht unterstützten Funktionen (Markierungen, `$change-status`, `$process-flag`, `$erase`, Versichertenprotokoll). Die AF-Nummern des Feature-Dokumentes werden nachgetragen, sobald sie vorliegen.
+* Die Suche nach übermittelten Rechnungen durch den Kostenträger ist kein eigenes Szenario, sondern erfolgt über die bestehende Suche {{pagelink:AF_10138}}. Die Seite wurde um den Abschnitt "Suche durch Kostenträger-Organisationen (ITSys-KTR)" ergänzt (User-Kontext Telematik-ID statt KVNR, Eingrenzung über `context.related:empfaenger`).
 
 ### Version 1.2.0
 

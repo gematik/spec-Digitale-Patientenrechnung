@@ -1,6 +1,6 @@
 ---
 expand: 2
-topic: AF_TBD_R15
+topic: AF_TBD_R14
 ---
 
 ## {{page-title}}
@@ -14,7 +14,7 @@ Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das
 
 Die Input- und Output-Parameter werden durch die OperationDefinition `https://gematik.de/fhir/dipag/OperationDefinition/Retrieve` beschrieben. Es gelten die Festlegungen aus {{pagelink:AF_10180}} mit folgenden Abweichungen:
 
-* Das Rechnungs-Token stammt aus dem Suchergebnis von {{pagelink:AF_TBD_R14}} (`identifier:Token`) und wird nicht durch Versicherte an den Kostenträger weitergegeben.
+* Das Rechnungs-Token stammt aus dem Suchergebnis der Dokumentenmetadaten-Suche (vgl. {{pagelink:AF_10138}}, Abschnitt "Suche durch Kostenträger-Organisationen") (`identifier:Token`) und wird nicht durch Versicherte an den Kostenträger weitergegeben.
 
 * Die Berechtigungsprüfung erfolgt über die Zuordnung der Rechnung zur abrufenden Organisation: Der FD MUSS sicherstellen, dass `DocumentReference.context.related` auf die Organization verweist, deren Telematik-ID im Access-Token enthalten ist. Andernfalls MUSS die Anfrage mit `404 - Not Found` beantwortet werden.
 
@@ -34,5 +34,14 @@ Die Fristen sind im FD global konfigurierbar.
 | |  |
 |---------|---------------------|
 | <img src="https://raw.githubusercontent.com/gematik/spec-Digitale-Patientenrechnung/master/Material/piktogramme/Betriebskoordination_Gruen_gematik.svg" alt="gematik logo" width="75"/> | **Hinweis:** Die endgültigen Löschfristen sind noch nicht abgestimmt. Die hier genannten Werte sind daher als vorläufig zu verstehen. |
+
+### Nicht unterstützte Funktionen
+
+Im Kontext der an Organisationen übermittelten Rechnungen stehen folgende Funktionen nicht zur Verfügung:
+
+* Markierungen (`$process-flag`, Suchparameter `dipag-markierung`)
+* Manuelles Ändern des Rechnungsstatus (`$change-status`)
+* Löschen von Rechnungsvorgängen durch den Client (`$erase`); das Löschen erfolgt ausschließlich automatisch durch den FD (siehe Abschnitt "Automatisches Löschen von Rechnungen")
+* Versichertenprotokoll (AuditEvent)
 
 ----

@@ -92,10 +92,10 @@ Siehe Abschnitt "6.7 Nutzerprotokolle" des Feature-Dokumentes "Digitale Patiente
 
 Siehe Abschnitt "6.5.2 Anwendungsfälle des Kostenträgers" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_10180}}.
 
-#### Suche nach übermittelten Rechnungsworkflows (Kostenträger)
+#### Suche nach übermittelten Rechnungen (Kostenträger)
 
-Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_TBD_R14}}. Der zugehörige Use Case des Feature-Dokumentes wird ergänzt, sobald die AF-Nummer vorliegt.
+Die Suche erfolgt über die bestehende Interaktion {{pagelink:AF_10138}} (Abschnitt "Suche durch Kostenträger-Organisationen").
 
 #### Abruf von übermittelten Rechnungen (Kostenträger)
 
-Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_TBD_R15}}. Der zugehörige Use Case des Feature-Dokumentes wird ergänzt, sobald die AF-Nummer vorliegt.
+Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_TBD_R14}}. Der zugehörige Use Case des Feature-Dokumentes wird ergänzt, sobald die AF-Nummer vorliegt.
