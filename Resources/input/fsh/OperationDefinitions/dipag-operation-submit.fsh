@@ -7,9 +7,9 @@ Title: "Digitale Patientenrechnung Operation Invoice-Submit"
 Description: "Rechnung einreichen durch die Leistungserbringer:in. Die Operation wird auf dem Patient-Endpunkt (Versand an Versicherte) oder auf dem Organization-Endpunkt (Versand an eine Kostenträger-Organisation) aufgerufen. Beim Versand an eine Organisation setzt der FD den Rechnungsstatus nach erfolgreichem Submit automatisch auf 'Übermittelt'."
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
 * status = #active
-* version = "1.1.0"
+* version = "1.2.0-beta"
 * experimental = false
-* date = "2026-07-29"
+* date = "2026-08-26"
 * kind = #operation
 * name = "DiPagSubmit"
 * code = #invoice-submit

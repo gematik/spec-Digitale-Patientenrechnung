@@ -5,7 +5,8 @@ Title: "Digitale Patientenrechnung Dokumentenmetadaten Eingang Base"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-eingang-base
 Description: "Basisprofil für die Einreichung von Rechnungsdokumenten und Anhängen. Es enthält alle kontextübergreifenden Festlegungen. Kontextspezifische Festlegungen erfolgen in den abgeleiteten Profilen für den Versand an Versicherte (DiPagDokumentenmetadatenEingangPatient) und an Kostenträger-Organisationen (DiPagDokumentenmetadatenEingangOrganisation)."
-* insert Meta(1.1.1)
+* insert Meta(1.2.0-beta)
+* ^date = "2026-08-26"
 * obeys RechnungOderAnhang and AnhangIdentifierPflicht
 * status MS
 * status = #current

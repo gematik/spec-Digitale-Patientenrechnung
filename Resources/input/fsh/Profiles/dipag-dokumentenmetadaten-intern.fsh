@@ -5,8 +5,8 @@ Title: "Digitale Patientenrechnung Dokumentenmetadaten Intern"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-intern
 Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes. Das Profil deckt sowohl Rechnungen an Versicherte (Rechnungsempfänger:innen) als auch Rechnungen an Kostenträger-Organisationen ab. Die Mindestkardinalitäten der kontextspezifischen Elemente (Markierungen, Rechnungsempfänger-Referenz) sind entsprechend gelockert; welche Elemente im jeweiligen Kontext vorhanden sind, ist in den Kommentaren und den Szenariobeschreibungen festgelegt."
-* insert Meta(1.0.8)
-* ^date = "2026-07-08"
+* insert Meta(1.1.0-beta)
+* ^date = "2026-08-26"
 * obeys SignaturVerpflichtendRechnung
 * id ^comment = "Die technische DocumentReference-id dient ausschließlich der serverinternen Adressierung. Der Abruf eines Dokuments erfolgt nicht über die id, sondern ausschließlich über das Rechnungs-Token (siehe identifier:Token) via Retrieve-Operation. Das Token darf NICHT aus der id ableitbar sein."
 * extension MS
