@@ -5,6 +5,15 @@ Id: dipag-organisation-rechnungsempfaenger
 Description: "Kostenträger-Organisation, die im Fachdienst als Empfänger für den direkten Rechnungsversand konfiguriert ist. Die Liste der Organisationen wird durch den Fachdienst-Betreiber gepflegt und kann durch das RE-PS abgefragt werden."
 * insert Meta(1.2.0-beta)
 * ^date = "2026-08-26"
+* extension MS
+* extension contains DiPagOrganizationWorkflowtyp named workflowtyp 1..* MS
+* extension[workflowtyp]
+  * ^short = "Unterstützte Workflowtypen"
+  * ^comment = "An jeder Organisation MUSS mitgeteilt werden, welche Workflowtypen sie unterstützt. Das RE-PS entscheidet, welcher der unterstützten Workflowtypen beim $invoice-submit gewählt wird. Die Beschreibung der einzelnen Workflowtypen ist im CodeSystem DiPagWorkflowtypCS hinterlegt."
+  * valueCoding 1.. MS
+    * system 1.. MS
+    * code 1.. MS
+    * display MS
 * identifier 1.. MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"

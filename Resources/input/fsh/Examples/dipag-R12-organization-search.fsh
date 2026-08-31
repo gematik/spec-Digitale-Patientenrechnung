@@ -16,6 +16,7 @@ InstanceOf: Bundle
 Instance: BeispielOrganisationKostentraeger
 InstanceOf: DiPagOrganisationRechnungsempfaenger
 Usage: #example
+* extension[workflowtyp].valueCoding = DiPagWorkflowtypCS#demo "Demo"
 * identifier[Telematik-ID]
   * type = $v2-0203#PRN
   * system = "https://gematik.de/fhir/sid/telematik-id"
@@ -25,6 +26,7 @@ Usage: #example
 Instance: BeispielOrganisationKostentraeger2
 InstanceOf: DiPagOrganisationRechnungsempfaenger
 Usage: #example
+* extension[workflowtyp].valueCoding = DiPagWorkflowtypCS#demo "Demo"
 * identifier[Telematik-ID]
   * type = $v2-0203#PRN
   * system = "https://gematik.de/fhir/sid/telematik-id"
