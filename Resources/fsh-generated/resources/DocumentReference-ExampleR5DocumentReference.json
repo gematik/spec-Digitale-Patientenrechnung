@@ -7,6 +7,11 @@
         "code": "offen",
         "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
         "display": "Offen"
+      },
+      {
+        "code": "patientenrechnung",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs",
+        "display": "Patientenrechnung"
       }
     ],
     "profile": [

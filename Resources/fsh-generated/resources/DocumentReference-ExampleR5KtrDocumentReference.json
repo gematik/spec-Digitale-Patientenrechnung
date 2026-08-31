@@ -7,6 +7,11 @@
         "code": "uebermittelt",
         "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
         "display": "Übermittelt"
+      },
+      {
+        "code": "demo",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs",
+        "display": "Demo"
       }
     ],
     "profile": [

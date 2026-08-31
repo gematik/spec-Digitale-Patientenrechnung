@@ -174,6 +174,32 @@
         "mustSupport": true
       },
       {
+        "id": "DocumentReference.meta.tag:dipag-workflowtyp",
+        "path": "DocumentReference.meta.tag",
+        "sliceName": "dipag-workflowtyp",
+        "short": "Workflowtyp",
+        "comment": "Der Workflowtyp der Rechnung. Der Workflowtyp wird durch den FD immer gesetzt: Bei der Einreichung auf dem Patient-Endpunkt setzt der FD den Workflowtyp 'patientenrechnung', bei der Einreichung an eine Kostenträger-Organisation übernimmt der FD den vom RE-PS im Parameter 'workflow' der Operation SubmitOrganisation gewählten Workflowtyp.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://gematik.de/fhir/dipag/ValueSet/dipag-workflowtyp-vs"
+        }
+      },
+      {
+        "id": "DocumentReference.meta.tag:dipag-workflowtyp.system",
+        "path": "DocumentReference.meta.tag.system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.tag:dipag-workflowtyp.code",
+        "path": "DocumentReference.meta.tag.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
         "id": "DocumentReference.extension",
         "path": "DocumentReference.extension",
         "slicing": {

@@ -131,7 +131,7 @@
                 }
               ],
               "name": "invoice-submit",
-              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/SubmitOrganisation"
             }
           ]
         },

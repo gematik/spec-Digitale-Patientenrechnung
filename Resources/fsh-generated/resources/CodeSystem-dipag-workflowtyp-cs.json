@@ -1,0 +1,53 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DiPagWorkflowtypCS",
+  "id": "dipag-workflowtyp-cs",
+  "title": "Digitale Patientenrechnung Workflowtyp CS",
+  "description": "CodeSystem für die Workflowtypen der Digitalen Patientenrechnung. Jeder Code beschreibt einen fachlichen Workflow, der bei der Einreichung einer Rechnung ausgelöst wird. Das CodeSystem ist zweistufig aufgebaut: Auf oberster Ebene wird nach der Adressierung der Rechnung unterschieden (Patientenadressierung, Einrichtungsadressierung), darunter hängen die konkreten Workflows. Beim Rechnungsversand an Kostenträger-Organisationen wählt das RE-PS beim $invoice-submit einen von der Ziel-Organisation unterstützten Workflowtyp aus.",
+  "version": "1.2.0-beta",
+  "url": "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs",
+  "concept": [
+    {
+      "code": "patientenadressierung",
+      "display": "Patientenadressierung",
+      "definition": "Workflows, bei denen die Rechnung an eine:n Versicherte:n adressiert ist (Einreichung auf dem Patient-Endpunkt).",
+      "concept": [
+        {
+          "code": "patientenrechnung",
+          "display": "Patientenrechnung",
+          "definition": "Workflow der Digitalen Patientenrechnung, der bei der Einreichung auf dem Patient-Endpunkt ausgelöst wird: Die Rechnung wird durch den Fachdienst gespeichert und der/dem Versicherten zur Prüfung und weiteren Verarbeitung bereitgestellt."
+        }
+      ]
+    },
+    {
+      "code": "einrichtungsadressierung",
+      "display": "Einrichtungsadressierung",
+      "definition": "Workflows, bei denen die Rechnung an eine Einrichtung (z.B. eine Kostenträger-Organisation) adressiert ist (Einreichung auf dem Organization-Endpunkt).",
+      "concept": [
+        {
+          "code": "demo",
+          "display": "Demo",
+          "definition": "Demo-Workflow für den Rechnungsversand an Kostenträger-Organisationen: Die Rechnung wird durch den Fachdienst gespeichert und der Organisation zum Abruf bereitgestellt. Der Workflow kennt genau zwei Status: 'Übermittelt' (durch den FD nach erfolgreichem $invoice-submit gesetzt) und 'Abgerufen' (durch den FD nach erfolgreichem Abruf per $retrieve gesetzt)."
+        }
+      ]
+    }
+  ],
+  "experimental": false,
+  "date": "2026-08-31",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "caseSensitive": true,
+  "hierarchyMeaning": "is-a",
+  "count": 4
+}

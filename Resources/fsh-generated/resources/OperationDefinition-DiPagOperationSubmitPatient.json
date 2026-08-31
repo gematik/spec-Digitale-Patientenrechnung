@@ -1,6 +1,6 @@
 {
   "resourceType": "OperationDefinition",
-  "id": "DiPagOperationSubmit",
+  "id": "DiPagOperationSubmitPatient",
   "url": "https://gematik.de/fhir/dipag/OperationDefinition/Submit",
   "status": "active",
   "version": "1.2.0-beta",
@@ -10,8 +10,7 @@
   "name": "DiPagSubmit",
   "code": "invoice-submit",
   "resource": [
-    "Patient",
-    "Organization"
+    "Patient"
   ],
   "system": false,
   "type": false,
@@ -30,11 +29,10 @@
           "use": "in",
           "min": 1,
           "max": "1",
-          "documentation": "Die Digitale Patientenrechnung als DocumentReference. Beim Aufruf auf dem Patient-Endpunkt MUSS die Ressource dem Profil DiPagDokumentenmetadatenEingangPatient entsprechen, beim Aufruf auf dem Organization-Endpunkt dem Profil DiPagDokumentenmetadatenEingangOrganisation. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung).",
+          "documentation": "Die Digitale Patientenrechnung als DocumentReference. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung).",
           "type": "DocumentReference",
           "targetProfile": [
-            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient",
-            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-organisation"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient"
           ]
         },
         {
@@ -76,11 +74,10 @@
           "use": "in",
           "min": 1,
           "max": "1",
-          "documentation": "Der Anhang als DocumentReference. Beim Aufruf auf dem Patient-Endpunkt MUSS die Ressource dem Profil DiPagDokumentenmetadatenEingangPatient entsprechen, beim Aufruf auf dem Organization-Endpunkt dem Profil DiPagDokumentenmetadatenEingangOrganisation. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung).",
+          "documentation": "Der Anhang als DocumentReference. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung).",
           "type": "DocumentReference",
           "targetProfile": [
-            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient",
-            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-organisation"
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient"
           ]
         },
         {
