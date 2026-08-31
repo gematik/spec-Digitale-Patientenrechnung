@@ -20,5 +20,15 @@
       "value": "8-01-0000000001"
     }
   ],
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-organization-workflowtyp",
+      "valueCoding": {
+        "code": "demo",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs",
+        "display": "Demo"
+      }
+    }
+  ],
   "name": "Beispielkasse Krankenversicherung AG"
 }

@@ -29,6 +29,57 @@
   "differential": {
     "element": [
       {
+        "id": "Organization.extension",
+        "path": "Organization.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.extension:workflowtyp",
+        "path": "Organization.extension",
+        "sliceName": "workflowtyp",
+        "short": "Unterstützte Workflowtypen",
+        "comment": "An jeder Organisation MUSS mitgeteilt werden, welche Workflowtypen sie unterstützt. Das RE-PS entscheidet, welcher der unterstützten Workflowtypen beim $invoice-submit gewählt wird. Die Beschreibung der einzelnen Workflowtypen ist im CodeSystem DiPagWorkflowtypCS hinterlegt.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-organization-workflowtyp"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.extension:workflowtyp.value[x].system",
+        "path": "Organization.extension.value[x].system",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.extension:workflowtyp.value[x].code",
+        "path": "Organization.extension.value[x].code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Organization.extension:workflowtyp.value[x].display",
+        "path": "Organization.extension.value[x].display",
+        "mustSupport": true
+      },
+      {
         "id": "Organization.identifier",
         "path": "Organization.identifier",
         "slicing": {
