@@ -26,10 +26,8 @@ Die Input- und Output-Parameter werden durch die OperationDefinition `https://ge
 
 Der FD MUSS an Organisationen übermittelte Rechnungen automatisch löschen:
 
-* 3 Monate nach dem Übergang in den Status "Übermittelt", falls die Rechnung nicht abgerufen wurde.
-* 72 Stunden nach dem Übergang in den Status "Abgerufen".
-
-Die Fristen sind im FD global konfigurierbar.
+* 3 Monate nach Übermittlung der Rechnung, falls die Rechnung nicht abgerufen wurde.
+* 72 Stunden nach dem Abruf der Rechnung.
 
 | |  |
 |---------|---------------------|
