@@ -52,10 +52,15 @@ Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-* meta.tag contains dipag-rechnungsstatus 0..1 MS
+* meta.tag contains dipag-rechnungsstatus 0..1 MS and dipag-workflowtyp 0..1 MS
   * ^comment = "Metaangaben zur Digitalen Patientenrechnung die sich auf das Rechnungsdokument als Ganzes beziehen und nicht Teil des durch den RE-PS erstellten Dokuments sind."
 * meta.tag[dipag-rechnungsstatus] from DiPagRechnungsstatusVS (required)
   * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments Digitale Patientenrechnung. Bei Rechnungen an Versicherte werden die Statuswerte 'Offen', 'Erledigt' und 'Papierkorb' verwendet. Bei Rechnungen an Kostenträger-Organisationen werden ausschließlich die Statuswerte 'Übermittelt' und 'Abgerufen' verwendet; diese werden ausschließlich durch den FD gesetzt ('Übermittelt' nach erfolgreichem $invoice-submit, 'Abgerufen' nach erfolgreichem Abruf per $retrieve)."
+  * system 1.. MS
+  * code 1.. MS
+* meta.tag[dipag-workflowtyp] from DiPagWorkflowtypVS (required)
+  * ^short = "Workflowtyp"
+  * ^comment = "Der Workflowtyp der Rechnung. Der Workflowtyp wird durch den FD immer gesetzt: Bei der Einreichung auf dem Patient-Endpunkt setzt der FD den Workflowtyp 'patientenrechnung', bei der Einreichung an eine Kostenträger-Organisation übernimmt der FD den vom RE-PS im Parameter 'workflow' der Operation SubmitOrganisation gewählten Workflowtyp."
   * system 1.. MS
   * code 1.. MS
 * status MS

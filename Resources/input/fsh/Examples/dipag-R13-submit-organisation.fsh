@@ -15,6 +15,9 @@ Usage: #example
       * name = "y"
       * valueDecimal = 720
 * parameter[+]
+  * name = "workflow"
+  * valueCode = #demo
+* parameter[+]
   * name = "angereichertesPDF"
   * valueBoolean = false
 

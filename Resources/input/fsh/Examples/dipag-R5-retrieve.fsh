@@ -19,6 +19,7 @@ Title: "Example DiPag Document Reference"
 * author.identifier.value = "987654321"
 * meta.tag[0] = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#offen
 * meta.tag[0].display = "Offen"
+* meta.tag[dipag-workflowtyp] = https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs#patientenrechnung "Patientenrechnung"
 * status = http://hl7.org/fhir/document-reference-status#current
 * identifier[Token].system = "https://gematik.de/fhir/sid/dipag-token"
 * identifier[Token].value = "d0ab9ed15c5eb41afde78b16a42e1f84d9b2818c1c48406233ac4e237e85e7f2"
@@ -116,6 +117,7 @@ InstanceOf: DiPagDokumentenmetadatenIntern
   * value = 84.50
   * currency = #EUR
 * meta.tag[dipag-rechnungsstatus] = https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#uebermittelt "Übermittelt"
+* meta.tag[dipag-workflowtyp] = https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs#demo "Demo"
 * status = #current
 * identifier[Token]
   * system = "https://gematik.de/fhir/sid/dipag-token"

@@ -48,7 +48,7 @@ Usage: #definition
     * operation[+]
       * insert Expectation (#SHALL)
       * name = "invoice-submit"
-      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/SubmitOrganisation"
   * resource[+]
     * type = #DocumentReference
     * insert Expectation (#SHALL)
