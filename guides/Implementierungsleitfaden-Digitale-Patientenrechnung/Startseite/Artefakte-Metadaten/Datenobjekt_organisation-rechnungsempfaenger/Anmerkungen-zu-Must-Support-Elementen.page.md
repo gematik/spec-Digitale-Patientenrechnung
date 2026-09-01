@@ -1,6 +1,6 @@
 ---
-topic: DiPagDokumentenmetadaten-MS
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang
+topic: DiPagOrganisationRechnungsempfaenger-MS
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-organisation-rechnungsempfaenger
 ---
 
 ### Anmerkungen zu Must-Support-Feldern
@@ -15,4 +15,3 @@ where mustSupport = true
 select
 	Feldname: id, Kurzbeschreibung: short, Hinweise: comment
 </fql>
-

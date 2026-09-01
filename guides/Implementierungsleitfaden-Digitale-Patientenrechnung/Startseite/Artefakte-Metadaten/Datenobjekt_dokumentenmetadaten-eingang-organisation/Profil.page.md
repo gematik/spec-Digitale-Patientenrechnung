@@ -1,6 +1,6 @@
 ---
-topic: DiPagDokumentenmetadaten-Profil
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang
+topic: DiPagDokumentenmetadatenEingangOrganisation-Profil
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-organisation
 ---
 ## {{link}}
 
@@ -60,15 +60,3 @@ for
     select
         Element: id, Staerke: binding.strength, ValueSet: binding.valueSet
 </fql>
-
-<!--### Mappings
-
-<fql>
-      from StructureDefinition
-      where url = %canonical
-      for differential.element 
-      select
-        'Ziel: DocumentReference': id,
-        join mapping.where(identity = 'CompositionDocumentReferenceMapping')
-          { 'Quelle: Document-Bundle': map, Hinweis: comment } 
-</fql>-->

@@ -10,6 +10,37 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.3.0-beta
+
+Diese Version führt den direkten Rechnungsversand an Kostenträger-Organisationen ein. Sie enthält eine nicht rückwärtskompatible Änderung: Das Eingang-Profil `dipag-dokumentenmetadaten-eingang` wurde in `dipag-dokumentenmetadaten-eingang-patient` umbenannt (**Breaking Change**, neue Canonical-URL).
+
+#### Profile und Extensions
+
+* **DiPagOrganisationRechnungsempfaenger** (neu): Organization-Profil für die im FD konfigurierten Kostenträger-Organisationen, die am direkten Rechnungsversand teilnehmen (Telematik-ID verpflichtend). Die Liste kann durch das RE-PS per `GET /Organization` ohne Suchparameter abgefragt werden ({{pagelink:AF_TBD_R12}}).
+* **DiPagOrganizationWorkflowtyp** (neu): Extension zur Angabe der von einer Kostenträger-Organisation unterstützten Workflowtypen. Im Profil `DiPagOrganisationRechnungsempfaenger` verpflichtend (1..*); das RE-PS wählt beim Versand einen der unterstützten Workflowtypen aus.
+* **DiPagDokumentenmetadatenEingangBase** (neu): Die kontextübergreifenden Festlegungen des Eingang-Profils wurden in ein Basisprofil ausgelagert. **DiPagDokumentenmetadatenEingangPatient** (bisher `DiPagDokumentenmetadatenEingang`; **Breaking Change**: neue Canonical-URL `.../dipag-dokumentenmetadaten-eingang-patient`) leitet von diesem ab und ergänzt ausschließlich die Markierung 'Persönlich' für Anhänge. **DiPagDokumentenmetadatenEingangOrganisation** (neu) ist die Variante für die Einreichung an Kostenträger-Organisationen; Markierungen werden in diesem Kontext nicht unterstützt und sind daher nicht profiliert.
+* **DiPagDokumentenmetadatenIntern**: Das interne Profil deckt nun beide Kontexte ab (Rechnungen an Versicherte und an Kostenträger-Organisationen). Hierfür wurden die Mindestkardinalitäten der kontextspezifischen Elemente gelockert (`context.related:patient` nun 0..1) und der neue Slice `context.related:empfaenger` (0..1, Referenz auf die empfangende Organization) ergänzt. Markierungen und die Statuswerte des Versicherten-Workflows werden nur im Versicherten-Kontext verwendet; die Festlegungen je Kontext sind in den Kommentaren des Profils und den Szenariobeschreibungen dokumentiert. Neu ist außerdem der Slice `meta.tag:dipag-workflowtyp`, über den der FD den Workflowtyp der Rechnung abbildet: Im Versicherten-Kontext setzt der FD automatisch `patientenrechnung`, im Organisations-Kontext den beim Submit im Parameter `workflow` gewählten Workflowtyp.
+
+#### Terminologie
+
+* **DiPagARechnungsstatusCS**: Neue Codes `uebermittelt` ("Übermittelt") und `abgerufen` ("Abgerufen") für den Rechnungsworkflow bei Kostenträger-Organisationen. Das ValueSet `DiPagRechnungsstatusVS` umfasst weiterhin alle Codes des CodeSystems; welche Statuswerte im jeweiligen Kontext gültig sind, ist im Profil `DiPagDokumentenmetadatenIntern` und den Szenariobeschreibungen festgelegt.
+* **DiPagWorkflowtypCS** (neu): Zweistufiges CodeSystem für die Workflowtypen der Digitalen Patientenrechnung. Auf oberster Ebene wird nach der Adressierung unterschieden (`patientenadressierung`, `einrichtungsadressierung`), darunter hängen die konkreten Workflows (`patientenrechnung` bzw. `demo`). Dazu zwei intensional definierte ValueSets: **DiPagWorkflowtypVS** (konkrete Workflowtypen der zweiten Ebene; Binding an `meta.tag:dipag-workflowtyp` und der Organization-Extension) und **DiPagWorkflowtypEinrichtungsadressierungVS** (Workflowtypen unterhalb der Einrichtungsadressierung; Binding am Parameter `workflow` der Operation `SubmitOrganisation`).
+
+#### OperationDefinitions
+
+* **DiPagOperationSubmitOrganisation** (neu, `invoice-submit`): Eigene OperationDefinition für die Einreichung an Kostenträger-Organisationen (`/Organization/[id]/$invoice-submit`, {{pagelink:AF_TBD_R13}}) mit demselben Operation-Code wie die Einreichung an Versicherte. Sie ergänzt den Pflicht-Parameter `workflow`, über den das RE-PS einen von der Ziel-Organisation unterstützten Workflowtyp wählt; das `targetProfile` der `dokument`-Parts verweist auf `DiPagDokumentenmetadatenEingangOrganisation`. Nach erfolgreichem Submit setzt der FD den Rechnungsstatus automatisch auf "Übermittelt".
+* **DiPagOperationSubmitPatient** (bisher `DiPagOperationSubmit`, `invoice-submit`): Umbenennung im Zuge der Aufteilung der Submit-Operation; die Canonical-URL (`.../OperationDefinition/Submit`) bleibt unverändert. Die OperationDefinition beschreibt weiterhin ausschließlich die Einreichung an Versicherte auf dem Patient-Endpunkt (`targetProfile` der `dokument`-Parts: `DiPagDokumentenmetadatenEingangPatient`).
+* **DiPagOperationRetrieve** (`retrieve`): Bei Rechnungen an Kostenträger-Organisationen setzt der FD nach dem erfolgreichen Abruf den Rechnungsstatus automatisch auf "Abgerufen" ({{pagelink:AF_TBD_R14}}).
+
+#### CapabilityStatement und Search Parameter
+
+* Neue Resource `Organization` mit `search-type`-Interaktion (ohne Suchparameter) und der Operation `invoice-submit` (OperationDefinition `SubmitOrganisation`).
+
+#### Szenarien
+
+* Neue Szenarien {{pagelink:AF_TBD_R12}} und {{pagelink:AF_TBD_R13}} (RE-PS als Akteur) sowie {{pagelink:AF_TBD_R14}} (Abruf von übermittelten Rechnungen, ITSys-KTR als Akteur). 
+* Die Suche nach übermittelten Rechnungen durch den Kostenträger ist kein eigenes Szenario, sondern erfolgt über die bestehende Suche {{pagelink:AF_10138}}. Die Seite wurde um den Abschnitt "Suche durch Kostenträger-Organisationen (ITSys-KTR)" ergänzt (User-Kontext Telematik-ID statt KVNR, Eingrenzung über `context.related:empfaenger`).
+
 ### Version 1.2.0
 
 Diese Version enthält eine nicht rückwärtskompatible Änderung am Profil **DiPagPatient** (Geburtsdatum verpflichtend), daher der Sprung auf 1.2.0.

@@ -30,7 +30,9 @@ Die folgenden Tabellen führen die Beschränkungen übersichtlich auf. Für sie 
 * Slices mit identischer Beschränkung sind unter dem ungeslicten Pfad zusammengefasst (z.B. `DocumentReference.identifier.value` für alle Identifier-Slices). Slices mit abweichender Beschränkung sind zusätzlich einzeln aufgeführt.
 * Die Inhalte von Extensions sind unterhalb des jeweiligen Profils mit aufgeführt.
 
-#### Dokumentenmetadaten beim Einreichen (`DiPagDokumentenmetadatenEingang`)
+#### Dokumentenmetadaten beim Einreichen (`DiPagDokumentenmetadatenEingangPatient`)
+
+Die Beschränkungen gelten gleichermaßen für das Profil `DiPagDokumentenmetadatenEingangOrganisation` (Einreichung an Kostenträger-Organisationen), mit Ausnahme der ersten Zeile: Markierungen werden in diesem Kontext nicht unterstützt.
 
 | Element | Typ | Max. Länge | Herkunft |
 |-|-|-|-|

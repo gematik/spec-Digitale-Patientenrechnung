@@ -56,6 +56,14 @@ Siehe Abschnitt "6.2.4 Validierung und Versand von Rechnungen und Dokumenten" de
 
 Siehe Abschnitt "6.2.4 Validierung und Versand von Rechnungen und Dokumenten" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_10271-Bulk}}.
 
+#### Abfrage der Kostenträger-Organisationen
+
+Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_TBD_R12}}. Der zugehörige Use Case des Feature-Dokumentes wird ergänzt, sobald die AF-Nummer vorliegt.
+
+#### Rechnung an Kostenträger-Organisation versenden
+
+Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_TBD_R13}}. Der zugehörige Use Case des Feature-Dokumentes wird ergänzt, sobald die AF-Nummer vorliegt.
+
 ### Interaktionen zwischen DiPag FdV und FD
 
 #### Use Case AF_10262 - Abfrage von Daten zu Rechnungen und Dokumenten per Token (Rechnungsempfänger)
@@ -83,3 +91,11 @@ Siehe Abschnitt "6.7 Nutzerprotokolle" des Feature-Dokumentes "Digitale Patiente
 #### Use Case AF_10180 - Abfrage von Daten zu Rechnungen und Dokumenten per Token (Kostenträger)
 
 Siehe Abschnitt "6.5.2 Anwendungsfälle des Kostenträgers" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_10180}}.
+
+#### Suche nach übermittelten Rechnungen (Kostenträger)
+
+Die Suche erfolgt über die bestehende Interaktion {{pagelink:AF_10138}} (Abschnitt "Suche durch Kostenträger-Organisationen").
+
+#### Abruf von übermittelten Rechnungen (Kostenträger)
+
+Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_TBD_R14}}. Der zugehörige Use Case des Feature-Dokumentes wird ergänzt, sobald die AF-Nummer vorliegt.
