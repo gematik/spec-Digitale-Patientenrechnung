@@ -1,0 +1,54 @@
+name: Deploy Viewer to GitHub Pages
+
+on:
+  push:
+    branches: [removing-bema-related-stuff]   # TODO(switch-to-master): change to [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stage invoice data
+        run: |
+          mkdir -p docs/data docs/pdfs
+          cp Resources/fsh-generated/resources/Invoice-*.json      docs/data/ || true
+          cp Resources/fsh-generated/resources/ChargeItem-*.json   docs/data/ || true
+          cp Resources/fsh-generated/resources/Organization-*.json docs/data/ || true
+          cp Resources/fsh-generated/resources/Patient-*.json      docs/data/ || true
+          cp Resources/fsh-generated/resources/Practitioner-*.json docs/data/ || true
+          cp Resources/fsh-generated/resources/CodeSystem-*.json   docs/data/ || true
+          cp "Material/KFO Mehrkostenberechnungen.pdf/"*.pdf docs/pdfs/ || true
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Extract code displays
+        run: node docs/build/extract-displays.mjs
+
+      - name: Deploy docs to github-pages branch
+        run: |
+          cp -r docs /tmp/built-docs
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin github-pages
+          git checkout github-pages
+
+          rm -rf docs
+          cp -r /tmp/built-docs docs
+
+          git add -f docs/
+          git commit -m "Deploy: $(date -u +%Y-%m-%dT%H:%M:%SZ)" || echo "Nothing to commit"
+          git push origin github-pages

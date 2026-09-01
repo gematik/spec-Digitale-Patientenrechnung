@@ -1,0 +1,54 @@
+{
+  "resourceType": "ChargeItem",
+  "id": "KfoMehrkosten1-P5",
+  "meta": {
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"
+    ]
+  },
+  "status": "billable",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+      "valueCoding": {
+        "code": "BEMA",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"
+      }
+    },
+    {
+      "extension": [
+        {
+          "url": "Punktzahl",
+          "valueDecimal": 18
+        }
+      ],
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben"
+    }
+  ],
+  "quantity": {
+    "system": "http://unitsofmeasure.org",
+    "value": 3,
+    "unit": "{#}",
+    "code": "{#}"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://fhir.de/CodeSystem/bäk/bema",
+        "code": "126a",
+        "display": "Eingliedern eines Brackets oder eines Attachments aus Edelstahl oder nickelfreiem Metall einschließlich Material- und Laborkosten"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/KfoMehrkosten1Patient"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Organization/KfoMehrkosten1Behandler"
+      }
+    }
+  ],
+  "occurrenceDateTime": "2024-08-20"
+}
