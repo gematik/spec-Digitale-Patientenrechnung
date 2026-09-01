@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DiPagWorkflowtypVS",
+  "id": "dipag-workflowtyp-vs",
+  "title": "Digitale Patientenrechnung Workflowtyp VS",
+  "description": "ValueSet mit den konkreten Workflowtypen der Digitalen Patientenrechnung (zweite Ebene des CodeSystems). Die übergeordneten Adressierungs-Codes (Patientenadressierung, Einrichtungsadressierung) sind nicht enthalten. Das ValueSet ist intensional definiert: Neue Workflowtypen, die im CodeSystem unterhalb der Adressierungs-Codes ergänzt werden, sind automatisch enthalten.",
+  "version": "1.3.0-beta",
+  "url": "https://gematik.de/fhir/dipag/ValueSet/dipag-workflowtyp-vs",
+  "experimental": false,
+  "date": "2026-09-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "patientenadressierung"
+          }
+        ]
+      },
+      {
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "einrichtungsadressierung"
+          }
+        ]
+      }
+    ]
+  }
+}

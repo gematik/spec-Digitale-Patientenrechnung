@@ -1,16 +1,16 @@
 // ------------- Profile -------------
-Alias: $kdl = http://dvmd.de/fhir/CodeSystem/kdl
 
 Profile: DiPagDokumentenmetadatenIntern
 Title: "Digitale Patientenrechnung Dokumentenmetadaten Intern"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-intern
-* insert Meta(1.0.8)
-* ^date = "2026-07-08"
+Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes. Das Profil deckt sowohl Rechnungen an Versicherte (Rechnungsempfänger) als auch Rechnungen an Kostenträger-Organisationen ab. Die Mindestkardinalitäten der kontextspezifischen Elemente (Markierungen, Rechnungsempfänger-Referenz) sind entsprechend gelockert; welche Elemente im jeweiligen Kontext vorhanden sind, ist in den Kommentaren und den Szenariobeschreibungen festgelegt."
+* insert Meta(1.1.0-beta)
+* ^date = "2026-08-26"
 * obeys SignaturVerpflichtendRechnung
 * id ^comment = "Die technische DocumentReference-id dient ausschließlich der serverinternen Adressierung. Der Abruf eines Dokuments erfolgt nicht über die id, sondern ausschließlich über das Rechnungs-Token (siehe identifier:Token) via Retrieve-Operation. Das Token darf NICHT aus der id ableitbar sein."
 * extension MS
-* extension contains 
+* extension contains
   DiPagDocRefSignature named docRef-signature 0..1 MS and
   DiPagDocumentReferenceRechnungsdatum named rechnungsdatum 0..1 MS and
   DiPagZahlungsziel named zahlungszieldatum 0..1 MS and
@@ -33,7 +33,7 @@ Id: dipag-dokumentenmetadaten-intern
 * meta.extension MS
 * meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
 * meta.extension[markierung]
-  * ^comment = "Vgl. Abschnitt '4.4.2 Markierungen' des Feature-Dokuments Digitale Patientenrechnung"
+  * ^comment = "Vgl. Abschnitt '4.4.2 Markierungen' des Feature-Dokuments Digitale Patientenrechnung. Markierungen werden ausschließlich im Kontext von Rechnungen an Versicherte verwendet; bei Rechnungen an Kostenträger-Organisationen sind keine Markierungen vorhanden."
   * extension[markierung] MS
     * valueCoding MS
   * extension[zeitpunkt] MS
@@ -52,10 +52,15 @@ Id: dipag-dokumentenmetadaten-intern
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
-* meta.tag contains dipag-rechnungsstatus 0..1 MS
+* meta.tag contains dipag-rechnungsstatus 0..1 MS and dipag-workflowtyp 0..1 MS
   * ^comment = "Metaangaben zur Digitalen Patientenrechnung die sich auf das Rechnungsdokument als Ganzes beziehen und nicht Teil des durch den RE-PS erstellten Dokuments sind."
 * meta.tag[dipag-rechnungsstatus] from DiPagRechnungsstatusVS (required)
-  * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments Digitale Patientenrechnung"
+  * ^comment = "Vgl. Abschnitt 4.4.1 Workflow einer Rechnung des Feature-Dokuments Digitale Patientenrechnung. Bei Rechnungen an Versicherte werden die Statuswerte 'Offen', 'Erledigt' und 'Papierkorb' verwendet. Bei Rechnungen an Kostenträger-Organisationen werden ausschließlich die Statuswerte 'Übermittelt' und 'Abgerufen' verwendet; diese werden ausschließlich durch den FD gesetzt ('Übermittelt' nach erfolgreichem $invoice-submit, 'Abgerufen' nach erfolgreichem Abruf per $retrieve)."
+  * system 1.. MS
+  * code 1.. MS
+* meta.tag[dipag-workflowtyp] from DiPagWorkflowtypVS (required)
+  * ^short = "Workflowtyp"
+  * ^comment = "Der Workflowtyp der Rechnung. Der Workflowtyp wird durch den FD immer gesetzt: Bei der Einreichung auf dem Patient-Endpunkt setzt der FD den Workflowtyp 'patientenrechnung', bei der Einreichung an eine Kostenträger-Organisation übernimmt der FD den vom RE-PS im Parameter 'workflow' der Operation SubmitOrganisation gewählten Workflowtyp."
   * system 1.. MS
   * code 1.. MS
 * status MS
@@ -100,7 +105,7 @@ Id: dipag-dokumentenmetadaten-intern
     * ^short = "Anhangs-Identifier"
 * type 1.. MS
   * ^comment = "Kodierung des Dokumentes als 'Rechnung', sowie darüber hinausgehende Klassifizierung per KDL"
-* type.coding 1.. 
+* type.coding 1..
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
@@ -188,78 +193,22 @@ Id: dipag-dokumentenmetadaten-intern
     * url 1.. MS
 * context MS
   * related 1.. MS
-    * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit der Rechnungsempfänger:in. Die Slices werden über das Element Reference.type unterschieden und NICHT über die Auflösung der Referenz (resolve()), damit eine einzelne DocumentReference auch ohne Bundle-Kontext (z.B. als Ergebnis der $retrieve-Operation oder der Suche) validierbar bleibt. Der Fachdienst MUSS Reference.type entsprechend dem Zieltyp ('Patient' bzw. 'DocumentReference') setzen."
+    * ^comment = "Der Fachdienst verknüpft alle Rechnungsdokumente mit dem Rechnungsempfänger. Bei Rechnungen an Versicherte MUSS der Slice 'patient' vorhanden sein, bei Rechnungen an Kostenträger-Organisationen MUSS der Slice 'empfaenger' vorhanden sein (jeweils genau einer der beiden Slices). Die Slices werden über das Element Reference.type unterschieden und NICHT über die Auflösung der Referenz (resolve()), damit eine einzelne DocumentReference auch ohne Bundle-Kontext (z.B. als Ergebnis der $retrieve-Operation oder der Suche) validierbar bleibt. Der Fachdienst MUSS Reference.type entsprechend dem Zieltyp ('Patient' bzw. 'Organization' bzw. 'DocumentReference') setzen."
     * ^slicing.discriminator.type = #pattern
     * ^slicing.discriminator.path = "type"
     *  ^slicing.rules = #open
-  * related contains patient 1..1 MS and anhaenge 0..* MS
+  * related contains patient 0..1 MS and empfaenger 0..1 MS and anhaenge 0..* MS
   * related[patient] only Reference(Patient)
+    * ^short = "Rechnungsempfänger:in (Versicherte:r)"
     * type 1.. MS
     * type = "Patient"
+  * related[empfaenger] only Reference(Organization)
+    * ^short = "Empfangende Kostenträger-Organisation"
+    * type 1.. MS
+    * type = "Organization"
   * related[anhaenge] only Reference(DocumentReference)
     * type 1.. MS
     * type = "DocumentReference"
-
-// ------------- ValueSets -------------
-
-ValueSet: DiPagRestrictedMimeTypesInBinaryVS
-Id: dipag-restricted-mime-types-in-binary-vs
-Title: "Digitale Patientenrechnung Restricted Mime Types in Binary"
-* insert Meta(1.0.7)
-
-* include urn:ietf:bcp:13#application/fhir+json
-* include urn:ietf:bcp:13#application/pdf
-
-ValueSet: DiPagRechnungsstatusVS
-Id: dipag-rechnungsstatus-vs
-Title: "Digitale Patientenrechnung Rechnungsstatus"
-* insert Meta(1.0.7)
-* include codes from system DiPagARechnungsstatusCS
-
-// ------------- CodeSystem -------------
-
-CodeSystem:  DiPagAttachmentFormatCS
-Id: dipag-attachment-format-cs
-Title: "Digitale Patientenrechnung Attachment Format CS"
-Description:  "CodeSystem für die Abbildung von verschieden Formatinhalten eines Dokuments"
-* insert Meta(1.0.7)
-* #originaleRechnung "Das originale PDF der Rechnung"
-* #angereichertesPDF "Digitale Patientenrechnungs Dokument mit eingebetteten strukturierten Rechnungsinhalt"
-* #rechnungsinhalt "Strukturierter Rechnungsinhalt"
-* #rechnungsanhang "Rechnungsanhang"
-
-CodeSystem: DiPagARechnungsstatusCS
-Id: dipag-rechnungsstatus-cs
-Title: "Digitale Patientenrechnung Rechnungsstatus CS"
-Description:  "CodeSystem für die Abbildung von verschieden Status eines Rechnungungsdokuments"
-* insert Meta(1.0.7)
-* ^caseSensitive = true
-* ^hierarchyMeaning = #is-a
-* #offen "Offen"
-* #erledigt "Erledigt"
-* #papierkorb "Papierkorb"
-
-// ------------- Extensions -------------
-
-Extension: DiPagDocRefSignature
-Id: dipag-docref-signature
-Title: "Digitale Patientenrechnung DocRef Signature"
-Description: "Extension zur Abbildung einer Digitalen Signatur über die Rechnungsrepräsentation, sowie den strukturierten Rechnungsinhalten"
-Context: DocumentReference, DocumentReference.content.attachment
-* insert Meta(1.0.7)
-* value[x] 1.. MS
-* value[x] only Signature
-
-Extension: DiPagDocRefFachrichtung
-Id: dipag-docref-fachrichtung
-Title: "Digitale Patientenrechnung DocRef Fachrichtung"
-Description: "Extension zur Angabe der Fachrichtung zur Steuerung des Abrechungsworkflows"
-Context: DocumentReference
-* insert Meta(1.0.7)
-
-* value[x] 1.. MS
-* value[x] only Coding
-* value[x] from http://ihe-d.de/ValueSets/IHEXDSpracticeSettingCode (required)
 
 // ------------- Constraints -------------
 
@@ -267,9 +216,3 @@ Invariant: SignaturVerpflichtendRechnung
 Description: "Eine Signature muss vorhanden sein, falls es sich bei der DocumentReference um eine Rechnung handelt. Diese Invariante ist als Warnung eingestuft, weil in R5 zur Ausgabe entfernt wird und diese Ausgabe ohne Validierungsfehler sein soll."
 Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists() implies extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature').exists()"
 Severity: #warning
-
-
-
-
-
-

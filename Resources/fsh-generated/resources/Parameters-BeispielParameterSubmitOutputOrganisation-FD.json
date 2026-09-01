@@ -1,0 +1,22 @@
+{
+  "resourceType": "Parameters",
+  "id": "BeispielParameterSubmitOutputOrganisation-FD",
+  "parameter": [
+    {
+      "name": "token",
+      "part": [
+        {
+          "name": "id",
+          "valueId": "some-token-id"
+        },
+        {
+          "name": "docRef",
+          "valueIdentifier": {
+            "system": "https://example.org/fhir/sid/rechnungsids",
+            "value": "123-456-789"
+          }
+        }
+      ]
+    }
+  ]
+}
