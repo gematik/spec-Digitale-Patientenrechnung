@@ -13,6 +13,11 @@ name: Artefakt-Versionierung
 # NEUTRAL ab (grauer Check "Bedingung noch nicht erfüllt") – weder Fehler (rot)
 # noch Erfolg (grün). Erst wenn die globale Version angehoben wird, bumpt sie.
 #
+# PR-Sichtbarkeit: workflow_run-Läufe hängen bei GitHub am Default-Branch und
+# tauchen NICHT in der Checks-Liste des PRs auf. Jedes Ergebnis (neutral, rot,
+# grün) wird deshalb explizit als Check-Run "Artefakt-Versionierung" auf den
+# PR-Head-Commit gespiegelt.
+#
 # Release-Check: Wurde die globale Version angehoben, MUSS auch die Guide-Version
 # mitgezogen worden sein (guide.yaml + Startseite/Index.page.md angehoben, Datum
 # in Index.page.md = heutiger Tag). Ist das nicht der Fall, schlägt der Check
@@ -104,15 +109,27 @@ jobs:
       # mitgezogen (guide.yaml / Index.page.md) oder Index-Datum nicht heute?
       # -> rot, und der Bump-Schritt läuft dadurch gar nicht erst.
       # Bei Prerelease-Versionen (-beta) überspringt das Script die Checks.
+      # Die Ausgabe wird auch im Fehlerfall als Step-Output gesichert, damit der
+      # rote Check-Run am PR die konkrete Fehlermeldung anzeigen kann.
       - name: Release-Checks (guide.yaml + Index-Version/Datum)
+        id: release_check
         if: >
           steps.detect.outputs.status == 'patch' ||
           steps.detect.outputs.status == 'minor' ||
           steps.detect.outputs.status == 'major' ||
           steps.detect.outputs.status == 'suffix'
-        run: >
-          node .github/scripts/bump-artifact-versions.mjs
-          --base origin/master --check-release --today "${{ steps.detect.outputs.today }}"
+        run: |
+          set +e
+          output=$(node .github/scripts/bump-artifact-versions.mjs \
+            --base origin/master --check-release --today "${{ steps.detect.outputs.today }}" 2>&1)
+          code=$?
+          echo "$output"
+          {
+            echo 'log<<RELEASE_CHECK_EOF'
+            echo "$output"
+            echo 'RELEASE_CHECK_EOF'
+          } >> "$GITHUB_OUTPUT"
+          exit $code
 
       # Globale Version angehoben -> nur die inhaltlich geänderten Artefakte
       # bumpen und mit dem heutigen Datum stempeln. Das CapabilityStatement
@@ -213,3 +230,57 @@ jobs:
           git add -A
           git commit -m "chore: automatically bump artifact versions and dates"
           git push origin "HEAD:${{ github.event.workflow_run.head_branch }}"
+
+      # Erfolgreicher Bump -> grüner Check-Run am PR-Commit (der neutrale Fall
+      # setzt seinen eigenen Check weiter oben).
+      - name: Erfolg am PR anzeigen (grün)
+        if: >
+          success() && (
+            steps.detect.outputs.status == 'patch' ||
+            steps.detect.outputs.status == 'minor' ||
+            steps.detect.outputs.status == 'major' ||
+            steps.detect.outputs.status == 'suffix'
+          )
+        uses: actions/github-script@v7
+        env:
+          BUMP_STATUS: ${{ steps.detect.outputs.status }}
+        with:
+          script: |
+            await github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'Artefakt-Versionierung',
+              head_sha: context.payload.workflow_run.head_sha,
+              status: 'completed',
+              conclusion: 'success',
+              output: {
+                title: `Artefakt-Versionen angehoben (${process.env.BUMP_STATUS})`,
+                summary: 'Release-Checks bestanden. Die inhaltlich geänderten Artefakte wurden gebumpt, mit dem heutigen Datum gestempelt und auf den PR-Branch gepusht.',
+              },
+            });
+
+      # Irgendein Step fehlgeschlagen (z.B. Release-Checks) -> roter Check-Run
+      # am PR-Commit, inkl. der Fehlermeldung des Release-Checks, falls vorhanden.
+      - name: Fehler am PR anzeigen (rot)
+        if: failure()
+        uses: actions/github-script@v7
+        env:
+          RELEASE_CHECK_LOG: ${{ steps.release_check.outputs.log }}
+        with:
+          script: |
+            const log = (process.env.RELEASE_CHECK_LOG || '').trim();
+            const summary = log
+              ? 'Der Lauf der Artefakt-Versionierung ist fehlgeschlagen:\n\n```\n' + log + '\n```'
+              : `Der Lauf der Artefakt-Versionierung ist fehlgeschlagen. Details im Actions-Log: ${context.payload.repository.html_url}/actions/runs/${context.runId}`;
+            await github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'Artefakt-Versionierung',
+              head_sha: context.payload.workflow_run.head_sha,
+              status: 'completed',
+              conclusion: 'failure',
+              output: {
+                title: 'Artefakt-Versionierung fehlgeschlagen',
+                summary,
+              },
+            });
