@@ -7,7 +7,7 @@ topic: AF_TBD_R12
 
 Die nachfolgende Interaktion ist relevant für den FD als Server, sowie für das RE-PS als Client.
 
-Der FD stellt eine Liste von Kostenträger-Organisationen bereit, die am direkten Rechnungsversand teilnehmen. Die Pflege dieser Liste (Anbindung neuer Kostenträger, Zuordnung der Telematik-ID zum Rechnungsworkflow) erfolgt über einen Konfigurationsprozess des FD-Betreibers und ist nicht Teil dieses Leitfadens.
+Der FD stellt eine Liste von Kostenträger-Organisationen bereit, die am direkten Rechnungsversand teilnehmen. Die Pflege dieser Liste (Anbindung neuer Kostenträger, Zuordnung der Telematik-ID zu den unterstützten Workflowtypen) erfolgt über einen Konfigurationsprozess des FD-Betreibers und ist nicht Teil dieses Leitfadens.
 
 ### Abfrage der Organisationen
 
@@ -57,6 +57,8 @@ mit Body:
 Es MUSS durch den FD sichergestellt werden, dass die zurückgegebenen Organization-Ressourcen eine stabile id besitzen. Diese id wird für den Aufruf der `$invoice-submit`-Operation verwendet (vgl. {{pagelink:AF_TBD_R13}}).
 
 Die zurückgegebene Organization-Ressource MUSS valide gegen das Profil `DiPagOrganisationRechnungsempfaenger` sein.
+
+An jeder Organisation ist über die Extension `workflowtyp` angegeben, welche Workflowtypen sie für den Rechnungsversand unterstützt. Das RE-PS wählt beim Versand einen dieser Workflowtypen aus und übergibt ihn im Parameter `workflow` der `$invoice-submit`-Operation (vgl. {{pagelink:AF_TBD_R13}}). Die Beschreibung der einzelnen Workflowtypen ist im CodeSystem `DiPagWorkflowtypCS` hinterlegt.
 
 <fql output="table" headers="true">
 from

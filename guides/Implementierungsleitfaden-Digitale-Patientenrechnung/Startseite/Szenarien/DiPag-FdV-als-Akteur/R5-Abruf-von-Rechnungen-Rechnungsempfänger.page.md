@@ -89,6 +89,7 @@ Dieselbe Interaktion wird durch das ITSys-KTR verwendet, um die per {{pagelink:A
 * Der User-Kontext ist nicht die KVNR, sondern die Telematik-ID der Organisation. Diese ist aus dem Claim `idNummer` des mitzusendenden Access-Token zu extrahieren. Der FD MUSS die Suche auf DocumentReference-Ressourcen begrenzen, die unter `DocumentReference.context.related:empfaenger` auf die Organization mit dieser Telematik-ID verweisen.
 * Markierungen existieren im Kontext der an Organisationen übermittelten Rechnungen nicht; der Suchparameter `dipag-markierung` liefert in diesem Kontext daher keine Treffer.
 * Das Suchergebnis enthält die Rechnungs-Tokens (`identifier:Token`); der Abruf der eigentlichen Dokumente erfolgt ausschließlich über die `$retrieve`-Operation (vgl. {{pagelink:AF_TBD_R14}}).
+* Die zurückgegebenen DocumentReference-Ressourcen enthalten neben dem Rechnungsstatus auch den bei der Einreichung gewählten Workflowtyp (`meta.tag:dipag-workflowtyp`, vgl. {{pagelink:AF_TBD_R13}}).
 
 Antwort des Endpunktes im Erfolgsfall:
 

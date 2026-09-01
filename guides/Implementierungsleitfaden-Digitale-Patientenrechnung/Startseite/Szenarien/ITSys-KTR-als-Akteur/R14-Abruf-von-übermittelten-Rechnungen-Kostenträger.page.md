@@ -20,7 +20,7 @@ Die Input- und Output-Parameter werden durch die OperationDefinition `https://ge
 
 * Nach dem erfolgreichen Abruf MUSS der FD den Rechnungsstatus (`DocumentReference.meta.tag:dipag-rechnungsstatus`) automatisch auf "Abgerufen" setzen. Ein manuelles Ändern des Status ist nicht vorgesehen.
 
-* Die zurückgegebene DocumentReference-Ressource MUSS valide gegen das Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern` sein. Der Rechnungsempfänger ist über den Slice `context.related:empfaenger` (Referenz auf die Organization) abgebildet; Markierungen sind nicht vorhanden.
+* Die zurückgegebene DocumentReference-Ressource MUSS valide gegen das Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern` sein. Der Rechnungsempfänger ist über den Slice `context.related:empfaenger` (Referenz auf die Organization) abgebildet; Markierungen sind nicht vorhanden. Der bei der Einreichung gewählte Workflowtyp ist als `meta.tag:dipag-workflowtyp` enthalten (vgl. {{pagelink:AF_TBD_R13}}).
 
 ### Automatisches Löschen von Rechnungen
 

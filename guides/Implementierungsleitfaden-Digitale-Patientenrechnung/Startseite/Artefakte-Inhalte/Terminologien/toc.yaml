@@ -28,3 +28,5 @@
   filename: CodeSystem-DiPagARechnungsstatusCS.page.md
 - name: 'CodeSystem: DiPagTotalPriceComponentTypeCS'
   filename: CodeSystem-DiPagTotalPriceComponentTypeCS.page.md
+- name: 'CodeSystem: DiPagWorkflowtypCS'
+  filename: CodeSystem-DiPagWorkflowtypCS.page.md

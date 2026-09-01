@@ -188,6 +188,8 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 
 * Hinweis: In der FHIR-Repräsentation erfolgt **keine** Differenzierung zwischen dem Datenobjekt für die Rechnungsdokumente und dem Rechnungsworkflow. Der Workflowstatus wird somit innerhalb der DocumentReference abgebildet. `DocumentReference.meta.tag:dipag-rechnungsstatus` MUSS durch den FD auf "Offen" gesetzt werden beim Empfang der Rechnung.
 
+* `DocumentReference.meta.tag:dipag-workflowtyp` MUSS durch den FD beim Empfang der Rechnung auf "Patientenrechnung" (`patientenrechnung`) gesetzt werden. Bei der Einreichung auf dem Patient-Endpunkt wird der Workflowtyp nicht durch den Client gewählt, sondern automatisch durch den FD gesetzt (vgl. CodeSystem `DiPagWorkflowtypCS`).
+
 ### Hinweise zur Abbildung des Workflow-Objektes (fachliches Datenmodell)
 
 Im fachlichen Datenmodell des Feature-Dokuments Digitale Patientenrechnung ist dargestellt, dass jede Rechnung,sowie jedes ergänzende Dokument mit einem Rechnungsworkflow-Objekt verbunden ist. Dieses Workflow-Objekt bündelt das Rechnungsdokument sowie die Anhänge zusammen und gibt diesen Dokumenten einen gemeinsamen Status. Zur Vereinfachung der Implementierung seitens des FD und des DiPag FDV wird in der FHIR-Repräsentation **kein** weiteres Datenobjekt hierfür verwendet. Hingegen enthält das Profil 'DiPagDokumentenmetadaten' eine Extension 'dipag-rechnungsstatus' für diesen Zweck. Der Status zusammenhängender Dokumente MUSS stets synchron gehalten werden. Diese Extension gilt für das Rechnungsdokument sowie alle Anhänge, die innerhalb einer Submit-Operation im gleichen Kontext übermittelt worden sind wie die Rechnung. Der FD MUSS den Zusammenhang zwischen diesen Dokumenten in der Verarbeitungslogik vorhalten.
