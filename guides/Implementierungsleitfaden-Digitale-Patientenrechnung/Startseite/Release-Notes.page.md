@@ -10,6 +10,14 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.2.0
+
+Diese Version enthält eine nicht rückwärtskompatible Änderung am Profil **DiPagPatient** (Geburtsdatum verpflichtend), daher der Sprung auf 1.2.0.
+
+#### Profile und Extensions
+
+* **DiPagPatient**: Das Element `birthDate` ist nun verpflichtend (Kardinalität 0..1 → 1..1) (**Breaking Change**). Bisher war das Geburtsdatum lediglich als SOLL-Angabe empfohlen; Patient-Instanzen ohne Geburtsdatum werden ab dieser Version bei der Validierung abgelehnt.
+
 ### Version 1.1.1
 
 #### Profile und Extensions

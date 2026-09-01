@@ -1,7 +1,8 @@
 Profile: DiPagPatient
 Parent: Patient
 Id: dipag-patient
-* insert Meta(1.0.7)
+* insert Meta(1.1.0)
+* ^date = "2026-09-01"
 * identifier MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -29,9 +30,9 @@ Id: dipag-patient
         * ^short = "IK-Nummer der Krankenkasse"
       * ^short = "IK-Nummer der Krankenkasse"
       * ^comment = "Bei GKV-Versicherten Personen SOLL die IK-Nummer der Krankenkasse angegeben werden."
-* birthDate MS
+* birthDate 1.. MS
   * ^short = "Geburtsdatum"
-  * ^comment = "Das Geburtsdatum SOLL vorhanden sein."
+  * ^comment = "Das Geburtsdatum MUSS vorhanden sein."
 * name only $humanname-de
 * name MS
   * ^short = "Name"
