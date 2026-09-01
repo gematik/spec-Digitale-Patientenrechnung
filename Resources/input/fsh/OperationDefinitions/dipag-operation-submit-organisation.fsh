@@ -1,19 +1,19 @@
 // ------------- OperationDefinition -------------
 
-Instance: DiPagOperationSubmit
+Instance: DiPagOperationSubmitOrganisation
 InstanceOf: OperationDefinition
 Usage: #example
-Title: "Digitale Patientenrechnung Operation Invoice-Submit"
-Description: "Rechnung einreichen durch die Leistungserbringer:in"
-* url = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
+Title: "Digitale Patientenrechnung Operation Invoice-Submit Organisation"
+Description: "Rechnung einreichen durch die Leistungserbringer:in an eine Kostenträger-Organisation. Die Operation verwendet denselben Operation-Code wie die Einreichung an Versicherte (invoice-submit), wird jedoch auf dem Organization-Endpunkt aufgerufen. Über den Parameter 'workflow' wählt das RE-PS einen von der Organisation unterstützten Workflowtyp aus. Nach erfolgreichem Submit setzt der FD den Rechnungsstatus automatisch auf 'Übermittelt'."
+* url = "https://gematik.de/fhir/dipag/OperationDefinition/SubmitOrganisation"
 * status = #active
-* version = "1.1.0"
+* version = "1.3.0-beta"
 * experimental = false
-* date = "2026-07-29"
+* date = "2026-09-01"
 * kind = #operation
-* name = "DiPagSubmit"
+* name = "DiPagSubmitOrganisation"
 * code = #invoice-submit
-* resource = #Patient
+* resource = #Organization
 * system = false
 * type = false
 * instance = true
@@ -31,7 +31,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * max = "1"
     * documentation = "Die Digitale Patientenrechnung als DocumentReference. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
     * type = #DocumentReference
-    * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
+    * targetProfile = Canonical(DiPagDokumentenmetadatenEingangOrganisation)
   * part[+]
     * name = #barcodePosition
     * use = #in
@@ -65,7 +65,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
     * max = "1"
     * documentation = "Der Anhang als DocumentReference. Extensions, die in der Ressource über die profilierten Extensions hinausgehend vorhanden sind, werden abgelehnt (strikte Validierung)."
     * type = #DocumentReference
-    * targetProfile = Canonical(DiPagDokumentenmetadatenEingang)
+    * targetProfile = Canonical(DiPagDokumentenmetadatenEingangOrganisation)
   * part[+]
     * name = #barcodePosition
     * use = #in
@@ -86,6 +86,16 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
       * max = "1"
       * documentation = "Y-Position des Datamatrix-Codes in pt (typografischer Punkt)."
       * type = #decimal
+* parameter[+]
+  * name = #workflow
+  * use = #in
+  * min = 1
+  * max = "1"
+  * documentation = "Der für diese Einreichung gewählte Workflowtyp aus den Workflowtypen der Einrichtungsadressierung. Es MUSS ein Workflowtyp gewählt werden, der von der Ziel-Organisation unterstützt wird (siehe Extension 'workflowtyp' an der Organization-Ressource); Einreichungen mit einem nicht unterstützten Workflowtyp lehnt der FD ab. Der FD setzt den gewählten Workflowtyp als meta.tag an der internen DocumentReference."
+  * type = #code
+  * binding
+    * strength = #required
+    * valueSet = "https://gematik.de/fhir/dipag/ValueSet/dipag-workflowtyp-einrichtungsadressierung-vs"
 * parameter[+]
   * name = #modus
   * use = #in
@@ -137,22 +147,3 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in"
   * max = "1"
   * documentation = "Warnhinweise und Fehlern zur Validierung der Digitalen Patientenrechnung. Diese MÜSSEN in jedem Verarbeitungsmodus ausgegeben werden."
   * type = #OperationOutcome
-
-// ------------- Terminology -------------
-
-CodeSystem:  DiPagRechnungSubmitModusCS
-Id: dipag-rechnung-submit-modus-cs
-Title: "Digitale Patientenrechnung Rechnung Submit Modus CS"
-Description:  "CodeSystem für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
-* insert Meta(1.0.7)
-* ^caseSensitive = true
-* ^hierarchyMeaning = #is-a
-* #test "Test" "Digitale Patientenrechnung wird als Test eingereicht. Der Fachdienst validiert nur die Digitale Patientenrechnung und speichert diese nicht."
-* #normal "Normal" "Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind."
-
-ValueSet:  DiPagRechnungSubmitModusVS
-Id: dipag-rechnung-submit-modus-vs
-Title: "Digitale Patientenrechnung Rechnung Type VS"
-Description:  "ValueSet für die Differenzierung von der Verarbeitungsmodi für $erchnung-submit"
-* insert Meta(1.0.7)
-* include codes from system https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs

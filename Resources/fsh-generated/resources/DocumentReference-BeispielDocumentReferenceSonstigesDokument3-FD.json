@@ -3,7 +3,7 @@
   "id": "BeispielDocumentReferenceSonstigesDokument3-FD",
   "meta": {
     "profile": [
-      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang"
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient"
     ]
   },
   "status": "current",

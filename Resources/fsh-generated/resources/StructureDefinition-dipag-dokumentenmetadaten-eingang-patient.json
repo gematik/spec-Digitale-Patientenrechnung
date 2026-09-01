@@ -1,0 +1,88 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "dipag-dokumentenmetadaten-eingang-patient",
+  "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient",
+  "version": "1.3.0-beta",
+  "name": "DiPagDokumentenmetadatenEingangPatient",
+  "title": "Digitale Patientenrechnung Dokumentenmetadaten Eingang Patient",
+  "status": "active",
+  "experimental": false,
+  "date": "2026-09-01",
+  "publisher": "gematik GmbH",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://gematik.de/"
+        }
+      ]
+    }
+  ],
+  "description": "Profil für die Einreichung von Rechnungsdokumenten und Anhängen an Versicherte (Rechnungsempfänger). Ergänzt das Basisprofil um die Markierung 'Persönlich' für Anhänge.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-base",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "constraint": [
+          {
+            "key": "MarkierungNurFuerAnhang",
+            "severity": "error",
+            "human": "Die Markierung darf nur gesetzt sein, wenn das Dokument kein Rechnungsdokument (AM010106) ist.",
+            "expression": "meta.extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung').exists() implies type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not()",
+            "source": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient"
+          }
+        ]
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung",
+        "path": "DocumentReference.meta.extension",
+        "sliceName": "markierung",
+        "comment": "Beim Submit eines Anhang darf nur die Markierung 'Persönlich' gesetzt werden. Alle anderen Markierungen sind ausschließlich im Fachdienst zu setzen.\n  Ein optionaler Freitext mit Details zur Markierung kann über die Extension 'details' angegeben werden.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:markierung",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "markierung",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:markierung.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "patternCoding": {
+          "code": "persoenlich"
+        },
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:details",
+        "path": "DocumentReference.meta.extension.extension",
+        "sliceName": "details",
+        "mustSupport": true
+      },
+      {
+        "id": "DocumentReference.meta.extension:markierung.extension:details.value[x]",
+        "path": "DocumentReference.meta.extension.extension.value[x]",
+        "mustSupport": true
+      }
+    ]
+  }
+}

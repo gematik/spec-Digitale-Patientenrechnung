@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
   "url": "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
-  "version": "1.0.8",
+  "version": "1.3.0-beta",
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -16,7 +16,7 @@
       ]
     }
   ],
-  "date": "2026-07-08",
+  "date": "2026-09-01",
   "name": "CapabilityStatementFD",
   "title": "CapabilityStatement Fachdienst E-Rechnnung",
   "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",
@@ -97,6 +97,41 @@
               ],
               "name": "invoice-submit",
               "definition": "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
+            }
+          ]
+        },
+        {
+          "type": "Organization",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "supportedProfile": [
+            "https://gematik.de/fhir/dipag/StructureDefinition/dipag-organisation-rechnungsempfaenger"
+          ],
+          "interaction": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type"
+            }
+          ],
+          "operation": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "invoice-submit",
+              "definition": "https://gematik.de/fhir/dipag/OperationDefinition/SubmitOrganisation"
             }
           ]
         },

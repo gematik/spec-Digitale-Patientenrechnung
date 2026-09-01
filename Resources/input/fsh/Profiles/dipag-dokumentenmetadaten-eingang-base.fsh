@@ -1,20 +1,13 @@
-Profile: DiPagDokumentenmetadatenEingang
-Title: "Digitale Patientenrechnung Dokumentenmetadaten Eingang"
+// ------------- Profile -------------
+
+Profile: DiPagDokumentenmetadatenEingangBase
+Title: "Digitale Patientenrechnung Dokumentenmetadaten Eingang Base"
 Parent: DocumentReference
-Id: dipag-dokumentenmetadaten-eingang
-* insert Meta(1.0.8)
-* ^date = "2026-07-08"
-* obeys RechnungOderAnhang and MarkierungNurFuerAnhang and AnhangIdentifierPflicht
-* meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
-* meta.extension[markierung]
-  * ^comment = "Beim Submit eines Anhang darf nur die Markierung 'Persönlich' gesetzt werden. Alle anderen Markierungen sind ausschließlich im Fachdienst zu setzen.
-  Ein optionaler Freitext mit Details zur Markierung kann über die Extension 'details' angegeben werden."
-  * extension[markierung] MS
-    * valueCoding MS
-    * valueCoding = #persoenlich
-  * extension[details] MS
-    * valueString MS
-      * ^maxLength = 1024
+Id: dipag-dokumentenmetadaten-eingang-base
+Description: "Basisprofil für die Einreichung von Rechnungsdokumenten und Anhängen. Es enthält alle kontextübergreifenden Festlegungen. Kontextspezifische Festlegungen erfolgen in den abgeleiteten Profilen für den Versand an Versicherte (DiPagDokumentenmetadatenEingangPatient) und an Kostenträger-Organisationen (DiPagDokumentenmetadatenEingangOrganisation)."
+* insert Meta(1.3.0-beta)
+* ^date = "2026-09-01"
+* obeys RechnungOderAnhang and AnhangIdentifierPflicht
 * status MS
 * status = #current
   * ^comment = "Versionierung von Dokumenten ist nicht unterstützt. Nur jeweils die aktuelle Version des Dokumentes wird akzeptiert."
@@ -22,7 +15,7 @@ Id: dipag-dokumentenmetadaten-eingang
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "$this"
 * identifier ^slicing.rules = #open
-* identifier 
+* identifier
   contains AnhangIdentifier 0..1 MS
 * identifier[AnhangIdentifier]
   * ^patternIdentifier.type = DiPagRechnungIdentifierTypeCS#anhang
@@ -37,7 +30,7 @@ Id: dipag-dokumentenmetadaten-eingang
     * ^maxLength = 200
 * type 1.. MS
   * ^comment = "Kodierung des Dokumentes als 'Rechnung', sowie darüber hinausgehende Klassifizierung per KDL"
-* type.coding 1.. 
+* type.coding 1..
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
@@ -93,7 +86,6 @@ Id: dipag-dokumentenmetadaten-eingang
       * ^comment = "Base64-kodiertes PDF. Dieses Feld muss durch die Applikation der Leistungserbringer:in gefüllt werden."
     * url 0..0
 
-
 // ------------- Constraints -------------
 
 Invariant: AnhangIdentifierPflicht
@@ -101,12 +93,7 @@ Description: "Ein identifier:AnhangIdentifier MUSS angegeben werden, wenn das Do
 Expression: "type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not() implies identifier.where(type.coding.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs' and code = 'anhang').exists()).exists()"
 Severity: #error
 
-Invariant: MarkierungNurFuerAnhang
-Description: "Die Markierung darf nur gesetzt sein, wenn das Dokument kein Rechnungsdokument (AM010106) ist."
-Expression: "meta.extension.where(url = 'https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung').exists() implies type.coding.where(system = 'http://dvmd.de/fhir/CodeSystem/kdl' and code = 'AM010106').exists().not()"
-Severity: #error
-
 Invariant: RechnungOderAnhang
 Description: "Ein Dokument kann entweder ein Anhang enthalten oder ein Rechnungsdokument inkl. strukturierten Rechnungsinhalten."
 Expression: "content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsanhang').exists() xor (content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'originaleRechnung').exists() and  content.format.where(system = 'https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs' and code = 'rechnungsinhalt').exists())"
-Severity: #error 
+Severity: #error

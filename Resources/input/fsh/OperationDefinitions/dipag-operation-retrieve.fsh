@@ -4,7 +4,7 @@ Instance: DiPagOperationRetrieve
 InstanceOf: OperationDefinition
 Usage: #example
 Title: "Digitale Patientenrechnung Operation Retrieve"
-Description: "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten"
+Description: "Abrufen von Digitalen Patientenrechnungen, strukturierten Rechnungsinhalten und Dokumenten. Bei Rechnungen, die an eine Kostenträger-Organisation übermittelt wurden, setzt der FD nach dem erfolgreichen Abruf durch die Organisation den Rechnungsstatus automatisch auf 'Abgerufen'."
 * status = #active
 * version = "1.0.8"
 * experimental = false

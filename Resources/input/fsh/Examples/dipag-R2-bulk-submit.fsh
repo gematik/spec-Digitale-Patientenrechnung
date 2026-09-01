@@ -36,7 +36,7 @@ InstanceOf: Parameters
   * valueBoolean = true
 
 Instance: BeispielDocumentReferenceRechnung3-LE
-InstanceOf: DiPagDokumentenmetadatenEingang
+InstanceOf: DiPagDokumentenmetadatenEingangPatient
 * identifier
   * system = "https://example.org/fhir/sid/rechnungsids"
   * value = "123-456-789"
@@ -51,7 +51,7 @@ InstanceOf: DiPagDokumentenmetadatenEingang
   * insert base64
 
 Instance: BeispielDocumentReferenceSonstigesDokument3-LE
-InstanceOf: DiPagDokumentenmetadatenEingang
+InstanceOf: DiPagDokumentenmetadatenEingangPatient
 * identifier[AnhangIdentifier]
   * type = DiPagRechnungIdentifierTypeCS#anhang
   * system = "https://example.org/fhir/sid/anhangids"
@@ -77,7 +77,7 @@ InstanceOf: Parameters
     * resource = BeispielDocumentReferenceSonstigesDokument3.1-LE
 
 Instance: BeispielDocumentReferenceRechnung3.1-LE
-InstanceOf: DiPagDokumentenmetadatenEingang
+InstanceOf: DiPagDokumentenmetadatenEingangPatient
 * identifier
   * system = "https://example.org/fhir/sid/rechnungsids"
   * value = "123-456-789"
@@ -95,7 +95,7 @@ InstanceOf: DiPagDokumentenmetadatenEingang
   * insert base64
 
 Instance: BeispielDocumentReferenceSonstigesDokument3.1-LE
-InstanceOf: DiPagDokumentenmetadatenEingang
+InstanceOf: DiPagDokumentenmetadatenEingangPatient
 * identifier[AnhangIdentifier]
   * type = DiPagRechnungIdentifierTypeCS#anhang
   * system = "https://example.org/fhir/sid/anhangids"
@@ -168,7 +168,7 @@ InstanceOf: OperationOutcome
   * diagnostics = "Originaler technischer Validierungsfehler hier..."
 
 Instance: BeispielDocumentReferenceRechnung3.1-FD
-InstanceOf: DiPagDokumentenmetadatenEingang
+InstanceOf: DiPagDokumentenmetadatenEingangPatient
 * identifier
   * system = "https://example.org/fhir/sid/rechnungsids"
   * value = "123-456-789"
@@ -183,7 +183,7 @@ InstanceOf: DiPagDokumentenmetadatenEingang
   * insert base64
 
 Instance: BeispielDocumentReferenceSonstigesDokument3.1-FD
-InstanceOf: DiPagDokumentenmetadatenEingang
+InstanceOf: DiPagDokumentenmetadatenEingangPatient
 * identifier[AnhangIdentifier]
   * type = DiPagRechnungIdentifierTypeCS#anhang
   * system = "https://example.org/fhir/sid/anhangids"

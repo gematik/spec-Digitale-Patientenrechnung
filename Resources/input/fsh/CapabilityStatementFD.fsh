@@ -1,8 +1,8 @@
 Instance: CapabilityStatementFD
 InstanceOf: CapabilityStatement
 Usage: #definition
-* insert MetaInstance(1.0.8)
-* date = "2026-07-08"
+* insert MetaInstance(1.3.0-beta)
+* date = "2026-09-01"
 * url = "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD"
 * name = "CapabilityStatementFD"
 * title = "CapabilityStatement Fachdienst E-Rechnnung"
@@ -38,6 +38,17 @@ Usage: #definition
       * insert Expectation (#SHALL)
       * name = "invoice-submit"
       * definition = "https://gematik.de/fhir/dipag/OperationDefinition/Submit"
+  * resource[+]
+    * type = #Organization
+    * insert Expectation (#SHALL)
+    * supportedProfile = Canonical(DiPagOrganisationRechnungsempfaenger)
+    * interaction[+]
+      * insert Expectation (#SHALL)
+      * code = #search-type
+    * operation[+]
+      * insert Expectation (#SHALL)
+      * name = "invoice-submit"
+      * definition = "https://gematik.de/fhir/dipag/OperationDefinition/SubmitOrganisation"
   * resource[+]
     * type = #DocumentReference
     * insert Expectation (#SHALL)

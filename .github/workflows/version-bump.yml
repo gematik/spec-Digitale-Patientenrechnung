@@ -13,10 +13,25 @@ name: Artefakt-Versionierung
 # NEUTRAL ab (grauer Check "Bedingung noch nicht erfüllt") – weder Fehler (rot)
 # noch Erfolg (grün). Erst wenn die globale Version angehoben wird, bumpt sie.
 #
+# PR-Sichtbarkeit: workflow_run-Läufe hängen bei GitHub am Default-Branch und
+# tauchen NICHT in der Checks-Liste des PRs auf. Jedes Ergebnis (neutral, rot,
+# grün) wird deshalb explizit als Check-Run "Artefakt-Versionierung" auf den
+# PR-Head-Commit gespiegelt.
+#
 # Release-Check: Wurde die globale Version angehoben, MUSS auch die Guide-Version
 # mitgezogen worden sein (guide.yaml + Startseite/Index.page.md angehoben, Datum
 # in Index.page.md = heutiger Tag). Ist das nicht der Fall, schlägt der Check
 # fehl (rot) und der Bump läuft gar nicht erst.
+#
+# Prerelease-Ausnahme: Trägt die globale Version einen Prerelease-Suffix (z.B.
+# "1.2.0-beta"), entfallen die Release-Checks – der IG darf bei einem Beta-
+# Package-Release auf seiner bisherigen Version bleiben. Gebumpte Artefakte
+# tragen den Suffix dann ebenfalls (z.B. 1.1.0-beta). Das CapabilityStatement
+# wird bei jedem Bump-Lauf IMMER exakt auf die Version aus der sushi-config
+# gesetzt (inkl. Suffix), unabhängig vom Beta-Release. Der Status "suffix"
+# (nur Suffix geändert, z.B. 1.2.0-beta -> 1.2.0) läuft ebenfalls durch die
+# Bump-Steps: Beta-Artefakte werden dabei finalisiert (1.1.0-beta -> 1.1.0),
+# und beim finalen Release greifen die Release-Checks wieder.
 on:
   workflow_run:
     workflows: ["CI (FHIR Validation)"]
@@ -30,6 +45,7 @@ concurrency:
 permissions:
   contents: write
   checks: write
+  pull-requests: write
 
 jobs:
   bump:
@@ -92,31 +108,118 @@ jobs:
       # Release-Check: globale Version angehoben, aber Guide-Version nicht
       # mitgezogen (guide.yaml / Index.page.md) oder Index-Datum nicht heute?
       # -> rot, und der Bump-Schritt läuft dadurch gar nicht erst.
+      # Bei Prerelease-Versionen (-beta) überspringt das Script die Checks.
+      # Die Ausgabe wird auch im Fehlerfall als Step-Output gesichert, damit der
+      # rote Check-Run am PR die konkrete Fehlermeldung anzeigen kann.
       - name: Release-Checks (guide.yaml + Index-Version/Datum)
+        id: release_check
         if: >
           steps.detect.outputs.status == 'patch' ||
           steps.detect.outputs.status == 'minor' ||
-          steps.detect.outputs.status == 'major'
-        run: >
-          node .github/scripts/bump-artifact-versions.mjs
-          --base origin/master --check-release --today "${{ steps.detect.outputs.today }}"
+          steps.detect.outputs.status == 'major' ||
+          steps.detect.outputs.status == 'suffix'
+        run: |
+          set +e
+          output=$(node .github/scripts/bump-artifact-versions.mjs \
+            --base origin/master --check-release --today "${{ steps.detect.outputs.today }}" 2>&1)
+          code=$?
+          echo "$output"
+          {
+            echo 'log<<RELEASE_CHECK_EOF'
+            echo "$output"
+            echo 'RELEASE_CHECK_EOF'
+          } >> "$GITHUB_OUTPUT"
+          exit $code
 
       # Globale Version angehoben -> nur die inhaltlich geänderten Artefakte
-      # bumpen und mit dem heutigen Datum stempeln.
+      # bumpen und mit dem heutigen Datum stempeln. Das CapabilityStatement
+      # wird dabei immer auf die Version der sushi-config gesetzt.
+      # WARN-Zeilen (übersprungene Artefakte) werden als Step-Output gesammelt
+      # und im Folgeschritt als PR-Kommentar gepostet.
       - name: Artefakt-Versionen anheben (FSH + generiertes JSON)
+        id: bump
         if: >
           steps.detect.outputs.status == 'patch' ||
           steps.detect.outputs.status == 'minor' ||
-          steps.detect.outputs.status == 'major'
-        run: >
-          node .github/scripts/bump-artifact-versions.mjs
-          --base origin/master --write --today "${{ steps.detect.outputs.today }}"
+          steps.detect.outputs.status == 'major' ||
+          steps.detect.outputs.status == 'suffix'
+        run: |
+          set -o pipefail
+          node .github/scripts/bump-artifact-versions.mjs \
+            --base origin/master --write --today "${{ steps.detect.outputs.today }}" \
+            | tee /tmp/bump-output.txt
+          {
+            echo 'warnings<<BUMP_WARN_EOF'
+            grep '^  WARN ' /tmp/bump-output.txt | sed 's/^  WARN //' || true
+            echo 'BUMP_WARN_EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      # Übersprungene Artefakte nicht nur im Log verstecken, sondern sichtbar
+      # als PR-Kommentar melden (bei Wiederholungsläufen wird der bestehende
+      # Kommentar aktualisiert statt ein neuer erstellt).
+      - name: PR-Kommentar bei übersprungenen Artefakten
+        if: steps.bump.outputs.warnings != ''
+        uses: actions/github-script@v7
+        env:
+          BUMP_WARNINGS: ${{ steps.bump.outputs.warnings }}
+        with:
+          script: |
+            const warnings = process.env.BUMP_WARNINGS.trim();
+            if (!warnings) return;
+            const branch = context.payload.workflow_run.head_branch;
+            let prs = context.payload.workflow_run.pull_requests ?? [];
+            if (!prs.length) {
+              const { data } = await github.rest.pulls.list({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                head: `${context.repo.owner}:${branch}`,
+              });
+              prs = data;
+            }
+            if (!prs.length) {
+              core.warning(`Kein offener PR zum Branch "${branch}" gefunden - Kommentar entfällt.`);
+              return;
+            }
+            const marker = '<!-- artefakt-versionierung-warnungen -->';
+            const body = [
+              marker,
+              '⚠️ **Artefakt-Versionierung:** Folgende Artefakte wurden beim Version-Bump übersprungen:',
+              '',
+              ...warnings.split('\n').filter(Boolean).map((w) => `- \`${w}\``),
+              '',
+              '_Bitte prüfen, ob diese Artefakte eine Versionsanhebung benötigen._',
+            ].join('\n');
+            const issue_number = prs[0].number;
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number,
+              per_page: 100,
+            });
+            const existing = comments.find((c) => c.body?.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number,
+                body,
+              });
+            }
 
       - name: Änderungen committen & pushen
         if: >
           steps.detect.outputs.status == 'patch' ||
           steps.detect.outputs.status == 'minor' ||
-          steps.detect.outputs.status == 'major'
+          steps.detect.outputs.status == 'major' ||
+          steps.detect.outputs.status == 'suffix'
         run: |
           if [ -z "$(git status --porcelain)" ]; then
             echo "Keine Versionsänderungen – nichts zu committen."
@@ -127,3 +230,57 @@ jobs:
           git add -A
           git commit -m "chore: automatically bump artifact versions and dates"
           git push origin "HEAD:${{ github.event.workflow_run.head_branch }}"
+
+      # Erfolgreicher Bump -> grüner Check-Run am PR-Commit (der neutrale Fall
+      # setzt seinen eigenen Check weiter oben).
+      - name: Erfolg am PR anzeigen (grün)
+        if: >
+          success() && (
+            steps.detect.outputs.status == 'patch' ||
+            steps.detect.outputs.status == 'minor' ||
+            steps.detect.outputs.status == 'major' ||
+            steps.detect.outputs.status == 'suffix'
+          )
+        uses: actions/github-script@v7
+        env:
+          BUMP_STATUS: ${{ steps.detect.outputs.status }}
+        with:
+          script: |
+            await github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'Artefakt-Versionierung',
+              head_sha: context.payload.workflow_run.head_sha,
+              status: 'completed',
+              conclusion: 'success',
+              output: {
+                title: `Artefakt-Versionen angehoben (${process.env.BUMP_STATUS})`,
+                summary: 'Release-Checks bestanden. Die inhaltlich geänderten Artefakte wurden gebumpt, mit dem heutigen Datum gestempelt und auf den PR-Branch gepusht.',
+              },
+            });
+
+      # Irgendein Step fehlgeschlagen (z.B. Release-Checks) -> roter Check-Run
+      # am PR-Commit, inkl. der Fehlermeldung des Release-Checks, falls vorhanden.
+      - name: Fehler am PR anzeigen (rot)
+        if: failure()
+        uses: actions/github-script@v7
+        env:
+          RELEASE_CHECK_LOG: ${{ steps.release_check.outputs.log }}
+        with:
+          script: |
+            const log = (process.env.RELEASE_CHECK_LOG || '').trim();
+            const summary = log
+              ? 'Der Lauf der Artefakt-Versionierung ist fehlgeschlagen:\n\n```\n' + log + '\n```'
+              : `Der Lauf der Artefakt-Versionierung ist fehlgeschlagen. Details im Actions-Log: ${context.payload.repository.html_url}/actions/runs/${context.runId}`;
+            await github.rest.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'Artefakt-Versionierung',
+              head_sha: context.payload.workflow_run.head_sha,
+              status: 'completed',
+              conclusion: 'failure',
+              output: {
+                title: 'Artefakt-Versionierung fehlgeschlagen',
+                summary,
+              },
+            });
