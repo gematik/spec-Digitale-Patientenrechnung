@@ -5,8 +5,8 @@ Title: "Digitale Patientenrechnung Dokumentenmetadaten Eingang Patient"
 Parent: DiPagDokumentenmetadatenEingangBase
 Id: dipag-dokumentenmetadaten-eingang-patient
 Description: "Profil für die Einreichung von Rechnungsdokumenten und Anhängen an Versicherte (Rechnungsempfänger). Ergänzt das Basisprofil um die Markierung 'Persönlich' für Anhänge."
-* insert Meta(1.2.0-beta)
-* ^date = "2026-08-26"
+* insert Meta(1.3.0-beta)
+* ^date = "2026-09-01"
 * obeys MarkierungNurFuerAnhang
 * meta.extension contains DiPagDocumentReferenceMarkierung named markierung 0..* MS
 * meta.extension[markierung]

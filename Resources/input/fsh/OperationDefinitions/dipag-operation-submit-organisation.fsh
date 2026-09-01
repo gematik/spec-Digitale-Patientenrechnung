@@ -7,9 +7,9 @@ Title: "Digitale Patientenrechnung Operation Invoice-Submit Organisation"
 Description: "Rechnung einreichen durch die Leistungserbringer:in an eine Kostenträger-Organisation. Die Operation verwendet denselben Operation-Code wie die Einreichung an Versicherte (invoice-submit), wird jedoch auf dem Organization-Endpunkt aufgerufen. Über den Parameter 'workflow' wählt das RE-PS einen von der Organisation unterstützten Workflowtyp aus. Nach erfolgreichem Submit setzt der FD den Rechnungsstatus automatisch auf 'Übermittelt'."
 * url = "https://gematik.de/fhir/dipag/OperationDefinition/SubmitOrganisation"
 * status = #active
-* version = "1.2.0-beta"
+* version = "1.3.0-beta"
 * experimental = false
-* date = "2026-08-31"
+* date = "2026-09-01"
 * kind = #operation
 * name = "DiPagSubmitOrganisation"
 * code = #invoice-submit

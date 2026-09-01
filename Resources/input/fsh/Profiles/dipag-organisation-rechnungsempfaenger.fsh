@@ -3,8 +3,8 @@ Parent: Organization
 Title: "Digitale Patientenrechnung Organisation Rechnungsempfänger"
 Id: dipag-organisation-rechnungsempfaenger
 Description: "Kostenträger-Organisation, die im Fachdienst als Empfänger für den direkten Rechnungsversand konfiguriert ist. Die Liste der Organisationen wird durch den Fachdienst-Betreiber gepflegt und kann durch das RE-PS abgefragt werden."
-* insert Meta(1.2.0-beta)
-* ^date = "2026-08-26"
+* insert Meta(1.3.0-beta)
+* ^date = "2026-09-01"
 * extension MS
 * extension contains DiPagOrganizationWorkflowtyp named workflowtyp 1..* MS
 * extension[workflowtyp]

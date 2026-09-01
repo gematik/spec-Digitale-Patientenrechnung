@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-organisation-rechnungsempfaenger",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-organisation-rechnungsempfaenger",
-  "version": "1.2.0-beta",
+  "version": "1.3.0-beta",
   "name": "DiPagOrganisationRechnungsempfaenger",
   "title": "Digitale Patientenrechnung Organisation Rechnungsempfänger",
   "status": "active",
   "experimental": false,
-  "date": "2026-08-26",
+  "date": "2026-09-01",
   "publisher": "gematik GmbH",
   "contact": [
     {

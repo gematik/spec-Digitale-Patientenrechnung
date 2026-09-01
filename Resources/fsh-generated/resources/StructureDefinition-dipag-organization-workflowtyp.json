@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-organization-workflowtyp",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-organization-workflowtyp",
-  "version": "1.2.0-beta",
+  "version": "1.3.0-beta",
   "name": "DiPagOrganizationWorkflowtyp",
   "title": "Digitale Patientenrechnung Organization Workflowtyp",
   "status": "active",
   "experimental": false,
-  "date": "2026-08-31",
+  "date": "2026-09-01",
   "publisher": "gematik GmbH",
   "contact": [
     {
