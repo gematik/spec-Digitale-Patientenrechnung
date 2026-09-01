@@ -55,11 +55,17 @@
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#offen": "Offen",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#erledigt": "Erledigt",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#papierkorb": "Papierkorb",
+  "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#uebermittelt": "Übermittelt",
+  "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs#abgerufen": "Abgerufen",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs#SummeRechnungspositionen": "Summe aller Rechnungspositionen",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs#Minderung7GOZ": "Minderungen nach §7 GOZ",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs#Fremdlaborleistungen": "Fremdlaborleistungen",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs#Abzug": "Übergeordnete Abzug-Kategorie",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs#FestzuschussKasse": "Festzuschuss Kasse",
   "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs#VorleistungKst": "Vorleistungen anderer Kostenträger",
-  "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs#KostenBema13AtoD": "Kosten gem. den BEMA-Pos. 13a - d"
+  "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs#KostenBema13AtoD": "Kosten gem. den BEMA-Pos. 13a - d",
+  "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs#patientenadressierung": "Patientenadressierung",
+  "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs#patientenrechnung": "Patientenrechnung",
+  "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs#einrichtungsadressierung": "Einrichtungsadressierung",
+  "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs#demo": "Demo"
 }
