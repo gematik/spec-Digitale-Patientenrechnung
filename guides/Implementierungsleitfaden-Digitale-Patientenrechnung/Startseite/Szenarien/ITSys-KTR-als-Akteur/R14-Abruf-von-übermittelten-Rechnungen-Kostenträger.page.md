@@ -18,7 +18,7 @@ Die Input- und Output-Parameter werden durch die OperationDefinition `https://ge
 
 * Die Berechtigungsprüfung erfolgt über die Zuordnung der Rechnung zur abrufenden Organisation: Der FD MUSS sicherstellen, dass `DocumentReference.context.related` auf die Organization verweist, deren Telematik-ID im Access-Token enthalten ist. Andernfalls MUSS die Anfrage mit `404 - Not Found` beantwortet werden.
 
-* Nach dem erfolgreichen Abruf MUSS der FD den Rechnungsstatus (`DocumentReference.meta.tag:dipag-rechnungsstatus`) automatisch auf "Abgerufen" setzen. Ein manuelles Ändern des Status ist nicht vorgesehen.
+* Nach dem erfolgreichen Abruf MUSS der FD den Rechnungsstatus (`DocumentReference.meta.tag:dipag-rechnungsstatus`) gemäß dem Workflowtyp der Rechnung aktualisieren (vgl. {{pagelink:Workflows}}).
 
 * Die zurückgegebene DocumentReference-Ressource MUSS valide gegen das Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern` sein. Der Rechnungsempfänger ist über den Slice `context.related:empfaenger` (Referenz auf die Organization) abgebildet; Markierungen sind nicht vorhanden. Der bei der Einreichung gewählte Workflowtyp ist als `meta.tag:dipag-workflowtyp` enthalten (vgl. {{pagelink:AF_TBD_R13}}).
 

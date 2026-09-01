@@ -1,5 +1,7 @@
 - name: Index
   filename: index.page.md
+- name: Workflows
+  filename: Workflows.page.md
 - name: RE-PS als Akteur
   filename: RE-PS-als-Akteur
 - name: DiPag FdV als Akteur

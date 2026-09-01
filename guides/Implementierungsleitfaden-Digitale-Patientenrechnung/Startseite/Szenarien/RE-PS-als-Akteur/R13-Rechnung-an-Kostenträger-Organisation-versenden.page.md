@@ -35,11 +35,11 @@ Es gelten die Festlegungen aus {{pagelink:AF_10136}} (Dokumentenvalidierung, Has
 
 * Die DocumentReference-Ressource im Part `dokument` MUSS dem Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-organisation` entsprechen. Markierungen werden im Kontext der an Organisationen übermittelten Rechnungen nicht unterstützt und sind daher im Profil nicht vorgesehen.
 
-* Über den zusätzlichen Pflicht-Parameter `workflow` wählt das RE-PS den Workflowtyp der Einreichung aus. Es MUSS ein Workflowtyp der Einrichtungsadressierung gewählt werden, den die Ziel-Organisation unterstützt (Extension `workflowtyp` an der Organization-Ressource, vgl. {{pagelink:AF_TBD_R12}}); andernfalls MUSS der FD die Einreichung mit `400 - Bad Request` ablehnen. Die Beschreibung der einzelnen Workflowtypen ist im CodeSystem `DiPagWorkflowtypCS` hinterlegt.
+* Über den zusätzlichen Pflicht-Parameter `workflow` wählt das RE-PS den Workflowtyp der Einreichung aus. Es MUSS ein Workflowtyp der Einrichtungsadressierung gewählt werden, den die Ziel-Organisation unterstützt (Extension `workflowtyp` an der Organization-Ressource, vgl. {{pagelink:AF_TBD_R12}}); andernfalls MUSS der FD die Einreichung mit `400 - Bad Request` ablehnen. Die Festlegungen der einzelnen Workflowtypen sind in {{pagelink:Workflows}} beschrieben.
 
 * `DocumentReference.context.related` MUSS durch den FD auf die id der Organization gesetzt werden, an welche die Rechnung übermittelt wurde (`Reference.type = "Organization"`).
 
-* `DocumentReference.meta.tag:dipag-rechnungsstatus` MUSS durch den FD auf "Übermittelt" gesetzt werden beim Empfang der Rechnung. Der Rechnungsworkflow für Organisationen kennt ausschließlich die Statuswerte "Übermittelt" und "Abgerufen"; ein manuelles Ändern des Status ist nicht vorgesehen. Zusätzlich MUSS der FD den im Parameter `workflow` gewählten Workflowtyp als `DocumentReference.meta.tag:dipag-workflowtyp` setzen.
+* Der FD MUSS den im Parameter `workflow` gewählten Workflowtyp als `DocumentReference.meta.tag:dipag-workflowtyp` setzen. Welchen initialen Rechnungsstatus (`meta.tag:dipag-rechnungsstatus`) der FD beim Empfang der Rechnung setzt und welche weiteren Statusübergänge vorgesehen sind, bestimmt der gewählte Workflowtyp (vgl. {{pagelink:Workflows}}).
 
 * Nach der Verarbeitung im FD entsprechen die Dokumente dem Profil `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern`. Der Rechnungsempfänger wird dabei über den Slice `context.related:empfaenger` (Referenz auf die Organization) abgebildet; Markierungen sind nicht vorhanden.
 
