@@ -8,8 +8,10 @@ on:
 permissions:
   contents: write
 
+# Gemeinsame Concurrency-Gruppe mit dem IG-Publish (ig-publisher.yml), damit
+# nie zwei Workflows gleichzeitig auf den github-pages-Branch pushen.
 concurrency:
-  group: "pages"
+  group: "github-pages-branch"
   cancel-in-progress: false
 
 jobs:
@@ -46,8 +48,15 @@ jobs:
           git fetch origin github-pages
           git checkout github-pages
 
+          # Den vom IG-Publisher-Workflow veröffentlichten IG (docs/ig) erhalten —
+          # er wird von ig-publisher.yml gepflegt und darf hier nicht gelöscht werden.
+          if [ -d docs/ig ]; then
+            cp -r docs/ig /tmp/built-docs/ig
+          fi
+
           rm -rf docs
           cp -r /tmp/built-docs docs
+          touch docs/.nojekyll
 
           git add -f docs/
           git commit -m "Deploy: $(date -u +%Y-%m-%dT%H:%M:%SZ)" || echo "Nothing to commit"
