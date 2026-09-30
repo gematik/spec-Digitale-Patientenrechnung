@@ -1,0 +1,602 @@
+[{
+  "id" : "InvoicePeriod",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x]",
+  "version" : "1.1.0",
+  "name" : "InvoicePeriod"
+},
+{
+  "id" : "dipag-task-requestedPerformer",
+  "type" : "StructureDefinition",
+  "url" : "http://hl7.org/fhir/5.0/StructureDefinition/extension-Task.requestedPerformer",
+  "version" : "1.1.0",
+  "name" : "DiPagTaskRequestedPerformer"
+},
+{
+  "id" : "DiPagCapabilityStatementFD",
+  "type" : "CapabilityStatement",
+  "url" : "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
+  "version" : "1.1.0",
+  "name" : "CapabilityStatementFD"
+},
+{
+  "id" : "dipag-abrechnungs-diagnose-use-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-abrechnungs-diagnose-use-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagAbrechnungsDiagnoseUseCS"
+},
+{
+  "id" : "dipag-attachment-format-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagAttachmentFormatCS"
+},
+{
+  "id" : "dipag-audit-event-detail-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagAuditEventDetailCS"
+},
+{
+  "id" : "dipag-chargeitem-type-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungspositionTypeCS"
+},
+{
+  "id" : "dipag-dokument-artderarchivierung-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-dokument-artderarchivierung-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagDokumentArtDerArchivierungCS"
+},
+{
+  "id" : "dipag-operationen-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-operationen-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagOperationenCS"
+},
+{
+  "id" : "dipag-participant-role-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-participant-role-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagParticipantRoleCS"
+},
+{
+  "id" : "dipag-rechnung-abrechnungsart-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-abrechnungsart-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungAbrechnungsartCS"
+},
+{
+  "id" : "dipag-rechnung-identifier-type-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-identifier-type-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungIdentifierTypeCS"
+},
+{
+  "id" : "dipag-rechnung-markierung-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungMarkierungCS"
+},
+{
+  "id" : "dipag-rechnung-submit-modus-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungSubmitModusCS"
+},
+{
+  "id" : "dipag-rechnung-type-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-type-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungTypeCS"
+},
+{
+  "id" : "dipag-rechnungsart-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsart-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungsartCS"
+},
+{
+  "id" : "dipag-rechnungsposition-faktor-gruende-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungspositionFaktorGruendeCS"
+},
+{
+  "id" : "dipag-rechnungsposition-zusatz-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungspositionZusatzCS"
+},
+{
+  "id" : "dipag-rechnungsstatus-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagARechnungsstatusCS"
+},
+{
+  "id" : "dipag-total-price-component-type-cs",
+  "type" : "CodeSystem",
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-total-price-component-type-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagTotalPriceComponentTypeCS"
+},
+{
+  "id" : "de.gematik.dipag",
+  "type" : "ImplementationGuide",
+  "url" : "https://gematik.de/fhir/dipag/ImplementationGuide/de.gematik.dipag",
+  "version" : "1.1.0",
+  "name" : "DigitalePatientenrechnung"
+},
+{
+  "id" : "ChangeStatus",
+  "type" : "OperationDefinition",
+  "url" : "https://gematik.de/fhir/dipag/OperationDefinition/ChangeStatus",
+  "version" : "1.1.0",
+  "name" : "DiPagChangeStatus"
+},
+{
+  "id" : "Erase",
+  "type" : "OperationDefinition",
+  "url" : "https://gematik.de/fhir/dipag/OperationDefinition/Erase",
+  "version" : "1.1.0",
+  "name" : "DiPagErase"
+},
+{
+  "id" : "ProcessFlag",
+  "type" : "OperationDefinition",
+  "url" : "https://gematik.de/fhir/dipag/OperationDefinition/ProcessFlag",
+  "version" : "1.1.0",
+  "name" : "DiPagProcessFlag"
+},
+{
+  "id" : "Retrieve",
+  "type" : "OperationDefinition",
+  "url" : "https://gematik.de/fhir/dipag/OperationDefinition/Retrieve",
+  "version" : "1.1.0",
+  "name" : "DiPagRetrieve"
+},
+{
+  "id" : "Submit",
+  "type" : "OperationDefinition",
+  "url" : "https://gematik.de/fhir/dipag/OperationDefinition/Submit",
+  "version" : "1.1.0",
+  "name" : "DiPagSubmit"
+},
+{
+  "id" : "dipag-auditEvent-agent-who-display",
+  "type" : "SearchParameter",
+  "url" : "https://gematik.de/fhir/dipag/SearchParameter/dipag-auditEvent-agent-who-display",
+  "version" : "1.1.0",
+  "name" : "DiPagAuditEventAgentWhoDisplay"
+},
+{
+  "id" : "dipag-docRef-author-display",
+  "type" : "SearchParameter",
+  "url" : "https://gematik.de/fhir/dipag/SearchParameter/dipag-docRef-author-display",
+  "version" : "1.1.0",
+  "name" : "DiPagDocRefAuthorDisplay"
+},
+{
+  "id" : "dipag-docRef-subject-display",
+  "type" : "SearchParameter",
+  "url" : "https://gematik.de/fhir/dipag/SearchParameter/dipag-docRef-subject-display",
+  "version" : "1.1.0",
+  "name" : "DiPagDocRefSubjectDisplay"
+},
+{
+  "id" : "dipag-markierung",
+  "type" : "SearchParameter",
+  "url" : "https://gematik.de/fhir/dipag/SearchParameter/dipag-markierung",
+  "version" : "1.1.0",
+  "name" : "DiPagMakierung"
+},
+{
+  "id" : "DiPagAbrechnungsDiagnoseProzedur",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedur",
+  "version" : "1.1.0",
+  "name" : "DiPagAbrechnungsDiagnoseProzedur"
+},
+{
+  "id" : "DiPagAbrechnungsDiagnoseProzedurFreitext",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagAbrechnungsDiagnoseProzedurFreitext",
+  "version" : "1.1.0",
+  "name" : "DiPagAbrechnungsDiagnoseProzedurFreitext"
+},
+{
+  "id" : "DiPagBemaPunktsumme",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagBemaPunktsumme",
+  "version" : "1.1.0",
+  "name" : "DiPagBemaPunktsumme"
+},
+{
+  "id" : "DiPagInvoiceBasedOn",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagInvoiceBasedOn",
+  "version" : "1.1.0",
+  "name" : "DiPagInvoiceBasedOn"
+},
+{
+  "id" : "DiPagInvoiceReplaces",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagInvoiceReplaces",
+  "version" : "1.1.0",
+  "name" : "DiPagInvoiceReplaces"
+},
+{
+  "id" : "DiPagPaymentTo",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagPaymentTo",
+  "version" : "1.1.0",
+  "name" : "DiPagPaymentTo"
+},
+{
+  "id" : "DiPagRechnungspositionBehandlungsdatum",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungspositionBehandlungsdatum"
+},
+{
+  "id" : "DiPagRechnungspositionZusatz",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungspositionZusatz"
+},
+{
+  "id" : "DiPagTeilsumme",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTeilsumme",
+  "version" : "1.1.0",
+  "name" : "DiPagTeilsumme"
+},
+{
+  "id" : "DiPagTokenStornierteRechnung",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagTokenStornierteRechnung",
+  "version" : "1.1.0",
+  "name" : "DiPagTokenStornierteRechnung"
+},
+{
+  "id" : "DiPagZusatzinformationZurAbrechnungsart",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/DiPagZusatzinformationZurAbrechnungsart",
+  "version" : "1.1.0",
+  "name" : "DiPagZusatzinformationZurAbrechnungsart"
+},
+{
+  "id" : "dipag-abzug-kassenanteil",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-abzug-kassenanteil",
+  "version" : "1.1.0",
+  "name" : "DiPagAbzugKassenanteil"
+},
+{
+  "id" : "dipag-behandlungsart",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-behandlungsart",
+  "version" : "1.1.0",
+  "name" : "DiPagBehandlungsart"
+},
+{
+  "id" : "dipag-docref-fachrichtung",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-fachrichtung",
+  "version" : "1.1.0",
+  "name" : "DiPagDocRefFachrichtung"
+},
+{
+  "id" : "dipag-docref-signature",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-docref-signature",
+  "version" : "1.1.0",
+  "name" : "DiPagDocRefSignature"
+},
+{
+  "id" : "dipag-documentreference-gesamtbetrag",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag",
+  "version" : "1.1.0",
+  "name" : "DiPagDocumentReferenceGesamtbetrag"
+},
+{
+  "id" : "dipag-documentreference-markierung",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-markierung",
+  "version" : "1.1.0",
+  "name" : "DiPagDocumentReferenceMarkierung"
+},
+{
+  "id" : "dipag-documentreference-rechnungsdatum",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum",
+  "version" : "1.1.0",
+  "name" : "DiPagDocumentReferenceRechnungsdatum"
+},
+{
+  "id" : "dipag-dokumentenmetadaten-eingang",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang",
+  "version" : "1.1.0",
+  "name" : "DiPagDokumentenmetadatenEingang"
+},
+{
+  "id" : "dipag-dokumentenmetadaten-intern",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern",
+  "version" : "1.1.0",
+  "name" : "DiPagDokumentenmetadatenIntern"
+},
+{
+  "id" : "dipag-fachrichtung",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-fachrichtung",
+  "version" : "1.1.0",
+  "name" : "DiPagFachrichtung"
+},
+{
+  "id" : "dipag-institution",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution",
+  "version" : "1.1.0",
+  "name" : "DiPagInstitution"
+},
+{
+  "id" : "dipag-nutzungsprotokoll",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-nutzungsprotokoll",
+  "version" : "1.1.0",
+  "name" : "DiPagNutzungsprotokoll"
+},
+{
+  "id" : "dipag-patient",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
+  "version" : "1.1.0",
+  "name" : "DiPagPatient"
+},
+{
+  "id" : "dipag-person",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-person",
+  "version" : "1.1.0",
+  "name" : "DiPagPerson"
+},
+{
+  "id" : "dipag-rechnung",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnung"
+},
+{
+  "id" : "dipag-rechnungsbundle",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsbundle",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungsBundle"
+},
+{
+  "id" : "dipag-rechnungsdiagnose",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdiagnose",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungsdiagnose"
+},
+{
+  "id" : "dipag-rechnungsdokument",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungsdokument"
+},
+{
+  "id" : "dipag-rechnungsposition",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungsposition"
+},
+{
+  "id" : "dipag-rechnungsposition-go-angaben",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungspositionGOAngaben"
+},
+{
+  "id" : "dipag-rechnungsposition-type",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungspositionType"
+},
+{
+  "id" : "dipag-rechnungsprozedur",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungsprozedur"
+},
+{
+  "id" : "dipag-wegegeld-reiseentschaedigung",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-wegegeld-reiseentschaedigung",
+  "version" : "1.1.0",
+  "name" : "DiPagWegegeldReiseentschaedigung"
+},
+{
+  "id" : "dipag-zahlungsziel",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+  "version" : "1.1.0",
+  "name" : "DiPagZahlungsziel"
+},
+{
+  "id" : "dipag-zahnregion",
+  "type" : "StructureDefinition",
+  "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion",
+  "version" : "1.1.0",
+  "name" : "DiPagZahnRegion"
+},
+{
+  "id" : "DiPagVerkehrsmittel",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/DiPagVerkehrsmittel",
+  "version" : "1.1.0",
+  "name" : "DiPagVerkehrsmittel"
+},
+{
+  "id" : "dipag-abrechnungs-diagnose-use-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-abrechnungs-diagnose-use-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagAbrechnungsDiagnoseUseVS"
+},
+{
+  "id" : "dipag-audit-event-agent-type-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-agent-type-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagAuditEventAgentTypeVS"
+},
+{
+  "id" : "dipag-audit-event-detail-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-detail-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagAuditEventDetailVS"
+},
+{
+  "id" : "dipag-audit-event-sub-type-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-sub-type-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagAuditEventSubTypeVS"
+},
+{
+  "id" : "dipag-audit-event-type-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-audit-event-type-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagAuditEventTypeVS"
+},
+{
+  "id" : "dipag-chargeitem-type-VS",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-chargeitem-type-VS",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungspositionTypeVS"
+},
+{
+  "id" : "dipag-dokument-artderarchivierung-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-dokument-artderarchivierung-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagDokumentArtDerArchivierungVS"
+},
+{
+  "id" : "dipag-participant-role-VS",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-participant-role-VS",
+  "version" : "1.1.0",
+  "name" : "DiPagParticipantRoleVS"
+},
+{
+  "id" : "dipag-rechnung-abrechnungsart-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-abrechnungsart-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungAbrechnungsartVS"
+},
+{
+  "id" : "dipag-rechnung-behandlungsart-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-behandlungsart-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungBehandlungsartVS"
+},
+{
+  "id" : "dipag-rechnung-markierung-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-markierung-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungMarkierungVS"
+},
+{
+  "id" : "dipag-rechnung-submit-modus-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnung-submit-modus-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungSubmitModusVS"
+},
+{
+  "id" : "dipag-rechnungsart-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsart-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungsartVS"
+},
+{
+  "id" : "dipag-rechnungsposition-faktor-gruende-auspraegungen-VS",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungspositionFaktorGruendeVS"
+},
+{
+  "id" : "dipag-rechnungsposition-zusatz-VS",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-zusatz-VS",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungspositionZusatzVS"
+},
+{
+  "id" : "dipag-rechnungsstatus-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsstatus-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungsstatusVS"
+},
+{
+  "id" : "dipag-restricted-mime-types-in-binary-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-restricted-mime-types-in-binary-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagRestrictedMimeTypesInBinaryVS"
+},
+{
+  "id" : "dipag-sonstigesdokument-type-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-sonstigesdokument-type-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagSonstigesDokumentTypeVS"
+},
+{
+  "id" : "dipag-total-price-component-deduction-type-vs",
+  "type" : "ValueSet",
+  "url" : "https://gematik.de/fhir/dipag/ValueSet/dipag-total-price-component-deduction-type-vs",
+  "version" : "1.1.0",
+  "name" : "DiPagTotalPriceComponentDeductionTypeVS"
+}]

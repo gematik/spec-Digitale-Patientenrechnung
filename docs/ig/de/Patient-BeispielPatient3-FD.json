@@ -1,0 +1,20 @@
+{
+  "resourceType" : "Patient",
+  "id" : "BeispielPatient3-FD",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient BeispielPatient3-FD</b></p><a name=\"BeispielPatient3-FD\"> </a><a name=\"hcBeispielPatient3-FD\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Manfred Mustermann Male, DoB Unknown ( http://fhir.de/sid/gkv/kvid-10#NamingSystemKVID#A000000000)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">Musterweg 2, 3. Etage, 98764 Musterhausen, DE</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "http://fhir.de/sid/gkv/kvid-10",
+    "value" : "A000000000"
+  }],
+  "name" : [{
+    "text" : "Manfred Mustermann"
+  }],
+  "gender" : "male",
+  "address" : [{
+    "text" : "Musterweg 2, 3. Etage, 98764 Musterhausen, DE"
+  }]
+}

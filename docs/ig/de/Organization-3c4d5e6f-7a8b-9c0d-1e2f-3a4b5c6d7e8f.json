@@ -1,0 +1,30 @@
+{
+  "resourceType" : "Organization",
+  "id" : "3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f",
+  "meta" : {
+    "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution"]
+  },
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f</b></p><a name=\"3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f\"> </a><a name=\"hc3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-institution.html\">Digitale Patientenrechnung Institution</a></p></div><p><b>name</b>: Praxis Dr. A. Arzt</p><p><b>address</b>: Docstrasse 25 Musterstadt 12345 DE </p></div>"
+  },
+  "name" : "Praxis Dr. A. Arzt",
+  "address" : [{
+    "type" : "both",
+    "line" : ["Docstrasse 25"],
+    "_line" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName",
+        "valueString" : "Docstrasse"
+      },
+      {
+        "url" : "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber",
+        "valueString" : "25"
+      }]
+    }],
+    "city" : "Musterstadt",
+    "postalCode" : "12345",
+    "country" : "DE"
+  }]
+}

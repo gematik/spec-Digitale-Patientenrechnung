@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Procedure xmlns="http://hl7.org/fhir">
+  <id value="b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f"/>
+  <meta>
+    <profile value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsprozedur"/>
+  </meta>
+  <language value="de"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Procedure b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f</b></p><a name="b2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f"> </a><a name="hcb2c3d4e5-3a4b-5c6d-0e1f-2a3b4c5d6e7f"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-dipag-rechnungsprozedur.html">Digitale Patientenrechnung Rechnungsprozedur</a></p></div><p><b>status</b>: Completed</p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bfarm/ops 5-232.00}">Implantation alloplastisches Material, Zahn</span></p><p><b>subject</b>: <a href="Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>performed</b>: 2024-02-20</p></div>
+  </text>
+  <status value="completed"/>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bfarm/ops"/>
+      <version value="2024"/>
+      <code value="5-232.00"/>
+      <display value="Implantation alloplastisches Material, Zahn"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c"/>
+  </subject>
+  <performedDateTime value="2024-02-20"/>
+</Procedure>

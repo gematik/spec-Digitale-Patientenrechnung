@@ -1,0 +1,60 @@
+# BeispielParameterSubmitOutput3.1-FD - Implementierungsleitfaden Digitale Patientenrechnung v1.1.0
+
+Implementierungsleitfaden Digitale Patientenrechnung
+
+Version 1.1.0 - ci-build 
+
+* [**Table of Contents**](toc.md)
+* [**Artefaktübersicht**](artifacts.md)
+* **BeispielParameterSubmitOutput3.1-FD**
+
+## Beispiel Parameters: BeispielParameterSubmitOutput3.1-FD
+
+
+
+## Resource Content
+
+```json
+{
+  "resourceType" : "Parameters",
+  "id" : "BeispielParameterSubmitOutput3.1-FD",
+  "parameter" : [{
+    "name" : "token",
+    "part" : [{
+      "name" : "id",
+      "valueId" : "dc835efd80d831b95b1db9d2cca371eeb9063393155e3a573c8a9c7a803f6abe"
+    },
+    {
+      "name" : "docRef",
+      "valueIdentifier" : {
+        "system" : "https://example.org/fhir/sid/invoice-id",
+        "value" : "12345"
+      }
+    }]
+  },
+  {
+    "name" : "warnungen",
+    "resource" : {
+      "resourceType" : "OperationOutcome",
+      "id" : "BeispielOperationOutcomeRechnung3.1-FD",
+      "issue" : [{
+        "severity" : "warning",
+        "code" : "invalid",
+        "details" : {
+          "text" : "Menschenlesbare Beschreibung der Warnung hier..."
+        },
+        "diagnostics" : "Originaler technischer Validierungsfehler hier..."
+      },
+      {
+        "severity" : "warning",
+        "code" : "invalid",
+        "details" : {
+          "text" : "Weiterer Fehler..."
+        },
+        "diagnostics" : "Originaler technischer Validierungsfehler hier..."
+      }]
+    }
+  }]
+}
+
+```

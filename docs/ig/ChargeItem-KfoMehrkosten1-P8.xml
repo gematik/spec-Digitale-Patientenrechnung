@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ChargeItem xmlns="http://hl7.org/fhir">
+  <id value="KfoMehrkosten1-P8"/>
+  <meta>
+    <profile value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ChargeItem KfoMehrkosten1-P8</b></p><a name="KfoMehrkosten1-P8"> </a><a name="hcKfoMehrkosten1-P8"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-dipag-rechnungsposition.html">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href="CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-GOZ">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: GOZ</a> (Leistung nach Gebührenordnung GOZ)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><p><b>Value</b>: 2.3</p><blockquote><p><b>url</b></p><a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Faktor">Faktor</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Zusatz Extension</b>: <a href="CodeSystem-dipag-rechnungsposition-zusatz-cs.html#dipag-rechnungsposition-zusatz-cs-A">Digitale Patientenrechnung Rechnungsposition Zusatz CodeSystem: A</a> (analoge Leistung)</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bäk/gzä 2000}">Versiegelung von kariesfreien Zahnfissuren mit aushärtenden Kunststoffen, auch Glattflächenversiegelung, je Zahn</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/KfoMehrkosten1Patient">Patient/KfoMehrkosten1Patient</a></p><p><b>occurrence</b>: 2024-08-20</p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Organization/KfoMehrkosten1Behandler">Organization/KfoMehrkosten1Behandler</a></td></tr></table><p><b>quantity</b>: 3 {#}<span style="background: LightGoldenRodYellow"> (Details: UCUM  code{#} = '{#}')</span></p><p><b>bodysite</b>: <span title="Codes:"></span></p><p><b>reason</b>: <span title="Codes:">bei erhöhtem Kariesrisiko während einer Multibracketbehandlung, Bracketumfeldversiegelung</span></p></div>
+  </text>
+  <extension url="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type">
+    <valueCoding>
+      <system value="https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"/>
+      <code value="GOZ"/>
+    </valueCoding>
+  </extension>
+  <extension url="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben">
+    <extension url="Faktor">
+      <extension url="Value">
+        <valueDecimal value="2.3"/>
+      </extension>
+    </extension>
+  </extension>
+  <extension url="https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionZusatz">
+    <valueCoding>
+      <system value="https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-zusatz-cs"/>
+      <code value="A"/>
+    </valueCoding>
+  </extension>
+  <status value="billable"/>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bäk/gzä"/>
+      <code value="2000"/>
+      <display value="Versiegelung von kariesfreien Zahnfissuren mit aushärtenden Kunststoffen, auch Glattflächenversiegelung, je Zahn"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/KfoMehrkosten1Patient"/>
+  </subject>
+  <occurrenceDateTime value="2024-08-20"/>
+  <performer>
+    <actor>
+      <reference value="Organization/KfoMehrkosten1Behandler"/>
+    </actor>
+  </performer>
+  <quantity>
+    <value value="3"/>
+    <unit value="{#}"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="{#}"/>
+  </quantity>
+  <bodysite>
+    <extension url="https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahnregion">
+      <valueString value="27, 37, 47"/>
+    </extension>
+  </bodysite>
+  <reason>
+    <text value="bei erhöhtem Kariesrisiko während einer Multibracketbehandlung, Bracketumfeldversiegelung"/>
+  </reason>
+</ChargeItem>

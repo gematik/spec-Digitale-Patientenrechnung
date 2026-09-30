@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Parameters/BeispielParameterProcessFlagInput> a fhir:Parameters ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BeispielParameterProcessFlagInput"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:Parameters.parameter [
+     fhir:index -1 ;
+     fhir:Parameters.parameter.name [ fhir:value "markierung" ] ;
+     fhir:Parameters.parameter.part [
+       fhir:index -1 ;
+       fhir:Parameters.parameter.name [ fhir:value "markierung" ] ;
+       fhir:Parameters.parameter.valueCoding [
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs" ] ;
+         fhir:Coding.code [ fhir:value "bezahlt" ]
+       ]
+     ], [
+       fhir:index -1 ;
+       fhir:Parameters.parameter.name [ fhir:value "zeitpunkt" ] ;
+       fhir:Parameters.parameter.valueDateTime [ fhir:value "2024-05-30T13:00:00.001+02:00"^^xsd:dateTime ]
+     ], [
+       fhir:index -1 ;
+       fhir:Parameters.parameter.name [ fhir:value "details" ] ;
+       fhir:Parameters.parameter.valueString [ fhir:value "Bezahlt mit falschem Betreff" ]
+     ]
+  ], [
+     fhir:index -1 ;
+     fhir:Parameters.parameter.name [ fhir:value "markierung" ] ;
+     fhir:Parameters.parameter.part [
+       fhir:index -1 ;
+       fhir:Parameters.parameter.name [ fhir:value "markierung" ] ;
+       fhir:Parameters.parameter.valueCoding [
+         fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs" ] ;
+         fhir:Coding.code [ fhir:value "gelesen" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Parameters/BeispielParameterProcessFlagInput.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

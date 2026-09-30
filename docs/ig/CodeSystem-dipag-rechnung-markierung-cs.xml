@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dipag-rechnung-markierung-cs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem dipag-rechnung-markierung-cs</b></p><a name="dipag-rechnung-markierung-cs"> </a><a name="hcdipag-rechnung-markierung-cs"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs</code> defines the following codes in a Is-A hierarchy:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">eingereicht-frontend<a name="dipag-rechnung-markierung-cs-eingereicht-frontend"> </a></td><td>Eingereicht (per Frontend)</td><td>Bei Einreichung durch Versicherten</td></tr><tr><td style="white-space:nowrap">eingereicht-post<a name="dipag-rechnung-markierung-cs-eingereicht-post"> </a></td><td>Eingereicht (per Post)</td><td>Bei Postversand durch Versicherten</td></tr><tr><td style="white-space:nowrap">geteilt<a name="dipag-rechnung-markierung-cs-geteilt"> </a></td><td>Geteilt</td><td>Bei Teilen durch den Versicherten</td></tr><tr><td style="white-space:nowrap">abgerufen<a name="dipag-rechnung-markierung-cs-abgerufen"> </a></td><td>Abgerufen durch Kostenträger</td><td>Bei Abruf eines Dokuments/einer Rechnung durch den Kostenträger, durch den Fachdienst</td></tr><tr><td style="white-space:nowrap">gelesen<a name="dipag-rechnung-markierung-cs-gelesen"> </a></td><td>Gelesen</td><td>Beim Einsehen von Rechnungen oder Dokumenten durch den Versicherten im DiPag FdV</td></tr><tr><td style="white-space:nowrap">bezahlt<a name="dipag-rechnung-markierung-cs-bezahlt"> </a></td><td>Bezahlt</td><td>Bei Zahlung durch den Versicherten</td></tr><tr><td style="white-space:nowrap">archiviert<a name="dipag-rechnung-markierung-cs-archiviert"> </a></td><td>Archiviert</td><td>Bei Archivierung durch den Versicherten</td></tr><tr><td style="white-space:nowrap">persoenlich<a name="dipag-rechnung-markierung-cs-persoenlich"> </a></td><td>Persönlich</td><td>Durch den Rechnungsersteller bei Versenden von Dokumenten, die ausschließlich nur persönlich an den Versicherten gerichtet sind.</td></tr></table></div>
+  </text>
+  <url value="https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-markierung-cs"/>
+  <version value="1.1.0"/>
+  <name value="DiPagRechnungMarkierungCS"/>
+  <title value="Digitale Patientenrechnung Rechnung Markierung CS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-26"/>
+  <publisher value="gematik GmbH"/>
+  <contact>
+    <name value="gematik GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gematik.de"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem für die Differenzierung von verschiedenen Arten von Markierungen eines Dokumentes"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <count value="8"/>
+  <concept>
+    <code value="eingereicht-frontend"/>
+    <display value="Eingereicht (per Frontend)"/>
+    <definition value="Bei Einreichung durch Versicherten"/>
+  </concept>
+  <concept>
+    <code value="eingereicht-post"/>
+    <display value="Eingereicht (per Post)"/>
+    <definition value="Bei Postversand durch Versicherten"/>
+  </concept>
+  <concept>
+    <code value="geteilt"/>
+    <display value="Geteilt"/>
+    <definition value="Bei Teilen durch den Versicherten"/>
+  </concept>
+  <concept>
+    <code value="abgerufen"/>
+    <display value="Abgerufen durch Kostenträger"/>
+    <definition value="Bei Abruf eines Dokuments/einer Rechnung durch den Kostenträger, durch den Fachdienst"/>
+  </concept>
+  <concept>
+    <code value="gelesen"/>
+    <display value="Gelesen"/>
+    <definition value="Beim Einsehen von Rechnungen oder Dokumenten durch den Versicherten im DiPag FdV"/>
+  </concept>
+  <concept>
+    <code value="bezahlt"/>
+    <display value="Bezahlt"/>
+    <definition value="Bei Zahlung durch den Versicherten"/>
+  </concept>
+  <concept>
+    <code value="archiviert"/>
+    <display value="Archiviert"/>
+    <definition value="Bei Archivierung durch den Versicherten"/>
+  </concept>
+  <concept>
+    <code value="persoenlich"/>
+    <display value="Persönlich"/>
+    <definition value="Durch den Rechnungsersteller bei Versenden von Dokumenten, die ausschließlich nur persönlich an den Versicherten gerichtet sind."/>
+  </concept>
+</CodeSystem>

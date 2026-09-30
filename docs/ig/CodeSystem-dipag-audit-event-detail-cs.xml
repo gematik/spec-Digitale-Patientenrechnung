@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="dipag-audit-event-detail-cs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: CodeSystem dipag-audit-event-detail-cs</b></p><a name="dipag-audit-event-detail-cs"> </a><a name="hcdipag-audit-event-detail-cs"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs</code> defines the following codes in a Is-A hierarchy:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">Allgemein<a name="dipag-audit-event-detail-cs-Allgemein"> </a></td><td>Allgemeine Interaktion mit einem Objekt</td></tr><tr><td style="white-space:nowrap">Rechnungsversand-Berechtigung<a name="dipag-audit-event-detail-cs-Rechnungsversand-Berechtigung"> </a></td><td>Rechnungsversand-Berechtigung</td></tr><tr><td style="white-space:nowrap">DocumentReference.meta.tag:dipag-rechnungsstatus<a name="dipag-audit-event-detail-cs-DocumentReference.46meta.46tag.58dipag-rechnungsstatus"> </a></td><td>Rechnungsstatus</td></tr><tr><td style="white-space:nowrap">DocumentReference.meta.extension:markierung<a name="dipag-audit-event-detail-cs-DocumentReference.46meta.46extension.58markierung"> </a></td><td>Markierung</td></tr></table></div>
+  </text>
+  <url value="https://gematik.de/fhir/dipag/CodeSystem/dipag-audit-event-detail-cs"/>
+  <version value="1.1.0"/>
+  <name value="DiPagAuditEventDetailCS"/>
+  <title value="Digitale Patientenrechnung Audit Event Detail"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2026-03-26"/>
+  <publisher value="gematik GmbH"/>
+  <contact>
+    <name value="gematik GmbH"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.gematik.de"/>
+    </telecom>
+  </contact>
+  <description value="CodeSystem für die Kodierung der Details eines Protokolleintrags im Nutzungsprotokoll, z. B. Änderungen an Rechnungsstatus oder Markierung"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="DE"/>
+      <display value="Germany"/>
+    </coding>
+  </jurisdiction>
+  <caseSensitive value="true"/>
+  <hierarchyMeaning value="is-a"/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="Allgemein"/>
+    <display value="Allgemeine Interaktion mit einem Objekt"/>
+  </concept>
+  <concept>
+    <code value="Rechnungsversand-Berechtigung"/>
+    <display value="Rechnungsversand-Berechtigung"/>
+  </concept>
+  <concept>
+    <code value="DocumentReference.meta.tag:dipag-rechnungsstatus"/>
+    <display value="Rechnungsstatus"/>
+  </concept>
+  <concept>
+    <code value="DocumentReference.meta.extension:markierung"/>
+    <display value="Markierung"/>
+  </concept>
+</CodeSystem>

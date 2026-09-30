@@ -1,0 +1,103 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/ChargeItem/e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c> a fhir:ChargeItem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition" ;
+       fhir:index 0 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition>
+     ]
+  ] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c</b></p><a name=\"e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c\"> </a><a name=\"hce9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-WegegeldReiseentschaedigung\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: WegegeldReiseentschaedigung</a> (Wegegeld/Reiseentschädigung)</p><blockquote><p><b>Digitale Patientenrechnung Wegegeld/Reiseentschädigung Extension</b></p><p><b>Abwesenheit</b>: 3 h<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codeh = 'h')</span></p><p><b>Entfernung</b>: 50 km<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  codekm = 'km')</span></p><p><b>Uebernachtung</b>: <span title=\"Euro\">€80,00</span> (EUR)</p><p><b>Verkehrsmittel</b>: <a href=\"http://snomed.info/id/46160005\">SNOMED CT: 46160005</a> (Motor vehicle)</p><blockquote><p><b>url</b></p><a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Reiseentschaedigung\">Reiseentschaedigung</a></blockquote></blockquote><p><b>Digitale Patientenrechnung Rechnungsposition Behandlungsdatum</b>: 2024-03-05</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:\">Reiseentschädigung für Hausbesuch</span></p><p><b>subject</b>: <a href=\"Patient-8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c.html\">Max Mustermann(official) Male, DoB: 1980-05-15 ( Krankenversichertennummer)</a></p><p><b>occurrence</b>: 2024-03-05 --&gt; 2024-03-05</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Practitioner-c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a.html\">Practitioner Dr. Hans Schulz(official)</a></td></tr></table></div>"
+  ] ;
+  fhir:DomainResource.extension [
+     fhir:index 0 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type" ] ;
+     fhir:Extension.valueCoding [
+       fhir:Coding.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs" ] ;
+       fhir:Coding.code [ fhir:value "WegegeldReiseentschaedigung" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Element.extension [
+       fhir:index 0 ;
+       fhir:Element.extension [
+         fhir:index 0 ;
+         fhir:Extension.url [ fhir:value "Abwesenheit" ] ;
+         fhir:Extension.valueQuantity [
+           fhir:Quantity.value [ fhir:value "3"^^xsd:decimal ] ;
+           fhir:Quantity.unit [ fhir:value "h" ] ;
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+           fhir:Quantity.code [ fhir:value "h" ]
+         ]
+       ], [
+         fhir:index 1 ;
+         fhir:Extension.url [ fhir:value "Entfernung" ] ;
+         fhir:Extension.valueQuantity [
+           fhir:Quantity.value [ fhir:value "50"^^xsd:decimal ] ;
+           fhir:Quantity.unit [ fhir:value "km" ] ;
+           fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ] ;
+           fhir:Quantity.code [ fhir:value "km" ]
+         ]
+       ], [
+         fhir:index 2 ;
+         fhir:Extension.url [ fhir:value "Uebernachtung" ] ;
+         fhir:Extension.valueMoney [
+           fhir:Money.value [ fhir:value "80"^^xsd:decimal ] ;
+           fhir:Money.currency [ fhir:value "EUR" ]
+         ]
+       ], [
+         fhir:index 3 ;
+         fhir:Extension.url [ fhir:value "Verkehrsmittel" ] ;
+         fhir:Extension.valueCoding [
+           a sct:46160005 ;
+           fhir:Coding.system [ fhir:value "http://snomed.info/sct" ] ;
+           fhir:Coding.code [ fhir:value "46160005" ] ;
+           fhir:Coding.display [ fhir:value "Motor vehicle" ]
+         ]
+       ] ;
+       fhir:Extension.url [ fhir:value "Reiseentschaedigung" ]
+     ] ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-wegegeld-reiseentschaedigung" ]
+  ], [
+     fhir:index 2 ;
+     fhir:Extension.url [ fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/DiPagRechnungspositionBehandlungsdatum" ] ;
+     fhir:Extension.valueDate [ fhir:value "2024-03-05"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.status [ fhir:value "billable"] ;
+  fhir:ChargeItem.code [
+     fhir:CodeableConcept.text [ fhir:value "Reiseentschädigung für Hausbesuch" ]
+  ] ;
+  fhir:ChargeItem.subject [
+     fhir:link <https://gematik.de/fhir/dipag/Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c> ;
+     fhir:Reference.reference [ fhir:value "Patient/8e2b7c2a-4f3a-4e7a-9c1a-2d6b8f7e1a3c" ]
+  ] ;
+  fhir:ChargeItem.occurrencePeriod [
+     fhir:Period.start [ fhir:value "2024-03-05"^^xsd:date ] ;
+     fhir:Period.end [ fhir:value "2024-03-05"^^xsd:date ]
+  ] ;
+  fhir:ChargeItem.performer [
+     fhir:index 0 ;
+     fhir:ChargeItem.performer.actor [
+       fhir:link <https://gematik.de/fhir/dipag/Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a> ;
+       fhir:Reference.reference [ fhir:value "Practitioner/c1d2e3f4-2b3c-4d5e-9f0a-1b2c3d4e5f6a" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/ChargeItem/e9f0a1b2-0d1e-2f3a-7b8c-9d0e1f2a3b4c.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

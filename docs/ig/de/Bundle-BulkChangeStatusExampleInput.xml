@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="BulkChangeStatusExampleInput"/>
+  <language value="de"/>
+  <type value="batch"/>
+  <entry>
+    <resource>
+      <Parameters>
+        <id value="BeispielParameterChangeStatusInput"/>
+        <language value="de"/>
+        <parameter>
+          <name value="tag"/>
+          <valueCode value="erledigt"/>
+        </parameter>
+      </Parameters>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="DocumentReference/a1b2c3d4-1234-5678-abcd-ef1234567890/$change-status"/>
+    </request>
+  </entry>
+  <entry>
+    <resource>
+      <Parameters>
+        <id value="BeispielParameterChangeStatusInput2"/>
+        <language value="de"/>
+        <parameter>
+          <name value="tag"/>
+          <valueCode value="papierkorb"/>
+        </parameter>
+      </Parameters>
+    </resource>
+    <request>
+      <method value="POST"/>
+      <url value="DocumentReference/b2c3d4e5-2345-6789-bcde-f12345678901/$change-status"/>
+    </request>
+  </entry>
+</Bundle>

@@ -1,0 +1,35 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Parameters/BeispielParameterRetrieveInput> a fhir:Parameters ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BeispielParameterRetrieveInput"] ;
+  fhir:Parameters.parameter [
+     fhir:index 0 ;
+     fhir:Parameters.parameter.name [ fhir:value "token" ] ;
+     fhir:Parameters.parameter.valueString [ fhir:value "123-456-789" ]
+  ], [
+     fhir:index 1 ;
+     fhir:Parameters.parameter.name [ fhir:value "pdf" ] ;
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "true"^^xsd:boolean ]
+  ], [
+     fhir:index 2 ;
+     fhir:Parameters.parameter.name [ fhir:value "strukturierterRechnungsinhalt" ] ;
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ], [
+     fhir:index 3 ;
+     fhir:Parameters.parameter.name [ fhir:value "originaleRechnung" ] ;
+     fhir:Parameters.parameter.valueBoolean [ fhir:value "false"^^xsd:boolean ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Parameters/BeispielParameterRetrieveInput.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

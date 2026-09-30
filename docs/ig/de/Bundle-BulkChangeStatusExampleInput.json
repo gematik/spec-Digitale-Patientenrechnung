@@ -1,0 +1,36 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "BulkChangeStatusExampleInput",
+  "language" : "de",
+  "type" : "batch",
+  "entry" : [{
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "BeispielParameterChangeStatusInput",
+      "language" : "de",
+      "parameter" : [{
+        "name" : "tag",
+        "valueCode" : "erledigt"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "DocumentReference/a1b2c3d4-1234-5678-abcd-ef1234567890/$change-status"
+    }
+  },
+  {
+    "resource" : {
+      "resourceType" : "Parameters",
+      "id" : "BeispielParameterChangeStatusInput2",
+      "language" : "de",
+      "parameter" : [{
+        "name" : "tag",
+        "valueCode" : "papierkorb"
+      }]
+    },
+    "request" : {
+      "method" : "POST",
+      "url" : "DocumentReference/b2c3d4e5-2345-6789-bcde-f12345678901/$change-status"
+    }
+  }]
+}

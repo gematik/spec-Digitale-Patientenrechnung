@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "dipag-rechnung-submit-modus-cs"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-rechnung-submit-modus-cs</b></p><a name=\"dipag-rechnung-submit-modus-cs\"> </a><a name=\"hcdipag-rechnung-submit-modus-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs</code> defines the following codes in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">test<a name=\"dipag-rechnung-submit-modus-cs-test\"> </a></td><td>Test</td><td>Digitale Patientenrechnung wird als Test eingereicht. Der Fachdienst validiert nur die Digitale Patientenrechnung und speichert diese nicht.</td></tr><tr><td style=\"white-space:nowrap\">normal<a name=\"dipag-rechnung-submit-modus-cs-normal\"> </a></td><td>Normal</td><td>Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind.</td></tr></table></div>"
+  ] ;
+  fhir:CodeSystem.url [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs"] ;
+  fhir:CodeSystem.version [ fhir:value "1.1.0"] ;
+  fhir:CodeSystem.name [ fhir:value "DiPagRechnungSubmitModusCS"] ;
+  fhir:CodeSystem.title [ fhir:value "Digitale Patientenrechnung Rechnung Submit Modus CS"] ;
+  fhir:CodeSystem.status [ fhir:value "active"] ;
+  fhir:CodeSystem.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:CodeSystem.date [ fhir:value "2026-03-26"^^xsd:date] ;
+  fhir:CodeSystem.publisher [ fhir:value "gematik GmbH"] ;
+  fhir:CodeSystem.contact [
+     fhir:index -1 ;
+     fhir:ContactDetail.name [ fhir:value "gematik GmbH" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index -1 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
+     ]
+  ] ;
+  fhir:CodeSystem.description [ fhir:value "CodeSystem für die Differenzierung der Verarbeitungsmodi für $invoice-submit"] ;
+  fhir:CodeSystem.jurisdiction [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "DE" ] ;
+       fhir:Coding.display [ fhir:value "Germany" ]
+     ]
+  ] ;
+  fhir:CodeSystem.caseSensitive [ fhir:value "true"^^xsd:boolean] ;
+  fhir:CodeSystem.hierarchyMeaning [ fhir:value "is-a"] ;
+  fhir:CodeSystem.content [ fhir:value "complete"] ;
+  fhir:CodeSystem.count [ fhir:value "2"^^xsd:nonNegativeInteger] ;
+  fhir:CodeSystem.concept [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "test" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Test" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Digitale Patientenrechnung wird als Test eingereicht. Der Fachdienst validiert nur die Digitale Patientenrechnung und speichert diese nicht." ]
+  ], [
+     fhir:index -1 ;
+     fhir:CodeSystem.concept.code [ fhir:value "normal" ] ;
+     fhir:CodeSystem.concept.display [ fhir:value "Normal" ] ;
+     fhir:CodeSystem.concept.definition [ fhir:value "Digitale Patientenrechnung wird durch den Fachdienst gespeichert falls keine gravierenden Validierungsfehler vorhanden sind." ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-submit-modus-cs.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,37 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Patient/BeispielPatient3-FD> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BeispielPatient3-FD"] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Patient BeispielPatient3-FD</b></p><a name=\"BeispielPatient3-FD\"> </a><a name=\"hcBeispielPatient3-FD\"> </a><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Manfred Mustermann Male, DoB Unknown ( http://fhir.de/sid/gkv/kvid-10#NamingSystemKVID#A000000000)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail</td><td colspan=\"3\">Musterweg 2, 3. Etage, 98764 Musterhausen, DE</td></tr></table></div>"
+  ] ;
+  fhir:Patient.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.system [ fhir:value "http://fhir.de/sid/gkv/kvid-10" ] ;
+     fhir:Identifier.value [ fhir:value "A000000000" ]
+  ] ;
+  fhir:Patient.name [
+     fhir:index -1 ;
+     fhir:HumanName.text [ fhir:value "Manfred Mustermann" ]
+  ] ;
+  fhir:Patient.gender [ fhir:value "male"] ;
+  fhir:Patient.address [
+     fhir:index -1 ;
+     fhir:Address.text [ fhir:value "Musterweg 2, 3. Etage, 98764 Musterhausen, DE" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Patient/BeispielPatient3-FD.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,40 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "dipag-rechnung-type-cs",
+  "language" : "de",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: CodeSystem dipag-rechnung-type-cs</b></p><a name=\"dipag-rechnung-type-cs\"> </a><a name=\"hcdipag-rechnung-type-cs\"> </a><p>This case-sensitive code system <code>https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-type-cs</code> defines the following code in a Is-A hierarchy:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">dipag<a name=\"dipag-rechnung-type-cs-dipag\"> </a></td><td>Digitale Patientenrechnung</td></tr></table></div>"
+  },
+  "url" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnung-type-cs",
+  "version" : "1.1.0",
+  "name" : "DiPagRechnungTypeCS",
+  "title" : "Digitale Patientenrechnung Rechnung Type CS",
+  "status" : "active",
+  "experimental" : false,
+  "date" : "2026-03-26",
+  "publisher" : "gematik GmbH",
+  "contact" : [{
+    "name" : "gematik GmbH",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.gematik.de"
+    }]
+  }],
+  "description" : "CodeSystem für die Differenzierung von verschiedenen Typen einer Digitalen Patientenrechnung",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "DE",
+      "display" : "Germany"
+    }]
+  }],
+  "caseSensitive" : true,
+  "hierarchyMeaning" : "is-a",
+  "content" : "complete",
+  "count" : 1,
+  "concept" : [{
+    "code" : "dipag",
+    "display" : "Digitale Patientenrechnung"
+  }]
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ChargeItem xmlns="http://hl7.org/fhir">
+  <id value="KfoMehrkosten1-P5"/>
+  <meta>
+    <profile value="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ChargeItem KfoMehrkosten1-P5</b></p><a name="KfoMehrkosten1-P5"> </a><a name="hcKfoMehrkosten1-P5"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px"/><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-dipag-rechnungsposition.html">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href="CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-BEMA">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: BEMA</a> (BEMA-Leistung)</p><blockquote><p><b>Digitale Patientenrechnung Angaben bei Gebührenordnungen bei einer Rechnungsposition</b></p><ul><li>Punktzahl: 18</li></ul></blockquote><p><b>status</b>: Billable</p><p><b>code</b>: <span title="Codes:{http://fhir.de/CodeSystem/bäk/bema 126a}">Eingliedern eines Brackets oder eines Attachments aus Edelstahl oder nickelfreiem Metall einschließlich Material- und Laborkosten</span></p><p><b>subject</b>: <a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/KfoMehrkosten1Patient">Patient/KfoMehrkosten1Patient</a></p><p><b>occurrence</b>: 2024-08-20</p><h3>Performers</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Actor</b></td></tr><tr><td style="display: none">*</td><td><a href="https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Organization/KfoMehrkosten1Behandler">Organization/KfoMehrkosten1Behandler</a></td></tr></table><p><b>quantity</b>: 3 {#}<span style="background: LightGoldenRodYellow"> (Details: UCUM  code{#} = '{#}')</span></p></div>
+  </text>
+  <extension url="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type">
+    <valueCoding>
+      <system value="https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs"/>
+      <code value="BEMA"/>
+    </valueCoding>
+  </extension>
+  <extension url="https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-go-angaben">
+    <extension url="Punktzahl">
+      <valueDecimal value="18"/>
+    </extension>
+  </extension>
+  <status value="billable"/>
+  <code>
+    <coding>
+      <system value="http://fhir.de/CodeSystem/bäk/bema"/>
+      <code value="126a"/>
+      <display value="Eingliedern eines Brackets oder eines Attachments aus Edelstahl oder nickelfreiem Metall einschließlich Material- und Laborkosten"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/KfoMehrkosten1Patient"/>
+  </subject>
+  <occurrenceDateTime value="2024-08-20"/>
+  <performer>
+    <actor>
+      <reference value="Organization/KfoMehrkosten1Behandler"/>
+    </actor>
+  </performer>
+  <quantity>
+    <value value="3"/>
+    <unit value="{#}"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="{#}"/>
+  </quantity>
+</ChargeItem>

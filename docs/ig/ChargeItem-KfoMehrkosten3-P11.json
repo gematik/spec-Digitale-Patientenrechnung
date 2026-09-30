@@ -1,0 +1,37 @@
+{
+  "resourceType" : "ChargeItem",
+  "id" : "KfoMehrkosten3-P11",
+  "meta" : {
+    "profile" : ["https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ChargeItem KfoMehrkosten3-P11</b></p><a name=\"KfoMehrkosten3-P11\"> </a><a name=\"hcKfoMehrkosten3-P11\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-rechnungsposition.html\">Digitale Patientenrechnung Rechnungsposition</a></p></div><p><b>Digitale Patientenrechnung Typ der Rechnungsposition Extension</b>: <a href=\"CodeSystem-dipag-chargeitem-type-cs.html#dipag-chargeitem-type-cs-EigenlaborleistungMaterial\">Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem: EigenlaborleistungMaterial</a> (Eigenlaborleistung/Material)</p><p><b>status</b>: Billable</p><p><b>code</b>: <span title=\"Codes:\">732-0 - Labialbogen intermaxillar</span></p><p><b>subject</b>: <a href=\"https://simplifier.net/resolve?scope=de.basisprofil.r4@1.5.4&amp;canonical=http://fhir.org/packages/de.basisprofil.r4/Patient/KfoMehrkosten3Patient\">Patient/KfoMehrkosten3Patient</a></p><p><b>occurrence</b>: 2024-09-16</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"Organization-KfoMehrkosten3Behandler.html\">Organization ARZ ZB GmbH</a></td></tr></table><p><b>quantity</b>: 1 {#}<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code{#} = '{#}')</span></p></div>"
+  },
+  "extension" : [{
+    "url" : "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsposition-type",
+    "valueCoding" : {
+      "system" : "https://gematik.de/fhir/dipag/CodeSystem/dipag-chargeitem-type-cs",
+      "code" : "EigenlaborleistungMaterial"
+    }
+  }],
+  "status" : "billable",
+  "code" : {
+    "text" : "732-0 - Labialbogen intermaxillar"
+  },
+  "subject" : {
+    "reference" : "Patient/KfoMehrkosten3Patient"
+  },
+  "occurrenceDateTime" : "2024-09-16",
+  "performer" : [{
+    "actor" : {
+      "reference" : "Organization/KfoMehrkosten3Behandler"
+    }
+  }],
+  "quantity" : {
+    "value" : 1,
+    "unit" : "{#}",
+    "system" : "http://unitsofmeasure.org",
+    "code" : "{#}"
+  }
+}

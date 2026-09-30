@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Organization/KfoMehrkosten3Behandler> a fhir:Organization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "KfoMehrkosten3Behandler"] ;
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution" ;
+       fhir:index -1 ;
+       fhir:link <https://gematik.de/fhir/dipag/StructureDefinition/dipag-institution>
+     ]
+  ] ;
+  fhir:Resource.language [ fhir:value "de"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Organization KfoMehrkosten3Behandler</b></p><a name=\"KfoMehrkosten3Behandler\"> </a><a name=\"hcKfoMehrkosten3Behandler\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-dipag-institution.html\">Digitale Patientenrechnung Institution</a></p></div><p><b>identifier</b>: KZVAbrechnungsnummer/016637</p><p><b>type</b>: <span title=\"Codes:{http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen MZKH}\">Zahnmedizin</span></p><p><b>name</b>: ARZ ZB GmbH</p><p><b>address</b>: Ditteiizer Straße 1 Grünwald 81194 DE </p></div>"
+  ] ;
+  fhir:Organization.identifier [
+     fhir:index -1 ;
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index -1 ;
+         fhir:Coding.system [ fhir:value "http://fhir.de/CodeSystem/identifier-type-de-basis" ] ;
+         fhir:Coding.code [ fhir:value "KZVA" ]
+       ]
+     ] ;
+     fhir:Identifier.system [ fhir:value "http://fhir.de/sid/kzbv/kzvabrechnungsnummer" ] ;
+     fhir:Identifier.value [ fhir:value "016637" ]
+  ] ;
+  fhir:Organization.type [
+     fhir:index -1 ;
+     fhir:CodeableConcept.coding [
+       fhir:index -1 ;
+       fhir:Coding.system [ fhir:value "http://ihe-d.de/CodeSystems/AerztlicheFachrichtungen" ] ;
+       fhir:Coding.code [ fhir:value "MZKH" ] ;
+       fhir:Coding.display [ fhir:value "Zahnmedizin" ]
+     ]
+  ] ;
+  fhir:Organization.name [ fhir:value "ARZ ZB GmbH"] ;
+  fhir:Organization.address [
+     fhir:index -1 ;
+     fhir:Address.type [ fhir:value "both" ] ;
+     fhir:Address.line [
+       fhir:value "Ditteiizer Straße 1" ;
+       fhir:index -1 ;
+       fhir:Element.extension [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" ] ;
+         fhir:Extension.valueString [ fhir:value "Ditteiizer Straße" ]
+       ], [
+         fhir:index -1 ;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" ] ;
+         fhir:Extension.valueString [ fhir:value "1" ]
+       ]
+     ] ;
+     fhir:Address.city [ fhir:value "Grünwald" ] ;
+     fhir:Address.postalCode [ fhir:value "81194" ] ;
+     fhir:Address.country [ fhir:value "DE" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Organization/KfoMehrkosten3Behandler.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

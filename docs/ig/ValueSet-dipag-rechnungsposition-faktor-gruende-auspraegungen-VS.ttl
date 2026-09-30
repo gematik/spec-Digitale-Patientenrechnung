@@ -1,0 +1,55 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "dipag-rechnungsposition-faktor-gruende-auspraegungen-VS"] ;
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ] ;
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet dipag-rechnungsposition-faktor-gruende-auspraegungen-VS</b></p><a name=\"dipag-rechnungsposition-faktor-gruende-auspraegungen-VS\"> </a><a name=\"hcdipag-rechnungsposition-faktor-gruende-auspraegungen-VS\"> </a><ul><li>Include all codes defined in <a href=\"CodeSystem-dipag-rechnungsposition-faktor-gruende-cs.html\"><code>https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs</code></a><span title=\"Version is not explicitly stated, which means it is fixed to the version provided in this specification\"> version ?1.1.0</span></li></ul></div>"
+  ] ;
+  fhir:ValueSet.url [ fhir:value "https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS"] ;
+  fhir:ValueSet.version [ fhir:value "1.1.0"] ;
+  fhir:ValueSet.name [ fhir:value "DiPagRechnungspositionFaktorGruendeVS"] ;
+  fhir:ValueSet.title [ fhir:value "Digitale Patientenrechnung Rechnungsposition Faktor Gründe ValueSet"] ;
+  fhir:ValueSet.status [ fhir:value "active"] ;
+  fhir:ValueSet.experimental [ fhir:value "false"^^xsd:boolean] ;
+  fhir:ValueSet.date [ fhir:value "2026-03-26"^^xsd:date] ;
+  fhir:ValueSet.publisher [ fhir:value "gematik GmbH"] ;
+  fhir:ValueSet.contact [
+     fhir:index 0 ;
+     fhir:ContactDetail.name [ fhir:value "gematik GmbH" ] ;
+     fhir:ContactDetail.telecom [
+       fhir:index 0 ;
+       fhir:ContactPoint.system [ fhir:value "url" ] ;
+       fhir:ContactPoint.value [ fhir:value "https://www.gematik.de" ]
+     ]
+  ] ;
+  fhir:ValueSet.description [ fhir:value "ValueSet für die Gründe eines abweichenden Steigerungsfaktors einer Rechnungsposition"] ;
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0 ;
+     fhir:CodeableConcept.coding [
+       fhir:index 0 ;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ] ;
+       fhir:Coding.code [ fhir:value "DE" ] ;
+       fhir:Coding.display [ fhir:value "Germany" ]
+     ]
+  ] ;
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0 ;
+       fhir:ValueSet.compose.include.system [ fhir:value "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/ValueSet/dipag-rechnungsposition-faktor-gruende-auspraegungen-VS.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

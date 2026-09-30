@@ -1,0 +1,8 @@
+{
+  "resourceType" : "Parameters",
+  "id" : "BeispielParameterChangeStatusInput2",
+  "parameter" : [{
+    "name" : "tag",
+    "valueCode" : "papierkorb"
+  }]
+}

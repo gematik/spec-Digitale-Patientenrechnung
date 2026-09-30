@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Parameters xmlns="http://hl7.org/fhir">
+  <id value="BeispielParameterRetrieveInput2"/>
+  <language value="de"/>
+  <parameter>
+    <name value="token"/>
+    <valueString value="123-456-123"/>
+  </parameter>
+</Parameters>

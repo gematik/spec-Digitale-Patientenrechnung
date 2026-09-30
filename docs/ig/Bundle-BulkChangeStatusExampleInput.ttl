@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Bundle/BulkChangeStatusExampleInput> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:Resource.id [ fhir:value "BulkChangeStatusExampleInput"] ;
+  fhir:Bundle.type [ fhir:value "batch"] ;
+  fhir:Bundle.entry [
+     fhir:index 0 ;
+     fhir:Bundle.entry.resource [
+       a fhir:Parameters ;
+       fhir:Resource.id [ fhir:value "BeispielParameterChangeStatusInput" ] ;
+       fhir:Parameters.parameter [
+         fhir:index 0 ;
+         fhir:Parameters.parameter.name [ fhir:value "tag" ] ;
+         fhir:Parameters.parameter.valueCode [ fhir:value "erledigt" ]
+       ]
+     ] ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "DocumentReference/a1b2c3d4-1234-5678-abcd-ef1234567890/$change-status" ]
+     ]
+  ], [
+     fhir:index 1 ;
+     fhir:Bundle.entry.resource [
+       a fhir:Parameters ;
+       fhir:Resource.id [ fhir:value "BeispielParameterChangeStatusInput2" ] ;
+       fhir:Parameters.parameter [
+         fhir:index 0 ;
+         fhir:Parameters.parameter.name [ fhir:value "tag" ] ;
+         fhir:Parameters.parameter.valueCode [ fhir:value "papierkorb" ]
+       ]
+     ] ;
+     fhir:Bundle.entry.request [
+       fhir:Bundle.entry.request.method [ fhir:value "POST" ] ;
+       fhir:Bundle.entry.request.url [ fhir:value "DocumentReference/b2c3d4e5-2345-6789-bcde-f12345678901/$change-status" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<https://gematik.de/fhir/dipag/Bundle/BulkChangeStatusExampleInput.ttl> a owl:Ontology ;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
