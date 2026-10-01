@@ -1,7 +1,7 @@
 Instance: CapabilityStatementFD
 InstanceOf: CapabilityStatement
 Usage: #definition
-* insert MetaInstance(1.3.0)
+* insert MetaInstance(1.4.0)
 * date = "2026-10-01"
 * url = "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD"
 * name = "CapabilityStatementFD"

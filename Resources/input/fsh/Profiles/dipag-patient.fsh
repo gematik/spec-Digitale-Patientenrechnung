@@ -1,8 +1,8 @@
 Profile: DiPagPatient
 Parent: Patient
 Id: dipag-patient
-* insert Meta(1.1.0)
-* ^date = "2026-09-01"
+* insert Meta(1.2.0)
+* ^date = "2026-10-01"
 * identifier MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
