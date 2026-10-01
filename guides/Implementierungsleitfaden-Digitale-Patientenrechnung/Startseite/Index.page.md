@@ -17,7 +17,7 @@ Weitere Informationen siehe [§359a SGB V](https://www.gesetze-im-internet.de/sg
 
 ### Status
 
-Version: 1.3.0
+Version: 1.4.0
 
 Realm: Deutschland
 
