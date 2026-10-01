@@ -2,7 +2,7 @@
   "resourceType": "CapabilityStatement",
   "id": "CapabilityStatementFD",
   "url": "https://gematik.de/fhir/dipag/CapabilityStatement/DiPagCapabilityStatementFD",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "status": "active",
   "experimental": false,
   "publisher": "gematik GmbH",
@@ -346,6 +346,18 @@
           "supportedProfile": [
             "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnungsdokument"
           ]
+        }
+      ],
+      "interaction": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation",
+              "valueCode": "SHALL"
+            }
+          ],
+          "code": "batch",
+          "documentation": "Der FD MUSS die Verarbeitung von FHIR-`batch`-Bundles am Root-Endpunkt unterstützen. Innerhalb eines `batch`-Bundles sind ausschließlich die folgenden Interaktionen und Operationen zulässig:\n\n* `GET Patient?...`: Suche nach Rechnungsempfängern (`search-type` auf `Patient`, AF_10132)\n* `POST Patient/[id]/$invoice-submit`: Einreichung von Rechnungen an Versicherte (AF_10136-Bulk). Die Verarbeitung erfolgt asynchron (`Prefer: respond-async`, `202 - Accepted`).\n* `POST Organization/[id]/$invoice-submit`: Einreichung von Rechnungen an Kostenträger-Organisationen. Die Verarbeitung erfolgt asynchron (`Prefer: respond-async`, `202 - Accepted`).\n* `POST DocumentReference/[id]/$change-status`: Änderung des Bearbeitungsstatus (AF_10245)\n\nAlle übrigen im CapabilityStatement aufgeführten Interaktionen und Operationen (insbesondere `$retrieve`, `$process-flag` und `$erase`) werden innerhalb eines `batch`-Bundles NICHT unterstützt und MÜSSEN einzeln aufgerufen werden."
         }
       ]
     }

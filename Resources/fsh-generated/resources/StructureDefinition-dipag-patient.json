@@ -2,11 +2,11 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-patient",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-patient",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "name": "DiPagPatient",
   "status": "active",
   "experimental": false,
-  "date": "2026-09-01",
+  "date": "2026-10-01",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -130,7 +130,8 @@
         "id": "Patient.name",
         "path": "Patient.name",
         "short": "Name",
-        "comment": "Der Name SOLL vorhanden sein.",
+        "comment": "Der Name MUSS vorhanden sein.",
+        "min": 1,
         "type": [
           {
             "code": "HumanName",

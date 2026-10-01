@@ -10,6 +10,70 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.4.0
+
+Diese Version enthält nicht rückwärtskompatible Änderungen am Profil **DiPagPatient** (Name verpflichtend) sowie an der API (Entfernung des Bulk-Abrufs per Token), daher der Sprung auf 1.4.0.
+
+#### Profile und Extensions
+
+* **DiPagPatient**: Das Element `name` ist nun verpflichtend (Kardinalität 0..* → 1..*) (**Breaking Change**). Der Name der behandelten Person ist im fachlichen Modell ein Pflichtfeld; bisher war er im Profil lediglich als SOLL-Angabe empfohlen. Patient-Instanzen ohne Namen werden ab dieser Version bei der Validierung abgelehnt, Rechnungen ohne Namen der behandelten Person werden somit vom Fachdienst zurückgewiesen.
+* **DiPagRechnung**: Der Kommentar zu `subject` (behandelte Person) wurde entsprechend angepasst: Der Name der behandelten Person MUSS angegeben werden (bisher SOLL).
+* **DiPagDokumentenmetadatenIntern**: Der Kommentar zu `subject` stellt klar, dass der Fachdienst bei Anhängen die behandelte Person analog zu den Rechnungen in `subject` abbilden MUSS. `subject` wird dabei von der Rechnung übernommen, mit der der Anhang im selben Submit übermittelt wurde.
+
+#### CapabilityStatement
+
+* Neue systemweite Interaktion `batch` (Expectation `SHALL`). Die zugehörige `documentation` beschreibt, welche Interaktionen und Operationen innerhalb eines `batch`-Bundles zulässig sind: die Suche nach Rechnungsempfängern (`search-type` auf `Patient`), `$invoice-submit` an `Patient` und an `Organization` (jeweils asynchron) sowie `$change-status`. Alle übrigen Interaktionen und Operationen, insbesondere `$retrieve`, `$process-flag` und `$erase`, werden innerhalb eines `batch`-Bundles nicht unterstützt und müssen einzeln aufgerufen werden. Eine maschinenlesbare Kennzeichnung pro Operation sieht die FHIR-Kernspezifikation (R4 bis R6) nicht vor.
+
+#### Szenarien und API-Änderungen
+
+* **Bulk-Abruf per Token (AF_10271-Bulk)**: Der Anwendungsfall wurde vorerst aus dem Implementierungsleitfaden entfernt (**Breaking Change**). Entfernt wurden die Szenarioseite "R4: Abfrage von angereicherten PDF/A per Token (Rechnungsersteller) (Bulk)", der zugehörige Abschnitt auf der Seite "Akteure und Interaktionen" sowie die Beispiele `BulkRetrieveExampleInput`, `BulkRetrieveExampleOutput`, `BeispielParameterRetrieveInput2` und `BeispielDocumentReferenceRechnungRetrieve2`. Die Operation `$retrieve` ist nur noch als Einzelabruf ({{pagelink:AF_10271}}) spezifiziert. Die Nummerierung der übrigen Szenarien bleibt unverändert.
+* **Rechnung mit Dokumenten validieren und versenden ({{pagelink:AF_10136}})**: Die Verarbeitungsschritte im FD stellen klar, dass `DocumentReference.subject` für Anhänge analog zu den Rechnungen zu setzen ist.
+
+#### Redaktionelle Änderungen
+
+* In den Release Notes früherer Versionen wurden die Verweise auf die entfernte Szenarioseite AF_10271-Bulk durch Klartext ersetzt.
+
+### Version 1.3.0
+
+Diese Version erweitert die Spezifikation um den Rechnungsversand an Kostenträger-Organisationen und führt dafür Workflowtypen ein. Das Eingangsprofil für Dokumentenmetadaten wurde dazu in ein Basisprofil und kontextspezifische Profile aufgeteilt (nicht rückwärtskompatible Änderung der Canonical-URL), daher der Sprung auf 1.3.0.
+
+#### Profile und Extensions
+
+* **DiPagDokumentenmetadatenEingang** wurde aufgeteilt (**Breaking Change**):
+  * **DiPagDokumentenmetadatenEingangBase** (neu, `https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-base`) enthält alle kontextübergreifenden Festlegungen des bisherigen Profils inkl. der Invarianten `RechnungOderAnhang` und `AnhangIdentifierPflicht`. Die bisherige Canonical-URL `.../dipag-dokumentenmetadaten-eingang` entfällt.
+  * **DiPagDokumentenmetadatenEingangPatient** (neu) für die Einreichung an Versicherte. Es ergänzt das Basisprofil um die Markierung 'Persönlich' für Anhänge und die Invariante `MarkierungNurFuerAnhang`.
+  * **DiPagDokumentenmetadatenEingangOrganisation** (neu) für die Einreichung an Kostenträger-Organisationen. Markierungen werden in diesem Kontext nicht unterstützt.
+* **DiPagOrganisationRechnungsempfaenger** (neu): Kostenträger-Organisation, die im Fachdienst als Empfänger für den direkten Rechnungsversand konfiguriert ist. Telematik-ID (1..1) und mindestens ein unterstützter Workflowtyp (Extension `workflowtyp`, 1..*) sind verpflichtend, der Name SOLL vorhanden sein.
+* **DiPagOrganizationWorkflowtyp** (neu): Extension zur Angabe eines von einer Kostenträger-Organisation unterstützten Workflowtyps (Binding `required` an DiPagWorkflowtypEinrichtungsadressierungVS).
+* **DiPagDokumentenmetadatenIntern**:
+  * Das Profil deckt nun sowohl Rechnungen an Versicherte als auch an Kostenträger-Organisationen ab.
+  * Neuer Meta-Tag-Slice `dipag-workflowtyp` (0..1, Binding `required` an DiPagWorkflowtypVS). Der FD setzt den Workflowtyp immer: `patientenrechnung` bei Einreichung auf dem Patient-Endpunkt, bei Einreichung an eine Organisation den im Parameter `workflow` gewählten Workflowtyp.
+  * `context.related` um den Slice `empfaenger` (Referenz auf `Organization`) ergänzt. Die Kardinalität des Slices `patient` wurde von 1..1 auf 0..1 gelockert: Bei Rechnungen an Versicherte MUSS `patient`, bei Rechnungen an Kostenträger-Organisationen MUSS `empfaenger` vorhanden sein.
+  * Kommentare zu Markierungen und Rechnungsstatus um die Festlegungen für Rechnungen an Kostenträger-Organisationen ergänzt (keine Markierungen; ausschließlich die Status 'Übermittelt' und 'Abgerufen').
+
+#### CodeSystems und ValueSets
+
+* **DiPagWorkflowtypCS** (neu): Zweistufiges CodeSystem der Workflowtypen. Auf oberster Ebene wird nach Adressierung unterschieden (`patientenadressierung`, `einrichtungsadressierung`), darunter liegen die konkreten Workflows (`patientenrechnung` bzw. `demo`).
+* **DiPagWorkflowtypVS** (neu): Alle konkreten Workflowtypen (zweite Ebene), intensional definiert.
+* **DiPagWorkflowtypEinrichtungsadressierungVS** (neu): Alle Workflowtypen unterhalb von `einrichtungsadressierung`, intensional definiert. Wird für den Parameter `workflow` der Operation SubmitOrganisation verwendet.
+* **DiPagARechnungsstatusCS**: Neue Codes `uebermittelt` ("Übermittelt") und `abgerufen` ("Abgerufen") für Rechnungen an Kostenträger-Organisationen.
+
+#### OperationDefinitions
+
+* **DiPagOperationSubmitOrganisation** (neu, `https://gematik.de/fhir/dipag/OperationDefinition/SubmitOrganisation`): Einreichung von Rechnungen an eine Kostenträger-Organisation mit dem Operation-Code `invoice-submit` auf dem Organization-Endpunkt. Die Parameter entsprechen der Einreichung an Versicherte (Dokumente mit `targetProfile` DiPagDokumentenmetadatenEingangOrganisation). Zusätzlich gibt es den verpflichtenden Parameter `workflow` (1..1) zur Auswahl eines von der Ziel-Organisation unterstützten Workflowtyps.
+* **DiPagOperationSubmitPatient** (bisher DiPagOperationSubmit, Canonical-URL unverändert `https://gematik.de/fhir/dipag/OperationDefinition/Submit`): Die Dokumente in den Parametern `rechnung` und `anhang` verweisen nun auf das Profil DiPagDokumentenmetadatenEingangPatient.
+* **DiPagOperationRetrieve** (`retrieve`): Die Beschreibung ergänzt, dass der FD bei Rechnungen an Kostenträger-Organisationen nach erfolgreichem Abruf durch die Organisation den Rechnungsstatus automatisch auf 'Abgerufen' setzt.
+
+#### CapabilityStatement
+
+* Neue Ressource `Organization` (Profil DiPagOrganisationRechnungsempfaenger) mit der Interaktion `search-type` zur Abfrage der Kostenträger-Organisationen und der Operation `invoice-submit` (SubmitOrganisation).
+
+#### Beispiele
+
+* Neue Beispiele für die Abfrage der Kostenträger-Organisationen (`OrganisationenBundle`, `BeispielOrganisationKostentraeger`, `BeispielOrganisationKostentraeger2`) und die Einreichung an eine Organisation (`BeispielParameterSubmitInputOrganisation-LE`, `BeispielParameterSubmitOutputOrganisation-FD`, `BeispielDocumentReferenceRechnungOrganisation-LE`).
+* Neue Beispiele für die Suche durch Kostenträger (`ExampleR5KtrBundle`, `ExampleR5KtrDocumentReference`); das bestehende R5-Beispiel trägt nun den Workflowtyp `patientenrechnung`.
+* Alle Submit-Beispiele für Versicherte (R1, R2) verwenden nun das Profil DiPagDokumentenmetadatenEingangPatient.
+
 ### Version 1.2.0
 
 Diese Version enthält eine nicht rückwärtskompatible Änderung am Profil **DiPagPatient** (Geburtsdatum verpflichtend), daher der Sprung auf 1.2.0.
@@ -69,7 +133,7 @@ Diese Version enthält eine nicht rückwärtskompatible Änderung an der `$invoi
 #### Szenarien und API-Änderungen
 
 * **Bulk-Einreichung ({{pagelink:AF_10136-Bulk}})**: Korrektur der asynchronen Verarbeitung an die [FHIR-Vorgaben zum asynchronen Request Pattern](https://www.hl7.org/fhir/R4/async.html) – die Annahme des `batch`-Bundles wird nun mit `202 - Accepted` bestätigt und die Polling-URL über den `Content-Location`-Header (statt `Location`) mitgeteilt. Beispiele entsprechend angepasst (R2 zuvor fälschlich `200 - OK` als Erfolgsfall).
-* **Bulk-Abruf per Token ({{pagelink:AF_10271-Bulk}})**: Die Verarbeitung wurde von asynchron wieder auf **synchron** umgestellt – die Annahme erfolgt nicht mehr mit `202 - Accepted` und Polling über eine `Content-Location`-URL, sondern der FD gibt das `batch-response`-Bundle direkt mit `200 - OK` im Body zurück. Hintergrund: Der Fachdienst implementiert diese Schnittstelle aktuell ausschließlich synchron. Die gematik bittet die Clienthersteller um Feedback, ob eine synchrone oder eine asynchrone Ausgestaltung bevorzugt wird (siehe Hinweis auf der Szenario-Seite).
+* **Bulk-Abruf per Token (AF_10271-Bulk)**: Die Verarbeitung wurde von asynchron wieder auf **synchron** umgestellt – die Annahme erfolgt nicht mehr mit `202 - Accepted` und Polling über eine `Content-Location`-URL, sondern der FD gibt das `batch-response`-Bundle direkt mit `200 - OK` im Body zurück. Hintergrund: Der Fachdienst implementiert diese Schnittstelle aktuell ausschließlich synchron. Die gematik bittet die Clienthersteller um Feedback, ob eine synchrone oder eine asynchrone Ausgestaltung bevorzugt wird (siehe Hinweis auf der Szenario-Seite).
 
 #### Sonstige Änderungen
 
@@ -290,7 +354,7 @@ Diese Version enthält eine nicht rückwärtskompatible Änderung an der `$invoi
   * Entfernung detaillierter Validierungsbeschreibungen (Verweis auf AF_10136)
   * Fokussierung auf Bulk-spezifische Aspekte und asynchrone Verarbeitung
   * Aktualisierung der Beispiele
-* Überarbeitung der Beschreibungen für {{pagelink:AF_10271-Bulk}} (R4-Abfrage-von-angereicherten-PDF-A-per-Token-Rechnungsersteller-Bulk)
+* Überarbeitung der Beschreibungen für AF_10271-Bulk (R4-Abfrage-von-angereicherten-PDF-A-per-Token-Rechnungsersteller-Bulk)
   * Hinzufügen der asynchronen Verarbeitung
   * Aktualisierung der HTTP-Methode von GET zu POST
 * Hinzufügen von Beispielen für Batch-Operationen (R0)

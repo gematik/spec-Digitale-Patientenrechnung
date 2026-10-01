@@ -1,8 +1,8 @@
 Profile: DiPagPatient
 Parent: Patient
 Id: dipag-patient
-* insert Meta(1.1.0)
-* ^date = "2026-09-01"
+* insert Meta(1.2.0)
+* ^date = "2026-10-01"
 * identifier MS
   * ^slicing.discriminator.type = #pattern
   * ^slicing.discriminator.path = "$this"
@@ -34,9 +34,9 @@ Id: dipag-patient
   * ^short = "Geburtsdatum"
   * ^comment = "Das Geburtsdatum MUSS vorhanden sein."
 * name only $humanname-de
-* name MS
+* name 1.. MS
   * ^short = "Name"
-  * ^comment = "Der Name SOLL vorhanden sein."
+  * ^comment = "Der Name MUSS vorhanden sein."
   * use MS
   * text 1.. MS
     * ^short = "Voller Name inkl. Anrede"
