@@ -130,7 +130,8 @@
         "id": "Patient.name",
         "path": "Patient.name",
         "short": "Name",
-        "comment": "Der Name SOLL vorhanden sein.",
+        "comment": "Der Name MUSS vorhanden sein.",
+        "min": 1,
         "type": [
           {
             "code": "HumanName",

@@ -121,7 +121,7 @@ Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes
 * description 1..1 MS
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
 * subject 1.. MS
-  * ^comment = "Vollständiger Name der behandelten Person. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung."
+  * ^comment = "Vollständiger Name der behandelten Person. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung. Bei Rechnungen setzt der Fachdienst die behandelte Person auf Basis der Patient-Instanz, die in den strukturierten Rechnungsinhalten als subject der Invoice referenziert wird. Bei Anhängen MUSS der Fachdienst die behandelte Person analog zu den Rechnungen in subject abbilden, d.h. subject wird von der Rechnung übernommen, mit der der Anhang im selben Submit übermittelt wurde."
   * display 1..1 MS
     * ^maxLength = 1024
 * author MS

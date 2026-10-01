@@ -34,9 +34,9 @@ Id: dipag-patient
   * ^short = "Geburtsdatum"
   * ^comment = "Das Geburtsdatum MUSS vorhanden sein."
 * name only $humanname-de
-* name MS
+* name 1.. MS
   * ^short = "Name"
-  * ^comment = "Der Name SOLL vorhanden sein."
+  * ^comment = "Der Name MUSS vorhanden sein."
   * use MS
   * text 1.. MS
     * ^short = "Voller Name inkl. Anrede"

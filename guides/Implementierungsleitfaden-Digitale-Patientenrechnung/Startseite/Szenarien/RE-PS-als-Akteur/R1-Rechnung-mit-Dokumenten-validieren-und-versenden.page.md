@@ -180,7 +180,7 @@ Bei der Entgegennahme der Dokumente MÜSSEN durch den FD die nachfolgenden Schri
 
 * `DocumentReference.identifier[AnhangIdentifier]` MUSS durch den FD für Anhänge vom Client gesetzt übernommen werden.
 
-* `DocumentReference.subject` MUSS durch den FD beim Empfang der Operation auf Basis der Patient-Instanz, welche in den strukturierten Rechnungsinhalten als subject der Invoice referenziert wird. Hierbei wird `Patient.name.text` als `subject.display` gesetzt.
+* `DocumentReference.subject` MUSS durch den FD beim Empfang der Operation auf Basis der Patient-Instanz, welche in den strukturierten Rechnungsinhalten als subject der Invoice referenziert wird. Hierbei wird `Patient.name.text` als `subject.display` gesetzt. Für Anhänge MUSS der FD `DocumentReference.subject` analog zu den Rechnungen setzen, d.h. die behandelte Person wird von der Rechnung übernommen, mit der der Anhang im selben Submit übermittelt wurde.
 
 * Hinweis: In der FHIR-Repräsentation erfolgt **keine** Differenzierung zwischen dem Datenobjekt für die Rechnungsdokumente und dem Rechnungsworkflow. Der Workflowstatus wird somit innerhalb der DocumentReference abgebildet. `DocumentReference.meta.tag:dipag-rechnungsstatus` MUSS durch den FD auf "Offen" gesetzt werden beim Empfang der Rechnung.
 
