@@ -584,7 +584,7 @@
       {
         "id": "DocumentReference.subject",
         "path": "DocumentReference.subject",
-        "comment": "Vollständiger Name der behandelten Person. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung.",
+        "comment": "Vollständiger Name der behandelten Person. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung. Bei Rechnungen setzt der Fachdienst die behandelte Person auf Basis der Patient-Instanz, die in den strukturierten Rechnungsinhalten als subject der Invoice referenziert wird. Bei Anhängen MUSS der Fachdienst die behandelte Person analog zu den Rechnungen in subject abbilden, d.h. subject wird von der Rechnung übernommen, mit der der Anhang im selben Submit übermittelt wurde.",
         "min": 1,
         "mustSupport": true
       },

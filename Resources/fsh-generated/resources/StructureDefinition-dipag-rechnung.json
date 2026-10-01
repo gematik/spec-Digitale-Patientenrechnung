@@ -562,7 +562,7 @@
         "id": "Invoice.subject",
         "path": "Invoice.subject",
         "short": "Behandelte Person",
-        "comment": "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten.",
+        "comment": "Der Name der behandelten Person MUSS angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten.",
         "min": 1,
         "type": [
           {
