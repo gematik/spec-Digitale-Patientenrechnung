@@ -17,6 +17,10 @@
       "display": "Leistung nach Gebührenordnung GOZ"
     },
     {
+      "code": "BEMA",
+      "display": "BEMA-Leistung"
+    },
+    {
       "code": "EigenlaborleistungMaterial",
       "display": "Eigenlaborleistung/Material"
     },
@@ -48,5 +52,5 @@
   ],
   "caseSensitive": true,
   "hierarchyMeaning": "is-a",
-  "count": 6
+  "count": 7
 }

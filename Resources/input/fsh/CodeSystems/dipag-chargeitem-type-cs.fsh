@@ -6,6 +6,7 @@ Title: "Digitale Patientenrechnung Typ der Rechnungsposition CodeSystem"
 * ^hierarchyMeaning = #is-a
 * #GOÄ "Leistung nach Gebührenordnung GOÄ"
 * #GOZ "Leistung nach Gebührenordnung GOZ"
+* #BEMA "BEMA-Leistung"
 * #EigenlaborleistungMaterial "Eigenlaborleistung/Material"
 * #Fremdlaborleistung "Fremdlaborleistung"
 * #SachkostenAuslagen "Sachkosten/Auslagen"
