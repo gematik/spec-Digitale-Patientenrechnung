@@ -52,10 +52,6 @@ Siehe Abschnitt "6.2.4 Validierung und Versand von Rechnungen und Dokumenten" de
 
 Siehe Abschnitt "6.2.4 Validierung und Versand von Rechnungen und Dokumenten" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_10271}}.
 
-#### Use Case AF_10271 - Abfrage von angereicherten PDF/A per Token (Rechnungsersteller) (Bulk)
-
-Siehe Abschnitt "6.2.4 Validierung und Versand von Rechnungen und Dokumenten" des Feature-Dokumentes "Digitale Patientenrechnung". Die technische Spezifikation hierzu findet sich unter {{pagelink:AF_10271-Bulk}}.
-
 ### Interaktionen zwischen DiPag FdV und FD
 
 #### Use Case AF_10262 - Abfrage von Daten zu Rechnungen und Dokumenten per Token (Rechnungsempfänger)
