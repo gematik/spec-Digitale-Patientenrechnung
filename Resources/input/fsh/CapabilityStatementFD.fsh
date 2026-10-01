@@ -129,3 +129,16 @@ Usage: #definition
       * insert Expectation (#SHALL)
       * code = #read
     * supportedProfile = Canonical(DiPagRechnungsdokument)
+  * interaction[+]
+    * insert Expectation (#SHALL)
+    * code = #batch
+    * documentation = """
+      Der FD MUSS die Verarbeitung von FHIR-`batch`-Bundles am Root-Endpunkt unterstützen. Innerhalb eines `batch`-Bundles sind ausschließlich die folgenden Interaktionen und Operationen zulässig:
+
+      * `GET Patient?...`: Suche nach Rechnungsempfängern (`search-type` auf `Patient`, AF_10132)
+      * `POST Patient/[id]/$invoice-submit`: Einreichung von Rechnungen an Versicherte (AF_10136-Bulk). Die Verarbeitung erfolgt asynchron (`Prefer: respond-async`, `202 - Accepted`).
+      * `POST Organization/[id]/$invoice-submit`: Einreichung von Rechnungen an Kostenträger-Organisationen. Die Verarbeitung erfolgt asynchron (`Prefer: respond-async`, `202 - Accepted`).
+      * `POST DocumentReference/[id]/$change-status`: Änderung des Bearbeitungsstatus (AF_10245)
+
+      Alle übrigen im CapabilityStatement aufgeführten Interaktionen und Operationen (insbesondere `$retrieve`, `$process-flag` und `$erase`) werden innerhalb eines `batch`-Bundles NICHT unterstützt und MÜSSEN einzeln aufgerufen werden.
+      """
