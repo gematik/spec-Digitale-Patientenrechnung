@@ -2,7 +2,8 @@ Profile: DiPagRechnung
 Title: "Digitale Patientenrechnung Rechnung"
 Parent: Invoice
 Id: dipag-rechnung
-* insert Meta(1.0.7)
+* insert Meta(1.1.0)
+* ^date = "2026-10-01"
 * extension contains 
   http://hl7.org/fhir/5.0/StructureDefinition/extension-Invoice.period[x] named Behandlungszeitraum 0..1 MS and
   DiPagAbrechnungsDiagnoseProzedur named AbrechnungsDiagnoseProzedur 0..* MS and
@@ -133,7 +134,7 @@ Id: dipag-rechnung
 * subject only Reference(DiPagPatient or Patient)
   * reference 1..1 MS
   * ^short = "Behandelte Person"
-  * ^comment = "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
+  * ^comment = "Der Name der behandelten Person MUSS angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten."
 * recipient 1.. MS
   * ^short = "Rechnungsempfänger"
 * recipient only Reference(DiPagPatient or Patient)

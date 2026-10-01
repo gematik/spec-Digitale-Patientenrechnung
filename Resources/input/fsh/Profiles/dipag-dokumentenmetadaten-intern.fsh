@@ -5,8 +5,8 @@ Title: "Digitale Patientenrechnung Dokumentenmetadaten Intern"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-intern
 Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes. Das Profil deckt sowohl Rechnungen an Versicherte (Rechnungsempfänger) als auch Rechnungen an Kostenträger-Organisationen ab. Die Mindestkardinalitäten der kontextspezifischen Elemente (Markierungen, Rechnungsempfänger-Referenz) sind entsprechend gelockert; welche Elemente im jeweiligen Kontext vorhanden sind, ist in den Kommentaren und den Szenariobeschreibungen festgelegt."
-* insert Meta(1.1.0-beta)
-* ^date = "2026-08-26"
+* insert Meta(1.2.0)
+* ^date = "2026-10-01"
 * obeys SignaturVerpflichtendRechnung
 * id ^comment = "Die technische DocumentReference-id dient ausschließlich der serverinternen Adressierung. Der Abruf eines Dokuments erfolgt nicht über die id, sondern ausschließlich über das Rechnungs-Token (siehe identifier:Token) via Retrieve-Operation. Das Token darf NICHT aus der id ableitbar sein."
 * extension MS
@@ -121,7 +121,7 @@ Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes
 * description 1..1 MS
   * ^comment = "Menschenlesbarer Titel des Dokumentes, der dem Versicherten in der UI angezeigt wird. Der Titel kann manuell erfasst oder vom Dateinamen/Metadaten abgeleitet werden. z.B. &quot;Laborbefund vom 28.9.2023&quot;."
 * subject 1.. MS
-  * ^comment = "Vollständiger Name der behandelten Person. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung."
+  * ^comment = "Vollständiger Name der behandelten Person. Siehe Informationsmodell 'Rechnung' des Feature-Dokuments Digitale Patientenrechnung. Bei Rechnungen setzt der Fachdienst die behandelte Person auf Basis der Patient-Instanz, die in den strukturierten Rechnungsinhalten als subject der Invoice referenziert wird. Bei Anhängen MUSS der Fachdienst die behandelte Person analog zu den Rechnungen in subject abbilden, d.h. subject wird von der Rechnung übernommen, mit der der Anhang im selben Submit übermittelt wurde."
   * display 1..1 MS
     * ^maxLength = 1024
 * author MS

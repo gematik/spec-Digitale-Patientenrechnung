@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-rechnung",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-rechnung",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "name": "DiPagRechnung",
   "title": "Digitale Patientenrechnung Rechnung",
   "status": "active",
   "experimental": false,
-  "date": "2026-03-26",
+  "date": "2026-10-01",
   "publisher": "gematik GmbH",
   "contact": [
     {
@@ -605,7 +605,7 @@
         "id": "Invoice.subject",
         "path": "Invoice.subject",
         "short": "Behandelte Person",
-        "comment": "Der Name der behandelten Person SOLL angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten.",
+        "comment": "Der Name der behandelten Person MUSS angegeben werden und kann vom Rechnungsempfänger abweichen, z.B. wenn Eltern Rechnungen für ihre Kinder erhalten.",
         "min": 1,
         "type": [
           {
