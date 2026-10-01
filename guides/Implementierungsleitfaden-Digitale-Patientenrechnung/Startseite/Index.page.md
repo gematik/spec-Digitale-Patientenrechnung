@@ -23,7 +23,7 @@ Realm: Deutschland
 
 Reifegrad: Draft
 
-Datum: 30.09.2026
+Datum: 01.10.2026
 
 ### Herausgeber
 

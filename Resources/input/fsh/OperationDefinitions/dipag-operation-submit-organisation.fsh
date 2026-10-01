@@ -9,7 +9,7 @@ Description: "Rechnung einreichen durch die Leistungserbringer:in an eine Kosten
 * status = #active
 * version = "1.3.0"
 * experimental = false
-* date = "2026-09-30"
+* date = "2026-10-01"
 * kind = #operation
 * name = "DiPagSubmitOrganisation"
 * code = #invoice-submit

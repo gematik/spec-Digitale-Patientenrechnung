@@ -16,7 +16,7 @@
       ]
     }
   ],
-  "date": "2026-09-30",
+  "date": "2026-10-01",
   "name": "CapabilityStatementFD",
   "title": "CapabilityStatement Fachdienst E-Rechnnung",
   "description": "Dieses CapabilityStatement beschreibt alle Interaktionen, \n  die ein DiPag-konformer Fachdienst unterstützen MUSS bzw. KANN.\n",

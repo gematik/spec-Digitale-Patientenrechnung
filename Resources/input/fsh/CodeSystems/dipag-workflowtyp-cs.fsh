@@ -3,7 +3,7 @@ Id: dipag-workflowtyp-cs
 Title: "Digitale Patientenrechnung Workflowtyp CS"
 Description: "CodeSystem für die Workflowtypen der Digitalen Patientenrechnung. Jeder Code beschreibt einen fachlichen Workflow, der bei der Einreichung einer Rechnung ausgelöst wird. Das CodeSystem ist zweistufig aufgebaut: Auf oberster Ebene wird nach der Adressierung der Rechnung unterschieden (Patientenadressierung, Einrichtungsadressierung), darunter hängen die konkreten Workflows. Beim Rechnungsversand an Kostenträger-Organisationen wählt das RE-PS beim $invoice-submit einen von der Ziel-Organisation unterstützten Workflowtyp aus."
 * insert Meta(1.3.0)
-* ^date = "2026-09-30"
+* ^date = "2026-10-01"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * #patientenadressierung "Patientenadressierung" "Workflows, bei denen die Rechnung an eine:n Versicherte:n adressiert ist (Einreichung auf dem Patient-Endpunkt)."
