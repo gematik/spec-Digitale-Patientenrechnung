@@ -1,6 +1,6 @@
 ---
-topic: DiPagRechnungspositionFaktorIdAuspraegungenCS
-canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-id-auspraegungen-cs
+topic: DiPagRechnungspositionFaktorGruendeCS
+canonical: https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsposition-faktor-gruende-cs
 ---
 
 ## {{link}}
