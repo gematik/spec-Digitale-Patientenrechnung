@@ -14,3 +14,5 @@
   filename: DocumentReference-fachrichtung.page.md
 - name: DocumentReference-behandlungsart
   filename: DocumentReference-behandlungsart.page.md
+- name: Organization-workflowtyp
+  filename: Organization-workflowtyp.page.md

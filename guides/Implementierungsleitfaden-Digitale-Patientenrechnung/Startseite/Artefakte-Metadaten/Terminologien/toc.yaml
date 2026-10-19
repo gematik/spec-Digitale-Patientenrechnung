@@ -8,3 +8,7 @@
   filename: CodeSystem-DiPagDokumentArtDerArchivierungCS.page.md
 - name: 'CodeSystem: DiPagOperationenCS'
   filename: CodeSystem-DiPagOperationenCS.page.md
+- name: 'CodeSystem: DiPagAuditEventDetailCS'
+  filename: CodeSystem-DiPagAuditEventDetailCS.page.md
+- name: 'CodeSystem: DiPagWorkflowtypCS'
+  filename: CodeSystem-DiPagWorkflowtypCS.page.md

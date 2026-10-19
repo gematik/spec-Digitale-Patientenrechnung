@@ -30,3 +30,5 @@
   filename: ChargeItem-GebührenordnungAngaben.page.md
 - name: ChargeItem-ZahnRegion
   filename: ChargeItem-ZahnRegion.page.md
+- name: Invoice-Bankverbindung
+  filename: Invoice-Bankverbindung.page.md
