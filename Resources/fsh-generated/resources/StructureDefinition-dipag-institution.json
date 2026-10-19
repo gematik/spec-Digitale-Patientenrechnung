@@ -292,7 +292,7 @@
         "id": "Organization.name",
         "path": "Organization.name",
         "short": "Institutionsname",
-        "comment": "Der Institutionsname SOLL vorhanden sein.",
+        "comment": "Der Institutionsname SOLL vorhanden sein.\n  \n  Im Namen kann auch eine Inhaberschaftsangabe vorhanden sein, z.B. 'Praxis Dr. Muster' oder 'MVZ Dr. Muster'.",
         "mustSupport": true
       },
       {
