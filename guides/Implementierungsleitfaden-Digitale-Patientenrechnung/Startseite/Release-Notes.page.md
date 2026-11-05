@@ -10,6 +10,22 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.5.0
+
+#### Profile und Extensions
+
+* **DiPagDokumentenmetadatenIntern**: Der Slice `context.related:anhaenge` enthält neben der technischen Referenz (`reference`) nun verpflichtend das Dokumenttoken des Anhangs (`identifier` mit System `https://gematik.de/fhir/sid/dipag-token`) sowie dessen Beschreibung (`display`, entspricht `DocumentReference.description` des Anhangs).
+
+#### Szenarien und API-Änderungen
+
+* **Abruf von Rechnungen ({{pagelink:AF_10138}})**: Die Vorgabe, Anhänge zusätzlich in das SearchSet-Bundle aufzunehmen (`Bundle.entry.search.mode = include`), wurde entfernt (**Breaking Change**). Die Änderung dient der Klarstellung, um Fehlinterpretationen beim Zusammenspiel mit der Paginierung (`_count`) und mit Anhängen, die selbst den Suchkriterien entsprechen, zu vermeiden. Stattdessen verweist der FD bei Rechnungsdokumenten unter `context.related:anhaenge` auf die Anhänge inkl. Dokumenttoken und Beschreibung. Der Abruf der Anhänge erfolgt bei Bedarf per `$retrieve`.
+* **Abfrage von Daten zu Rechnungen und Dokumenten per Token (Rechnungsempfänger) ({{pagelink:AF_10262}})**: Bei Rechnungsdokumenten verweist der FD unter `context.related:anhaenge` auf die Anhänge inkl. Dokumenttoken und Beschreibung. Beim Abruf durch Kostenträger werden keine Anhänge angegeben (siehe {{pagelink:AF_10180}}). Neue Beispiele `BeispielParameterRetrieveOutputR6` und `BeispielDocumentReferenceRechnungRetrieveR6`.
+* **Abfrage von Daten zu Rechnungen und Dokumenten per Token (Kostenträger) ({{pagelink:AF_10180}})**: Neue Anforderung, dass der FD beim Abruf durch Kostenträger KEINE Verweise auf Anhänge unter `context.related:anhaenge` zurückgeben darf.
+
+#### Beispiele
+
+* **BeispielDocumentReferenceRechnungRetrieve**: Fehlendes `context.related:patient` ergänzt, damit das Beispiel dem Profil DiPagDokumentenmetadatenIntern entspricht.
+
 ### Version 1.4.0
 
 Diese Version enthält nicht rückwärtskompatible Änderungen am Profil **DiPagPatient** (Name verpflichtend) sowie an der API (Entfernung des Bulk-Abrufs per Token), daher der Sprung auf 1.4.0.
