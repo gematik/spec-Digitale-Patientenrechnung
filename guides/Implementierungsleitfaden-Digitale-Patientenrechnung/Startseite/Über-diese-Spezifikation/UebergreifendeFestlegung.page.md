@@ -4,6 +4,10 @@
 
 Anforderungen als Ausdruck normativer Festlegungen werden durch die dem [RFC2119](https://tools.ietf.org/html/rfc2119) entsprechenden, in Großbuchstaben geschriebenen deutschen Schlüsselworte MUSS, DARF NICHT, SOLL, SOLL NICHT, KANN sowie ihrer Pluralformen gekennzeichnet.
 
+### Verhältnis zur FHIR-Kernspezifikation
+
+Die Festlegungen dieses Implementierungsleitfadens konkretisieren und ergänzen die [FHIR-Kernspezifikation (R4)](https://hl7.org/fhir/R4/), ersetzen diese jedoch nicht. Alle Akteure MÜSSEN die Vorgaben dieses Leitfadens im Rahmen der FHIR-Kernspezifikation umsetzen; eine Implementierung DARF NICHT im Widerspruch zur FHIR-Kernspezifikation stehen. Lässt sich eine Festlegung dieses Leitfadens so auslegen, dass sie der FHIR-Kernspezifikation widerspricht, ist sie im Sinne der FHIR-Kernspezifikation zu interpretieren.
+
 ### Bedeutung von Must-Support-Flags
 
 Für die unterschiedlichen Akteure gelten verschiedene Regeln zur Interpretation der "Must-Support"-Felder in den veröffentlichten FHIR-Profilen:

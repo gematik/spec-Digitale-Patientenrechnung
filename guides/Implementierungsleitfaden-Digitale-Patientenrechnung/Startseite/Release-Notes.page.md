@@ -12,6 +12,10 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ### Version 1.5.0
 
+#### Übergreifende Festlegungen
+
+* Neuer Abschnitt "Verhältnis zur FHIR-Kernspezifikation": Die Vorgaben dieses Leitfadens sind im Rahmen der FHIR-Kernspezifikation umzusetzen; eine Implementierung darf nicht im Widerspruch zur FHIR-Kernspezifikation stehen.
+
 #### Profile und Extensions
 
 * **DiPagDokumentenmetadatenIntern**: Der Slice `context.related:anhaenge` enthält neben der technischen Referenz (`reference`) nun verpflichtend das Dokumenttoken des Anhangs (`identifier` mit System `https://gematik.de/fhir/sid/dipag-token`) sowie dessen Beschreibung (`display`, entspricht `DocumentReference.description` des Anhangs).
