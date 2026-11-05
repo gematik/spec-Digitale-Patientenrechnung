@@ -27,7 +27,7 @@
         "identifier": [
           {
             "system": "https://gematik.de/fhir/sid/dipag-token",
-            "value": "c3f8e1a74b92d05e6f1a8c3b7d24e9f05a6c1b8d3e7f2a49c0b5d8e1f6a3c72d"
+            "value": "123-456-789"
           }
         ],
         "status": "current",
@@ -89,10 +89,10 @@
               "type": "DocumentReference",
               "identifier": {
                 "system": "https://gematik.de/fhir/sid/dipag-token",
-                "value": "a1c4f7e2b9d6038c5e1a4b7d0f3c6e9a2d5b8c1e4f70a3d6b9c2e5f8a1d4b7c0"
+                "value": "e5b9c2f7a1d4086b3e9f2c5a8d1b4e7f0c3a6d9b2e5f8a1c4d7b0e3f6a9c2d5b"
               },
-              "reference": "DocumentReference/ExampleR5DocumentReferenceSonstigesDokument",
-              "display": "Molekularpathologiebefund vom 31.12.21"
+              "reference": "DocumentReference/BeispielDocumentReferenceAnhangRetrieveR6",
+              "display": "Impfausweis (Kopie) zur Reiseimpfung vom 10.01.2024"
             }
           ]
         },
