@@ -85,10 +85,10 @@ mit Body:
 
 * Es gelten die Festlegungen der [FHIR-Kernspezifikation zur Handhabung von Binary-Ressourcen](https://www.hl7.org/fhir/r4/binary.html#rest).
 
-* Handelt es sich bei dem abgerufenen Dokument um ein Rechnungsdokument, MUSS der FD unter `DocumentReference.context.related:anhaenge` auf alle Anhänge verweisen, die im Kontext der initialen Einreichung (vgl. {{pagelink:AF_10136}}) an den FD übergeben wurden. Jeder Verweis MUSS die Referenz auf die DocumentReference des Anhangs (`reference`), das Dokumenttoken des Anhangs (`identifier` mit System `https://gematik.de/fhir/sid/dipag-token`) sowie die Beschreibung des Anhangs (`display`, entspricht `DocumentReference.description` des Anhangs) enthalten. Die Anhänge selbst werden dabei NICHT mit zurückgegeben, sondern können vom DiPag FdV anhand des Dokumenttokens per `$retrieve` abgerufen werden.
+* Handelt es sich bei dem abgerufenen Dokument um ein Rechnungsdokument, MUSS der FD unter `DocumentReference.context.related:anhaenge` auf alle Anhänge verweisen, die im Kontext der initialen Einreichung (vgl. {{pagelink:AF_10136}}) an den FD übergeben wurden. Jeder Verweis MUSS die Referenz auf die DocumentReference des Anhangs (`reference`), das Dokumenttoken des Anhangs (`identifier` mit System `https://gematik.de/fhir/sid/dipag-token`) sowie die Beschreibung des Anhangs (`display`, entspricht `DocumentReference.description` des Anhangs) enthalten. Das DiPag FdV KANN die Anhänge anhand des Dokumenttokens per `$retrieve` abrufen.
 
 | |  |
 |---------|---------------------|
-| <img src="https://raw.githubusercontent.com/gematik/spec-Digitale-Patientenrechnung/master/Material/piktogramme/Betriebskoordination_Gruen_gematik.svg" alt="gematik logo" width="75"/> | **Hinweis:** Beim Abruf durch Kostenträger ({{pagelink:AF_10180}}) werden keine Anhänge unter `context.related:anhaenge` angegeben, da die versicherte Person bei der Einreichung selbst entscheidet, welche Anhänge sie an einen Kostenträger weitergibt. |
+| <img src="https://raw.githubusercontent.com/gematik/spec-Digitale-Patientenrechnung/master/Material/piktogramme/Betriebskoordination_Gruen_gematik.svg" alt="gematik logo" width="75"/> | **Hinweis:** Beim Abruf durch Kostenträger ({{pagelink:AF_10180}}) werden keine Anhänge unter `context.related:anhaenge` angegeben, da die versicherte Person bei der Weitergabe an einen Kostenträger selbst entscheidet, welche Anhänge sie weitergibt. |
 
 ----

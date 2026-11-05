@@ -76,7 +76,7 @@ mit Body:
 
 * Es gelten die Festlegungen der [FHIR-Kernspezifikation zur Handhabung von Binary-Ressourcen](https://www.hl7.org/fhir/r4/binary.html#rest).
 
-* Der FD DARF in der zurückgegebenen DocumentReference KEINE Verweise auf Anhänge (`DocumentReference.context.related:anhaenge`) zurückgeben. Die versicherte Person entscheidet bei der Einreichung selbst, welche Anhänge sie an den Kostenträger weitergibt; diese Anhänge ruft der Kostenträger jeweils über ihr eigenes Dokumenttoken ab.
+* Der FD DARF in der zurückgegebenen DocumentReference KEINE Verweise auf Anhänge (`DocumentReference.context.related:anhaenge`) zurückgeben. Die versicherte Person entscheidet bei der Weitergabe an den Kostenträger selbst, welche Anhänge sie weitergibt; diese Anhänge ruft der Kostenträger jeweils über ihr eigenes Dokumenttoken ab.
 
 ----
 
