@@ -77,6 +77,14 @@
             }
           }
         ],
+        "context": {
+          "related": [
+            {
+              "type": "Patient",
+              "reference": "Patient/BeispielPatient3-FD"
+            }
+          ]
+        },
         "type": {
           "coding": [
             {

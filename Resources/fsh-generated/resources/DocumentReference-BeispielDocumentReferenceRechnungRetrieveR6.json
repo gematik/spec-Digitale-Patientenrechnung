@@ -1,0 +1,106 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "BeispielDocumentReferenceRechnungRetrieveR6",
+  "meta": {
+    "tag": [
+      {
+        "code": "offen",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-rechnungsstatus-cs",
+        "display": "Offen"
+      },
+      {
+        "code": "patientenrechnung",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-workflowtyp-cs",
+        "display": "Patientenrechnung"
+      }
+    ],
+    "profile": [
+      "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "https://gematik.de/fhir/sid/dipag-token",
+      "value": "c3f8e1a74b92d05e6f1a8c3b7d24e9f05a6c1b8d3e7f2a49c0b5d8e1f6a3c72d"
+    }
+  ],
+  "status": "current",
+  "extension": [
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-rechnungsdatum",
+      "valueDateTime": "2024-01-10"
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-zahlungsziel",
+      "valueDate": "2024-02-10"
+    },
+    {
+      "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-documentreference-gesamtbetrag",
+      "valueMoney": {
+        "value": 120,
+        "currency": "EUR"
+      }
+    }
+  ],
+  "author": [
+    {
+      "identifier": {
+        "system": "https://gematik.de/fhir/sid/telematik-id",
+        "value": "987654321"
+      },
+      "display": "Dr. Hausarzt"
+    }
+  ],
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/pdf",
+        "url": "[FD-endpunkt]/Binary/id-der-angereicherten-rechnung"
+      },
+      "format": {
+        "code": "angereichertesPDF",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
+      }
+    },
+    {
+      "attachment": {
+        "contentType": "application/fhir+json",
+        "url": "[FD-endpunkt]/Binary/id-des-strukturierten-Rechnungsinhalts"
+      },
+      "format": {
+        "code": "rechnungsinhalt",
+        "system": "https://gematik.de/fhir/dipag/CodeSystem/dipag-attachment-format-cs"
+      }
+    }
+  ],
+  "context": {
+    "related": [
+      {
+        "type": "Patient",
+        "reference": "Patient/BeispielPatient3-FD"
+      },
+      {
+        "type": "DocumentReference",
+        "identifier": {
+          "system": "https://gematik.de/fhir/sid/dipag-token",
+          "value": "a1c4f7e2b9d6038c5e1a4b7d0f3c6e9a2d5b8c1e4f70a3d6b9c2e5f8a1d4b7c0"
+        },
+        "reference": "DocumentReference/ExampleR5DocumentReferenceSonstigesDokument",
+        "display": "Molekularpathologiebefund vom 31.12.21"
+      }
+    ]
+  },
+  "type": {
+    "coding": [
+      {
+        "code": "AM010106",
+        "system": "http://dvmd.de/fhir/CodeSystem/kdl",
+        "display": "Rechnung ambulante/stationäre Behandlung"
+      }
+    ]
+  },
+  "description": "Rechnung Reiseimpfung vom 10.01.2024",
+  "subject": {
+    "display": "Max Mustermann"
+  }
+}

@@ -194,7 +194,12 @@
       },
       {
         "type": "DocumentReference",
-        "reference": "DocumentReference/ExampleR5DocumentReferenceSonstigesDokument"
+        "identifier": {
+          "system": "https://gematik.de/fhir/sid/dipag-token",
+          "value": "a1c4f7e2b9d6038c5e1a4b7d0f3c6e9a2d5b8c1e4f70a3d6b9c2e5f8a1d4b7c0"
+        },
+        "reference": "DocumentReference/ExampleR5DocumentReferenceSonstigesDokument",
+        "display": "Molekularpathologiebefund vom 31.12.21"
       }
     ]
   },
