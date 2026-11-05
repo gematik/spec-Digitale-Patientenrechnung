@@ -207,8 +207,18 @@ Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes
     * type 1.. MS
     * type = "Organization"
   * related[anhaenge] only Reference(DocumentReference)
+    * ^short = "Anhänge zur Rechnung"
+    * ^comment = "Verweis auf einen Anhang, der im selben Submit wie die Rechnung übermittelt wurde. Neben der technischen Referenz (reference) MUSS der Fachdienst das Dokumenttoken des Anhangs (identifier) sowie dessen Beschreibung (display, entspricht DocumentReference.description des Anhangs) angeben. Anhand dieser Angaben können Clients die Anhänge darstellen und per $retrieve abrufen."
+    * reference 1.. MS
     * type 1.. MS
     * type = "DocumentReference"
+    * identifier 1.. MS
+      * ^short = "Dokumenttoken des Anhangs"
+      * system 1.. MS
+      * system = "https://gematik.de/fhir/sid/dipag-token"
+      * value 1.. MS
+    * display 1.. MS
+      * ^short = "Beschreibung des Anhangs (DocumentReference.description)"
 
 // ------------- Constraints -------------
 
