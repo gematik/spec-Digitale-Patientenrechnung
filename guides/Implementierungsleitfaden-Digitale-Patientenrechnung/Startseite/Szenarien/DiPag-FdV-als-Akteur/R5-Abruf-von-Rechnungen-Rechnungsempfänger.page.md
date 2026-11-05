@@ -70,6 +70,8 @@ mit Body:
 
 * Der FD MUSS die Suche auf DocumentReference-Ressourcen begrenzen die unter DocumentReference.related auf einen Benutzer verweisen welcher durch die KVNR aus dem Access-Token identifiziert wird, um sicherzustellen, dass nur DocumentReference-Ressourcen aus dem Postfach des angemeldeten Rechnungsempfängers zurückgegeben werden.
 
+* Der FD MUSS die Ergebnismenge absteigend nach dem Rechnungsdatum (`DocumentReference.extension:rechnungsdatum`) sortieren, d.h. die neueste Rechnung zuerst. DocumentReference-Ressourcen ohne Rechnungsdatum (z.B. Anhänge) MÜSSEN am Ende der Ergebnismenge stehen. Die Sortierung gilt über alle Seiten der Ergebnismenge hinweg. Da für das Rechnungsdatum kein Suchparameter definiert ist, wird diese Sortierung nicht im `self`-Link des SearchSet-Bundles angegeben.
+
 * Der FD MUSS die Signatur-Extension an allen Stellen (`DocumentReference.extension:docRef-signature`, `DocumentReference.content.attachment.extension:docRef-signature`) vor der Rückgabe an den Client entfernen.
 
 * Falls es sich bei der DocumentReference um ein Rechnungsdokument handelt, MUSS der FD das Content-Element für das Rechnungspdf entfernen, sodass nur die Content-Elemente für das angereicherte PDF/A, sowie die strukturierten Rechnungsinhalte zurückgegeben werden.
