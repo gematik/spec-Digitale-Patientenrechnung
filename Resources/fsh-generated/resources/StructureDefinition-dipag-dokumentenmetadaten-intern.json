@@ -2,12 +2,12 @@
   "resourceType": "StructureDefinition",
   "id": "dipag-dokumentenmetadaten-intern",
   "url": "https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-intern",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "name": "DiPagDokumentenmetadatenIntern",
   "title": "Digitale Patientenrechnung Dokumentenmetadaten Intern",
   "status": "active",
   "experimental": false,
-  "date": "2026-10-01",
+  "date": "2026-11-11",
   "publisher": "gematik GmbH",
   "contact": [
     {
