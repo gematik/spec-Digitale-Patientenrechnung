@@ -17,13 +17,13 @@ Weitere Informationen siehe [§359a SGB V](https://www.gesetze-im-internet.de/sg
 
 ### Status
 
-Version: 1.4.0
+Version: 1.5.0
 
 Realm: Deutschland
 
 Reifegrad: Draft
 
-Datum: 01.10.2026
+Datum: 11.11.2026
 
 ### Herausgeber
 
