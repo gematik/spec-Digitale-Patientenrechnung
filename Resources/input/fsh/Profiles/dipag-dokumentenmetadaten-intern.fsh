@@ -5,8 +5,8 @@ Title: "Digitale Patientenrechnung Dokumentenmetadaten Intern"
 Parent: DocumentReference
 Id: dipag-dokumentenmetadaten-intern
 Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes. Das Profil deckt sowohl Rechnungen an Versicherte (Rechnungsempfänger) als auch Rechnungen an Kostenträger-Organisationen ab. Die Mindestkardinalitäten der kontextspezifischen Elemente (Markierungen, Rechnungsempfänger-Referenz) sind entsprechend gelockert; welche Elemente im jeweiligen Kontext vorhanden sind, ist in den Kommentaren und den Szenariobeschreibungen festgelegt."
-* insert Meta(1.2.0)
-* ^date = "2026-10-01"
+* insert Meta(1.3.0)
+* ^date = "2026-11-11"
 * obeys SignaturVerpflichtendRechnung
 * id ^comment = "Die technische DocumentReference-id dient ausschließlich der serverinternen Adressierung. Der Abruf eines Dokuments erfolgt nicht über die id, sondern ausschließlich über das Rechnungs-Token (siehe identifier:Token) via Retrieve-Operation. Das Token darf NICHT aus der id ableitbar sein."
 * extension MS
@@ -207,8 +207,18 @@ Description: "Repräsentation der Dokumentenmetadaten innerhalb des Fachdienstes
     * type 1.. MS
     * type = "Organization"
   * related[anhaenge] only Reference(DocumentReference)
+    * ^short = "Anhänge zur Rechnung"
+    * ^comment = "Verweis auf einen Anhang, der im selben Submit wie die Rechnung übermittelt wurde. Neben der technischen Referenz (reference) MUSS der Fachdienst das Dokumenttoken des Anhangs (identifier) sowie dessen Beschreibung (display, entspricht DocumentReference.description des Anhangs) angeben. Anhand dieser Angaben können Clients die Anhänge darstellen und per $retrieve abrufen."
+    * reference 1.. MS
     * type 1.. MS
     * type = "DocumentReference"
+    * identifier 1.. MS
+      * ^short = "Dokumenttoken des Anhangs"
+      * system 1.. MS
+      * system = "https://gematik.de/fhir/sid/dipag-token"
+      * value 1.. MS
+    * display 1.. MS
+      * ^short = "Beschreibung des Anhangs (DocumentReference.description)"
 
 // ------------- Constraints -------------
 

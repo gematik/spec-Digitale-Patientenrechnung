@@ -20,8 +20,8 @@
   filename: CodeSystem-DiPagRechnungTypeCS.page.md
 - name: 'CodeSystem: DiPagRechnungsartCS'
   filename: CodeSystem-DiPagRechnungsartCS.page.md
-- name: 'CodeSystem: DiPagRechnungspositionFaktorIdAuspraegungenCS'
-  filename: CodeSystem-DiPagRechnungspositionFaktorIdAuspraegungenCS.page.md
+- name: 'CodeSystem: DiPagRechnungspositionFaktorGruendeCS'
+  filename: CodeSystem-DiPagRechnungspositionFaktorGruendeCS.page.md
 - name: 'CodeSystem: DiPagRechnungspositionZusatzCS'
   filename: CodeSystem-DiPagRechnungspositionZusatzCS.page.md
 - name: 'CodeSystem: DiPagARechnungsstatusCS'

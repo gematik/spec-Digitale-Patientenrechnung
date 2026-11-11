@@ -67,6 +67,9 @@ Title: "Example DiPag Document Reference"
 * context.related[patient].type = "Patient"
 * context.related[anhaenge] = Reference(ExampleR5DocumentReferenceSonstigesDokument)
 * context.related[anhaenge].type = "DocumentReference"
+* context.related[anhaenge].identifier.system = "https://gematik.de/fhir/sid/dipag-token"
+* context.related[anhaenge].identifier.value = "a1c4f7e2b9d6038c5e1a4b7d0f3c6e9a2d5b8c1e4f70a3d6b9c2e5f8a1d4b7c0"
+* context.related[anhaenge].display = "Molekularpathologiebefund vom 31.12.21"
 
 Instance: ExampleR5DocumentReferenceSonstigesDokument
 InstanceOf: DiPagDokumentenmetadatenIntern

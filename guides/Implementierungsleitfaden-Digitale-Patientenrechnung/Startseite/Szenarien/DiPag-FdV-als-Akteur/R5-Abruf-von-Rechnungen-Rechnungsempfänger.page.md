@@ -70,6 +70,8 @@ mit Body:
 
 * Der FD MUSS die Suche auf DocumentReference-Ressourcen begrenzen die unter DocumentReference.related auf einen Benutzer verweisen welcher durch die KVNR aus dem Access-Token identifiziert wird, um sicherzustellen, dass nur DocumentReference-Ressourcen aus dem Postfach des angemeldeten Rechnungsempfängers zurückgegeben werden.
 
+* Der FD MUSS die Ergebnismenge absteigend nach dem Rechnungsdatum (`DocumentReference.extension:rechnungsdatum`) sortieren, d.h. die neueste Rechnung zuerst. DocumentReference-Ressourcen ohne Rechnungsdatum (z.B. Anhänge) MÜSSEN am Ende der Ergebnismenge stehen. Die Sortierung gilt über alle Seiten der Ergebnismenge hinweg. Da für das Rechnungsdatum kein Suchparameter definiert ist, wird diese Sortierung nicht im `self`-Link des SearchSet-Bundles angegeben.
+
 * Der FD MUSS die Signatur-Extension an allen Stellen (`DocumentReference.extension:docRef-signature`, `DocumentReference.content.attachment.extension:docRef-signature`) vor der Rückgabe an den Client entfernen.
 
 * Falls es sich bei der DocumentReference um ein Rechnungsdokument handelt, MUSS der FD das Content-Element für das Rechnungspdf entfernen, sodass nur die Content-Elemente für das angereicherte PDF/A, sowie die strukturierten Rechnungsinhalte zurückgegeben werden.
@@ -80,6 +82,11 @@ mit Body:
 
 * Es gelten die Festlegungen der [FHIR-Kernspezifikation zur Handhabung von Binary-Ressourcen](https://www.hl7.org/fhir/r4/binary.html#rest).
 
-* Der FD MUSS unter DocumentReference.context.related:anhaenge Referenzen auf alle Anhänge zurückgeben die im Kontext der initialen Einreichung (vgl. {{pagelink:AF_10136}}) übergeben wurden an den FD. Die Anhänge MÜSSEN als DocumentReference-Ressourcen im SearchResult-Bundle zurückgegeben werden mit einem Hinweis, dass diese zusätzlich inkludiert wurden (Bundle.entry.search.mode = include).
+* Der FD MUSS bei Rechnungsdokumenten unter `DocumentReference.context.related:anhaenge` auf alle Anhänge verweisen, die im Kontext der initialen Einreichung (vgl. {{pagelink:AF_10136}}) an den FD übergeben wurden. Jeder Verweis MUSS enthalten:
+    * die Referenz auf die DocumentReference des Anhangs (`reference`),
+    * das Dokumenttoken des Anhangs (`identifier` mit System `https://gematik.de/fhir/sid/dipag-token`) und
+    * die Beschreibung des Anhangs (`display`, entspricht `DocumentReference.description` des Anhangs).
+
+* Das DiPag FdV KANN anhand von Dokumenttoken und Beschreibung aus `context.related:anhaenge` die Anhänge einer Rechnung darstellen und bei Bedarf über die Operation `$retrieve` ({{pagelink:AF_10262}}) abrufen.
 
 ----

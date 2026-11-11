@@ -1,6 +1,6 @@
 ---
 topic: DiPagDokumentenmetadaten-Profil
-canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang
+canonical: https://gematik.de/fhir/dipag/StructureDefinition/dipag-dokumentenmetadaten-eingang-patient
 ---
 ## {{link}}
 
