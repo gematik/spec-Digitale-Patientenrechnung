@@ -10,6 +10,30 @@ Alle technischen Artefakte werden innerhalb des Packages ["de.gematik.dipag"](ht
 
 ----
 
+### Version 1.5.0
+
+Diese Version enthält eine nicht rückwärtskompatible Änderung an der API (keine Aufnahme von Anhängen als `include` in das SearchSet-Bundle bei der Suche nach Rechnungen), daher der Sprung auf 1.5.0.
+
+#### Übergreifende Festlegungen
+
+* Neuer Abschnitt "Verhältnis zur FHIR-Kernspezifikation": Die Vorgaben dieses Leitfadens sind im Rahmen der FHIR-Kernspezifikation umzusetzen; eine Implementierung darf nicht im Widerspruch zur FHIR-Kernspezifikation stehen.
+
+#### Profile und Extensions
+
+* **DiPagDokumentenmetadatenIntern**: Im Slice `context.related:anhaenge` sind nun die technische Referenz (`reference`), das Dokumenttoken des Anhangs (`identifier` mit System `https://gematik.de/fhir/sid/dipag-token`) sowie dessen Beschreibung (`display`, entspricht `DocumentReference.description` des Anhangs) verpflichtend (Kardinalität jeweils 1..).
+
+#### Szenarien und API-Änderungen
+
+* **Abruf von Rechnungen ({{pagelink:AF_10138}})**: Die Vorgabe, Anhänge zusätzlich in das SearchSet-Bundle aufzunehmen (`Bundle.entry.search.mode = include`), wurde entfernt (**Breaking Change**). Die Änderung dient der Klarstellung, um Fehlinterpretationen beim Zusammenspiel mit der Paginierung (`_count`) und mit Anhängen, die selbst den Suchkriterien entsprechen, zu vermeiden. Stattdessen verweist der FD bei Rechnungsdokumenten unter `context.related:anhaenge` auf die Anhänge inkl. Dokumenttoken und Beschreibung. Der Abruf der Anhänge erfolgt bei Bedarf per `$retrieve`.
+* **Abruf von Rechnungen ({{pagelink:AF_10138}})**: Festlegung der Sortierung der Ergebnismenge: absteigend nach Rechnungsdatum, DocumentReference-Ressourcen ohne Rechnungsdatum (z.B. Anhänge) am Ende der Ergebnismenge.
+* **Abfrage von Daten zu Rechnungen und Dokumenten per Token (Rechnungsempfänger) ({{pagelink:AF_10262}})**: Bei Rechnungsdokumenten verweist der FD unter `context.related:anhaenge` auf die Anhänge inkl. Dokumenttoken und Beschreibung. Beim Abruf durch Kostenträger werden keine Anhänge angegeben (siehe {{pagelink:AF_10180}}). Neue Beispiele `BeispielParameterRetrieveOutputR6`, `BeispielDocumentReferenceRechnungRetrieveR6` und `BeispielDocumentReferenceAnhangRetrieveR6`.
+* **Abfrage von Daten zu Rechnungen und Dokumenten per Token (Kostenträger) ({{pagelink:AF_10180}})**: Neue Anforderung, dass der FD beim Abruf durch Kostenträger KEINE Verweise auf Anhänge unter `context.related:anhaenge` zurückgeben darf.
+
+#### Beispiele
+
+* **BeispielDocumentReferenceRechnungRetrieve**: Fehlendes `context.related:patient` ergänzt, damit das Beispiel dem Profil DiPagDokumentenmetadatenIntern entspricht.
+* **ExampleR5DocumentReference** (im Suchergebnis `ExampleR5Bundle`): Der Verweis unter `context.related:anhaenge` enthält nun zusätzlich das Dokumenttoken (`identifier`) und die Beschreibung (`display`) des Anhangs.
+
 ### Version 1.4.0
 
 Diese Version enthält nicht rückwärtskompatible Änderungen am Profil **DiPagPatient** (Name verpflichtend) sowie an der API (Entfernung des Bulk-Abrufs per Token), daher der Sprung auf 1.4.0.
