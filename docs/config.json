@@ -1,0 +1,40 @@
+{
+  "resourceBase": "data/",
+  "invoices": [
+    {
+      "id": "KfoMehrkosten1",
+      "label": "KFO Mehrkosten 1 — Q3/2024 (00122704)",
+      "source": { "type": "local", "path": "data/Invoice-KfoMehrkosten1Rechnung.json" },
+      "pdf": "pdfs/KFO Mehrkostenberechnungen-1.pdf"
+    },
+    {
+      "id": "KfoMehrkosten2",
+      "label": "KFO Mehrkosten 2 — Q3/2025 Büdingen Dent",
+      "source": { "type": "local", "path": "data/Invoice-KfoMehrkosten2Rechnung.json" },
+      "pdf": "pdfs/KFO Mehrkostenberechnungen-2.pdf"
+    },
+    {
+      "id": "KfoMehrkosten3",
+      "label": "KFO Mehrkosten 3 — GKV/BEMA (324349010376)",
+      "source": { "type": "local", "path": "data/Invoice-KfoMehrkosten3Rechnung.json" },
+      "pdf": "pdfs/KFO Mehrkostenberechnungen-3.pdf"
+    },
+    {
+      "id": "KfoMehrkosten4",
+      "label": "KFO Mehrkosten 4 — KIG 3-5 (325349020031)",
+      "source": { "type": "local", "path": "data/Invoice-KfoMehrkosten4Rechnung.json" },
+      "pdf": "pdfs/KFO Mehrkostenberechnungen-4.pdf"
+    },
+    {
+      "id": "InvoiceExample",
+      "label": "InvoiceExample — Beispielrechnung mit fiktiven Daten",
+      "source": { "type": "local", "path": "data/Invoice-c3d4e5f6-4b5c-6d7e-1f2a-3b4c5d6e7f8a.json" }
+    },
+    {
+      "id": "Musterrechnung_Arztbehandlung",
+      "label": "Musterrechnung Arztbehandlung",
+      "source": { "type": "local", "path": "data/Invoice-a0b1c2d3-e4f5-6a7b-8c9d-0e1f2a3b4c5d.json" },
+      "pdf": "pdfs/Musterrechnung_Arztbehandlung.pdf"
+    }
+  ]
+}
